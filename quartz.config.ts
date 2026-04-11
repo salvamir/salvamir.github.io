@@ -16,7 +16,7 @@ const config: QuartzConfig = {
       provider: "plausible",
     },
     locale: "en-US",
-    baseUrl: "quartz.jzhao.xyz",
+    baseUrl: "otrossssss.github.io/digital-garden",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
     theme: {
@@ -37,6 +37,7 @@ const config: QuartzConfig = {
   secondary: "#3f6212",      
   tertiary: "#84cc16",      
   highlight: "rgba(143, 159, 169, 0.15)",
+  textHighlight: "#fff23688",
 },
         darkMode: {
           light: "#161617",
@@ -85,7 +86,7 @@ const config: QuartzConfig = {
       }),
       Plugin.Assets(),
       Plugin.Static(),
-      Plugin.Favicon(),
+      // Plugin.Favicon(),
       Plugin.NotFoundPage(),
       // Comment out CustomOgImages to speed up build time
       Plugin.CustomOgImages(),
