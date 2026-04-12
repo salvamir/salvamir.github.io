@@ -1,13 +1,13 @@
 Escribo esto básicamente a oscuras. No consigo ver lo que escribo nítidamente, pero se que está ahí. Nunca entendí lo que es ser libre verdaderamente. Quizás tiene que ver con poder escribir lento sin ver los renglones... Eso parece tener que ver con la seguridad. Ser libre y ser seguro tienen mucho que ver...
 
 Señor, yo creo que la libertad es algo que casi consigue Juati por completo. El la confundió con el desapego, que es muy valioso también.
-
+![[4.jpg]]
 Alguien libre es quien no tiene "ataduras" y eso le da seguridad. El hecho de saberse (...)
 
 No vive con presiones ni tensiones de ningún tipo. Vive en la lucha constante contra esas ciudades vecinas que buscan alimentar sus impulsos con mala comida.
 
 Es libre quien no quiere tenerlo todo planeado ni calculado. Una persona libre puede vivir con un "no lo se", "no lo entiendo" y vive tranquila, una persona libre entiende que buscar la tranquilidad y la serenidad en si mismas no tiene sentido. Son el premio de vivir (no existir, tener, hacer, cumplir, sino vivir con sabor) en la incomodidad, vivir con lo menos posible.
-
+![[5.jpg]]
 Sigo pensando en la libertad ¿Por qué pienso en el sol, las montañas y el viento? ¿o en los pájaros, los perros y la creación? si ellos no son libres...
 
 Ellos no pueden elegir, pero no tienen ataduras. O mejor dicho, están completamente atados a la voluntad de Dios.
