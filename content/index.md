@@ -8,6 +8,8 @@ title: Digital Garden
 La idea no es encontrarse con algo cronológicamente acomodado como lo es todo en el blog. *Acá deposito semillas que de a poco van creciendo* y voy procesandolas. En la vida real, todo esto pasa en un cuaderno, pero quiero dejar cierta huella de eso en algún lado. El mundo virtual es una manera de "pseudo-inmortalizar" todo esto que anda en mi cabeza.
 Disfrutenlo.
 
+Para volver a la [🏠Casa.](https://salvadorrr.carrd.co)
+
 Unas de mis **plantas más recientes**:
 
 [[🪻Sobre la vida plena]]
