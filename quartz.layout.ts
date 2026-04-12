@@ -24,8 +24,16 @@ export const defaultContentPageLayout: PageLayout = {
     Component.ArticleTitle(),
     Component.ContentMeta(),
     Component.TagList(),
-    Component.Graph(),
-  ],
+    Component.Graph({
+  localGraph: {
+    fontSize: 0.6,    // Aumenta el texto (por defecto es 0.4)
+    nodeSize: 3.5,    // Aumenta el tamaño de los círculos (por defecto es 2.5)
+  },
+  globalGraph: {
+    fontSize: 0.6,
+    nodeSize: 3.5,
+  },
+}),
   left: [
     // Component.PageTitle(),
     Component.MobileOnly(Component.Spacer()),
