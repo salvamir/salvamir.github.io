@@ -28,12 +28,12 @@ export const defaultContentPageLayout: PageLayout = {
       localGraph: {
         fontSize: 0.5,
         nodeSize: 3.0,
-        repulsion: 0.9,
+        repulsion: 1.3,
       },
       globalGraph: {
         fontSize: 0.6,
         nodeSize: 3.5,
-        repulsion: 0.9,
+        repulsion: 1.3,
       },
     }),
   ],
