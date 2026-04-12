@@ -1,2 +1,2 @@
-Me gustan cosas inservibles [[🪷]]
+Me gustan cosas inservibles [[🌷 Sobre la vida "real"]]
 Me doy cuenta que mis intereses parecen ser menos útiles o eficientes que los de los otros. No considero que eso sea malo, pero me genera cierta repulsión. 
