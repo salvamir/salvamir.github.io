@@ -26,12 +26,14 @@ export const defaultContentPageLayout: PageLayout = {
     Component.TagList(),
     Component.Graph({
       localGraph: {
-        fontSize: 0.6,
-        nodeSize: 3.5,
+        fontSize: 0.5,
+        nodeSize: 3.0,
+        repulsion: 0.9,
       },
       globalGraph: {
         fontSize: 0.6,
         nodeSize: 3.5,
+        repulsion: 0.9,
       },
     }),
   ],
