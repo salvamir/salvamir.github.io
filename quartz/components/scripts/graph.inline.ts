@@ -143,7 +143,7 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
     if (showTags) tags.forEach((tag) => neighbourhood.add(tag))
   }
 
-    const nodes = [...neighbourhood].map((url) => {
+  const nodes = [...neighbourhood].map((url) => {
     const rawText = url.startsWith("tags/") ? "#" + url.substring(5) : (data.get(url)?.title ?? url)
     const safeText = String(rawText)
     
@@ -153,6 +153,7 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
       tags: data.get(url)?.tags ?? [],
     }
   })
+  
   const graphData: { nodes: NodeData[]; links: LinkData[] } = {
     nodes,
     links: links
