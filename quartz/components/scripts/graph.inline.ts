@@ -143,11 +143,13 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
     if (showTags) tags.forEach((tag) => neighbourhood.add(tag))
   }
 
-  const nodes = [...neighbourhood].map((url) => {
-    const text = url.startsWith("tags/") ? "#" + url.substring(5) : (data.get(url)?.title ?? url)
+    const nodes = [...neighbourhood].map((url) => {
+    const rawText = url.startsWith("tags/") ? "#" + url.substring(5) : (data.get(url)?.title ?? url)
+    const safeText = String(rawText)
+    
     return {
       id: url,
-      text: url.startsWith("tags/") ? text : text.charAt(0), 
+      text: url.startsWith("tags/") ? safeText : safeText.substring(0, 1),
       tags: data.get(url)?.tags ?? [],
     }
   })
