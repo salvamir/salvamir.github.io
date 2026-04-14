@@ -1,4 +1,4 @@
-// @ts-nocheck
+import type { ContentDetails } from "../../plugins/emitters/contentIndex"
 import {
   SimulationNodeDatum,
   SimulationLinkDatum,
@@ -18,35 +18,8 @@ import { Text, Graphics, Application, Container, Circle } from "pixi.js"
 import { Group as TweenGroup, Tween as Tweened } from "@tweenjs/tween.js"
 import { registerEscapeHandler, removeAllChildren } from "./util"
 import { getFullSlug, resolveRelative, simplifySlug } from "../../util/path"
-
-// FIX 1: Declaramos los alias localmente para que TS no llore por imports perdidos.
-type SimpleSlug = string
-type FullSlug = string
-
-export interface D3Config {
-  drag: boolean
-  zoom: boolean
-  depth: number
-  scale: number
-  repelForce: number
-  centerForce: number
-  linkDistance: number
-  fontSize: number
-  opacityScale: number
-  removeTags: string[]
-  showTags: boolean
-  focusOnHover: boolean
-  enableRadial: boolean
-}
-
-// FIX 2: Mantenemos la estructura interna aislada.
-type ContentDetails = {
-  title: string
-  links: SimpleSlug[]
-  tags: string[]
-  content: string
-  richContent?: string
-}
+import type { FullSlug, SimpleSlug } from "../../util/path"
+import type { D3Config } from "../Graph"
 
 type GraphicsInfo = {
   color: string
@@ -96,6 +69,7 @@ type TweenNode = {
   stop: () => void
 }
 
+// FIX: Creamos la función para traer los datos y evitar el error "fetchData not found"
 let sharedFetchData: Promise<{ [key: string]: ContentDetails }> | null = null
 
 async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
@@ -119,6 +93,7 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
     enableRadial,
   } = JSON.parse(graph.dataset["cfg"]!) as D3Config
 
+  // FIX: Inicializamos la carga de notas
   if (!sharedFetchData) {
     const dataUrl = new URL(resolveRelative(fullSlug, "static/contentIndex.json" as FullSlug), window.location.toString())
     sharedFetchData = fetch(dataUrl).then((res) => res.json())
@@ -293,6 +268,8 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
     for (const l of linkRenderData) {
       let alpha = 1
 
+      // if we are hovering over a node, we want to highlight the immediate neighbours
+      // with full alpha and the rest with default alpha
       if (hoveredNodeId) {
         alpha = l.active ? 1 : 0.2
       }
@@ -358,6 +335,7 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
     for (const n of nodeRenderData) {
       let alpha = 1
 
+      // if we are hovering over a node, we want to highlight the immediate neighbours
       if (hoveredNodeId !== null && focusOnHover) {
         alpha = n.active ? 1 : 0.2
       }
@@ -513,6 +491,7 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
           event.subject.fy = null
           dragging = false
 
+          // if the time between mousedown and mouseup is short, we consider it a click
           if (Date.now() - dragStartTime < 500) {
             const node = graphData.nodes.find((n) => n.id === event.subject.id) as NodeData
             const targ = resolveRelative(fullSlug, node.id)
@@ -542,6 +521,7 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
           stage.scale.set(transform.k, transform.k)
           stage.position.set(transform.x, transform.y)
 
+          // zoom adjusts opacity of labels too
           const scale = transform.k * opacityScale
           let scaleOpacity = Math.max((scale - 1) / 3.75, 0)
           const activeNodes = nodeRenderData.filter((n) => n.active).flatMap((n) => n.label)
