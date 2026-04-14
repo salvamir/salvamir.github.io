@@ -17,8 +17,9 @@ import {
 import { Text, Graphics, Application, Container, Circle } from "pixi.js"
 import { Group as TweenGroup, Tween as Tweened } from "@tweenjs/tween.js"
 import { registerEscapeHandler, removeAllChildren } from "./util"
-import { FullSlug, SimpleSlug, getFullSlug, resolveRelative, simplifySlug } from "../../util/path"
-import { D3Config } from "../Graph"
+import { getFullSlug, resolveRelative, simplifySlug } from "../../util/path"
+import type { FullSlug, SimpleSlug } from "../../util/path"
+import type { D3Config } from "../Graph"
 
 type GraphicsInfo = {
   color: string
