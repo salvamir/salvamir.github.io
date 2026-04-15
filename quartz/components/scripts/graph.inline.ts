@@ -383,7 +383,7 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
       style: {
         fontSize: fontSize * 15,
         fill: computedStyleMap["--dark"],
-        fontFamily: computedStyleMap["--bodyFont"],
+        fontFamily: `${computedStyleMap["--bodyFont"]}, "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", emoji`,
       },
       resolution: window.devicePixelRatio * 4,
     })
