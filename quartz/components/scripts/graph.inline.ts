@@ -17,9 +17,8 @@ import {
 import { Text, Graphics, Application, Container, Circle } from "pixi.js"
 import { Group as TweenGroup, Tween as Tweened } from "@tweenjs/tween.js"
 import { registerEscapeHandler, removeAllChildren } from "./util"
-import { getFullSlug, resolveRelative, simplifySlug } from "../../util/path"
-import type { FullSlug, SimpleSlug } from "../../util/path"
-import type { D3Config } from "../Graph"
+import { FullSlug, SimpleSlug, getFullSlug, resolveRelative, simplifySlug } from "../../util/path"
+import { D3Config } from "../Graph"
 
 type GraphicsInfo = {
   color: string
@@ -69,9 +68,6 @@ type TweenNode = {
   stop: () => void
 }
 
-// FIX: Creamos la función para traer los datos y evitar el error "fetchData not found"
-let sharedFetchData: Promise<{ [key: string]: ContentDetails }> | null = null
-
 async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
   const slug = simplifySlug(fullSlug)
   const visited = getVisited()
@@ -93,14 +89,8 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
     enableRadial,
   } = JSON.parse(graph.dataset["cfg"]!) as D3Config
 
-  // FIX: Inicializamos la carga de notas
-  if (!sharedFetchData) {
-    const dataUrl = new URL(resolveRelative(fullSlug, "static/contentIndex.json" as FullSlug), window.location.toString())
-    sharedFetchData = fetch(dataUrl).then((res) => res.json())
-  }
-
   const data: Map<SimpleSlug, ContentDetails> = new Map(
-    Object.entries<ContentDetails>(await sharedFetchData).map(([k, v]) => [
+    Object.entries<ContentDetails>(await fetchData).map(([k, v]) => [
       simplifySlug(k as FullSlug),
       v,
     ]),
@@ -153,16 +143,14 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
     if (showTags) tags.forEach((tag) => neighbourhood.add(tag))
   }
 
-  // ACÁ ESTÁ EL CAMBIO PARA LAS INICIALES
   const nodes = [...neighbourhood].map((url) => {
     const text = url.startsWith("tags/") ? "#" + url.substring(5) : (data.get(url)?.title ?? url)
     return {
       id: url,
-      text: url.startsWith("tags/") ? text : String(text).substring(0, 1),
+      text,
       tags: data.get(url)?.tags ?? [],
     }
   })
-  
   const graphData: { nodes: NodeData[]; links: LinkData[] } = {
     nodes,
     links: links
