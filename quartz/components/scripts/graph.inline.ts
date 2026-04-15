@@ -147,7 +147,7 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
     const text = url.startsWith("tags/") ? "#" + url.substring(5) : (data.get(url)?.title ?? url)
     return {
       id: url,
-      text,
+      text, url.startsWith("tags/") ? text : String(text).substring(0, 1),
       tags: data.get(url)?.tags ?? [],
     }
   })
