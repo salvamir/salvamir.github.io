@@ -1,0 +1,7 @@
+Ahora estoy en el colectivo yendo a una clase de física II y me puse a pensar en que algún día voy a ser viejito, y no voy a poder moverme tan rápidamente como lo hago ahora. Eventualmente, voy a ser un "adulto real" con responsabilidades reales y más "serias" y no voy a ir a la facultad en colectivo a una clase de física II. 
+
+Mis papás algún día quizás sean abuelos. Algún día el 2026 va a ser lo que es para nosotros hoy el 2016, o el 2010... Probablemente mañana ya no me acuerde nítidamente de éste momento, y eso es como la muerte de este Salva que escribe en su cuaderno ahora y que está como *desapareciendo* a cada instante que pasa...
+
+El tiempo es algo muy raro. Me sorprende y me asusta lo rápido que se me pasaron 20 años. Es abrumador pensar que en 20 años para adelante pueda decir lo mismo. Y a la vez me asusta pensar que todo **esto** vaya a estar muerto... desintegrandose... desenfocándose... perdiendo cada vez más sus detalles y convirtiendose en un recuerdo hasta que, finalmente, me olvide de como se sintió (y de como fué) tener 20 años realmente.
+
+Dios seguro me permita quedarme con algunas sensaciones, personas, palabras, canciones, colores, miedos, ideas de ese Salva de 20 años que todavía existe. Pero me asusta saber que llegará el día en el que ya no exista **yo**, sino un Salva que ha de vivir y existir sola y exclusivamente en su presente, diferente del *mío*, y el ya no se acuerde de mi.
