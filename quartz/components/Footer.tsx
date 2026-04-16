@@ -10,9 +10,8 @@ export default ((opts?: Options) => {
     const year = new Date().getFullYear()
     return (
       <footer class={`${displayClass ?? ""}`}>
-        <hr />
         <p>
-          Cultivado parcialmente a mano por Salva © {year}
+          <a class="home-link" href="https://salvadorrr.carrd.co">🏠Casa</a> — Cultivado parcialmente a mano por Salva © {year}
         </p>
         
         {/* Botón minimalista Back To Top */}
