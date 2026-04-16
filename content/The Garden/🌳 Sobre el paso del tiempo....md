@@ -7,3 +7,4 @@ El tiempo es algo muy raro. Me sorprende y me asusta lo rápido que se me pasaro
 Dios seguro me permita quedarme con algunas sensaciones, personas, palabras, canciones, colores, miedos, ideas de ese Salva de 20 años que todavía existe. Pero me asusta saber que llegará el día en el que ya no exista **yo**, sino un Salva que ha de vivir y existir sola y exclusivamente en su presente, diferente del *mío*, y el ya no se acuerde de mi.
 
 [[🌱 Sobre el sentido de las cosas]]
+[[🌷 Sobre la vida "real"]]]
