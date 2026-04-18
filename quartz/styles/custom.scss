@@ -29,13 +29,13 @@ body, section {
 
 /* --- SECCIÓN PARA OCULTAR EL GRAFO Y BACKLINKS --- */
 
-/* Lista de todas las páginas y carpetas donde NO queremos grafo */
+/* Atrapamos clases manuales, páginas sueltas y cualquier cosa en la bitácora */
 body[class*="blog-post"],
 body[data-slug="ahora"],
 body[data-slug="links"],
 body[data-slug="libro-de-visitas"],
-body[data-slug*="bitácora"], 
-body[data-slug*="bitacora"] {
+body[data-slug*="itacora"], 
+body[data-slug*="itácora"] {
   .graph, .graph-outer, .backlinks, #graph-container, .component.graph {
     display: none !important;
     visibility: hidden !important;
