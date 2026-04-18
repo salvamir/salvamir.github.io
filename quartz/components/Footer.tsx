@@ -13,10 +13,10 @@ export default ((opts?: Options) => {
         {/* Navegación Principal: Rutas limpias según tus nuevos nombres de archivo */}
         <p>
           <a href="/">🌳 El Jardín</a> | 
-          <a href="/bitácora">📖 Bitácora</a> | 
+          <a href="/Bitácora">📖 Bitácora</a> | 
           <a href="/ahora">📅 Ahora</a> | 
           <a href="/links">🌐 Enlaces</a> | 
-          <a href="/libro-de-visitas">✍️ Libro de Visitas</a>
+          <a href="/libro-de-visitas"> 📨 Libro de Visitas</a>
         </p>
         
         {/* Firma y Créditos */}
