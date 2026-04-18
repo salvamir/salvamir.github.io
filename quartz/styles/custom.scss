@@ -30,11 +30,12 @@ body, section {
 /* --- SECCIÓN PARA OCULTAR EL GRAFO Y BACKLINKS --- */
 
 /* Lista de todas las páginas y carpetas donde NO queremos grafo */
+body[class*="blog-post"],
 body[data-slug="ahora"],
 body[data-slug="links"],
 body[data-slug="libro-de-visitas"],
-body[data-slug^="bitácora/"], 
-body[data-slug^="bitacora/"] {
+body[data-slug*="bitácora"], 
+body[data-slug*="bitacora"] {
   .graph, .graph-outer, .backlinks, #graph-container, .component.graph {
     display: none !important;
     visibility: hidden !important;
@@ -43,7 +44,6 @@ body[data-slug^="bitacora/"] {
     padding: 0 !important;
   }
 }
-
 // --- Estilos del Footer ---
 footer {
   text-align: center;
