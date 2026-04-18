@@ -29,17 +29,18 @@ body, section {
 
 /* --- SECCIÓN PARA OCULTAR EL GRAFO Y BACKLINKS --- */
 
-/* 1. Para las páginas manuales con cssclasses: blog-post */
-body[class*="blog-post"] {
+/* Lista de todas las páginas y carpetas donde NO queremos grafo */
+body[data-slug="ahora"],
+body[data-slug="links"],
+body[data-slug="libro-de-visitas"],
+body[data-slug^="bitácora/"], 
+body[data-slug^="bitacora/"] {
   .graph, .graph-outer, .backlinks, #graph-container, .component.graph {
     display: none !important;
-  }
-}
-
-/* 2. Para TODO lo que esté dentro de la carpeta bitácora (con o sin tilde) */
-body[data-slug^="bitácora/"], body[data-slug^="bitacora/"] {
-  .graph, .graph-outer, .backlinks, #graph-container, .component.graph {
-    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
 }
 
