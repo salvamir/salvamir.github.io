@@ -23,16 +23,26 @@ body, section {
   letter-spacing: 0.2px; 
 }
 
-
 .graph text {
   font-family: "Libre Baskerville", serif !important;
 }
-/* Ocultar el grafo en páginas con la clase blog-post */
-.blog-post {
-  .graph, .graph-outer, .backlinks {
+
+/* --- SECCIÓN PARA OCULTAR EL GRAFO Y BACKLINKS --- */
+
+/* 1. Para las páginas manuales con cssclasses: blog-post */
+body[class*="blog-post"] {
+  .graph, .graph-outer, .backlinks, #graph-container, .component.graph {
     display: none !important;
   }
 }
+
+/* 2. Para TODO lo que esté dentro de la carpeta bitácora (con o sin tilde) */
+body[data-slug^="bitácora/"], body[data-slug^="bitacora/"] {
+  .graph, .graph-outer, .backlinks, #graph-container, .component.graph {
+    display: none !important;
+  }
+}
+
 // --- Estilos del Footer ---
 footer {
   text-align: center;
