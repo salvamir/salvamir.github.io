@@ -27,3 +27,37 @@ body, section {
 .graph text {
   font-family: "Libre Baskerville", serif !important;
 }
+/* Ocultar el grafo en páginas con la clase blog-post */
+.blog-post {
+  .graph, .graph-outer, .backlinks {
+    display: none !important;
+  }
+}
+// --- Estilos del Footer ---
+footer {
+  text-align: center;
+  margin-top: 4rem;
+  padding-bottom: 2rem;
+  border-top: 1px solid rgba(168, 158, 149, 0.2);
+
+  p {
+    font-family: "Libre Baskerville", serif;
+    font-size: 0.9rem;
+    color: #a89e95;
+    display: flex;
+    justify-content: center;
+    gap: 1rem; // Espacio entre los links
+    flex-wrap: wrap; // Por si se ve en celular, que se acomoden solos
+  }
+
+  a {
+    color: #a89e95;
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: #e0e0e0; 
+      text-decoration: underline;
+    }
+  }
+}
