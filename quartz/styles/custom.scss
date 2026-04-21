@@ -31,8 +31,6 @@ body, section {
 
 /* Atrapamos clases manuales, páginas sueltas y cualquier cosa en la bitácora */
 body[class*="blog-post"],
-body[data-slug="ahora"],
-body[data-slug="links"],
 body[data-slug="libro-de-visitas"],
 body[data-slug*="itacora"], 
 body[data-slug*="itácora"] {
