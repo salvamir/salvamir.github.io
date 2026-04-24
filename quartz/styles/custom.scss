@@ -29,13 +29,14 @@ body, section {
 
 /* --- SECCIÓN PARA OCULTAR EL GRAFO Y BACKLINKS --- */
 
-/* Atrapamos clases manuales, páginas sueltas y cualquier cosa en la bitácora */
+/* Atrapamos clases manuales, páginas sueltas, la bitácora y sobre mi */
 body[class*="blog-post"],
 body[data-slug="libro-de-visitas"],
 body[data-slug="ahora"],
 body[data-slug="links"],
 body[data-slug*="itacora"], 
-body[data-slug*="itácora"] {
+body[data-slug*="itácora"],
+body[data-slug*="sobre-mi"] {
   .graph, .graph-outer, .backlinks, #graph-container, .component.graph {
     display: none !important;
     visibility: hidden !important;

@@ -3,7 +3,7 @@ cssclasses:
   - blog-post
 title: 📅 Ahora
 ---
-Acá van a leer un poco lo que estoy viviendo/haciendo actualmente. La idea es ir actualizando esta página de forma relativamente regular. Quiero dejar acá documentadas las cosas en las que tengo metida la cabeza, como si fuese que un amigo que hace mucho tiempo no me ve viniese y me preguntase: ¿Cómo andás?
+Acá van a leer un poco lo que estoy viviendo/haciendo actualmente. La idea es ir actualizando esta página de forma relativamente regular. Quiero dejar acá documentadas las cosas en las que tengo metida la cabeza, como si fuese que un amigo que hace mucho tiempo no me ve viniese y me preguntase: ¿Cómo andás? ¿Qué anduviste haciendo?
 
 ## 🔍 Estoy concentrado en:
 
