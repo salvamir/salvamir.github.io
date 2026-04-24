@@ -8,8 +8,6 @@ Acá publico análisis, reseñas e ideas que tengo sobre canciones o discos que 
 
 No esperen encontrarse con información técnica o excepcional sobre la música que se comente en esta sección. Mi idea es hacer simplemente profundizar en lo que el artista quiso decir con las letras/acordes/arreglos y como yo interpreto esto. Y como este conjunto interpela mi historia.
 
-# Empezar a leer:
-
 ---
 ![[The Light For Days (Album) - Jacob Collier.]]
 
