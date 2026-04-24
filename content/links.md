@@ -3,7 +3,7 @@ cssclasses:
   - blog-post
 title: 🌐 Links
 ---
-Here you can find a list of websites I enjoy reading a lot like my main time-killer activity.
+Here you can find a list of websites I enjoy reading the most.
 #### Currently Reading 📖:
 1. [Seasons](https://seasons.bearblog.dev/) 
 2. [Peculiar Monster](https://peculiar.monster/blog/2026/2026-03-01-still-here/)
