@@ -9,9 +9,10 @@ export const sharedPageComponents: SharedLayout = {
     Component.Search(),
     Component.Darkmode(),
   ],
+  afterBody: [], /* <--- ESTA ES LA LÍNEA QUE FALTABA Y CAUSÓ EL ERROR */
   footer: Component.Footer({
     links: {
-      "GitHub": "https://github.com/salvamir",
+      "GitHub": "https://github.com/tu-usuario",
     },
   }),
 }
