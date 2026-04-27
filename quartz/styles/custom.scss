@@ -51,7 +51,7 @@ footer {
   text-align: center;
   margin-top: 4rem;
   padding-bottom: 2rem;
-  border-top: 1px solid rgba(168, 158, 149, 0.2);
+  // border-top: 1px solid rgba(168, 158, 149, 0.2);
 
   p {
     font-family: "Libre Baskerville", serif;
@@ -105,4 +105,13 @@ footer hr {
 
 footer {
   margin-top: 2rem !important; /* Achica el espacio vacío. Podés cambiar el 2 por un 1 si lo querés más pegado */
+}
+/* --- ANiquilación de líneas rebeldes --- */
+.page-footer hr, 
+article hr:last-of-type,
+hr + footer {
+  display: none !important;
+  height: 0 !important;
+  margin: 0 !important;
+  border: none !important;
 }
