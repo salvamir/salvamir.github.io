@@ -3,12 +3,12 @@ cssclasses:
   - blog-post
 title: 🌐 Links
 ---
-Here you can find a list of websites I enjoy reading the most.
-#### Currently Reading 📖:
+Here you can find a list of websites I enjoy reading the most. Those are great places to visit on the Internet.
+#### Currently Reading:
 1. [Seasons](https://seasons.bearblog.dev/) 
 2. [Peculiar Monster](https://peculiar.monster/blog/2026/2026-03-01-still-here/)
 3. [ElevenTy](https://www.11ty.dev/)
-#### Personal Webpages 👨‍💻:
+#### Personal Webpages:
 
 - [Eric Murphy](https://ericmurphy.xyz/): He’s a web developer who also has a personal website where he post about tech things.
 - [Luke Smith:](https://lukesmith.xyz/) I’m not sure if he’s a philosopher but he post a lot of “trascendental thoughts“ if you like to call them like that.
@@ -34,12 +34,11 @@ Here you can find a list of websites I enjoy reading the most.
 - [Exile Lifestyle.](https://exilelifestyle.com/)
 - [Tom](https://tomeri.org/). 
 - [Tanner](https://tanner.vc) He creates things.
-#### Interesting Websites 🤹‍♂
+#### Interesting Websites:
 
 - [Christian Info](https://elcristiano.info/): Great info about the church.
 - [Catholic Liturgy:](https://liturgiacatolica.org/) Meditations about the gospel.
 - [About Fiat Cars:](https://www.fiat.com.mx/blog.html) Q&A about cars so please enter this link.
-- [Webring:](https://geekring.net/) Only if you’re bored.
 - [Project Gutenberg](https://www.gutenberg.org/) List Of E-books
 - [Tucumán Turismo:](https://www.tucutur.com.ar/index.html) Hay muchas cosas interesantes de mi provincia paisano acá adentro vayan a leerlo.
 - [Free Music:](https://lamusicagratis.com/) It doesn’t need to be explained.
@@ -47,7 +46,7 @@ Here you can find a list of websites I enjoy reading the most.
 - [Rate Your Music:](https://rateyourmusic.com/) I guess you already know what to expect.
 - [Medieval](https://going-medieval.com) 
 
-#### Geology Stuff 🌎:
+#### Geology:
 - [Hombre Geológico.](https://geologicalmanblog.wordpress.com/) 
 - [Highly Allochthonous.](https://all-geo.org/highlyallochthonous/) 
 - [Geology Courses](https://courses.spatialthoughts.com)
@@ -55,5 +54,6 @@ Here you can find a list of websites I enjoy reading the most.
 - [Ciencias De La Geología.](https://geologyscience.com)
 - [Geology and Earth Science.](https://geology.com)
 
-
-
+### Webrings:
+- [XXIIVV](https://webring.xxiivv.com/)
+- [Webring:](https://geekring.net/) Only if you’re bored.

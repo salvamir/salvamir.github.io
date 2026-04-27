@@ -12,3 +12,4 @@ Todos esos objetivos que mencioné, suelen encontrarse en "standby" porque la fa
 Tengo 5 hermanos. Con todos me llevo bien. Me cuesta un toque la comunicación con algunos más que otros. Más que nada porque (no sé por qué) me cuesta abrirme con ellos a veces, soy medio cerrado.
 
 Esta página está en proceso y solo existe porque se me ocurrió este 2026. Quién sabe, quizás después me de vergüenza extrema  o me arrepienta de haber publicado todo esto y la elimine de la faz de la Tierra. Me lo tomo con humor, no es un proyecto serio la verdad.
+
