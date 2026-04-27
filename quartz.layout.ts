@@ -4,11 +4,7 @@ import * as Component from "./quartz/components"
 // components shared across all pages
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
-  header: [
-    Component.PageTitle(),
-    Component.Search(),
-    Component.Darkmode(),
-  ],
+  header: [],
   afterBody: [], /* <--- ESTA ES LA LÍNEA QUE FALTABA Y CAUSÓ EL ERROR */
   footer: Component.Footer({
     links: {
