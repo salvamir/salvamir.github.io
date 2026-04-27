@@ -23,7 +23,9 @@ Drac festejó su cumple en su casa, Germán cocinó las hamburguesas a la parril
 ---
 #### Cierre Pascua Joven.
 - 5/04/2026
-Al final salió todo bien. Estuve sin celular por esos días y me sirvió mucho para entregarme a los otros.![[image01.jpg]]---
+Al final salió todo bien. Estuve sin celular por esos días y me sirvió mucho para entregarme a los otros.![[image01.jpg]]
+---
+
 #### Salida con la Emi después de Pascua
 - 10/04/2026
 Salimos con la Emi a comer hamburguesas para conversar y ponernos al día por un rato. Venimos teniendo semanas muy largas y frías. ![[image08.jpg]]
@@ -43,4 +45,3 @@ Hoy la Emi de la nada me llamó para preguntarme si quería salir a comer papas.
 #### Convivencia pre-Pascua Joven.
 - 21/03/2026 
 Fue medio agotador, pero estuvo genial, los chicos le pusieron un montón de esfuerzo, recen por nosotros, para que salga todo bien.![[image02.jpg]]
----
