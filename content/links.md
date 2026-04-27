@@ -33,6 +33,7 @@ Here you can find a list of websites I enjoy reading the most.
 - [Nolan](https://nolancaudill.com/)
 - [Exile Lifestyle.](https://exilelifestyle.com/)
 - [Tom](https://tomeri.org/). 
+- [Tanner](https://tanner.vc) He creates things.
 #### Interesting Websites 🤹‍♂
 
 - [Christian Info](https://elcristiano.info/): Great info about the church.
