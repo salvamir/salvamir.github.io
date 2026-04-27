@@ -16,4 +16,7 @@ Estoy con mi familia, me esfuerzo en ocuparme menos de mis cosas, y en vivir má
 #### Cumple Draculín 20 años. 🎉  
 *- 17/03/2026 -*
 Drac festejó su cumple en su casa, Germán cocinó las hamburguesas a la parrilla. Fran y yo llegamos cuando todo ya estaba hecho y las novias estaban invitadas. Nos sacamos un par de fotos. Tocamos la "Chacarera Del Desautado". 
-![[cumple drac 1.jpeg]]![[cumple drac 11.jpeg]]
+![[cumple drac 1.jpeg]]![[cumple drac 11.jpeg|697]]
+
+Convivencia Pre-Pascua Jóven.
+

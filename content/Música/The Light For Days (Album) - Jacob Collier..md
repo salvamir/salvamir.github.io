@@ -36,5 +36,6 @@ Disfruté mucho la distribución espacial de los sonidos en los temas. Noté muy
 
 # Detalles.
 
+Estuve escuchando con más atención la canción "Icarus" e investigando acerca de como se le ocurrió. Resulta que no es de Jacob (creo). Parece que la hicieron unas chicas cantantes de folk. No escuché su versión aún, la original. Pero ahora tratando sobre la de Jacob, me parece tremenda. Me gusta mucho como maneja las voces. 
 
 

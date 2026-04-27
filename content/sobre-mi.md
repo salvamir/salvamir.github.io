@@ -3,12 +3,6 @@ cssclasses:
   - blog-post
 title: 👤 Sobre Mi
 ---
-![[3.jpeg]] 
-
-# 👤 Sobre Mi:
-
-Me llamo Salvador. Soy hijo amado de Dios y soy completamente normal. Por las dudas, esta no es la página de algún famoso. Vivo la vida que El Señor me dio, acá en Argentina, esforzándome en aprender cosas nuevas sobre mi, sobre el mundo y la gente. Esa foto mía con aspecto canchero es meramente ilustrativa. Me la sacó un muy amigo mío con su cámara de fotos, estábamos probándola.
-No conozco otra forma de presentarse que no sea diciendo qué es lo que hago, después de la esperada respuesta al ¿Quién soy?
 # Cosas que hago:
 Estudiar geología en la Facultad de Ciencias Naturales e I.M.L. Hago música y tengo un perfil e Spotify, actualmente aspirando a proyectos nuevos. Avanzo a paso lento. Ahora mismo estoy re-aprendiendo muchas cosas y cuestionándome que quiero para este proyecto. Por eso, hoy lo considero como un hobby más que nada. Participo activamente en la Iglesia, soy católico y por ahora no se exactamente cual es mi lugar en la institución. Solía reconocer mi carisma a la perfección, pero estoy cambiando. Me gustan mucho las computadoras y el Internet, pero no me dedico más que para entretenerme. Esta página es por mero entretenimiento, no tiene una utilidad real. En una de esas le sirva a quién la encuentre. En todo caso, me sirve a mi para animarme a compartir las revelaciones que Dios me va dando en lo cotidiano de mi vida. Así también uno aprende a vivirlas, y a no dejarlas encerradas en un cuaderno "íntimo". 
 

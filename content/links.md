@@ -30,17 +30,21 @@ Here you can find a list of websites I enjoy reading the most.
 - [Maggie Appleton.](https://maggieappleton.com/) Her personal website is awesome. A vast tiny little place where to explore her thoughts, creations, research, experiences and much more!
 - [Baccy Flap.](https://baccyflap.com/)
 - [Tom Forth.](https://tomforth.co.uk/)
+- [Nolan](https://nolancaudill.com/)
+- [Exile Lifestyle.](https://exilelifestyle.com/)
+- [Tom](https://tomeri.org/). 
 #### Interesting Websites 🤹‍♂
 
 - [Christian Info](https://elcristiano.info/): Great info about the church.
 - [Catholic Liturgy:](https://liturgiacatolica.org/) Meditations about the gospel.
 - [About Fiat Cars:](https://www.fiat.com.mx/blog.html) Q&A about cars so please enter this link.
-- [Webring:](https://geekring.net/) Only if you’re boring.
+- [Webring:](https://geekring.net/) Only if you’re bored.
 - [Project Gutenberg](https://www.gutenberg.org/) List Of E-books
 - [Tucumán Turismo:](https://www.tucutur.com.ar/index.html) Hay muchas cosas interesantes de mi provincia paisano acá adentro vayan a leerlo.
 - [Free Music:](https://lamusicagratis.com/) It doesn’t need to be explained.
 - [Blogroll](https://blogroll.org/): Go and look for other cool websites!
 - [Rate Your Music:](https://rateyourmusic.com/) I guess you already know what to expect.
+- [Medieval](https://going-medieval.com) 
 
 #### Geology Stuff 🌎:
 - [Hombre Geológico.](https://geologicalmanblog.wordpress.com/) 
