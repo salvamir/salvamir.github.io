@@ -3,7 +3,9 @@ cssclasses:
   - blog-post
 title: 🌐 Links
 ---
-Here you can find a list of websites I enjoy reading the most. Those are great places to visit on the Internet.
+Here you can find a list of websites I enjoy reading the most. Those are great places to visit on the Internet. 
+
+You can find new unique small personal websites [here](https://wiby.org/)
 #### Currently Reading:
 1. [Seasons](https://seasons.bearblog.dev/) 
 2. [Peculiar Monster](https://peculiar.monster/blog/2026/2026-03-01-still-here/)
@@ -54,6 +56,10 @@ Here you can find a list of websites I enjoy reading the most. Those are great p
 - [Ciencias De La Geología.](https://geologyscience.com)
 - [Geology and Earth Science.](https://geology.com)
 
-### Webrings:
+### Webrings: 
+   *Disclaimer*: I do not like most of them actually. That's why I put them here at the end of the page. I think you can absolutely find more healthy websites for yourself. But who knows, maybe you find something cool and meaningful here.
 - [XXIIVV](https://webring.xxiivv.com/)
 - [Webring:](https://geekring.net/) Only if you’re bored.
+- [Hotline](https://hotlinewebring.club/)
+- [IndieWeb](https://🕸💍.ws/directory).
+- [LainChain](https://foreverliketh.is/#2-lainchan-webring).
