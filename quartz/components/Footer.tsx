@@ -19,7 +19,6 @@ export default ((opts?: Options) => {
         
         {/* Firma y Créditos */}
         <p style="margin-top: 1rem; opacity: 0.8; font-size: 0.85rem;">
-          <a class="home-link" href="https://salvadorrr.carrd.co">🏠 Casa</a> 
           — Cultivado parcialmente a mano por Salva © {year}
         </p>
         

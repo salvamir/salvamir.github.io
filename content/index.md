@@ -3,9 +3,9 @@ cssclasses:
   - blog-post
 title: 🏠 Casa
 ---
-Acá tengo archivados distintos detalles de mi vida. Quizás les interese.
+Acá tengo archivados distintos detalles de mi vida. Quizás les interese.![[home.jpeg]]
 ### Explorar:
-🌿 [[el-jardin|El Jardín Digital]]
-📖 [[Bitácora]]
-🎧 [[Música]]
-👤 [[sobre-mi|Sobre Mí]]
+- 🌿 [[El Jardín/index|El Jardín]]
+- 📖 [[Bitácora/index|Bitácora]]
+- 🎧 [[Música/index|Música]]
+- 👤 [[sobre-mi|Sobre Mí]]
