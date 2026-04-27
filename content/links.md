@@ -5,7 +5,7 @@ title: 🌐 Links
 ---
 Here you can find a list of websites I enjoy reading the most. Those are great places to visit on the Internet. 
 
-You can find new unique small personal websites [here](https://wiby.org/)
+You can find new unique small personal websites [here](https://wiby.org/) or visit the [biglist](http://biglist.terraaeon.com/index.html).
 #### Currently Reading:
 1. [Seasons](https://seasons.bearblog.dev/) 
 2. [Peculiar Monster](https://peculiar.monster/blog/2026/2026-03-01-still-here/)
