@@ -98,3 +98,11 @@ header {
     gap: 1rem;
   }
 }
+/* --- ELIMINAR LÍNEA EXTRA DEL FOOTER Y ACHICAR ESPACIO --- */
+footer hr {
+  display: none !important;
+}
+
+footer {
+  margin-top: 2rem !important; /* Achica el espacio vacío. Podés cambiar el 2 por un 1 si lo querés más pegado */
+}
