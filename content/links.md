@@ -5,7 +5,7 @@ title: 🌐 Links
 ---
 Here you can find a list of websites I enjoy reading the most. Those are great places to visit on the Internet. 
 
-You can find new unique small personal websites [here](https://wiby.org/) or visit the [biglist](http://biglist.terraaeon.com/index.html).
+You can find new unique small personal websites [here](https://wiby.org/),  visit the [biglist](http://biglist.terraaeon.com/index.html) or the [blogroll](https://blogroll.org/).
 #### Currently Reading:
 1. [Seasons](https://seasons.bearblog.dev/) 
 2. [Peculiar Monster](https://peculiar.monster/blog/2026/2026-03-01-still-here/)
@@ -44,7 +44,6 @@ You can find new unique small personal websites [here](https://wiby.org/) or vis
 - [Project Gutenberg](https://www.gutenberg.org/) List Of E-books
 - [Tucumán Turismo:](https://www.tucutur.com.ar/index.html) Hay muchas cosas interesantes de mi provincia paisano acá adentro vayan a leerlo.
 - [Free Music:](https://lamusicagratis.com/) It doesn’t need to be explained.
-- [Blogroll](https://blogroll.org/): Go and look for other cool websites!
 - [Rate Your Music:](https://rateyourmusic.com/) I guess you already know what to expect.
 - [Medieval](https://going-medieval.com) 
 
