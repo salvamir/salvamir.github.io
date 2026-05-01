@@ -36,6 +36,9 @@ You can find new unique small personal websites [here](https://wiby.org/),  visi
 - [Exile Lifestyle.](https://exilelifestyle.com/)
 - [Tom](https://tomeri.org/). 
 - [Tanner](https://tanner.vc) He creates things.
+- [Small Seasons.](https://smallseasons.guide/)
+- [The Autodidacts](https://www.autodidacts.io/tips-for-boosting-energy-levels-mitochondrial-function/)
+
 #### Interesting Websites:
 
 - [Christian Info](https://elcristiano.info/): Great info about the church.
@@ -54,6 +57,7 @@ You can find new unique small personal websites [here](https://wiby.org/),  visi
 - [Geology Page](https://www.geologypage.com)
 - [Ciencias De La Geología.](https://geologyscience.com)
 - [Geology and Earth Science.](https://geology.com)
+- [GeologíaWeb](https://geologiaweb.com).
 
 ### Webrings: 
    *Disclaimer*: I do not like most of them actually. That's why I put them here at the end of the page. I think you can absolutely find more healthy websites for yourself. But who knows, maybe you find something cool and meaningful here.
