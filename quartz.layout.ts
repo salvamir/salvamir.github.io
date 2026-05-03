@@ -7,18 +7,7 @@ export const sharedPageComponents: SharedLayout = {
   header: [
     Component.PageTitle(),
     Component.Spacer(),
-    Component.DesktopOnly(
-      Component.CustomHTML(`
-        <nav class="links">
-          <a href="/el-jardín/index">🌿 Jardín</a>
-          <a href="/bitacora/index">📖 Bitácora</a>
-          <a href="/libro-de-visitas">📨 Visitas</a>
-          <a href="/ahora">📅 Ahora</a>
-          <a href="/musica/index">🎧 Música</a>
-          <a href="/links">🌐 Links</a>
-        </nav>
-      `)
-    ),
+    Component.DesktopOnly(Component.NavLinks()), // <--- ¡AQUÍ ESTÁ TU COMPONENTE!
   ],
   afterBody: [],
   footer: [],
@@ -34,7 +23,6 @@ export const defaultContentPageLayout: PageLayout = {
     Component.ArticleTitle(),
     Component.ContentMeta(),
     Component.TagList(),
-    // Mantenemos tu configuración de grafo intacta:
     Component.Graph({
       localGraph: {
         fontSize: 0.45,
