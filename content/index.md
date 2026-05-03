@@ -3,12 +3,12 @@ title: 🏠 Casa
 ---
 ![[home.jpeg]]
 Acá tengo archivados distintos detalles de mi vida. Quizás les interese.
-
-|                                  |                                 |
-| -------------------------------- | ------------------------------- |
-| 🌿 [[El Jardín/index \|Jardín]]  | 📨 [[libro-de-visitas\| Notas]] |
-| 📖 [[Bitácora/index \|Bitácora]] | 🌐 [[links\| Links]]            |
-| 🎧 [[Música/index\|Música]]      | 📅 [[ahora\| Ahora]]            |
+🌿 [[El Jardín/index |Jardín]]
+📖 [[Bitácora/index |Bitácora]]
+📅 [[ahora| Ahora]]
+🎧 [[Música/index|Música]]
+📨 [[libro-de-visitas| Visitas]]
+🌐 [[links| Links]]
 ## Sobre Mi:
 Hola! Soy Salvador, vivo en Argentina, hago música cuando puedo, estudio Geología y tengo 5 hermanos. Creo en Dios y persevero en algunos grupos de la Iglesia. Me surgió hacer esta página porque hace un buen tiempo que no uso Instagram activamente, y quería tener un lugar en Internet dónde poder coleccionar recuerdos. Me encanta Tafí Del Valle, ese cuadro que ven arriba lo hizo un tío segundo mío. Me gusta coleccionar Legos y armar cosas cada tanto.
 ## Para Curiosear:

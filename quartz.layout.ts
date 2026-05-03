@@ -4,12 +4,22 @@ import * as Component from "./quartz/components"
 // components shared across all pages
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
-  header: [],
-  afterBody: [], /* <--- ESTA ES LA LÍNEA QUE FALTABA Y CAUSÓ EL ERROR */
-  footer: Component.Footer({
-    links: {
-      "GitHub": "https://github.com/tu-usuario",
-    },
+  header: [
+    Component.PageTitle(), // Tu título de sitio
+    Component.Spacer(),    // Espacio para separar el título de los links
+    Component.Links({      // Aquí agregamos tus botones
+      links: {
+        "🌿 Jardín": "/el-jardín/index",
+        "📖 Bitácora": "/bitacora/index",
+        "📨 Visitas": "/libro-de-visitas",
+        "📅 Ahora": "/ahora",
+        "🎧 Música": "/musica/index",
+        "🌐 Links": "/links",
+      },
+    }),
+  ],
+  afterBody: [],
+  footer: [],
   }),
 }
 // components for pages that display a single page (e.g. a single note)
