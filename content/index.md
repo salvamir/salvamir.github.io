@@ -5,12 +5,8 @@ title: 🏠 Casa
 ---
 ![[home.jpeg]]
 Acá tengo archivados distintos detalles de mi vida. Quizás les interese.
-> [!info] Secciones de esta página
-> - 🌿 [[El Jardín/index|Jardín Digital]] &nbsp;&nbsp;&nbsp;&nbsp;  📨 [[libro-de-visitas| Libro De Visitas]]
-> - 📖 [[Bitácora/index | Bitácora]] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 🌐 [[Links]]
-> - 🎧 [[Música/index | Música]] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  📅 [[ahora | Ahora]]
 
-| Secciones de esta página                |                                            |
+|                                         |                                            |
 | --------------------------------------- | ------------------------------------------ |
 | 🌿 [[El Jardín/index \|Jardín Digital]] | 📨 [[libro-de-visitas\| Libro De Visitas]] |
 | 📖 [[Bitácora/index \|Bitácora]]        | 🌐 [[links\| Links]]                       |
