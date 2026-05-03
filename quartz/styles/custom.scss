@@ -1,16 +1,13 @@
 @use "./base.scss";
 
-// 1. ESTILOS DE LECTURA Y DISEÑO BASE
-body, section { line-height: 1.6; letter-spacing: 0.2px; }
-.center { grid-column: 2 / -2; max-width: 800px; margin: 0 auto; }
-
-// 2. GRAFO: OCULTAR GLOBALMENTE Y MOSTRAR SOLO EN "EL JARDÍN"
-.graph, .graph-outer, #graph-container, .component.graph {
+// --- 1. CONFIGURACIÓN GLOBAL: Ocultar Grafo y Backlinks ---
+.graph, .graph-outer, #graph-container, .component.graph, .backlinks, .component.backlinks {
   display: none !important;
 }
 
-/* Si tu carpeta se llama "El Jardín", Quartz suele usar esta clase: */
-body[class*="folder-el-jardin"] {
+// --- 2. MOSTRAR GRAFO SOLO EN EL JARDÍN ---
+// Esto detecta cualquier página que empiece con "El-Jardín" en su slug
+body[data-slug^="El-Jardín"] {
   .graph, .graph-outer, #graph-container, .component.graph {
     display: block !important;
     height: 400px !important;
@@ -23,12 +20,7 @@ body[class*="folder-el-jardin"] {
   }
 }
 
-// 3. BACKLINKS: OCULTAR GLOBALMENTE EN TODO EL SITIO
-.backlinks, .component.backlinks {
-  display: none !important;
-}
-
-// 4. FOOTER: ESTILOS Y ANIKILACIÓN DE LÍNEAS
+// --- 3. FOOTER Y LÍNEAS ---
 footer {
   text-align: center;
   margin-top: 2rem !important;
@@ -39,7 +31,6 @@ footer {
   a { color: #a89e95; text-decoration: none; &:hover { color: #e0e0e0; text-decoration: underline; } }
 }
 
-// ANIKILACIÓN TOTAL DE LÍNEAS HORIZONTALES (HR)
 hr, .page-footer hr, article hr, hr + footer {
   display: none !important;
   border: none !important;
@@ -47,7 +38,8 @@ hr, .page-footer hr, article hr, hr + footer {
   padding: 0 !important;
 }
 
-// 5. CABECERA
+// --- 4. LAYOUT Y CABECERA ---
+.center { grid-column: 2 / -2; max-width: 800px; margin: 0 auto; }
 header {
   display: flex; flex-direction: row; align-items: center; justify-content: space-between; margin-top: 2rem; padding: 0 1rem;
   @media (max-width: 800px) { flex-direction: column; gap: 1rem; }
