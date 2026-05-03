@@ -5,24 +5,26 @@ import * as Component from "./quartz/components"
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [
-    Component.PageTitle(), // Tu título de sitio
-    Component.Spacer(),    // Espacio para separar el título de los links
-    Component.Links({      // Aquí agregamos tus botones
-      links: {
-        "🌿 Jardín": "/el-jardín/index",
-        "📖 Bitácora": "/bitacora/index",
-        "📨 Visitas": "/libro-de-visitas",
-        "📅 Ahora": "/ahora",
-        "🎧 Música": "/musica/index",
-        "🌐 Links": "/links",
-      },
-    }),
+    Component.PageTitle(),
+    Component.Spacer(),
+    Component.DesktopOnly(
+      Component.CustomHTML(`
+        <nav class="links">
+          <a href="/el-jardín/index">🌿 Jardín</a>
+          <a href="/bitacora/index">📖 Bitácora</a>
+          <a href="/libro-de-visitas">📨 Visitas</a>
+          <a href="/ahora">📅 Ahora</a>
+          <a href="/musica/index">🎧 Música</a>
+          <a href="/links">🌐 Links</a>
+        </nav>
+      `)
+    ),
   ],
-// ... (arriba de esto va el header y el head)
   afterBody: [],
-  footer: [], 
+  footer: [],
 }
-// components for pages that display a single page (e.g. a single note)
+
+// components for pages that display a single page
 export const defaultContentPageLayout: PageLayout = {
   beforeBody: [
     Component.ConditionalRender({
@@ -32,6 +34,7 @@ export const defaultContentPageLayout: PageLayout = {
     Component.ArticleTitle(),
     Component.ContentMeta(),
     Component.TagList(),
+    // Mantenemos tu configuración de grafo intacta:
     Component.Graph({
       localGraph: {
         fontSize: 0.45,
@@ -54,7 +57,7 @@ export const defaultContentPageLayout: PageLayout = {
   ],
 }
 
-// components for pages that display lists of pages  (e.g. tags or folders)
+// components for pages that display lists of pages
 export const defaultListPageLayout: PageLayout = {
   beforeBody: [Component.Breadcrumbs(), Component.ArticleTitle(), Component.ContentMeta()],
   left: [
