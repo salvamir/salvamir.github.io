@@ -1,6 +1,3 @@
----
-title: 🏠 Casa
----
 ![[home.jpeg]]
 Acá tengo archivados distintos detalles de mi vida. Quizás les interese.
 ## Sobre Mi:
