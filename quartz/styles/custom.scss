@@ -5,9 +5,17 @@
   display: none !important;
 }
 
-// --- 2. MOSTRAR GRAFO SOLO EN EL JARDÍN ---
-// Esto detecta cualquier página que empiece con "El-Jardín" en su slug
-body[data-slug^="El-Jardín"] {
+// --- 2. GRAFO: OCULTAR GLOBALMENTE Y MOSTRAR SOLO EN EL JARDÍN ---
+.graph, .graph-outer, #graph-container, .component.graph {
+  display: none !important;
+}
+
+/* Selector que cubre: 
+   1. Cualquier página que empiece con "El-Jardín"
+   2. La página de inicio específica si el slug es exactamente "El-Jardín"
+*/
+body[data-slug^="El-Jardín"], 
+body[data-slug="El-Jardín"] {
   .graph, .graph-outer, #graph-container, .component.graph {
     display: block !important;
     height: 400px !important;
@@ -19,7 +27,6 @@ body[data-slug^="El-Jardín"] {
     overflow: hidden !important;
   }
 }
-
 // --- 3. FOOTER Y LÍNEAS ---
 footer {
   text-align: center;
