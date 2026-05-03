@@ -15,7 +15,7 @@ Acá tengo archivados distintos detalles de mi vida. Quizás les interese.
 Hola! Soy Salvador, vivo en Argentina, hago música cuando puedo, estudio Geología y tengo 5 hermanos. Creo en Dios y persevero en algunos grupos de la Iglesia. Me surgió hacer esta página porque hace un buen tiempo que no uso Instagram activamente, y quería tener un lugar en Internet dónde poder coleccionar recuerdos. Me encanta Tafí Del Valle, ese cuadro que ven arriba lo hizo un tío segundo mío. Me gusta coleccionar Legos y armar cosas cada tanto.
 ## Para Curiosear:
 Acá te dejo una lista de ensayos/artículos que anduve leyendo por internet. Algunos son bien sencillos.
-- ["Growing A Human", de Maggie Appleton.](https://maggieappleton.com/growing-a-human)
+- ["Living With The Seasons", de Daniel ](https://danielslife.blog/posts/living-with-the-seasons)
 - ["Biking Is Fun", de Nolan.](https://nolancaudill.com/2026/03/16/biking-is-fun/)
 - ["Simplicity and Less", de Rafael.](https://rafaelkuebler.github.io/posts/20251207-simplicity-and-less/) 
 - ["Secret Garden", de Tanner.](https://t0.vc/secret-garden)
