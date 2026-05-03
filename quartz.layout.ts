@@ -18,9 +18,9 @@ export const sharedPageComponents: SharedLayout = {
       },
     }),
   ],
+// ... (arriba de esto va el header y el head)
   afterBody: [],
-  footer: [],
-  }),
+  footer: [], 
 }
 // components for pages that display a single page (e.g. a single note)
 export const defaultContentPageLayout: PageLayout = {
