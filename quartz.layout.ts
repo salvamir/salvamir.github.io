@@ -40,6 +40,8 @@ export const defaultContentPageLayout: PageLayout = {
   ],
   left: [],
   right: [
+    Component.Search(),
+    Component.Darkmode(),
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
   ],
@@ -48,15 +50,9 @@ export const defaultContentPageLayout: PageLayout = {
 // components for pages that display lists of pages
 export const defaultListPageLayout: PageLayout = {
   beforeBody: [Component.Breadcrumbs(), Component.ArticleTitle(), Component.ContentMeta()],
-  left: [
-    Component.PageTitle(),
-    Component.MobileOnly(Component.Spacer()),
-    Component.Flex({
-      components: [
-        { Component: Component.Darkmode() },
-      ],
-    }),
-    Component.Explorer(),
+  left: [],
+  right: [
+    Component.Search(),
+    Component.Darkmode(),
   ],
-  right: [],
 }
