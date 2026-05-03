@@ -1,7 +1,8 @@
 ![[home.jpeg]]
 Acá tengo archivados distintos detalles de mi vida. Quizás les interese.
 ## Sobre Mi:
-Hola! Soy Salvador, vivo en Argentina, hago música cuando puedo, estudio Geología y tengo 5 hermanos. Creo en Dios y persevero en algunos grupos de la Iglesia. Me surgió hacer esta página porque hace un buen tiempo que no uso Instagram activamente, y quería tener un lugar en Internet dónde poder coleccionar recuerdos. Me encanta Tafí Del Valle, ese cuadro que ven arriba lo hizo un tío segundo mío. Me gusta coleccionar Legos y armar cosas cada tanto.
+Hola! Soy Salvador, vivo en Argentina, hago música cuando puedo, estudio Geología y tengo 5 hermanos. Creo en Dios y persevero en algunos grupos de la Iglesia. Me surgió hacer esta página porque hace un buen tiempo que no uso Instagram activamente, y quería tener un lugar en Internet dónde poder coleccionar recuerdos. Me encanta Tafí Del Valle, ese cuadro que ven arriba lo hizo un tío segundo mío. Me gusta coleccionar Legos y armar cosas cada tanto.  
+Lo que estoy haciendo actualmente está en: [[ahora | 📅 Ahora]]
 ## Para Curiosear:
 Acá te dejo una lista de ensayos/artículos que anduve leyendo por internet. Algunos son bien sencillos.
 - ["Living With The Seasons", de Daniel ](https://danielslife.blog/posts/living-with-the-seasons)
