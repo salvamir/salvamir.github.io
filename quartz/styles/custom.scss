@@ -72,3 +72,21 @@ header {
     &:hover { text-decoration: underline; }
   }
 }
+/* Estilos para el menú de navegación (NavLinks) */
+.links {
+  display: flex;
+  gap: 1.5rem;         /* Esto crea el espacio entre los botones */
+  flex-wrap: wrap;     /* Si la pantalla es pequeña, los baja a otra línea en vez de apretarlos */
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.links a {
+  text-decoration: none; /* Quita el subrayado feo de los links */
+  font-weight: 600;      /* Hace la letra un poquito más gruesa */
+  transition: opacity 0.2s ease;
+}
+
+.links a:hover {
+  opacity: 0.7;          /* Efecto sutil cuando pasas el mouse por encima */
+}
