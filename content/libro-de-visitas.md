@@ -15,7 +15,7 @@ También, podés mandarme un [mail](mailto:pez.arroz.tabla@proton.me) si querés
 # 🌐 Links
 Te dejo otros lugares interesantes para ver en internet:
 Podés encontrar nuevas páginas interesantes por [acá](https://wiby.org/),  o visitar la [biglist](http://biglist.terraaeon.com/index.html) o el [blogroll](https://blogroll.org/).
-#### Personal Webpages:
+### Personal Webpages:
 - [Eric Murphy](https://ericmurphy.xyz/): He’s a web developer who also has a personal website where he post about tech things.
 - [Luke Smith:](https://lukesmith.xyz/) I’m not sure if he’s a philosopher but he post a lot of “trascendental thoughts“ if you like to call them like that.
 - [Barry Hess:](https://bjhess.com/) He´s the owner of Pika!
@@ -42,7 +42,7 @@ Podés encontrar nuevas páginas interesantes por [acá](https://wiby.org/),  o 
 - [Tanner](https://tanner.vc) He creates things.
 - [Small Seasons.](https://smallseasons.guide/)
 - [The Autodidacts](https://www.autodidacts.io/tips-for-boosting-energy-levels-mitochondrial-function/)
-#### Interesting Websites:
+### Interesting Websites:
 - [Christian Info](https://elcristiano.info/): Great info about the church.
 - [Catholic Liturgy:](https://liturgiacatolica.org/) Meditations about the gospel.
 - [About Fiat Cars:](https://www.fiat.com.mx/blog.html) Q&A about cars so please enter this link.
@@ -52,7 +52,7 @@ Podés encontrar nuevas páginas interesantes por [acá](https://wiby.org/),  o 
 - [Rate Your Music:](https://rateyourmusic.com/) I guess you already know what to expect.
 - [Medieval](https://going-medieval.com) 
 - [ElevenTy](https://www.11ty.dev/)
-#### Geology:
+### Geology:
 - [Hombre Geológico.](https://geologicalmanblog.wordpress.com/) 
 - [Highly Allochthonous.](https://all-geo.org/highlyallochthonous/) 
 - [Geology Courses](https://courses.spatialthoughts.com)
@@ -60,8 +60,7 @@ Podés encontrar nuevas páginas interesantes por [acá](https://wiby.org/),  o 
 - [Ciencias De La Geología.](https://geologyscience.com)
 - [Geology and Earth Science.](https://geology.com)
 - [GeologíaWeb](https://geologiaweb.com).
-
-### Webrings: 
+- ### Webrings: 
    *Disclaimer*: I do not like most of them actually. That's why I put them here at the end of the page. I think you can absolutely find more healthy websites for yourself. But who knows, maybe you find something cool and meaningful here.
 - [XXIIVV](https://webring.xxiivv.com/)
 - [Webring:](https://geekring.net/) Only if you’re bored.
