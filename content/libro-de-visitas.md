@@ -1,6 +1,4 @@
 ---
-cssclasses:
-  - blog-post
 title: 📨 Libro De Visitas
 ---
 Gracias por cruzarte, dejá tu huella: 

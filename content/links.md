@@ -1,6 +1,4 @@
 ---
-cssclasses:
-  - blog-post
 title: 🌐 Links
 ---
 Here you can find a list of websites I enjoy reading the most. Those are great places to visit on the Internet. 

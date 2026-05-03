@@ -1,6 +1,4 @@
 ---
-cssclasses:
-  - blog-post
 title: 📅 Ahora
 ---
 Acá archivo las cosas que vengo viviendo.
@@ -26,7 +24,7 @@ Salimos con la Emi a comer hamburguesas para conversar y ponernos al día por un
 #### El árbol del siambon
 - 23/03/2026
 Fuimos con los chicos a buscar madera para que lolo pueda tallar. Terminamos talando un árbol.
-![[image04.jpg]]![[image04.jpg]]
+![[image04.jpg]]
 ![[image03.jpg]]
 
 ---

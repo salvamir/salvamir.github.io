@@ -1,6 +1,4 @@
 ---
-cssclasses:
-  - blog-post
 title: 🏠 Casa
 ---
 ![[home.jpeg]]
