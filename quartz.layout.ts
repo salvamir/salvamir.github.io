@@ -10,7 +10,7 @@ export const sharedPageComponents: SharedLayout = {
     Component.DesktopOnly(Component.NavLinks()), // <--- ¡AQUÍ ESTÁ TU COMPONENTE!
   ],
   afterBody: [],
-  footer: [],
+  footer: Component.Footer(), // <--- ¡Cambiamos los corchetes por el componente!
 }
 
 // components for pages that display a single page
