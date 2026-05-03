@@ -8,10 +8,10 @@ title: 🏠 Casa
 Hola! Soy Salvador, vivo en Argentina, hago música cuando puedo, estudio Geología y tengo 5 hermanos. Creo en Dios y persevero en algunos grupos de la Iglesia. Me surgió hacer esta página porque hace un buen tiempo que no uso Instagram activamente, y quería tener un lugar en Internet dónde poder coleccionar recuerdos. Me encanta Tafí Del Valle, ese cuadro que ven arriba lo hizo un tío segundo mío. Me gusta coleccionar Legos y armar cosas cada tanto.
 Acá tengo archivados distintos detalles de mi vida. Quizás les interese.
 
-| 🌿 [[El Jardín/index\|Jardín Digital]] | 📨 [[libro-de-visitas\|Libro De Visitas]] |
-| -------------------------------------- | ----------------------------------------- |
-| 📖 [[Bitácora/index \|Bitácora]]       | 🌐 [[links\| Links]]                      |
-| 🎧 [[Música/index\|Música]]            | 📅 [[ahora\| Ahora]]                      |
+| 🌿 [[El Jardín/index \|Jardín Digital]] | 📨 [[libro-de-visitas\| Libro De Visitas]] |
+| --------------------------------------- | ------------------------------------------ |
+| 📖 [[Bitácora/index \|Bitácora]]        | 🌐 [[links\| Links]]                       |
+| 🎧 [[Música/index\|Música]]             | 📅 [[ahora\| Ahora]]                       |
 ## Para Curiosear:
 Acá te dejo una lista de ensayos/artículos que anduve leyendo por internet. Algunos son bien sencillos.
 - ["Growing A Human", de Maggie Appleton.](https://maggieappleton.com/growing-a-human)
