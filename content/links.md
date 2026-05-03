@@ -6,12 +6,7 @@ title: 🌐 Links
 Here you can find a list of websites I enjoy reading the most. Those are great places to visit on the Internet. 
 
 You can find new unique small personal websites [here](https://wiby.org/),  visit the [biglist](http://biglist.terraaeon.com/index.html) or the [blogroll](https://blogroll.org/).
-#### Currently Reading:
-1. [Seasons](https://seasons.bearblog.dev/) 
-2. [Peculiar Monster](https://peculiar.monster/blog/2026/2026-03-01-still-here/)
-3. [ElevenTy](https://www.11ty.dev/)
 #### Personal Webpages:
-
 - [Eric Murphy](https://ericmurphy.xyz/): He’s a web developer who also has a personal website where he post about tech things.
 - [Luke Smith:](https://lukesmith.xyz/) I’m not sure if he’s a philosopher but he post a lot of “trascendental thoughts“ if you like to call them like that.
 - [Barry Hess:](https://bjhess.com/) He´s the owner of Pika!
@@ -38,9 +33,7 @@ You can find new unique small personal websites [here](https://wiby.org/),  visi
 - [Tanner](https://tanner.vc) He creates things.
 - [Small Seasons.](https://smallseasons.guide/)
 - [The Autodidacts](https://www.autodidacts.io/tips-for-boosting-energy-levels-mitochondrial-function/)
-
 #### Interesting Websites:
-
 - [Christian Info](https://elcristiano.info/): Great info about the church.
 - [Catholic Liturgy:](https://liturgiacatolica.org/) Meditations about the gospel.
 - [About Fiat Cars:](https://www.fiat.com.mx/blog.html) Q&A about cars so please enter this link.
@@ -49,7 +42,7 @@ You can find new unique small personal websites [here](https://wiby.org/),  visi
 - [Free Music:](https://lamusicagratis.com/) It doesn’t need to be explained.
 - [Rate Your Music:](https://rateyourmusic.com/) I guess you already know what to expect.
 - [Medieval](https://going-medieval.com) 
-
+- [ElevenTy](https://www.11ty.dev/)
 #### Geology:
 - [Hombre Geológico.](https://geologicalmanblog.wordpress.com/) 
 - [Highly Allochthonous.](https://all-geo.org/highlyallochthonous/) 

@@ -10,19 +10,9 @@ export default ((opts?: Options) => {
     const year = new Date().getFullYear()
     return (
       <footer class={`${displayClass ?? ""}`}>
-        {/* Navegación Principal: Rutas limpias según tus nuevos nombres de archivo */}
-        <p>
-          <a href="/ahora">📅 Ahora</a> | 
-          <a href="/links">🌐 Enlaces</a> | 
-          <a href="/libro-de-visitas"> 📨 Libro de Visitas</a>
-        </p>
+        {/* Los párrafos con links y créditos fueron eliminados */}
         
-        {/* Firma y Créditos */}
-        <p style="margin-top: 1rem; opacity: 0.8; font-size: 0.85rem;">
-           Cultivado parcialmente a mano por Salva © {year}
-        </p>
-        
-        {/* Botón Back To Top */}
+        {/* Botón Back To Top (Se mantiene intacto) */}
         <button id="back-to-top" aria-label="Volver arriba">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <line x1="12" y1="19" x2="12" y2="5"></line>

@@ -1,7 +1,6 @@
 @use "./base.scss";
 
-// put your custom CSS here!
-
+// 1. Estilos del Grafo (Mantengo los tuyos)
 .graph {
   height: 400px !important; 
   margin-top: 2rem !important;
@@ -11,25 +10,12 @@
   background-color: rgba(0, 0, 0, 0.15); 
   overflow: hidden !important; 
 }
+.graph text { font-family: "Libre Baskerville", serif !important; }
 
-.graph h3 {
-  padding-top: 1.2rem;    
-  padding-left: 1.5rem;   
-  margin-bottom: 0.5rem;  
-}
+// 2. Estilos Globales
+body, section { line-height: 1.6; letter-spacing: 0.2px; }
 
-body, section {
-  line-height: 1.6;      
-  letter-spacing: 0.2px; 
-}
-
-.graph text {
-  font-family: "Libre Baskerville", serif !important;
-}
-
-/* --- SECCIÓN PARA OCULTAR EL GRAFO Y BACKLINKS --- */
-
-/* Atrapamos clases manuales, páginas sueltas, la bitácora y sobre mi */
+// 3. Ocultar grafo/backlinks en páginas específicas
 body[class*="blog-post"],
 body[data-slug="index"],
 body[data-slug="libro-de-visitas"],
@@ -40,18 +26,15 @@ body[data-slug*="itácora"],
 body[data-slug*="sobre-mi"] {
   .graph, .graph-outer, .backlinks, #graph-container, .component.graph {
     display: none !important;
-    visibility: hidden !important;
-    height: 0 !important;
-    margin: 0 !important;
-    padding: 0 !important;
   }
 }
-// --- Estilos del Footer ---
+
+// 4. Estilos del Footer y ELIMINACIÓN TOTAL DE LÍNEAS
 footer {
   text-align: center;
-  margin-top: 4rem;
+  margin-top: 2rem !important; 
   padding-bottom: 2rem;
-  // border-top: 1px solid rgba(168, 158, 149, 0.2);
+  border: none !important; // Eliminamos cualquier borde
 
   p {
     font-family: "Libre Baskerville", serif;
@@ -59,29 +42,28 @@ footer {
     color: #a89e95;
     display: flex;
     justify-content: center;
-    gap: 1rem; // Espacio entre los links
-    flex-wrap: wrap; // Por si se ve en celular, que se acomoden solos
+    gap: 1rem;
+    flex-wrap: wrap;
   }
 
   a {
     color: #a89e95;
     text-decoration: none;
-    transition: color 0.3s ease;
-
-    &:hover {
-      color: #e0e0e0; 
-      text-decoration: underline;
-    }
+    &:hover { color: #e0e0e0; text-decoration: underline; }
   }
 }
-/* Centrar el contenido cuando no hay barra lateral */
-.center {
-  grid-column: 2 / -2; /* Esto hace que el cuerpo ocupe el centro */
-  max-width: 800px;    /* O el ancho que prefieras para leer mejor */
-  margin: 0 auto;
+
+// ANIKILACIÓN DE TODA LÍNEA HORIZONTAL QUE QUEDE EN LA PÁGINA
+hr, .page-footer hr, article hr, hr + footer {
+  display: none !important;
+  border: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
-/* Hacer que la cabecera (Header) sea horizontal */
+// 5. Layout
+.center { grid-column: 2 / -2; max-width: 800px; margin: 0 auto; }
+
 header {
   display: flex;
   flex-direction: row;
@@ -91,27 +73,6 @@ header {
   padding: 0 1rem;
 }
 
-/* Ajuste para móviles para que no se amontone la cabecera */
 @media (max-width: 800px) {
-  header {
-    flex-direction: column;
-    gap: 1rem;
-  }
-}
-/* --- ELIMINAR LÍNEA EXTRA DEL FOOTER Y ACHICAR ESPACIO --- */
-footer hr {
-  display: none !important;
-}
-
-footer {
-  margin-top: 2rem !important; /* Achica el espacio vacío. Podés cambiar el 2 por un 1 si lo querés más pegado */
-}
-/* --- ANiquilación de líneas rebeldes --- */
-.page-footer hr, 
-article hr:last-of-type,
-hr + footer {
-  display: none !important;
-  height: 0 !important;
-  margin: 0 !important;
-  border: none !important;
+  header { flex-direction: column; gap: 1rem; }
 }
