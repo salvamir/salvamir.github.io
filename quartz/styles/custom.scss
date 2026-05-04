@@ -8,7 +8,9 @@
 }
 
 body[data-slug^="El-Jardín"], 
-body[data-slug="El-Jardín"] {
+body[data-slug="El-Jardín"],
+body[data-slug^="El-Jardin"], 
+body[data-slug="El-Jardin"] {
   .graph, .graph-outer, #graph-container, .component.graph {
     display: block !important;
     height: 400px !important;
@@ -22,34 +24,42 @@ body[data-slug="El-Jardín"] {
 }
 
 /* =========================================
-   2. DESTRUIR LA GRILLA Y CENTRAR TODO
+   2. CENTRADO PERFECTO (MÉTODO INFALIBLE)
    ========================================= */
-/* Atacamos la raíz de Quartz para anular su alineación a la izquierda */
-body, #quartz-root, .layout {
-  display: block !important;
+/* Convertimos el fondo absoluto en un contenedor que centra todo */
+body {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important; /* Centrado horizontal absoluto */
   width: 100% !important;
+  min-height: 100vh !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow-x: hidden !important; 
 }
 
-.sidebar.left {
-  display: none !important;
-}
-
+/* La página entera ahora es una columna de 850px al medio de la pantalla */
 .page {
-  display: block !important; 
+  display: flex !important;
+  flex-direction: column !important;
+  width: 100% !important;
+  max-width: 850px !important; /* El ancho de lectura ideal */
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* El contenido simplemente llena esos 850px */
+.center {
   width: 100% !important;
   max-width: 100% !important;
-  padding: 0 !important;
   margin: 0 !important;
+  padding: 2rem 1.5rem !important;
+  box-sizing: border-box !important;
 }
 
-.center {
-  display: block !important;
-  margin: 0 auto !important; /* Ahora sí funcionará porque la raíz lo permite */
-  max-width: 850px !important; 
-  padding: 2rem 1.5rem !important;
-  grid-column: unset !important; 
-  float: none !important;
-  position: static !important;
+/* Matamos la barra izquierda definitivamente */
+.sidebar.left {
+  display: none !important;
 }
 
 /* =========================================
