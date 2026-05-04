@@ -1,4 +1,8 @@
-
+---
+cssclasses:
+  - blog-post
+date: 2026-05-04
+---
 Mi novia hizo este cuadro hace mucho. No se como explicarles lo mucho que me gusta. Probablemente alguien que sepa más de pintura y óleos y esas cosas tenga comentarios de crítica respecto de los trazos o que se yo.
 ![[9.jpg]]
 

@@ -184,3 +184,13 @@ hr, .page-footer hr, article hr, hr + footer {
   margin: 0 !important;
   padding: 0 !important;
 }
+/* =========================================
+   6. TAMAÑO DE TEXTO GENERAL
+   ========================================= */
+article p, 
+article li, 
+article table,
+article blockquote {
+  font-size: 0.85rem !important; /* Cambia este número para jugar con el tamaño (ej: 0.85rem) */
+  line-height: 1.6 !important; /* Mantiene un buen espacio entre las líneas para que no se apelmace */
+}
