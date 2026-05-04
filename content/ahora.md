@@ -1,7 +1,7 @@
 ---
 title: 📅 Ahora
 ---
-![[pajarito.jpg]]Acá archivo las cosas que vengo viviendo.
+![[5 1.jpeg]]Acá archivo las cosas que vengo viviendo.
 
 ---
 #### Cumple Draculín 20 años. 🎉  
