@@ -24,35 +24,43 @@ body[data-slug="El-Jardin"] {
 }
 
 /* =========================================
-   2. CENTRADO PERFECTO (MATANDO LA GRILLA DE QUARTZ)
+   2. CENTRADO ABSOLUTO (MÉTODO FLEXBOX)
    ========================================= */
 body {
   margin: 0 !important;
   padding: 0 !important;
   overflow-x: hidden !important;
+  width: 100% !important; /* Nos aseguramos que el body ocupe toda la pantalla */
 }
 
 .page {
-  /* Al usar display: block matamos la grilla divisoria que trae Quartz por defecto */
-  display: block !important; 
+  /* Usamos Flexbox: el método más seguro para centrar en la web moderna */
+  display: flex !important; 
+  flex-direction: column !important; /* Apila los elementos de arriba a abajo */
+  align-items: center !important; /* ¡Esta es la magia! Centra todo horizontalmente */
   width: 100% !important;
-  max-width: 850px !important; 
-  margin: 0 auto !important; /* El secreto matemático del centrado horizontal */
-  padding: 0 1.5rem !important; 
+  max-width: 100vw !important; /* Fuerza a que el contenedor mida igual que la ventana */
+  margin: 0 !important;
+  padding: 0 !important;
   box-sizing: border-box !important;
 }
 
 .center {
+  /* Este es el bloque de tu contenido real */
   display: block !important;
   width: 100% !important;
-  max-width: 100% !important;
-  margin: 0 !important;
-  padding: 2rem 0 !important;
+  max-width: 850px !important; /* El ancho de lectura de tu texto */
+  margin: 0 !important; 
+  padding: 2rem 1.5rem !important;
+  box-sizing: border-box !important;
 }
 
-/* Nos aseguramos de que la barra no moleste */
+/* Borrado nuclear de la barra izquierda para que no empuje nada */
 .sidebar.left {
   display: none !important;
+  width: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 /* =========================================
