@@ -24,44 +24,25 @@ body[data-slug="El-Jardin"] {
 }
 
 /* =========================================
-   2. CENTRADO DEFINITIVO (VERSIÓN SEGURA FLEXBOX)
+   2. CENTRADO OFICIAL (PISANDO LA GRILLA)
    ========================================= */
-.page {
-  display: flex !important;
-  flex-direction: row !important;
-  justify-content: center !important;
-  gap: 3rem !important; /* Espacio entre tu texto y la barra derecha */
-  max-width: 1200px !important; /* Ancho máximo total de tu sitio */
-  margin: 0 auto !important;
-  padding: 2rem !important;
+
+/* Forzamos el ancho del centro en todo el sitio */
+:root {
+  --content-width: 950px !important; 
 }
 
-/* Aniquilamos la barra izquierda sin romper el diseño */
-.sidebar.left {
-  display: none !important;
-}
-
-/* El contenido central ahora es fluido y elástico */
-.center {
-  flex: 1 !important; /* Toma todo el espacio disponible */
-  min-width: 0 !important; /* CRUCIAL: Evita que el texto colapse como en tu captura */
-  max-width: 850px !important; /* Ancho máximo para que no canse la vista al leer */
-}
-
-/* Mantenemos la barra derecha (Buscador, Luna, Índice) en su lugar */
-.sidebar.right {
-  width: 250px !important;
-  flex-shrink: 0 !important; /* Evita que la barra derecha se aplaste */
-}
-
-/* Regla especial para que en celulares todo se apile hacia abajo y no se rompa */
-@media (max-width: 1000px) {
+/* Reprogramamos la grilla solo para pantallas grandes (PC) */
+@media all and (min-width: 1200px) {
   .page {
-    flex-direction: column !important;
-    padding: 1.5rem !important;
+    /* 0px a la izquierda | 950px al centro | 275px a la derecha */
+    grid-template-columns: 0px min(var(--content-width), 90vw) 275px !important;
+    justify-content: center !important;
   }
-  .sidebar.right {
-    width: 100% !important;
+  
+  /* Ocultamos la barra izquierda para que no estorbe */
+  .sidebar.left {
+    display: none !important;
   }
 }
 
