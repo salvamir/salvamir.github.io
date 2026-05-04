@@ -161,27 +161,25 @@ header {
    ========================================= */
 @media all and (max-width: 800px) {
   header {
-    /* Apilamos el título arriba y los botones abajo sin tanto hueco */
     display: flex !important;
     flex-direction: column !important;
-    align-items: flex-start !important;
+    align-items: center !important; /* <-- ¡MAGIA! Esto centra el título */
+    text-align: center !important;
     gap: 0.5rem !important; 
     margin-bottom: 1rem !important;
   }
 
-  /* Le damos forma a los enlaces para que entren bien en la pantalla */
   header div, header ul, header nav {
     display: flex !important;
     flex-direction: row !important;
-    flex-wrap: wrap !important; /* Si de verdad no caben, bajan de forma ordenada */
-    gap: 1rem !important; /* Espacio moderado entre cada botón */
-    justify-content: flex-start !important;
+    flex-wrap: wrap !important; 
+    gap: 1rem !important; 
+    justify-content: center !important; /* <-- Centramos también los botones para que quede armónico */
     padding: 0 !important;
     margin: 0 !important;
     width: 100% !important;
   }
   
-  /* Hacemos la letra de los botones un pelín más compacta en celular */
   header a {
     font-size: 0.95rem !important;
     margin: 0 !important;
