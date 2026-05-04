@@ -195,17 +195,17 @@ header {
 /* =========================================
    4. ESTILOS DEL TÍTULO "SALVA MÁS DE CERCA"
    ========================================= */
-header h1.page-title,
-header h1.page-title a {
-  color: #E6E2D6 !important; /* Color beige/blanquecino cálido */
-  font-size: 2.2rem !important; /* Tamaño grande para computadora */
+.page-title,
+.page-title a {
+  color: #E6E2D6 !important; 
+  font-size: 2.2rem !important; 
 }
 
 /* Regla especial para que en celular se vea grande pero sin exagerar */
 @media all and (max-width: 800px) {
-  header h1.page-title,
-  header h1.page-title a {
-    font-size: 1.8rem !important; /* Sobreescribe el tamaño diminuto del paso anterior */
+  .page-title,
+  .page-title a {
+    font-size: 1.8rem !important; 
     margin-bottom: 0.2rem !important;
   }
 }
