@@ -7,19 +7,15 @@ export const sharedPageComponents: SharedLayout = {
   header: [
     Component.PageTitle(),
     Component.Spacer(),
-    Component.DesktopOnly(Component.NavLinks()), // <--- ¡AQUÍ ESTÁ TU COMPONENTE!
+    Component.DesktopOnly(Component.NavLinks()),
   ],
   afterBody: [],
-  footer: Component.Footer(), // <--- ¡Cambiamos los corchetes por el componente!
+  footer: Component.Footer(),
 }
 
 // components for pages that display a single page
 export const defaultContentPageLayout: PageLayout = {
   beforeBody: [
-    Component.ConditionalRender({
-      component: Component.Breadcrumbs(),
-      condition: (page) => page.fileData.slug !== "index",
-    }),
     Component.ArticleTitle(),
     Component.ContentMeta(),
     Component.TagList(),
@@ -49,7 +45,7 @@ export const defaultContentPageLayout: PageLayout = {
 
 // components for pages that display lists of pages
 export const defaultListPageLayout: PageLayout = {
-  beforeBody: [Component.Breadcrumbs(), Component.ArticleTitle(), Component.ContentMeta()],
+  beforeBody: [Component.ArticleTitle(), Component.ContentMeta()],
   left: [],
   right: [
     Component.Search(),
