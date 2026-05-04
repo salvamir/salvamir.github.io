@@ -8,3 +8,7 @@ Lately I’ve been meeting new people. I’m working hard with many others to ma
 This happened some days ago. Now I should be studying, but my head hurts and I just don’t have enough energy. 
 
 It’s time to stop thinking of me like a to-do list.
+
+<div style="text-align: center; margin-top: 3rem; padding: 1rem; border-top: 1px solid #a89e95;">
+  <a href="mailto:pez.arroz.tabla@proton.me?subject=Respuesta a tu nota&body=¡Hola! Leí tu publicación y quería comentarte que..." style="background-color: #a89e95; color: #1a1915; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold;">📬 Responder a esta nota por Email</a>
+</div>

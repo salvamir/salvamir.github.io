@@ -21,3 +21,7 @@ Te entrego mi mañana, no sé como vaya a ser ni tampoco como vaya a sentirme. T
 Te pido por todas las personas que están cansadas. Te pido por todos aquellos que buscan descanso en el lugar equivocado. Te pido que me traigas de nuevo a esta oración, cuando yo también me desoriente, y busqué consuelo humano en una pantalla. Cuando busque el sol y las plantas en el celular. Cuando busque el amor, el cariño y la atención fraterna en una red social. Cuando busque una conexión amistosa en Internet. Te pido que, en ese momento, me traigas a la memoria la importancia del momento presente. De la lentitud. Del descanso. Amén.
 
 [[🪴 Inquietud, quietud, actitud]]
+
+<div style="text-align: center; margin-top: 3rem; padding: 1rem; border-top: 1px solid #a89e95;">
+  <a href="mailto:pez.arroz.tabla@proton.me?subject=Respuesta a tu nota&body=¡Hola! Leí tu publicación y quería comentarte que..." style="background-color: #a89e95; color: #1a1915; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold;">📬 Responder a esta nota por Email</a>
+</div>
