@@ -12,8 +12,9 @@ Esta semana arranca con el 2do Domingo de Pascua y viene con toda la fuerza reno
 Eso es un gran aliento para mi. Como un suspiro. Por eso quiero aprovechar el empujoncito y proponerme más vida de oración. Más interioridad y más propósitos. 
 
 Quiero, por lo pronto, leer la Biblia una vez al día y retomar el ejercicio, por lo menos 20min. 
-
 Quiero animarme a posponer un poco la facultad y demás responsabilidades, para priorizar estas cosas humanas, que tanto bien me hacen.
-<div style="text-align: center; margin-top: 3rem; padding: 1rem; border-top: 1px solid #a89e95;">
-  <a href="mailto:pez.arroz.tabla@proton.me?subject=Respuesta a tu nota&body=¡Hola! Leí tu publicación y quería comentarte que..." style="background-color: #a89e95; color: #1a1915; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold;">📬 Responder a esta nota por Email</a>
+<div style="text-align: center; margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid rgba(168, 158, 149, 0.3);">
+  <a href="mailto:pez.arroz.tabla@proton?subject=Respuesta a tu nota" style="font-size: 0.85rem; font-family: sans-serif; color: #E6E2D6; border: 1px solid #a89e95; padding: 6px 14px; border-radius: 8px; text-decoration: none; transition: 0.2s;">
+    📬 Responder a esta nota
+  </a>
 </div>

@@ -20,6 +20,8 @@ Es bueno considerar estos cambios que nos acompañan en la vida. Ultimamente ven
 
 Acá en Tucumán, las estaciones climáticas no varían tanto como en otros lugares. Pero si varía mucho mi energía e inspiración. Cambian mucho los tiempos, y las prioridades.
 Me siento frustrado ahora porque no consigo seguir con mi rutina del verano. Pero ya no estoy en verano. Es momento de re-plantearse la manera de encarar la facultad, el deporte, los sacramentos, el tiempo con amigos y las responsabilidades de la casa. Ya tendré tiempo de "perseverar" cuando llegue el invierno. Voy a aprovechar este sol y estos días para pensar en esto y reorganizar mi rutina.
-<div style="text-align: center; margin-top: 3rem; padding: 1rem; border-top: 1px solid #a89e95;">
-  <a href="mailto:pez.arroz.tabla@proton.me?subject=Respuesta a tu nota&body=¡Hola! Leí tu publicación y quería comentarte que..." style="background-color: #a89e95; color: #1a1915; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold;">📬 Responder a esta nota por Email</a>
+<div style="text-align: center; margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid rgba(168, 158, 149, 0.3);">
+  <a href="mailto:pez.arroz.tabla@proton?subject=Respuesta a tu nota" style="font-size: 0.85rem; font-family: sans-serif; color: #E6E2D6; border: 1px solid #a89e95; padding: 6px 14px; border-radius: 8px; text-decoration: none; transition: 0.2s;">
+    📬 Responder a esta nota
+  </a>
 </div>
