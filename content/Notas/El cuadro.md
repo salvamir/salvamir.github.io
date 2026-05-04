@@ -3,7 +3,8 @@ cssclasses:
   - blog-post
 date: 2026-05-04
 ---
-Mi novia hizo este cuadro hace mucho. No se como explicarles lo mucho que me gusta. Probablemente alguien que sepa más de pintura y óleos y esas cosas tenga comentarios de crítica respecto de los trazos o que se yo.
+Mi novia hizo este cuadro hace mucho. No se como explicarles lo mucho que me gusta. 
+
 ![[9.jpg]]
 
 Me pone nervioso mirarlo. Me parece muy femenino y delicado, siento que esta chica mira con un cariño inmenso a alguien. Como seduciéndolo. Como llamándolo al reposo y a la calma. Así me hace sentir a mi.
