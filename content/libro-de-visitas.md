@@ -59,7 +59,8 @@ Te dejo otros lugares interesantes para ver. Podés encontrar nuevas páginas in
 - [Ciencias De La Geología.](https://geologyscience.com)
 - [Geology and Earth Science.](https://geology.com)
 - [GeologíaWeb](https://geologiaweb.com).
-- ### Webrings: 
+- [Atlas de Petrología Ígnea.](https://petroignea.wordpress.com)
+### Webrings: 
    *Disclaimer*: I do not like most of them actually. That's why I put them here at the end of the page. I think you can absolutely find more healthy websites for yourself. But who knows, maybe you find something cool and meaningful here.
 - [XXIIVV](https://webring.xxiivv.com/)
 - [Webring:](https://geekring.net/) Only if you’re bored.
