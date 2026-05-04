@@ -1,43 +1,12 @@
 @use "./base.scss";
 
 /* =========================================
-   1. CENTRADO ABSOLUTO CON FLEXBOX
+   1. OCULTAR GRAFO Y BACKLINKS (EXCEPTO EN JARDÍN)
    ========================================= */
-.sidebar.left {
+.graph, .graph-outer, #graph-container, .component.graph, .backlinks, .component.backlinks {
   display: none !important;
 }
 
-/* Convertimos la página entera en un elástico que fuerza todo al centro */
-.page {
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important; /* Esto es lo que empuja el texto al medio */
-  justify-content: flex-start !important;
-  
-  width: 100% !important;
-  max-width: 100vw !important; /* Usa todo el ancho del monitor */
-  padding: 0 !important;
-  margin: 0 !important;
-}
-
-/* Tu contenido central */
-.center {
-  width: 100% !important;
-  max-width: 850px !important; /* Un ancho muy cómodo para leer en escritorio */
-  padding: 2rem 1.5rem !important;
-  
-  /* Quitamos el margin auto porque Flexbox ya se encarga de centrarlo */
-  margin: 0 !important; 
-  
-  /* Matamos cualquier resto de la grilla vieja */
-  grid-column: unset !important; 
-  position: static !important;
-}
-
-/* Selector que cubre: 
-   1. Cualquier página que empiece con "El-Jardín"
-   2. La página de inicio específica si el slug es exactamente "El-Jardín"
-*/
 body[data-slug^="El-Jardín"], 
 body[data-slug="El-Jardín"] {
   .graph, .graph-outer, #graph-container, .component.graph {
@@ -45,85 +14,27 @@ body[data-slug="El-Jardín"] {
     height: 400px !important;
     margin-top: 2rem !important;
     margin-bottom: 3rem !important;
-    border: 2px solid rgba(168, 158, 149, 0.3);
-    border-radius: 12px;
-    background-color: rgba(0, 0, 0, 0.15);
+    border: 2px solid rgba(168, 158, 149, 0.3) !important;
+    border-radius: 12px !important;
+    background-color: rgba(0, 0, 0, 0.15) !important;
     overflow: hidden !important;
   }
 }
-// --- 3. FOOTER Y LÍNEAS ---
-footer {
-  text-align: center;
-  margin-top: 2rem !important;
-  padding-bottom: 2rem;
-  border: none !important;
-
-  p { font-family: "Libre Baskerville", serif; font-size: 0.9rem; color: #a89e95; display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
-  a { color: #a89e95; text-decoration: none; &:hover { color: #e0e0e0; text-decoration: underline; } }
-}
-
-hr, .page-footer hr, article hr, hr + footer {
-  display: none !important;
-  border: none !important;
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-/* --- 4. LAYOUT Y CABECERA --- */
-.center { grid-column: 2 / -2; max-width: 800px; margin: 0 auto; }
-
-header {
-  display: flex; 
-  flex-direction: row; 
-  flex-wrap: wrap; 
-  align-items: center; 
-  justify-content: space-between; 
-  margin-top: 2rem; 
-  padding: 0 1rem;
-  gap: 1rem;
-  
-  @media (max-width: 800px) { flex-direction: column; }
-}
-
-/* Agrega esto a tu custom.scss para que se vean bien */
-.nav-links {
-  display: flex;
-  gap: 15px;
-  a {
-    text-decoration: none;
-    color: var(--secondary);
-    font-weight: 500;
-    &:hover { text-decoration: underline; }
-  }
-}
-/* Estilos para el menú de navegación (NavLinks) */
-.links {
-  display: flex;
-  gap: 1.5rem;         /* Esto crea el espacio entre los botones */
-  flex-wrap: wrap;     /* Si la pantalla es pequeña, los baja a otra línea en vez de apretarlos */
-  margin-top: 0.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.links a {
-  text-decoration: none; /* Quita el subrayado feo de los links */
-  font-weight: 600;      /* Hace la letra un poquito más gruesa */
-  transition: opacity 0.2s ease;
-}
-
-.links a:hover {
-  opacity: 0.7;          /* Efecto sutil cuando pasas el mouse por encima */
-}
 
 /* =========================================
-   1. CENTRADO ABSOLUTO (ANTI-GRILLA)
+   2. DESTRUIR LA GRILLA Y CENTRAR TODO
    ========================================= */
+/* Atacamos la raíz de Quartz para anular su alineación a la izquierda */
+body, #quartz-root, .layout {
+  display: block !important;
+  width: 100% !important;
+}
+
 .sidebar.left {
   display: none !important;
 }
 
 .page {
-  /* Al cambiarlo a block, matamos la grilla de Quartz por completo */
   display: block !important; 
   width: 100% !important;
   max-width: 100% !important;
@@ -132,20 +43,73 @@ header {
 }
 
 .center {
-  /* margin: 0 auto es la regla de oro para centrar elementos sin que salten */
   display: block !important;
-  margin: 0 auto !important; 
-  max-width: 800px !important; 
+  margin: 0 auto !important; /* Ahora sí funcionará porque la raíz lo permite */
+  max-width: 850px !important; 
   padding: 2rem 1.5rem !important;
-  
-  /* Anulamos cualquier posicionamiento antiguo de grilla */
   grid-column: unset !important; 
   float: none !important;
   position: static !important;
 }
 
 /* =========================================
-   2. PANEL DERECHO OCULTO (SOLO EN ESCRITORIO)
+   3. HEADER Y BOTONES (ESCRITORIO Y CELULAR)
+   ========================================= */
+header {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  margin-top: 2rem !important;
+  margin-bottom: 2rem !important;
+  gap: 1rem !important;
+}
+
+.links {
+  display: flex !important;
+  gap: 1.5rem !important;
+  flex-wrap: wrap !important;
+}
+
+.links a, .nav-links a {
+  text-decoration: none !important;
+  font-weight: 600 !important;
+  transition: opacity 0.2s ease !important;
+}
+
+.links a:hover, .nav-links a:hover {
+  opacity: 0.7 !important;
+}
+
+/* ESTILOS DEL TÍTULO */
+.page-title, .page-title a {
+  color: #E6E2D6 !important; 
+  font-size: 2.2rem !important; 
+  margin: 0 !important;
+}
+
+/* VERSIÓN CELULAR */
+@media all and (max-width: 800px) {
+  header {
+    flex-direction: column !important;
+    justify-content: center !important;
+    text-align: center !important;
+    gap: 1rem !important;
+  }
+  .links {
+    justify-content: center !important;
+    width: 100% !important;
+  }
+  .page-title, .page-title a {
+    font-size: 1.8rem !important; 
+  }
+  article {
+    text-align: left !important;
+  }
+}
+
+/* =========================================
+   4. PANEL DERECHO DESPLEGABLE
    ========================================= */
 @media all and (min-width: 1200px) {
   .sidebar.right {
@@ -164,7 +128,6 @@ header {
     box-shadow: -5px 0 25px rgba(0,0,0,0.15) !important;
   }
 
-  /* Zona trampa invisible para el mouse */
   .sidebar.right::before {
     content: "" !important;
     position: absolute !important;
@@ -180,56 +143,40 @@ header {
     transform: translateX(0) !important;
   }
 }
-/* =========================================
-   3. OPTIMIZAR Y CENTRAR SOLO EL HEADER EN CELULARES
-   ========================================= */
-@media all and (max-width: 800px) {
-  /* 1. Centramos solo el bloque del header */
-  header {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important; 
-    text-align: center !important;
-    gap: 0.5rem !important; 
-    margin-bottom: 2rem !important;
-  }
 
-  /* 2. Centramos los botones */
-  header div, header ul, header nav {
-    display: flex !important;
-    flex-direction: row !important;
-    flex-wrap: wrap !important; 
-    gap: 1rem !important; 
-    justify-content: center !important; 
-    padding: 0 !important;
-    margin: 0 !important;
-    width: 100% !important;
-  }
-  
-  header a {
-    font-size: 0.95rem !important;
-    margin: 0 !important;
-  }
-
-  /* 3. ESCUDO PROTECTOR: El contenido de la nota se queda a la izquierda */
-  article {
-    text-align: left !important;
-  }
-}
 /* =========================================
-   4. ESTILOS DEL TÍTULO "SALVA MÁS DE CERCA"
+   5. FOOTER Y LÍNEAS
    ========================================= */
-.page-title,
-.page-title a {
-  color: #E6E2D6 !important; 
-  font-size: 2.2rem !important; 
+footer {
+  text-align: center !important;
+  margin-top: 2rem !important;
+  padding-bottom: 2rem !important;
+  border: none !important;
 }
 
-/* Regla especial para que en celular se vea grande pero sin exagerar */
-@media all and (max-width: 800px) {
-  .page-title,
-  .page-title a {
-    font-size: 1.8rem !important; 
-    margin-bottom: 0.2rem !important;
-  }
+footer p { 
+  font-family: "Libre Baskerville", serif !important; 
+  font-size: 0.9rem !important; 
+  color: #a89e95 !important; 
+  display: flex !important; 
+  justify-content: center !important; 
+  gap: 1rem !important; 
+  flex-wrap: wrap !important; 
+}
+
+footer a { 
+  color: #a89e95 !important; 
+  text-decoration: none !important; 
+}
+
+footer a:hover { 
+  color: #e0e0e0 !important; 
+  text-decoration: underline !important; 
+}
+
+hr, .page-footer hr, article hr, hr + footer {
+  display: none !important;
+  border: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
