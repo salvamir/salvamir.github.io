@@ -90,3 +90,63 @@ header {
 .links a:hover {
   opacity: 0.7;          /* Efecto sutil cuando pasas el mouse por encima */
 }
+/* =========================================
+   1. MATAR EL ESPACIO FANTASMA DE LA IZQUIERDA
+   ========================================= */
+.sidebar.left {
+  display: none !important; /* Desaparece por completo */
+}
+
+/* Forzamos a que la página sea de 1 sola columna centrada */
+.page {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  margin: 0 auto !important;
+}
+
+/* Ajustamos el ancho del texto para que sea cómodo de leer */
+.center {
+  width: 100% !important;
+  max-width: 800px !important;
+  margin: 0 auto !important;
+}
+
+/* =========================================
+   2. PANEL DERECHO CON HOVER (SOLO ESCRITORIO)
+   ========================================= */
+@media all and (min-width: 1200px) {
+  .sidebar.right {
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width: 320px;
+    background-color: var(--light); /* Usa tu color de fondo automático */
+    border-left: 1px solid var(--lightgray);
+    padding: 3rem 2rem;
+    z-index: 999;
+    
+    /* Lo movemos 100% fuera de la pantalla hacia la derecha */
+    transform: translateX(100%);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: -5px 0 25px rgba(0,0,0,0.15); /* Sombra elegante */
+  }
+
+  /* Creamos un "área invisible" de 40px hacia la izquierda para detectar el mouse */
+  .sidebar.right::before {
+    content: "";
+    position: absolute;
+    left: -40px;
+    top: 0;
+    width: 40px;
+    height: 100%;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  /* Cuando el mouse toca el borde derecho de tu pantalla, el panel entra deslizando */
+  .sidebar.right:hover {
+    transform: translateX(0);
+  }
+}
