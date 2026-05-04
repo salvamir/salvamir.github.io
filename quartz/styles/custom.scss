@@ -90,63 +90,65 @@ header {
 .links a:hover {
   opacity: 0.7;          /* Efecto sutil cuando pasas el mouse por encima */
 }
+
 /* =========================================
-   1. MATAR EL ESPACIO FANTASMA DE LA IZQUIERDA
+   1. CENTRADO INTELIGENTE Y FLUIDO
    ========================================= */
 .sidebar.left {
-  display: none !important; /* Desaparece por completo */
+  display: none !important; /* Chao barra izquierda */
 }
 
-/* Forzamos a que la página sea de 1 sola columna centrada */
 .page {
+  /* Destruimos la grilla de Quartz y creamos una columna flexible */
   display: flex !important;
   flex-direction: column !important;
   align-items: center !important;
-  margin: 0 auto !important;
+  width: 100% !important;
+  max-width: 100vw !important; /* Usa todo el ancho de la pantalla */
+  margin: 0 !important;
 }
 
-/* Ajustamos el ancho del texto para que sea cómodo de leer */
 .center {
+  /* El contenido se adapta, pero nunca pasa de 800px para que sea fácil de leer */
   width: 100% !important;
   max-width: 800px !important;
   margin: 0 auto !important;
+  padding: 0 1.5rem !important; /* Margen para que no toque los bordes en el celular */
 }
 
 /* =========================================
-   2. PANEL DERECHO CON HOVER (SOLO ESCRITORIO)
+   2. PANEL DERECHO OCULTO (SOLO EN ESCRITORIO)
    ========================================= */
 @media all and (min-width: 1200px) {
   .sidebar.right {
-    position: fixed;
-    right: 0;
-    top: 0;
-    height: 100vh;
-    width: 320px;
-    background-color: var(--light); /* Usa tu color de fondo automático */
-    border-left: 1px solid var(--lightgray);
-    padding: 3rem 2rem;
-    z-index: 999;
+    position: fixed !important;
+    right: 0 !important;
+    top: 0 !important;
+    height: 100vh !important;
+    width: 320px !important;
+    background-color: var(--light) !important;
+    border-left: 1px solid var(--lightgray) !important;
+    padding: 3rem 2rem !important;
+    z-index: 999 !important;
     
-    /* Lo movemos 100% fuera de la pantalla hacia la derecha */
-    transform: translateX(100%);
-    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: -5px 0 25px rgba(0,0,0,0.15); /* Sombra elegante */
+    transform: translateX(100%) !important;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    box-shadow: -5px 0 25px rgba(0,0,0,0.15) !important;
   }
 
-  /* Creamos un "área invisible" de 40px hacia la izquierda para detectar el mouse */
+  /* Zona trampa invisible para el mouse */
   .sidebar.right::before {
-    content: "";
-    position: absolute;
-    left: -40px;
-    top: 0;
-    width: 40px;
-    height: 100%;
-    background: transparent;
-    cursor: pointer;
+    content: "" !important;
+    position: absolute !important;
+    left: -40px !important;
+    top: 0 !important;
+    width: 40px !important;
+    height: 100% !important;
+    background: transparent !important;
+    cursor: pointer !important;
   }
 
-  /* Cuando el mouse toca el borde derecho de tu pantalla, el panel entra deslizando */
   .sidebar.right:hover {
-    transform: translateX(0);
+    transform: translateX(0) !important;
   }
 }
