@@ -1,7 +1,9 @@
 ---
 title: 📨 Libro De Visitas
 ---
-![[2.jpeg]]Gracias por cruzarte, dejá tu huella: 
+![[2.jpeg]]
+
+# Gracias por cruzarte, dejá tu huella: 
 
 <iframe
   src="https://guestbooks.meadow.cafe/guestbook/6213"
