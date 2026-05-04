@@ -24,28 +24,34 @@ body[data-slug="El-Jardin"] {
 }
 
 /* =========================================
-   2. CENTRADO OFICIAL (PISANDO LA GRILLA)
+   2. ELIMINACIÓN DE LA COLUMNA FANTASMA (2 COLUMNAS)
    ========================================= */
 
-/* Forzamos el ancho del centro en todo el sitio */
-:root {
-  --content-width: 950px !important; 
-}
-
-/* Reprogramamos la grilla solo para pantallas grandes (PC) */
 @media all and (min-width: 1200px) {
   .page {
-    /* 0px a la izquierda | 950px al centro | 275px a la derecha */
-    grid-template-columns: 0px min(var(--content-width), 90vw) 275px !important;
-    justify-content: center !important;
+    /* Transformamos la página en solo 2 columnas: El centro (1fr) y la derecha (275px) */
+    grid-template-columns: 1fr 275px !important;
+    max-width: 1100px !important; /* Ancho máximo de toda la página para que se lea bien */
+    margin: 0 auto !important; /* Centra toda la página en el monitor */
+    gap: 4rem !important; /* Espacio de separación entre tu texto y el buscador */
   }
   
-  /* Ocultamos la barra izquierda para que no estorbe */
+  /* Desintegramos la barra izquierda definitivamente */
   .sidebar.left {
     display: none !important;
   }
+  
+  /* El texto toma la primera columna */
+  .center {
+    grid-column: 1 !important;
+    max-width: 100% !important; /* Le damos permiso de expandirse */
+  }
+  
+  /* La barra derecha toma la segunda columna */
+  .sidebar.right {
+    grid-column: 2 !important;
+  }
 }
-
 /* =========================================
    3. HEADER Y BOTONES 
    ========================================= */
