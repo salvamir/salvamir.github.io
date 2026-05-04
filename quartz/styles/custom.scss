@@ -1,13 +1,37 @@
 @use "./base.scss";
 
-// --- 1. CONFIGURACIÓN GLOBAL: Ocultar Grafo y Backlinks ---
-.graph, .graph-outer, #graph-container, .component.graph, .backlinks, .component.backlinks {
+/* =========================================
+   1. CENTRADO ABSOLUTO CON FLEXBOX
+   ========================================= */
+.sidebar.left {
   display: none !important;
 }
 
-// --- 2. GRAFO: OCULTAR GLOBALMENTE Y MOSTRAR SOLO EN EL JARDÍN ---
-.graph, .graph-outer, #graph-container, .component.graph {
-  display: none !important;
+/* Convertimos la página entera en un elástico que fuerza todo al centro */
+.page {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important; /* Esto es lo que empuja el texto al medio */
+  justify-content: flex-start !important;
+  
+  width: 100% !important;
+  max-width: 100vw !important; /* Usa todo el ancho del monitor */
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Tu contenido central */
+.center {
+  width: 100% !important;
+  max-width: 850px !important; /* Un ancho muy cómodo para leer en escritorio */
+  padding: 2rem 1.5rem !important;
+  
+  /* Quitamos el margin auto porque Flexbox ya se encarga de centrarlo */
+  margin: 0 !important; 
+  
+  /* Matamos cualquier resto de la grilla vieja */
+  grid-column: unset !important; 
+  position: static !important;
 }
 
 /* Selector que cubre: 
