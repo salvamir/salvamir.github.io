@@ -24,46 +24,39 @@ body[data-slug="El-Jardin"] {
 }
 
 /* =========================================
-   2. CENTRADO PERFECTO (MÉTODO INFALIBLE)
+   2. CENTRADO PERFECTO (MATANDO LA GRILLA DE QUARTZ)
    ========================================= */
-/* Convertimos el fondo absoluto en un contenedor que centra todo */
 body {
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important; /* Centrado horizontal absoluto */
-  width: 100% !important;
-  min-height: 100vh !important;
   margin: 0 !important;
   padding: 0 !important;
-  overflow-x: hidden !important; 
+  overflow-x: hidden !important;
 }
 
-/* La página entera ahora es una columna de 850px al medio de la pantalla */
 .page {
-  display: flex !important;
-  flex-direction: column !important;
+  /* Al usar display: block matamos la grilla divisoria que trae Quartz por defecto */
+  display: block !important; 
   width: 100% !important;
-  max-width: 850px !important; /* El ancho de lectura ideal */
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-/* El contenido simplemente llena esos 850px */
-.center {
-  width: 100% !important;
-  max-width: 100% !important;
-  margin: 0 !important;
-  padding: 2rem 1.5rem !important;
+  max-width: 850px !important; 
+  margin: 0 auto !important; /* El secreto matemático del centrado horizontal */
+  padding: 0 1.5rem !important; 
   box-sizing: border-box !important;
 }
 
-/* Matamos la barra izquierda definitivamente */
+.center {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 2rem 0 !important;
+}
+
+/* Nos aseguramos de que la barra no moleste */
 .sidebar.left {
   display: none !important;
 }
 
 /* =========================================
-   3. HEADER Y BOTONES (ESCRITORIO Y CELULAR)
+   3. HEADER Y BOTONES 
    ========================================= */
 header {
   display: flex !important;
@@ -91,20 +84,17 @@ header {
   opacity: 0.7 !important;
 }
 
-/* ESTILOS DEL TÍTULO */
 .page-title, .page-title a {
   color: #E6E2D6 !important; 
   font-size: 2.2rem !important; 
   margin: 0 !important;
 }
 
-/* VERSIÓN CELULAR */
 @media all and (max-width: 800px) {
   header {
     flex-direction: column !important;
     justify-content: center !important;
     text-align: center !important;
-    gap: 1rem !important;
   }
   .links {
     justify-content: center !important;
@@ -112,9 +102,6 @@ header {
   }
   .page-title, .page-title a {
     font-size: 1.8rem !important; 
-  }
-  article {
-    text-align: left !important;
   }
 }
 
@@ -132,7 +119,6 @@ header {
     border-left: 1px solid var(--lightgray) !important;
     padding: 3rem 2rem !important;
     z-index: 999 !important;
-    
     transform: translateX(100%) !important;
     transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
     box-shadow: -5px 0 25px rgba(0,0,0,0.15) !important;
