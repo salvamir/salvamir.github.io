@@ -184,3 +184,59 @@ article blockquote {
   font-size: 0.85rem !important; /* Cambia este número para jugar con el tamaño (ej: 0.85rem) */
   line-height: 1.6 !important; /* Mantiene un buen espacio entre las líneas para que no se apelmace */
 }
+/* =========================================
+   1. EL CENTRADO ESTILO "DANIEL" (CONSTANTE Y FIJO)
+   ========================================= */
+
+.page {
+  /* Matamos la grilla elástica de Quartz */
+  display: block !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+}
+
+.center {
+  /* Aquí está la magia: un bloque que NO se estira y siempre está al medio */
+  display: block !important;
+  width: 100% !important;
+  max-width: 750px !important; /* El ancho constante de la página de Daniel */
+  margin: 0 auto !important; /* Centrado matemático absoluto */
+  padding: 2rem 1.5rem !important;
+}
+
+/* Ocultamos la barra izquierda */
+.sidebar.left {
+  display: none !important;
+}
+
+/* =========================================
+   2. EL BUSCADOR Y MODO OSCURO (FLOTANTES)
+   ========================================= */
+/* Para que no arruinen el centrado perfecto del texto, los hacemos flotar */
+
+@media all and (min-width: 1200px) {
+  .sidebar.right {
+    position: fixed !important; /* Se queda flotando en la pantalla */
+    top: 2rem !important;
+    right: 2rem !important; /* Pegado arriba a la derecha */
+    width: auto !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1rem !important;
+  }
+}
+
+/* En tablets o pantallas más chicas, los devolvemos al flujo normal centrados */
+@media all and (max-width: 1199px) {
+  .sidebar.right {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    width: 100% !important;
+    margin: 2rem 0 !important;
+    gap: 2rem !important;
+  }
+}
