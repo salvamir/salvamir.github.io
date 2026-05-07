@@ -1,7 +1,64 @@
 @use "./base.scss";
 
 /* =========================================
-   1. OCULTAR GRAFO Y BACKLINKS (EXCEPTO EN JARDÍN)
+   1. DESTRUIMOS LA GRILLA DE QUARTZ
+   ========================================= */
+.page {
+  display: block !important;
+  width: 100% !important;
+}
+
+/* =========================================
+   2. CENTRADO ABSOLUTO (ESTILO DANIEL)
+   ========================================= */
+.center {
+  display: block !important;
+  width: 100% !important;
+  max-width: 700px !important; /* Este es el ancho de la columna de texto */
+  margin: 0 auto !important; /* Esta es la orden matemática para centrar en la pantalla */
+  padding: 3rem 1.5rem !important; /* Espacio para respirar arriba y a los lados en celular */
+}
+
+/* =========================================
+   3. OCULTAMOS LOS LATERALES DEFINITIVAMENTE
+   ========================================= */
+.sidebar {
+  display: none !important;
+}
+
+/* =========================================
+   4. ARREGLAMOS EL HEADER QUE QUEDÓ ROTO
+   ========================================= */
+header {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  width: 100% !important;
+  margin-top: 0 !important;
+  margin-bottom: 3rem !important;
+  gap: 1rem !important;
+}
+
+/* Forzamos a que los links del menú estén en fila y no apilados */
+.links, .nav-links {
+  display: flex !important;
+  flex-direction: row !important;
+  gap: 1.5rem !important;
+  align-items: center !important;
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.links a, .nav-links a {
+  text-decoration: none !important;
+  font-weight: 600 !important;
+}
+
+/* =========================================
+   5. OCULTAR GRAFO (EXCEPTO EN JARDÍN)
    ========================================= */
 .graph, .graph-outer, #graph-container, .component.graph, .backlinks, .component.backlinks {
   display: none !important;
@@ -24,126 +81,18 @@ body[data-slug="El-Jardin"] {
 }
 
 /* =========================================
-   2. CENTRADO A UNA COLUMNA (ESTILO DANIEL)
-   ========================================= */
-.page {
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  width: 100% !important;
-  max-width: 100% !important;
-  margin: 0 auto !important;
-}
-
-.center {
-  width: 100% !important;
-  max-width: 750px !important;
-  margin: 0 !important;
-  padding: 2rem 1.5rem !important;
-}
-
-.sidebar {
-  display: none !important;
-  width: 0 !important;
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-/* =========================================
-   3. HEADER Y BOTONES 
-   ========================================= */
-header {
-  width: 100% !important;
-  display: flex !important;
-  flex-direction: row !important;
-  align-items: center !important;
-  justify-content: space-between !important;
-  margin-top: 2rem !important;
-  margin-bottom: 2rem !important;
-  gap: 1rem !important;
-}
-
-.links {
-  display: flex !important;
-  gap: 1.5rem !important;
-  flex-wrap: wrap !important;
-}
-
-.links a, .nav-links a {
-  text-decoration: none !important;
-  font-weight: 600 !important;
-  transition: opacity 0.2s ease !important;
-}
-
-.links a:hover, .nav-links a:hover {
-  opacity: 0.7 !important;
-}
-
-.page-title, .page-title a {
-  color: #E6E2D6 !important; 
-  font-size: 2.2rem !important; 
-  margin: 0 !important;
-}
-
-@media all and (max-width: 800px) {
-  header {
-    flex-direction: column !important;
-    justify-content: center !important;
-    text-align: center !important;
-  }
-  .links {
-    justify-content: center !important;
-    width: 100% !important;
-  }
-  .page-title, .page-title a {
-    font-size: 1.8rem !important; 
-  }
-}
-
-/* =========================================
-   4. FOOTER Y LÍNEAS
+   6. FOOTER Y TEXTO
    ========================================= */
 footer {
   text-align: center !important;
-  margin-top: 2rem !important;
+  margin-top: 3rem !important;
   padding-bottom: 2rem !important;
   border: none !important;
 }
 
-footer p { 
-  font-family: "Libre Baskerville", serif !important; 
-  font-size: 0.9rem !important; 
-  color: #a89e95 !important; 
-  display: flex !important; 
-  justify-content: center !important; 
-  gap: 1rem !important; 
-  flex-wrap: wrap !important; 
-}
+hr { display: none !important; }
 
-footer a { 
-  color: #a89e95 !important; 
-  text-decoration: none !important; 
-}
-
-footer a:hover { 
-  color: #e0e0e0 !important; 
-  text-decoration: underline !important; 
-}
-
-hr, .page-footer hr, article hr, hr + footer {
-  display: none !important;
-  border: none !important;
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-/* =========================================
-   5. TAMAÑO DE TEXTO GENERAL
-   ========================================= */
-article p, 
-article li, 
-article table,
-article blockquote {
-  font-size: 0.85rem !important;
-  line-height: 1.6 !important;
+article p, article li {
+  font-size: 0.9rem !important;
+  line-height: 1.7 !important;
 }
