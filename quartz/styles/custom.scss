@@ -24,39 +24,36 @@ body[data-slug="El-Jardin"] {
 }
 
 /* =========================================
-   2. CENTRADO Y EXPANSIÓN DEL TEXTO (ESCRITORIO)
+   2. CENTRADO A UNA COLUMNA (ESTILO DANIEL)
    ========================================= */
-
-@media all and (min-width: 1200px) {
-  .page {
-    /* Forzamos una grilla de 2 elementos centrada en la pantalla */
-    display: grid !important;
-    /* La columna del texto es elástica (de 600px hasta 900px) y la barra derecha fija de 250px */
-    grid-template-columns: minmax(600px, 900px) 250px !important;
-    justify-content: center !important; /* Esto empuja todo el bloque al medio del monitor */
-    gap: 5rem !important; /* Bastante espacio para que respire entre el texto y el menú derecho */
-    margin: 0 auto !important;
-    padding: 2rem !important;
-  }
-  
-  .sidebar.left {
-    display: none !important;
-  }
-  
-  .center {
-    grid-column: 1 !important;
-    width: 100% !important;
-    max-width: 100% !important; /* Le damos libertad total para esparcirse */
-  }
-  
-  .sidebar.right {
-    grid-column: 2 !important;
-  }
+.page {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 auto !important;
 }
+
+.center {
+  width: 100% !important;
+  max-width: 750px !important;
+  margin: 0 !important;
+  padding: 2rem 1.5rem !important;
+}
+
+.sidebar {
+  display: none !important;
+  width: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
 /* =========================================
    3. HEADER Y BOTONES 
    ========================================= */
 header {
+  width: 100% !important;
   display: flex !important;
   flex-direction: row !important;
   align-items: center !important;
@@ -104,42 +101,7 @@ header {
 }
 
 /* =========================================
-   4. PANEL DERECHO DESPLEGABLE
-   ========================================= */
-@media all and (min-width: 1200px) {
-  .sidebar.right {
-    position: fixed !important;
-    right: 0 !important;
-    top: 0 !important;
-    height: 100vh !important;
-    width: 320px !important;
-    background-color: var(--light) !important;
-    border-left: 1px solid var(--lightgray) !important;
-    padding: 3rem 2rem !important;
-    z-index: 999 !important;
-    transform: translateX(100%) !important;
-    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
-    box-shadow: -5px 0 25px rgba(0,0,0,0.15) !important;
-  }
-
-  .sidebar.right::before {
-    content: "" !important;
-    position: absolute !important;
-    left: -40px !important;
-    top: 0 !important;
-    width: 40px !important;
-    height: 100% !important;
-    background: transparent !important;
-    cursor: pointer !important;
-  }
-
-  .sidebar.right:hover {
-    transform: translateX(0) !important;
-  }
-}
-
-/* =========================================
-   5. FOOTER Y LÍNEAS
+   4. FOOTER Y LÍNEAS
    ========================================= */
 footer {
   text-align: center !important;
@@ -174,69 +136,14 @@ hr, .page-footer hr, article hr, hr + footer {
   margin: 0 !important;
   padding: 0 !important;
 }
+
 /* =========================================
-   6. TAMAÑO DE TEXTO GENERAL
+   5. TAMAÑO DE TEXTO GENERAL
    ========================================= */
 article p, 
 article li, 
 article table,
 article blockquote {
-  font-size: 0.85rem !important; /* Cambia este número para jugar con el tamaño (ej: 0.85rem) */
-  line-height: 1.6 !important; /* Mantiene un buen espacio entre las líneas para que no se apelmace */
-}
-/* =========================================
-   1. EL CENTRADO ESTILO "DANIEL" (CONSTANTE Y FIJO)
-   ========================================= */
-
-.page {
-  /* Matamos la grilla elástica de Quartz */
-  display: block !important;
-  width: 100% !important;
-  margin: 0 auto !important;
-}
-
-.center {
-  /* Aquí está la magia: un bloque que NO se estira y siempre está al medio */
-  display: block !important;
-  width: 100% !important;
-  max-width: 750px !important; /* El ancho constante de la página de Daniel */
-  margin: 0 auto !important; /* Centrado matemático absoluto */
-  padding: 2rem 1.5rem !important;
-}
-
-/* Ocultamos la barra izquierda */
-.sidebar.left {
-  display: none !important;
-}
-
-/* =========================================
-   2. EL BUSCADOR Y MODO OSCURO (FLOTANTES)
-   ========================================= */
-/* Para que no arruinen el centrado perfecto del texto, los hacemos flotar */
-
-@media all and (min-width: 1200px) {
-  .sidebar.right {
-    position: fixed !important; /* Se queda flotando en la pantalla */
-    top: 2rem !important;
-    right: 2rem !important; /* Pegado arriba a la derecha */
-    width: auto !important;
-    background: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 1rem !important;
-  }
-}
-
-/* En tablets o pantallas más chicas, los devolvemos al flujo normal centrados */
-@media all and (max-width: 1199px) {
-  .sidebar.right {
-    display: flex !important;
-    flex-direction: row !important;
-    justify-content: center !important;
-    width: 100% !important;
-    margin: 2rem 0 !important;
-    gap: 2rem !important;
-  }
+  font-size: 0.85rem !important;
+  line-height: 1.6 !important;
 }
