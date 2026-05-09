@@ -45,6 +45,7 @@ Te dejo otros lugares interesantes para ver. Podés encontrar nuevas páginas in
 - [The Autodidacts](https://www.autodidacts.io/tips-for-boosting-energy-levels-mitochondrial-function/)
 ### Interesting Websites:
 - [Christian Info](https://elcristiano.info/): Great info about the church.
+- [Philosophica:](https://www.philosophica.info/index.html) Vast vault of philosophy information.
 - [Catholic Liturgy:](https://liturgiacatolica.org/) Meditations about the gospel.
 - [About Fiat Cars:](https://www.fiat.com.mx/blog.html) Q&A about cars so please enter this link.
 - [Project Gutenberg](https://www.gutenberg.org/) List Of E-books
