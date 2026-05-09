@@ -43,16 +43,18 @@ Te dejo otros lugares interesantes para ver. Podés encontrar nuevas páginas in
 - [Tanner](https://tanner.vc) He creates things.
 - [Small Seasons.](https://smallseasons.guide/)
 - [The Autodidacts](https://www.autodidacts.io/tips-for-boosting-energy-levels-mitochondrial-function/)
-### Interesting Websites:
+### Philosophy, Religion and History:
 - [Christian Info](https://elcristiano.info/): Great info about the church.
-- [Philosophica:](https://www.philosophica.info/index.html) Vast vault of philosophy information.
 - [Catholic Liturgy:](https://liturgiacatolica.org/) Meditations about the gospel.
+- [Philosophica:](https://www.philosophica.info/index.html) Vast vault of philosophy information.
+- [LaPhilo](https://laphilo.fr/index-en.html). More philosophy!
+- [Medieval](https://going-medieval.com) 
+### Interesting Websites:
 - [About Fiat Cars:](https://www.fiat.com.mx/blog.html) Q&A about cars so please enter this link.
 - [Project Gutenberg](https://www.gutenberg.org/) List Of E-books
 - [Tucumán Turismo:](https://www.tucutur.com.ar/index.html) Hay muchas cosas interesantes de mi provincia paisano acá adentro vayan a leerlo.
 - [Free Music:](https://lamusicagratis.com/) It doesn’t need to be explained.
 - [Rate Your Music:](https://rateyourmusic.com/) I guess you already know what to expect.
-- [Medieval](https://going-medieval.com) 
 - [ElevenTy](https://www.11ty.dev/)
 ### Geology:
 - [Hombre Geológico.](https://geologicalmanblog.wordpress.com/) 
