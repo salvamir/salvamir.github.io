@@ -16,7 +16,12 @@ title: 📨 Libro De Visitas
 También, podés mandarme un [mail](mailto:pez.arroz.tabla@proton.me) si querés conversar.
 
 # 🌐 Links
-Te dejo otros lugares interesantes para ver. Podés encontrar nuevas páginas interesantes por [acá](https://wiby.org/),  o visitar la [biglist](http://biglist.terraaeon.com/index.html) o el [blogroll](https://blogroll.org/).
+Te dejo otros lugares interesantes para ver. Podés encontrar nuevas páginas interesantes por [acá](https://wiby.org/),  o visitar la  o el 
+
+### Directories:
+- [¡BlogBlog!](https://blogblog.es) Blogs en español
+- [BigList](http://biglist.terraaeon.com/index.html) Various blog-style webpages.
+- [BlogRoll](https://blogroll.org/) Vast blog's directory.
 ### Personal Webpages:
 - [Eric Murphy](https://ericmurphy.xyz/): He’s a web developer who also has a personal website where he post about tech things.
 - [Luke Smith:](https://lukesmith.xyz/) I’m not sure if he’s a philosopher but he post a lot of “trascendental thoughts“ if you like to call them like that.
@@ -72,4 +77,6 @@ Te dejo otros lugares interesantes para ver. Podés encontrar nuevas páginas in
 - [Webring:](https://geekring.net/) Only if you’re bored.
 - [Hotline](https://hotlinewebring.club/)
 - [IndieWeb](https://🕸💍.ws/directory).
-- [LainChain](https://foreverliketh.is/#2-lainchan-webring).
+- [LainChain](https://foreverliketh.is/#2-lainchan-webring)
+### Banners:
+ ![[blogblog-animado.gif|88](https://blogblog.es)]]
