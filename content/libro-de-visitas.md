@@ -16,7 +16,7 @@ title: 📨 Libro De Visitas
 También, podés mandarme un [mail](mailto:pez.arroz.tabla@proton.me) si querés conversar.
 
 # 🌐 Links
-Te dejo otros lugares interesantes para ver. Podés encontrar nuevas páginas interesantes por [acá](https://wiby.org/),  o visitar la  o el 
+Te dejo otros lugares interesantes para ver. Podés encontrar nuevas páginas interesantes por [acá](https://wiby.org/).
 
 ### Directories:
 - [¡BlogBlog!](https://blogblog.es) Blogs en español
