@@ -1,55 +1,71 @@
 @use "./base.scss";
 
 /* =========================================
-   1. DESTRUIMOS LA GRILLA DE QUARTZ
+   1. DESTRUCCIÓN TOTAL DE LA GRILLA DE QUARTZ
    ========================================= */
-.page {
-  display: block !important;
+/* Forzamos a la ventana entera a centrar su contenido sin importar qué dicte el tema original */
+body, .page {
+  display: flex !important;
+  justify-content: center !important; 
   width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
 }
 
 /* =========================================
-   2. CENTRADO ABSOLUTO (ESTILO DANIEL)
+   2. EL CENTRADO TIPO "DANIEL"
    ========================================= */
+/* Esta es tu única columna de lectura */
 .center {
   display: block !important;
   width: 100% !important;
-  max-width: 700px !important; /* Este es el ancho de la columna de texto */
-  margin: 0 auto !important; /* Esta es la orden matemática para centrar en la pantalla */
-  padding: 3rem 1.5rem !important; /* Espacio para respirar arriba y a los lados en celular */
+  max-width: 700px !important; /* El ancho exacto para que el texto sea cómodo */
+  margin: 0 auto !important;
+  padding: 3rem 1.5rem !important;
+  box-sizing: border-box !important;
 }
 
-/* =========================================
-   3. OCULTAMOS LOS LATERALES DEFINITIVAMENTE
-   ========================================= */
-.sidebar {
+/* Ocultamos literalmente todo lo demás, sin dejar rastro de tamaño */
+.sidebar, .left, .right {
   display: none !important;
+  width: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  flex: none !important;
 }
 
 /* =========================================
-   4. ARREGLAMOS EL HEADER QUE QUEDÓ ROTO
+   3. EL HEADER LIMPIO (Como el de Daniel)
    ========================================= */
 header {
   display: flex !important;
-  flex-direction: row !important;
-  flex-wrap: wrap !important;
-  align-items: center !important;
-  justify-content: space-between !important;
+  flex-direction: column !important;
+  align-items: center !important; /* Centra título y menú al medio de tu columna */
+  text-align: center !important;
   width: 100% !important;
   margin-top: 0 !important;
-  margin-bottom: 3rem !important;
-  gap: 1rem !important;
+  margin-bottom: 4rem !important;
+  gap: 1.5rem !important;
 }
 
-/* Forzamos a que los links del menú estén en fila y no apilados */
-.links, .nav-links {
+.page-title {
+  font-size: 2.5rem !important;
+  margin: 0 !important;
+}
+
+/* Agrupamos los links, buscador y modo oscuro en una línea horizontal */
+.links, .nav-links, header > div {
   display: flex !important;
   flex-direction: row !important;
-  gap: 1.5rem !important;
+  justify-content: center !important;
   align-items: center !important;
+  flex-wrap: wrap !important;
+  gap: 1.5rem !important;
   list-style: none !important;
-  margin: 0 !important;
   padding: 0 !important;
+  margin: 0 !important;
 }
 
 .links a, .nav-links a {
@@ -58,7 +74,7 @@ header {
 }
 
 /* =========================================
-   5. OCULTAR GRAFO (EXCEPTO EN JARDÍN)
+   4. OCULTAR GRAFO (EXCEPTO EN JARDÍN)
    ========================================= */
 .graph, .graph-outer, #graph-container, .component.graph, .backlinks, .component.backlinks {
   display: none !important;
@@ -81,7 +97,7 @@ body[data-slug="El-Jardin"] {
 }
 
 /* =========================================
-   6. FOOTER Y TEXTO
+   5. FOOTER Y TEXTO
    ========================================= */
 footer {
   text-align: center !important;
@@ -93,6 +109,6 @@ footer {
 hr { display: none !important; }
 
 article p, article li {
-  font-size: 0.9rem !important;
+  font-size: 0.95rem !important;
   line-height: 1.7 !important;
 }
