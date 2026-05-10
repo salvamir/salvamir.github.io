@@ -80,7 +80,6 @@ Te dejo otros lugares interesantes para ver. Podés encontrar nuevas páginas in
 - [LainChain](https://foreverliketh.is/#2-lainchan-webring)
 
 # ¡Gracias por venir!
-
 <a href="https://blogblog.es/index.html" target="_blank" rel="noopener noreferrer">
   <img src="blogblog-animado.gif" alt="Banner animado" style="width: 88px; border-radius: 4px; cursor: pointer;">
 </a>
