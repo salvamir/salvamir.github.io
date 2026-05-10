@@ -1,7 +1,7 @@
 ---
 cssclasses:
   - blog-post
-date: 2025-05-10
+date: 2025-05-06
 ---
 Estoy frustrado. No por algo específico sino en general. Solía tener clarísimo que es lo que quiero para mi vida, pero este año todo parece tambalearse un poco. En parte se que tener 20 años no es tener 18 y por eso también es lógico sentirse medio perdido.
 
