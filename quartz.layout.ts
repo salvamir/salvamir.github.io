@@ -1,21 +1,20 @@
 import { PageLayout, SharedLayout } from "./quartz/cfg"
 import * as Component from "./quartz/components"
 
-// 1. MUDAMOS EL BUSCADOR Y MODO OSCURO AL HEADER
+// 1. ELIMINAMOS EL BUSCADOR Y EL MODO OSCURO DEL HEADER
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [
     Component.PageTitle(),
     Component.Spacer(),
-    Component.Search(),     /* Mudado aquí */
-    Component.Darkmode(),   /* Mudado aquí */
-    Component.DesktopOnly(Component.NavLinks()),
+    // Eliminamos Component.Search() y Component.Darkmode()
+    Component.DesktopOnly(Component.NavLinks()), 
   ],
   afterBody: [],
   footer: Component.Footer(),
 }
 
-// 2. DEJAMOS LA IZQUIERDA Y DERECHA COMPLETAMENTE VACÍAS
+// 2. MANTENEMOS LA IZQUIERDA Y DERECHA COMPLETAMENTE VACÍAS
 export const defaultContentPageLayout: PageLayout = {
   beforeBody: [
     Component.ArticleTitle(),
@@ -27,12 +26,12 @@ export const defaultContentPageLayout: PageLayout = {
     }),
   ],
   left: [],
-  right: [], // ¡AHORA SÍ, VACÍO!
+  right: [], 
 }
 
 // 3. LO MISMO PARA LA LISTA DE PÁGINAS
 export const defaultListPageLayout: PageLayout = {
   beforeBody: [Component.ArticleTitle(), Component.ContentMeta()],
   left: [],
-  right: [], // ¡VACÍO!
+  right: [], 
 }
