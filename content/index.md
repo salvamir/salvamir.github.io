@@ -5,8 +5,6 @@ title: Bienvenidos!
 Acá tengo archivados distintos detalles de mi vida. Quizás les interese.
 ## Sobre Mi:
 Hola! Soy Salvador, vivo en Argentina, hago música cuando puedo, estudio Geología y tengo 5 hermanos. Creo en Dios y persevero en algunos grupos de la Iglesia. Me surgió hacer esta página porque hace un buen tiempo que no uso Instagram activamente, y quería tener un lugar en Internet dónde poder coleccionar recuerdos. Me encanta Tafí Del Valle, y varios de los cuadros que van a ver son de un tío segundo mío. Creo que todos son de Tafí. Me gusta coleccionar Legos y armar cosas cada tanto.  
-
-Lo que estoy haciendo actualmente está en: **[[ahora | 📅 Ahora]]**
 ## Para Curiosear:
 Acá te dejo una lista de ensayos/artículos que anduve leyendo por internet. Algunos son bien sencillos.
 - ["Living With The Seasons", de Daniel ](https://danielslife.blog/posts/living-with-the-seasons)
@@ -17,4 +15,4 @@ Acá te dejo una lista de ensayos/artículos que anduve leyendo por internet. Al
 Podés entrar a [esta](https://liturgiacatolica.org/Lucas/5,1%E2%80%9111.html) página secreta.
 Y por último, te dejo fotos de Tafí Del Valle, para que te den ganas de dejar la pantalla y salir afuera:![[tafiii.mp4]]![[tafi.jpg]]
 ![[tafif.jpg|523]]
-# 📅 Ahora ![[ahora]]
+## Actualizaciones:![[ahora]]
