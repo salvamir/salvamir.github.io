@@ -79,4 +79,5 @@ Te dejo otros lugares interesantes para ver. Podés encontrar nuevas páginas in
 - [IndieWeb](https://🕸💍.ws/directory).
 - [LainChain](https://foreverliketh.is/#2-lainchan-webring)
 ### Banners:
- ![[blogblog-animado.gif|88](https://blogblog.es)]]
+
+ ![[blogblog-animado.gif|88]]
