@@ -78,6 +78,9 @@ Te dejo otros lugares interesantes para ver. Podés encontrar nuevas páginas in
 - [Hotline](https://hotlinewebring.club/)
 - [IndieWeb](https://🕸💍.ws/directory).
 - [LainChain](https://foreverliketh.is/#2-lainchan-webring)
-### Banners:
 
- ![[blogblog-animado.gif|88]]
+# ¡Gracias por venir!
+
+<a href="https://blogblog.es/index.html" target="_blank" rel="noopener noreferrer">
+  <img src="blogblog-animado.gif" alt="Banner animado" style="width: 88px; border-radius: 4px; cursor: pointer;">
+</a>
