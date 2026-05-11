@@ -1,0 +1,3 @@
+*"El deporte es un don divino que perfecciona la unidad del hombre: fortalece el cuerpo, esclarece la mente y templa la voluntad. Al exigir disciplina y sacrificio, ordena las pasiones y dispone el alma para recibir, con mayor libertad, la acción de la Gracia. Como todo bien participado, su fin es la virtud; por ello, el deporte solo es auténtico cuando se orienta al bien y se aleja del vicio. Aquella actividad que se rinde a la vanidad o al pecado se desvirtúa de su origen, pues un ejercicio que carece de sacrificio y orden no solo pierde su eficacia, sino que deja de ser verdadera perfección del hombre."*
+
+Lo dijo un padre amigo mío. Me encanta ver las cosas cotidianas de esa forma tan sana.
