@@ -18,11 +18,11 @@ También, podés mandarme un [mail](mailto:pez.arroz.tabla@proton.me) si querés
 # 🌐 Links
 Te dejo otros lugares interesantes para ver. Podés encontrar nuevas páginas interesantes por [acá](https://wiby.org/).
 
-### Directories:
+### <font color="#e5b9b7">Directories:</font>
 - [¡BlogBlog!](https://blogblog.es) Blogs en español
 - [BigList](http://biglist.terraaeon.com/index.html) Various blog-style webpages.
 - [BlogRoll](https://blogroll.org/) Vast blog's directory.
-### Personal Webpages:
+### <font color="#d99694">Personal Webpages:</font>
 - [Eric Murphy](https://ericmurphy.xyz/): He’s a web developer who also has a personal website where he post about tech things.
 - [Luke Smith:](https://lukesmith.xyz/) I’m not sure if he’s a philosopher but he post a lot of “trascendental thoughts“ if you like to call them like that.
 - [Barry Hess:](https://bjhess.com/) He´s the owner of Pika!
@@ -49,29 +49,35 @@ Te dejo otros lugares interesantes para ver. Podés encontrar nuevas páginas in
 - [Tanner](https://tanner.vc) He creates things.
 - [Small Seasons.](https://smallseasons.guide/)
 - [The Autodidacts](https://www.autodidacts.io/tips-for-boosting-energy-levels-mitochondrial-function/)
-### Philosophy, Religion and History:
+### <font color="#fbd5b5">Philosophy, Religion and History:</font>
 - [Christian Info](https://elcristiano.info/): Great info about the church.
 - [Catholic Liturgy:](https://liturgiacatolica.org/) Meditations about the gospel.
 - [Philosophica:](https://www.philosophica.info/index.html) Vast vault of philosophy information.
 - [LaPhilo](https://laphilo.fr/index-en.html). More philosophy!
 - [Medieval](https://going-medieval.com) 
-### Interesting Websites:
+### <font color="#76923c">Interesting Websites:</font>
 - [About Fiat Cars:](https://www.fiat.com.mx/blog.html) Q&A about cars so please enter this link.
 - [Project Gutenberg](https://www.gutenberg.org/) List Of E-books
 - [Tucumán Turismo:](https://www.tucutur.com.ar/index.html) Hay muchas cosas interesantes de mi provincia paisano acá adentro vayan a leerlo.
 - [Free Music:](https://lamusicagratis.com/) It doesn’t need to be explained.
 - [Rate Your Music:](https://rateyourmusic.com/) I guess you already know what to expect.
 - [ElevenTy](https://www.11ty.dev/)
-### Geology:
-- [Hombre Geológico.](https://geologicalmanblog.wordpress.com/) 
-- [Highly Allochthonous.](https://all-geo.org/highlyallochthonous/) 
+- [Jayfa](https://www.flickr.com/photos/jayfa_mocs/page2). Lego creator & artist.
+### <font color="#8db3e2">Geology:</font>
+##### <font color="#4f81bd">Blogs and news:</font>
+- [Hombre Geológico.](https://geologicalmanblog.wordpress.com/) Blog personal sobre geología en general, actualizado, mundial centrado en España.
+- [Highly Allochthonous.](https://all-geo.org/highlyallochthonous/) Old school geology personal blog.
+- [Geology Page](https://www.geologypage.com) More modern news paper.
+- [Ciencias De La Geología.](https://geologyscience.com) Looks like AI but ain't (I think)
+- [Geology and Earth Science.](https://geology.com) Big old school geo-encyclopedia.
+- [Quimper Geology.](https://quimpergeology.org/resources/blogs/) Vast news, discoveries and research.
+##### <font color="#4f81bd">Useful Tools:</font>
 - [Geology Courses](https://courses.spatialthoughts.com)
-- [Geology Page](https://www.geologypage.com)
-- [Ciencias De La Geología.](https://geologyscience.com)
-- [Geology and Earth Science.](https://geology.com)
 - [GeologíaWeb](https://geologiaweb.com).
 - [Atlas de Petrología Ígnea.](https://petroignea.wordpress.com)
-### Webrings: 
+- [Atlas de Mineralogía Óptica.](http://www.mineralogiaoptica.es) y [Lista De Minerales Formadores De Roca.](https://www.ugr.es/~velilla/atlas_mineral.html#Neso)
+- [Apuntes de Geología General](https://www.geovirtual2.cl)
+### <font color="#f79646">Web</font><font color="#fbd5b5">rings: </font>
    *Disclaimer*: I do not like most of them actually. That's why I put them here at the end of the page. I think you can absolutely find more healthy websites for yourself. But who knows, maybe you find something cool and meaningful here.
 - [XXIIVV](https://webring.xxiivv.com/)
 - [Webring:](https://geekring.net/) Only if you’re bored.
