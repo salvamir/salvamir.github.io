@@ -16,7 +16,7 @@ title: 📨 Libro De Visitas
 También, podés mandarme un [mail](mailto:pez.arroz.tabla@proton.me) si querés conversar.
 
 # 🌐 Links
-Te dejo otros lugares interesantes para ver. Podés encontrar nuevas páginas interesantes por [acá](https://wiby.org/).
+Te dejo otros lugares interesantes para ver. Podés encontrar nuevas páginas interesantes por [acá](https://wiby.org/). Este es mi GRAN LISTA de páginas web que me gustan. Las anoto así no me las olvido.
 
 ### <font color="#e5b9b7">Directories:</font>
 - [¡BlogBlog!](https://blogblog.es) Blogs en español
@@ -41,6 +41,7 @@ Te dejo otros lugares interesantes para ver. Podés encontrar nuevas páginas in
 - [Seasons.](https://seasons.bearblog.dev/)
 - [Peculiar Monster.](https://peculiar.monster/)
 - [Maggie Appleton.](https://maggieappleton.com/) Her personal website is awesome. A vast tiny little place where to explore her thoughts, creations, research, experiences and much more!
+- [Michael. ](https://michaelg.bearblog.dev/blog/)He is a husband, father, and hobbiest!
 - [Baccy Flap.](https://baccyflap.com/)
 - [Tom Forth.](https://tomforth.co.uk/)
 - [Nolan](https://nolancaudill.com/)
@@ -88,4 +89,8 @@ Te dejo otros lugares interesantes para ver. Podés encontrar nuevas páginas in
 # ¡Gracias por venir!
 <a href="https://blogblog.es/index.html" target="_blank" rel="noopener noreferrer">
   <img src="blogblog-animado.gif" alt="Banner animado" style="width: 88px; border-radius: 4px; cursor: pointer;">
-</a>
+</a> <a href="[https://blogblog.es/index.htm](https://luiscarlospando.com)" target="_blank" rel="noopener noreferrer">
+  <img src="luis-carlos-pando.gif" alt="Banner animado" style="width: 88px; border-radius: 4px; cursor: pointer;">
+</a> <a href="" target="[_blank](https://www.esuntipazo.com/)" rel="noopener noreferrer">
+  <img src="esuntipazo.gif" alt="Banner animado" style="width: 88px; border-radius: 4px; cursor: pointer;">
+</a>![[WrittenByAHuman.svg]][](https://ko-fi.com/s/4662b19f61)![[made-on-macintosh 1.gif]]![[kagi-small-web.png]][](https://kagi.com/smallweb)![[socialmedia.webp]]![[delete-tiktok.gif]]
