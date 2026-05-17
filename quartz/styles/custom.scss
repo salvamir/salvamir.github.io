@@ -159,32 +159,51 @@ article p {
 }
 
 /* ==========================================
-   6. MENÚS / CALLOUTS (TAMAÑO CORREGIDO)
+   6. MENÚS / CALLOUTS (TAMAÑO Y FLECHAS CORREGIDOS)
    ========================================== */
 .callout {
   padding: 0.8rem 1.2rem !important; 
   margin: 1rem 0 !important;
   height: auto !important;
+  border-radius: 8px !important;
 }
-.callout .callout-icon { display: none !important; }
 
+/* Ocultamos el ícono principal (la "i" o el rayito) */
+.callout .callout-icon { 
+  display: none !important; 
+}
+
+/* Acomodamos el contenedor del título */
 .callout .callout-title {
   display: flex !important;
   flex-direction: row !important;
   align-items: center !important;
-  justify-content: flex-start !important;
+  justify-content: space-between !important; /* Esto manda la flecha a la derecha */
   margin: 0 !important;
   padding: 0 !important;
-  gap: 0.5rem !important; /* Espacio entre el texto y la flechita */
+  width: 100% !important; 
 }
-.callout .callout-title .callout-title-inner { margin: 0 !important; }
 
-/* Si el callout está vacío adentro, no ocupa espacio extra */
+/* El texto en sí */
+.callout .callout-title .callout-title-inner { 
+  margin: 0 !important; 
+  flex: 1 !important; 
+  text-align: left !important;
+}
+
+/* La bendita flechita */
+.callout .fold-icon {
+  margin: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
 .callout .callout-content {
   padding: 0 !important;
   margin: 0 !important;
 }
 
+/* Colores de las casillas */
 .callout[data-callout="info"] { border-color: #d4b895 !important; background-color: rgba(212, 184, 149, 0.1) !important; }
 .callout[data-callout="info"] .callout-title { color: #d4b895 !important; }
 .callout[data-callout="error"] { border-color: #82b0a2 !important; background-color: rgba(130, 176, 162, 0.1) !important; }
