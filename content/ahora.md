@@ -36,4 +36,5 @@ Hoy la Emi de la nada me llamó para preguntarme si quería salir a comer papas.
 #### Convivencia pre-Pascua Joven.
 - 21/03/2026 
 Fue medio agotador, pero estuvo genial, los chicos le pusieron un montón de esfuerzo, recen por nosotros, para que salga todo bien.
+
 ![[image02.jpg|382]]
