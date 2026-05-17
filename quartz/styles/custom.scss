@@ -246,3 +246,35 @@ ul.section-ul li > .meta {
 ul.section-ul li > .desc {
   margin: 0 !important;
 }
+
+/* ==========================================
+   7. ENCABEZADO Y MENÚ DE NAVEGACIÓN (INTERACTIVIDAD)
+   ========================================== */
+
+/* 1. Fondo translúcido para todo el bloque del encabezado */
+.page-header header {
+  /* Fondo súper sutil (blanco al 4% de opacidad) para que se parezca al del botón de volver arriba */
+  background-color: rgba(255, 255, 255, 0.04) !important; 
+  /* Espacio hacia adentro para que el texto y los botones no toquen los bordes */
+  padding: 2.5rem 1.5rem 2rem 1.5rem !important; 
+  /* Bordes bien redondeados */
+  border-radius: 24px !important; 
+}
+
+/* 2. El "saltito" de los botones del menú */
+.page-header header .links a {
+  /* inline-block es obligatorio para que el navegador nos deje mover el elemento de lugar */
+  display: inline-block !important; 
+  /* Le decimos que cualquier cambio (de posición o color) tarde 0.2 segundos, así no es brusco */
+  transition: transform 0.2s ease, color 0.2s ease !important; 
+}
+
+.page-header header .links a:hover {
+  /* translateY mueve el elemento en el eje Y. Al ponerlo negativo, sube 4 píxeles */
+  transform: translateY(-4px) !important; 
+}
+
+/* 3. La "huella" (links visitados) */
+.page-header header .links a:visited {
+  color: #DBCC79 !important; 
+}
