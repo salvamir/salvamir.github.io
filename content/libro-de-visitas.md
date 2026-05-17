@@ -103,6 +103,7 @@ Te dejo otros lugares interesantes para ver. Podés encontrar nuevas páginas in
   <a href="TU_ENLACE_AQUÍ"><img src="/Anexos/made-on-macintosh 1.gif"></a>
   <a href="TU_ENLACE_AQUÍ"><img src="/Anexos/delete-tiktok.gif"></a>
   <a href="TU_ENLACE_AQUÍ"><img src="/Anexos/socialmedia.webp"></a>
+  <a href="http://watar.com.ar"><img src="/Anexos/watar.gif"></a>
   <a href="https://www.esuntipazo.com"><img src="/Anexos/esuntipazo.gif"></a>
   <a href="https://luiscarlospando.com"><img src="/Anexos/luis-carlos-pando.gif"></a>
   <a href="https://blogblog.es/index.html"><img src="/Anexos/blogblog-animado.gif"></a>
