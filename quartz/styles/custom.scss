@@ -156,3 +156,65 @@ article p, article li {
   width: 0 !important;
   height: 0 !important;
 }
+/* ==========================================
+   PERSONALIZACIÓN DE MENÚS (PALETA TERROSA)
+   ========================================== */
+
+/* 1. Ocultar los íconos en todos los callouts y alinear el texto */
+.callout .callout-icon {
+    display: none !important;
+}
+.callout .callout-title .callout-title-inner {
+    margin-left: 0 !important;
+}
+
+/* 2. Colores específicos para cada sección */
+
+/* Directorios (Beige Arena) */
+.callout[data-callout="info"] {
+    border-color: #d4b895 !important;
+    background-color: rgba(212, 184, 149, 0.1) !important;
+}
+.callout[data-callout="info"] .callout-title { color: #d4b895 !important; }
+
+/* Páginas Personales (Terracota) */
+.callout[data-callout="error"] {
+    border-color: #c47b57 !important;
+    background-color: rgba(196, 123, 87, 0.1) !important;
+}
+.callout[data-callout="error"] .callout-title { color: #c47b57 !important; }
+
+/* Filosofía e Historia (Marrón Topo) */
+.callout[data-callout="abstract"] {
+    border-color: #9c8a7b !important;
+    background-color: rgba(156, 138, 123, 0.1) !important;
+}
+.callout[data-callout="abstract"] .callout-title { color: #9c8a7b !important; }
+
+/* Webs Interesantes (Ocre / Mostaza) */
+.callout[data-callout="success"] {
+    border-color: #cda34f !important;
+    background-color: rgba(205, 163, 79, 0.1) !important;
+}
+.callout[data-callout="success"] .callout-title { color: #cda34f !important; }
+
+/* Geología (Arcilla oscuro) */
+.callout[data-callout="note"] {
+    border-color: #a06a50 !important;
+    background-color: rgba(160, 106, 80, 0.1) !important;
+}
+.callout[data-callout="note"] .callout-title { color: #a06a50 !important; }
+
+/* Sub-menús de Geología (Marrón claro) */
+.callout[data-callout="todo"] {
+    border-color: #b59b7c !important;
+    background-color: rgba(181, 155, 124, 0.1) !important;
+}
+.callout[data-callout="todo"] .callout-title { color: #b59b7c !important; }
+
+/* Webrings (Naranja cálido) */
+.callout[data-callout="warning"] {
+    border-color: #d98a4c !important;
+    background-color: rgba(217, 138, 76, 0.1) !important;
+}
+.callout[data-callout="warning"] .callout-title { color: #d98a4c !important; }
