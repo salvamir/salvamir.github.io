@@ -55,8 +55,9 @@ header {
   gap: 1.5rem !important;
 }
 
-.page-title {
-  font-size: 2rem !important; /* MODIFICADO: de 2.5rem a 2rem para achicarlo */
+.page-title, .page-title a {
+  font-size: 2.5rem !important; /* <-- AQUÍ CAMBIAS EL TAMAÑO (sube o baja este número) */
+  color: #f4ebd8 !important;    /* <-- AQUÍ CAMBIAS EL COLOR (este es un tono beige claro) */
   margin: 0 !important;
 }
 
@@ -74,6 +75,7 @@ header {
 }
 
 .links a, .nav-links a {
+  color: #e3dac9 !important;    /* <-- AQUÍ LE DAMOS EL MISMO COLOR BEIGE */
   text-decoration: none !important;
   font-weight: 600 !important;
 }
