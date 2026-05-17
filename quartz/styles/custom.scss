@@ -2,37 +2,22 @@
 
 /* Achica toda la escala base de la página (títulos, menús, texto general) */
 html {
-  font-size: 16px !important; /* El original es 16px. Al bajarlo a 14px, TODO se vuelve más pequeño y fino */
+  font-size: 16px !important; 
 }
 
 /* =========================================
-   1. DESTRUCCIÓN TOTAL DE LA GRILLA DE QUARTZ
+   1. DISTRIBUCIÓN DE ESPACIO TIPO "DANIEL" (GRILLA PRINCIPAL)
    ========================================= */
-/* Forzamos a la ventana entera a centrar su contenido sin importar qué dicte el tema original */
-body, .page {
-  display: flex !important;
-  justify-content: center !important; 
-  width: 100% !important;
-  max-width: 100% !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  box-sizing: border-box !important;
-}
-
-/* =========================================
-   2. EL CENTRADO TIPO "DANIEL"
-   ========================================= */
-/* Esta es tu única columna de lectura */
-.center {
+/* Darle aire al contenedor principal y limitar el ancho para lectura cómoda */
+body, .page, .center {
   display: block !important;
-  width: 100% !important;
-  max-width: 700px !important; /* El ancho exacto para que el texto sea cómodo */
-  margin: 0 auto !important;
-  padding: 1.5rem 1.5rem !important;
+  max-width: 700px !important;    /* Ancho máximo elegante */
+  margin: 0 auto !important;      /* Centra todo el bloque en la pantalla */
+  padding: 4rem 2rem !important;  /* Aire arriba/abajo, y a los costados para celulares */
   box-sizing: border-box !important;
 }
 
-/* Ocultamos literalmente todo lo demás, sin dejar rastro de tamaño */
+/* Ocultamos literalmente todo lo demás (barras laterales), sin dejar rastro */
 .sidebar, .left, .right {
   display: none !important;
   width: 0 !important;
@@ -42,22 +27,22 @@ body, .page {
 }
 
 /* =========================================
-   3. EL HEADER LIMPIO (Como el de Daniel)
+   2. EL HEADER LIMPIO (Como el de Daniel)
    ========================================= */
 header {
   display: flex !important;
   flex-direction: column !important;
-  align-items: center !important; /* Centra título y menú al medio de tu columna */
+  align-items: center !important; 
   text-align: center !important;
   width: 100% !important;
-  margin-top: 0 !important;
-  margin-bottom: 1.5rem !important;
-  gap: 0.5rem !important;
+  margin-top: 2rem !important;    /* Separación desde el borde superior */
+  margin-bottom: 4rem !important; /* Separación elegante antes del contenido */
+  gap: 1.5rem !important;         /* Espacio entre el título y el menú */
 }
 
 .page-title, .page-title a {
-  font-size: 2.5rem !important; /* <-- AQUÍ CAMBIAS EL TAMAÑO (sube o baja este número) */
-  color: #f4ebd8 !important;    /* <-- AQUÍ CAMBIAS EL COLOR (este es un tono beige claro) */
+  font-size: 2.5rem !important; 
+  color: #f4ebd8 !important;    
   margin: 0 !important;
 }
 
@@ -75,14 +60,14 @@ header {
 }
 
 .links a, .nav-links a {
-  color: #e3dac9 !important;    /* <-- AQUÍ LE DAMOS EL MISMO COLOR BEIGE */
+  color: #e3dac9 !important;    
   text-decoration: none !important;
   font-size: 1.5rem !important;
   font-weight: 600 !important;
 }
 
 /* =========================================
-   4. OCULTAR GRAFO (EXCEPTO EN JARDÍN)
+   3. OCULTAR GRAFO (EXCEPTO EN JARDÍN)
    ========================================= */
 .graph, .graph-outer, #graph-container, .component.graph, .backlinks, .component.backlinks {
   display: none !important;
@@ -105,7 +90,7 @@ body[data-slug="El-Jardin"] {
 }
 
 /* =========================================
-   5. FOOTER Y TEXTO
+   4. FOOTER Y TEXTO
    ========================================= */
 footer {
   text-align: center !important;
@@ -117,37 +102,42 @@ footer {
 hr { display: none !important; }
 
 article p, article li {
-  font-size: 0.95rem !important; /* MODIFICADO: de 0.95rem a 0.85rem para achicarlo */
-  line-height: 1.6 !important; /* MODIFICADO: de 1.7 a 1.6 para un interlineado proporcional */
+  font-size: 0.95rem !important; 
+  line-height: 1.6 !important; 
 }
+
+p {
+  margin-block: 1.5rem !important; /* Espacio extra entre párrafos para respirar */
+}
+
 /* =========================================
-   6. PARED DE BADGES RETRO (88x31 px)
+   5. PARED DE BADGES RETRO (88x31 px)
    ========================================= */
 .badge-wall {
   display: flex !important;
   flex-direction: row !important;
   flex-wrap: wrap !important;
-  justify-content: center !important; /* Centra la pared de badges. Cambia a 'flex-start' si los quieres alineados a la izquierda */
-  gap: 8px !important;                /* Espacio perfecto entre cada botón */
+  justify-content: center !important; 
+  gap: 8px !important;                
   margin: 2rem 0 !important;
 }
 
 .badge-wall a {
   display: inline-block !important;
-  border: none !important;           /* Elimina subrayados raros de links */
+  border: none !important;           
   padding: 0 !important;
   margin: 0 !important;
   background: none !important;
 }
 
 .badge-wall img {
-  width: 88px !important;            /* Forzamos el ancho estándar de los badges de los 90s */
-  height: 31px !important;           /* Forzamos el alto estándar */
-  object-fit: fill !important;       /* Hace que la imagen o gif se adapte perfectamente al botón */
+  width: 88px !important;            
+  height: 31px !important;           
+  object-fit: fill !important;       
   display: block !important;
 }
 
-/* DESTRUCCIÓN de las flechitas e iconos de enlaces externos de Quartz dentro de la pared */
+/* DESTRUCCIÓN de las flechitas e iconos de Quartz dentro de la pared */
 .badge-wall a::after, 
 .badge-wall a svg,
 .badge-wall a .external-link-icon {
@@ -156,65 +146,64 @@ article p, article li {
   width: 0 !important;
   height: 0 !important;
 }
+
 /* ==========================================
-   PERSONALIZACIÓN DE MENÚS (PALETA TERROSA)
+   6. PERSONALIZACIÓN DE MENÚS (PALETA TERROSA Y PASTEL)
    ========================================== */
 
-/* 1. Ocultar los íconos en todos los callouts y alinear el texto */
+/* Ocultar los íconos en todos los callouts y alinear el texto */
 .callout .callout-icon {
-    display: none !important;
+  display: none !important;
 }
 .callout .callout-title .callout-title-inner {
-    margin-left: 0 !important;
+  margin-left: 0 !important;
 }
-
-/* 2. Colores específicos para cada sección */
 
 /* Directorios (Beige Arena) */
 .callout[data-callout="info"] {
-    border-color: #d4b895 !important;
-    background-color: rgba(212, 184, 149, 0.1) !important;
+  border-color: #d4b895 !important;
+  background-color: rgba(212, 184, 149, 0.1) !important;
 }
 .callout[data-callout="info"] .callout-title { color: #d4b895 !important; }
 
-/* Páginas Personales (Terracota) */
+/* Páginas Personales (Celeste pálido / Verde agua) */
 .callout[data-callout="error"] {
-    border-color: #c47b57 !important;
-    background-color: rgba(196, 123, 87, 0.1) !important;
+  border-color: #82b0a2 !important;
+  background-color: rgba(130, 176, 162, 0.1) !important;
 }
-.callout[data-callout="error"] .callout-title { color: #c47b57 !important; }
+.callout[data-callout="error"] .callout-title { color: #82b0a2 !important; }
 
 /* Filosofía e Historia (Marrón Topo) */
 .callout[data-callout="abstract"] {
-    border-color: #9c8a7b !important;
-    background-color: rgba(156, 138, 123, 0.1) !important;
+  border-color: #9c8a7b !important;
+  background-color: rgba(156, 138, 123, 0.1) !important;
 }
 .callout[data-callout="abstract"] .callout-title { color: #9c8a7b !important; }
 
 /* Webs Interesantes (Ocre / Mostaza) */
 .callout[data-callout="success"] {
-    border-color: #cda34f !important;
-    background-color: rgba(205, 163, 79, 0.1) !important;
+  border-color: #cda34f !important;
+  background-color: rgba(205, 163, 79, 0.1) !important;
 }
 .callout[data-callout="success"] .callout-title { color: #cda34f !important; }
 
 /* Geología (Arcilla oscuro) */
 .callout[data-callout="note"] {
-    border-color: #a06a50 !important;
-    background-color: rgba(160, 106, 80, 0.1) !important;
+  border-color: #a06a50 !important;
+  background-color: rgba(160, 106, 80, 0.1) !important;
 }
 .callout[data-callout="note"] .callout-title { color: #a06a50 !important; }
 
 /* Sub-menús de Geología (Marrón claro) */
 .callout[data-callout="todo"] {
-    border-color: #b59b7c !important;
-    background-color: rgba(181, 155, 124, 0.1) !important;
+  border-color: #b59b7c !important;
+  background-color: rgba(181, 155, 124, 0.1) !important;
 }
 .callout[data-callout="todo"] .callout-title { color: #b59b7c !important; }
 
 /* Webrings (Naranja cálido) */
 .callout[data-callout="warning"] {
-    border-color: #d98a4c !important;
-    background-color: rgba(217, 138, 76, 0.1) !important;
+  border-color: #d98a4c !important;
+  background-color: rgba(217, 138, 76, 0.1) !important;
 }
 .callout[data-callout="warning"] .callout-title { color: #d98a4c !important; }
