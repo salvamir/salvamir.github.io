@@ -278,3 +278,40 @@ ul.section-ul li > .desc {
 .page-header header .links a:visited {
   color: #DBCC79 !important; 
 }
+
+/* ==========================================
+   8. AJUSTES PARA CELULARES (RESPONSIVE)
+   ========================================== */
+@media screen and (max-width: 800px) {
+  /* 1. Matamos el fantasma que empuja todo a la derecha */
+  .page {
+    display: block !important; /* Sacamos el flex en celu para evitar desbordes */
+    padding: 0 !important;
+  }
+
+  .page #quartz-body {
+    padding: 1.5rem 1rem !important; /* Achicamos los márgenes gigantes del celu */
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .center {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* 2. Forzamos a que el hermoso recuadro aparezca y se adapte */
+  .page-header header {
+    background-color: rgba(255, 255, 255, 0.05) !important; /* Un pelín más visible */
+    padding: 1.5rem 1rem !important; /* Menos aire adentro para que no desborde la pantalla */
+    border-radius: 20px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 3. Ocultamos cualquier botón de menú nativo de celu que moleste */
+  .mobile-only {
+    display: none !important;
+  }
+}
