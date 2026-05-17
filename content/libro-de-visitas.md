@@ -17,7 +17,6 @@ También, podés mandarme un [mail](mailto:pez.arroz.tabla@proton.me) si querés
 
 # 🌐 Links
 Te dejo otros lugares interesantes para ver. Podés encontrar nuevas páginas interesantes por [acá](https://wiby.org/). Este es mi GRAN LISTA de páginas web que me gustan. Las anoto así no me las olvido.
-
 ### <font color="#e5b9b7">Directories:</font>
 - [¡BlogBlog!](https://blogblog.es) Blogs en español
 - [BigList](http://biglist.terraaeon.com/index.html) Various blog-style webpages.
@@ -95,8 +94,7 @@ Te dejo otros lugares interesantes para ver. Podés encontrar nuevas páginas in
 </a>
 <a href="" target="[_blank](https://www.esuntipazo.com/)" rel="noopener noreferrer">
   <img src="esuntipazo.gif" alt="Banner animado" style="width: 88px; border-radius: 4px; cursor: pointer;">
-</a>
+</a>![[delete-tiktok.gif]]
 ![[WrittenByAHuman.svg]][](https://ko-fi.com/s/4662b19f61)
 ![[made-on-macintosh 1.gif|88]]![[kagi-small-web.png]][](https://kagi.com/smallweb)
 ![[socialmedia.webp]]
-![[delete-tiktok.gif]]
