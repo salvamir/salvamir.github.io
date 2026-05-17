@@ -8,7 +8,6 @@ html {
 /* =========================================
    1. DISTRIBUCIÓN DE ESPACIO TIPO "DANIEL" (GRILLA PRINCIPAL)
    ========================================= */
-/* 1. Dinamitar la grilla de 3 columnas de Quartz y centrar la página */
 .page {
   display: flex !important;
   justify-content: center !important;
@@ -43,7 +42,7 @@ html {
 }
 
 /* =========================================
-   2. EL HEADER LIMPIO (Como el de Daniel)
+   2. EL HEADER LIMPIO
    ========================================= */
 header {
   display: flex !important;
@@ -51,9 +50,9 @@ header {
   align-items: center !important; 
   text-align: center !important;
   width: 100% !important;
-  margin-top: 2rem !important;    /* Separación desde el borde superior */
-  margin-bottom: 4rem !important; /* Separación elegante antes del contenido */
-  gap: 1.5rem !important;         /* Espacio entre el título y el menú */
+  margin-top: 2rem !important;    
+  margin-bottom: 4rem !important; 
+  gap: 1.5rem !important;         
 }
 
 .page-title, .page-title a {
@@ -62,7 +61,6 @@ header {
   margin: 0 !important;
 }
 
-/* Agrupamos los links, buscador y modo oscuro en una línea horizontal */
 .links, .nav-links, header > div {
   display: flex !important;
   flex-direction: row !important;
@@ -106,7 +104,7 @@ body[data-slug="El-Jardin"] {
 }
 
 /* =========================================
-   4. FOOTER Y TEXTO
+   4. FOOTER Y TEXTOS PRINCIPALES
    ========================================= */
 footer {
   text-align: center !important;
@@ -122,12 +120,13 @@ article p, article li {
   line-height: 1.6 !important; 
 }
 
-p {
-  margin-block: 1.5rem !important; /* Espacio extra entre párrafos para respirar */
+/* CORRECCIÓN: Solo separamos los párrafos dentro de tu texto, no en los menús */
+article p {
+  margin-bottom: 1.5rem !important; 
 }
 
 /* =========================================
-   5. PARED DE BADGES RETRO (88x31 px)
+   5. PARED DE BADGES RETRO
    ========================================= */
 .badge-wall {
   display: flex !important;
@@ -153,73 +152,78 @@ p {
   display: block !important;
 }
 
-/* DESTRUCCIÓN de las flechitas e iconos de Quartz dentro de la pared */
 .badge-wall a::after, 
 .badge-wall a svg,
 .badge-wall a .external-link-icon {
   display: none !important;
-  content: "" !important;
-  width: 0 !important;
-  height: 0 !important;
 }
 
 /* ==========================================
-   6. PERSONALIZACIÓN DE MENÚS (PALETA TERROSA Y PASTEL)
+   6. MENÚS / CALLOUTS (TAMAÑO CORREGIDO)
    ========================================== */
+.callout {
+  padding: 0.8rem 1.2rem !important; 
+  margin: 1rem 0 !important;
+  height: auto !important;
+}
+.callout .callout-icon { display: none !important; }
 
-/* Ocultar los íconos en todos los callouts y alinear el texto */
-.callout .callout-icon {
-  display: none !important;
+.callout .callout-title {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  gap: 0.5rem !important; /* Espacio entre el texto y la flechita */
 }
-.callout .callout-title .callout-title-inner {
-  margin-left: 0 !important;
+.callout .callout-title .callout-title-inner { margin: 0 !important; }
+
+/* Si el callout está vacío adentro, no ocupa espacio extra */
+.callout .callout-content {
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
-/* Directorios (Beige Arena) */
-.callout[data-callout="info"] {
-  border-color: #d4b895 !important;
-  background-color: rgba(212, 184, 149, 0.1) !important;
-}
+.callout[data-callout="info"] { border-color: #d4b895 !important; background-color: rgba(212, 184, 149, 0.1) !important; }
 .callout[data-callout="info"] .callout-title { color: #d4b895 !important; }
-
-/* Páginas Personales (Celeste pálido / Verde agua) */
-.callout[data-callout="error"] {
-  border-color: #82b0a2 !important;
-  background-color: rgba(130, 176, 162, 0.1) !important;
-}
+.callout[data-callout="error"] { border-color: #82b0a2 !important; background-color: rgba(130, 176, 162, 0.1) !important; }
 .callout[data-callout="error"] .callout-title { color: #82b0a2 !important; }
-
-/* Filosofía e Historia (Marrón Topo) */
-.callout[data-callout="abstract"] {
-  border-color: #9c8a7b !important;
-  background-color: rgba(156, 138, 123, 0.1) !important;
-}
+.callout[data-callout="abstract"] { border-color: #9c8a7b !important; background-color: rgba(156, 138, 123, 0.1) !important; }
 .callout[data-callout="abstract"] .callout-title { color: #9c8a7b !important; }
-
-/* Webs Interesantes (Ocre / Mostaza) */
-.callout[data-callout="success"] {
-  border-color: #cda34f !important;
-  background-color: rgba(205, 163, 79, 0.1) !important;
-}
+.callout[data-callout="success"] { border-color: #cda34f !important; background-color: rgba(205, 163, 79, 0.1) !important; }
 .callout[data-callout="success"] .callout-title { color: #cda34f !important; }
-
-/* Geología (Arcilla oscuro) */
-.callout[data-callout="note"] {
-  border-color: #a06a50 !important;
-  background-color: rgba(160, 106, 80, 0.1) !important;
-}
+.callout[data-callout="note"] { border-color: #a06a50 !important; background-color: rgba(160, 106, 80, 0.1) !important; }
 .callout[data-callout="note"] .callout-title { color: #a06a50 !important; }
-
-/* Sub-menús de Geología (Marrón claro) */
-.callout[data-callout="todo"] {
-  border-color: #b59b7c !important;
-  background-color: rgba(181, 155, 124, 0.1) !important;
-}
+.callout[data-callout="todo"] { border-color: #b59b7c !important; background-color: rgba(181, 155, 124, 0.1) !important; }
 .callout[data-callout="todo"] .callout-title { color: #b59b7c !important; }
-
-/* Webrings (Naranja cálido) */
-.callout[data-callout="warning"] {
-  border-color: #d98a4c !important;
-  background-color: rgba(217, 138, 76, 0.1) !important;
-}
+.callout[data-callout="warning"] { border-color: #d98a4c !important; background-color: rgba(217, 138, 76, 0.1) !important; }
 .callout[data-callout="warning"] .callout-title { color: #d98a4c !important; }
+
+/* ==========================================
+   7. LISTA DE NOTAS Y FECHAS (CORREGIDO)
+   ========================================== */
+ul.section-ul {
+  padding: 0 !important;
+  margin: 1.5rem 0 !important;
+  list-style: none !important;
+}
+
+ul.section-ul li {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: baseline !important; /* Alinea la fecha y el título a la misma altura */
+  gap: 1.5rem !important; 
+  margin-bottom: 1.2rem !important;
+}
+
+ul.section-ul li > .meta {
+  min-width: 120px !important; /* Fija el ancho de la fecha para que los títulos queden encolumnados */
+  margin: 0 !important;
+  color: rgba(244, 235, 216, 0.6) !important; /* Color sutil para la fecha */
+  text-align: left !important;
+}
+
+ul.section-ul li > .desc {
+  margin: 0 !important;
+}
