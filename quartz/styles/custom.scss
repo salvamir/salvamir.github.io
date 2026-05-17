@@ -120,3 +120,39 @@ article p, article li {
   font-size: 0.95rem !important; /* MODIFICADO: de 0.95rem a 0.85rem para achicarlo */
   line-height: 1.6 !important; /* MODIFICADO: de 1.7 a 1.6 para un interlineado proporcional */
 }
+/* =========================================
+   6. PARED DE BADGES RETRO (88x31 px)
+   ========================================= */
+.badge-wall {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important; /* Centra la pared de badges. Cambia a 'flex-start' si los quieres alineados a la izquierda */
+  gap: 8px !important;                /* Espacio perfecto entre cada botón */
+  margin: 2rem 0 !important;
+}
+
+.badge-wall a {
+  display: inline-block !important;
+  border: none !important;           /* Elimina subrayados raros de links */
+  padding: 0 !important;
+  margin: 0 !important;
+  background: none !important;
+}
+
+.badge-wall img {
+  width: 88px !important;            /* Forzamos el ancho estándar de los badges de los 90s */
+  height: 31px !important;           /* Forzamos el alto estándar */
+  object-fit: fill !important;       /* Hace que la imagen o gif se adapte perfectamente al botón */
+  display: block !important;
+}
+
+/* DESTRUCCIÓN de las flechitas e iconos de enlaces externos de Quartz dentro de la pared */
+.badge-wall a::after, 
+.badge-wall a svg,
+.badge-wall a .external-link-icon {
+  display: none !important;
+  content: "" !important;
+  width: 0 !important;
+  height: 0 !important;
+}

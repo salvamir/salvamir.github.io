@@ -87,14 +87,15 @@ Te dejo otros lugares interesantes para ver. Podés encontrar nuevas páginas in
 - [LainChain](https://foreverliketh.is/#2-lainchan-webring)
 
 # ¡Gracias por venir!
-<a href="https://blogblog.es/index.html" target="_blank" rel="noopener noreferrer">
-  <img src="blogblog-animado.gif" alt="Banner animado" style="width: 88px; border-radius: 4px; cursor: pointer;">
-</a> <a href="[https://blogblog.es/index.htm](https://luiscarlospando.com)" target="_blank" rel="noopener noreferrer">
-  <img src="luis-carlos-pando.gif" alt="Banner animado" style="width: 88px; border-radius: 4px; cursor: pointer;">
-</a>
-<a href="" target="[_blank](https://www.esuntipazo.com/)" rel="noopener noreferrer">
-  <img src="esuntipazo.gif" alt="Banner animado" style="width: 88px; border-radius: 4px; cursor: pointer;">
-</a>![[delete-tiktok.gif]]
-![[WrittenByAHuman.svg]][](https://ko-fi.com/s/4662b19f61)
-![[made-on-macintosh 1.gif|88]]![[kagi-small-web.png]][](https://kagi.com/smallweb)
-![[socialmedia.webp]]
+
+<div class="badge-wall">
+  <a href="https://ko-fi.com/s/4662b19f61"><img src="/Anexos/WrittenByAHuman.svg"></a>
+  <a href="https://kagi.com/smallweb"><img src="/Anexos/kagi-small-web.png"></a>
+  <a href="TU_ENLACE_AQUÍ"><img src="/Anexos/made-on-macintosh 1.gif"></a>
+  <a href="TU_ENLACE_AQUÍ"><img src="/Anexos/delete-tiktok.gif"></a>
+  <a href="TU_ENLACE_AQUÍ"><img src="/Anexos/socialmedia.webp"></a>
+  <a href="https://www.esuntipazo.com"><img src="/Anexos/esuntipazo.gif"></a>
+  <a href="https://luiscarlospando.com"><img src="/Anexos/luis-carlos-pando.gif"></a>
+  <a href="https://blogblog.es/index.html"><img src="/Anexos/blogblog-animado.gif"></a>
+  
+</div>
