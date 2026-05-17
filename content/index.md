@@ -1,6 +1,3 @@
----
-title: Bienvenidos!
----
 ![[home.jpeg|525]]
 ## Sobre Mi:
 Hola! Soy Salvador, vivo en Argentina, hago música cuando puedo, estudio Geología y tengo 5 hermanos. Creo en Dios y persevero en algunos grupos de la Iglesia. Me surgió hacer esta página porque hace un buen tiempo que no uso Instagram activamente, y quería tener un lugar en Internet dónde poder coleccionar recuerdos. Me encanta Tafí Del Valle, y varios de los cuadros que van a ver son de un tío segundo mío. Creo que todos son de Tafí. Me gusta coleccionar Legos y armar cosas cada tanto.  

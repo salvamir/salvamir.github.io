@@ -5,6 +5,7 @@ Acá archivo lo que vengo viviendo.
 #### Conociendo un barsito nuevo.
 - 16/04/2026
 Quedaba un poco más lejos. Hablamos de lo frustrado que me sentí por la facultad.
+
 ![[emisonriendo.jpg|212]]
 #### Cumple Draculín 20 años. 🎉  
 - 17/03/2026
