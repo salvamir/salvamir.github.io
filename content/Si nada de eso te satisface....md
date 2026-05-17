@@ -1,5 +1,4 @@
 ---
-cssclasses:
 title: 🤷‍♂️ ¿Algo más?
 ---
 Podés entrar a [esta](https://liturgiacatolica.org/Lucas/5,1%E2%80%9111.html) página secreta.
