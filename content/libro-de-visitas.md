@@ -13,8 +13,8 @@ title: 📨 Libro De Visitas
   style="border: none; border-radius: 8px;">
 </iframe>
 
-También, podés mandarme un [mail](mailto:pez.arroz.tabla@proton.me) si querés conversar.
 
+También, podés mandarme un [mail](mailto:pez.arroz.tabla@proton.me) si querés conversar.
 # 🌐 Links
 Te dejo otros lugares interesantes para ver. Podés encontrar nuevas páginas interesantes por [acá](https://wiby.org/). Este es mi GRAN LISTA de páginas web que me gustan. Las anoto así no me las olvido.
 ### <font color="#e5b9b7">Directories:</font>
