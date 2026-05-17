@@ -92,6 +92,11 @@ Te dejo otros lugares interesantes para ver. Podés encontrar nuevas páginas in
   <img src="blogblog-animado.gif" alt="Banner animado" style="width: 88px; border-radius: 4px; cursor: pointer;">
 </a> <a href="[https://blogblog.es/index.htm](https://luiscarlospando.com)" target="_blank" rel="noopener noreferrer">
   <img src="luis-carlos-pando.gif" alt="Banner animado" style="width: 88px; border-radius: 4px; cursor: pointer;">
-</a> <a href="" target="[_blank](https://www.esuntipazo.com/)" rel="noopener noreferrer">
+</a>
+<a href="" target="[_blank](https://www.esuntipazo.com/)" rel="noopener noreferrer">
   <img src="esuntipazo.gif" alt="Banner animado" style="width: 88px; border-radius: 4px; cursor: pointer;">
-</a>![[WrittenByAHuman.svg]][](https://ko-fi.com/s/4662b19f61)![[made-on-macintosh 1.gif]]![[kagi-small-web.png]][](https://kagi.com/smallweb)![[socialmedia.webp]]![[delete-tiktok.gif]]
+</a>
+![[WrittenByAHuman.svg]][](https://ko-fi.com/s/4662b19f61)
+![[made-on-macintosh 1.gif|88]]![[kagi-small-web.png]][](https://kagi.com/smallweb)
+![[socialmedia.webp]]
+![[delete-tiktok.gif]]

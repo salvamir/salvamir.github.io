@@ -2,7 +2,7 @@
 
 /* Achica toda la escala base de la página (títulos, menús, texto general) */
 html {
-  font-size: 14px !important; /* El original es 16px. Al bajarlo a 14px, TODO se vuelve más pequeño y fino */
+  font-size: 16px !important; /* El original es 16px. Al bajarlo a 14px, TODO se vuelve más pequeño y fino */
 }
 
 /* =========================================
@@ -28,7 +28,7 @@ body, .page {
   width: 100% !important;
   max-width: 700px !important; /* El ancho exacto para que el texto sea cómodo */
   margin: 0 auto !important;
-  padding: 3rem 1.5rem !important;
+  padding: 1.5rem 1.5rem !important;
   box-sizing: border-box !important;
 }
 
@@ -51,8 +51,8 @@ header {
   text-align: center !important;
   width: 100% !important;
   margin-top: 0 !important;
-  margin-bottom: 4rem !important;
-  gap: 1.5rem !important;
+  margin-bottom: 1.5rem !important;
+  gap: 0.5rem !important;
 }
 
 .page-title, .page-title a {
@@ -77,6 +77,7 @@ header {
 .links a, .nav-links a {
   color: #e3dac9 !important;    /* <-- AQUÍ LE DAMOS EL MISMO COLOR BEIGE */
   text-decoration: none !important;
+  font-size: 1.5rem !important;
   font-weight: 600 !important;
 }
 
