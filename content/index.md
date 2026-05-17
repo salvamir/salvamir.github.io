@@ -11,6 +11,9 @@ Acá te dejo una lista de ensayos/artículos que anduve leyendo por internet. Al
 - ["Biking Is Fun", de Nolan.](https://nolancaudill.com/2026/03/16/biking-is-fun/)
 - ["Simplicity and Less", de Rafael.](https://rafaelkuebler.github.io/posts/20251207-simplicity-and-less/) 
 - ["Secret Garden", de Tanner.](https://t0.vc/secret-garden)
+
+---
+
 ## Si nada de esto te satisface:
 Podés entrar a [esta](https://liturgiacatolica.org/Lucas/5,1%E2%80%9111.html) página secreta.
 Y por último, te dejo fotos de Tafí Del Valle, para que te den ganas de dejar la pantalla y salir afuera:![[tafiii.mp4]]![[tafi.jpg]]
