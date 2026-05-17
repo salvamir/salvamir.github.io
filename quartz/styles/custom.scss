@@ -8,13 +8,29 @@ html {
 /* =========================================
    1. DISTRIBUCIÓN DE ESPACIO TIPO "DANIEL" (GRILLA PRINCIPAL)
    ========================================= */
-/* Darle aire al contenedor principal y limitar el ancho para lectura cómoda */
-body, .page, .center {
-  display: block !important;
-  max-width: 700px !important;    /* Ancho máximo elegante */
-  margin: 0 auto !important;      /* Centra todo el bloque en la pantalla */
-  padding: 4rem 2rem !important;  /* Aire arriba/abajo, y a los costados para celulares */
+/* 1. Dinamitar la grilla de 3 columnas de Quartz y centrar la página */
+.page {
+  display: flex !important;
+  justify-content: center !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.page #quartz-body {
+  display: block !important;      /* ESTO ROMPE LA JAULA DE 3 COLUMNAS */
+  width: 100% !important;
+  max-width: 700px !important;    /* El ancho exacto de Daniel */
+  margin: 0 auto !important;
+  padding: 4rem 2rem !important;  /* Aire arriba y abajo */
   box-sizing: border-box !important;
+}
+
+.center {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 /* Ocultamos literalmente todo lo demás (barras laterales), sin dejar rastro */
