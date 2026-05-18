@@ -1,7 +1,7 @@
 ---
 title: 🪁 El Jardín Digital
 ---
-![[1.jpeg|525]]
+![[1.jpeg]]
 
 Esto viene a ser un lugar dónde hago públicos mis pensamientos/oraciones/ideas, y todo su proceso evolutivo. Van a notar que cada nota tiene en su título un emoji de alguna planta. Representa un poco la personalidad de cada idea, y en cierta medida su "grado de desarrollo". No es lo mismo un yuyito que un árbol maduro.
 

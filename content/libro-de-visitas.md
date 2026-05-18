@@ -1,7 +1,7 @@
 ---
 title: 📨 Libro De Visitas
 ---
-![[2.jpeg|525]]
+![[2.jpeg]]
 
 # Gracias por cruzarte, dejá tu huella: 
 

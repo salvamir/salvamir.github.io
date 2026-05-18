@@ -33,10 +33,10 @@ Acá en el internet hay muchas cosas valiosas. Algunas de ellas las recopilé en
 
 # <font color="#92cddc">Naturaleza y Tafí del valle.</font>
 
-Me encanta la naturaleza y salir de caminatas. Me encanta tafí a pesar de que casi nunca elijo ir. Siempre termino priorizando la facultad, pero esa es otra charla. 
+Me encanta la naturaleza y salir de caminatas. Me encanta tafí a pesar de que casi nunca elijo ir. Siempre termino priorizando la facultad, pero esa es otra charla.
+Varios de los cuadros que van a encontrar en esta página son de Tafí y los hizo un tío mío. 
 Te dejo fotos para que te den ganas de dejar la pantalla y salir afuera:
 
 ![[tafiii.mp4]]![[tafi.jpg]]
-![[tafif.jpg|523]]
-
-## ¡Listo! Eso fue todo por ahora :)
+![[tafif.jpg]]
+## ¡Listo! Eso fue todo por ahora
