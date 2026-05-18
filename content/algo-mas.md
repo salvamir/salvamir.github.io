@@ -8,12 +8,12 @@ title: ¿Algo más?
 
 Son infinitas las maneras de hacerte tu página. No soy desarrollador, asi que solo puedo proponerte las salidas fáciles. Por lo pronto, podés arrancar haciendote un blog en [Bear](https://bearblog.dev/accounts/login/?next=/nubes/dashboard/) o en [Pika!](https://pika.page). También, podés hacerte una plantilla de presentación en [Carrd](https://carrd.co), o en [Canva](https://www.canva.com/website-builder/), o en [Wordpress](https://wordpress.com). Podés explorar [Neocities](https://neocities.org), pero no es tanto mi estilo. 
 Si querés una solución eficiente, te recomiendo empezar por Pika!, la versión gratuita es bastante completa. 
-# <font color="#ccc1d9">Razones por las que quise hacer esta página.</font>
+## <font color="#ccc1d9">Razones por las que quise hacer esta página.</font>
 
 1. Quería un lugar totalmente mío y más "duradero" para archivar momentos y cosas piola. Ya estaba cansado de llenar cuadernos uno tras otro con pensamientos que nadie más que Dios y yo conocemos. 
 2. Ese lugar no podía ser [Instagram]([instagram.com/salva_mirande](https://www.youtube.com/redirect?event=channel_description&redir_token=QUFFLUhqbUxJLVFZNzRiTW1JYy00MEh1Mk1tMHAzamo4QXxBQ3Jtc0ttQnFsZnFVTUtMMjZaMzJBanozNUFsMFN3UWVNNzA3cklrQXhVcDhrdW9GSU0zbEttM2NmaU5FMTZOU1hVZjdhZ01adUxtYWRYZDdRc1ZrM3J2V2d5VGxodVBTdEJMclRfU21kblRYemExSTZYbGZ5TQ&q=https%3A%2F%2Finstagram.com%2Fsalva_mirande))  ni [Youtube](https://youtube.com/@salvamirande?si=bo5QZYYN1T4N29Qm) porque no son técnicamente míos y eso me molestaba. Tampoco tenía la libertad de no ser profesional. Nunca fuí muy profesional en ningún lado.
 3. Quería poder hacer algo modificable y personalizable.
-# <font color="#fbd5b5">Tecnología e Internet.</font>
+## <font color="#fbd5b5">Tecnología e Internet.</font>
 
 Los que me conocen sabrán que, de repente, soy fanático de la tecnología y adicto al internet. Antes eran los videos de youtube, después fueron los reels y tiktoks, y hoy son los blogs. Aprendí a manejar esa necesidad de consumir y obtener dopamina fácil e instantánea. 
 
@@ -36,7 +36,6 @@ Acá en el internet hay muchas cosas valiosas. Algunas de ellas las recopilé en
 Me encanta la naturaleza y salir de caminatas. Me encanta tafí a pesar de que casi nunca elijo ir. Siempre termino priorizando la facultad, pero esa es otra charla.
 Varios de los cuadros que van a encontrar en esta página son de Tafí y los hizo un tío mío. 
 Te dejo fotos para que te den ganas de dejar la pantalla y salir afuera:
-
 ![[tafiii.mp4]]![[tafi.jpg]]
 ![[tafif.jpg]]
 ## ¡Listo! Eso fue todo por ahora
