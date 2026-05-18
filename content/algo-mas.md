@@ -6,7 +6,7 @@ title: ¿Algo más?
 
 ## Cómo tener mi propia página web.
 
-Son infinitas las maneras de hacerte tu página. No soy desarrollador, asi que solo puedo proponerte las salidas fáciles. Por lo pronto, podés arrancar haciendote un blog en Bear o en [Pika!](https://pika.page). También, podés hacerte una plantilla de presentación en [Carrd](https://carrd.co), o en [Canva](https://www.canva.com/website-builder/), o en [Wordpress](https://wordpress.com). Podés explorar [Neocities](https://neocities.org), pero no es tanto mi estilo. 
+Son infinitas las maneras de hacerte tu página. No soy desarrollador, asi que solo puedo proponerte las salidas fáciles. Por lo pronto, podés arrancar haciendote un blog en [Bear](https://bearblog.dev/accounts/login/?next=/nubes/dashboard/) o en [Pika!](https://pika.page). También, podés hacerte una plantilla de presentación en [Carrd](https://carrd.co), o en [Canva](https://www.canva.com/website-builder/), o en [Wordpress](https://wordpress.com). Podés explorar [Neocities](https://neocities.org), pero no es tanto mi estilo. 
 Si querés una solución eficiente, te recomiendo empezar por Pika!, la versión gratuita es bastante completa. 
 # <font color="#ccc1d9">Razones por las que quise hacer esta página.</font>
 
