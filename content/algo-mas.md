@@ -1,7 +1,7 @@
 ---
 title: ¿Algo más?
 ---
-> [!info] 👷🏿‍♀️ Últimas actualizaciones
+> [!info] Últimas actualizaciones
 > ¡Lo último que hice fue agregar los [[libro-de-visitas| badges]] al libro de visitas!
 
 ## Cómo tener mi propia página web.
