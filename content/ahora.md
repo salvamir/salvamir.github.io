@@ -8,7 +8,7 @@ Quedaba un poco más lejos. Hablamos de lo frustrado que me sentí por la facult
 
 ![[emisonriendo.jpg|212]]
 #### Cumple Draculín 20 años. 🎉  
-- 17/03/2026
+- 17/04/2026
 Drac festejó su cumple en su casa, Germán cocinó las hamburguesas a la parrilla. Fran y yo llegamos cuando todo ya estaba hecho y las novias estaban invitadas. Nos sacamos un par de fotos. Tocamos la "Chacarera Del Desautado". 
 
 ![[cumple drac 1.jpeg|375]]![[cumple drac 11.jpeg|377]]
