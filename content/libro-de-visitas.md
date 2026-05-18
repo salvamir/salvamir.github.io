@@ -23,7 +23,7 @@ Te dejo otros lugares interesantes para ver. Podés encontrar nuevas páginas po
 > - [BigList](http://biglist.terraaeon.com/index.html) Various blog-style webpages.
 > - [BlogRoll](https://blogroll.org/) Vast blog's directory.
 
-> [!error]- Personal Webpages
+> [!warning]- Personal Webpages
 > - [Eric Murphy](https://ericmurphy.xyz/): He’s a web developer who also has a personal website where he post about tech things.
 > - [Luke Smith:](https://lukesmith.xyz/) I’m not sure if he’s a philosopher but he post a lot of “trascendental thoughts“ if you like to call them like that.
 > - [Barry Hess:](https://bjhess.com/) He´s the owner of Pika!
