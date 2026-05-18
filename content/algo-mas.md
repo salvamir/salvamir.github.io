@@ -1,9 +1,13 @@
 ---
-title: 🤷‍♂️ ¿Algo más?
+title: ¿Algo más?
 ---
 > [!info] 👷🏿‍♀️ Últimas actualizaciones
 > ¡Lo último que hice fue agregar los [[libro-de-visitas| badges]] al libro de visitas!
 
+## Cómo tener mi propia página web.
+
+Son infinitas las maneras de hacerte tu página. No soy desarrollador, asi que solo puedo proponerte las salidas fáciles. Por lo pronto, podés arrancar haciendote un blog en Bear o en [Pika!](https://pika.page). También, podés hacerte una plantilla de presentación en [Carrd](https://carrd.co), o en [Canva](https://www.canva.com/website-builder/), o en [Wordpress](https://wordpress.com). Podés explorar [Neocities](https://neocities.org), pero no es tanto mi estilo. 
+Si querés una solución eficiente, te recomiendo empezar por Pika!, la versión gratuita es bastante completa. 
 # <font color="#ccc1d9">Razones por las que quise hacer esta página.</font>
 
 1. Quería un lugar totalmente mío y más "duradero" para archivar momentos y cosas piola. Ya estaba cansado de llenar cuadernos uno tras otro con pensamientos que nadie más que Dios y yo conocemos. 
