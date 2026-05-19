@@ -17,11 +17,11 @@ html {
 }
 
 .page #quartz-body {
-  display: block !important;      /* ESTO ROMPE LA JAULA DE 3 COLUMNAS */
+  display: block !important;
   width: 100% !important;
-  max-width: 700px !important;    /* El ancho exacto de Daniel */
+  max-width: 700px !important;    
   margin: 0 auto !important;
-  padding: 4rem 2rem !important;  /* Aire arriba y abajo */
+  padding: 4rem 2rem !important;  
   box-sizing: border-box !important;
 }
 
@@ -56,7 +56,7 @@ header {
 }
 
 .page-title, .page-title a {
-  font-family: 'Courier New', monospace !important; /* Volvemos a la tipografía acordada */
+  font-family: 'Times New Roman', serif !important; 
   font-size: 2.5rem !important; 
   color: #f4ebd8 !important;    
   margin: 0 !important;
@@ -122,7 +122,6 @@ article p, article li {
   line-height: 1.6 !important; 
 }
 
-/* CORRECCIÓN: Solo separamos los párrafos dentro de tu texto, no en los menús */
 article p {
   margin-bottom: 1.5rem !important; 
 }
@@ -161,7 +160,7 @@ article p {
 }
 
 /* ==========================================
-   6. MENÚS / CALLOUTS (TAMAÑO Y FLECHAS CORREGIDOS)
+   6. MENÚS / CALLOUTS
    ========================================== */
 .callout {
   padding: 0.8rem 1.2rem !important; 
@@ -170,30 +169,26 @@ article p {
   border-radius: 8px !important;
 }
 
-/* Ocultamos el ícono principal (la "i" o el rayito) */
 .callout .callout-icon { 
   display: none !important; 
 }
 
-/* Acomodamos el contenedor del título */
 .callout .callout-title {
   display: flex !important;
   flex-direction: row !important;
   align-items: center !important;
-  justify-content: space-between !important; /* Esto manda la flecha a la derecha */
+  justify-content: space-between !important; 
   margin: 0 !important;
   padding: 0 !important;
   width: 100% !important; 
 }
 
-/* El texto en sí */
 .callout .callout-title .callout-title-inner { 
   margin: 0 !important; 
   flex: 1 !important; 
   text-align: left !important;
 }
 
-/* La bendita flechita */
 .callout .fold-icon {
   margin: 0 !important;
   display: flex !important;
@@ -222,7 +217,7 @@ article p {
 .callout[data-callout="warning"] .callout-title { color: #d98a4c !important; }
 
 /* ==========================================
-   7. LISTA DE NOTAS Y FECHAS (CORREGIDO)
+   7. LISTA DE NOTAS Y FECHAS
    ========================================== */
 ul.section-ul {
   padding: 0 !important;
@@ -233,15 +228,15 @@ ul.section-ul {
 ul.section-ul li {
   display: flex !important;
   flex-direction: row !important;
-  align-items: baseline !important; /* Alinea la fecha y el título a la misma altura */
+  align-items: baseline !important; 
   gap: 1.5rem !important; 
   margin-bottom: 1.2rem !important;
 }
 
 ul.section-ul li > .meta {
-  min-width: 120px !important; /* Fija el ancho de la fecha para que los títulos queden encolumnados */
+  min-width: 120px !important; 
   margin: 0 !important;
-  color: rgba(244, 235, 216, 0.6) !important; /* Color sutil para la fecha */
+  color: rgba(244, 235, 216, 0.6) !important; 
   text-align: left !important;
 }
 
@@ -250,17 +245,18 @@ ul.section-ul li > .desc {
 }
 
 /* ==========================================
-   8. ENCABEZADO Y MENÚ DE NAVEGACIÓN (INTERACTIVIDAD)
+   8. ENCABEZADO Y MENÚ DE NAVEGACIÓN (CORREGIDO)
    ========================================= */
 
-/* 1. Fondo translúcido para todo el bloque del encabezado */
 .page-header header {
   background-color: rgba(255, 255, 255, 0.04) !important; 
   padding: 2.5rem 1.5rem 2rem 1.5rem !important; 
   border-radius: 24px !important; 
+  max-width: 700px !important; /* ACÁ ESTÁ LA MAGIA: Forzamos a que el menú nunca se estire más allá del texto central */
+  margin: 0 auto 2rem auto !important; 
+  box-sizing: border-box !important;
 }
 
-/* 2. El "saltito" de los botones del menú */
 .page-header header .links a {
   display: inline-block !important; 
   transition: transform 0.2s ease, color 0.2s ease !important; 
@@ -270,7 +266,6 @@ ul.section-ul li > .desc {
   transform: translateY(-4px) !important; 
 }
 
-/* 3. La "huella" (links visitados) */
 .page-header header .links a:visited {
   color: #DBCC79 !important; 
 }
@@ -315,25 +310,50 @@ ul.section-ul li > .desc {
 }
 
 /* ==========================================
-   10. GALERÍA DE IMÁGENES ESTILO PINTEREST (MASONRY)
+   10. GALERÍA DE IMÁGENES AL 100% DEL ANCHO (MOSAICO LIBRE)
    ========================================== */
+
+/* 1. Expandimos el cuerpo de la página para que toque los bordes del monitor */
 body[data-slug="galeria"] #quartz-body, 
 body[data-slug="galería"] #quartz-body {
-  max-width: 1200px !important; 
+  max-width: 100% !important; 
+  padding: 2rem 2rem !important; 
 }
 
+/* 2. Protegemos el texto (títulos, párrafos sueltos) para que NO se estire al 100% ni se parta en columnas */
+body[data-slug="galeria"] article > p:not(:has(img)),
+body[data-slug="galeria"] article > h1,
+body[data-slug="galeria"] article > h2,
+body[data-slug="galeria"] article > h3,
+body[data-slug="galeria"] .content-meta,
+body[data-slug="galería"] article > p:not(:has(img)),
+body[data-slug="galería"] article > h1,
+body[data-slug="galería"] article > h2,
+body[data-slug="galería"] article > h3,
+body[data-slug="galería"] .content-meta {
+  column-span: all !important; 
+  max-width: 700px !important; /* Mantiene la legibilidad como el resto del sitio */
+  margin-left: auto !important;
+  margin-right: auto !important;
+  margin-bottom: 2rem !important;
+}
+
+/* 3. Armamos la grilla estilo mosaico */
 body[data-slug="galeria"] article, 
 body[data-slug="galería"] article {
   display: block !important;
-  column-count: 3 !important; 
-  column-gap: 1.5rem !important; 
+  column-count: 5 !important; /* Mosaico de 5 columnas para monitores grandes */
+  column-gap: 1rem !important; 
+  width: 100% !important;
 }
 
-body[data-slug="galeria"] article > *, 
-body[data-slug="galería"] article > * {
-  break-inside: avoid !important;
-  margin-bottom: 1.5rem !important; 
-  display: block !important;
+/* 4. Forzamos a las fotos a auto-acomodarse bien pegadas unas a otras */
+body[data-slug="galeria"] article p:has(img),
+body[data-slug="galería"] article p:has(img) {
+  break-inside: avoid !important; /* Evita que una foto se corte por la mitad al final de una columna */
+  margin: 0 0 1rem 0 !important; /* Espacio vertical exacto entre las fotos */
+  padding: 0 !important;
+  background: none !important; /* Eliminamos cualquier caja de fondo */
 }
 
 body[data-slug="galeria"] article img,
@@ -341,8 +361,8 @@ body[data-slug="galería"] article img {
   width: 100% !important;
   height: auto !important; 
   display: block !important;
-  border-radius: 12px !important;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1) !important;
+  border-radius: 8px !important; /* Bordes un toque más suaves para que encastren mejor */
+  margin: 0 !important;
   transition: transform 0.3s ease !important;
 }
 
@@ -350,23 +370,17 @@ body[data-slug="galeria"] article img:hover {
   transform: scale(1.02) !important;
 }
 
-body[data-slug="galeria"] article p {
-  background-color: rgba(255, 255, 255, 0.03) !important;
-  padding: 1rem !important;
-  border-radius: 12px !important;
-  font-size: 0.9rem !important;
+/* 5. Responsive del mosaico: menos columnas a medida que la pantalla se achica */
+@media screen and (max-width: 1600px) {
+  body[data-slug="galeria"] article, body[data-slug="galería"] article { column-count: 4 !important; }
 }
-
-@media screen and (max-width: 900px) {
-  body[data-slug="galeria"] article, 
-  body[data-slug="galería"] article {
-    column-count: 2 !important; 
-  }
+@media screen and (max-width: 1100px) {
+  body[data-slug="galeria"] article, body[data-slug="galería"] article { column-count: 3 !important; }
 }
-
-@media screen and (max-width: 600px) {
-  body[data-slug="galeria"] article, 
-  body[data-slug="galería"] article {
-    column-count: 1 !important; 
-  }
+@media screen and (max-width: 750px) {
+  body[data-slug="galeria"] article, body[data-slug="galería"] article { column-count: 2 !important; }
+  body[data-slug="galeria"] #quartz-body, body[data-slug="galería"] #quartz-body { padding: 1rem !important; }
+}
+@media screen and (max-width: 480px) {
+  body[data-slug="galeria"] article, body[data-slug="galería"] article { column-count: 1 !important; }
 }
