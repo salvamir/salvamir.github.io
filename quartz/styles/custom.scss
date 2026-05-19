@@ -393,3 +393,13 @@ article h5,
 article h6 {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif !important;
 }
+/* ==========================================
+   12. TÍTULO PRINCIPAL DE LA NOTA
+   ========================================== */
+h1.article-title {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif !important;
+}
+/* Opcional: Metadatos debajo del título principal */
+.content-meta, .tags {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif !important;
+}
