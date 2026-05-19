@@ -59,6 +59,7 @@ header {
   font-size: 2.5rem !important; 
   color: #f4ebd8 !important;    
   margin: 0 !important;
+  font-family: 'Courier New', monospace !important;
 }
 
 .links, .nav-links, header > div {
@@ -248,7 +249,7 @@ ul.section-ul li > .desc {
 }
 
 /* ==========================================
-   7. ENCABEZADO Y MENÚ DE NAVEGACIÓN (INTERACTIVIDAD)
+   8. ENCABEZADO Y MENÚ DE NAVEGACIÓN (INTERACTIVIDAD)
    ========================================== */
 
 /* 1. Fondo translúcido para todo el bloque del encabezado */
@@ -280,7 +281,7 @@ ul.section-ul li > .desc {
 }
 
 /* ==========================================
-   8. AJUSTES PARA CELULARES (RESPONSIVE)
+   9. AJUSTES PARA CELULARES (RESPONSIVE)
    ========================================== */
 @media screen and (max-width: 800px) {
   /* 1. Matamos el fantasma que empuja todo a la derecha */
