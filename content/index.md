@@ -12,6 +12,6 @@ Acá te dejo una lista de ensayos/artículos que anduve leyendo por internet. Al
 - ["Biking Is Fun", de Nolan.](https://nolancaudill.com/2026/03/16/biking-is-fun/)
 - ["Simplicity and Less", de Rafael.](https://rafaelkuebler.github.io/posts/20251207-simplicity-and-less/) 
 - ["Secret Garden", de Tanner.](https://t0.vc/secret-garden)
-## <font color="#eeece1">¿Que estoy haciendo</font> [[ahora]]<font color="#eeece1">?</font>
-## <font color="#eeece1">¿Buscabas</font> [[algo-mas|algo más]]<font color="#eeece1">?</font>
+### <font color="#eeece1">¿Que estoy haciendo</font> [[ahora]]<font color="#eeece1">?</font>
+### <font color="#eeece1">¿Buscabas</font> [[algo-mas|algo más]]<font color="#eeece1">?</font>
 
