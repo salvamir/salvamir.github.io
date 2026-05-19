@@ -42,7 +42,7 @@ html {
 }
 
 /* =========================================
-   2. EL HEADER LIMPIO Y ANIMADO
+   2. EL HEADER LIMPIO CON TIPOGRAFÍA FIJA
    ========================================= */
 header {
   display: flex !important;
@@ -55,21 +55,12 @@ header {
   gap: 1.5rem !important;         
 }
 
-/* Animación caótica de fuentes */
-@keyframes fuenteCaotica {
-  0%   { font-family: 'Courier New', monospace !important; }
-  20%  { font-family: 'Times New Roman', serif !important; }
-  40%  { font-family: 'Arial', sans-serif !important; }
-  60%  { font-family: 'Impact', sans-serif !important; }
-  80%  { font-family: 'Comic Sans MS', cursive !important; }
-  100% { font-family: 'Courier New', monospace !important; }
-}
-
 .page-title, .page-title a {
+  font-family: 'Courier New', monospace !important; /* Volvemos a la tipografía acordada */
   font-size: 2.5rem !important; 
   color: #f4ebd8 !important;    
   margin: 0 !important;
-  animation: fuenteCaotica 0.6s infinite !important; /* El efecto glitch */
+  font-weight: 700 !important;
 }
 
 .links, .nav-links, header > div {
@@ -264,24 +255,18 @@ ul.section-ul li > .desc {
 
 /* 1. Fondo translúcido para todo el bloque del encabezado */
 .page-header header {
-  /* Fondo súper sutil (blanco al 4% de opacidad) para que se parezca al del botón de volver arriba */
   background-color: rgba(255, 255, 255, 0.04) !important; 
-  /* Espacio hacia adentro para que el texto y los botones no toquen los bordes */
   padding: 2.5rem 1.5rem 2rem 1.5rem !important; 
-  /* Bordes bien redondeados */
   border-radius: 24px !important; 
 }
 
 /* 2. El "saltito" de los botones del menú */
 .page-header header .links a {
-  /* inline-block es obligatorio para que el navegador nos deje mover el elemento de lugar */
   display: inline-block !important; 
-  /* Le decimos que cualquier cambio (de posición o color) tarde 0.2 segundos, así no es brusco */
   transition: transform 0.2s ease, color 0.2s ease !important; 
 }
 
 .page-header header .links a:hover {
-  /* translateY mueve el elemento en el eje Y. Al ponerlo negativo, sube 4 píxeles */
   transform: translateY(-4px) !important; 
 }
 
@@ -294,14 +279,13 @@ ul.section-ul li > .desc {
    9. AJUSTES PARA CELULARES (RESPONSIVE)
    ========================================== */
 @media screen and (max-width: 800px) {
-  /* 1. Matamos el fantasma que empuja todo a la derecha */
   .page {
-    display: block !important; /* Sacamos el flex en celu para evitar desbordes */
+    display: block !important; 
     padding: 0 !important;
   }
 
   .page #quartz-body {
-    padding: 1.5rem 1rem !important; /* Achicamos los márgenes gigantes del celu */
+    padding: 1.5rem 1rem !important; 
     width: 100% !important;
     box-sizing: border-box !important;
   }
@@ -312,22 +296,19 @@ ul.section-ul li > .desc {
     padding: 0 !important;
   }
 
-  /* 2. Forzamos a que el hermoso recuadro aparezca y se adapte */
   .page-header header {
-    background-color: rgba(255, 255, 255, 0.05) !important; /* Un pelín más visible */
-    padding: 1.5rem 1rem !important; /* Menos aire adentro para que no desborde la pantalla */
+    background-color: rgba(255, 255, 255, 0.05) !important; 
+    padding: 1.5rem 1rem !important; 
     border-radius: 20px !important;
     width: 100% !important;
     box-sizing: border-box !important;
   }
 
-  /* 3. Prevención de desborde del título animado en celu */
   .page-title, .page-title a {
-    font-size: 2rem !important; /* Achicamos un poco el tamaño base para celular */
-    word-break: break-word !important; /* Si la fuente nueva es muy ancha, que rompa la línea */
+    font-size: 2rem !important; 
+    word-break: break-word !important; 
   }
 
-  /* 4. Ocultamos cualquier botón de menú nativo de celu que moleste */
   .mobile-only {
     display: none !important;
   }
@@ -336,35 +317,29 @@ ul.section-ul li > .desc {
 /* ==========================================
    10. GALERÍA DE IMÁGENES ESTILO PINTEREST (MASONRY)
    ========================================== */
-
-/* 1. Rompemos la "jaula" de lectura SOLO para la galería, 
-      dejando que ocupe gran parte del monitor (1200px) */
 body[data-slug="galeria"] #quartz-body, 
 body[data-slug="galería"] #quartz-body {
   max-width: 1200px !important; 
 }
 
-/* 2. Aplicamos el efecto cascada usando columnas fluidas */
 body[data-slug="galeria"] article, 
 body[data-slug="galería"] article {
   display: block !important;
-  column-count: 3 !important; /* 3 columnas por defecto en PC */
-  column-gap: 1.5rem !important; /* Aire entre las columnas */
+  column-count: 3 !important; 
+  column-gap: 1.5rem !important; 
 }
 
-/* 3. Evitamos que fotos o textos se "partan" a la mitad al cambiar de columna */
 body[data-slug="galeria"] article > *, 
 body[data-slug="galería"] article > * {
   break-inside: avoid !important;
-  margin-bottom: 1.5rem !important; /* Separación vertical entre elementos */
+  margin-bottom: 1.5rem !important; 
   display: block !important;
 }
 
-/* 4. Estilo de las imágenes y textos para que parezcan tarjetas sueltas */
 body[data-slug="galeria"] article img,
 body[data-slug="galería"] article img {
   width: 100% !important;
-  height: auto !important; /* Respeta la proporción original (vertical u horizontal) */
+  height: auto !important; 
   display: block !important;
   border-radius: 12px !important;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1) !important;
@@ -375,7 +350,6 @@ body[data-slug="galeria"] article img:hover {
   transform: scale(1.02) !important;
 }
 
-/* Hacemos que los textos sueltos se integren mejor visualmente */
 body[data-slug="galeria"] article p {
   background-color: rgba(255, 255, 255, 0.03) !important;
   padding: 1rem !important;
@@ -383,17 +357,16 @@ body[data-slug="galeria"] article p {
   font-size: 0.9rem !important;
 }
 
-/* 5. Adaptación automática para pantallas más chicas */
 @media screen and (max-width: 900px) {
   body[data-slug="galeria"] article, 
   body[data-slug="galería"] article {
-    column-count: 2 !important; /* Pasa a 2 columnas en tablets/notebooks chicas */
+    column-count: 2 !important; 
   }
 }
 
 @media screen and (max-width: 600px) {
   body[data-slug="galeria"] article, 
   body[data-slug="galería"] article {
-    column-count: 1 !important; /* Pasa a 1 columna en celulares */
+    column-count: 1 !important; 
   }
 }
