@@ -260,7 +260,7 @@ ul.section-ul li > .desc {
 
 /* ==========================================
    8. ENCABEZADO Y MENÚ DE NAVEGACIÓN (INTERACTIVIDAD)
-   ========================================== */
+   ========================================= */
 
 /* 1. Fondo translúcido para todo el bloque del encabezado */
 .page-header header {
@@ -330,5 +330,46 @@ ul.section-ul li > .desc {
   /* 4. Ocultamos cualquier botón de menú nativo de celu que moleste */
   .mobile-only {
     display: none !important;
+  }
+}
+
+/* ==========================================
+   10. GALERÍA DE IMÁGENES ESTILO MOSAICO (SOLO EN NOTA "GALERIA")
+   ========================================== */
+body[data-slug="galeria"], 
+body[data-slug="galería"],
+body[data-slug^="galeria"], 
+body[data-slug^="galería"] {
+  
+  /* El contenedor principal de tu texto se convierte en grilla */
+  article {
+    display: grid !important;
+    /* Crea columnas fluidas: mínimo 200px de ancho cada una, y que llenen el espacio */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)) !important;
+    gap: 16px !important; /* Separación prolija entre fotos */
+    align-items: start !important;
+  }
+
+  /* Los párrafos que envuelven a las fotos y los textos sueltos */
+  article > p {
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block !important;
+    width: 100% !important;
+  }
+
+  /* Hace que las imágenes sean responsivas, estéticas y no se deformen */
+  article img {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: cover !important;
+    border-radius: 10px !important; /* Bordes suaves para que parezca una galería premium */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15) !important; /* Sutil sombra flotante */
+    transition: transform 0.3s ease !important;
+  }
+
+  /* Efecto interactivo al pasar el mouse por encima de una foto */
+  article img:hover {
+    transform: scale(1.03) !important; /* Mini zoom elegante */
   }
 }
