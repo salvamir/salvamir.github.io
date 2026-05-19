@@ -42,7 +42,7 @@ html {
 }
 
 /* =========================================
-   2. EL HEADER LIMPIO
+   2. EL HEADER LIMPIO Y ANIMADO
    ========================================= */
 header {
   display: flex !important;
@@ -55,11 +55,21 @@ header {
   gap: 1.5rem !important;         
 }
 
+/* Animación caótica de fuentes */
+@keyframes fuenteCaotica {
+  0%   { font-family: 'Courier New', monospace !important; }
+  20%  { font-family: 'Times New Roman', serif !important; }
+  40%  { font-family: 'Arial', sans-serif !important; }
+  60%  { font-family: 'Impact', sans-serif !important; }
+  80%  { font-family: 'Comic Sans MS', cursive !important; }
+  100% { font-family: 'Courier New', monospace !important; }
+}
+
 .page-title, .page-title a {
   font-size: 2.5rem !important; 
   color: #f4ebd8 !important;    
   margin: 0 !important;
-  font-family: 'Courier New', monospace !important;
+  animation: fuenteCaotica 0.6s infinite !important; /* El efecto glitch */
 }
 
 .links, .nav-links, header > div {
@@ -140,7 +150,7 @@ article p {
 
 .badge-wall a {
   display: inline-block !important;
-  border: none !important;           
+  border: none !important;          
   padding: 0 !important;
   margin: 0 !important;
   background: none !important;
@@ -311,7 +321,13 @@ ul.section-ul li > .desc {
     box-sizing: border-box !important;
   }
 
-  /* 3. Ocultamos cualquier botón de menú nativo de celu que moleste */
+  /* 3. Prevención de desborde del título animado en celu */
+  .page-title, .page-title a {
+    font-size: 2rem !important; /* Achicamos un poco el tamaño base para celular */
+    word-break: break-word !important; /* Si la fuente nueva es muy ancha, que rompa la línea */
+  }
+
+  /* 4. Ocultamos cualquier botón de menú nativo de celu que moleste */
   .mobile-only {
     display: none !important;
   }
