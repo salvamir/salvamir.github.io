@@ -18,12 +18,12 @@ También, podés mandarme un [mail](mailto:pez.arroz.tabla@proton.me) si querés
 ## 🌐 Links
 Te dejo otros lugares interesantes para ver. Podés encontrar nuevas páginas por [acá](https://wiby.org). Esta es mi <font color="#4bacc6">gran lista</font> de páginas web que me gustan. Las anoto así no me las olvido.
 
-> [!info]- Directories
+> [!abstract]- Directories
 > - [¡BlogBlog!](https://blogblog.es) Blogs en español
 > - [BigList](http://biglist.terraaeon.com/index.html) Various blog-style webpages.
 > - [BlogRoll](https://blogroll.org/) Vast blog's directory.
 
-> [!warning]- Personal Webpages
+> [!abstract]- Personal Webpages
 > - [Eric Murphy](https://ericmurphy.xyz/): He’s a web developer who also has a personal website where he post about tech things.
 > - [Luke Smith:](https://lukesmith.xyz/) I’m not sure if he’s a philosopher but he post a lot of “trascendental thoughts“ if you like to call them like that.
 > - [Barry Hess:](https://bjhess.com/) He´s the owner of Pika!
@@ -59,7 +59,7 @@ Te dejo otros lugares interesantes para ver. Podés encontrar nuevas páginas po
 > - [LaPhilo](https://laphilo.fr/index-en.html). More philosophy!
 > - [Medieval](https://going-medieval.com) 
 
-> [!success]- Interesting Websites
+> [!abstract]- Interesting Websites
 > - [About Fiat Cars:](https://www.fiat.com.mx/blog.html) Q&A about cars so please enter this link.
 > - [Project Gutenberg](https://www.gutenberg.org/) List Of E-books
 > - [Tucumán Turismo:](https://www.tucutur.com.ar/index.html) Hay muchas cosas interesantes de mi provincia paisano acá adentro vayan a leerlo.
@@ -85,7 +85,7 @@ Te dejo otros lugares interesantes para ver. Podés encontrar nuevas páginas po
 > > - [Atlas de Mineralogía Óptica.](http://www.mineralogiaoptica.es) y [Lista De Minerales Formadores De Roca.](https://www.ugr.es/~velilla/atlas_mineral.html#Neso)
 > > - [Apuntes de Geología General](https://www.geovirtual2.cl)
 
-> [!warning]- Webrings
+> [!abstract]- Webrings
 > *Disclaimer: I do not like most of them actually. That's why I put them here at the end of the page. I think you can absolutely find more healthy websites for yourself. But who knows, maybe you find something cool and meaningful here.*
 > 
 > - [XXIIVV](https://webring.xxiivv.com/)
