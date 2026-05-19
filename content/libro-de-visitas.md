@@ -3,7 +3,7 @@ title: 📫 Libro De Visitas
 ---
 ![[2.jpeg]]
 
-# Gracias por cruzarte, dejá tu huella: 
+## Gracias por cruzarte, dejá tu huella: 
 
 <iframe
   src="https://guestbooks.meadow.cafe/guestbook/6213"
@@ -15,7 +15,7 @@ title: 📫 Libro De Visitas
 
 
 También, podés mandarme un [mail](mailto:pez.arroz.tabla@proton.me) si querés conversar.
-# 🌐 Links
+## 🌐 Links
 Te dejo otros lugares interesantes para ver. Podés encontrar nuevas páginas por [acá](https://wiby.org). Esta es mi <font color="#4bacc6">gran lista</font> de páginas web que me gustan. Las anoto así no me las olvido.
 
 > [!info]- Directories
@@ -94,7 +94,7 @@ Te dejo otros lugares interesantes para ver. Podés encontrar nuevas páginas po
 > - [IndieWeb](https://🕸💍.ws/directory).
 > - [LainChain](https://foreverliketh.is/#2-lainchan-webring)
 
-# ¡Gracias por venir!
+## ¡Gracias por venir!
 
 <div class="badge-wall">
   <a href="https://ko-fi.com/s/4662b19f61"><img src="/Anexos/WrittenByAHuman.svg"></a>
