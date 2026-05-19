@@ -20,12 +20,12 @@ const config: QuartzConfig = {
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
     theme: {
-      fontOrigin: "googleFonts",
+      fontOrigin: "local", /* CORRECCIÓN: Le decimos que use las fuentes de la PC, no de Google */
       cdnCaching: true,
       typography: {
-        header: "Quicksand",
-        body: "Nunito",
-        code: "IBM Plex Mono",
+        header: "Times New Roman", /* CORRECCIÓN: Títulos */
+        body: "Times New Roman",   /* CORRECCIÓN: Textos */
+        code: "Courier New",       /* CORRECCIÓN: Letra clásica de sistema para bloques de código */
       },
       colors: {
         lightMode: {
@@ -89,7 +89,7 @@ const config: QuartzConfig = {
       Plugin.Favicon(),
       Plugin.NotFoundPage(),
       // Comment out CustomOgImages to speed up build time
-      Plugin.CustomOgImages(),
+      // Plugin.CustomOgImages(),
     ],
   },
 }

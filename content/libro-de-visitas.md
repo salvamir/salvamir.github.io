@@ -1,5 +1,5 @@
 ---
-title: 📨 Libro De Visitas
+title: 📫 Libro De Visitas
 ---
 ![[2.jpeg]]
 
