@@ -4,7 +4,7 @@ title: Salva Más De Cerca
 Soy Salvador, vivo en Argentina, hago música cuando puedo, estudio Geología y tengo 5 hermanos. Creo en Dios y persevero en algunos grupos de la Iglesia. 
 En esta página tengo archivados momentos, ideas, pensamientos, fotos, cuentos, etc. Es como una caja de recuerdos enorme. Por eso es medio un lío desplazarse por este espacio, pero intenté hacerlo intuitivo.
 ## Sobre este lugar:
-Esta página es muy amplia y tiene muchos espacios explorables. Para que no se pierdan, acá les dejo escrito más o menos como pueden moverse. Para conocer lo que me gusta [[librería|leer]], o [[Música/index|escuchar]], o mis [[galería|fotos]] favoritas, visitá esas páginas. Lo que estoy viviendo [[ahora]]. Si preferis leerme en otro lado, acá tenés el [RSS](https://salvamir.github.io/index.xml). Y por si buscabas [[algo-mas|algo más]].... 
+Esta página es muy amplia y tiene muchos espacios explorables. Para conocer lo que me gusta [[librería|leer]], o [[Música/index|escuchar]], o mis [[galería|fotos]] favoritas, visitá esas páginas. Lo que estoy viviendo [[ahora]] es interesante también. Si preferís leer en otro lado, acá tenés el [RSS](https://salvamir.github.io/index.xml). Y por si buscabas [[algo-mas|algo más]]...
 ![[mapa-principal(light) 1.png]]
 
 ## P<font color="#eeece1">ara </font><font color="#eeece1">Curiosear</font>:
