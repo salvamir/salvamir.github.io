@@ -31,7 +31,7 @@ El internet es un invento muy zarpado y muy útil. Me parece indispensable apren
 
 Acá en el internet hay muchas cosas valiosas. Algunas de ellas las recopilé en mis [[libro-de-visitas|links]]. Por eso, te invito a entrar a [esta](https://liturgiacatolica.org/Lucas/5,1%E2%80%9111.html) página secreta.
 
-# <font color="#92cddc">Naturaleza y Tafí del valle.</font>
+## <font color="#92cddc">Naturaleza y Tafí del valle.</font>
 
 Me encanta la naturaleza y salir de caminatas. Me encanta tafí a pesar de que casi nunca elijo ir. Siempre termino priorizando la facultad, pero esa es otra charla.
 Varios de los cuadros que van a encontrar en esta página son de Tafí y los hizo un tío mío. 
