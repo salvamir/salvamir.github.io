@@ -43,7 +43,7 @@ html {
 }
 
 /* =========================================
-   2. EL HEADER LIMPIO CON TIPOGRAFÍA FIJA
+   2. EL HEADER LIMPIO CON TIPOGRAFÍA FIJA (CONSOLIDADO)
    ========================================= */
 header {
   display: flex !important;
@@ -53,13 +53,13 @@ header {
   width: 100% !important;
   margin-top: 2rem !important;    
   margin-bottom: 4rem !important; 
-  gap: 1.5rem !important;         
+  gap: 0.5rem !important; /* Espacio reducido entre título y menú */
 }
 
 .page-title, .page-title a {
   font-family: 'Times New Roman', serif !important; 
   font-size: 2.5rem !important; 
-  color: #f4ebd8 !important;    
+  color: #E7C8A0 !important; /* Color dorado retro fijo */
   margin: 0 !important;
   font-weight: 700 !important;
 }
@@ -77,11 +77,11 @@ header {
 }
 
 .links a, .nav-links a {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif !important; /* La letra "normal de internet/PC" */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif !important; 
   color: #e3dac9 !important;    
   text-decoration: none !important;
-  font-size: 1.5rem !important;
-  font-weight: 600 !important;
+  font-size: 1.15rem !important; /* Tamaño estilizado y compacto */
+  font-weight: 500 !important;
 }
 
 /* =========================================
@@ -240,7 +240,7 @@ ul.section-ul li > .meta {
   margin: 0 !important;
   color: rgba(244, 235, 216, 0.6) !important; 
   text-align: left !important;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif !important; /* También le puse la fuente "normal" a las fechas para que combine con el menú */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif !important;
 }
 
 ul.section-ul li > .desc {
@@ -248,9 +248,8 @@ ul.section-ul li > .desc {
 }
 
 /* ==========================================
-   8. ENCABEZADO Y MENÚ DE NAVEGACIÓN (CORREGIDO)
+   8. ENCABEZADO Y MENÚ DE NAVEGACIÓN
    ========================================= */
-
 .page-header header {
   background-color: rgba(255, 255, 255, 0.04) !important; 
   padding: 2.5rem 1.5rem 2rem 1.5rem !important; 
@@ -269,13 +268,14 @@ ul.section-ul li > .desc {
   transform: translateY(-4px) !important; 
 }
 
+/* Modificado para que los links visitados mantengan siempre el mismo crema original */
 .page-header header .links a:visited {
-  color: #DBCC79 !important; 
+  color: #ffffff !important; 
 }
 
 /* ==========================================
    9. AJUSTES PARA CELULARES (RESPONSIVE)
-   ========================================== */
+   ========================================= */
 @media screen and (max-width: 800px) {
   .page {
     display: block !important; 
@@ -313,9 +313,8 @@ ul.section-ul li > .desc {
 }
 
 /* ==========================================
-   10. GALERÍA DE IMÁGENES AL 100% DEL ANCHO (MOSAICO LIBRE)
-   ========================================== */
-
+   10. GALERÍA DE IMÁGENES AL 100% DEL ANCHO
+   ========================================= */
 body[data-slug="galeria"] #quartz-body, 
 body[data-slug="galería"] #quartz-body {
   max-width: 100% !important; 
@@ -382,43 +381,11 @@ body[data-slug="galeria"] article img:hover {
 @media screen and (max-width: 480px) {
   body[data-slug="galeria"] article, body[data-slug="galería"] article { column-count: 1 !important; }
 }
-/* ==========================================
-   11. TIPOGRAFÍA DE TÍTULOS (H1, H2, H3...)
-   ========================================== */
-article h1, 
-article h2, 
-article h3, 
-article h4, 
-article h5, 
-article h6 {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif !important;
-}
-/* ==========================================
-   12. TÍTULO PRINCIPAL DE LA NOTA
-   ========================================== */
-h1.article-title {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif !important;
-}
-/* Opcional: Metadatos debajo del título principal */
-.content-meta, .tags {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif !important;
-}
-/* ==========================================
-   13. AJUSTES DE COLOR DE TÍTULO Y MENÚ
-   ========================================== */
 
-/* Cambia el título al dorado retro de tu paleta */
-.page-title, .page-title a {
-  color: #E7C8A0 !important; 
-}
-
-/* Acerca los navlinks al título achicando el espacio (gap) */
-header {
-  gap: 0.5rem !important; 
-}
-
-/* Achica el tamaño del texto de los links (estaba en 1.5rem) */
-.links a, .nav-links a {
-  font-size: 1.15rem !important;
-  font-weight: 500 !important;
+/* ==========================================
+   11. TIPOGRAFÍA DE TÍTULOS Y METADATOS DE NOTAS
+   ========================================== */
+article h1, article h2, article h3, article h4, article h5, article h6,
+h1.article-title, .content-meta, .tags {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif !important;
 }
