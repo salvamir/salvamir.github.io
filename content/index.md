@@ -10,7 +10,6 @@ title: Salva Más De Cerca
     <area target="" alt="Música" title="Música" href="https://salvamir.github.io/Música/" coords="156,85,289,141" shape="rect">
     <area target="" alt="Inicio" title="Inicio" href="https://salvamir.github.io" coords="229,140,362,218" shape="rect">
     <area target="" alt="Links" title="Links" href="https://salvamir.github.io/links" coords="405,281,237,246" shape="rect">
-    <area target="" alt="Links" title="Links" href="https://salvamir.github.io/links" coords="511,305,369,268" shape="rect">
     <area target="" alt="Libros" title="Libros" href="https://salvamir.github.io/librería" coords="449,154,585,207" shape="rect">
     <area target="" alt="Ahora" title="Ahora" href="https://salvamir.github.io/ahora" coords="316,13,412,112" shape="rect">
     <area target="" alt="Notas" title="Notas" href="https://salvamir.github.io/Notas" coords="347,94,485,180" shape="rect">
