@@ -3,45 +3,52 @@ title: Salva Más De Cerca
 ---
 Soy Salvador, vivo en Argentina, hago música cuando puedo, estudio Geología y tengo 5 hermanos. Creo en Dios y persevero en algunos grupos de la Iglesia. 
 En esta página tengo archivados momentos, ideas, pensamientos, fotos, cuentos, etc. Es como una caja de recuerdos enorme. Por eso es medio un lío desplazarse por este espacio, pero intenté hacerlo intuitivo.
-## Sobre este lugar:<div style="width: 100%; height: 60vh; border-radius: 8px; overflow: hidden; background-color: transparent; margin: 20px 0;">
-  <object id="mapa-interactivo" data="/mapa-principal.svg" type="image/svg+xml" style="width: 100%; height: 100%; border: none; background: transparent;"></object>
+## Sobre este lugar:
+<div style="width: 100%; height: 60vh; border-radius: 8px; overflow: hidden; background-color: transparent; margin: 20px 0;">
+  <iframe id="mapa-interactivo" src="mapa-principal.svg" style="width: 100%; height: 100%; border: none; background: transparent;"></iframe>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
 
 <script>
   function inicializarMapa() {
-    const mapa = document.getElementById('mapa-interactivo');
-    if (!mapa) return;
+    const iframe = document.getElementById('mapa-interactivo');
+    if (!iframe) return;
 
     const activarZoom = () => {
       try {
-        svgPanZoom(mapa, {
+        // Inicializamos el zoom directo sobre el iframe
+        svgPanZoom(iframe, {
           zoomEnabled: true,
-          controlIconsEnabled: false, 
+          controlIconsEnabled: false, // Manejo limpio con mouse o dedos
           fit: true,
           center: true,
-          minZoom: 0.2,
-          maxZoom: 6,
+          minZoom: 0.1,
+          maxZoom: 7,
           mouseWheelZoomEnabled: true,
           panEnabled: true
         });
       } catch (e) {
-        console.error("Error al cargar svg-pan-zoom:", e);
+        console.error("Error al aplicar svg-pan-zoom:", e);
       }
     };
 
-    if (mapa.contentDocument && mapa.contentDocument.documentElement) {
+    // Si el iframe ya cargó el archivo, activa el zoom; si no, espera a que termine
+    if (iframe.contentDocument && iframe.contentDocument.readyState === 'complete') {
       activarZoom();
     } else {
-      mapa.addEventListener('load', activarZoom);
+      iframe.addEventListener('load', activarZoom);
     }
   }
 
-  if (document.readyState === 'complete' || document.readyState === 'interactive') {
+  // EL SECRETO PARA QUARTZ: Escuchar su propio evento de navegación interna
+  document.addEventListener("nav", inicializarMapa);
+
+  // Por las dudas, si entrás directo por primera vez, también lo ejecutamos
+  if (document.readyState === 'complete') {
     inicializarMapa();
   } else {
-    document.addEventListener('DOMContentLoaded', inicializarMapa);
+    window.addEventListener('load', inicializarMapa);
   }
 </script>
 Esta página es muy amplia y tiene muchos espacios explorables. Para que no se pierdan, acá les dejo escrito más o menos como pueden moverse. Para conocer lo que me gusta [[librería|leer]], o [[Música/index|escuchar]], o mis [[galería|fotos]] favoritas, visitá esas páginas. Si preferis leerme en otro lado, acá tenés el [RSS](https://salvamir.github.io/index.xml). Y por si buscabas [[algo-mas|algo más]].... 
