@@ -1,9 +1,38 @@
 ---
 title: Salva Más De Cerca
 ---
-<div style="width: 100%; display: flex; justify-content: center; margin: 20px 0;">
-  <img src="mapa-principal(light).png" usemap="#image-map" style="width: 100%; max-width: 800px; height: auto; border: none;">
+<style>
+  /* 1. DISEÑO PARA ESCRITORIO: Centrado y adaptado, igual que antes */
+  .contenedor-mapa {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  .imagen-mapa {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border: none;
+  }
 
+  /* 2. REGLA MÁGICA PARA CELULARES: Solo se activa en pantallas chicas */
+  @media (max-width: 768px) {
+    .contenedor-mapa {
+      display: block; /* Saca el centrado para permitir deslizar */
+      overflow-x: auto; /* Activa la barra invisible para deslizar con el dedo */
+      -webkit-overflow-scrolling: touch;
+    }
+    .imagen-mapa {
+      width: 800px; /* Obliga a la imagen a no encogerse */
+      max-width: none; /* Anula el límite de la computadora */
+    }
+  }
+</style>
+
+<div class="contenedor-mapa">
+  <img class="imagen-mapa" src="mapa-principal(light).png" usemap="#image-map">
+  
   <map name="image-map">
     <area target="" alt="Galería" title="Galería" href="https://salvamir.github.io/galería" coords="176,218,17,167" shape="rect">
     <area target="" alt="Visitas" title="Visitas" href="https://salvamir.github.io/libro-de-visitas" coords="124,205,259,312" shape="rect">
@@ -17,12 +46,6 @@ title: Salva Más De Cerca
     <area target="" alt="Algo Más" title="Algo Más" href="https://salvamir.github.io/algo-mas" coords="513,308,373,267" shape="rect">
   </map>
 </div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/image-map-resizer/1.0.10/js/imageMapResizer.min.js"></script>
-<script>
-  // Esta línea le avisa a Quartz que tiene que activar el redimensionador automático
-  imageMapResize();
-</script>
 Soy Salvador, vivo en Argentina, hago música cuando puedo, estudio Geología y tengo 5 hermanos. Creo en Dios y persevero en algunos grupos de la Iglesia.  En esta página tengo archivados momentos, ideas, pensamientos, fotos, cuentos, etc. Es como una caja de recuerdos enorme. Por eso es medio un lío desplazarse por este espacio, pero intenté hacerlo intuitivo. [RSS](https://salvamir.github.io/index.xml)
 ## <font color="#eeece1">Para Curiosear:</font>
 Acá te dejo una lista de ensayos/artículos que anduve leyendo por internet. 
