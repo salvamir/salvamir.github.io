@@ -2,7 +2,7 @@
 title: Salva Más De Cerca
 ---
 <div style="width: 100%; display: flex; justify-content: center; margin: 20px 0;">
-  <img src="./mapa-principal.png" usemap="#image-map" style="width: 100%; max-width: 800px; height: auto; border: none;">
+  <img src="./mapa-principal(light).png" usemap="#image-map" style="width: 100%; max-width: 800px; height: auto; border: none;">
 
   <map name="image-map">
     <area alt="Galería" title="Galería" href="/galeria" coords="17,167,176,218" shape="rect">
