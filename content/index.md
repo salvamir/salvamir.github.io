@@ -13,7 +13,6 @@ title: Salva Más De Cerca
     border: none;
   }
 </style>
-
 <div class="contenedor-mapa">
 <img class="imagen-mapa" src="mapa-principal(light).png" usemap="#image-map">
 <map name="image-map">
