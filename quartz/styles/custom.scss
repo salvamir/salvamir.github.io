@@ -403,3 +403,22 @@ h1.article-title {
 .content-meta, .tags {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif !important;
 }
+/* ==========================================
+   13. AJUSTES DE COLOR DE TÍTULO Y MENÚ
+   ========================================== */
+
+/* Cambia el título al dorado retro de tu paleta */
+.page-title, .page-title a {
+  color: #DBCC79 !important; 
+}
+
+/* Acerca los navlinks al título achicando el espacio (gap) */
+header {
+  gap: 0.7rem !important; 
+}
+
+/* Achica el tamaño del texto de los links (estaba en 1.5rem) */
+.links a, .nav-links a {
+  font-size: 1.15rem !important;
+  font-weight: 500 !important;
+}

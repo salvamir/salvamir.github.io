@@ -14,9 +14,15 @@ Es tremendo como se siente la luz del sol en la cara de esta mujer. Deja mucho p
 Siento a este cuadro como un suspiro. Como una oleada de viento fresco. Lo veo y escucho las hojas de los árboles moverse acariciadas por el sol. Me gustaría ponerlo en un lugar donde siempre pudiese verlo.
 
 El cuadro es bueno porque parece haber detenido el tiempo en ese instante en que esta mujer miró a alguien. Quizás por eso me quita el aliento también, porque parece que la rotación de la Tierra se detuvo un segundo infinito en esa mirada. Muchas veces me sentí mirado así. Habla mucho de la vocación femenina.
-<div style="text-align: center; margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid rgba(168, 158, 149, 0.3);">
+<div style="text-align: center; margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid rgba(168, 158, 149, 0.3); display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+  
   <a href="mailto:pez.arroz.tabla@proton?subject=Respuesta a tu nota" style="font-size: 0.85rem; font-family: sans-serif; color: #E6E2D6; border: 1px solid #a89e95; padding: 6px 14px; border-radius: 8px; text-decoration: none; transition: 0.2s;">
     📬 Responder a esta nota
   </a>
+
+  <a href="/index.xml" style="font-size: 0.85rem; font-family: sans-serif; color: #E6E2D6; border: 1px solid #a89e95; padding: 6px 14px; border-radius: 8px; text-decoration: none; transition: 0.2s;">
+    ⏰ Subscribirse al RSS
+  </a>
+
 </div>
 
