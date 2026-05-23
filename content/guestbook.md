@@ -1,8 +1,11 @@
+---
+title: libro-de-visitas
+---
 <div class="guestbook-container">
-<h1 class="guestbook-main-title">Sign the guestbook</h1>
+<h1 class="guestbook-main-title">Dejá tu huella</h1>
 <div class="guestbook-tabs">
-<button type="button" id="tab-draw" class="tab-btn active" onclick="switchTab('draw')">Draw something</button>
-<button type="button" id="tab-write" class="tab-btn" onclick="switchTab('write')">Write a message</button>
+<button type="button" id="tab-draw" class="tab-btn active" onclick="switchTab('draw')">Dibujá algo</button>
+<button type="button" id="tab-write" class="tab-btn" onclick="switchTab('write')">Escribí un mensaje</button>
 </div>
 <form id="guestbook-form" onsubmit="handleFormSubmit(event)">
 <div id="section-draw" class="guestbook-section active">
@@ -14,29 +17,29 @@
 <button type="button" class="size-btn medium" onclick="setBrushSize(6, this)">●</button>
 <button type="button" class="size-btn large" onclick="setBrushSize(12, this)">⬤</button>
 <span class="divider">|</span>
-<button type="button" class="action-btn" onclick="clearCanvas()">🗑️ Clear</button>
+<button type="button" class="action-btn" onclick="clearCanvas()">🗑️ Limpiar</button>
 </div>
 <canvas id="paint-canvas" width="400" height="300"></canvas>
 </div>
 <div id="section-write" class="guestbook-section">
 <div class="form-group">
-<label for="input-words">Your words</label>
-<textarea id="input-words" rows="4" placeholder="Write something nice..."></textarea>
+<label for="input-words">Tus palabras</label>
+<textarea id="input-words" rows="4" placeholder="Escribí algo lindo..."></textarea>
 </div>
 </div>
 <div class="form-group">
-<label for="input-name">Your name</label>
+<label for="input-name">Tu nombre</label>
 <input type="text" id="input-name" required placeholder="Anónimo">
 </div>
 <div class="form-group">
-<label for="input-website">Your website (optional)</label>
-<input type="url" id="input-website" placeholder="https://example.com">
+<label for="input-website">Tu página web (opcional)</label>
+<input type="url" id="input-website" placeholder="https://ejemplo.com">
 </div>
-<button type="submit" id="btn-submit" class="submit-btn">Submit entry</button>
+<button type="submit" id="btn-submit" class="submit-btn">Enviar</button>
 </form>
-<h2 class="entries-title">Recent entries</h2>
+<h2 class="entries-title">Entradas Recientes</h2>
 <div id="guestbook-entries" class="guestbook-grid">
-<p class="loading-status">Loading entries...</p>
+<p class="loading-status">Esperando a que aparezcan los últimos mensajes...</p>
 </div>
 </div>
 
@@ -282,14 +285,14 @@
       const data = await res.json();
       
       if (!data || data.length === 0) {
-        container.innerHTML = '<p class="loading-status">No entries yet. Be the first!</p>';
+        container.innerHTML = '<p class="loading-status">Todavía no hay mensajes. ¡Sé el primero!</p>';
         return;
       }
 
       container.innerHTML = data.map(entry => {
         let contentHtml = '';
         if (entry.type === 'image' || entry.type === 'draw') {
-          contentHtml = `<img src="${entry.content}" alt="Drawing by ${entry.name}">`;
+          contentHtml = `<img src="${entry.content}" alt="Dibujo de ${entry.name}">`;
         } else {
           contentHtml = `<p class="entry-text">"${entry.content}"</p>`;
         }
@@ -301,13 +304,13 @@
         return `
           <div class="guestbook-entry">
             <div class="entry-content">${contentHtml}</div>
-            <div class="entry-meta">By ${nameHtml}</div>
+            <div class="entry-meta">Por ${nameHtml}</div>
           </div>
         `;
       }).join('');
 
     } catch (err) {
-      container.innerHTML = '<p class="loading-status">Error loading entries.</p>';
+      container.innerHTML = '<p class="loading-status">Error al cargar los mensajes.</p>';
       console.error(err);
     }
   }
@@ -316,7 +319,7 @@
     e.preventDefault();
     const btn = document.getElementById('btn-submit');
     btn.disabled = true;
-    btn.innerText = "Sending...";
+    btn.innerText = "Enviando...";
 
     const name = document.getElementById('input-name').value || 'Anónimo';
     const website = document.getElementById('input-website').value || null;
@@ -328,9 +331,9 @@
       buffer.width = canvas.width;
       buffer.height = canvas.height;
       if (canvas.toDataURL() === buffer.toDataURL()) {
-        alert("Please draw something before submitting!");
+        alert("¡Por favor dibujá algo antes de enviar!");
         btn.disabled = false;
-        btn.innerText = "Submit entry";
+        btn.innerText = "Enviar";
         return;
       }
       content = canvas.toDataURL('image/png');
@@ -355,14 +358,14 @@
         clearCanvas();
         await fetchEntries();
       } else {
-        alert("Error saving entry. Check RLS configuration.");
+        alert("Error guardando el mensaje. Revisá la configuración RLS.");
       }
     } catch (err) {
-      alert("Network error sending signature.");
+      alert("Error de red al enviar la firma.");
       console.error(err);
     } finally {
       btn.disabled = false;
-      btn.innerText = "Submit entry";
+      btn.innerText = "Enviar";
     }
   }
 
