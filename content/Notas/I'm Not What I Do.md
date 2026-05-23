@@ -10,12 +10,12 @@ This happened some days ago. Now I should be studying, but my head hurts and I j
 It’s time to stop thinking of me like a to-do list.
 
 <div style="text-align: center; margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid rgba(168, 158, 149, 0.3); display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
-  
-  <a href="mailto:pez.arroz.tabla@proton?subject=Respuesta a tu nota" style="font-size: 0.85rem; font-family: sans-serif; color: #E6E2D6; border: 1px solid #a89e95; padding: 6px 14px; border-radius: 8px; text-decoration: none; transition: 0.2s;">
+
+  <a href="mailto:pez.arroz.tabla@proton?subject=Respuesta a tu nota" style="font-size: 0.85rem; font-family: sans-serif; color: #E6E2D6 !important; border: 1px solid #a89e95 !important; padding: 6px 14px; border-radius: 8px; text-decoration: none; transition: 0.2s;">
     📬 Responder a esta nota
   </a>
 
-  <a href="/index.xml" style="font-size: 0.85rem; font-family: sans-serif; color: #E6E2D6; border: 1px solid #a89e95; padding: 6px 14px; border-radius: 8px; text-decoration: none; transition: 0.2s;">
+  <a href="/index.xml" style="font-size: 0.85rem; font-family: sans-serif; color: #E6E2D6 !important; border: 1px solid #a89e95 !important; padding: 6px 14px; border-radius: 8px; text-decoration: none; transition: 0.2s;">
     ⏰ Subscribirse al RSS
   </a>
 
