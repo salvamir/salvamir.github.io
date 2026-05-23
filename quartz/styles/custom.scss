@@ -414,3 +414,22 @@ body[data-slug="El-Jardin/index"] h1.article-title,
 body[data-slug="El-Jardin/index"] .content-meta {
   display: none !important;
 }
+/* =========================================
+   13. ADAPTACIONES PARA CELULARES
+   ========================================== */
+/* REGLA SOLO PARA CELULARES */
+@media (max-width: 768px) {
+  
+  /* 1. Apuntamos a la imagen que tiene el mapa para que no se achique */
+  img[usemap="#image-map"] {
+    min-width: 700px !important; /* Mantiene el tamaño donde las coordenadas funcionan */
+    max-width: none !important;
+  }
+
+  /* 2. Le decimos al contenedor (Quartz suele meter la imagen en un párrafo) que permita deslizar */
+  p:has(img[usemap="#image-map"]) {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    padding-bottom: 10px; /* Un margencito para que sea cómodo */
+  }
+}
