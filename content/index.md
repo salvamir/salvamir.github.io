@@ -1,7 +1,7 @@
 ---
 title: Salva Más De Cerca
 ---
-
+Soy Salvador, vivo en Argentina, hago música cuando puedo, estudio Geología y tengo 5 hermanos. Creo en Dios y persevero en algunos grupos de la Iglesia.  En esta página tengo archivados momentos, ideas, pensamientos, fotos, cuentos, etc. Es como una caja de recuerdos enorme. Por eso es medio un lío desplazarse por este espacio, pero intenté hacerlo intuitivo. [RSS](https://salvamir.github.io/index.xml)
 <img src="mapa-principal(light).png" usemap="#image-map">
 
 <map name="image-map">
@@ -16,8 +16,6 @@ title: Salva Más De Cerca
     <area target="" alt="Jardin Digital" title="Jardin Digital" href="https://salvamir.github.io/El-Jardín" coords="394,49,578,116" shape="rect">
     <area target="" alt="Algo Más" title="Algo Más" href="https://salvamir.github.io/algo-mas" coords="513,308,373,267" shape="0">
 </map>
-
-Soy Salvador, vivo en Argentina, hago música cuando puedo, estudio Geología y tengo 5 hermanos. Creo en Dios y persevero en algunos grupos de la Iglesia.  En esta página tengo archivados momentos, ideas, pensamientos, fotos, cuentos, etc. Es como una caja de recuerdos enorme. Por eso es medio un lío desplazarse por este espacio, pero intenté hacerlo intuitivo. [RSS](https://salvamir.github.io/index.xml)
 ## P<font color="#eeece1">ara </font><font color="#eeece1">Curiosear</font>:
 Acá te dejo una lista de ensayos/artículos que anduve leyendo por internet. Algunos son bien sencillos. 
 - ["Living With The Seasons", de Daniel ](https://danielslife.blog/posts/living-with-the-seasons)
