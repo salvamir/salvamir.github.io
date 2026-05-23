@@ -7,7 +7,6 @@
   </div>
 
   <form id="guestbook-form" onsubmit="handleFormSubmit(event)">
-    
     <div id="section-draw" class="guestbook-section active">
       <div class="canvas-toolbar">
         <button type="button" id="tool-pencil" class="tool-btn active" onclick="setTool('pencil')">✏️</button>
@@ -17,326 +16,399 @@
         <button type="button" class="size-btn medium" onclick="setBrushSize(6, this)">●</button>
         <button type="button" class="size-btn large" onclick="setBrushSize(12, this)">⬤</button>
         <span class="divider">|</span>
-        <button type="button" class="action-btn" onclick="undoLast()">⟲</button>
-        <button type="button" class="action-btn" onclick="clearCanvas()">🗑️</button>
+        <button type="button" class="action-btn" onclick="clearCanvas()">🗑️ Clear</button>
       </div>
-      
-      <div class="canvas-wrapper">
-        <canvas id="paintbook-canvas" width="500" height="400"></canvas>
-      </div>
+      <canvas id="paint-canvas" width="400" height="300"></canvas>
     </div>
 
     <div id="section-write" class="guestbook-section">
-      <div class="input-group">
-        <label for="guest-words">Your words</label>
-        <textarea id="guest-words" rows="5" placeholder="Escribe tu mensaje aquí..."></textarea>
+      <div class="form-group">
+        <label for="input-words">Your words</label>
+        <textarea id="input-words" rows="4" placeholder="Write something nice..."></textarea>
       </div>
     </div>
 
-    <div class="guestbook-common-fields">
-      <div class="input-group">
-        <label for="guest-name">Your name</label>
-        <input type="text" id="guest-name" required placeholder="Anónimo">
-      </div>
-      
-      <div class="input-group">
-        <label for="guest-website">Your website (optional)</label>
-        <input type="url" id="guest-website" placeholder="https://tuweb.com">
-      </div>
+    <div class="form-group">
+      <label for="input-name">Your name</label>
+      <input type="text" id="input-name" required placeholder="Anónimo">
     </div>
 
-    <button type="submit" class="submit-guestbook-btn">Submit entry</button>
+    <div class="form-group">
+      <label for="input-website">Your website (optional)</label>
+      <input type="url" id="input-website" placeholder="https://example.com">
+    </div>
+
+    <button type="submit" id="btn-submit" class="submit-btn">Submit entry</button>
   </form>
+
+  <h2 class="entries-title">Recent entries</h2>
+  <div id="guestbook-entries" class="guestbook-grid">
+    <p class="loading-status">Loading entries...</p>
+  </div>
 </div>
 
 <style>
-.guestbook-container {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 1rem;
-  font-family: system-ui, -apple-system, sans-serif !important;
-  color: #e3dac9;
-}
+  :root {
+    --bg-card: #1a1714;
+    --bg-canvas: #faf7f2;
+    --text-main: #e3ded6;
+    --accent: #b7966c;
+    --border-color: rgba(168, 158, 149, 0.3);
+  }
 
-.guestbook-main-title {
-  text-align: center;
-  font-family: 'Times New Roman', serif !important;
-  color: #E7C8A0;
-  font-size: 2.2rem;
-  margin-bottom: 2rem;
-}
+  .guestbook-container {
+    max-width: 600px;
+    margin: 0 auto;
+    font-family: "New York", "Palatino Linotype", Georgia, serif;
+    color: var(--text-main);
+    padding: 20px;
+  }
 
-/* Pestañas */
-.guestbook-tabs {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-bottom: 2rem;
-}
+  .guestbook-main-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
 
-.tab-btn {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(168, 158, 149, 0.3);
-  color: #e3dac9;
-  padding: 10px 20px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 0.95rem;
-  transition: all 0.2s ease;
-}
+  .guestbook-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    justify-content: center;
+  }
 
-.tab-btn:hover, .tab-btn.active {
-  background: rgba(231, 200, 160, 0.15);
-  border-color: #E7C8A0;
-  color: #E7C8A0;
-}
+  .tab-btn {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-main);
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.2s;
+  }
 
-/* Secciones intercambiables */
-.guestbook-section {
-  display: none;
-}
+  .tab-btn.active, .tab-btn:hover {
+    background: var(--accent);
+    color: #111;
+    border-color: var(--accent);
+  }
 
-.guestbook-section.active {
-  display: block;
-}
+  .guestbook-section {
+    display: none;
+  }
 
-/* Herramientas de dibujo */
-.canvas-toolbar {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  background: rgba(255, 255, 255, 0.04);
-  padding: 8px 16px;
-  border-radius: 8px 8px 0 0;
-  border: 1px solid rgba(168, 158, 149, 0.3);
-  border-bottom: none;
-}
+  .guestbook-section.active {
+    display: block;
+  }
 
-.tool-btn, .size-btn, .action-btn {
-  background: none;
-  border: none;
-  color: #e3dac9;
-  cursor: pointer;
-  padding: 4px 8px;
-  border-radius: 4px;
-  font-size: 1rem;
-}
+  /* Canvas Styles */
+  #paint-canvas {
+    background: var(--bg-canvas);
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto 20px auto;
+    cursor: crosshair;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
+  }
 
-.tool-btn.active, .size-btn.active {
-  background: rgba(231, 200, 160, 0.2);
-  color: #E7C8A0;
-}
+  .canvas-toolbar {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-card);
+    padding: 8px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    border: 1px solid var(--border-color);
+  }
 
-.divider {
-  color: rgba(168, 158, 149, 0.3);
-}
+  .canvas-toolbar button {
+    background: transparent;
+    border: none;
+    color: var(--text-main);
+    padding: 4px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
 
-/* Contenedor del Lienzo */
-.canvas-wrapper {
-  background: #faf7f2; /* Fondo claro para dibujar idéntico a Daniel */
-  border: 1px solid rgba(168, 158, 149, 0.3);
-  border-radius: 0 0 8px 8px;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-}
+  .canvas-toolbar button.active {
+    background: rgba(255,255,255,0.1);
+    outline: 1px solid var(--accent);
+  }
 
-#paintbook-canvas {
-  display: block;
-  cursor: crosshair;
-  background: #faf7f2;
-}
+  .divider {
+    color: var(--border-color);
+  }
 
-/* Campos de Formulario */
-.input-group {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  margin-bottom: 1.5rem;
-}
+  /* Form Styles */
+  .form-group {
+    margin-bottom: 15px;
+  }
 
-.input-group label {
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: #e3dac9;
-}
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    opacity: 0.8;
+  }
 
-.input-group input, .input-group textarea {
-  background: rgba(0, 0, 0, 0.2);
-  border: 1px solid rgba(168, 158, 149, 0.3);
-  border-radius: 8px;
-  padding: 12px;
-  color: #faf7f2;
-  font-family: inherit;
-  font-size: 0.95rem;
-}
+  .form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    color: var(--text-main);
+    font-family: sans-serif;
+    box-sizing: border-box;
+  }
 
-.input-group input:focus, .input-group textarea:focus {
-  outline: none;
-  border-color: #E7C8A0;
-  background: rgba(0, 0, 0, 0.3);
-}
+  .submit-btn {
+    width: 100%;
+    padding: 12px;
+    background: var(--accent);
+    border: none;
+    border-radius: 8px;
+    color: #111;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 10px;
+  }
 
-.guestbook-common-fields {
-  margin-top: 1.5rem;
-}
+  /* Grid entries */
+  .entries-title {
+    margin-top: 40px;
+    border-top: 1px solid var(--border-color);
+    padding-top: 20px;
+  }
 
-/* Botón de Enviar */
-.submit-guestbook-btn {
-  width: 100%;
-  background: rgba(231, 200, 160, 0.1);
-  border: 1px solid #E7C8A0;
-  color: #E7C8A0;
-  padding: 14px;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  margin-top: 1rem;
-}
+  .guestbook-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+  }
 
-.submit-guestbook-btn:hover {
-  background: #E7C8A0;
-  color: #111;
-}
+  .guestbook-entry {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .entry-content img {
+    width: 100%;
+    background: var(--bg-canvas);
+    border-radius: 4px;
+    display: block;
+  }
+
+  .entry-text {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    margin: 0;
+    word-break: break-word;
+  }
+
+  .entry-meta {
+    margin-top: 10px;
+    font-size: 0.8rem;
+    opacity: 0.6;
+    font-family: sans-serif;
+  }
+
+  .entry-meta a {
+    color: var(--accent);
+    text-decoration: none;
+  }
 </style>
 
-<script>
-let currentTab = 'draw';
-let isDrawing = false;
-let currentTool = 'pencil';
-let brushSize = 2;
-let lastX = 0;
-let lastY = 0;
+<script type="module">
+  // TUS CREDENCIALES YA ESTÁN CONFIGURADAS AQUÍ:
+  const SUPABASE_URL = "https://etmweqntizkvburtnyro.supabase.co";
+  const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImV0bXdlcW50aXprdmJ1cnRueXJvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzk1MTQ0ODQsImV4cCI6MjA5NTA5MDQ4NH0.Oe2bQl9hybfKg5i7meSL-3y8y85PN7L8psS9rH-sKR0";
 
-// Historial para deshacer (Undo)
-let canvasHistory = [];
-
-const canvas = document.getElementById('paintbook-canvas');
-const ctx = canvas.getContext('2d');
-
-// Configuración inicial del trazo
-ctx.lineCap = 'round';
-ctx.lineJoin = 'round';
-ctx.strokeStyle = '#111111'; // Color del lápiz sobre fondo claro
-
-// Guardar estado inicial para el historial
-saveHistory();
-
-function switchTab(tab) {
-  currentTab = tab;
-  document.getElementById('tab-draw').classList.toggle('active', tab === 'draw');
-  document.getElementById('tab-write').classList.toggle('active', tab === 'write');
-  document.getElementById('section-draw').classList.toggle('active', tab === 'draw');
-  document.getElementById('section-write').classList.toggle('active', tab === 'write');
-}
-
-function setTool(tool) {
-  currentTool = tool;
-  document.getElementById('tool-pencil').classList.toggle('active', tool === 'pencil');
-  document.getElementById('tool-eraser').classList.toggle('active', tool === 'eraser');
-  ctx.strokeStyle = tool === 'eraser' ? '#faf7f2' : '#111111';
-}
-
-function setBrushSize(size, element) {
-  brushSize = size;
-  document.querySelectorAll('.size-btn').forEach(btn => btn.classList.remove('active'));
-  element.classList.add('active');
-}
-
-// Eventos del Canvas (Mouse y Táctil)
-canvas.addEventListener('mousedown', (e) => {
-  isDrawing = true;
-  [lastX, lastY] = getMousePos(e);
-});
-
-canvas.addEventListener('mousemove', draw);
-canvas.addEventListener('mouseup', () => { if(isDrawing) { isDrawing = false; saveHistory(); } });
-canvas.addEventListener('mouseout', () => { if(isDrawing) { isDrawing = false; saveHistory(); } });
-
-// Soporte para celulares (Touch)
-canvas.addEventListener('touchstart', (e) => {
-  isDrawing = true;
-  const touch = e.touches[0];
-  [lastX, lastY] = getMousePos(touch);
-  e.preventDefault();
-});
-canvas.addEventListener('touchmove', (e) => {
-  if (!isDrawing) return;
-  const touch = e.touches[0];
-  draw(touch);
-  e.preventDefault();
-});
-canvas.addEventListener('touchend', () => { if(isDrawing) { isDrawing = false; saveHistory(); } });
-
-function getMousePos(e) {
-  const rect = canvas.getBoundingClientRect();
-  return [
-    e.clientX - rect.left,
-    e.clientY - rect.top
-  ];
-}
-
-function draw(e) {
-  if (!isDrawing) return;
-  const [x, y] = getMousePos(e);
-
-  ctx.beginPath();
-  ctx.moveTo(lastX, lastY);
-  ctx.lineTo(x, y);
-  ctx.lineWidth = brushSize;
-  ctx.stroke();
+  let currentTab = 'draw';
+  let currentTool = 'pencil';
+  let brushSize = 2;
   
-  [lastX, lastY] = [x, y];
-}
+  const canvas = document.getElementById('paint-canvas');
+  const ctx = canvas.getContext('2d');
+  let isPainting = false;
 
-function clearCanvas() {
-  ctx.fillStyle = '#faf7f2';
-  ctx.fillRect(0, 0, canvas.width, canvas.height);
-  saveHistory();
-}
+  // Configuración inicial del Canvas
+  ctx.strokeStyle = '#000000';
+  ctx.lineCap = 'round';
+  ctx.lineJoin = 'round';
+  ctx.lineWidth = brushSize;
 
-function saveHistory() {
-  if (canvasHistory.length > 20) canvasHistory.shift(); // Límite de memoria
-  canvasHistory.push(canvas.toDataURL());
-}
+  // Eventos de dibujo (Mouse)
+  canvas.addEventListener('mousedown', (e) => { isPainting = true; draw(e); });
+  canvas.addEventListener('mousemove', draw);
+  canvas.addEventListener('mouseup', () => { ctx.beginPath(); isPainting = false; });
+  canvas.addEventListener('mouseleave', () => { ctx.beginPath(); isPainting = false; });
 
-function undoLast() {
-  if (canvasHistory.length > 1) {
-    canvasHistory.pop(); // Elimina el estado actual
-    let previousState = canvasHistory[canvasHistory.length - 1];
-    let img = new Image();
-    img.src = previousState;
-    img.onload = function() {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      ctx.drawImage(img, 0, 0);
+  // Eventos de dibujo (Touch para Celulares)
+  canvas.addEventListener('touchstart', (e) => { isPainting = true; draw(e.touches[0]); e.preventDefault(); });
+  canvas.addEventListener('touchmove', (e) => { draw(e.touches[0]); e.preventDefault(); });
+  canvas.addEventListener('touchend', () => { ctx.beginPath(); isPainting = false; });
+
+  function draw(e) {
+    if (!isPainting || currentTab !== 'draw') return;
+    
+    const rect = canvas.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    ctx.lineWidth = brushSize;
+    if (currentTool === 'eraser') {
+      ctx.strokeStyle = '#faf7f2'; // Color de fondo del lienzo
+    } else {
+      ctx.strokeStyle = '#000000';
+    }
+
+    ctx.lineTo(x, y);
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.moveTo(x, y);
+  }
+
+  // Funciones de la barra de herramientas del lienzo
+  window.setTool = function(tool) {
+    currentTool = tool;
+    document.getElementById('tool-pencil').classList.toggle('active', tool === 'pencil');
+    document.getElementById('tool-eraser').classList.toggle('active', tool === 'eraser');
+  }
+
+  window.setBrushSize = function(size, btn) {
+    brushSize = size;
+    document.querySelectorAll('.size-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+  }
+
+  window.clearCanvas = function() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+  }
+
+  // Cambio de pestañas (Dibujo vs Escritura)
+  window.switchTab = function(tab) {
+    currentTab = tab;
+    document.getElementById('tab-draw').classList.toggle('active', tab === 'draw');
+    document.getElementById('tab-write').classList.toggle('active', tab === 'write');
+    document.getElementById('section-draw').classList.toggle('active', tab === 'draw');
+    document.getElementById('section-write').classList.toggle('active', tab === 'write');
+    
+    const wordsInput = document.getElementById('input-words');
+    if (tab === 'draw') {
+      wordsInput.removeAttribute('required');
+    } else {
+      wordsInput.setAttribute('required', 'required');
     }
   }
-}
 
-// Manejo del envío (Prueba local)
-function handleFormSubmit(event) {
-  event.preventDefault();
-  
-  const name = document.getElementById('guest-name').value;
-  const website = document.getElementById('guest-website').value;
-  
-  let entryData = {
-    name: name,
-    website: website,
-    type: currentTab
-  };
+  // LLAMADOS A LA API DE SUPABASE
+  async function fetchEntries() {
+    const container = document.getElementById('guestbook-entries');
+    try {
+      const res = await fetch(`${SUPABASE_URL}/rest/v1/guestbook?select=*&order=id.desc`, {
+        headers: { "apikey": SUPABASE_KEY, "Authorization": `Bearer ${SUPABASE_KEY}` }
+      });
+      const data = await res.json();
+      
+      if (!data || data.length === 0) {
+        container.innerHTML = '<p class="loading-status">No entries yet. Be the first!</p>';
+        return;
+      }
 
-  if (currentTab === 'draw') {
-    // Convierte el dibujo entero a una cadena de texto de imagen
-    entryData.content = canvas.toDataURL();
-  } else {
-    entryData.content = document.getElementById('guest-words').value;
+      container.innerHTML = data.map(entry => {
+        let contentHtml = '';
+        if (entry.type === 'image' || entry.type === 'draw') {
+          contentHtml = `<img src="${entry.content}" alt="Drawing by ${entry.name}">`;
+        } else {
+          contentHtml = `<p class="entry-text">"${entry.content}"</p>`;
+        }
+
+        let nameHtml = entry.website 
+          ? `<a href="${entry.website}" target="_blank" rel="noopener">${entry.name}</a>`
+          : entry.name;
+
+        return `
+          <div class="guestbook-entry">
+            <div class="entry-content">${contentHtml}</div>
+            <div class="entry-meta">By ${nameHtml}</div>
+          </div>
+        `;
+      }).join('');
+
+    } catch (err) {
+      container.innerHTML = '<p class="loading-status">Error loading entries.</p>';
+      console.error(err);
+    }
   }
 
-  console.log("¡Datos listos para enviar a la Base de Datos!", entryData);
-  alert("Interfaz funcionando perfectamente. ¡Estructura lista para conectar!");
-}
+  window.handleFormSubmit = async function(e) {
+    e.preventDefault();
+    const btn = document.getElementById('btn-submit');
+    btn.disabled = true;
+    btn.innerText = "Sending...";
+
+    const name = document.getElementById('input-name').value || 'Anónimo';
+    const website = document.getElementById('input-website').value || null;
+    
+    let type = currentTab; 
+    let content = '';
+
+    if (currentTab === 'draw') {
+      // Comprobar si el lienzo está en blanco para no mandar vacíos
+      const buffer = document.createElement('canvas');
+      buffer.width = canvas.width;
+      buffer.height = canvas.height;
+      if (canvas.toDataURL() === buffer.toDataURL()) {
+        alert("Please draw something before submitting!");
+        btn.disabled = false;
+        btn.innerText = "Submit entry";
+        return;
+      }
+      content = canvas.toDataURL('image/png');
+    } else {
+      content = document.getElementById('input-words').value;
+    }
+
+    try {
+      const res = await fetch(`${SUPABASE_URL}/rest/v1/guestbook`, {
+        method: 'POST',
+        headers: {
+          "apikey": SUPABASE_KEY,
+          "Authorization": `Bearer ${SUPABASE_KEY}`,
+          "Content-Type": "application/json",
+          "Prefer": "return=minimal"
+        },
+        body: JSON.stringify({ name, website, type, content })
+      });
+
+      if (res.ok) {
+        // Limpiar campos y refrescar grilla
+        document.getElementById('input-words').value = '';
+        clearCanvas();
+        await fetchEntries();
+      } else {
+        alert("Error saving entry. Check RLS configuration.");
+      }
+    } catch (err) {
+      alert("Network error sending signature.");
+      console.error(err);
+    } finally {
+      btn.disabled = false;
+      btn.innerText = "Submit entry";
+    }
+  }
+
+  // Carga inicial al abrir la página
+  fetchEntries();
 </script>
