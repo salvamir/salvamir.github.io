@@ -390,11 +390,21 @@ h1.article-title, .content-meta, .tags {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif !important;
 }
 /* ==========================================
-   12. OCULTAR TÍTULOS Y METADATOS (INDEX Y VISITAS)
+   12. OCULTAR TÍTULOS Y METADATOS POR PÁGINA
    ========================================== */
+
+/* 1. Inicio y Libro de Visitas (Archivos sueltos) */
 body[data-slug="index"] h1.article-title,
 body[data-slug="index"] .content-meta,
 body[data-slug="libro-de-visitas"] h1.article-title,
-body[data-slug="libro-de-visitas"] .content-meta {
+body[data-slug="libro-de-visitas"] .content-meta,
+
+/* 2. Notas y El Jardín (Índices de carpetas) */
+body[data-slug="Notas/index"] h1.article-title,
+body[data-slug="Notas/index"] .content-meta,
+body[data-slug="El-Jardín/index"] h1.article-title,
+body[data-slug="El-Jardín/index"] .content-meta,
+body[data-slug="El-Jardin/index"] h1.article-title,
+body[data-slug="El-Jardin/index"] .content-meta {
   display: none !important;
 }
