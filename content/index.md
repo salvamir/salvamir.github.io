@@ -7,6 +7,7 @@ En esta página tengo archivados momentos, ideas, pensamientos, fotos, cuentos, 
 <div style="width: 100%; display: flex; justify-content: center; margin: 20px 0;">
   <object data="/mapa-principal.svg" type="image/svg+xml" style="width: 100%; max-width: 800px; height: auto; border: none;"></object>
 </div>
+
 Esta página es muy amplia y tiene muchos espacios explorables. Para que no se pierdan, acá les dejo escrito más o menos como pueden moverse. Para conocer lo que me gusta [[librería|leer]], o [[Música/index|escuchar]], o mis [[galería|fotos]] favoritas, visitá esas páginas. Si preferis leerme en otro lado, acá tenés el [RSS](https://salvamir.github.io/index.xml). Y por si buscabas [[algo-mas|algo más]].... 
 ![[casadelvecino.jpg]]
 ## P<font color="#eeece1">ara </font><font color="#eeece1">Curiosear</font>:
