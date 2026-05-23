@@ -5,8 +5,8 @@ Acá archivo lo que vengo viviendo.
 
 #### Estoy viviendo el otoño.
 - 20/05/2026
-Me encanta como se ve el otoño. Acá es como que el sol es muy brillante y todo se ve como en reposo. Es muy descansador.
-![[casadelvecino.jpg|249]]![[arbolysol.jpg|269]]
+Me encanta como se ve el otoño. Acá es como que el sol es muy brillante y todo se ve en reposo. Es muy descansador.
+![[casadelvecino.jpg|272]]![[arbolysol.jpg|269]]
 #### Conociendo un barsito nuevo.
 - 16/05/2026
 Quedaba un poco más lejos. Hablamos de lo frustrado que me sentí por la facultad.
