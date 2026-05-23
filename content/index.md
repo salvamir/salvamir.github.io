@@ -11,15 +11,16 @@ title: Salva Más De Cerca
     <area target="" alt="Inicio" title="Inicio" href="https://salvamir.github.io" coords="229,140,362,218" shape="rect">
     <area target="" alt="Links" title="Links" href="https://salvamir.github.io/links" coords="405,281,237,246" shape="rect">
     <area target="" alt="Links" title="Links" href="https://salvamir.github.io/links" coords="511,305,369,268" shape="rect">
-    <area target="" alt="LIbros" title="LIbros" href="https://salvamir.github.io/librería" coords="449,154,585,207" shape="rect">
+    <area target="" alt="Libros" title="Libros" href="https://salvamir.github.io/librería" coords="449,154,585,207" shape="rect">
     <area target="" alt="Ahora" title="Ahora" href="https://salvamir.github.io/ahora" coords="316,13,412,112" shape="rect">
     <area target="" alt="Notas" title="Notas" href="https://salvamir.github.io/Notas" coords="347,94,485,180" shape="rect">
     <area target="" alt="Jardin Digital" title="Jardin Digital" href="https://salvamir.github.io/El-Jardín" coords="394,49,578,116" shape="rect">
+    <area target="" alt="Algo Más" title="Algo Más" href="https://salvamir.github.io/algo-mas" coords="513,308,373,267" shape="0">
 </map>
 
 Soy Salvador, vivo en Argentina, hago música cuando puedo, estudio Geología y tengo 5 hermanos. Creo en Dios y persevero en algunos grupos de la Iglesia.  En esta página tengo archivados momentos, ideas, pensamientos, fotos, cuentos, etc. Es como una caja de recuerdos enorme. Por eso es medio un lío desplazarse por este espacio, pero intenté hacerlo intuitivo. [RSS](https://salvamir.github.io/index.xml)
 ## P<font color="#eeece1">ara </font><font color="#eeece1">Curiosear</font>:
-Acá te dejo una lista de ensayos/artículos que anduve leyendo por internet. Algunos son bien sencillos. Si tenés ganas de conocer otros espacios interesantes, podés visitar mi página de [[links|enlaces]], ahí los colecciono.
+Acá te dejo una lista de ensayos/artículos que anduve leyendo por internet. Algunos son bien sencillos. 
 - ["Living With The Seasons", de Daniel ](https://danielslife.blog/posts/living-with-the-seasons)
 - ["Biking Is Fun", de Nolan.](https://nolancaudill.com/2026/03/16/biking-is-fun/)
 - ["Simplicity and Less", de Rafael.](https://rafaelkuebler.github.io/posts/20251207-simplicity-and-less/) 
