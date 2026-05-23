@@ -1,8 +1,5 @@
 ---
-title: libro-de-visitas
----
----
-title: " "
+title: '" "'
 ---
 <div class="guestbook-container">
 <h1 class="guestbook-main-title">Dejá tu huella</h1>
