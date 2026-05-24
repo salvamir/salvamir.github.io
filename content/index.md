@@ -70,7 +70,7 @@ title: Salva Más De Cerca
   <a href="https://salvamir.github.io/algo-mas" class="boton-pildora">Algo Más</a>
 </div>
 
-Soy Salvador, vivo en Argentina, hago música cuando puedo, estudio Geología y tengo 5 hermanos. Creo en Dios y persevero en algunos grupos de la Iglesia.  En esta página tengo archivados momentos, ideas, pensamientos, fotos, cuentos, etc. Es como una caja de recuerdos enorme. Por eso es medio un lío desplazarse por este espacio, pero intenté hacerlo intuitivo. 
+Soy Salvador, vivo en Argentina, hago música cuando puedo, estudio Geología y tengo 5 hermanos. Creo en Dios y persevero en algunos grupos de la Iglesia.  En esta página tengo archivados momentos, ideas, pensamientos, fotos, cuentos, etc. Es como una caja de recuerdos enorme. Por eso es medio un lío desplazarse por este espacio, pero intenté hacerlo intuitivo. [[Lluvia De Ideas/index|index]]
 ## <font color="#eeece1">Para Curiosear:</font>
 Acá te dejo una lista de ensayos/artículos que anduve leyendo por internet. 
 - ["Living With The Seasons", de Daniel ](https://danielslife.blog/posts/living-with-the-seasons)
