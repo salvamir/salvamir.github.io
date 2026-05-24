@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Colección De Fotos</title>
+  <style>
+    :root {
+      --bg-main: #1a1714;
+      --text-main: #e3ded6;
+      --accent: #b7966c;
+      --modal-bg: rgba(0, 0, 0, 0.85);
+    }
+
+    body {
+      margin: 0;
+      padding: 20px;
+      background: var(--bg-main);
+      color: var(--text-main);
+      font-family: "New York", Georgia, serif;
+    }
+
+    .gallery-container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .gallery-title {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .gallery-grid {
+      column-count: 1;
+      column-gap: 15px;
+    }
+
+    @media (min-width: 600px) { .gallery-grid { column-count: 2; } }
+    @media (min-width: 1020px) { .gallery-grid { column-count: 3; } }
+
+    .gallery-item {
+      break-inside: avoid;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      overflow: hidden;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      display: block;
+      transition: transform 0.3s ease, filter 0.3s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.03);
+      filter: brightness(1.1);
+    }
+
+    .modal {
+      display: none; 
+      position: fixed; 
+      z-index: 999; 
+      padding-top: 50px; 
+      left: 0;
+      top: 0;
+      width: 100%; 
+      height: 100%; 
+      overflow: auto; 
+      background-color: var(--modal-bg);
+      backdrop-filter: blur(5px);
+    }
+
+    .modal-content {
+      margin: auto;
+      display: block;
+      max-width: 90%;
+      max-height: 80vh;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+      animation: zoomIn 0.3s ease;
+    }
+
+    @keyframes zoomIn {
+      from { transform: scale(0.9); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 35px;
+      color: #f1f1f1;
+      font-size: 40px;
+      font-weight: bold;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+
+    .close-btn:hover {
+      color: var(--accent);
+    }
+  </style>
+</head>
+<body>
+
+<div class="gallery-container">
+  <h1 class="gallery-title">Mi Galería</h1>
+  <div class="gallery-grid">
+    <div class="gallery-item"><img src="./fotos-galeria/3.jpeg" alt="paquillo corriendo"></div>
+    <div class="gallery-item"><img src="./fotos-galeria/8.jpg" alt="videollamada punta cana"></div>
+    <div class="gallery-item"><img src="./fotos-galeria/amaicha.jpg" alt="viaje de campo"></div>
+    <div class="gallery-item"><img src="./fotos-galeria/conmaxii.jpg" alt="cena geomorfo"></div>
+    <div class="gallery-item"><img src="./fotos-galeria/dracamigomio.png" alt="estado fer"></div>
+    <div class="gallery-item"><img src="./fotos-galeria/enfermo.jpg" alt="enfermo"></div>
+    <div class="gallery-item"><img src="./fotos-galeria/facucumpliendomisueño.png" alt="legoland"></div>
+    <div class="gallery-item"><img src="./fotos-galeria/felizcumplewid.jpeg" alt="mini leonchi"></div>
+    <div class="gallery-item"><img src="./fotos-galeria/letiyleonchiminis.jpg" alt="minis"></div>
+    <div class="gallery-item"><img src="./fotos-galeria/minileti.jpeg" alt="cute"></div>
+    <div class="gallery-item"><img src="./fotos-galeria/mispapas.jpg" alt="papas"></div>
+    <div class="gallery-item"><img src="./fotos-galeria/salvaylolopequeños.jpg" alt="pequeños"></div>
+    <div class="gallery-item"><img src="./fotos-galeria/paseandoconlaemii.jpg" alt="paseando"></div>
+    <div class="gallery-item"><img src="./fotos-galeria/otoñoenmicasa.jpg" alt="otoño casa"></div>
+    <div class="gallery-item"><img src="./fotos-galeria/otoñoenlafacultad.jpg" alt="otoño facultad"></div>
+  </div>
+</div>
+
+<div id="imageModal" class="modal">
+  <span class="close-btn">&times;</span>
+  <img class="modal-content" id="modalImg">
+</div>
+
+<script>
+  const modal = document.getElementById("imageModal");
+  const modalImg = document.getElementById("modalImg");
+  const closeBtn = document.querySelector(".close-btn");
+  
+  document.querySelectorAll(".gallery-item img").forEach(img => {
+    img.onclick = function() {
+      modal.style.display = "block";
+      modalImg.src = this.src; 
+    }
+  });
+
+  closeBtn.onclick = () => modal.style.display = "none";
+  modal.onclick = (e) => { if (e.target === modal) modal.style.display = "none"; };
+  document.addEventListener('keydown', (e) => { if (e.key === "Escape") modal.style.display = "none"; });
+</script>
+
+</body>
+</html>

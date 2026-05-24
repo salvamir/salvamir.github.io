@@ -42,7 +42,7 @@ title: Salva Más De Cerca
 <div class="mapa-escritorio">
   <img src="mapa-principal.png" usemap="#image-map">
   <map name="image-map">
-    <area target="_self" alt="Colección de fotos." title="Galería" href="/galeria.html" coords="176,218,17,167" shape="rect">
+    <area target="_self" alt="Colección de fotos." title="Galería" href="/static/galeria.html" coords="176,218,17,167" shape="rect">
     <area target="" alt="Me sirve para saber que estuviste acá." title="Visitas" href="https://salvamir.github.io/libro-de-visitas" coords="124,205,259,312" shape="rect">
     <area target="" alt="Analisis de canciones, discos y más. Es una colección también." title="Música" href="https://salvamir.github.io/Música/" coords="156,85,289,141" shape="rect">
     <area target="" alt="Todos somos una historia que merece ser contada y vivida. - Nico (un amigo mío)" title="Inicio" href="https://salvamir.github.io" coords="229,140,362,218" shape="rect">
@@ -58,7 +58,7 @@ title: Salva Más De Cerca
 <div class="menu-celular">
   <a href="https://salvamir.github.io" class="boton-pildora">Inicio</a>
   <a href="https://salvamir.github.io/Música/" class="boton-pildora">Música</a>
-  <a href="https://salvamir.github.io/galeria.html" class="boton-pildora">Galería</a>
+  <a href="https://salvamir.github.io/static/galeria.html" class="boton-pildora">Galería</a>
   <a href="https://salvamir.github.io/El-Jardín" class="boton-pildora">Jardín Digital</a>
   <a href="https://salvamir.github.io/Notas" class="boton-pildora">Notas</a>
   <a href="https://salvamir.github.io/librería" class="boton-pildora">Libros</a>
