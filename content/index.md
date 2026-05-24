@@ -50,6 +50,7 @@ title: Salva Más De Cerca
     <area target="" alt="Libros" title="Libros" href="https://salvamir.github.io/librería" coords="449,154,585,207" shape="rect">
     <area target="" alt="Ahora" title="Ahora" href="https://salvamir.github.io/ahora" coords="316,13,412,112" shape="rect">
     <area target="" alt="Notas" title="Notas" href="https://salvamir.github.io/Notas" coords="347,94,485,180" shape="rect">
+     <area target="" alt="Lluvia de ideas" title="Lluvia de ideas" href="https://salvamir.github.io/Lluvia-De-Ideas/" coords="464,246,342,159" shape="rect">
     <area target="" alt="Jardin Digital" title="Jardin Digital" href="https://salvamir.github.io/El-Jardín" coords="394,49,578,116" shape="rect">
     <area target="" alt="Algo Más" title="Algo Más" href="https://salvamir.github.io/algo-mas" coords="513,308,373,267" shape="rect">
     <area target="" alt="Cuentos" title="Cuentos" href="https://salvamir.github.io/Cuentos/" coords="542,261,424,187" shape="rect">
