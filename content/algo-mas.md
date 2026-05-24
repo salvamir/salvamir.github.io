@@ -8,7 +8,7 @@ title: ¿Algo más?
 
 Son infinitas las maneras de hacerte tu página. No soy desarrollador, asi que solo puedo proponerte las salidas fáciles. Por lo pronto, podés arrancar haciendote un blog en [Bear](https://bearblog.dev/accounts/login/?next=/nubes/dashboard/) o en [Pika!](https://pika.page). También, podés hacerte una plantilla de presentación en [Carrd](https://carrd.co), o en [Canva](https://www.canva.com/website-builder/), o en [Wordpress](https://wordpress.com). Podés explorar [Neocities](https://neocities.org), pero no es tanto mi estilo. 
 Si querés una solución eficiente, te recomiendo empezar por Pika!, la versión gratuita es bastante completa. 
-## <font color="#ccc1d9">Razones por las que quise hacer esta página.</font>
+## <font color="#eeece1">Razones por las que quise hacer esta página.</font>
 
 1. Quería un lugar totalmente mío y más "duradero" para archivar momentos y cosas piola. Ya estaba cansado de llenar cuadernos uno tras otro con pensamientos que nadie más que Dios y yo conocemos. 
 2. Ese lugar no podía ser [Instagram]([instagram.com/salva_mirande](https://www.youtube.com/redirect?event=channel_description&redir_token=QUFFLUhqbUxJLVFZNzRiTW1JYy00MEh1Mk1tMHAzamo4QXxBQ3Jtc0ttQnFsZnFVTUtMMjZaMzJBanozNUFsMFN3UWVNNzA3cklrQXhVcDhrdW9GSU0zbEttM2NmaU5FMTZOU1hVZjdhZ01adUxtYWRYZDdRc1ZrM3J2V2d5VGxodVBTdEJMclRfU21kblRYemExSTZYbGZ5TQ&q=https%3A%2F%2Finstagram.com%2Fsalva_mirande))  ni [Youtube](https://youtube.com/@salvamirande?si=bo5QZYYN1T4N29Qm) porque no son técnicamente míos y eso me molestaba. Tampoco tenía la libertad de no ser profesional. Nunca fuí muy profesional en ningún lado.
@@ -30,9 +30,7 @@ Esta página existe para que vos, yo y cualquiera que entre pueda sentirse human
 El internet es un invento muy zarpado y muy útil. Me parece indispensable aprender a convivir sanamente con la tecnología para que nos sean propicias. La idea es que podamos prender y apagar la conexión por decisión propia cuando queramos.
 
 Acá en el internet hay muchas cosas valiosas. Algunas de ellas las recopilé en mis [[libro-de-visitas|links]]. Por eso, te invito a entrar a [esta](https://liturgiacatolica.org/Lucas/5,1%E2%80%9111.html) página secreta.
-
-## <font color="#92cddc">Naturaleza y Tafí del valle.</font>
-
+## <font color="#eeece1">Naturaleza y Tafí del valle.</font>
 Me encanta la naturaleza y salir de caminatas. Me encanta tafí a pesar de que casi nunca elijo ir. Siempre termino priorizando la facultad, pero esa es otra charla.
 Varios de los cuadros que van a encontrar en esta página son de Tafí y los hizo un tío mío. 
 Te dejo fotos para que te den ganas de dejar la pantalla y salir afuera:
@@ -51,6 +49,7 @@ Ahora estoy copado con este proyecto, así que quiero aprovechar el empujón e i
 - Achicar tamaño de letra de los titulos, en general
 - Cambiar colores de los !abstracts
 - Tener un favicon hecho a mano
+- Incorporar Pretext
 - Tener un dominio propio
 - Conseguir que mi página pueda ser encontrada por cualquier motor de búsqueda.
 ## ¡Listo! Eso fue todo por ahora
