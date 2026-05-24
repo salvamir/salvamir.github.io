@@ -2,7 +2,7 @@
 title: ¿Algo más?
 ---
 > [!info] Últimas actualizaciones
-> ¡Lo último que hice fue agregar crear el libro de visitas!
+> ¡Lo último que hice fue agregar crear el [[libro-de-visitas|libro de visitas]]!
 
 ## Cómo tener mi propia página web.
 

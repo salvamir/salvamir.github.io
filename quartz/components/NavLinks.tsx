@@ -3,7 +3,7 @@ import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } fro
 const NavLinks: QuartzComponent = ({ displayClass }: QuartzComponentProps) => {
   return (
     <nav class={`links ${displayClass ?? ""}`}>
-      <a href="https://salvamir.github.io/index.xml" target="_blank" rel="noopener noreferrer">💬 RSS</a>
+      <a href="https://salvamir.github.io/index.xml" target="_blank" rel="noopener noreferrer">💬 Rss</a>
       <a href="mailto:pez.arroz.tabla@proton.me">📬 Mail</a>
     </nav>
   )

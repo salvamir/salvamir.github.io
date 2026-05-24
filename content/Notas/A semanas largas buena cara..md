@@ -13,14 +13,3 @@ Eso es un gran aliento para mi. Como un suspiro. Por eso quiero aprovechar el em
 
 Quiero, por lo pronto, leer la Biblia una vez al día y retomar el ejercicio, por lo menos 20min. 
 Quiero animarme a posponer un poco la facultad y demás responsabilidades, para priorizar estas cosas humanas, que tanto bien me hacen.
-<div style="text-align: center; margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid rgba(168, 158, 149, 0.3); display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
-
-  <a href="mailto:pez.arroz.tabla@proton?subject=Respuesta a tu nota" style="font-size: 0.85rem; font-family: sans-serif; color: #E6E2D6 !important; border: 1px solid #a89e95 !important; padding: 6px 14px; border-radius: 8px; text-decoration: none; transition: 0.2s;">
-    📬 Responder a esta nota
-  </a>
-
-  <a href="/index.xml" style="font-size: 0.85rem; font-family: sans-serif; color: #E6E2D6 !important; border: 1px solid #a89e95 !important; padding: 6px 14px; border-radius: 8px; text-decoration: none; transition: 0.2s;">
-    ⏰ Subscribirse al RSS
-  </a>
-
-</div>
