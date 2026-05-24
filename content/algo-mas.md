@@ -38,4 +38,20 @@ Varios de los cuadros que van a encontrar en esta página son de Tafí y los hiz
 Te dejo fotos para que te den ganas de dejar la pantalla y salir afuera:
 ![[tafiii.mp4]]![[tafi.jpg]]
 ![[tafif.jpg]]
+
+## Para Hacer En Ésta Página:
+Ahora estoy copado con este proyecto, así que quiero aprovechar el empujón e ir mostrando mi avance.
+- ~~Crear una página web~~
+- ~~Crear un járdin digital~~
+- ~~Sacar mi página de Carrd y Pika!~~
+- ~~Personalizar mi página y conseguir una paleta de colores~~
+- ~~Crear un link RSS~~
+- ~~Tener un libro de visitas~~
+- ~~Tener un guestbook NATIVO~~
+- Mejorar la galería
+- Achicar tamaño de letra de los titulos, en general
+- Cambiar colores de los !abstracts
+- Tener un favicon hecho a mano
+- Tener un dominio propio
+- Conseguir que mi página pueda ser encontrada por cualquier motor de búsqueda.
 ## ¡Listo! Eso fue todo por ahora
