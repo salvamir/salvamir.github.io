@@ -27,8 +27,8 @@ title: Salva Más De Cerca
     .boton-pildora {
       /* Estilo minimalista tipo "etiqueta" */
       padding: 10px 20px;
-      border: 1px solid var(--tertiary, #ccc); /* Toma el color de tu tema de Quartz */
-      border-radius: 25px; /* Bordes bien redonditos */
+      border: 1px solid var(--tertiary, #ccc);
+      border-radius: 25px; 
       text-decoration: none;
       color: var(--dark, #333);
       font-weight: 600;
@@ -40,7 +40,7 @@ title: Salva Más De Cerca
 </style>
 
 <div class="mapa-escritorio">
-  <img src="mapa-principal(light).png" usemap="#image-map">
+  <img src="mapa-principal.png" usemap="#image-map">
   <map name="image-map">
     <area target="" alt="Galería" title="Galería" href="https://salvamir.github.io/galería" coords="176,218,17,167" shape="rect">
     <area target="" alt="Visitas" title="Visitas" href="https://salvamir.github.io/libro-de-visitas" coords="124,205,259,312" shape="rect">
@@ -52,6 +52,7 @@ title: Salva Más De Cerca
     <area target="" alt="Notas" title="Notas" href="https://salvamir.github.io/Notas" coords="347,94,485,180" shape="rect">
     <area target="" alt="Jardin Digital" title="Jardin Digital" href="https://salvamir.github.io/El-Jardín" coords="394,49,578,116" shape="rect">
     <area target="" alt="Algo Más" title="Algo Más" href="https://salvamir.github.io/algo-mas" coords="513,308,373,267" shape="rect">
+    <area target="" alt="Cuentos" title="Cuentos" href="https://salvamir.github.io/Cuentos/" coords="542,261,424,187" shape="rect">
   </map>
 </div>
 
@@ -62,6 +63,7 @@ title: Salva Más De Cerca
   <a href="https://salvamir.github.io/El-Jardín" class="boton-pildora">Jardín Digital</a>
   <a href="https://salvamir.github.io/Notas" class="boton-pildora">Notas</a>
   <a href="https://salvamir.github.io/librería" class="boton-pildora">Libros</a>
+  <a href="https://salvamir.github.io/Cuentos/" class="boton-pildora">Cuentos</a>
   <a href="https://salvamir.github.io/ahora" class="boton-pildora">Ahora</a>
   <a href="https://salvamir.github.io/links" class="boton-pildora">Links</a>
   <a href="https://salvamir.github.io/libro-de-visitas" class="boton-pildora">Visitas</a>
@@ -75,6 +77,5 @@ Acá te dejo una lista de ensayos/artículos que anduve leyendo por internet.
 - ["Biking Is Fun", de Nolan.](https://nolancaudill.com/2026/03/16/biking-is-fun/)
 - ["Simplicity and Less", de Rafael.](https://rafaelkuebler.github.io/posts/20251207-simplicity-and-less/) 
 - ["Secret Garden", de Tanner.](https://t0.vc/secret-garden)
-
 
 ![[quelindodía.png]]
