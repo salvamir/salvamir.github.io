@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>El Risco</title>
+  <title>El Risco - Experimento</title>
   <style>
     body {
-      background-color: #1a1613; /* El color oscuro de tu fondo */
+      background-color: #1a1613;
       color: #ede9e6;
       font-family: 'Times New Roman', serif;
       font-size: 18px;
       line-height: 28px;
       margin: 0;
-      padding: 40px 20px;
+      padding: 60px 20px;
       display: flex;
       justify-content: center;
       overflow-x: hidden;
@@ -22,29 +22,39 @@
       width: 100%;
       text-align: justify;
     }
+    
+    /* Estado inicial del párrafo (Oculto, más abajo y borroso) */
     p {
-      margin-bottom: 1.8rem;
-      position: relative;
+      margin-bottom: 2rem;
+      opacity: 0;
+      transform: translateY(40px) scale(0.98);
+      filter: blur(8px);
+      transition: opacity 1.2s cubic-bezier(0.25, 1, 0.5, 1),
+                  transform 1.2s cubic-bezier(0.25, 1, 0.5, 1),
+                  filter 1.2s ease-out;
+      will-change: opacity, transform, filter;
     }
-    /* Estilo para cada letra interactiva */
-    .pretext-char {
-      display: inline-block;
-      position: relative;
-      transform-origin: center bottom;
-      transition: color 0.2s ease;
-      will-change: transform, opacity;
+
+    /* Clase que se activa cuando el párrafo entra en la pantalla */
+    p.revelado {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      filter: blur(0);
     }
-    /* Diálogos dorados elegantes como tu diseño */
+
+    /* Diálogos con un toque de viento al pasar el mouse */
     .dialogo-cuento {
       padding-left: 2rem;
       font-style: italic;
       color: #cda34f;
       display: block;
       margin: 1.5rem 0;
+      transition: letter-spacing 0.4s ease, color 0.4s ease;
     }
-    /* Efecto hover sutil adicional */
-    .pretext-char:hover {
+    .dialogo-cuento:hover {
+      letter-spacing: 0.5px;
       color: #E7C8A0;
+      text-shadow: 0 0 8px rgba(231, 200, 160, 0.3);
     }
   </style>
 </head>
@@ -92,78 +102,28 @@
   <p>En ese punto específico del Globo, es donde la gravedad, el tiempo, la física y la locura juvenil se complotan y entremezclan en una sola masa imperceptible. Tales coordenadas existen. Son completamente reales, y solo quienes estuvimos ahí, sabemos que el primer hombre en volar, no fue el inventor de la primera avioneta. Fue Alister Bluely. Y el segundo fui yo.</p>
 </div>
 
-<script type="module">
-  import { prepare } from 'https://esm.sh/@chenglou/pretext';
-
-  const container = document.getElementById('cuento-container');
-  const paragraphs = container.querySelectorAll('p');
-  let charElements = [];
-
-  // Fase Pretext: Fragmentamos el texto manteniendo la estructura elástica
-  paragraphs.forEach(p => {
-    const text = p.innerText;
-    const words = text.split(/(\s+)/);
-    p.innerHTML = '';
-
-    words.forEach(word => {
-      if (word.trim() === '') {
-        p.appendChild(document.createTextNode(word));
-      } else {
-        const wordSpan = document.createElement('span');
-        wordSpan.style.whiteSpace = 'nowrap';
-        
-        for (let char of word) {
-          const charSpan = document.createElement('span');
-          charSpan.classList.add('pretext-char');
-          charSpan.innerText = char;
-          
-          // Guardamos un factor aleatorio único por letra para que la absorción sea fluida y asincrónica
-          charSpan.dataset.seedX = (Math.random() * 40 - 20).toFixed(2);
-          charSpan.dataset.seedRot = (Math.random() * 60 - 30).toFixed(2);
-          charSpan.dataset.speed = (Math.random() * 0.7 + 0.5).toFixed(2);
-
-          wordSpan.appendChild(charSpan);
-          charElements.push(charSpan);
+<script>
+  // Intersection Observer: Una herramienta moderna y súper liviana
+  // que vigila cuándo un elemento entra en la pantalla para activar la animación.
+  document.addEventListener("DOMContentLoaded", () => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // Si el párrafo entra en cámara, le agregamos la clase "revelado"
+          entry.target.classList.add('revelado');
         }
-        p.appendChild(wordSpan);
-      }
+      });
+    }, {
+      threshold: 0.1, // Se activa cuando el 10% del párrafo es visible
+      rootMargin: "0px 0px -50px 0px" // Un pequeño margen para que se note el efecto al bajar
+    });
+
+    // Le decimos al observador que vigile todos los párrafos
+    const paragraphs = document.querySelectorAll('#cuento-container p');
+    paragraphs.forEach(p => {
+      observer.observe(p);
     });
   });
-
-  // Motor de Absorción Gravitacional por Scroll
-  function updateAbsorption() {
-    const triggerLine = window.innerHeight * 0.25; // 25% superior de la pantalla es el umbral de succión
-
-    charElements.forEach(char => {
-      const rect = char.getBoundingClientRect();
-      
-      // Si la letra cruzó el umbral superior hacia arriba
-      if (rect.top < triggerLine) {
-        // Calculamos la distancia desde la línea de succión hacia arriba
-        const distanceIntoCeiling = triggerLine - rect.top;
-        // Normalizamos el progreso (a los 180 píxeles ya se absorbió por completo)
-        const progress = Math.min(distanceIntoCeiling / 180, 1);
-
-        const speed = parseFloat(char.dataset.speed);
-        const driftX = parseFloat(char.dataset.seedX) * progress;
-        const driftY = -Math.pow(progress, 2) * 120 * speed; // Aceleración exponencial hacia arriba
-        const rotation = parseFloat(char.dataset.seedRot) * progress;
-        const opacity = 1 - progress;
-        const scale = 1 - progress * 0.5;
-
-        char.style.transform = `translate(${driftX}px, ${driftY}px) scale(${scale}) rotate(${rotation}deg)`;
-        char.style.opacity = opacity;
-      } else {
-        // Estado inicial de la letra en reposo perfecto
-        char.style.transform = 'none';
-        char.style.opacity = '1';
-      }
-    });
-  }
-
-  window.addEventListener('scroll', updateAbsorption);
-  window.addEventListener('resize', updateAbsorption);
-  updateAbsorption();
 </script>
 
 </body>
