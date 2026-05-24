@@ -1,9 +1,11 @@
 ---
 title: "El Risco"
 ---
+---
+title: "El Risco"
+---
 
 <style>
-  /* Efecto Gravedad Cero ahora aplicado a LETRAS individuales */
   .letter {
     display: inline-block;
     cursor: default;
@@ -17,7 +19,6 @@ title: "El Risco"
     text-shadow: 0 4px 12px rgba(231, 200, 160, 0.3);
   }
 
-  /* Estilo especial y elegante para los diálogos del cuento */
   .dialogo-cuento {
     text-indent: 0 !important;
     padding-left: 2rem !important;
@@ -27,7 +28,6 @@ title: "El Risco"
     display: block;
   }
 
-  /* Efecto absorción del abismo al hacer scroll */
   .scroll-absorption {
     opacity: var(--scroll-opacity, 1);
     transform: translateY(var(--scroll-translate, 0px)) scale(var(--scroll-scale, 1));
@@ -80,35 +80,28 @@ En ese punto específico del Globo, es donde la gravedad, el tiempo, la física 
 
 </div>
 
-<script>
-  document.addEventListener("nav", () => {
+<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="display:none;" onload="
+  (function(){
     const container = document.getElementById('story-container');
     if (!container) return;
-
     const paragraphs = container.querySelectorAll('p, .dialogo-cuento');
-
-    // ANIMACIÓN 1: Fragmentar texto en letras flotantes independientes
+    
     paragraphs.forEach(p => {
       const text = p.innerText;
-      // Dividimos el texto usando los espacios para conservar el espaciado correcto
       const words = text.split(/(\s+)/); 
       p.innerHTML = '';
       
       words.forEach(word => {
         if (word.trim() === '') {
-          p.appendChild(document.createTextNode(word)); // Los espacios quedan igual
+          p.appendChild(document.createTextNode(word));
         } else {
-          // Envolvemos la palabra para que el navegador no separe letras en el salto de línea
           const wordSpan = document.createElement('span');
-          wordSpan.style.whiteSpace = "nowrap"; 
-          
-          // Dividimos la palabra letra por letra
+          wordSpan.style.whiteSpace = 'nowrap'; 
           for(let char of word) {
             const charSpan = document.createElement('span');
             charSpan.classList.add('letter');
             charSpan.innerText = char;
-            // Cada letra tiene su propio ángulo de rotación
-            const randomRot = (Math.random() * 30 - 15).toFixed(2) + 'deg';
+            const randomRot = (Math.random() * 24 - 12).toFixed(2) + 'deg';
             charSpan.style.setProperty('--random-rot', randomRot);
             wordSpan.appendChild(charSpan);
           }
@@ -117,7 +110,6 @@ En ese punto específico del Globo, es donde la gravedad, el tiempo, la física 
       });
     });
 
-    // ANIMACIÓN 2: Efecto absorción gravitacional al escrollear
     function handleScroll() {
       const viewportHeight = window.innerHeight;
       paragraphs.forEach(p => {
@@ -125,26 +117,22 @@ En ese punto específico del Globo, es donde la gravedad, el tiempo, la física 
         const elementCenter = rect.top + rect.height / 2;
         const distanceFromCenter = Math.abs((viewportHeight / 2) - elementCenter);
         const normalizedDistance = Math.min(distanceFromCenter / (viewportHeight / 1.8), 1);
-
         let opacity = 1 - Math.pow(normalizedDistance, 2);
         let translate = 0;
         let scale = 1;
-
         if (rect.top < viewportHeight / 3) {
           const factor = Math.max(0, (viewportHeight / 3 - rect.top) / (viewportHeight / 3));
           translate = -factor * 40; 
           scale = 1 - (factor * 0.1); 
         }
-
         p.classList.add('scroll-absorption');
         p.style.setProperty('--scroll-opacity', opacity);
-        p.style.setProperty('--scroll-translate', `${translate}px`);
+        p.style.setProperty('--scroll-translate', translate + 'px');
         p.style.setProperty('--scroll-scale', scale);
       });
     }
-
     window.addEventListener('scroll', handleScroll);
     window.addEventListener('resize', handleScroll);
     handleScroll();
-  });
-</script>
+  })();
+">
