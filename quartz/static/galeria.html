@@ -21,7 +21,7 @@
     }
 
     .gallery-container {
-      max-width: 1000px; /* Un poco más ancha para que luzcan las fotos */
+      max-width: 1000px;
       margin: 0 auto;
     }
 
@@ -62,8 +62,8 @@
     }
 
     .gallery-item:hover img {
-      transform: scale(1.03); /* Zoom suave */
-      filter: brightness(1.1); /* Lo ilumina un poquito */
+      transform: scale(1.03);
+      filter: brightness(1.1);
     }
 
     /* --- ESTILOS DEL MODAL (LIGHTBOX) --- */
@@ -121,22 +121,63 @@
   
   <div class="gallery-grid">
     <div class="gallery-item">
-      <img src="https://images.unsplash.com/photo-1506744626753-eda8151a74a0?w=500" alt="Paisaje 1">
+      <img src="/fotos-galeria/3.jpeg" alt="paquillo corriendo, la sacaron drac y lolo y está genial.">
     </div>
+    
     <div class="gallery-item">
-      <img src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?w=500" alt="Arquitectura">
+      <img src="/fotos-galeria/8.jpg" alt="no se en qué año habremos estado, pero estaba de viaje en punta cana e hicimos videollamada con german y la emi mientras estaban en ingles y me acuerdo patente de ese momento todavía.">
     </div>
+    
     <div class="gallery-item">
-      <img src="https://images.unsplash.com/photo-1518098268026-4e89f1a2cd8e?w=500" alt="Diseño">
+      <img src="/fotos-galeria/amaicha.jpg" alt="del viaje de campo de levantamiento, tenía un sueño.">
     </div>
+    
     <div class="gallery-item">
-      <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=500" alt="Naturaleza vertical">
+      <img src="/fotos-galeria/conmaxii.jpg" alt="fue durante la cena de la campaña de geomorfo, me re gustó ese viaje, se me hizo muy tranquilo y lo disfruté mucho">
     </div>
+    
     <div class="gallery-item">
-      <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=500" alt="Montaña">
+      <img src="/fotos-galeria/dracamigomio.png" alt="la robé de un estado de la fer. Me encantó, facu sale muy contento y me saca una sonrisa ver esta foto.">
     </div>
+    
     <div class="gallery-item">
-      <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=500" alt="Bosque">
+      <img src="/fotos-galeria/enfermo.jpg" alt="me gusta mucho esta foto porque ASI LITERALMENTE se siente enfermarse, y yo me enfermo seguido">
+    </div>
+    
+    <div class="gallery-item">
+      <img src="/fotos-galeria/facucumpliendomisueño.png" alt="me encantaría ir a Legoland algún día y facu ya me ganó">
+    </div>
+    
+    <div class="gallery-item">
+      <img src="/fotos-galeria/felizcumplewid.jpeg" alt="encontré esta foto de mini leonchi y se lo ve muy contento">
+    </div>
+    
+    <div class="gallery-item">
+      <img src="/fotos-galeria/letiyleonchiminis.jpg" alt="cuando eran minis, ahora ya son jovenzuelos">
+    </div>
+    
+    <div class="gallery-item">
+      <img src="/fotos-galeria/minileti.jpeg" alt="que cutee">
+    </div>
+    
+    <div class="gallery-item">
+      <img src="/fotos-galeria/mispapas.jpg" alt="me encanta esta foto, se los ve re entusiasmados">
+    </div>
+    
+    <div class="gallery-item">
+      <img src="/fotos-galeria/salvaylolopequeños.jpg" alt="eramos muy pequeños y compinches">
+    </div>
+    
+    <div class="gallery-item">
+      <img src="/fotos-galeria/paseandoconlaemii.jpg" alt="ese día me gustó mucho. Fuimos a pasear topmente al alterpoint y llevé el celu chiquito para sacarnos fotos lindas por primera vez. nunca nunca nos sacamos fotos">
+    </div>
+    
+    <div class="gallery-item">
+      <img src="/fotos-galeria/otoñoenmicasa.jpg" alt="esta foto representa perfectamente como se siente el otoño aca en mi casa">
+    </div>
+    
+    <div class="gallery-item">
+      <img src="/fotos-galeria/otoñoenlafacultad.jpg" alt="no quiero olvidarme de esta foto cuando vuelva el verano che">
     </div>
   </div>
 </div>
@@ -158,7 +199,7 @@
     galleryItems.forEach(img => {
       img.addEventListener('click', function() {
         modal.style.display = "block";
-        modalImg.src = this.src; // Le pasa la misma foto al modal
+        modalImg.src = this.src; 
       });
     });
 
