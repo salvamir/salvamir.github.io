@@ -38,7 +38,6 @@ Varios de los cuadros que van a encontrar en esta página son de Tafí y los hiz
 Te dejo fotos para que te den ganas de dejar la pantalla y salir afuera:
 ![[tafiii.mp4]]![[tafi.jpg]]
 ![[tafif.jpg]]
-
 ## Para Hacer En Ésta Página:
 Ahora estoy copado con este proyecto, así que quiero aprovechar el empujón e ir mostrando mi avance.
 - ~~Crear una página web~~
