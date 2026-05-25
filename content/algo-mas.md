@@ -8,6 +8,10 @@ title: ¿Algo más?
 
 Son infinitas las maneras de hacerte tu página. No soy desarrollador, asi que solo puedo proponerte las salidas fáciles. Por lo pronto, podés arrancar haciendote un blog en [Bear](https://bearblog.dev/accounts/login/?next=/nubes/dashboard/) o en [Pika!](https://pika.page). También, podés hacerte una plantilla de presentación en [Carrd](https://carrd.co), o en [Canva](https://www.canva.com/website-builder/), o en [Wordpress](https://wordpress.com). Podés explorar [Neocities](https://neocities.org), pero no es tanto mi estilo. 
 Si querés una solución eficiente, te recomiendo empezar por Pika!, la versión gratuita es bastante completa. 
+
+## Cómo subscribirse por RSS a esta página.
+El RSS (Really Simple Syndification) es básicamente una manera de poder enterarse cada actualización de una página web. No es exactamente eso, pero todavía no lo termino de entender (Para más información entrar [acá](https://www.rssboard.org/rss-specification#whatIsRss)). Lo importante es que si querés enterarte de toda modificación que haga, entrá a [este](https://blogtrottr.com) link y pone este URL a donde te lo pide (https://salvamir.github.io/index.xml)
+
 ## <font color="#eeece1">Razones por las que quise hacer esta página.</font>
 
 1. Quería un lugar totalmente mío y más "duradero" para archivar momentos y cosas piola. Ya estaba cansado de llenar cuadernos uno tras otro con pensamientos que nadie más que Dios y yo conocemos. 
