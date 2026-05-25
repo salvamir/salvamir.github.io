@@ -11,11 +11,9 @@ Teniendo en cuenta eso ¿No vivimos nosotros así también? No tenemos la misma 
 ## Ser productivo es serlo todo el tiempo.
 Siempre se me dijo eso. Ser perseverante en un propósito secular cualquiera implica mantenerlo con voluntad de acero, funcionando durante los 365 días del año. Pero ¿No vimos acaso que ni la naturaleza que nos rodea ni nuestra propia naturaleza humana funcionan así? Si durante invierno no tengo fuerzas emocionales para hacer ejercicio, salir a correr, salir de guitarreada, etc ¿Por qué debería hacerlo? Será que el invierno es un tiempo propicio para otra cosa... Así como las plantas descansan y recuperan sus fuerzas, tal vez nosotros también deberíamos hacerlo.
 
-> [!note] El Momento Oportuno, Eclesiastés 3
->
-> *"Hay un momento para todo y un tiempo para cada cosa*
-> *bajo el sol: un tiempo para nacer y un tiempo para morir, un tiempo para plantar y un tiempo para arrancarlo plantado; un tiempo para matar y un tiempo para curar,*
-> *un tiempo para demoler y un tiempo para edificar; un tiempo para llorar y un tiempo para reír, un tiempo para lamentarse y un tiempo para bailar; un tiempo para arrojar piedras y un tiempo para recogerlas (...)"*
+> [!cite]+ El Momento Oportuno, Eclesiastés 3
+> "Hay un momento para todo y un tiempo para cada cosa bajo el sol: un tiempo para nacer y un tiempo para morir, un tiempo para plantar y un tiempo para arrancarlo plantado; un tiempo para matar y un tiempo para curar, un tiempo para demoler y un tiempo para edificar; un tiempo para llorar y un tiempo para reír, un tiempo para lamentarse y un tiempo para bailar; un tiempo para arrojar piedras y un tiempo para recogerlas (...)"
+
 
 Una planta en invierno no considera que está siendo improductiva por no producir fruto. Al contrario, está siendo muy productiva porque está acumulando energías para la etapa siguiente, en la cual si dará fruto. Es productiva porque sigue su naturaleza.
 
