@@ -356,12 +356,11 @@ body[data-slug="El-Jardin/index"] .content-meta {
   display: none !important;
 }
 
-// Cambiar el color de los títulos de los bloques colapsables al dorado de la paleta
-summary {
+/* ==========================================
+   12. COLOR DE TÍTULOS EN CALLOUTS (LINKS)
+   ========================================== */
+.callout summary.callout-title,
+.callout summary.callout-title .callout-title-inner,
+.callout summary.callout-title .fold-icon {
   color: #B7966C !important;
-  
-  // Esto asegura que si tiene un enlace adentro o un ícono, también use el color correcto
-  span, h2, h3, h4, h5, h6 {
-    color: #B7966C !important;
-  }
 }
