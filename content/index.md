@@ -1,5 +1,6 @@
 ---
 title: Salva Más De Cerca
+description: Acá me gusta coleccionar detalles de mi vida.
 ---
 <style>
   /* 1. ESTADO BASE: Mostramos el mapa, escondemos los botones */
