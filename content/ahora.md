@@ -2,7 +2,9 @@
 title: 📅 Ahora
 ---
 Acá archivo lo que vengo viviendo.
-
+#### Hoy es 25 de mayo.
+- 25/05/2026
+Que hermosa es Argentina. Rezo por la gente que la hizo ser lo que es, y por quienes existe hoy.
 #### Estoy viviendo el otoño.
 - 20/05/2026
 Me encanta como se ve el otoño. Acá es como que el sol es muy brillante y todo se ve en reposo. Es muy descansador.
