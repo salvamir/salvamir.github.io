@@ -45,7 +45,7 @@ Ahora estoy copado con este proyecto, así que quiero aprovechar el empujón e i
 - ~~Crear un link RSS~~
 - ~~Tener un libro de visitas~~
 - ~~Tener un guestbook NATIVO~~
-- Mejorar la galería
+- ~~Mejorar la galería~~
 - Achicar tamaño de letra de los titulos, en general
 - Cambiar colores de los !abstracts
 - Tener un favicon hecho a mano
