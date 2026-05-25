@@ -48,8 +48,8 @@ Ahora estoy copado con este proyecto, así que quiero aprovechar el empujón e i
 - ~~Mejorar la galería~~
 - Crear mi propio badge
 - Cambiar colores de los !abstracts
-- Tener un favicon hecho a mano
+- ~~Tener un favicon hecho a mano~~
 - Incorporar Pretext
 - Tener un dominio propio
-- Conseguir que mi página pueda ser encontrada por cualquier motor de búsqueda.
+- ~~Conseguir que mi página pueda ser encontrada por cualquier motor de búsqueda.~~
 ## ¡Listo! Eso fue todo por ahora
