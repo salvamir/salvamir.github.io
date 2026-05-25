@@ -30,7 +30,7 @@ Esta página existe para que vos, yo y cualquiera que entre pueda sentirse human
 El internet es un invento muy zarpado y muy útil. Me parece indispensable aprender a convivir sanamente con la tecnología para que nos sean propicias. La idea es que podamos prender y apagar la conexión por decisión propia cuando queramos.
 
 Acá en el internet hay muchas cosas valiosas. Algunas de ellas las recopilé en mis [[libro-de-visitas|links]]. Por eso, te invito a entrar a [esta](https://liturgiacatolica.org/Lucas/5,1%E2%80%9111.html) página secreta.
-## <font color="#eeece1">Naturaleza y Tafí del valle.</font>
+## Tafí del valle.
 Me encanta la naturaleza y salir de caminatas. Me encanta tafí a pesar de que casi nunca elijo ir. Siempre termino priorizando la facultad, pero esa es otra charla.
 Varios de los cuadros que van a encontrar en esta página son de Tafí y los hizo un tío mío. 
 Te dejo fotos para que te den ganas de dejar la pantalla y salir afuera:
@@ -46,7 +46,7 @@ Ahora estoy copado con este proyecto, así que quiero aprovechar el empujón e i
 - ~~Tener un libro de visitas~~
 - ~~Tener un guestbook NATIVO~~
 - ~~Mejorar la galería~~
-- Achicar tamaño de letra de los titulos, en general
+- Crear mi propio badge
 - Cambiar colores de los !abstracts
 - Tener un favicon hecho a mano
 - Incorporar Pretext

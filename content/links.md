@@ -1,5 +1,5 @@
 ## 🌐 Links
-Te dejo otros lugares interesantes para ver. Podés encontrar nuevas páginas por [acá](https://wiby.org). Esta es mi <font color="#4bacc6">gran lista</font> de páginas web que me gustan. Las anoto así no me las olvido.
+Te dejo otros lugares interesantes para ver. Podés encontrar nuevas páginas por [acá](https://wiby.org). Esta es mi <font color="#fbd5b5">gran lista</font> de páginas web que me gustan. Las anoto así no me las olvido.
 
 > [!abstract]- Directories
 > - [¡BlogBlog!](https://blogblog.es) Blogs en español
