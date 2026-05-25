@@ -1,3 +1,8 @@
+---
+cssclasses:
+  - blog-post
+date: 2026-05-25
+---
 Hace un par de días que vengo leyendo a muchas personas que hablan sobre como viven su vida en etapas, que no necesariamente coinciden con el calendario común y corriente. Al final de este blog les dejo una lista de enlaces en el tema, por si les interesa. Debe ser que se está poniendo de moda.
 
 La idea de medir nuestro tiempo en base a algo que no sea un calendario estructurado y cuadriculado (como una grilla), quedó dándome vueltas en la cabeza. Si se fijan bien, en la naturaleza, el tiempo pasa en estaciones. A simple vista es algo muy obvio, pero si uno se detiene un segundo en ese detalle... deja mucho para pensar. Por ejemplo, en la agricultura, no se realiza la plantación de una determinada especie en cualquier momento. Ni tampoco su respectiva cosecha. A su vez, ese tiempo que es tal para una especie, es cual para la otra. No necesariamente todos los tipos de plantas germinan al mismo momento ni se cosechan sus frutos en el mismo período. Es algo obvio.
