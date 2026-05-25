@@ -41,6 +41,7 @@ Te dejo otros lugares interesantes para ver. Podés encontrar nuevas páginas po
 > - [Philosophica:](https://www.philosophica.info/index.html) Vast vault of philosophy information.
 > - [LaPhilo](https://laphilo.fr/index-en.html). More philosophy!
 > - [Medieval](https://going-medieval.com) 
+> - [La guía.](https://arte.laguia2000.com) It is about a lot of sciences.
 
 > [!abstract]- Interesting Websites
 > - [About Fiat Cars:](https://www.fiat.com.mx/blog.html) Q&A about cars so please enter this link.
