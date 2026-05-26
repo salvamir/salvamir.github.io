@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahora — Salva Más De Cerca</title>
+    <style>
+        /* --- ESTILOS GENERALES Y PALETA DE COLORES --- */
+        body {
+            background-color: #0d0c0a; /* Fondo ultra oscuro combinando con tu web */
+            color: #e3dac9; /* Texto crema suave */
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* --- CONTENEDOR DEL FEED (Efecto Columna Daniel) --- */
+        .feed-container {
+            width: 100%;
+            max-width: 600px;
+            padding: 3rem 1.5rem;
+            box-sizing: border-box;
+        }
+
+        /* --- ENCABEZADO DE LA PÁGINA --- */
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        header h1 {
+            font-family: 'Times New Roman', serif;
+            font-size: 2.5rem;
+            color: #E7C8A0; /* Dorado retro fijo */
+            margin: 0 0 0.5rem 0;
+        }
+        header p {
+            color: rgba(244, 235, 216, 0.6);
+            font-size: 1rem;
+            margin: 0;
+        }
+
+        /* --- DISEÑO DE LOS POSTS (CUADRADOS / BLOQUES) --- */
+        .post-card {
+            background-color: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(183, 150, 108, 0.15); /* Bordes dorados sutiles */
+            border-radius: 16px;
+            padding: 1.5rem;
+            margin-bottom: 2.5rem;
+            box-sizing: border-box;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+        .post-card:hover {
+            border-color: rgba(183, 150, 108, 0.4);
+            transform: translateY(-2px);
+        }
+
+        /* Elemento 1: Fecha (Estilo Dorado Retro) */
+        .post-date {
+            font-family: 'Times New Roman', serif;
+            color: #B7966C; /* Dorado de la paleta */
+            font-size: 1.15rem;
+            font-weight: bold;
+            margin-bottom: 0.75rem;
+            border-bottom: 1px solid rgba(183, 150, 108, 0.1);
+            padding-bottom: 0.5rem;
+        }
+
+        /* Elemento 2: Texto descriptivo */
+        .post-text {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 1.2rem;
+            color: #e3dac9;
+        }
+        .post-text strong {
+            color: #E7C8A0;
+            display: block;
+            margin-bottom: 0.25rem;
+            font-size: 1.05rem;
+        }
+
+        /* Elemento 3: Contenedor de Imagen */
+        .post-image-wrapper {
+            width: 100%;
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: rgba(0,0,0,0.2);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .post-image-wrapper img {
+            width: 100%;
+            height: auto;
+            display: block;
+            cursor: pointer;
+            transition: opacity 0.2s ease;
+            border-bottom: 2px solid #0d0c0a; /* Detalle visual: separación de imágenes */
+        }
+        .post-image-wrapper img:last-child {
+            border-bottom: none; /* Para que la última foto no tenga borde negro abajo */
+        }
+        .post-image-wrapper img:hover {
+            opacity: 0.85;
+        }
+
+        /* --- INTERACTIVIDAD: LIGHTBOX MODAL DE ZOOM --- */
+        .lightbox-modal {
+            display: none; /* Oculto por defecto */
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(13, 12, 10, 0.92); /* Fondo oscuro translúcido */
+            backdrop-filter: blur(10px); /* Difumina lo que está detrás */
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 2rem;
+            box-sizing: border-box;
+        }
+        .lightbox-content {
+            max-width: 90%;
+            max-height: 75vh;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.8);
+            border: 1px solid rgba(183, 150, 108, 0.3);
+            animation: zoomIn 0.25s ease;
+        }
+        .lightbox-caption {
+            margin-top: 1.5rem;
+            color: #E7C8A0;
+            font-family: 'Times New Roman', serif;
+            font-size: 1.15rem;
+            text-align: center;
+            max-width: 600px;
+            line-height: 1.5;
+            animation: fadeIn 0.4s ease;
+        }
+        .close-btn {
+            position: absolute;
+            top: 1.5rem;
+            right: 2rem;
+            color: #e3dac9;
+            font-size: 2.5rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+        .close-btn:hover {
+            color: #B7966C;
+        }
+
+        /* Animaciones para el Lightbox */
+        @keyframes zoomIn {
+            from { transform: scale(0.95); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="feed-container">
+        <header>
+            <h1>Ahora</h1>
+            <p>Archivo de lo que voy viviendo.</p>
+        </header>
+        <div class="post-card">
+            <div class="post-date">25/05/2026</div>
+            <div class="post-text">
+                <strong>Feliz día de la Patria</strong>
+                Hoy deberíamos todos tener una escarapela.
+            </div>
+            <div class="post-image-wrapper">
+                <img src="fotos-galeria/25demayo.jpg" alt="me encanta este dibujito, estoy a punto de usarlo de badge." class="lightbox-trigger">
+            </div>
+        </div>
+        
+        <div class="post-card">
+            <div class="post-date">24/05/2026</div>
+            <div class="post-text">
+                <strong>Caos</strong>
+                la idea era hacer un antes y un después pero hice solo un antes.
+            </div> 
+            <div class="post-image-wrapper">
+                <img src="fotos-galeria/desorden.jpg" alt="todo eso guarde vieron? bueno, mi mama lo hace todos los días" class="lightbox-trigger">
+                <img src="fotos-galeria/desordenn.jpg" alt="esto también" class="lightbox-trigger">
+            </div>
+         </div>
+         
+        <div class="post-card">
+            <div class="post-date">20/05/2026</div>
+            <div class="post-text">
+                <strong>Estoy viviendo el otoño</strong>
+                Me encanta cómo se ve el otoño. Acá es como que el sol es muy brillante y todo se ve en reposo. Es muy descansador.
+            </div>
+            <div class="post-image-wrapper">
+                <img src="fotos-galeria/otoñoenmicasa.jpg" alt="Un rayo de sol cruzando las hojas." class="lightbox-trigger">
+                <img src="fotos-galeria/casadelvecino.jpg" alt="Un rayo de sol cruzando las hojas." class="lightbox-trigger">
+                <img src="fotos-galeria/arbolysol.jpg" alt="Un rayo de sol cruzando las hojas." class="lightbox-trigger">
+            </div>
+        </div>
+
+        <div class="post-card">
+            <div class="post-date">16/05/2026</div>
+            <div class="post-text">
+                <strong>Conociendo un barsito nuevo</strong>
+                Quedaba un poco más lejos. Hablamos de lo frustrado que me sentí por la facultad.
+            </div>
+            <div class="post-image-wrapper">
+                <img src="fotos-galeria/emisonriendo.jpg" alt="hacia un friiio, para vos salva del futuro que después lo extrañas" class="lightbox-trigger">
+            </div>
+        </div>
+
+        <div class="post-card">
+            <div class="post-date">17/04/2026</div>
+            <div class="post-text">
+                <strong>Cumple Draculín 20 años. 🎉</strong>
+                Drac festejó su cumple en su casa, Germán cocinó las hamburguesas a la parrilla. Fran y yo llegamos cuando todo ya estaba hecho y las novias estaban invitadas. Nos sacamos un par de fotos. Tocamos la "Chacarera Del Desautado".
+            </div>
+            <div class="post-image-wrapper">
+                <img src="fotos-galeria/cumpledracc.jpg" alt="mirenlo a german es glorioso (esbroma)" class="lightbox-trigger">
+                <img src="fotos-galeria/cumpledraccc.jpg" alt="fran tio como te quiero" class="lightbox-trigger">
+            </div>
+        </div>
+
+        <div class="post-card">
+            <div class="post-date">10/04/2026</div>
+            <div class="post-text">
+                <strong>Salida con la Emi después de Pascua</strong>
+                Salimos con la Emi a comer hamburguesas para conversar y ponernos al día por un rato. Venimos teniendo semanas muy largas y frías.
+            </div>
+            <div class="post-image-wrapper">
+                <img src="fotos-galeria/hamburguesaspostpascua.jpg" alt="es objetivamente mejor la pepsi que la coca" class="lightbox-trigger">
+            </div>
+        </div>
+
+        <div class="post-card">
+            <div class="post-date">05/04/2026</div>
+            <div class="post-text">
+                <strong>Cierre Pascua Joven</strong>
+                Al final salió todo bien. Estuve sin celular por esos días y me sirvió mucho para entregarme a los otros.
+            </div>
+            <div class="post-image-wrapper">
+                <img src="fotos-galeria/conlochicos.jpg" alt="llevé el micro celu y saqué varias fotitos wuju" class="lightbox-trigger">
+            </div>
+        </div>
+
+        <div class="post-card">
+            <div class="post-date">23/03/2026</div>
+            <div class="post-text">
+                <strong>El árbol del siambon</strong>
+                Fuimos con los chicos a buscar madera para que lolo pueda tallar. Terminamos talando un árbol.
+            </div>
+            <div class="post-image-wrapper">
+                <img src="fotos-galeria/coyuyo.jpg" alt="una metamorfala!" class="lightbox-trigger">
+                <img src="fotos-galeria/frangerman.jpg" alt="de que hablarán..." class="lightbox-trigger">
+            </div>
+        </div>
+
+        <div class="post-card">
+            <div class="post-date">22/03/2026</div>
+            <div class="post-text">
+                <strong>Comiendo Papas</strong>
+                Hoy la Emi de la nada me llamó para preguntarme si quería salir a comer papas. Le dije que si.
+            </div>
+            <div class="post-image-wrapper">
+                <img src="fotos-galeria/comiendopapas.jpg" alt="está bueno animarse a salir de la nada che" class="lightbox-trigger">
+                <img src="fotos-galeria/sonriendopapas.jpg" alt="estaban ricas" class="lightbox-trigger">
+            </div>
+        </div>
+
+        <div class="post-card">
+            <div class="post-date">21/03/2026</div>
+            <div class="post-text">
+                <strong>Convivencia pre-Pascua Joven</strong>
+                Fue medio agotador, pero estuvo genial, los chicos le pusieron un montón de esfuerzo, recen por nosotros, para que salga todo bien.
+            </div>
+            <div class="post-image-wrapper">
+                <img src="fotos-galeria/prepascua.jpg" alt="teniamos un miedo tio chaval macho" class="lightbox-trigger">
+            </div>
+        </div>
+
+    </div>
+
+    <div id="lightboxModal" class="lightbox-modal">
+        <span class="close-btn" id="closeBtn">&times;</span>
+        <img class="lightbox-content" id="lightboxImg">
+        <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+
+    <script>
+        const modal = document.getElementById('lightboxModal');
+        const modalImg = document.getElementById('lightboxImg');
+        const captionText = document.getElementById('lightboxCaption');
+        const closeBtn = document.getElementById('closeBtn');
+
+        // Buscar todas las imágenes del feed y asignarles el evento clic
+        document.querySelectorAll('.lightbox-trigger').forEach(image => {
+            image.addEventListener('click', () => {
+                modal.style.display = 'flex';
+                modalImg.src = image.src;
+                // El texto alternativo (alt) pasa a ser el epígrafe/caption flotante
+                captionText.innerText = image.alt; 
+            });
+        });
+
+        // Cerrar al hacer clic en la cruz (X)
+        closeBtn.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        // Cerrar de forma intuitiva haciendo clic en cualquier parte oscura del fondo
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

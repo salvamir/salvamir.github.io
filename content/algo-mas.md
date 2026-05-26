@@ -3,22 +3,35 @@ title: ¿Algo más?
 ---
 > [!info] Últimas actualizaciones
 > ¡Lo último que hice fue agregar crear el [[libro-de-visitas|libro de visitas]]!
-
 ## Cómo tener mi propia página web.
-
 Son infinitas las maneras de hacerte tu página. No soy desarrollador, asi que solo puedo proponerte las salidas fáciles. Por lo pronto, podés arrancar haciendote un blog en [Bear](https://bearblog.dev/accounts/login/?next=/nubes/dashboard/) o en [Pika!](https://pika.page). También, podés hacerte una plantilla de presentación en [Carrd](https://carrd.co), o en [Canva](https://www.canva.com/website-builder/), o en [Wordpress](https://wordpress.com). Podés explorar [Neocities](https://neocities.org), pero no es tanto mi estilo. 
 Si querés una solución eficiente, te recomiendo empezar por Pika!, la versión gratuita es bastante completa. 
-
 ## Cómo subscribirse por RSS a esta página.
 El RSS (Really Simple Syndification) es básicamente una manera de poder enterarse cada actualización de una página web. No es exactamente eso, pero todavía no lo termino de entender (Para más información entrar [acá](https://www.rssboard.org/rss-specification#whatIsRss)). Lo importante es que si querés enterarte de toda modificación que haga, entrá a [este](https://blogtrottr.com) link y pone este URL a donde te lo pide (https://salvamir.github.io/index.xml)
-
 ## <font color="#eeece1">Razones por las que quise hacer esta página.</font>
-
 1. Quería un lugar totalmente mío y más "duradero" para archivar momentos y cosas piola. Ya estaba cansado de llenar cuadernos uno tras otro con pensamientos que nadie más que Dios y yo conocemos. 
 2. Ese lugar no podía ser [Instagram]([instagram.com/salva_mirande](https://www.youtube.com/redirect?event=channel_description&redir_token=QUFFLUhqbUxJLVFZNzRiTW1JYy00MEh1Mk1tMHAzamo4QXxBQ3Jtc0ttQnFsZnFVTUtMMjZaMzJBanozNUFsMFN3UWVNNzA3cklrQXhVcDhrdW9GSU0zbEttM2NmaU5FMTZOU1hVZjdhZ01adUxtYWRYZDdRc1ZrM3J2V2d5VGxodVBTdEJMclRfU21kblRYemExSTZYbGZ5TQ&q=https%3A%2F%2Finstagram.com%2Fsalva_mirande))  ni [Youtube](https://youtube.com/@salvamirande?si=bo5QZYYN1T4N29Qm) porque no son técnicamente míos y eso me molestaba. Tampoco tenía la libertad de no ser profesional. Nunca fuí muy profesional en ningún lado.
 3. Quería poder hacer algo modificable y personalizable.
+## Progreso en mi blog:
+Ahora estoy copado con este proyecto, así que quiero aprovechar el empujón e ir mostrando mi avance.
+- ~~Crear una página web~~
+- ~~Crear un járdin digital~~
+- ~~Sacar mi página de Carrd y Pika!~~
+- ~~Personalizar mi página y conseguir una paleta de colores~~
+- ~~Crear un link RSS~~
+- ~~Tener un libro de visitas~~
+- ~~Tener un guestbook NATIVO~~
+- ~~Mejorar la galería~~
+- Crear mi propio badge
+- Cambiar colores de los !abstracts
+- ~~Tener un favicon hecho a mano~~
+- Incorporar Pretext
+- Mejorar el feed de ahora
+- Agregar etiquetas
+- Tener un dominio propio
+- Corregir distribución en el espacio del libro de visitas
+- ~~Conseguir que mi página pueda ser encontrada por cualquier motor de búsqueda.~~
 ## <font color="#fbd5b5">Tecnología e Internet.</font>
-
 Los que me conocen sabrán que, de repente, soy fanático de la tecnología y adicto al internet. Antes eran los videos de youtube, después fueron los reels y tiktoks, y hoy son los blogs. Aprendí a manejar esa necesidad de consumir y obtener dopamina fácil e instantánea. 
 
 Ahora mismo, gracias a Dios te puedo decir que estoy empezando a tener una relación más "sana" con la tecnología. Recen por mi, para que aprenda realmente a darle el espacio que le corresponde a mi celular y a mi computadora, para que no me coman la vida porfa. 
@@ -40,21 +53,4 @@ Varios de los cuadros que van a encontrar en esta página son de Tafí y los hiz
 Te dejo fotos para que te den ganas de dejar la pantalla y salir afuera:
 ![[tafiii.mp4]]![[tafi.jpg]]
 ![[tafif.jpg]]
-## Para Hacer En Ésta Página:
-Ahora estoy copado con este proyecto, así que quiero aprovechar el empujón e ir mostrando mi avance.
-- ~~Crear una página web~~
-- ~~Crear un járdin digital~~
-- ~~Sacar mi página de Carrd y Pika!~~
-- ~~Personalizar mi página y conseguir una paleta de colores~~
-- ~~Crear un link RSS~~
-- ~~Tener un libro de visitas~~
-- ~~Tener un guestbook NATIVO~~
-- ~~Mejorar la galería~~
-- Crear mi propio badge
-- Cambiar colores de los !abstracts
-- ~~Tener un favicon hecho a mano~~
-- Incorporar Pretext
-- Mejorar el feed de ahora
-- Tener un dominio propio
-- ~~Conseguir que mi página pueda ser encontrada por cualquier motor de búsqueda.~~
 ## ¡Listo! Eso fue todo por ahora
