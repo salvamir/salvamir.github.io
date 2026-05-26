@@ -18,14 +18,27 @@
       color: var(--text-main);
       font-family: "New York", Georgia, serif;
     }
-    .guestbook-container { max-width: 600px; margin: 0 auto; padding: 10px; }
+    
+    /* Max-width 100% para que ocupe todo el espacio que Quartz le de */
+    .guestbook-container { max-width: 100%; margin: 0 auto; padding: 10px; box-sizing: border-box; }
+    
     .guestbook-main-title { text-align: center; font-size: 2.5rem; margin-bottom: 1.5rem; }
     .guestbook-tabs { display: flex; gap: 10px; margin-bottom: 20px; justify-content: center; }
     .tab-btn { background: transparent; border: 1px solid var(--border-color); color: var(--text-main); padding: 8px 16px; border-radius: 8px; cursor: pointer; font-size: 1rem; font-family: inherit; }
     .tab-btn.active, .tab-btn:hover { background: var(--accent); color: #111; border-color: var(--accent); }
     .guestbook-section { display: none; }
     .guestbook-section.active { display: block; }
-    #paint-canvas { background: var(--bg-canvas); border-radius: 8px; display: block; margin: 0 auto 20px auto; cursor: crosshair; touch-action: none; }
+    
+    #paint-canvas { 
+      background: var(--bg-canvas); 
+      border-radius: 8px; 
+      display: block; 
+      margin: 0 auto 20px auto; 
+      cursor: crosshair; 
+      touch-action: none; 
+      max-width: 100%; /* Ajuste para que no rompa el diseño en celulares */
+    }
+    
     .canvas-toolbar { display: flex; gap: 8px; align-items: center; justify-content: center; background: var(--bg-card); padding: 8px; border-radius: 8px; margin-bottom: 10px; border: 1px solid var(--border-color); }
     .canvas-toolbar button { background: transparent; border: none; color: var(--text-main); padding: 4px 8px; border-radius: 4px; cursor: pointer; }
     .canvas-toolbar button.active { background: rgba(255,255,255,0.1); outline: 1px solid var(--accent); }
@@ -36,36 +49,42 @@
     .submit-btn { width: 100%; padding: 12px; background: var(--accent); border: none; border-radius: 8px; color: #111; font-weight: bold; font-size: 1rem; cursor: pointer; margin-top: 10px; }
     .entries-title { margin-top: 40px; border-top: 1px solid var(--border-color); padding-top: 20px; }
     
-    /* Contenedor de mensajes: Grilla estilo Pinterest (Masonry) */
+    /* Contenedor de mensajes: Grilla dispersa (Masonry) adaptativa */
     .guestbook-grid { 
-      margin-top: 3rem; 
+      margin-top: 2rem; 
       padding-right: 0;
-      column-count: 1;
-      column-gap: 15px;
+      column-count: 2; /* 2 Columnas de base para asegurar diseño disperso */
+      column-gap: 20px;
+      width: 100%;
     }
 
-    @media (min-width: 600px) {
+    @media (max-width: 600px) {
       .guestbook-grid {
-        column-count: 2;
+        column-count: 1; /* Solo en celulares muy chicos pasamos a 1 columna */
       }
     }
 
-    @media (min-width: 1020px) {
+    @media (min-width: 900px) {
       .guestbook-grid {
-        column-count: 3;
+        column-count: 3; /* 3 Columnas si la pantalla es más ancha */
       }
     }
 
     .guestbook-entry { 
       background: var(--bg-card); 
       border: 1px solid var(--border-color); 
-      border-radius: 8px; 
-      padding: 12px; 
-      margin-bottom: 15px; 
+      border-radius: 12px; /* Un poco más suaves los bordes */
+      padding: 16px; 
+      margin-bottom: 20px; 
       break-inside: avoid;
       display: inline-block;
       width: 100%;
       box-sizing: border-box;
+      transition: transform 0.2s ease;
+    }
+    
+    .guestbook-entry:hover {
+      transform: translateY(-3px); /* Levanta un poco la nota al pasar el mouse */
     }
 
     .entry-content img { 
@@ -77,14 +96,14 @@
 
     .entry-text { 
       font-size: 0.95rem; 
-      line-height: 1.4; 
+      line-height: 1.5; 
       margin: 0; 
       word-break: break-word; 
       font-family: "New York", Georgia, serif; 
     }
 
     .entry-meta { 
-      margin-top: 10px; 
+      margin-top: 12px; 
       font-size: 0.8rem; 
       opacity: 0.6; 
       font-family: system-ui, sans-serif; 
@@ -137,7 +156,7 @@
     <button type="submit" id="btn-submit" class="submit-btn">Enviar</button>
   </form>
 
-  <h2 class="entries-title">Entradas Recientes</h2>
+  <h2 class="entries-title">Visitas Recientes</h2>
   <div id="guestbook-entries" class="guestbook-grid">
     <p class="loading-status">Esperando a que aparezcan los últimos mensajes...</p>
   </div>
@@ -178,8 +197,12 @@
       const rect = canvas.getBoundingClientRect();
       const clientX = e.clientX || (e.touches && e.touches[0].clientX);
       const clientY = e.clientY || (e.touches && e.touches[0].clientY);
-      const x = clientX - rect.left;
-      const y = clientY - rect.top;
+      
+      // Ajuste mágico para que dibuje perfecto sin importar si el CSS achicó el canvas en celulares
+      const scaleX = canvas.width / rect.width;   
+      const scaleY = canvas.height / rect.height; 
+      const x = (clientX - rect.left) * scaleX;
+      const y = (clientY - rect.top) * scaleY;
 
       ctx.lineWidth = brushSize;
       ctx.strokeStyle = currentTool === 'eraser' ? '#faf7f2' : '#000000';
@@ -287,6 +310,13 @@
 
     fetchEntries();
   });
+
+  // ¡MAGIA CONTRA EL DOBLE SCROLL!: Este script avisa constantemente a la página padre la altura real de este documento.
+  const resizeObserver = new ResizeObserver(() => {
+    const realHeight = document.documentElement.scrollHeight;
+    window.parent.postMessage({ type: 'resize-iframe', height: realHeight }, '*');
+  });
+  window.addEventListener('load', () => resizeObserver.observe(document.body));
 </script>
 </body>
 </html>
