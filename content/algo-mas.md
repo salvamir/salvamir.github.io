@@ -26,7 +26,7 @@ Ahora estoy copado con este proyecto, así que quiero aprovechar el empujón e i
 - Cambiar colores de los !abstracts
 - ~~Tener un favicon hecho a mano~~
 - Incorporar Pretext
-- Mejorar el feed de ahora
+- ~~Mejorar el feed de ahora~~
 - Agregar etiquetas
 - Agregar alt text a la galeria
 - Tener un dominio propio

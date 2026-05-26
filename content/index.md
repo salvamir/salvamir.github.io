@@ -55,7 +55,6 @@ description: Acá me gusta coleccionar detalles de mi vida.
     <area target="" alt="Solo para curiosos, si no te alcanzó con leer mis notas acá hay cosas más puntuales y aleatorias." title="Algo Más" href="https://salvamir.github.io/algo-mas" coords="513,308,373,267" shape="rect">
   </map>
 </div>
-
 <div class="menu-celular">
   <a href="https://salvamir.github.io" class="boton-pildora">Inicio</a>
   <a href="https://salvamir.github.io/Música/" class="boton-pildora">Música</a>
