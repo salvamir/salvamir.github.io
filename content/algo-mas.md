@@ -28,6 +28,7 @@ Ahora estoy copado con este proyecto, así que quiero aprovechar el empujón e i
 - Incorporar Pretext
 - Mejorar el feed de ahora
 - Agregar etiquetas
+- Agregar alt text a la galeria
 - Tener un dominio propio
 - Corregir distribución en el espacio del libro de visitas
 - ~~Conseguir que mi página pueda ser encontrada por cualquier motor de búsqueda.~~

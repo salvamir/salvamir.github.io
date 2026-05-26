@@ -150,7 +150,7 @@ article p {
 
 .badge-wall img {
   width: 88px !important;            
-  height: 31px !important;           
+  height: 31px !important;          
   object-fit: fill !important;       
   display: block !important;
 }
@@ -363,4 +363,30 @@ body[data-slug="El-Jardin/index"] .content-meta {
 .callout summary.callout-title .callout-title-inner,
 .callout summary.callout-title .fold-icon {
   color: #B7966C !important;
+}
+
+/* --- BOTÓN IR ARRIBA --- */
+#goToTopBtn {
+    display: none; 
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 999;
+    font-size: 1.5rem;
+    border: 1px solid rgba(183, 150, 108, 0.4);
+    outline: none;
+    background-color: rgba(13, 12, 10, 0.9);
+    color: #B7966C; 
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    transition: background-color 0.3s, transform 0.2s, border-color 0.2s;
+}
+#goToTopBtn:hover {
+    background-color: #B7966C;
+    color: #0d0c0a;
+    border-color: #E7C8A0;
+    transform: translateY(-3px);
 }
