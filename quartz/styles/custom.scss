@@ -268,7 +268,6 @@ ul.section-ul li > .desc {
   transform: translateY(-4px) !important; 
 }
 
-/* Modificado para que los links visitados mantengan siempre el mismo crema original */
 .page-header header .links a:visited {
   color: #ffffff !important; 
 }
@@ -321,8 +320,6 @@ h1.article-title, .content-meta, .tags {
 /* ==========================================
    11. OCULTAR TÍTULOS Y METADATOS POR PÁGINA
    ========================================== */
-
-/* 1. Inicio y Libro de Visitas (Archivos sueltos) */
 body[data-slug="index"] h1.article-title,
 body[data-slug="index"] .content-meta,
 body[data-slug="ahora"] h1.article-title,
@@ -339,8 +336,6 @@ body[data-slug="libreria"] h1.article-title,
 body[data-slug="libreria"] .content-meta,
 body[data-slug="libro-de-visitas"] h1.article-title,
 body[data-slug="libro-de-visitas"] .content-meta,
-
-/* 2. Notas y El Jardín (Índices de carpetas) */
 body[data-slug="Notas/index"] h1.article-title,
 body[data-slug="Notas/index"] .content-meta,
 body[data-slug="El-Jardín/index"] h1.article-title,
@@ -389,4 +384,16 @@ body[data-slug="El-Jardin/index"] .content-meta {
     color: #0d0c0a;
     border-color: #E7C8A0;
     transform: translateY(-3px);
+}
+
+/* ==========================================
+   13. IFRAME DEL LIBRO DE VISITAS 
+   (Para que se expanda sin generar scroll interno)
+   ========================================== */
+iframe {
+  width: 100% !important;
+  border: none !important;
+  overflow: hidden !important;
+  display: block !important;
+  min-height: 800px; /* Base mínima */
 }

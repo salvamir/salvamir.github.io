@@ -11,15 +11,18 @@
       --accent: #b7966c;
       --border-color: rgba(168, 158, 149, 0.3);
     }
-    body {
+    
+    html, body {
       margin: 0;
       padding: 0;
       background: transparent;
       color: var(--text-main);
       font-family: "New York", Georgia, serif;
+      /* ESTO ES CLAVE: Elimina cualquier barra de scroll interna del iframe */
+      overflow: hidden; 
+      height: auto;
     }
     
-    /* Max-width 100% para que ocupe todo el espacio que Quartz le de */
     .guestbook-container { max-width: 100%; margin: 0 auto; padding: 10px; box-sizing: border-box; }
     
     .guestbook-main-title { text-align: center; font-size: 2.5rem; margin-bottom: 1.5rem; }
@@ -36,7 +39,7 @@
       margin: 0 auto 20px auto; 
       cursor: crosshair; 
       touch-action: none; 
-      max-width: 100%; /* Ajuste para que no rompa el diseño en celulares */
+      max-width: 100%; 
     }
     
     .canvas-toolbar { display: flex; gap: 8px; align-items: center; justify-content: center; background: var(--bg-card); padding: 8px; border-radius: 8px; margin-bottom: 10px; border: 1px solid var(--border-color); }
@@ -53,30 +56,28 @@
     .guestbook-grid { 
       margin-top: 2rem; 
       padding-right: 0;
-      column-count: 2; /* 2 Columnas de base para asegurar diseño disperso */
-      column-gap: 20px;
       width: 100%;
+      /* Usamos column-count para el masonry inteligente */
+      column-gap: 20px;
     }
 
-    @media (max-width: 600px) {
-      .guestbook-grid {
-        column-count: 1; /* Solo en celulares muy chicos pasamos a 1 columna */
-      }
-    }
-
-    @media (min-width: 900px) {
-      .guestbook-grid {
-        column-count: 3; /* 3 Columnas si la pantalla es más ancha */
-      }
-    }
+    /* Reglas responsivas de las columnas para que se adapte al ancho disponible */
+    @media (max-width: 599px) { .guestbook-grid { column-count: 1; } }
+    @media (min-width: 600px) and (max-width: 899px) { .guestbook-grid { column-count: 2; } }
+    @media (min-width: 900px) { .guestbook-grid { column-count: 3; } }
 
     .guestbook-entry { 
       background: var(--bg-card); 
       border: 1px solid var(--border-color); 
-      border-radius: 12px; /* Un poco más suaves los bordes */
+      border-radius: 12px; 
       padding: 16px; 
       margin-bottom: 20px; 
+      
+      /* ESTO ES VITAL: Evita que un mensaje se corte por la mitad entre columnas */
       break-inside: avoid;
+      page-break-inside: avoid;
+      -webkit-column-break-inside: avoid;
+      
       display: inline-block;
       width: 100%;
       box-sizing: border-box;
@@ -84,7 +85,7 @@
     }
     
     .guestbook-entry:hover {
-      transform: translateY(-3px); /* Levanta un poco la nota al pasar el mouse */
+      transform: translateY(-3px); 
     }
 
     .entry-content img { 
@@ -198,7 +199,6 @@
       const clientX = e.clientX || (e.touches && e.touches[0].clientX);
       const clientY = e.clientY || (e.touches && e.touches[0].clientY);
       
-      // Ajuste mágico para que dibuje perfecto sin importar si el CSS achicó el canvas en celulares
       const scaleX = canvas.width / rect.width;   
       const scaleY = canvas.height / rect.height; 
       const x = (clientX - rect.left) * scaleX;
@@ -226,6 +226,7 @@
       tabDraw.classList.add('active'); tabWrite.classList.remove('active');
       sectionDraw.classList.add('active'); sectionWrite.classList.remove('active');
       wordsInput.removeAttribute('required');
+      triggerResizeUpdate(); // Actualiza altura al cambiar pestaña
     });
 
     tabWrite.addEventListener('click', () => {
@@ -233,6 +234,7 @@
       tabWrite.classList.add('active'); tabDraw.classList.remove('active');
       sectionWrite.classList.add('active'); sectionDraw.classList.remove('active');
       wordsInput.setAttribute('required', 'required');
+      triggerResizeUpdate(); // Actualiza altura al cambiar pestaña
     });
 
     btnPencil.addEventListener('click', () => { currentTool = 'pencil'; btnPencil.classList.add('active'); btnEraser.classList.remove('active'); });
@@ -252,17 +254,22 @@
         const data = await res.json();
         if (!data || data.length === 0) {
           container.innerHTML = '<p class="loading-status">Todavía no hay mensajes. ¡Sé el primero!</p>';
+          triggerResizeUpdate();
           return;
         }
         container.innerHTML = data.map(entry => {
           let contentHtml = entry.type === 'draw' || entry.type === 'image' 
-            ? `<img src="${entry.content}" alt="Dibujo">` 
+            ? `<img src="${entry.content}" alt="Dibujo" onload="triggerResizeUpdate()">` 
             : `<p class="entry-text">"${entry.content}"</p>`;
           let nameHtml = entry.website ? `<a href="${entry.website}" target="_blank" rel="noopener">${entry.name}</a>` : entry.name;
           return `<div class="guestbook-entry"><div class="entry-content">${contentHtml}</div><div class="entry-meta">Por ${nameHtml}</div></div>`;
         }).join('');
+        
+        // Forzamos actualización por si las imágenes cambian el layout
+        setTimeout(triggerResizeUpdate, 500);
       } catch (err) {
         container.innerHTML = '<p class="loading-status">Error al cargar mensajes.</p>';
+        triggerResizeUpdate();
       }
     }
 
@@ -311,11 +318,13 @@
     fetchEntries();
   });
 
-  // ¡MAGIA CONTRA EL DOBLE SCROLL!: Este script avisa constantemente a la página padre la altura real de este documento.
-  const resizeObserver = new ResizeObserver(() => {
+  // SISTEMA OPTIMIZADO PARA AVISAR AL PADRE SOBRE LA ALTURA (QUITA LA NECESIDAD DE SCROLL)
+  function triggerResizeUpdate() {
     const realHeight = document.documentElement.scrollHeight;
     window.parent.postMessage({ type: 'resize-iframe', height: realHeight }, '*');
-  });
+  }
+
+  const resizeObserver = new ResizeObserver(() => triggerResizeUpdate());
   window.addEventListener('load', () => resizeObserver.observe(document.body));
 </script>
 </body>
