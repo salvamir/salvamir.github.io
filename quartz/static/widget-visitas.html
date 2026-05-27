@@ -18,12 +18,17 @@
       background: transparent;
       color: var(--text-main);
       font-family: "New York", Georgia, serif;
-      /* ESTO ES CLAVE: Elimina cualquier barra de scroll interna del iframe */
-      overflow: hidden; 
-      height: auto;
+      /* Se eliminó el overflow: hidden de acá para permitir que el contenido mida lo que tenga que medir */
     }
     
-    .guestbook-container { max-width: 100%; margin: 0 auto; padding: 10px; box-sizing: border-box; }
+    .guestbook-container { 
+      max-width: 100%; 
+      margin: 0 auto; 
+      padding: 10px; 
+      box-sizing: border-box; 
+      /* Añadimos un padding inferior para asegurar que nada quede al borde */
+      padding-bottom: 40px;
+    }
     
     .guestbook-main-title { text-align: center; font-size: 2.5rem; margin-bottom: 1.5rem; }
     .guestbook-tabs { display: flex; gap: 10px; margin-bottom: 20px; justify-content: center; }
@@ -52,16 +57,13 @@
     .submit-btn { width: 100%; padding: 12px; background: var(--accent); border: none; border-radius: 8px; color: #111; font-weight: bold; font-size: 1rem; cursor: pointer; margin-top: 10px; }
     .entries-title { margin-top: 40px; border-top: 1px solid var(--border-color); padding-top: 20px; }
     
-    /* Contenedor de mensajes: Grilla dispersa (Masonry) adaptativa */
     .guestbook-grid { 
       margin-top: 2rem; 
       padding-right: 0;
       width: 100%;
-      /* Usamos column-count para el masonry inteligente */
       column-gap: 20px;
     }
 
-    /* Reglas responsivas de las columnas para que se adapte al ancho disponible */
     @media (max-width: 599px) { .guestbook-grid { column-count: 1; } }
     @media (min-width: 600px) and (max-width: 899px) { .guestbook-grid { column-count: 2; } }
     @media (min-width: 900px) { .guestbook-grid { column-count: 3; } }
@@ -72,45 +74,19 @@
       border-radius: 12px; 
       padding: 16px; 
       margin-bottom: 20px; 
-      
-      /* ESTO ES VITAL: Evita que un mensaje se corte por la mitad entre columnas */
       break-inside: avoid;
       page-break-inside: avoid;
       -webkit-column-break-inside: avoid;
-      
       display: inline-block;
       width: 100%;
       box-sizing: border-box;
       transition: transform 0.2s ease;
     }
     
-    .guestbook-entry:hover {
-      transform: translateY(-3px); 
-    }
-
-    .entry-content img { 
-      width: 100%; 
-      background: var(--bg-canvas); 
-      border-radius: 4px; 
-      display: block; 
-    }
-
-    .entry-text { 
-      font-size: 0.95rem; 
-      line-height: 1.5; 
-      margin: 0; 
-      word-break: break-word; 
-      font-family: "New York", Georgia, serif; 
-    }
-
-    .entry-meta { 
-      margin-top: 12px; 
-      font-size: 0.8rem; 
-      opacity: 0.6; 
-      font-family: system-ui, sans-serif; 
-      text-align: center; 
-    }
-
+    .guestbook-entry:hover { transform: translateY(-3px); }
+    .entry-content img { width: 100%; background: var(--bg-canvas); border-radius: 4px; display: block; }
+    .entry-text { font-size: 0.95rem; line-height: 1.5; margin: 0; word-break: break-word; font-family: "New York", Georgia, serif; }
+    .entry-meta { margin-top: 12px; font-size: 0.8rem; opacity: 0.6; font-family: system-ui, sans-serif; text-align: center; }
     .entry-meta a { color: var(--accent); text-decoration: none; }
     .loading-status { text-align: center; opacity: 0.6; font-size: 0.9rem; column-span: all; }
   </style>
@@ -209,3 +185,140 @@
       ctx.lineTo(x, y);
       ctx.stroke();
       ctx.beginPath();
+      ctx.moveTo(x, y);
+    }
+
+    canvas.addEventListener('mousedown', (e) => { isPainting = true; draw(e); });
+    canvas.addEventListener('mousemove', draw);
+    canvas.addEventListener('mouseup', () => { ctx.beginPath(); isPainting = false; });
+    canvas.addEventListener('mouseleave', () => { ctx.beginPath(); isPainting = false; });
+
+    canvas.addEventListener('touchstart', (e) => { isPainting = true; draw(e); }, { passive: true });
+    canvas.addEventListener('touchmove', (e) => { draw(e); }, { passive: true });
+    canvas.addEventListener('touchend', () => { ctx.beginPath(); isPainting = false; });
+
+    tabDraw.addEventListener('click', () => {
+      currentTab = 'draw';
+      tabDraw.classList.add('active'); tabWrite.classList.remove('active');
+      sectionDraw.classList.add('active'); sectionWrite.classList.remove('active');
+      wordsInput.removeAttribute('required');
+      triggerResizeUpdate(); 
+    });
+
+    tabWrite.addEventListener('click', () => {
+      currentTab = 'write';
+      tabWrite.classList.add('active'); tabDraw.classList.remove('active');
+      sectionWrite.classList.add('active'); sectionDraw.classList.remove('active');
+      wordsInput.setAttribute('required', 'required');
+      triggerResizeUpdate(); 
+    });
+
+    btnPencil.addEventListener('click', () => { currentTool = 'pencil'; btnPencil.classList.add('active'); btnEraser.classList.remove('active'); });
+    btnEraser.addEventListener('click', () => { currentTool = 'eraser'; btnEraser.classList.add('active'); btnPencil.classList.remove('active'); });
+
+    btnSmall.addEventListener('click', () => { brushSize = 2; [btnSmall, btnMedium, btnLarge].forEach(b => b.classList.remove('active')); btnSmall.classList.add('active'); });
+    btnMedium.addEventListener('click', () => { brushSize = 6; [btnSmall, btnMedium, btnLarge].forEach(b => b.classList.remove('active')); btnMedium.classList.add('active'); });
+    btnLarge.addEventListener('click', () => { brushSize = 12; [btnSmall, btnMedium, btnLarge].forEach(b => b.classList.remove('active')); btnLarge.classList.add('active'); });
+    btnClear.addEventListener('click', () => ctx.clearRect(0, 0, canvas.width, canvas.height));
+
+    async function fetchEntries() {
+      const container = document.getElementById('guestbook-entries');
+      try {
+        const res = await fetch(`${SUPABASE_URL}/rest/v1/guestbook?select=*&order=id.desc`, {
+          headers: { "apikey": SUPABASE_KEY, "Authorization": `Bearer ${SUPABASE_KEY}` }
+        });
+        const data = await res.json();
+        if (!data || data.length === 0) {
+          container.innerHTML = '<p class="loading-status">Todavía no hay mensajes. ¡Sé el primero!</p>';
+          triggerResizeUpdate();
+          return;
+        }
+        container.innerHTML = data.map(entry => {
+          let contentHtml = entry.type === 'draw' || entry.type === 'image' 
+            ? `<img src="${entry.content}" alt="Dibujo" onload="triggerResizeUpdate()">` 
+            : `<p class="entry-text">"${entry.content}"</p>`;
+          let nameHtml = entry.website ? `<a href="${entry.website}" target="_blank" rel="noopener">${entry.name}</a>` : entry.name;
+          return `<div class="guestbook-entry"><div class="entry-content">${contentHtml}</div><div class="entry-meta">Por ${nameHtml}</div></div>`;
+        }).join('');
+        
+        setTimeout(triggerResizeUpdate, 500);
+      } catch (err) {
+        container.innerHTML = '<p class="loading-status">Error al cargar mensajes.</p>';
+        triggerResizeUpdate();
+      }
+    }
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = document.getElementById('btn-submit');
+      btn.disabled = true; btn.innerText = "Enviando...";
+
+      const name = document.getElementById('input-name').value || 'Anónimo';
+      const website = document.getElementById('input-website').value || null;
+      let content = '';
+
+      if (currentTab === 'draw') {
+        const buffer = document.createElement('canvas');
+        buffer.width = canvas.width; buffer.height = canvas.height;
+        if (canvas.toDataURL() === buffer.toDataURL()) {
+          alert("¡Por favor dibujá algo antes de enviar!");
+          btn.disabled = false; btn.innerText = "Enviar";
+          return;
+        }
+        content = canvas.toDataURL('image/png');
+      } else {
+        content = wordsInput.value;
+      }
+
+      try {
+        const res = await fetch(`${SUPABASE_URL}/rest/v1/guestbook`, {
+          method: 'POST',
+          headers: { "apikey": SUPABASE_KEY, "Authorization": `Bearer ${SUPABASE_KEY}`, "Content-Type": "application/json", "Prefer": "return=minimal" },
+          body: JSON.stringify({ name, website, type: currentTab, content })
+        });
+        if (res.ok) {
+          wordsInput.value = '';
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+          await fetchEntries();
+        } else {
+          alert("Error guardando el mensaje.");
+        }
+      } catch (err) {
+        alert("Error de red.");
+      } finally {
+        btn.disabled = false; btn.innerText = "Enviar";
+      }
+    });
+
+    fetchEntries();
+  });
+
+  // SISTEMA INFALIBLE: EL WIDGET CONTROLA AL PADRE
+  function triggerResizeUpdate() {
+    const container = document.querySelector('.guestbook-container');
+    const realHeight = container.offsetHeight + 40; // Altura real + margen
+    
+    // Método 1: Aviso por mensaje (por si acaso)
+    window.parent.postMessage({ type: 'resize-iframe', height: realHeight }, '*');
+    
+    // Método 2 (El Definitivo): Manipulación directa del DOM padre.
+    // Como están en el mismo dominio, el iframe se auto-estira saltándose cualquier bloqueo de Quartz.
+    try {
+      const parentIframe = window.parent.document.getElementById('visitas-iframe');
+      if (parentIframe) {
+        parentIframe.style.height = realHeight + 'px';
+      }
+    } catch (e) {
+      console.warn("No se pudo acceder al DOM padre directamente.");
+    }
+  }
+
+  // Observamos únicamente el div principal para que la medición sea exacta
+  const resizeObserver = new ResizeObserver(() => triggerResizeUpdate());
+  window.addEventListener('load', () => {
+    resizeObserver.observe(document.querySelector('.guestbook-container'));
+    setTimeout(triggerResizeUpdate, 1000); // Doble chequeo
+  });
+</script>
+</body>
+</html>
