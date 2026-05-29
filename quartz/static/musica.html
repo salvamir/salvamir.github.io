@@ -29,23 +29,23 @@
       padding-bottom: 40px;
     }
 
-    /* --- CABECERA Y TÍTULO (Ajuste 1: Interacción) --- */
+    /* --- AJUSTE 1: TITULO INTERACTIVO RETRO --- */
     .page-header {
       text-align: center;
       margin-bottom: 3rem;
     }
     .page-title {
+      font-family: 'Times New Roman', serif;
       font-size: 2.5rem;
-      color: var(--text-main); /* Empieza crema como en galería */
+      color: #E7C8A0; /* Dorado retro fijo inicial */
       text-decoration: none;
       font-weight: bold;
       display: inline-block;
       margin-bottom: 0.5rem;
-      transition: color 0.2s ease, transform 0.2s ease;
+      transition: transform 0.2s ease, color 0.2s ease;
     }
     .page-title:hover {
-      color: var(--accent); /* Cambia a dorado y se agranda */
-      transform: scale(1.02);
+      transform: scale(1.05); /* Efecto de crecimiento idéntico a "Ahora" */
     }
     .page-desc {
       font-size: 1.1rem;
@@ -78,10 +78,10 @@
       box-sizing: border-box;
       overflow: hidden;
       cursor: pointer;
-      transition: border-color 0.3s ease;
+      transition: border-color 0.3s ease, transform 0.2s ease;
     }
     .album-card:hover {
-      border-color: var(--accent);
+      border-color: rgba(183, 150, 108, 0.4);
     }
 
     /* Contenedor de la Portada */
@@ -100,7 +100,7 @@
       transition: opacity 0.3s, transform 0.3s ease;
     }
     .cover-img:hover {
-      transform: scale(1.03); /* Ligero zoom al posar el mouse */
+      opacity: 0.85;
     }
     
     .play-overlay {
@@ -112,7 +112,6 @@
       align-items: center;
       opacity: 0;
       transition: opacity 0.3s ease;
-      pointer-events: none; /* Deja pasar el click a la imagen de fondo */
     }
     .cover-container:hover .play-overlay {
       opacity: 1;
@@ -132,11 +131,10 @@
       padding-left: 6px; 
       box-shadow: 0 4px 15px rgba(0,0,0,0.5);
       transition: transform 0.2s;
-      pointer-events: auto; /* El botón recupera el click */
     }
     .play-btn:hover { transform: scale(1.1); }
 
-    /* Textos y Reseña */
+    /* Textos Base en Grilla */
     .album-info { padding: 16px; }
     .album-title {
       font-size: 1.3rem; margin: 0 0 5px 0;
@@ -155,45 +153,60 @@
       display: block; margin-top: 10px;
     }
 
-    .full-review {
-      display: none; font-size: 0.95rem; line-height: 1.6;
-      border-top: 1px dashed var(--border-color);
-      margin-top: 15px; padding-top: 15px;
-    }
-    .full-review h3 {
-      font-size: 1.1rem; color: var(--accent); margin-top: 0;
-      font-family: system-ui, sans-serif;
-    }
-    .full-review p { margin-top: 0; margin-bottom: 1rem; }
-    .full-review ol { margin-top: 0; padding-left: 20px; }
-    .full-review li { margin-bottom: 8px; }
-    
-    .collapse-btn {
-      background: transparent; border: 1px solid var(--accent);
-      color: var(--accent); padding: 8px 16px; border-radius: 8px;
-      cursor: pointer; font-family: system-ui, sans-serif;
-      font-size: 0.9rem; margin-top: 10px; width: 100%;
-      transition: background 0.2s, color 0.2s;
-    }
-    .collapse-btn:hover { background: var(--accent); color: #1a1714; }
+    /* Oculto en la grilla principal porque pasará al modal entero */
+    .full-review { display: none; }
 
-    /* --- LIGHTBOX MODAL PARA AGRANDAR PORTADA (Ajuste 2) --- */
+    /* --- LIGHTBOX MODALS DE INTERACTIVIDAD (Ajuste 2 y 3) --- */
     .lightbox-modal {
       display: none; position: fixed; z-index: 9999;
       left: 0; top: 0; width: 100%; height: 100%;
-      background-color: rgba(13, 12, 10, 0.92);
+      background-color: rgba(13, 12, 10, 0.93);
       backdrop-filter: blur(10px);
       justify-content: center; align-items: center;
-      padding: 2rem; box-sizing: border-box;
+      padding: 1.5rem; box-sizing: border-box;
     }
+    
+    /* Contenido de Imagen Pura */
     .lightbox-content {
       max-width: 90%; max-height: 80vh; border-radius: 12px;
       box-shadow: 0 10px 40px rgba(0,0,0,0.8);
       border: 1px solid rgba(183, 150, 108, 0.3);
       animation: zoomIn 0.25s ease forwards;
     }
+
+    /* Contenido del Recuadro Entero de Lectura */
+    .lightbox-card-reading {
+      background: #1e1b18;
+      border: 1px solid rgba(183, 150, 108, 0.3);
+      border-radius: 16px;
+      max-width: 600px;
+      width: 100%;
+      max-height: 85vh;
+      overflow-y: auto;
+      padding: 2rem;
+      box-sizing: border-box;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.8);
+      animation: zoomIn 0.25s ease forwards;
+    }
+    
+    /* Scroll personalizado sutil para el cuadro de lectura */
+    .lightbox-card-reading::-webkit-scrollbar { width: 6px; }
+    .lightbox-card-reading::-webkit-scrollbar-thumb { background: rgba(183, 150, 108, 0.3); border-radius: 4px; }
+
+    /* Estilos dentro del modo lectura */
+    .lightbox-card-reading .album-title { font-size: 1.8rem; margin-bottom: 0.4rem; }
+    .lightbox-card-reading .album-artist { font-size: 1.1rem; margin-bottom: 1.5rem; border-bottom: 1px solid rgba(183, 150, 108, 0.15); padding-bottom: 0.75rem; }
+    .lightbox-card-reading .full-review { display: block !important; }
+    .lightbox-card-reading .full-review h3 { font-size: 1.2rem; color: var(--accent); margin-top: 1.5rem; font-family: system-ui, sans-serif; }
+    .lightbox-card-reading .full-review p { line-height: 1.6; font-size: 0.98rem; color: #e3dac9; }
+    .lightbox-card-reading .full-review ol { padding-left: 20px; color: #e3dac9; }
+    .lightbox-card-reading .full-review li { margin-bottom: 10px; line-height: 1.5; }
+    .lightbox-card-reading .collapse-btn { display: none; } /* Omitido en modal ya que cierra al desplazar */
+
+    /* Animaciones de cierre y apertura */
     .lightbox-modal.closing { animation: fadeOutBg 0.25s ease forwards; }
-    .lightbox-modal.closing .lightbox-content { animation: zoomOut 0.25s ease forwards; }
+    .lightbox-modal.closing .lightbox-content,
+    .lightbox-modal.closing .lightbox-card-reading { animation: zoomOut 0.25s ease forwards; }
 
     @keyframes zoomIn { from { transform: scale(0.95); opacity: 0; } to { transform: scale(1); opacity: 1; } }
     @keyframes zoomOut { from { transform: scale(1); opacity: 1; } to { transform: scale(0.95); opacity: 0; } }
@@ -206,7 +219,7 @@
 <div class="container">
   
   <div class="page-header">
-    <a href="/" class="page-title">Música</a>
+    <a href="/" class="page-title" title="Volver al inicio">Música</a>
     <p class="page-desc">Mi colección de música.</p>
   </div>
 
@@ -214,10 +227,10 @@
     
     <div class="album-card">
       
-      <div class="cover-container" data-embed="https://open.spotify.com/embed/album/4m2zEshdI18n8qX0V9rKyb?utm_source=generator">
-        <img src="https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?q=80&w=600" alt="Portada de Love & Hyperbole" class="cover-img">
+      <div class="cover-container" data-embed="https://open.spotify.com/album/1xyO6rgO44G5BYpljc11l4">
+        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fis1-ssl.mzstatic.com%2Fimage%2Fthumb%2FMusic221%2Fv4%2F66%2Fee%2F30%2F66ee30fe-df8b-4bba-a77a-bd8d4704f408%2F24UMGIM72459.rgb.jpg%2F1200x1200bf-60.jpg&f=1&nofb=1&ipt=f238657cc30278613eef8e19f83365a6aed63cf510dfcf31d3464fa1b372fc3c" alt="Portada de Love & Hyperbole" class="cover-img">
         <div class="play-overlay">
-          <button class="play-btn" title="Reproducir Disco">▶</button>
+          <button class="play-btn" title="Reproducir en Spotify">▶</button>
         </div>
       </div>
 
@@ -234,7 +247,7 @@
           <h3>Análisis</h3>
           <p>Este disco es una revolución de Alessia para nosotros sus fans. Ella en su discografía nunca hizo algo tan musicalmente elaborado como este disco. Es el primer trabajo en el que explore estilos como el folk, balada romántica y rock pop. Ella es más de una versión estilizada del R&B.</p>
           <p>Con respecto a la narrativa y la estética, sinceramente, me fascina. Esta parte del análisis es más personal, así que no esperen nada técnico. Me encanta como logró contar una historia tan simple de manera tan madura, sencilla y desarrollada. Yo valoro mucho este disco, no tanto porque el disco sea en si mismo una obra única en cuanto a narrativa o musicalidad, sino más bien por el inmenso avance que implica en la carrera de Alessia Cara. Creo que eso es lo que realmente importa al fin y al cabo: El desarrollo y progreso del artista. En este disco, Alessia se luce. Logramos verla como la artista femenina que es, con toda su impronta a flor de piel en las canciones.</p>
-          <p>Yo interpreto la narrativa del álbum como un crecimiento romántico e individual del personaje, que inicialmente se encuentra en un estado base neutral, casi negativo. Progresivamente, este protagonista desarrolla, a lo largo del disco, la humildad de saberse necesitado de amor, cariño y afecto; y finalmente lo encuentra. Esta historia tan simple, plana si se quiere, y sencilla, es completamente humana. Y es narrada, por sobre todo, por una mujer. Y ahí es donde entra el color del disco. Alessia se ocupó de demostrarnos su crecimiento y madurez musical, contándonos la historia de la manera más humana y femenina posible. Esa transparencia es muy tangible en el disco (tanto musical como gráficamente, la verdad que las imágenes y los videoclips suman muchísimo a la descripción conceptual), y personalmente, entendí todo cuando supe que las canciones fueron compuestas y grabadas en un 90% en vivo. Esta "humanidad y sencillez" hacen del disco un trabajo maduro y transparente, (una virtud valiosa en la era de la AI, ahora que están surgiendo tantos "artistas de AI"). En fin, vale la pena escucharlo.</p>
+          <p>Yo interpreto la narrativa del álbum como un crecimiento romántico e individual del personaje, que inicialmente se encuentra en un estado base neutral, casi negativo. Progresivamente, este protagonista desarrolla, a lo largo del disco, la humildad de saberse necesitado de amor, cariño y afecto; y finalmente lo encuentra. Esta historia tan simple, plana si se quiere, y sencilla, es completamente humana. Y es narrada, por sobre todo, por una mujer. Y ahí es donde entra el color del disco. Alessia se ocupó de demostrarnos su crecimiento y madurez musical, contándonos la historia de la manera más humana y femenina posible. Esa transparencia es muy tangible en el disco (tanto musical como gráficamente, la verdad que las imágenes y los videoclips suman muchísimo a la descripción conceptual), y personalmente, entendí todo cuando supe que las canciones fueron compuestas y grabadas en un 90% en vivo. Esta "humanidad y sencillez" hacen del disco un trabajo maduro y transparente, (una virtud valiosa en la era de la AI, ahora que están surging tantos "artistas de AI"). En fin, vale la pena escucharlo.</p>
           
           <h3>Canciones</h3>
           <ol>
@@ -253,100 +266,120 @@
             <li><strong>Slow Motion</strong> - Es la canción seductora, hace ver a la protagonista como una persona segura de sí misma.</li>
             <li><strong>Clearly</strong> - Es el reposo absoluto, se despeja el cielo después de la tormenta, el protagonista llega por fin a Ítaca.</li>
           </ol>
-
-          <button class="collapse-btn">Ocultar análisis ⬏</button>
         </div>
       </div>
     </div>
+
   </div>
 </div>
 
-<div id="lightboxModal" class="lightbox-modal">
+<div id="imageLightbox" class="lightbox-modal">
   <img class="lightbox-content" id="lightboxImg">
+</div>
+
+<div id="cardLightbox" class="lightbox-modal">
+  <div class="lightbox-card-reading" id="lightboxCardBody"></div>
 </div>
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     
-    // --- LÓGICA DEL REPRODUCTOR DIFERIDO ---
+    const imgModal = document.getElementById('imageLightbox');
+    const cardModal = document.getElementById('cardLightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxCardBody = document.getElementById('lightboxCardBody');
+    let activeModal = null;
+
+    // Función unificada para cerrar el modal activo de manera fluida
+    function closeModal() {
+      if (!activeModal || activeModal.classList.contains("closing")) return;
+      activeModal.classList.add("closing");
+      setTimeout(() => {
+        activeModal.style.display = 'none';
+        activeModal.classList.remove("closing");
+        activeModal = null;
+      }, 250);
+    }
+
+    // 1. Logica del Botón de Play (Carga el reproductor real en su sitio)
     document.querySelectorAll('.play-btn').forEach(btn => {
       btn.addEventListener('click', (e) => {
-        e.stopPropagation(); // Evita abrir la imagen en grande o expandir el texto
+        e.stopPropagation(); // Evita levantar modals de ampliación
         const container = btn.closest('.cover-container');
         const embedUrl = container.getAttribute('data-embed');
         
         if (embedUrl) {
-          // Reemplaza la imagen por el reproductor funcional
           container.innerHTML = `<iframe style="border-radius:0;" src="${embedUrl}" width="100%" height="100%" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`;
         }
       });
     });
 
-    // --- LÓGICA DEL MODAL DE LA PORTADA (Ajuste 2) ---
-    const modal = document.getElementById('lightboxModal');
-    const modalImg = document.getElementById('lightboxImg');
-    let isModalOpen = false;
-
-    function closeModal() {
-      if (!isModalOpen || modal.classList.contains("closing")) return;
-      modal.classList.add("closing");
-      setTimeout(() => {
-        modal.style.display = 'none';
-        modal.classList.remove("closing");
-        isModalOpen = false;
-      }, 250);
-    }
-
+    // 2. Click en la Portada exclusivamente -> Abre Lightbox de Imagen
     document.querySelectorAll('.cover-img').forEach(img => {
       img.addEventListener('click', (e) => {
-        e.stopPropagation(); // Evita abrir el texto abajo
-        modal.style.display = 'flex';
-        modalImg.src = img.src;
-        isModalOpen = true;
+        e.stopPropagation(); // Previene que se dispare el modal de texto
+        imgModal.style.display = 'flex';
+        lightboxImg.src = img.src;
+        activeModal = imgModal;
       });
     });
 
-    modal.addEventListener('click', closeModal);
-    
-    // Detectar scroll para cerrar el modal (compatible con iframes)
-    window.addEventListener('wheel', () => { if (isModalOpen) closeModal(); });
-    window.addEventListener('touchmove', () => { if (isModalOpen) closeModal(); });
-
-    // --- LÓGICA PARA EXPANDIR EL TEXTO ---
+    // 3. Click en el Recuadro / Contenedor de información -> Pasa entero al centro desplegado
     document.querySelectorAll('.album-card').forEach(card => {
       card.addEventListener('click', (e) => {
-        // Ignorar si tocamos el reproductor o la portada
+        // Si hicieron click en la foto o en el botón play, ignoramos esta sección
         if (e.target.closest('.cover-container')) return;
 
-        const summary = card.querySelector('.album-summary');
-        const review = card.querySelector('.full-review');
-        const isCollapsing = e.target.closest('.collapse-btn');
-
-        if (review.style.display === 'block' && isCollapsing) {
-          review.style.display = 'none';
-          summary.style.display = 'block';
-        } else if (review.style.display !== 'block') {
-          review.style.display = 'block';
-          summary.style.display = 'none';
-        }
+        cardModal.style.display = 'flex';
         
-        setTimeout(triggerResizeUpdate, 50);
+        // Extraemos los datos dinámicamente de la tarjeta original
+        const title = card.querySelector('.album-title').innerText;
+        const artist = card.querySelector('.album-artist').innerText;
+        const fullReviewHtml = card.querySelector('.full-review').innerHTML;
+
+        // Estructuramos el contenido entero de manera limpia en el modal de lectura centrado
+        lightboxCardBody.innerHTML = `
+          <h2 class="album-title">${title}</h2>
+          <p class="album-artist">${artist}</p>
+          <div class="full-review">${fullReviewHtml}</div>
+        `;
+        activeModal = cardModal;
       });
     });
+
+    // Eventos de cierre al hacer click fuera
+    imgModal.addEventListener('click', closeModal);
+    cardModal.addEventListener('click', (e) => {
+      if (e.target === cardModal) closeModal();
+    });
+
+    // Cierre inmediato con animaciones al hacer scroll global en la página
+    window.addEventListener('scroll', () => { if (activeModal) closeModal(); });
+    
+    window.addEventListener('wheel', (e) => {
+      if (activeModal === cardModal && e.target.closest('#lightboxCardBody')) {
+        return; // Permite el scroll de lectura interno dentro de la caja de canciones
+      }
+      if (activeModal) closeModal();
+    }, { passive: true });
+
+    window.addEventListener('touchmove', (e) => {
+      if (activeModal === cardModal && e.target.closest('#lightboxCardBody')) {
+        return; // Permite scroll táctil de lectura dentro de la caja
+      }
+      if (activeModal) closeModal();
+    }, { passive: true });
+
   });
 
-  // --- LÓGICA PARA ADAPTAR EL TAMAÑO EN QUARTZ ---
+  // Ajustes de sincronización de altura en Quartz
   function triggerResizeUpdate() {
     const container = document.querySelector('.container');
     const realHeight = container.offsetHeight + 40;
-    
     window.parent.postMessage({ type: 'resize-iframe-musica', height: realHeight }, '*');
-    
     try {
       const parentIframe = window.parent.document.getElementById('musica-iframe');
-      if (parentIframe) {
-        parentIframe.style.height = realHeight + 'px';
-      }
+      if (parentIframe) parentIframe.style.height = realHeight + 'px';
     } catch (e) {}
   }
 
