@@ -48,7 +48,7 @@ description: Acá me gusta coleccionar detalles de mi vida.
   <map name="image-map">
     <area target="" alt="Colección de fotos." title="Galería" href="/static/galeria.html" coords="176,218,17,167" shape="rect">
     <area target="" alt="Me sirve para saber que estuviste acá." title="Visitas" href="https://salvamir.github.io/libro-de-visitas" coords="124,205,259,312" shape="rect">
-    <area target="" alt="Analisis de canciones, discos y más. Es una colección también." title="Música" href="https://salvamir.github.io/static/musica.html" coords="156,85,289,141" shape="rect">
+    <area target="" alt="Analisis de canciones, discos y más. Es una colección también." title="Música" href="/static/musica.html" coords="156,85,289,141" shape="rect">
     <area target="" alt="Todos somos una historia que merece ser contada y vivida. - Nico (un amigo mío)" title="Inicio" href="https://salvamir.github.io" coords="229,140,362,218" shape="rect">
     <area target="" alt="Otros lugares interesantes para visitar" title="Links" href="https://salvamir.github.io/links" coords="405,281,237,246" shape="rect">
     <area target="" alt="Acá guardo todos los libros que me acuerdo de haber leído. Solía ser bastante lector antes." title="Libros" href="https://salvamir.github.io/librería" coords="449,154,585,207" shape="rect">
