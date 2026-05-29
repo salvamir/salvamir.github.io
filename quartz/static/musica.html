@@ -29,7 +29,7 @@
       padding-bottom: 40px;
     }
 
-    /* --- AJUSTE 1: TITULO INTERACTIVO RETRO --- */
+    /* Título */
     .page-header {
       text-align: center;
       margin-bottom: 3rem;
@@ -37,7 +37,7 @@
     .page-title {
       font-family: 'Times New Roman', serif;
       font-size: 2.5rem;
-      color: #E7C8A0; /* Dorado retro fijo inicial */
+      color: #E7C8A0;
       text-decoration: none;
       font-weight: bold;
       display: inline-block;
@@ -45,7 +45,7 @@
       transition: transform 0.2s ease, color 0.2s ease;
     }
     .page-title:hover {
-      transform: scale(1.05); /* Efecto de crecimiento idéntico a "Ahora" */
+      transform: scale(1.05);
     }
     .page-desc {
       font-size: 1.1rem;
@@ -55,7 +55,7 @@
       line-height: 1.5;
     }
 
-    /* Grilla Dinámica (Masonry) */
+    /* Grilla Dinámica */
     .music-grid {
       width: 100%;
       column-gap: 20px;
@@ -64,7 +64,7 @@
     @media (min-width: 600px) and (max-width: 899px) { .music-grid { column-count: 2; } }
     @media (min-width: 900px) { .music-grid { column-count: 3; } }
 
-    /* Tarjetas de Discos */
+    /* Tarjetas */
     .album-card {
       background: var(--bg-card);
       border: 1px solid var(--border-color);
@@ -84,13 +84,14 @@
       border-color: rgba(183, 150, 108, 0.4);
     }
 
-    /* Contenedor de la Portada */
+    /* Contenedor Portada */
     .cover-container {
       position: relative;
       width: 100%;
       aspect-ratio: 1 / 1;
       background: #000;
       overflow: hidden;
+      cursor: zoom-in; /* Indica que la imagen se puede expandir */
     }
     .cover-img {
       width: 100%;
@@ -134,8 +135,8 @@
     }
     .play-btn:hover { transform: scale(1.1); }
 
-    /* Textos Base en Grilla */
-    .album-info { padding: 16px; }
+    /* Textos */
+    .album-info { padding: 16px; cursor: pointer; }
     .album-title {
       font-size: 1.3rem; margin: 0 0 5px 0;
       color: var(--accent); font-family: system-ui, sans-serif;
@@ -152,11 +153,9 @@
       font-family: system-ui, sans-serif; font-size: 0.85rem;
       display: block; margin-top: 10px;
     }
-
-    /* Oculto en la grilla principal porque pasará al modal entero */
     .full-review { display: none; }
 
-    /* --- LIGHTBOX MODALS DE INTERACTIVIDAD (Ajuste 2 y 3) --- */
+    /* Modals (Lightbox) */
     .lightbox-modal {
       display: none; position: fixed; z-index: 9999;
       left: 0; top: 0; width: 100%; height: 100%;
@@ -166,7 +165,6 @@
       padding: 1.5rem; box-sizing: border-box;
     }
     
-    /* Contenido de Imagen Pura */
     .lightbox-content {
       max-width: 90%; max-height: 80vh; border-radius: 12px;
       box-shadow: 0 10px 40px rgba(0,0,0,0.8);
@@ -174,7 +172,6 @@
       animation: zoomIn 0.25s ease forwards;
     }
 
-    /* Contenido del Recuadro Entero de Lectura */
     .lightbox-card-reading {
       background: #1e1b18;
       border: 1px solid rgba(183, 150, 108, 0.3);
@@ -189,11 +186,9 @@
       animation: zoomIn 0.25s ease forwards;
     }
     
-    /* Scroll personalizado sutil para el cuadro de lectura */
     .lightbox-card-reading::-webkit-scrollbar { width: 6px; }
     .lightbox-card-reading::-webkit-scrollbar-thumb { background: rgba(183, 150, 108, 0.3); border-radius: 4px; }
 
-    /* Estilos dentro del modo lectura */
     .lightbox-card-reading .album-title { font-size: 1.8rem; margin-bottom: 0.4rem; }
     .lightbox-card-reading .album-artist { font-size: 1.1rem; margin-bottom: 1.5rem; border-bottom: 1px solid rgba(183, 150, 108, 0.15); padding-bottom: 0.75rem; }
     .lightbox-card-reading .full-review { display: block !important; }
@@ -201,9 +196,7 @@
     .lightbox-card-reading .full-review p { line-height: 1.6; font-size: 0.98rem; color: #e3dac9; }
     .lightbox-card-reading .full-review ol { padding-left: 20px; color: #e3dac9; }
     .lightbox-card-reading .full-review li { margin-bottom: 10px; line-height: 1.5; }
-    .lightbox-card-reading .collapse-btn { display: none; } /* Omitido en modal ya que cierra al desplazar */
 
-    /* Animaciones de cierre y apertura */
     .lightbox-modal.closing { animation: fadeOutBg 0.25s ease forwards; }
     .lightbox-modal.closing .lightbox-content,
     .lightbox-modal.closing .lightbox-card-reading { animation: zoomOut 0.25s ease forwards; }
@@ -227,10 +220,10 @@
     
     <div class="album-card">
       
-      <div class="cover-container" data-embed="https://open.spotify.com/album/1xyO6rgO44G5BYpljc11l4">
+      <div class="cover-container" data-embed="https://www.youtube.com/embed/videoseries?si=CuINtYrUFCXCEIu0&list=OLAK5uy_kG_IyeAEb5Vyhxr0ETM73qmimj_WnMiLk&autoplay=1">
         <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fis1-ssl.mzstatic.com%2Fimage%2Fthumb%2FMusic221%2Fv4%2F66%2Fee%2F30%2F66ee30fe-df8b-4bba-a77a-bd8d4704f408%2F24UMGIM72459.rgb.jpg%2F1200x1200bf-60.jpg&f=1&nofb=1&ipt=f238657cc30278613eef8e19f83365a6aed63cf510dfcf31d3464fa1b372fc3c" alt="Portada de Love & Hyperbole" class="cover-img">
         <div class="play-overlay">
-          <button class="play-btn" title="Reproducir en Spotify">▶</button>
+          <button class="play-btn" title="Reproducir en YouTube">▶</button>
         </div>
       </div>
 
@@ -283,14 +276,12 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
-    
     const imgModal = document.getElementById('imageLightbox');
     const cardModal = document.getElementById('cardLightbox');
     const lightboxImg = document.getElementById('lightboxImg');
     const lightboxCardBody = document.getElementById('lightboxCardBody');
     let activeModal = null;
 
-    // Función unificada para cerrar el modal activo de manera fluida
     function closeModal() {
       if (!activeModal || activeModal.classList.contains("closing")) return;
       activeModal.classList.add("closing");
@@ -301,43 +292,46 @@
       }, 250);
     }
 
-    // 1. Logica del Botón de Play (Carga el reproductor real en su sitio)
+    // 1. CLICK EN PLAY -> Carga iframe de YouTube
     document.querySelectorAll('.play-btn').forEach(btn => {
       btn.addEventListener('click', (e) => {
-        e.stopPropagation(); // Evita levantar modals de ampliación
+        e.stopPropagation(); // Evita que se abra el modal de la imagen
         const container = btn.closest('.cover-container');
         const embedUrl = container.getAttribute('data-embed');
         
         if (embedUrl) {
-          container.innerHTML = `<iframe style="border-radius:0;" src="${embedUrl}" width="100%" height="100%" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`;
+          container.innerHTML = `<iframe width="100%" height="100%" src="${embedUrl}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="border-radius:0;"></iframe>`;
         }
       });
     });
 
-    // 2. Click en la Portada exclusivamente -> Abre Lightbox de Imagen
-    document.querySelectorAll('.cover-img').forEach(img => {
-      img.addEventListener('click', (e) => {
-        e.stopPropagation(); // Previene que se dispare el modal de texto
-        imgModal.style.display = 'flex';
-        lightboxImg.src = img.src;
-        activeModal = imgModal;
+    // 2. CLICK EN LA PORTADA -> Expande solo la imagen
+    document.querySelectorAll('.cover-container').forEach(container => {
+      container.addEventListener('click', (e) => {
+        // Si el usuario hace click y ya está reproduciendo el iframe, no hacemos nada
+        if (container.querySelector('iframe')) return;
+        
+        e.stopPropagation(); // Evita que se dispare el evento de la tarjeta/texto
+        const img = container.querySelector('.cover-img');
+        if (img) {
+          imgModal.style.display = 'flex';
+          lightboxImg.src = img.src;
+          activeModal = imgModal;
+        }
       });
     });
 
-    // 3. Click en el Recuadro / Contenedor de información -> Pasa entero al centro desplegado
+    // 3. CLICK EN EL TEXTO -> Expande el recuadro entero
     document.querySelectorAll('.album-card').forEach(card => {
       card.addEventListener('click', (e) => {
-        // Si hicieron click en la foto o en el botón play, ignoramos esta sección
+        // Previene la apertura si se hizo click en la zona de la portada
         if (e.target.closest('.cover-container')) return;
 
         cardModal.style.display = 'flex';
-        
-        // Extraemos los datos dinámicamente de la tarjeta original
         const title = card.querySelector('.album-title').innerText;
         const artist = card.querySelector('.album-artist').innerText;
         const fullReviewHtml = card.querySelector('.full-review').innerHTML;
 
-        // Estructuramos el contenido entero de manera limpia en el modal de lectura centrado
         lightboxCardBody.innerHTML = `
           <h2 class="album-title">${title}</h2>
           <p class="album-artist">${artist}</p>
@@ -347,32 +341,26 @@
       });
     });
 
-    // Eventos de cierre al hacer click fuera
+    // Cierre general de Modals
     imgModal.addEventListener('click', closeModal);
     cardModal.addEventListener('click', (e) => {
       if (e.target === cardModal) closeModal();
     });
 
-    // Cierre inmediato con animaciones al hacer scroll global en la página
+    // Cierra con el scroll
     window.addEventListener('scroll', () => { if (activeModal) closeModal(); });
-    
     window.addEventListener('wheel', (e) => {
-      if (activeModal === cardModal && e.target.closest('#lightboxCardBody')) {
-        return; // Permite el scroll de lectura interno dentro de la caja de canciones
-      }
+      if (activeModal === cardModal && e.target.closest('#lightboxCardBody')) return; 
       if (activeModal) closeModal();
     }, { passive: true });
-
     window.addEventListener('touchmove', (e) => {
-      if (activeModal === cardModal && e.target.closest('#lightboxCardBody')) {
-        return; // Permite scroll táctil de lectura dentro de la caja
-      }
+      if (activeModal === cardModal && e.target.closest('#lightboxCardBody')) return; 
       if (activeModal) closeModal();
     }, { passive: true });
 
   });
 
-  // Ajustes de sincronización de altura en Quartz
+  // Ajustes de altura para Quartz
   function triggerResizeUpdate() {
     const container = document.querySelector('.container');
     const realHeight = container.offsetHeight + 40;
@@ -382,7 +370,6 @@
       if (parentIframe) parentIframe.style.height = realHeight + 'px';
     } catch (e) {}
   }
-
   const resizeObserver = new ResizeObserver(() => triggerResizeUpdate());
   window.addEventListener('load', () => {
     resizeObserver.observe(document.querySelector('.container'));
