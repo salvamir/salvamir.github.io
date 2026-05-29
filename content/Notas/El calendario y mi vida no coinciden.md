@@ -49,8 +49,10 @@ Así, nos sucede que sentimos como que la vida "nos lleva por delante" o que las
 Nuestro trabajo, estudio, y vida productiva en general funcionan en contactos netos y cambios directos y concisos. Entonces, sucede muy seguido que, mientras nuestra vida eficiente avanza de cuadrado en cuadrado, nosotros seguimos viviendo una etapa anterior. Y por eso estamos humanamente *desfazados* de nuestra propia vida. Eso es muy frustrante, porque se siente como que estamos corriendo sin alcanzar nunca a esos cuadrados que pasan de uno a otro muy rápidamente. Se siente como estar siempre por detrás.
 ## Y ahora qué.
 No tengo una conclusión sobre esto. Sigo pensándolo y me entusiasma mucho esta idea. Por lo pronto, quiero esforzarme en vivir más a conciencia esto. Quiero notar los cambios de las estaciones, y notar como a medida que cambian, varío yo también (mi manera de pensar, de crear, de estudiar, de reposar, etc) y así poder ponerles nombre y comunicarlas. También quiero extrapolarlo a una escala pequeña, y diferenciar con mayor nitidez las variaciones en un mismo día. Es un estilo de vida mucho más humano, acorde a como Dios nos hizo. Y por eso es mucho más pacífico, porque se siente justamente como ir en linea con lo que somos. Un poco de esto ya describí [acá](https://salvamir.github.io/Notas/Vivir-Adaptándose).
-## Seguir leyendo:
+## Seguir leyendo sobre el tema:
+Muchas personas ya hablaron de esto antes que yo. Vayan a seguir la conversación en sus páginas. 
 - [Fall In](https://submittedforyourperusal.com/2017/09/22/fall-in/), en Submitted for your perusal
-- [Small Seasons](https://smallseasons.guide)
+- [Small Seasons](https://smallseasons.guide), una guía para entender mejor las estaciones
 - [On Small Seasons and long calendars](https://rosszurowski.com/log/2018/small-seasons-long-calendars), de Ross Zurowski
-- [A personal unit of time](https://danielslife.blog/posts/a-personal-unit-of-time) and  [Noticing the small seasons](https://danielslife.blog/posts/noticing-the-small-seasons), ambos de Daniel.
+- [A personal unit of time](https://danielslife.blog/posts/a-personal-unit-of-time), [Living with the seasons](https://danielslife.blog/posts/living-with-the-seasons), and  [Noticing the small seasons](https://danielslife.blog/posts/noticing-the-small-seasons), todos de Daniel.
+- [Summer and gardening](https://rafaelkuebler.github.io/posts/20250703-summer-and-gardening/), de Rafa.
