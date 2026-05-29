@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Música - Salva Más De Cerca</title>
+  <title>Música</title>
   <style>
     :root {
       --bg-main: #1a1714;
@@ -29,18 +29,23 @@
       padding-bottom: 40px;
     }
 
-    /* Cabecera idéntica a "Ahora" */
+    /* --- CABECERA Y TÍTULO (Ajuste 1: Interacción) --- */
     .page-header {
       text-align: center;
       margin-bottom: 3rem;
     }
     .page-title {
       font-size: 2.5rem;
-      color: var(--accent);
+      color: var(--text-main); /* Empieza crema como en galería */
       text-decoration: none;
       font-weight: bold;
       display: inline-block;
       margin-bottom: 0.5rem;
+      transition: color 0.2s ease, transform 0.2s ease;
+    }
+    .page-title:hover {
+      color: var(--accent); /* Cambia a dorado y se agranda */
+      transform: scale(1.02);
     }
     .page-desc {
       font-size: 1.1rem;
@@ -79,7 +84,7 @@
       border-color: var(--accent);
     }
 
-    /* Contenedor de la Portada y el Botón de Play */
+    /* Contenedor de la Portada */
     .cover-container {
       position: relative;
       width: 100%;
@@ -92,17 +97,22 @@
       height: 100%;
       object-fit: cover;
       display: block;
-      transition: opacity 0.3s;
+      transition: opacity 0.3s, transform 0.3s ease;
     }
+    .cover-img:hover {
+      transform: scale(1.03); /* Ligero zoom al posar el mouse */
+    }
+    
     .play-overlay {
       position: absolute;
       top: 0; left: 0; width: 100%; height: 100%;
-      background: rgba(26, 23, 20, 0.6);
+      background: rgba(26, 23, 20, 0.4);
       display: flex;
       justify-content: center;
       align-items: center;
       opacity: 0;
       transition: opacity 0.3s ease;
+      pointer-events: none; /* Deja pasar el click a la imagen de fondo */
     }
     .cover-container:hover .play-overlay {
       opacity: 1;
@@ -119,56 +129,39 @@
       justify-content: center;
       align-items: center;
       cursor: pointer;
-      padding-left: 6px; /* Centra el triángulo de play visualmente */
+      padding-left: 6px; 
       box-shadow: 0 4px 15px rgba(0,0,0,0.5);
       transition: transform 0.2s;
+      pointer-events: auto; /* El botón recupera el click */
     }
     .play-btn:hover { transform: scale(1.1); }
 
     /* Textos y Reseña */
-    .album-info {
-      padding: 16px;
-    }
+    .album-info { padding: 16px; }
     .album-title {
-      font-size: 1.3rem;
-      margin: 0 0 5px 0;
-      color: var(--accent);
-      font-family: system-ui, sans-serif;
+      font-size: 1.3rem; margin: 0 0 5px 0;
+      color: var(--accent); font-family: system-ui, sans-serif;
     }
     .album-artist {
-      font-size: 0.95rem;
-      margin: 0 0 12px 0;
-      opacity: 0.7;
-      font-family: system-ui, sans-serif;
+      font-size: 0.95rem; margin: 0 0 12px 0;
+      opacity: 0.7; font-family: system-ui, sans-serif;
     }
     .album-summary {
-      font-size: 0.95rem;
-      line-height: 1.5;
-      margin: 0;
-      opacity: 0.9;
+      font-size: 0.95rem; line-height: 1.5; margin: 0; opacity: 0.9;
     }
     .read-more-text {
-      color: var(--accent);
-      font-weight: bold;
-      font-family: system-ui, sans-serif;
-      font-size: 0.85rem;
-      display: block;
-      margin-top: 10px;
+      color: var(--accent); font-weight: bold;
+      font-family: system-ui, sans-serif; font-size: 0.85rem;
+      display: block; margin-top: 10px;
     }
 
-    /* Sección expandida oculta por defecto */
     .full-review {
-      display: none;
-      font-size: 0.95rem;
-      line-height: 1.6;
+      display: none; font-size: 0.95rem; line-height: 1.6;
       border-top: 1px dashed var(--border-color);
-      margin-top: 15px;
-      padding-top: 15px;
+      margin-top: 15px; padding-top: 15px;
     }
     .full-review h3 {
-      font-size: 1.1rem;
-      color: var(--accent);
-      margin-top: 0;
+      font-size: 1.1rem; color: var(--accent); margin-top: 0;
       font-family: system-ui, sans-serif;
     }
     .full-review p { margin-top: 0; margin-bottom: 1rem; }
@@ -176,22 +169,35 @@
     .full-review li { margin-bottom: 8px; }
     
     .collapse-btn {
-      background: transparent;
-      border: 1px solid var(--accent);
-      color: var(--accent);
-      padding: 8px 16px;
-      border-radius: 8px;
-      cursor: pointer;
-      font-family: system-ui, sans-serif;
-      font-size: 0.9rem;
-      margin-top: 10px;
-      width: 100%;
+      background: transparent; border: 1px solid var(--accent);
+      color: var(--accent); padding: 8px 16px; border-radius: 8px;
+      cursor: pointer; font-family: system-ui, sans-serif;
+      font-size: 0.9rem; margin-top: 10px; width: 100%;
       transition: background 0.2s, color 0.2s;
     }
-    .collapse-btn:hover {
-      background: var(--accent);
-      color: #1a1714;
+    .collapse-btn:hover { background: var(--accent); color: #1a1714; }
+
+    /* --- LIGHTBOX MODAL PARA AGRANDAR PORTADA (Ajuste 2) --- */
+    .lightbox-modal {
+      display: none; position: fixed; z-index: 9999;
+      left: 0; top: 0; width: 100%; height: 100%;
+      background-color: rgba(13, 12, 10, 0.92);
+      backdrop-filter: blur(10px);
+      justify-content: center; align-items: center;
+      padding: 2rem; box-sizing: border-box;
     }
+    .lightbox-content {
+      max-width: 90%; max-height: 80vh; border-radius: 12px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.8);
+      border: 1px solid rgba(183, 150, 108, 0.3);
+      animation: zoomIn 0.25s ease forwards;
+    }
+    .lightbox-modal.closing { animation: fadeOutBg 0.25s ease forwards; }
+    .lightbox-modal.closing .lightbox-content { animation: zoomOut 0.25s ease forwards; }
+
+    @keyframes zoomIn { from { transform: scale(0.95); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+    @keyframes zoomOut { from { transform: scale(1); opacity: 1; } to { transform: scale(0.95); opacity: 0; } }
+    @keyframes fadeOutBg { from { opacity: 1; } to { opacity: 0; } }
 
   </style>
 </head>
@@ -201,17 +207,17 @@
   
   <div class="page-header">
     <a href="/" class="page-title">Música</a>
-    <p class="page-desc">Un catálogo vivo de los discos y canciones que me acompañan. Hacé click en cualquier portada para escuchar, o en el texto para leer lo que pienso al respecto.</p>
+    <p class="page-desc">Mi colección de música.</p>
   </div>
 
   <div class="music-grid">
     
     <div class="album-card">
       
-      <div class="cover-container" data-embed="https://open.spotify.com/embed/album/INGRESA_ID_AQUI?utm_source=generator&theme=0">
-        <img src="URL_DE_TU_IMAGEN.jpg" alt="Portada de Love & Hyperbole" class="cover-img">
+      <div class="cover-container" data-embed="https://open.spotify.com/embed/album/4m2zEshdI18n8qX0V9rKyb?utm_source=generator">
+        <img src="https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?q=80&w=600" alt="Portada de Love & Hyperbole" class="cover-img">
         <div class="play-overlay">
-          <button class="play-btn">▶</button>
+          <button class="play-btn" title="Reproducir Disco">▶</button>
         </div>
       </div>
 
@@ -252,30 +258,64 @@
         </div>
       </div>
     </div>
-    </div>
+  </div>
+</div>
+
+<div id="lightboxModal" class="lightbox-modal">
+  <img class="lightbox-content" id="lightboxImg">
 </div>
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     
-    // 1. Lógica para el botón de Reproducción (Carga Diferida del iframe)
+    // --- LÓGICA DEL REPRODUCTOR DIFERIDO ---
     document.querySelectorAll('.play-btn').forEach(btn => {
       btn.addEventListener('click', (e) => {
-        e.stopPropagation(); // Evita que el clic expanda también la tarjeta
+        e.stopPropagation(); // Evita abrir la imagen en grande o expandir el texto
         const container = btn.closest('.cover-container');
         const embedUrl = container.getAttribute('data-embed');
         
         if (embedUrl) {
-          // Reemplaza la imagen con el reproductor incrustado
-          container.innerHTML = `<iframe src="${embedUrl}" width="100%" height="100%" frameborder="0" allowtransparency="true" allow="encrypted-media" style="border-radius:0;"></iframe>`;
+          // Reemplaza la imagen por el reproductor funcional
+          container.innerHTML = `<iframe style="border-radius:0;" src="${embedUrl}" width="100%" height="100%" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`;
         }
       });
     });
 
-    // 2. Lógica para Expandir/Contraer la reseña
+    // --- LÓGICA DEL MODAL DE LA PORTADA (Ajuste 2) ---
+    const modal = document.getElementById('lightboxModal');
+    const modalImg = document.getElementById('lightboxImg');
+    let isModalOpen = false;
+
+    function closeModal() {
+      if (!isModalOpen || modal.classList.contains("closing")) return;
+      modal.classList.add("closing");
+      setTimeout(() => {
+        modal.style.display = 'none';
+        modal.classList.remove("closing");
+        isModalOpen = false;
+      }, 250);
+    }
+
+    document.querySelectorAll('.cover-img').forEach(img => {
+      img.addEventListener('click', (e) => {
+        e.stopPropagation(); // Evita abrir el texto abajo
+        modal.style.display = 'flex';
+        modalImg.src = img.src;
+        isModalOpen = true;
+      });
+    });
+
+    modal.addEventListener('click', closeModal);
+    
+    // Detectar scroll para cerrar el modal (compatible con iframes)
+    window.addEventListener('wheel', () => { if (isModalOpen) closeModal(); });
+    window.addEventListener('touchmove', () => { if (isModalOpen) closeModal(); });
+
+    // --- LÓGICA PARA EXPANDIR EL TEXTO ---
     document.querySelectorAll('.album-card').forEach(card => {
       card.addEventListener('click', (e) => {
-        // Evita interferir si hacen clic en la portada (reproductor)
+        // Ignorar si tocamos el reproductor o la portada
         if (e.target.closest('.cover-container')) return;
 
         const summary = card.querySelector('.album-summary');
@@ -283,22 +323,19 @@
         const isCollapsing = e.target.closest('.collapse-btn');
 
         if (review.style.display === 'block' && isCollapsing) {
-          // Contraer
           review.style.display = 'none';
           summary.style.display = 'block';
         } else if (review.style.display !== 'block') {
-          // Expandir
           review.style.display = 'block';
           summary.style.display = 'none';
         }
         
-        // Avisar al archivo principal (.md) que cambiaron las medidas
         setTimeout(triggerResizeUpdate, 50);
       });
     });
   });
 
-  // 3. Sistema para adaptar el tamaño dinámicamente en Quartz
+  // --- LÓGICA PARA ADAPTAR EL TAMAÑO EN QUARTZ ---
   function triggerResizeUpdate() {
     const container = document.querySelector('.container');
     const realHeight = container.offsetHeight + 40;
@@ -310,9 +347,7 @@
       if (parentIframe) {
         parentIframe.style.height = realHeight + 'px';
       }
-    } catch (e) {
-      console.warn("Cross-origin restriction en iframe.");
-    }
+    } catch (e) {}
   }
 
   const resizeObserver = new ResizeObserver(() => triggerResizeUpdate());
