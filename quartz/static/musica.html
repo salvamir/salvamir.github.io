@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Música - Salva Más De Cerca</title>
+  <style>
+    :root {
+      --bg-main: #1a1714;
+      --bg-card: rgba(255, 255, 255, 0.03);
+      --text-main: #e3ded6;
+      --accent: #b7966c;
+      --border-color: rgba(168, 158, 149, 0.3);
+    }
+    
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg-main);
+      color: var(--text-main);
+      font-family: "New York", 'Times New Roman', Georgia, serif;
+    }
+    
+    .container {
+      max-width: 100%;
+      margin: 0 auto;
+      padding: 10px;
+      box-sizing: border-box;
+      padding-bottom: 40px;
+    }
+
+    /* Cabecera idéntica a "Ahora" */
+    .page-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .page-title {
+      font-size: 2.5rem;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+      margin-bottom: 0.5rem;
+    }
+    .page-desc {
+      font-size: 1.1rem;
+      opacity: 0.8;
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.5;
+    }
+
+    /* Grilla Dinámica (Masonry) */
+    .music-grid {
+      width: 100%;
+      column-gap: 20px;
+    }
+    @media (max-width: 599px) { .music-grid { column-count: 1; } }
+    @media (min-width: 600px) and (max-width: 899px) { .music-grid { column-count: 2; } }
+    @media (min-width: 900px) { .music-grid { column-count: 3; } }
+
+    /* Tarjetas de Discos */
+    .album-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      margin-bottom: 20px;
+      break-inside: avoid;
+      page-break-inside: avoid;
+      -webkit-column-break-inside: avoid;
+      display: inline-block;
+      width: 100%;
+      box-sizing: border-box;
+      overflow: hidden;
+      cursor: pointer;
+      transition: border-color 0.3s ease;
+    }
+    .album-card:hover {
+      border-color: var(--accent);
+    }
+
+    /* Contenedor de la Portada y el Botón de Play */
+    .cover-container {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      background: #000;
+      overflow: hidden;
+    }
+    .cover-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: opacity 0.3s;
+    }
+    .play-overlay {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(26, 23, 20, 0.6);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .cover-container:hover .play-overlay {
+      opacity: 1;
+    }
+    .play-btn {
+      background: var(--accent);
+      color: #1a1714;
+      border: none;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      font-size: 28px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      padding-left: 6px; /* Centra el triángulo de play visualmente */
+      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+      transition: transform 0.2s;
+    }
+    .play-btn:hover { transform: scale(1.1); }
+
+    /* Textos y Reseña */
+    .album-info {
+      padding: 16px;
+    }
+    .album-title {
+      font-size: 1.3rem;
+      margin: 0 0 5px 0;
+      color: var(--accent);
+      font-family: system-ui, sans-serif;
+    }
+    .album-artist {
+      font-size: 0.95rem;
+      margin: 0 0 12px 0;
+      opacity: 0.7;
+      font-family: system-ui, sans-serif;
+    }
+    .album-summary {
+      font-size: 0.95rem;
+      line-height: 1.5;
+      margin: 0;
+      opacity: 0.9;
+    }
+    .read-more-text {
+      color: var(--accent);
+      font-weight: bold;
+      font-family: system-ui, sans-serif;
+      font-size: 0.85rem;
+      display: block;
+      margin-top: 10px;
+    }
+
+    /* Sección expandida oculta por defecto */
+    .full-review {
+      display: none;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      border-top: 1px dashed var(--border-color);
+      margin-top: 15px;
+      padding-top: 15px;
+    }
+    .full-review h3 {
+      font-size: 1.1rem;
+      color: var(--accent);
+      margin-top: 0;
+      font-family: system-ui, sans-serif;
+    }
+    .full-review p { margin-top: 0; margin-bottom: 1rem; }
+    .full-review ol { margin-top: 0; padding-left: 20px; }
+    .full-review li { margin-bottom: 8px; }
+    
+    .collapse-btn {
+      background: transparent;
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      padding: 8px 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-family: system-ui, sans-serif;
+      font-size: 0.9rem;
+      margin-top: 10px;
+      width: 100%;
+      transition: background 0.2s, color 0.2s;
+    }
+    .collapse-btn:hover {
+      background: var(--accent);
+      color: #1a1714;
+    }
+
+  </style>
+</head>
+<body>
+
+<div class="container">
+  
+  <div class="page-header">
+    <a href="/" class="page-title">Música</a>
+    <p class="page-desc">Un catálogo vivo de los discos y canciones que me acompañan. Hacé click en cualquier portada para escuchar, o en el texto para leer lo que pienso al respecto.</p>
+  </div>
+
+  <div class="music-grid">
+    
+    <div class="album-card">
+      
+      <div class="cover-container" data-embed="https://open.spotify.com/embed/album/INGRESA_ID_AQUI?utm_source=generator&theme=0">
+        <img src="URL_DE_TU_IMAGEN.jpg" alt="Portada de Love & Hyperbole" class="cover-img">
+        <div class="play-overlay">
+          <button class="play-btn">▶</button>
+        </div>
+      </div>
+
+      <div class="album-info">
+        <h2 class="album-title">Love & Hyperbole</h2>
+        <p class="album-artist">Alessia Cara</p>
+        
+        <div class="album-summary">
+          Este disco es una revolución de Alessia para nosotros sus fans. Es el primer trabajo en el que explora estilos como el folk, balada romántica y rock pop, demostrando un inmenso avance en su carrera.
+          <span class="read-more-text">Leer análisis completo ⬎</span>
+        </div>
+
+        <div class="full-review">
+          <h3>Análisis</h3>
+          <p>Este disco es una revolución de Alessia para nosotros sus fans. Ella en su discografía nunca hizo algo tan musicalmente elaborado como este disco. Es el primer trabajo en el que explore estilos como el folk, balada romántica y rock pop. Ella es más de una versión estilizada del R&B.</p>
+          <p>Con respecto a la narrativa y la estética, sinceramente, me fascina. Esta parte del análisis es más personal, así que no esperen nada técnico. Me encanta como logró contar una historia tan simple de manera tan madura, sencilla y desarrollada. Yo valoro mucho este disco, no tanto porque el disco sea en si mismo una obra única en cuanto a narrativa o musicalidad, sino más bien por el inmenso avance que implica en la carrera de Alessia Cara. Creo que eso es lo que realmente importa al fin y al cabo: El desarrollo y progreso del artista. En este disco, Alessia se luce. Logramos verla como la artista femenina que es, con toda su impronta a flor de piel en las canciones.</p>
+          <p>Yo interpreto la narrativa del álbum como un crecimiento romántico e individual del personaje, que inicialmente se encuentra en un estado base neutral, casi negativo. Progresivamente, este protagonista desarrolla, a lo largo del disco, la humildad de saberse necesitado de amor, cariño y afecto; y finalmente lo encuentra. Esta historia tan simple, plana si se quiere, y sencilla, es completamente humana. Y es narrada, por sobre todo, por una mujer. Y ahí es donde entra el color del disco. Alessia se ocupó de demostrarnos su crecimiento y madurez musical, contándonos la historia de la manera más humana y femenina posible. Esa transparencia es muy tangible en el disco (tanto musical como gráficamente, la verdad que las imágenes y los videoclips suman muchísimo a la descripción conceptual), y personalmente, entendí todo cuando supe que las canciones fueron compuestas y grabadas en un 90% en vivo. Esta "humanidad y sencillez" hacen del disco un trabajo maduro y transparente, (una virtud valiosa en la era de la AI, ahora que están surgiendo tantos "artistas de AI"). En fin, vale la pena escucharlo.</p>
+          
+          <h3>Canciones</h3>
+          <ol>
+            <li><strong>Go Outside!</strong> - Funky Groove, es el respiro principal del disco. Implica un cambio de aire porque después de esto, todas las canciones adquieren otro tono. Esto suena más circular.</li>
+            <li><strong>Left Alone</strong> - Nos pone en contexto respecto de la narrativa: Un personaje solitario, autosuficiente, estereotipado que no necesita de un consuelo romántico. Musicalmente, también sienta un poquito las bases.</li>
+            <li><strong>Dead Man</strong> - Jazz Groove, en algunas partes hace acordar a las vibras de Monster.</li>
+            <li><strong>Subside</strong> - Me encanta la estructura, muy original el planteo de la canción. Me gusta que es una mezcla interesante entre una balada romántica y R&B. Me fascina el toque íntimo que le da el arreglo de voces.</li>
+            <li><strong>Run Run</strong> - Es la segunda canción más seductora del disco. Si pudiese ponerle un color, sería morado con lentejuelas.</li>
+            <li><strong>Drive</strong> - Mi primera impresión fue pensar en una versión femenina de Shawn Mendes, pero el estribillo trajo el groove R&B característico del disco.</li>
+            <li><strong>Get To You</strong> - Me sorprendió lo Pop Rock que percibí este tema. Está genial, la verdad no me lo esperaba en la linea musical que estaba adquiriendo el disco.</li>
+            <li><strong>(Isn't it) Obvious</strong> - Es el más clásico/propio tratándose de Alessia Cara. Sintetiza el matiz de su trayectoria musical.</li>
+            <li><strong>Garden Interlude</strong> - Sinceramente esta canción se me hizo bastante neutral en cuanto a la trama del disco.</li>
+            <li><strong>Nighttime thing</strong> - Es el alivio "Girly Pop" del disco. Buena elección, el track comercial que hacía falta.</li>
+            <li><strong>Feels Right</strong> - El momento de auto-motivación del protagonista, previo al quiebre.</li>
+            <li><strong>Fire</strong> - La verdad que esta canción me encanta. Es una completa revolución tratándose de Alessia... Mención especial al bridge, que es genial. Es el culmen del disco.</li>
+            <li><strong>Slow Motion</strong> - Es la canción seductora, hace ver a la protagonista como una persona segura de sí misma.</li>
+            <li><strong>Clearly</strong> - Es el reposo absoluto, se despeja el cielo después de la tormenta, el protagonista llega por fin a Ítaca.</li>
+          </ol>
+
+          <button class="collapse-btn">Ocultar análisis ⬏</button>
+        </div>
+      </div>
+    </div>
+    </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    
+    // 1. Lógica para el botón de Reproducción (Carga Diferida del iframe)
+    document.querySelectorAll('.play-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation(); // Evita que el clic expanda también la tarjeta
+        const container = btn.closest('.cover-container');
+        const embedUrl = container.getAttribute('data-embed');
+        
+        if (embedUrl) {
+          // Reemplaza la imagen con el reproductor incrustado
+          container.innerHTML = `<iframe src="${embedUrl}" width="100%" height="100%" frameborder="0" allowtransparency="true" allow="encrypted-media" style="border-radius:0;"></iframe>`;
+        }
+      });
+    });
+
+    // 2. Lógica para Expandir/Contraer la reseña
+    document.querySelectorAll('.album-card').forEach(card => {
+      card.addEventListener('click', (e) => {
+        // Evita interferir si hacen clic en la portada (reproductor)
+        if (e.target.closest('.cover-container')) return;
+
+        const summary = card.querySelector('.album-summary');
+        const review = card.querySelector('.full-review');
+        const isCollapsing = e.target.closest('.collapse-btn');
+
+        if (review.style.display === 'block' && isCollapsing) {
+          // Contraer
+          review.style.display = 'none';
+          summary.style.display = 'block';
+        } else if (review.style.display !== 'block') {
+          // Expandir
+          review.style.display = 'block';
+          summary.style.display = 'none';
+        }
+        
+        // Avisar al archivo principal (.md) que cambiaron las medidas
+        setTimeout(triggerResizeUpdate, 50);
+      });
+    });
+  });
+
+  // 3. Sistema para adaptar el tamaño dinámicamente en Quartz
+  function triggerResizeUpdate() {
+    const container = document.querySelector('.container');
+    const realHeight = container.offsetHeight + 40;
+    
+    window.parent.postMessage({ type: 'resize-iframe-musica', height: realHeight }, '*');
+    
+    try {
+      const parentIframe = window.parent.document.getElementById('musica-iframe');
+      if (parentIframe) {
+        parentIframe.style.height = realHeight + 'px';
+      }
+    } catch (e) {
+      console.warn("Cross-origin restriction en iframe.");
+    }
+  }
+
+  const resizeObserver = new ResizeObserver(() => triggerResizeUpdate());
+  window.addEventListener('load', () => {
+    resizeObserver.observe(document.querySelector('.container'));
+    setTimeout(triggerResizeUpdate, 500);
+  });
+</script>
+
+</body>
+</html>
