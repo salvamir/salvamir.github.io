@@ -20,7 +20,19 @@
       color: var(--text-main);
       font-family: "New York", 'Times New Roman', Georgia, serif;
     }
-    
+    /* Estilo para los links dentro del análisis */
+    .full-review a {
+      color: var(--accent);
+      text-decoration: none; /* Le quita el subrayado feo por defecto */
+      font-weight: bold; /* Opcional: lo hace un poco más grueso para que resalte */
+      transition: opacity 0.2s ease;
+    }
+
+    .full-review a:hover {
+      opacity: 0.8;
+      text-decoration: underline; /* Le agrega un subrayado sutil al pasar el mouse */
+    }
+
     .container {
       max-width: 100%;
       margin: 0 auto;
