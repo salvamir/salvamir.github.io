@@ -1,3 +1,8 @@
+---
+cssclasses:
+  - blog-post
+date: 2026-05-30
+---
 Estuvimos de campaña haciendo análisis de sales en Amaicha, y aprovechamos para ver un poco de geología. El primer día fuimos a hacer los estudios en el río de Amaicha, y bajamos primero por la ruta. Ahí nos encontramos con un afloramiento que ya conocíamos de antes, que habíamos visto ya en otro viaje.
 
 ![Primer afloramiento del grupo Santa María. Lo encontramos al costado de la ruta.](santamariatransicion.png)
