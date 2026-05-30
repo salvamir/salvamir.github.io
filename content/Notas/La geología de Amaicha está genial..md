@@ -3,7 +3,11 @@ cssclasses:
   - blog-post
 date: 2026-05-30
 ---
-Estuvimos de campaña haciendo análisis de sales en Amaicha, y aprovechamos para ver un poco de geología. El primer día fuimos a hacer los estudios en el río de Amaicha, y bajamos primero por la ruta. Ahí nos encontramos con un afloramiento que ya conocíamos de antes, que habíamos visto ya en otro viaje.
+## Contexto.
+Amaicha es un pueblito de Tucumán, una provincia de Argentina. Con la facultad fuimos a estudiar unas salinas muy interesantes de ahí. Nunca había ido tan activamente a Amaicha y me encantó conocer el pueblo. La gente era muy tranquila. Este fue el segundo viaje de estudios del año que hicimos con la facultad. El primero lo hicimos a San Pedro de Colalao, pero me olvidé de documentarlo.
+![[ubicacion_amaicha.mp4]]
+## Cómo fue.
+El objetivo era ir a hacer análisis de sales, pero nos distrajimos y aprovechamos para ver un poco de geología. El primer día fuimos a hacer los estudios en el río de Amaicha, y bajamos primero por la ruta. Ahí nos encontramos con un afloramiento que ya conocíamos de antes, que habíamos visto ya en otro viaje.
 
 ![Primer afloramiento del grupo Santa María. Lo encontramos al costado de la ruta.](santamariatransicion.png)
 
