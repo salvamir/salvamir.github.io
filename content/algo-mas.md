@@ -12,7 +12,7 @@ El RSS (Really Simple Syndification) es básicamente una manera de poder enterar
 1. Quería un lugar totalmente mío y más "duradero" para archivar momentos y cosas piola. Ya estaba cansado de llenar cuadernos uno tras otro con pensamientos que nadie más que Dios y yo conocemos. 
 2. Ese lugar no podía ser [Instagram]([instagram.com/salva_mirande](https://www.youtube.com/redirect?event=channel_description&redir_token=QUFFLUhqbUxJLVFZNzRiTW1JYy00MEh1Mk1tMHAzamo4QXxBQ3Jtc0ttQnFsZnFVTUtMMjZaMzJBanozNUFsMFN3UWVNNzA3cklrQXhVcDhrdW9GSU0zbEttM2NmaU5FMTZOU1hVZjdhZ01adUxtYWRYZDdRc1ZrM3J2V2d5VGxodVBTdEJMclRfU21kblRYemExSTZYbGZ5TQ&q=https%3A%2F%2Finstagram.com%2Fsalva_mirande))  ni [Youtube](https://youtube.com/@salvamirande?si=bo5QZYYN1T4N29Qm) porque no son técnicamente míos y eso me molestaba. Tampoco tenía la libertad de no ser profesional. Nunca fuí muy profesional en ningún lado.
 3. Quería poder hacer algo modificable y personalizable.
-## Progreso en mi blog:
+## Progreso:
 Ahora estoy copado con este proyecto, así que quiero aprovechar el empujón e ir mostrando mi avance.
 - ~~Crear una página web~~
 - ~~Crear un járdin digital~~
@@ -26,11 +26,12 @@ Ahora estoy copado con este proyecto, así que quiero aprovechar el empujón e i
 - Cambiar colores de los !abstracts
 - ~~Tener un favicon hecho a mano~~
 - Incorporar Pretext
+- ~~Crear página de musica~~
 - ~~Mejorar el feed de ahora~~
 - Agregar etiquetas
 - Agregar alt text a la galeria
 - Tener un dominio propio
-- Corregir distribución en el espacio del libro de visitas
+- ~~Corregir distribución en el espacio del libro de visitas~~
 - ~~Conseguir que mi página pueda ser encontrada por cualquier motor de búsqueda.~~
 ## <font color="#fbd5b5">Tecnología e Internet.</font>
 Los que me conocen sabrán que, de repente, soy fanático de la tecnología y adicto al internet. Antes eran los videos de youtube, después fueron los reels y tiktoks, y hoy son los blogs. Aprendí a manejar esa necesidad de consumir y obtener dopamina fácil e instantánea. 
