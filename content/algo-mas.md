@@ -31,6 +31,8 @@ Ahora estoy copado con este proyecto, así que quiero aprovechar el empujón e i
 - Agregar etiquetas
 - Agregar alt text a la galeria
 - Tener un dominio propio
+- Tener un short url
+- Incorporar caja de respuestas
 - ~~Corregir distribución en el espacio del libro de visitas~~
 - ~~Conseguir que mi página pueda ser encontrada por cualquier motor de búsqueda.~~
 ## <font color="#fbd5b5">Tecnología e Internet.</font>

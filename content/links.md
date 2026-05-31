@@ -32,6 +32,7 @@ Te dejo otros lugares interesantes para ver. Podés encontrar nuevas páginas po
 > - [Exile Lifestyle.](https://exilelifestyle.com/)
 > - [Tom](https://tomeri.org/). 
 > - [Tanner](https://tanner.vc) He creates things.
+> - [Rishabh](https://blog.rishabhps.com) This website is pretty interesting. He left there a lot of his personal life and thoughts, and is making an effort to make the web feel less lonely.
 > - [Small Seasons.](https://smallseasons.guide/)
 > - [The Autodidacts](https://www.autodidacts.io/tips-for-boosting-energy-levels-mitochondrial-function/)
 
