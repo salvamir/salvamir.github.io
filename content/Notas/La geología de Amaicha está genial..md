@@ -19,9 +19,11 @@ Más tarde, entramos a la cascada de Amaicha. En la entrada del sendero nos enco
 
 Sin embargo, pensándolo mejor ahora, eso no tiene mucho sentido. Probablemente haya sido nada más que basamento metamórfico de la formación Puncoviscana (es el basamento genérico de Tucumán), que en todo caso, habrá tenido una pátina (recubrimiento) de arenas finas. No hicimos ensayos con HCl como para corroborar la presencia de Carbonatos en este afloramiento, pero la misma morfología rocosa y la presencia de un plano de falla tan neto, nos demuestra que es casi 100% seguro que se trataba simplemente de basamento metamórfico.
 
-Seguimos avanzando, y el mismo afloramiento se veía más completo a la izquierda. En esta imagen queda corroborado que el material que vimos en la anterior, sin duda era basamento, que en algunos sectores se observaba plegado y con intrusiones ígneas. Vimos muchos clastos de pegmatita en el camino, probablemente se desprendieron por erosión.
+Seguimos avanzando, y el mismo afloramiento se veía más completo a la izquierda. En esta imagen queda corroborado que el material que vimos en la anterior, sin duda era basamento. Que en algunos sectores se observaba plegado y con intrusiones ígneas. Vimos muchos clastos de pegmatita en el camino, probablemente se desprendieron por erosión.
 
 ![[afloramientolacascadaizquierda.png]]
+
+En esta foto estas viendo un montón de basamento plegado y fallado (pliegues en violeta, falla en celeste). A lo largo de la falla se extiende un dique ígneo, quién sabrá de qué composición. Por lo pronto, la intrusión de más arriba, tenía toda la pinta de una pegmatita.
 
 Ese día tomamos todas las muestras super rápido, comimos allá en el campo y a las 17.15hs ya estabamos libres en la plaza, y me compré un heladito. A la noche tocamos la guitarra, la gente fumaba y tomaba cerveza. Yo con una coquita ya estaba bien. Cociné las hamburguesas a la parrilla y salieron re ricas.
 
