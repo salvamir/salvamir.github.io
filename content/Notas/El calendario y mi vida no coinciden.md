@@ -49,10 +49,91 @@ Así, nos sucede que sentimos como que la vida "nos lleva por delante" o que las
 Nuestro trabajo, estudio, y vida productiva en general funcionan en contactos netos y cambios directos y concisos. Entonces, sucede muy seguido que, mientras nuestra vida eficiente avanza de cuadrado en cuadrado, nosotros seguimos viviendo una etapa anterior. Y por eso estamos humanamente *desfazados* de nuestra propia vida. Eso es muy frustrante, porque se siente como que estamos corriendo sin alcanzar nunca a esos cuadrados que pasan de uno a otro muy rápidamente. Se siente como estar siempre por detrás.
 ## Y ahora qué.
 No tengo una conclusión sobre esto. Sigo pensándolo y me entusiasma mucho esta idea. Por lo pronto, quiero esforzarme en vivir más a conciencia esto. Quiero notar los cambios de las estaciones, y notar como a medida que cambian, varío yo también (mi manera de pensar, de crear, de estudiar, de reposar, etc) y así poder ponerles nombre y comunicarlas. También quiero extrapolarlo a una escala pequeña, y diferenciar con mayor nitidez las variaciones en un mismo día. Es un estilo de vida mucho más humano, acorde a como Dios nos hizo. Y por eso es mucho más pacífico, porque se siente justamente como ir en linea con lo que somos. Un poco de esto ya describí [acá](https://salvamir.github.io/Notas/Vivir-Adaptándose).
-## Seguir leyendo sobre el tema:
-Muchas personas ya hablaron de esto antes que yo. Vayan a seguir la conversación en sus páginas. 
+## Seguir con la conversación:
+Esta publicación es un comentario nada más. Entre las personas que venimos charlando de esto, se encuentran todos ellos, con todos los posts mencionados: 
 - [Fall In](https://submittedforyourperusal.com/2017/09/22/fall-in/), en Submitted for your perusal
 - [Small Seasons](https://smallseasons.guide), una guía para entender mejor las estaciones
 - [On Small Seasons and long calendars](https://rosszurowski.com/log/2018/small-seasons-long-calendars), de Ross Zurowski
 - [A personal unit of time](https://danielslife.blog/posts/a-personal-unit-of-time), [Living with the seasons](https://danielslife.blog/posts/living-with-the-seasons), and  [Noticing the small seasons](https://danielslife.blog/posts/noticing-the-small-seasons), todos de Daniel.
 - [Summer and gardening](https://rafaelkuebler.github.io/posts/20250703-summer-and-gardening/), de Rafa.
+
+<div class="webmention-box">
+  <h3 class="webmention-title">Enviar una respuesta</h3>
+  <p class="webmention-desc">Si respondiste a esta nota en tu blog, pegá el enlace acá abajo para vincularlo. Así yo me entero, y podemos seguir conversando.</p>
+  
+  <form action="https://webmention.io/salvamir.github.io/webmention" method="POST" class="webmention-form">
+    
+    <input type="hidden" name="target" id="wm-target-url" value="">
+    
+    <div class="wm-input-group">
+      <label for="wm-source">URL de tu post:</label>
+      <input type="url" name="source" id="wm-source" placeholder="https://tu-sitio.com/mi-respuesta" required>
+      <button type="submit" class="wm-submit">Enviar</button>
+    </div>
+  </form>
+</div>
+
+<style>
+  .webmention-box {
+    margin-top: 3rem;
+    padding: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(168, 158, 149, 0.3);
+    border-radius: 12px;
+    font-family: system-ui, sans-serif;
+  }
+  .webmention-title {
+    color: #b7966c;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+  }
+  .webmention-desc {
+    color: #e3ded6;
+    opacity: 0.8;
+    font-size: 0.9rem;
+    margin-bottom: 1.2rem;
+  }
+  .wm-input-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+  }
+  .wm-input-group label {
+    display: none; 
+  }
+  .wm-input-group input[type="url"] {
+    flex-grow: 1;
+    padding: 10px 12px;
+    background: #1a1714;
+    border: 1px solid rgba(168, 158, 149, 0.5);
+    border-radius: 8px;
+    color: #e3ded6;
+    font-family: monospace;
+  }
+  .wm-input-group input[type="url"]:focus {
+    outline: none;
+    border-color: #b7966c;
+  }
+  .wm-submit {
+    background: #b7966c;
+    color: #1a1714;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, opacity 0.2s;
+  }
+  .wm-submit:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("wm-target-url").value = window.location.href.split('#')[0];
+  });
+</script>
