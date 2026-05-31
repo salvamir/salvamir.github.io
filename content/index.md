@@ -2,7 +2,7 @@
 title: Salva Más De Cerca
 description: Acá me gusta coleccionar detalles de mi vida.
 ---
-<link rel="me" href="https://github.com/salvamir">
+<a rel="me" href="https://github.com/salvamir" style="display: none;">Mi GitHub</a>
 
 <style>
   /* 1. ESTADO BASE: Mostramos el mapa, escondemos los botones */
