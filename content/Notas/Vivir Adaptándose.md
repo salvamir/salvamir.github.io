@@ -6,6 +6,8 @@ tags:
   - conversaciones
   - estaciones
 ---
+#conversaciones #estaciones 
+
 Hoy leí por segunda vez [esta](https://danielslife.blog/posts/living-with-the-seasons) publicación de Daniel. 
 
 Es verdad que muchas veces ser productivo pareciera ser que es no dejarse influenciar por las circunstancias. Como que la productividad es igual a la perseverancia ante todo. No creo que sea así.

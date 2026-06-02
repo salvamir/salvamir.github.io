@@ -5,6 +5,7 @@ date: 2026-05-30
 tags:
   - geología
 ---
+#geología 
 ## Contexto.
 Amaicha es un pueblito de Tucumán, una provincia de Argentina. Con la facultad fuimos a estudiar unas salinas muy interesantes de ahí. Nunca había ido tan activamente a Amaicha y me encantó conocer el pueblo. La gente era muy tranquila. Este fue el segundo viaje de estudios del año que hicimos con la facultad. El primero lo hicimos a San Pedro de Colalao, pero me olvidé de documentarlo.
 ![[ubicacion_amaicha.mp4]]
