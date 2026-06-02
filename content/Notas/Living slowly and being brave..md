@@ -6,7 +6,7 @@ tags:
   - conversaciones
 ---
 This post is a reply to Daniel and Rafa's thoughts about [simplicity](https://rafaelkuebler.github.io/posts/20251207-simplicity-and-less/), [overwhelming needs of growth](https://danielslife.blog/posts/letting-others-be-better), rush and routines.
-I resonated with those posts and related with them. Here I just connected the nodes between them all. #conversaciones 
+Those posts resonated with me. Here I just connected the nodes between them all. #conversaciones 
 
 ---
 
