@@ -1,47 +1,40 @@
 ---
 cssclasses:
   - blog-post
-date: 2026-05-30
+date: 2026-06-01
 ---
-## Contexto.
-Amaicha es un pueblito de Tucumán, una provincia de Argentina. Con la facultad fuimos a estudiar unas salinas muy interesantes de ahí. Nunca había ido tan activamente a Amaicha y me encantó conocer el pueblo. La gente era muy tranquila. Este fue el segundo viaje de estudios del año que hicimos con la facultad. El primero lo hicimos a San Pedro de Colalao, pero me olvidé de documentarlo.
-![[ubicacion_amaicha.mp4]]
-## Cómo fue.
-El objetivo era ir a hacer análisis de sales, pero nos distrajimos y aprovechamos para ver un poco de geología. El primer día fuimos a hacer los estudios en el río de Amaicha, y bajamos primero por la ruta. Ahí nos encontramos con un afloramiento que ya conocíamos de antes, que habíamos visto ya en otro viaje.
+This post is a reply to Daniel and Rafa's thoughts about [simplicity](https://rafaelkuebler.github.io/posts/20251207-simplicity-and-less/), [overwhelming needs of growth](https://danielslife.blog/posts/letting-others-be-better), rush and routines.
+I resonated with those posts and related with them. Here I just connected the nodes between them all.
 
-![Primer afloramiento del grupo Santa María. Lo encontramos al costado de la ruta.](santamariatransicion.png)
+---
 
-Corresponde a un contacto transicional entre tres formaciones del grupo Santa María, que da para las Sierras de Aconquija (oeste/suroeste desde el punto en el que fue tomada la foto). No me acuerdo ni la composición general del grupo, ni tampoco las composiciones de cada formación. Lo que si, si mal no recuerdo, el profe nos habia comentado en su momento que el orden de aparición era en primer lugar, el material que se ve a la derecha de la imagen, que corresponde al complejo volcánico portezuelo de las ánimas (¿Y eso? ¿De dónde es? --> No sé).
+Since 2026 started, [my life is a blur too](https://danielslife.blog/posts/when-routine-fills-the-day). The constant movement, the routine, and the overwhelming rhythm of university are some of the causes of it. My head is over-saturated of tasks, schedules to be organized, full to-do lists and much more. At the end of the day, everything passes by. But on the way I lost all my energy. And my beloved ones suffer the consequences: I stop smiling, I do not listen to them, I do not spend time with them anymore.
 
-Más tarde, entramos a la cascada de Amaicha. En la entrada del sendero nos encontramos con este afloramiento:  un contacto casi neto entre dos materiales distintos, el superior correspondía a un estrato conglomerádico, y el inferior a lo que parecía ser caliza. 
+In general, we all live in a rush. We don't know why but is like you should always be growing. And I agree with Rafa on this: most of the time is just self-imposed, or imposed by our environment. For me, it is just "not self-controlled", or is unconscious. I'm trying to say that, rather than focusing on what external factors are making us feel (we can't do nothing for it), why not focus on what we actually can change?
 
-![[afloramientoentrada.png|697]]
+---
 
-Sin embargo, pensándolo mejor ahora, eso no tiene mucho sentido. Probablemente haya sido nada más que basamento metamórfico de la formación Puncoviscana (es el basamento genérico de Tucumán), que en todo caso, habrá tenido una pátina (recubrimiento) de arenas finas. No hicimos ensayos con HCl como para corroborar la presencia de Carbonatos en este afloramiento, pero la misma morfología rocosa y la presencia de un plano de falla tan neto, nos demuestra que es casi 100% seguro que se trataba simplemente de basamento metamórfico.
+Wait. Before you continue reading, take a deep breath.
+(...)
+Now you can keep going.
 
-Seguimos avanzando, y el mismo afloramiento se veía más completo a la izquierda. En esta imagen queda corroborado que el material que vimos en la anterior, sin duda era basamento. Que en algunos sectores se observaba plegado y con intrusiones ígneas. Vimos muchos clastos de pegmatita en el camino, probablemente se desprendieron por erosión.
+---
 
-![[afloramientolacascadaizquierda.png]]
+Let the environment be rushed if they want. Let others keep growing, but you don't need all of it. You can live more simply if you want. You just need to be brave.
 
-En esta foto estas viendo un montón de basamento plegado y fallado (pliegues en violeta, falla en celeste). A lo largo de la falla se extiende un dique ígneo, quién sabrá de qué composición. Por lo pronto, la intrusión de más arriba, tenía toda la pinta de una pegmatita.
+What I'm trying to say is: If we focus on being conscious of our hustle, then its easy to pause. And pause is the solution. Is that simple: When you know you're walking too fast, just stop, pause and wait for a little. You don't need to rush. And you can keep waiting for life. Look at the trees, listen to people and your environment, close your eyes, take a breath.
 
-Ese día tomamos todas las muestras super rápido, comimos allá en el campo y a las 17.15hs ya estabamos libres en la plaza, y me compré un heladito. A la noche tocamos la guitarra, la gente fumaba y tomaba cerveza. Yo con una coquita ya estaba bien. Cociné las hamburguesas a la parrilla y salieron re ricas.
+I practice this, and helps me calm down. Living slowly and stopping by the details, is the way I found of making everyday feel memorable.
 
-![[heladito.jpg|225]]![[entornoynosotros.jpg|301]]![[cardon.jpg|224]]![[escrituralocal.jpg|223]]
-## Segundo día.
-Este día fue más largo, porque caminamos desde la mañana a la tarde, basicamente. Esteban (el chofer) nos arcercó un poco, pero tampoco tanto. Fue genial, porque encontramos un entorno geológicamente muy interesante.
+Being always busy make us less human. What is the point of all those activities, if we miss the really important things? People says that doing nothing with others is an unproductive activity. I miss being unproductive with friends. I don't have time for my family now. I "don't have" time for praying either.
 
-![[pliegue.png]]
+The solution to this hustle culture is doing nothing. But we don't have the braveness for stepping aside of our "extra busy and important life". Spending time in other's life is the most unproductive thing someone can do, that's what the world says.
 
-Esta reconstrucción la hicieron Justo y Franco para su tesis. Justo fue muy paciente explicándomela para que pueda verla. No conseguía ver el pliegue.
+I encourage you to assume the protagonism of your life, and rest for a little, without worrying about nothing. Probably, nothing will happen. I'm sure that important task can wait some hours. Put down your phone and let yourself bore for a little. Focus on simple things again. Be with others outside, drink something with a friend, pray or look at the trees.
 
-![[sinclinal.png]]
-
-Este es otro pliegue que me mostró Cesar. La verdad me encantó.
-Vimos muchas otras estructuras más, como laminaciones convolutas, basaltos ventifactos y vesiculares, hogbacks, crestas, ondulas, etc. Fue muy completo. Si bien en esta publicación no estoy diciendo nada de la quimica que estudiamos, fue tremenda esa parte también.
-
-Quiero empezar a publicar más en detalle como vivo las campañas, porque después me olvido. Me sirvió mucho dibujar sobre las fotos también.
-#geología
+And if you already feel rested, then go and keep up with your responsibilities. But this time, do everything slowly. Do it with all of yourself: Read slowly, walk slowly, talk slowly. You don't need to rush. Speed is the most un-human thing we ever had. Cars go at 60km/hr, we don't.
+## Further reading:
+More people commented on this topic, like [Kev](https://kevquirk.com/i-didnt-fail), or [Rihshab](https://blog.rishabhps.com/posts/2026-02-03-content-consumption-productivity-and-lost-art-of-boredom/). Read them, publish something, and keep the conversation alive!
 <div class="webmention-box">
 <h3 class="webmention-title">Enviar una respuesta</h3>
 <p class="webmention-desc">Si respondiste a esta nota en tu blog, pegá el enlace acá abajo para vincularlo. Así yo me entero, y podemos seguir conversando.</p>
@@ -246,3 +239,5 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 </script>
+
+#conversaciones

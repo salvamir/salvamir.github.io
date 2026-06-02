@@ -20,7 +20,15 @@ Es bueno considerar estos cambios que nos acompañan en la vida. Ultimamente ven
 
 Acá en Tucumán, las estaciones climáticas no varían tanto como en otros lugares. Pero si varía mucho mi energía e inspiración. Cambian mucho los tiempos, y las prioridades.
 Me siento frustrado ahora porque no consigo seguir con mi rutina del verano. Pero ya no estoy en verano. Es momento de re-plantearse la manera de encarar la facultad, el deporte, los sacramentos, el tiempo con amigos y las responsabilidades de la casa. Ya tendré tiempo de "perseverar" cuando llegue el invierno. Voy a aprovechar este sol y estos días para pensar en esto y reorganizar mi rutina.
+## Seguir con la conversación:
+Esta publicación es un comentario nada más. Entre las personas que venimos charlando de esto, se encuentran todos ellos, con todos los posts mencionados: 
+- [Fall In](https://submittedforyourperusal.com/2017/09/22/fall-in/), en Submitted for your perusal
+- [Small Seasons](https://smallseasons.guide), una guía para entender mejor las estaciones
+- [On Small Seasons and long calendars](https://rosszurowski.com/log/2018/small-seasons-long-calendars), de Ross Zurowski
+- [A personal unit of time](https://danielslife.blog/posts/a-personal-unit-of-time), [Living with the seasons](https://danielslife.blog/posts/living-with-the-seasons), and  [Noticing the small seasons](https://danielslife.blog/posts/noticing-the-small-seasons), todos de Daniel.
+- [Summer and gardening](https://rafaelkuebler.github.io/posts/20250703-summer-and-gardening/), de Rafa.
 
+#conversaciones #estaciones 
 <div class="webmention-box">
 <h3 class="webmention-title">Enviar una respuesta</h3>
 <p class="webmention-desc">Si respondiste a esta nota en tu blog, pegá el enlace acá abajo para vincularlo. Así yo me entero, y podemos seguir conversando.</p>

@@ -28,14 +28,15 @@ Ahora estoy copado con este proyecto, así que quiero aprovechar el empujón e i
 - Incorporar Pretext
 - ~~Crear página de musica~~
 - ~~Mejorar el feed de ahora~~
-- Agregar etiquetas
+- ~~Agregar etiquetas~~
 - Agregar alt text a la galeria
+- Agregar barra de búsqueda a la carpeta de notas.
 - Tener un dominio propio
 - Tener un short url
-- Incorporar caja de respuestas
+- ~~Incorporar caja de respuestas~~
 - ~~Corregir distribución en el espacio del libro de visitas~~
 - ~~Conseguir que mi página pueda ser encontrada por cualquier motor de búsqueda.~~
-## <font color="#fbd5b5">Tecnología e Internet.</font>
+## <font color="#d8d8d8">Tecnología e Internet.</font>
 Los que me conocen sabrán que, de repente, soy fanático de la tecnología y adicto al internet. Antes eran los videos de youtube, después fueron los reels y tiktoks, y hoy son los blogs. Aprendí a manejar esa necesidad de consumir y obtener dopamina fácil e instantánea. 
 
 Ahora mismo, gracias a Dios te puedo decir que estoy empezando a tener una relación más "sana" con la tecnología. Recen por mi, para que aprenda realmente a darle el espacio que le corresponde a mi celular y a mi computadora, para que no me coman la vida porfa. 
@@ -44,13 +45,13 @@ El Internet me parece fascinante desde hace un par de meses. No sabía ni qué e
 
 ¿No te parece re loco que un millón de edificios con información nanometrica (servidores) estén conectados a través de cables submarinos de miles de kilometros? y que encima toda esa información sea viejisima. Es tan vasta que nos es, seguramente, imposible acceder a toda. Y esa información es *nuestra*. Los humanos hemos documentado las cosas en los escritos y los libros primero obvio. Después en las fotos. Y ahora, los libros y las fotos yacen duplicados y virtualizados en un servidor digital accesible a todos desde cualquier parte del mundo.
 
-Es un bajón que la "hiperconectividad" del presente nos haya desconectado tanto unos de otros. Las redes sociales no nos acercan nada, de eso estoy seguro. El internet nunca nos va a acercar tanto como quiere parecer, pero la idea no fue esa en un principio. No esperes encontrar nada "real" en este espacio. Acá es todo archivo, todo virtual, todo muerto. La realidad está fuera de la pantalla, la idea de esto es señalarla nada más. 
+Es un bajón que la "hiperconectividad" del presente nos haya desconectado tanto unos de otros. Las redes sociales no nos acercan nada, de eso estoy seguro. <font color="#fbd5b5">El internet nunca nos va a acercar tanto como quiere parecer, pero la idea no fue esa en un principio.</font> No esperes encontrar nada "real" en este espacio. En todo caso, la información que guardo es humana, sincera y transparente. Pero la realidad es [[🌷 Sobre la vida "real"|otra cosa]]. Acá es todo archivo, todo virtual, todo muerto. La realidad está fuera de la pantalla, la idea de esto es señalarla nada más. 
 
 Esta página existe para que vos, yo y cualquiera que entre pueda sentirse humanamente llamado a vivir plenamente. Mi idea es que, leyendo y percibiendo todo lo que documento acá, pueda darme cuenta de lo superfluo que es, y gente como vos pueda sentirse un poco conectada conmigo, y esa conexión ficticia te haga pensar "eu, tengo que salir de acá y acercarme a la gente real de mi entorno real".
 
 El internet es un invento muy zarpado y muy útil. Me parece indispensable aprender a convivir sanamente con la tecnología para que nos sean propicias. La idea es que podamos prender y apagar la conexión por decisión propia cuando queramos.
 
-Acá en el internet hay muchas cosas valiosas. Algunas de ellas las recopilé en mis [[libro-de-visitas|links]]. Por eso, te invito a entrar a [esta](https://liturgiacatolica.org/Lucas/5,1%E2%80%9111.html) página secreta.
+Acá en el internet hay muchas cosas valiosas. Algunas de ellas las recopilé en mis [[links|links]]. Por eso, te invito a entrar a [esta](https://liturgiacatolica.org/Lucas/5,1%E2%80%9111.html) página secreta.
 ## Tafí del valle.
 Me encanta la naturaleza y salir de caminatas. Me encanta tafí a pesar de que casi nunca elijo ir. Siempre termino priorizando la facultad, pero esa es otra charla.
 Varios de los cuadros que van a encontrar en esta página son de Tafí y los hizo un tío mío. 

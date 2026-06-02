@@ -57,6 +57,7 @@ Esta publicación es un comentario nada más. Entre las personas que venimos cha
 - [A personal unit of time](https://danielslife.blog/posts/a-personal-unit-of-time), [Living with the seasons](https://danielslife.blog/posts/living-with-the-seasons), and  [Noticing the small seasons](https://danielslife.blog/posts/noticing-the-small-seasons), todos de Daniel.
 - [Summer and gardening](https://rafaelkuebler.github.io/posts/20250703-summer-and-gardening/), de Rafa.
 
+#conversaciones #estaciones
 <div class="webmention-box">
 <h3 class="webmention-title">Enviar una respuesta</h3>
 <p class="webmention-desc">Si respondiste a esta nota en tu blog, pegá el enlace acá abajo para vincularlo. Así yo me entero, y podemos seguir conversando.</p>

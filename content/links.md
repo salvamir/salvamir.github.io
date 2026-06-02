@@ -35,6 +35,7 @@ Te dejo otros lugares interesantes para ver. Podés encontrar nuevas páginas po
 > - [Rishabh](https://blog.rishabhps.com) This website is pretty interesting. He left there a lot of his personal life and thoughts, and is making an effort to make the web feel less lonely.
 > - [Small Seasons.](https://smallseasons.guide/)
 > - [The Autodidacts](https://www.autodidacts.io/tips-for-boosting-energy-levels-mitochondrial-function/)
+> - [Interconnected](https://interconnected.org/home/).
 
 > [!abstract]- Philosophy, Religion and History
 > - [Christian Info](https://elcristiano.info/): Great info about the church.
@@ -54,7 +55,7 @@ Te dejo otros lugares interesantes para ver. Podés encontrar nuevas páginas po
 > - [Jayfa](https://www.flickr.com/photos/jayfa_mocs/page2). Lego creator & artist.
 > - [Paintbook Link.](https://codepen.io/alperentalaslioglu/pen/yPGgvP)
 
-> [!note]- Geology
+> [!note]+ Geology
 > > [!todo]- Blogs and news
 > > - [Hombre Geológico.](https://geologicalmanblog.wordpress.com/) Blog personal sobre geología en general, actualizado, mundial centrado en España.
 > > - [Highly Allochthonous.](https://all-geo.org/highlyallochthonous/) Old school geology personal blog.
