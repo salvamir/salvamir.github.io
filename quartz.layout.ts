@@ -14,12 +14,13 @@ export const sharedPageComponents: SharedLayout = {
   footer: Component.Footer(),
 }
 
-// 2. MANTENEMOS LA IZQUIERDA Y DERECHA COMPLETAMENTE VACÍAS
+// 2. BUSCADOR EN EL CONTENIDO CENTRAL (OCULTO POR CSS SALVO EN PÁGINA ESPECÍFICA) Y TAGLIST COMENTADO
 export const defaultContentPageLayout: PageLayout = {
   beforeBody: [
+    Component.Search(), // <-- Agregado en el cuerpo central
     Component.ArticleTitle(),
     Component.ContentMeta(),
-    Component.TagList(),
+    // Component.TagList(), <-- Comentado para eliminar las etiquetas visualmente al lado de las notas
     Component.Graph({
       localGraph: { fontSize: 0.45, nodeSize: 3.0, repulsion: 1.5, linkDistance: 100 },
       globalGraph: { fontSize: 0.6, nodeSize: 3.5, repulsion: 1.5, linkDistance: 100 },
@@ -31,7 +32,11 @@ export const defaultContentPageLayout: PageLayout = {
 
 // 3. LO MISMO PARA LA LISTA DE PÁGINAS
 export const defaultListPageLayout: PageLayout = {
-  beforeBody: [Component.ArticleTitle(), Component.ContentMeta()],
+  beforeBody: [
+    Component.Search(), // <-- Agregado aquí también
+    Component.ArticleTitle(), 
+    Component.ContentMeta()
+  ],
   left: [],
   right: [], 
 }
