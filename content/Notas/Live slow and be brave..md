@@ -5,7 +5,7 @@ date: 2026-06-01
 tags:
   - conversaciones
 ---
-This post is a reply to Daniel and Rafa's thoughts about [simplicity](https://rafaelkuebler.github.io/posts/20251207-simplicity-and-less/), [overwhelming needs of growth](https://danielslife.blog/posts/letting-others-be-better), rush and routines.
+This post is a reply to Daniel's and Rafa's thoughts on [simplicity](https://rafaelkuebler.github.io/posts/20251207-simplicity-and-less/), [overwhelming "needs" of professional growth](https://danielslife.blog/posts/letting-others-be-better), rush and routines.
 Those posts resonated with me. Here I just connected the nodes between them all. #conversaciones 
 
 ---
@@ -23,7 +23,7 @@ Now you can keep going.
 ---
 
 Let the environment be rushed if they want. Let others keep growing, but you don't need all of it. You can live more simply if you want. You just need to be brave.
-
+![[rush.png]]
 What I'm trying to say is: If we focus on being conscious of our hustle, then its easy to pause. And pause is the solution. Is that simple: When you know you're walking too fast, just stop, pause and wait for a little. You don't need to rush. And you can keep waiting for life. Look at the trees, listen to people and your environment, close your eyes, take a breath.
 
 I practice this, and helps me calm down. Living slowly and stopping by the details, is the way I found of making everyday feel memorable.

@@ -30,7 +30,7 @@ Ahora estoy copado con este proyecto, así que quiero aprovechar el empujón e i
 - ~~Mejorar el feed de ahora~~
 - ~~Agregar etiquetas~~
 - Agregar alt text a la galeria
-- Agregar barra de búsqueda a la carpeta de notas.
+- ~~Agregar barra de búsqueda a la carpeta de notas.~~
 - Tener un dominio propio
 - Tener un short url
 - ~~Incorporar caja de respuestas~~

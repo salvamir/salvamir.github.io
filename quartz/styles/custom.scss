@@ -117,8 +117,7 @@ footer {
   border: none !important;
 }
 
-hr { display: none !important; }
-
+/* Dejamos que los p y li sigan con su tipografía limpia */
 article p, article li {
   font-size: 0.95rem !important; 
   line-height: 1.6 !important; 
