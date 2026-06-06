@@ -311,13 +311,13 @@ body[data-slug="Notas/index"] .search { display: flex !important; justify-conten
 .tags, ul.tags { display: none !important; }
 
 /* ==================================================================
-   15. MODO OSCURO GLOBAL SOBERANO Y UNIFICADO (QUARTZ & CUSTOM SCRIPTS)
+   15. MODO OSCURO GLOBAL SOBERANO Y UNIFICADO
    ================================================================== */
 html[saved-theme="dark"], html.dark-mode, body.dark-mode {
   background-color: #000000 !important;
   color: #e0eaf5 !important;
 
-  /* --- VARIABLES NATIVAS DE PALETA DE QUARTZ (NEGRO ABSOLUTO) --- */
+  /* --- VARIABLES NATIVAS DE PALETA DE QUARTZ --- */
   --light: #000000 !important;       
   --lightgray: rgba(224, 234, 245, 0.2) !important; 
   --darkgray: #e0eaf5 !important;    
@@ -325,16 +325,15 @@ html[saved-theme="dark"], html.dark-mode, body.dark-mode {
   --secondary: #84add7 !important;   
   --tertiary: #a3c2e1 !important;    
 
-  /* --- REESCRITURA DE ELEMENTOS INTEGRADOS --- */
+  /* --- REESCRITURA DE ELEMENTOS --- */
   .page {
     background-color: #000000 !important;
   }
 
   .page-header header {
-    background-color: #3c3c3c !important; /* Mantiene el fondo oscuro en PC */
+    background-color: #3c3c3c !important;
     border: 1px solid rgba(224, 234, 245, 0.2) !important;
 
-    /* ACÁ ELIMINAMOS EL FONDO BLANCO DE LOS BOTONES RSS/MAIL EN MODO OSCURO */
     .links a, .nav-links a {
       background-color: transparent !important;
       border: none !important;
@@ -345,37 +344,22 @@ html[saved-theme="dark"], html.dark-mode, body.dark-mode {
     }
   }
 
-  .page-title, 
-  .page-title a,
-  article h1, 
-  article h2, 
-  article h3, 
-  article h4, 
-  article h5, 
-  article h6,
-  h1.article-title {
+  .page-title, .page-title a, article h1, article h2, article h3, article h4, article h5, article h6, h1.article-title {
     color: #e0eaf5 !important;
   }
 
-  .links a, 
-  .nav-links a,
-  article p a,
-  ul.section-ul li > .desc a {
+  .links a, .nav-links a, article p a, ul.section-ul li > .desc a {
     color: #84add7 !important;
-    background-color: transparent !important; /* Refuerzo de transparencia para los enlaces */
+    background-color: transparent !important;
     border: none !important;
   }
 
-  .links a:hover,
-  .nav-links a:hover,
-  article p a:hover {
+  .links a:hover, .nav-links a:hover, article p a:hover {
     color: #a3c2e1 !important;
-    background-color: transparent !important; /* Refuerzo de hover para que no aparezcan cajas grises */
+    background-color: transparent !important; 
   }
 
-  article p, 
-  article li,
-  ul.section-ul li > .desc {
+  article p, article li, ul.section-ul li > .desc {
     color: #e0eaf5 !important;
   }
 
@@ -403,9 +387,7 @@ html[saved-theme="dark"], html.dark-mode, body.dark-mode {
 
   /* --- CORRECCIONES PARA CELULAR EN MODO OSCURO --- */
   @media screen and (max-width: 800px) {
-    .links a, 
-    .nav-links a {
-      /* Aquí forzamos que en celular NO haya fondo ni bordes blancos/grises para rss/mail */
+    .links a, .nav-links a {
       border: none !important;
       background-color: transparent !important;
       color: #c1d6ec !important;
@@ -414,142 +396,69 @@ html[saved-theme="dark"], html.dark-mode, body.dark-mode {
       display: inline-block !important;
     }
     .page-header header {
-      /* Restauramos el fondo del recuadro principal en celulares */
       background-color: #3c3c3c !important;
       border: 1px solid rgba(224, 234, 245, 0.2) !important;
     }
   }
-
-  /* --- BOTONES ADAPTADOS AL MODO OSCURO --- */
-  #back-to-top, #goToTopBtn {
-    background-color: #3c3c3c !important;
-    border-color: #e0eaf5 !important;
-    color: #e0eaf5 !important;
-    svg { stroke: #e0eaf5 !important; }
-    &:hover {
-      background-color: #e0eaf5 !important;
-      color: #3c3c3c !important;
-      svg { stroke: #3c3c3c !important; }
-    }
-  }
-
-  #darkmode-toggle {
-    background-color: #3c3c3c !important;
-    border-color: #e0eaf5 !important;
-    svg { fill: #e0eaf5 !important; }
-    &:hover { background-color: #e0eaf5 !important; svg { fill: #3c3c3c !important; } }
-  }
 }
 
 /* ==========================================
-   16. BOTONES FLOTANTES DE ACCIÓN INTERACTIVA (ESTADO CLARO BASE)
+   16. CONTROLES DEL FOOTER (MINIMALISTAS Y ESTÁTICOS)
    ========================================== */
-#back-to-top, #goToTopBtn {
-  display: none; 
-  position: fixed; 
-  bottom: 30px; 
-  right: 30px; 
-  z-index: 999;
-  font-size: 1.5rem; 
-  border: 1px solid rgba(183, 150, 108, 0.4); 
-  outline: none;
-  background-color: rgba(13, 12, 10, 0.9); 
-  color: #B7966C; 
-  cursor: pointer;
-  width: 50px; 
-  height: 50px; 
-  border-radius: 50%; 
-  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-  display: flex !important; 
-  align-items: center; 
-  justify-content: center;
-  opacity: 0; 
-  visibility: hidden; 
-  transition: opacity 0.3s, visibility 0.3s, background-color 0.3s, transform 0.2s, border-color 0.2s;
-  
-  &.visible { display: flex !important; opacity: 1; visibility: visible; }
-  &:hover { background-color: #B7966C; color: #0d0c0a; border-color: #E7C8A0; transform: translateY(-3px); svg { stroke: #0d0c0a; } }
-}
-
-#darkmode-toggle {
-  position: fixed !important; 
-  left: 30px !important; 
-  bottom: 30px !important; 
-  right: auto !important; 
-  top: auto !important;
-  z-index: 999; 
-  opacity: 0; 
-  visibility: hidden; 
-  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.2s ease, background-color 0.3s;
-  background-color: rgba(13, 12, 10, 0.9) !important; 
-  border: 1px solid rgba(183, 150, 108, 0.4) !important;
-  border-radius: 50% !important; 
-  width: 50px !important; 
-  height: 50px !important;
-  display: flex !important; 
-  align-items: center; 
-  justify-content: center; 
-  cursor: pointer;
-  
-  svg { fill: #B7966C !important; width: 22px !important; height: 22px !important; }
-  &:hover { background-color: #B7966C !important; border-color: #E7C8A0 !important; transform: translateY(-3px); svg { fill: #0d0c0a !important; } }
-  &.show-dark-scroll { opacity: 1 !important; visibility: visible !important; }
-}
-/* ==========================================
-   17. BOTÓN DE MÚSICA EN EL FOOTER
-   ========================================== */
-.footer-center-container {
+.footer-controls {
   display: flex;
   justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
   margin-top: 2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
-#music-player-btn {
-  background: transparent;
-  border: 1px solid rgba(183, 150, 108, 0.4);
-  color: #B7966C;
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
+/* Estilo unificado para los tres iconos: transparentes, autoajustables y sin bordes */
+#back-to-top, #darkmode-toggle, #music-player-btn {
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
   cursor: pointer;
-  display: flex;
+  transition: transform 0.2s ease, color 0.3s ease;
+  outline: none;
+  width: auto !important;
+  height: auto !important;
+  display: flex !important;
   align-items: center;
   justify-content: center;
-  transition: all 0.3s ease;
-  outline: none;
-}
+  color: rgba(183, 150, 108, 0.6) !important; /* Muted Gold base en modo claro */
 
-#music-player-btn:hover {
-  background-color: rgba(183, 150, 108, 0.1);
-  transform: translateY(-2px);
+  svg {
+    display: block;
+  }
+
+  &:hover {
+    transform: translateY(-3px) !important;
+    color: #E7C8A0 !important; /* Dorado vibrante al hover en modo claro */
+  }
 }
 
 /* Estado cuando la música está SONANDO (Modo Claro) */
 #music-player-btn.playing {
-  background-color: #B7966C;
-  color: #1a1714;
-  border-color: #E7C8A0;
-  box-shadow: 0 0 10px rgba(183, 150, 108, 0.4);
+  color: #E7C8A0 !important;
+  filter: drop-shadow(0 0 5px rgba(231, 200, 160, 0.4));
 }
 
-/* --- Adaptación a Modo Oscuro de Quartz --- */
-html[saved-theme="dark"] #music-player-btn, 
-html.dark-mode #music-player-btn {
-  border-color: rgba(224, 234, 245, 0.4) !important;
-  color: #84add7 !important;
-}
+/* Colores para los iconos en Modo Oscuro */
+html[saved-theme="dark"], html.dark-mode {
+  #back-to-top, #darkmode-toggle, #music-player-btn {
+    color: rgba(224, 234, 245, 0.5) !important; /* Gris suave en modo oscuro */
+    
+    &:hover {
+      color: #e0eaf5 !important; /* Blanco vibrante al hover */
+    }
+  }
 
-html[saved-theme="dark"] #music-player-btn:hover, 
-html.dark-mode #music-player-btn:hover {
-  background-color: rgba(132, 173, 215, 0.1) !important;
-}
-
-/* Estado cuando la música está SONANDO (Modo Oscuro) */
-html[saved-theme="dark"] #music-player-btn.playing, 
-html.dark-mode #music-player-btn.playing {
-  background-color: #84add7 !important;
-  color: #000000 !important;
-  border-color: #e0eaf5 !important;
-  box-shadow: 0 0 10px rgba(132, 173, 215, 0.4) !important;
+  /* Estado cuando la música está SONANDO (Modo Oscuro) */
+  #music-player-btn.playing {
+    color: #84add7 !important; /* Azulado cuando suena */
+    filter: drop-shadow(0 0 5px rgba(132, 173, 215, 0.4));
+  }
 }
