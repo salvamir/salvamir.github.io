@@ -62,7 +62,7 @@
     .page-header {
       text-align: center;
       margin-bottom: 3rem;
-      background: transparent !important; /* Forzado transparente para evitar recuadros */
+      background: transparent !important; 
       padding: 0;
       border-radius: 0;
     }
@@ -217,25 +217,25 @@
       display: none;
     }
 
+    /* Botón simplificado solo con icono */
     .dark-mode-toggle {
         background: none;
         border: 1px solid var(--border-color);
-        color: var(--accent);
-        padding: 10px 20px;
-        border-radius: 20px;
+        color: var(--text-main);
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
         cursor: pointer;
-        font-family: system-ui, sans-serif;
-        font-size: 0.9rem;
+        font-size: 1.2rem;
         margin: 2rem 0;
         transition: all 0.3s ease;
         display: flex;
+        justify-content: center;
         align-items: center;
-        gap: 8px;
     }
     .dark-mode-toggle:hover {
         background-color: var(--bg-card);
         border-color: var(--accent);
-        color: var(--text-main);
     }
   </style>
 </head>
@@ -243,8 +243,8 @@
 
   <div class="container">
     <header class="page-header">
-      <a href="/" class="page-title">Salva Más De Cerca</a>
-      <p class="page-desc">Opiniones y apreciaciones sobre álbumes de música.</p>
+      <a href="/" class="page-title" title="Volver al inicio">Música</a>
+      <p class="page-desc">Mi colección de música.</p>
     </header>
 
     <div class="music-grid">
@@ -266,27 +266,24 @@
       </div>
     </div>
 
-    <button id="darkModeToggle" class="dark-mode-toggle">
-        <span id="darkModeIcon">☀️</span> Modo Claro
+    <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Cambiar modo">
+        ☀️
     </button>
   </div>
 
   <script>
     const toggleBtn = document.getElementById('darkModeToggle');
-    const toggleIcon = document.getElementById('darkModeIcon');
     const htmlRoot = document.documentElement;
 
     function applyTheme(theme) {
         if (theme === 'dark') {
             document.body.classList.add('dark-mode');
             htmlRoot.setAttribute('data-theme', 'dark');
-            if (toggleIcon) toggleIcon.innerText = "🌙";
-            toggleBtn.innerHTML = '<span id="darkModeIcon">🌙</span>'';
+            toggleBtn.innerText = "🌙";
         } else {
             document.body.classList.remove('dark-mode');
             htmlRoot.setAttribute('data-theme', 'light');
-            if (toggleIcon) toggleIcon.innerText = "☀️";
-            toggleBtn.innerHTML = '<span id="darkModeIcon">☀️</span>'';
+            toggleBtn.innerText = "☀️";
         }
     }
 
@@ -298,7 +295,7 @@
         const currentTheme = htmlRoot.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
         localStorage.setItem('theme', currentTheme);
         applyTheme(currentTheme);
-    }); // <---- ESTA LLAVE ERA LA QUE FALTABA Y ROMPÍA LA PÁGINA 
+    });
 
     // --- SINCRONIZADOR GLOBAL DEFINITIVO DE RESIZE DE IFRAME ---
     setInterval(() => {

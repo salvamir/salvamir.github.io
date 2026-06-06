@@ -4,19 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    /* --- VARIABLES POR DEFECTO (MODO CLARO - INTEGRADO A TU MARRÓN BASE) --- */
+    /* --- VARIABLES POR DEFECTO (MODO CLARO) --- */
     :root {
-      --bg-canvas: #1a1714; /* ¡Color crema eliminado de raíz para evitar fogonazos blancos! */
-      --bg-card: rgba(255, 255, 255, 0.03);
+      --bg-card: #1a1714;
       --text-main: #e3ded6;
       --accent: #b7966c;
       --border-color: rgba(168, 158, 149, 0.3);
       --input-bg: rgba(0, 0, 0, 0.2);
     }
     
-    /* --- VARIABLES EN MODO OSCURO (NEGRO ABSOLUTO) --- */
+    /* --- VARIABLES EN MODO OSCURO --- */
     html[data-theme="dark"], body.dark-mode {
-      --bg-canvas: #000000 !important;
       --bg-card: rgba(60, 60, 60, 0.2) !important;
       --text-main: #e0eaf5 !important;
       --accent: #84add7 !important;
@@ -27,10 +25,10 @@
     html, body {
       margin: 0;
       padding: 0;
-      background: var(--bg-canvas) !important;
+      background: transparent !important; /* HEREDA EL FONDO DEL PADRE EN CUALQUIER MODO */
       color: var(--text-main);
       font-family: "New York", Georgia, serif;
-      transition: background 0.3s ease, color 0.3s ease;
+      transition: color 0.3s ease;
     }
     
     .guestbook-container { 
@@ -39,6 +37,7 @@
       padding: 10px; 
       box-sizing: border-box; 
       padding-bottom: 40px;
+      background: transparent !important; /* HEREDA EL FONDO DEL PADRE EN CUALQUIER MODO */
     }
     
     .guestbook-main-title { text-align: center; font-size: 2.5rem; margin-bottom: 1.5rem; }
@@ -49,7 +48,7 @@
     .guestbook-section.active { display: block; }
     
     #paint-canvas { 
-      background: #faf7f2 !important; /* El lienzo de dibujo se queda blanco claro internamente para que se vean bien las firmas */
+      background: #faf7f2 !important; /* El cuadro de dibujo sí necesita su fondo fijo para que las líneas se vean */
       border-radius: 8px; 
       display: block; 
       margin: 0 auto 20px auto; 
