@@ -4,8 +4,6 @@ description: Acá me gusta coleccionar detalles de mi vida.
 ---
 <a rel="me" href="https://github.com/salvamir" style="display: none;">Mi GitHub</a>
 
-<a rel="me" href="https://github.com/salvamir" style="display: none;">Mi GitHub</a>
-
 <style>
   /* 1. ESTADO BASE: Mostramos el mapa, escondemos los botones */
   .mapa-escritorio {
@@ -50,12 +48,12 @@ description: Acá me gusta coleccionar detalles de mi vida.
 <div class="mapa-escritorio">
   <img src="mapa-principal.png" usemap="#image-map">
   <map name="image-map">
-    <area target="" alt="Colección de fotos." title="Galería" href="/galería" coords="176,218,17,167" shape="rect">
+    <area target="" alt="Colección de fotos." title="Galería" href="/galeria" coords="176,218,17,167" shape="rect">
     <area target="" alt="Me sirve para saber que estuviste acá." title="Visitas" href="/libro-de-visitas" coords="124,205,259,312" shape="rect">
-    <area target="" alt="Analisis de canciones, discos y más. Es una colección también." title="Música" href="/Música" coords="156,85,289,141" shape="rect">
+    <area target="" alt="Analisis de canciones, discos y más. Es una colección también." title="Música" href="/musica" coords="156,85,289,141" shape="rect">
     <area target="" alt="Todos somos una historia que merece ser contada y vivida. - Nico (un amigo mío)" title="Inicio" href="/" coords="229,140,362,218" shape="rect">
     <area target="" alt="Otros lugares interesantes para visitar" title="Links" href="/links" coords="405,281,237,246" shape="rect">
-    <area target="" alt="Acá guardo todos los libros que me acuerdo de haber leído. Solía ser bastante lector antes." title="Libros" href="/librería" coords="449,154,585,207" shape="rect">
+    <area target="" alt="Acá guardo todos los libros que me acuerdo de haber leído. Solía ser bastante lector antes." title="Libros" href="/libreria" coords="449,154,585,207" shape="rect">
     <area target="" alt="Una especie de feed de instagram pero más casual" title="Ahora" href="/ahora" coords="316,13,412,112" shape="rect">
     <area target="" alt="Un intento de inmortalizar mi cuadernito. Estoy implementando cosas interesantes." title="Notas" href="/Notas" coords="347,94,485,180" shape="rect">
     <area target="" alt="Se puso muy de moda, estoy tratando de implementarlo" title="Jardin Digital" href="/El-Jardín" coords="394,49,578,116" shape="rect">
@@ -65,11 +63,11 @@ description: Acá me gusta coleccionar detalles de mi vida.
 
 <div class="menu-celular">
   <a href="/" class="boton-pildora">Inicio</a>
-  <a href="/Música" class="boton-pildora">Música</a>
-  <a href="/galería" class="boton-pildora">Galería</a>
+  <a href="/musica" class="boton-pildora">Música</a>
+  <a href="/galeria" class="boton-pildora">Galería</a>
   <a href="/El-Jardín" class="boton-pildora">Jardín Digital</a>
   <a href="/Notas" class="boton-pildora">Notas</a>
-  <a href="/librería" class="boton-pildora">Libros</a>
+  <a href="/libreria" class="boton-pildora">Libros</a>
   <a href="/ahora" class="boton-pildora">Ahora</a>
   <a href="/links" class="boton-pildora">Links</a>
   <a href="/libro-de-visitas" class="boton-pildora">Visitas</a>
@@ -77,6 +75,7 @@ description: Acá me gusta coleccionar detalles de mi vida.
 </div>
 
 Soy Salvador, vivo en Argentina, hago música cuando puedo, estudio Geología y tengo 5 hermanos. Creo en Dios y persevero en algunos grupos de la Iglesia.  En esta página tengo archivados momentos, ideas, pensamientos, fotos, cuentos, etc. Es como una caja de recuerdos enorme. Por eso es medio un lío desplazarse por este espacio, pero intenté hacerlo intuitivo.
+
 ## <font color="#eeece1">Para Curiosear:</font>
 Acá te dejo una lista de ensayos/artículos que anduve leyendo por internet. 
 
@@ -86,4 +85,3 @@ Acá te dejo una lista de ensayos/artículos que anduve leyendo por internet.
 - ["Secret Garden", de Tanner.](https://t0.vc/secret-garden)
 
 ![[salvaylaplanta.png]]
-

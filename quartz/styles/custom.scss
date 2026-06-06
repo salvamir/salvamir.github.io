@@ -110,12 +110,19 @@ body[data-slug="El-Jardin"] {
 /* =========================================
    4. FOOTER Y TEXTOS PRINCIPALES
    ========================================= */
+/* ANIQUILAR LA LÍNEA SEPARADORA QUE INYECTA QUARTZ */
+hr, .center > hr, .page > hr {
+  display: none !important;
+}
+
 footer {
   text-align: center !important;
   margin-top: 3rem !important;
   padding-bottom: 2rem !important;
   border: none !important;
-  border-top: none !important; /* Eliminamos forzosamente la raya superior */
+  border-top: none !important;
+  box-shadow: none !important;
+  outline: none !important;
 }
 
 article p, article li {
@@ -468,7 +475,7 @@ body.dark-mode .footer-controls button {
 .darkmode { display: none !important; }
 
 /* ==========================================
-   17. BOTÓN FLOTANTE "VOLVER ARRIBA" (RESTAURADO)
+   17. BOTÓN FLOTANTE "VOLVER ARRIBA" (RESTAURADO Y MÁS PEQUEÑO)
    ========================================== */
 #back-to-top, #goToTopBtn {
   display: none; 
@@ -476,14 +483,14 @@ body.dark-mode .footer-controls button {
   bottom: 30px; 
   right: 30px; 
   z-index: 999;
-  font-size: 1.2rem !important; /* Ajuste sutil del icono interno */
+  font-size: 1rem !important; /* Ajuste sutil del icono interno */
   border: 1px solid rgba(183, 150, 108, 0.4) !important; 
   outline: none;
   background-color: rgba(13, 12, 10, 0.9) !important; 
   color: #B7966C !important; 
   cursor: pointer;
-  width: 40px !important; /* REDUCIDO DE 50PX A 40PX */
-  height: 40px !important; /* REDUCIDO DE 50PX A 40PX */
+  width: 35px !important; /* REDUCIDO A 35PX */
+  height: 35px !important; /* REDUCIDO A 35PX */
   border-radius: 50% !important; 
   box-shadow: 0 4px 15px rgba(0,0,0,0.5);
   align-items: center; 
@@ -491,6 +498,11 @@ body.dark-mode .footer-controls button {
   opacity: 0; 
   visibility: hidden; 
   transition: opacity 0.3s, visibility 0.3s, background-color 0.3s, transform 0.2s, border-color 0.2s;
+  
+  svg {
+    width: 18px !important; /* SVG un poco más pequeño para combinar con el tamaño de 35px */
+    height: 18px !important;
+  }
   
   &.visible { display: flex !important; opacity: 1; visibility: visible; }
   &:hover { 
