@@ -11,19 +11,15 @@
       --text-main: #e3ded6;
       --accent: #b7966c;
       --border-color: rgba(168, 158, 149, 0.3);
-      --page-header-bg: transparent;
-      --header-padding: 0px; /* Manejo limpio por variables */
     }
     
-    /* --- PALETA MODO OSCURO SOLICITADA --- */
-    body.dark-mode {
+    /* --- PALETA MODO OSCURO SIN RECUADROS --- */
+    html[data-theme="dark"], body.dark-mode {
       --bg-main: #000000;
       --bg-card: rgba(60, 60, 60, 0.2);
       --text-main: #e0eaf5;
       --accent: #84add7;
       --border-color: rgba(224, 234, 245, 0.2);
-      --page-header-bg: transparent; /* CORREGIDO: Evita que aparezca un recuadro molesto recubriendo el título */
-      --header-padding: 0px;
     }
     
     html, body {
@@ -35,7 +31,6 @@
       transition: background 0.3s ease, color 0.3s ease;
     }
 
-    /* Estilo para los links dentro del análisis */
     .full-review a {
       color: var(--accent);
       text-decoration: none; 
@@ -48,7 +43,7 @@
       text-decoration: underline; 
     }
 
-    body.dark-mode .full-review a {
+    html[data-theme="dark"] .full-review a {
       color: #a3c2e1;
     }
 
@@ -63,14 +58,13 @@
       align-items: center;
     }
 
-    /* Título y Cabecera */
+    /* Título y Cabecera Limpios */
     .page-header {
       text-align: center;
       margin-bottom: 3rem;
-      background: var(--page-header-bg);
-      padding: var(--header-padding);
-      border-radius: 24px;
-      transition: background 0.3s ease;
+      background: transparent !important; /* Forzado transparente para evitar recuadros */
+      padding: 0;
+      border-radius: 0;
     }
     
     .page-title {
@@ -84,7 +78,7 @@
       transition: transform 0.2s ease, color 0.2s ease;
     }
     
-    body.dark-mode .page-title {
+    html[data-theme="dark"] .page-title {
       color: #e0eaf5;
     }
     
@@ -126,7 +120,6 @@
       border-color: var(--accent);
     }
 
-    /* Contenedor Portada */
     .cover-container {
       position: relative;
       width: 100%;
@@ -177,14 +170,13 @@
       box-shadow: 0 4px 15px rgba(0,0,0,0.5);
       transition: transform 0.2s;
     }
-    body.dark-mode .play-btn {
+    html[data-theme="dark"] .play-btn {
       color: #000000;
     }
     .play-btn:hover {
       transform: scale(1.1);
     }
 
-    /* Textos */
     .album-info {
       padding: 16px;
       cursor: pointer;
@@ -195,7 +187,7 @@
       color: var(--accent);
       font-family: system-ui, sans-serif;
     }
-    body.dark-mode .album-title {
+    html[data-theme="dark"] .album-title {
       color: #e0eaf5;
     }
     .album-artist {
@@ -204,7 +196,7 @@
       opacity: 0.7;
       font-family: system-ui, sans-serif;
     }
-    body.dark-mode .album-artist {
+    html[data-theme="dark"] .album-artist {
       color: #a3c2e1;
     }
     .album-summary {
@@ -225,7 +217,6 @@
       display: none;
     }
 
-    /* Estilos Botón Modo Oscuro */
     .dark-mode-toggle {
         background: none;
         border: 1px solid var(--border-color);
@@ -267,32 +258,30 @@
   <script>
     const toggleBtn = document.getElementById('darkModeToggle');
     const toggleIcon = document.getElementById('darkModeIcon');
+    const htmlRoot = document.documentElement;
 
-    function updateToggleBtn() {
-        if (document.body.classList.contains('dark-mode')) {
+    function applyTheme(theme) {
+        if (theme === 'dark') {
+            document.body.classList.add('dark-mode');
+            htmlRoot.setAttribute('data-theme', 'dark');
             toggleIcon.innerText = "🌙";
             toggleBtn.innerHTML = '<span id="darkModeIcon">🌙</span> Modo Oscuro';
         } else {
+            document.body.classList.remove('dark-mode');
+            htmlRoot.setAttribute('data-theme', 'light');
             toggleIcon.innerText = "☀️";
             toggleBtn.innerHTML = '<span id="darkModeIcon">☀️</span> Modo Claro';
         }
     }
 
-    // Cargar preferencia persistente compartida
-    if (localStorage.getItem('theme') === 'dark') {
-        document.body.classList.add('dark-mode');
-    }
-    updateToggleBtn();
+    // Cargar preferencia persistente unificada con Quartz
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    applyTheme(savedTheme);
 
     toggleBtn.addEventListener('click', () => {
-        document.body.classList.toggle('dark-mode');
-        if (document.body.classList.contains('dark-mode')) {
-            localStorage.setItem('theme', 'dark');
-        } else {
-            localStorage.setItem('theme', 'light');
-        }
-        updateToggleBtn();
-    });
-  </script>
+        const currentTheme = htmlRoot.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        localStorage.setItem('theme', currentTheme);
+        applyTheme(currentTheme);
+    </script>
 </body>
 </html>

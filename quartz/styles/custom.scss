@@ -361,13 +361,13 @@ body[data-slug="El-Jardin/index"] .content-meta {
 
 /* ==========================================
    13. IFRAME DEL LIBRO DE VISITAS (LIBERADO PARA EL RESIZE)
-   ========================================== */
+   ========================================= */
 iframe {
   width: 100% !important;
   border: none !important;
   overflow: hidden !important;
   display: block !important;
-  min-height: 200px !important; /* Permitimos que se encoja o estire libre por script */
+  min-height: 200px !important; 
 }
 
 /* ==========================================
@@ -401,9 +401,10 @@ html.dark-mode .page {
   background-color: #000000 !important;
 }
 
+/* CORREGIDO: Se removió el background gris oscuro que rompía la limpieza visual del recuadro sobre Música */
 html.dark-mode .page-header header {
-  background-color: #3c3c3c !important;
-  border: 1px solid rgba(224, 234, 245, 0.2) !important;
+  background-color: transparent !important;
+  border: none !important;
 }
 
 html.dark-mode .page-title, 
@@ -455,7 +456,7 @@ html.dark-mode ul.section-ul li > .meta {
   }
 }
 
-/* --- BOTÓN IR ARRIBA (CON SINTAXIS E ID CORREGIDOS) --- */
+/* --- BOTÓN IR ARRIBA --- */
 #back-to-top {
   display: none; 
   position: fixed;
@@ -494,7 +495,7 @@ html.dark-mode ul.section-ul li > .meta {
   }
 }
 
-/* --- BOTÓN MODO OSCURO (FLOTANTE A LA IZQUIERDA SINCRO) --- */
+/* --- BOTÓN MODO OSCURO (FLOTANTE) --- */
 #darkmode-toggle {
   position: fixed !important;
   left: 30px !important;
