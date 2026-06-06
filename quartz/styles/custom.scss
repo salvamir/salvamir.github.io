@@ -311,7 +311,7 @@ body[data-slug="Notas/index"] .search { display: flex !important; justify-conten
 .tags, ul.tags { display: none !important; }
 
 /* ==================================================================
-   15. MODO OSCURO GLOBAL SOBERANO Y UNIFICADO
+   15. MODO OSCURO GLOBAL SOBERANO
    ================================================================== */
 html[saved-theme="dark"], html.dark-mode, body.dark-mode {
   background-color: #000000 !important;
@@ -403,62 +403,79 @@ html[saved-theme="dark"], html.dark-mode, body.dark-mode {
 }
 
 /* ==========================================
-   16. CONTROLES DEL FOOTER (MINIMALISTAS Y ESTÁTICOS)
+   16. CONTROLES DEL FOOTER Y MODO OSCURO (UNIFICADOS)
    ========================================== */
-.footer-controls {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1.5rem;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+
+/* Ocultamos el botón nativo de modo oscuro (el flotante de la izquierda) */
+.darkmode {
+  display: none !important;
 }
 
-/* Estilo unificado para los tres iconos: transparentes, autoajustables y sin bordes */
-#back-to-top, #darkmode-toggle, #music-player-btn {
+/* Contenedor de controles unificados (Música, Modo Oscuro, Top) */
+.footer-controls {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 1.5rem !important; /* Distancia horizontal corta entre iconos */
+  margin-top: 1rem !important; /* Acerca los botones a la línea del footer */
+  padding-bottom: 1.5rem !important;
+  margin-bottom: 0 !important;
+}
+
+/* Estética base de los botones minimalistas */
+.footer-controls button {
   background: transparent !important;
   border: none !important;
+  color: #e3dac9 !important; /* Color crema suave del modo claro */
+  cursor: pointer !important;
   padding: 0 !important;
   margin: 0 !important;
-  cursor: pointer;
-  transition: transform 0.2s ease, color 0.3s ease;
-  outline: none;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
   width: auto !important;
   height: auto !important;
-  display: flex !important;
-  align-items: center;
-  justify-content: center;
-  color: rgba(183, 150, 108, 0.6) !important; /* Muted Gold base en modo claro */
+  outline: none !important;
+  transition: color 0.3s ease, transform 0.2s ease !important;
 
   svg {
-    display: block;
+    display: block !important;
   }
 
+  /* Efecto hover minimalista */
   &:hover {
-    transform: translateY(-3px) !important;
-    color: #E7C8A0 !important; /* Dorado vibrante al hover en modo claro */
+    color: #B7966C !important; /* Color acento */
+    transform: scale(1.1) translateY(-3px) !important;
+    background: transparent !important;
   }
 }
 
-/* Estado cuando la música está SONANDO (Modo Claro) */
-#music-player-btn.playing {
-  color: #E7C8A0 !important;
-  filter: drop-shadow(0 0 5px rgba(231, 200, 160, 0.4));
+/* Feedback visual cuando la música suena (Modo Claro) */
+.footer-controls button.playing {
+  color: #B7966C !important; 
+  filter: drop-shadow(0 0 5px rgba(183, 150, 108, 0.4)) !important;
+  animation: pulseMusic 2s infinite ease-in-out !important;
 }
 
-/* Colores para los iconos en Modo Oscuro */
-html[saved-theme="dark"], html.dark-mode {
-  #back-to-top, #darkmode-toggle, #music-player-btn {
-    color: rgba(224, 234, 245, 0.5) !important; /* Gris suave en modo oscuro */
-    
-    &:hover {
-      color: #e0eaf5 !important; /* Blanco vibrante al hover */
-    }
+/* Adaptación automática al Modo Oscuro */
+html[saved-theme="dark"] .footer-controls button,
+html[data-theme="dark"] .footer-controls button, 
+body.dark-mode .footer-controls button {
+  color: #e0eaf5 !important; /* Blanco suave base */
+  
+  &:hover {
+    color: #84add7 !important; /* Azulado vibrante al hover */
   }
+  
+  /* Estado cuando la música suena (Modo Oscuro) */
+  &.playing {
+    color: #84add7 !important;
+    filter: drop-shadow(0 0 5px rgba(132, 173, 215, 0.4)) !important;
+  }
+}
 
-  /* Estado cuando la música está SONANDO (Modo Oscuro) */
-  #music-player-btn.playing {
-    color: #84add7 !important; /* Azulado cuando suena */
-    filter: drop-shadow(0 0 5px rgba(132, 173, 215, 0.4));
-  }
+@keyframes pulseMusic {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+  100% { transform: scale(1); }
 }

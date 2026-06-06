@@ -39,9 +39,8 @@ export default ((opts?: Options) => {
             <MusicIcon />
           </button>
 
-          {/* Botón de Modo Oscuro (Movido aquí para que sea estático) */}
-          <button id="darkmode-toggle" aria-label="Cambiar modo" title="Cambiar modo">
-            {/* El script de Quartz cambiará este icono dinámicamente, empezamos con luna */}
+          {/* Botón de Modo Oscuro NUEVO */}
+          <button id="custom-darkmode-btn" aria-label="Cambiar modo" title="Cambiar modo">
             <MoonIcon />
           </button>
           
@@ -59,53 +58,60 @@ export default ((opts?: Options) => {
   Footer.afterDOMLoaded = `
     document.addEventListener("nav", () => {
       
-      // --- 1. TRUCO DEL REPRODUCTOR DE MÚSICA TOTALMENTE INVISIBLE ---
-      // Creamos el iframe invisible al cargar la página para que la música NO se corte al navegar
+      // --- 1. MÚSICA INVISIBLE ---
       let ytPlayer = document.getElementById("yt-global-player");
       if (!ytPlayer) {
         ytPlayer = document.createElement("iframe");
         ytPlayer.id = "yt-global-player";
-        // Lo hacemos 100% invisible y lo sacamos del flujo de la página
         ytPlayer.style.cssText = "position:absolute; width:1px; height:1px; top:-10px; left:-10px; opacity:0; pointer-events:none; border:none; overflow:hidden;";
         ytPlayer.setAttribute("allow", "autoplay");
-        // Cargamos el link con la API activada (enablejsapi=1) y en bucle (loop=1&playlist=ID)
         ytPlayer.src = "https://www.youtube-nocookie.com/embed/ANkxRGvl1VY?enablejsapi=1&autoplay=0&loop=1&playlist=ANkxRGvl1VY";
         document.body.appendChild(ytPlayer);
       }
 
       const musicBtn = document.getElementById("music-player-btn");
       if (musicBtn) {
-        // Restaurar estado visual si la música ya estaba sonando
         if (window.musicIsPlaying) { musicBtn.classList.add("playing"); }
 
         musicBtn.addEventListener("click", () => {
-          // Invertir estado
           window.musicIsPlaying = !window.musicIsPlaying;
-          
           if (window.musicIsPlaying) {
             musicBtn.classList.add("playing");
-            // Comando playVideo por JS al iframe invisible
             ytPlayer.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
           } else {
             musicBtn.classList.remove("playing");
-            // Comando pauseVideo por JS al iframe invisible
             ytPlayer.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
           }
         });
       }
 
-      // --- 2. CONTROL DE SCRIPTS - VOLVER ARRIBA (SOLO CLIC, SIN SCROLL) ---
+      // --- 2. VOLVER ARRIBA ---
       const backToTop = document.getElementById("back-to-top")
       if (backToTop) {
-        // Eliminamos el listener de scroll, el boton ahora es estatico en el footer
         backToTop.addEventListener("click", () => {
           window.scrollTo({ top: 0, behavior: "smooth" })
         })
       }
 
-      // --- 3. MODO OSCURO (ELIMINAMOS COMPORTAMIENTO FLOTANTE) ---
-      // El script nativo de Quartz ya gestiona el ID '#darkmode-toggle' para cambiar de tema.
-      // Al moverlo al footer JSX y quitarle el CSS flotante, el comportamiento de scroll desaparece.
+      // --- 3. MODO OSCURO (CONTROL REMOTO DEL NATIVO) ---
+      const customThemeBtn = document.getElementById("custom-darkmode-btn");
+      if (customThemeBtn) {
+        customThemeBtn.addEventListener("click", () => {
+          // Buscamos el botón nativo de Quartz y simulamos un clic
+          const nativeBtn = document.getElementById("darkmode-toggle");
+          if (nativeBtn && nativeBtn.id !== "custom-darkmode-btn") {
+            nativeBtn.click();
+          } else {
+            // Fallback manual por si alguna vez borras el nativo
+            const html = document.documentElement;
+            const currentTheme = html.getAttribute("saved-theme") || "light";
+            const newTheme = currentTheme === "light" ? "dark" : "light";
+            html.setAttribute("saved-theme", newTheme);
+            localStorage.setItem("theme", newTheme);
+            document.dispatchEvent(new CustomEvent("themechange", { detail: { theme: newTheme } }));
+          }
+        });
+      }
     })
   `
   return Footer
