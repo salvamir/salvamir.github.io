@@ -115,6 +115,7 @@ footer {
   margin-top: 3rem !important;
   padding-bottom: 2rem !important;
   border: none !important;
+  border-top: none !important; /* Eliminamos forzosamente la raya superior */
 }
 
 article p, article li {
@@ -311,7 +312,7 @@ body[data-slug="Notas/index"] .search { display: flex !important; justify-conten
 .tags, ul.tags { display: none !important; }
 
 /* ==================================================================
-   15. MODO OSCURO GLOBAL SOBERANO
+   15. MODO OSCURO GLOBAL SOBERANO Y UNIFICADO
    ================================================================== */
 html[saved-theme="dark"], html.dark-mode, body.dark-mode {
   background-color: #000000 !important;
@@ -403,83 +404,6 @@ html[saved-theme="dark"], html.dark-mode, body.dark-mode {
 }
 
 /* ==========================================
-   16. CONTROLES DEL FOOTER Y MODO OSCURO (UNIFICADOS)
-   ========================================== */
-
-/* Ocultamos el botón nativo de modo oscuro (el flotante de la izquierda) */
-.darkmode {
-  display: none !important;
-}
-
-/* Contenedor de controles unificados (Música, Modo Oscuro, Top) */
-.footer-controls {
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  gap: 1.5rem !important; /* Distancia horizontal corta entre iconos */
-  margin-top: 1rem !important; /* Acerca los botones a la línea del footer */
-  padding-bottom: 1.5rem !important;
-  margin-bottom: 0 !important;
-}
-
-/* Estética base de los botones minimalistas */
-.footer-controls button {
-  background: transparent !important;
-  border: none !important;
-  color: #e3dac9 !important; /* Color crema suave del modo claro */
-  cursor: pointer !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  width: auto !important;
-  height: auto !important;
-  outline: none !important;
-  transition: color 0.3s ease, transform 0.2s ease !important;
-
-  svg {
-    display: block !important;
-  }
-
-  /* Efecto hover minimalista */
-  &:hover {
-    color: #B7966C !important; /* Color acento */
-    transform: scale(1.1) translateY(-3px) !important;
-    background: transparent !important;
-  }
-}
-
-/* Feedback visual cuando la música suena (Modo Claro) */
-.footer-controls button.playing {
-  color: #B7966C !important; 
-  filter: drop-shadow(0 0 5px rgba(183, 150, 108, 0.4)) !important;
-  animation: pulseMusic 2s infinite ease-in-out !important;
-}
-
-/* Adaptación automática al Modo Oscuro */
-html[saved-theme="dark"] .footer-controls button,
-html[data-theme="dark"] .footer-controls button, 
-body.dark-mode .footer-controls button {
-  color: #e0eaf5 !important; /* Blanco suave base */
-  
-  &:hover {
-    color: #84add7 !important; /* Azulado vibrante al hover */
-  }
-  
-  /* Estado cuando la música suena (Modo Oscuro) */
-  &.playing {
-    color: #84add7 !important;
-    filter: drop-shadow(0 0 5px rgba(132, 173, 215, 0.4)) !important;
-  }
-}
-
-@keyframes pulseMusic {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.15); }
-  100% { transform: scale(1); }
-}
-/* ==========================================
    16. CONTROLES DEL FOOTER (MÚSICA Y MODO OSCURO)
    ========================================== */
 .footer-controls {
@@ -552,14 +476,14 @@ body.dark-mode .footer-controls button {
   bottom: 30px; 
   right: 30px; 
   z-index: 999;
-  font-size: 1.5rem; 
+  font-size: 1.2rem !important; /* Ajuste sutil del icono interno */
   border: 1px solid rgba(183, 150, 108, 0.4) !important; 
   outline: none;
   background-color: rgba(13, 12, 10, 0.9) !important; 
   color: #B7966C !important; 
   cursor: pointer;
-  width: 50px !important; 
-  height: 50px !important; 
+  width: 40px !important; /* REDUCIDO DE 50PX A 40PX */
+  height: 40px !important; /* REDUCIDO DE 50PX A 40PX */
   border-radius: 50% !important; 
   box-shadow: 0 4px 15px rgba(0,0,0,0.5);
   align-items: center; 
