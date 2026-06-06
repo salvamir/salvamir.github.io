@@ -248,7 +248,23 @@
     </header>
 
     <div class="music-grid">
+      <div class="album-card">
+        <div class="cover-container" data-embed="https://www.youtube.com/embed/videoseries?si=CuINtYrUFCXCEIu0&list=OLAK5uy_kG_IyeAEb5Vyhxr0ETM73qmimj_WnMiLk&autoplay=1">
+          <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fis1-ssl.mzstatic.com%2Fimage%2Fthumb%2FMusic221%2Fv4%2F66%2Fee%2F30%2F66ee30fe-df8b-4bba-a77a-bd8d4704f408%2F24UMGIM72459.rgb.jpg%2F1200x1200bf-60.jpg&f=1&nofb=1&ipt=f238657cc30278613eef8e19f83365a6aed63cf510dfcf31d3464fa1b372fc3c" alt="Portada de Love & Hyperbole" class="cover-img">
+          <div class="play-overlay">
+            <button class="play-btn" title="Reproducir en YouTube">▶</button>
+          </div>
+        </div>
+        <div class="album-info">
+          <h2 class="album-title">Love & Hyperbole</h2>
+          <p class="album-artist">Alessia Cara</p>
+          <div class="album-summary">
+            Este disco es una revolución de Alessia para nosotros sus fans. Es el primer trabajo en el que explora estilos como el folk, balada romántica y rock pop, demostrando un inmenso avance en su carrera.
+            <span class="read-more-text">Leer análisis completo ⬎</span>
+          </div>
+        </div>
       </div>
+    </div>
 
     <button id="darkModeToggle" class="dark-mode-toggle">
         <span id="darkModeIcon">☀️</span> Modo Claro
@@ -265,22 +281,16 @@
             document.body.classList.add('dark-mode');
             htmlRoot.setAttribute('data-theme', 'dark');
             if (toggleIcon) toggleIcon.innerText = "🌙";
-            toggleBtn.innerHTML = '<span id="darkModeIcon">🌙</span> Modo Oscuro';
+            toggleBtn.innerHTML = '<span id="darkModeIcon">🌙</span>'';
         } else {
             document.body.classList.remove('dark-mode');
             htmlRoot.setAttribute('data-theme', 'light');
             if (toggleIcon) toggleIcon.innerText = "☀️";
-            toggleBtn.innerHTML = '<span id="darkModeIcon">☀️</span> Modo Claro';
+            toggleBtn.innerHTML = '<span id="darkModeIcon">☀️</span>'';
         }
-        triggerResizeUpdate();
     }
 
-    function triggerResizeUpdate() {
-        const realHeight = document.documentElement.scrollHeight || document.body.scrollHeight;
-        window.parent.postMessage({ type: 'resize-iframe-musica', height: realHeight }, '*');
-    }
-
-    // Cargar preferencia persistente unificada con Quartz
+    // Sincronizar unificado con Quartz y LocalStorage global
     const savedTheme = localStorage.getItem('theme') || 'light';
     applyTheme(savedTheme);
 
@@ -288,10 +298,18 @@
         const currentTheme = htmlRoot.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
         localStorage.setItem('theme', currentTheme);
         applyTheme(currentTheme);
-    }); // <--- ¡Aquí estaba el error! Ahora cerrado correctamente.
+    }); // <---- ESTA LLAVE ERA LA QUE FALTABA Y ROMPÍA LA PÁGINA 
 
-    window.addEventListener('load', triggerResizeUpdate);
-    window.addEventListener('resize', triggerResizeUpdate);
+    // --- SINCRONIZADOR GLOBAL DEFINITIVO DE RESIZE DE IFRAME ---
+    setInterval(() => {
+      try {
+        const h = document.body.scrollHeight;
+        const parentIframe = window.parent.document.getElementById('musica-iframe');
+        if (parentIframe && parentIframe.style.height !== h + 'px') {
+          parentIframe.style.height = h + 'px';
+        }
+      } catch(e) {}
+    }, 300);
   </script>
 </body>
 </html>

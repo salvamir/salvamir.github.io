@@ -33,7 +33,6 @@ html {
   padding: 0 !important;
 }
 
-/* Ocultamos literalmente todo lo demás (barras laterales), sin dejar rastro */
 .sidebar, .left, .right {
   display: none !important;
   width: 0 !important;
@@ -153,9 +152,7 @@ article p {
   display: block !important;
 }
 
-.badge-wall a::after, 
-.badge-wall a svg,
-.badge-wall a .external-link-icon {
+.badge-wall a::after, .badge-wall a svg, .badge-wall a .external-link-icon {
   display: none !important;
 }
 
@@ -169,9 +166,7 @@ article p {
   border-radius: 8px !important;
 }
 
-.callout .callout-icon { 
-  display: none !important; 
-}
+.callout .callout-icon { display: none !important; }
 
 .callout .callout-title {
   display: flex !important;
@@ -240,9 +235,7 @@ ul.section-ul li > .meta {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif !important;
 }
 
-ul.section-ul li > .desc {
-  margin: 0 !important;
-}
+ul.section-ul li > .desc { margin: 0 !important; }
 
 /* ==========================================
    8. ENCABEZADO Y MENÚ DE NAVEGACIÓN
@@ -260,36 +253,16 @@ ul.section-ul li > .desc {
   display: inline-block !important; 
   transition: transform 0.2s ease, color 0.2s ease !important; 
 }
-
-.page-header header .links a:hover {
-  transform: translateY(-4px) !important; 
-}
-
-.page-header header .links a:visited {
-  color: #ffffff !important; 
-}
+.page-header header .links a:hover { transform: translateY(-4px) !important; }
+.page-header header .links a:visited { color: #ffffff !important; }
 
 /* ==========================================
    9. AJUSTES PARA CELULARES (RESPONSIVE)
    ========================================= */
 @media screen and (max-width: 800px) {
-  .page {
-    display: block !important; 
-    padding: 0 !important;
-  }
-
-  .page #quartz-body {
-    padding: 1.5rem 1rem !important; 
-    width: 100% !important;
-    box-sizing: border-box !important;
-  }
-
-  .center {
-    width: 100% !important;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-
+  .page { display: block !important; padding: 0 !important; }
+  .page #quartz-body { padding: 1.5rem 1rem !important; width: 100% !important; box-sizing: border-box !important; }
+  .center { width: 100% !important; margin: 0 !important; padding: 0 !important; }
   .page-header header {
     background-color: rgba(255, 255, 255, 0.05) !important; 
     padding: 1.5rem 1rem !important; 
@@ -297,106 +270,53 @@ ul.section-ul li > .desc {
     width: 100% !important;
     box-sizing: border-box !important;
   }
-
-  .page-title, .page-title a {
-    font-size: 2rem !important; 
-    word-break: break-word !important; 
-  }
-
-  .mobile-only {
-    display: none !important;
-  }
+  .page-title, .page-title a { font-size: 2rem !important; word-break: break-word !important; }
+  .mobile-only { display: none !important; }
 }
 
 /* ==========================================
-   10. TIPOGRAFÍA DE TÍTULOS Y METADATOS DE NOTAS
+   10. TIPOGRAFÍA Y OCULTAR TÍTULOS
    ========================================== */
 article h1, article h2, article h3, article h4, article h5, article h6,
-h1.article-title, .content-meta, .tags {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif !important;
-}
+h1.article-title, .content-meta, .tags { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif !important; }
 
-/* ==========================================
-   11. OCULTAR TÍTULOS Y METADATOS POR PÁGINA
-   ========================================== */
-body[data-slug="index"] h1.article-title,
-body[data-slug="index"] .content-meta,
-body[data-slug="ahora"] h1.article-title,
-body[data-slug="ahora"] .content-meta,
-body[data-slug="galería"] h1.article-title,
-body[data-slug="galería"] .content-meta,
-body[data-slug="galeria"] h1.article-title,
-body[data-slug="galeria"] .content-meta,
-body[data-slug="links"] h1.article-title,
-body[data-slug="links"] .content-meta,
-body[data-slug="librería"] h1.article-title,
-body[data-slug="librería"] .content-meta,
-body[data-slug="libreria"] h1.article-title,
-body[data-slug="libreria"] .content-meta,
-body[data-slug="libro-de-visitas"] h1.article-title,
-body[data-slug="libro-de-visitas"] .content-meta,
-body[data-slug="Notas/index"] h1.article-title,
-body[data-slug="Notas/index"] .content-meta,
-body[data-slug="El-Jardín/index"] h1.article-title,
-body[data-slug="El-Jardín/index"] .content-meta,
-body[data-slug="Cuentos/index"] h1.article-title,
-body[data-slug="Cuentos/index"] .content-meta,
-body[data-slug="Música/index"] h1.article-title,
-body[data-slug="Música/index"] .content-meta,
-body[data-slug="Musica/index"] h1.article-title,
-body[data-slug="Musica/index"] .content-meta,
-body[data-slug="El-Jardin/index"] h1.article-title,
-body[data-slug="El-Jardin/index"] .content-meta {
+body[data-slug="index"] h1.article-title, body[data-slug="index"] .content-meta,
+body[data-slug="ahora"] h1.article-title, body[data-slug="ahora"] .content-meta,
+body[data-slug="galería"] h1.article-title, body[data-slug="galería"] .content-meta,
+body[data-slug="galeria"] h1.article-title, body[data-slug="galeria"] .content-meta,
+body[data-slug="links"] h1.article-title, body[data-slug="links"] .content-meta,
+body[data-slug="librería"] h1.article-title, body[data-slug="librería"] .content-meta,
+body[data-slug="libreria"] h1.article-title, body[data-slug="libreria"] .content-meta,
+body[data-slug="libro-de-visitas"] h1.article-title, body[data-slug="libro-de-visitas"] .content-meta,
+body[data-slug="Notas/index"] h1.article-title, body[data-slug="Notas/index"] .content-meta,
+body[data-slug="El-Jardín/index"] h1.article-title, body[data-slug="El-Jardín/index"] .content-meta,
+body[data-slug="Cuentos/index"] h1.article-title, body[data-slug="Cuentos/index"] .content-meta,
+body[data-slug="Música/index"] h1.article-title, body[data-slug="Música/index"] .content-meta,
+body[data-slug="Musica/index"] h1.article-title, body[data-slug="Musica/index"] .content-meta,
+body[data-slug="El-Jardin/index"] h1.article-title, body[data-slug="El-Jardin/index"] .content-meta {
   display: none !important;
 }
 
-/* ==========================================
-   12. COLOR DE TÍTULOS EN CALLOUTS (LINKS)
-   ========================================== */
-.callout summary.callout-title,
-.callout summary.callout-title .callout-title-inner,
-.callout summary.callout-title .fold-icon {
+.callout summary.callout-title, .callout summary.callout-title .callout-title-inner, .callout summary.callout-title .fold-icon {
   color: #B7966C !important;
 }
 
 /* ==========================================
-   13. IFRAME DEL LIBRO DE VISITAS (LIBERADO PARA EL RESIZE)
+   13. IFRAME LIBRO DE VISITAS / BUSCADOR
    ========================================= */
-iframe {
-  width: 100% !important;
-  border: none !important;
-  overflow: hidden !important;
-  display: block !important;
-  min-height: 200px !important; 
-}
-
-/* ==========================================
-   14. BARRA DE BÚSQUEDA CONDICIONAL Y ESCONDER ETIQUETAS
-   ========================================= */
-.search {
-  display: none !important;
-}
-
-body[data-slug="Notas/index"] .search {
-  display: flex !important;
-  justify-content: center !important;
-  margin-top: 1rem !important;
-  margin-bottom: 3rem !important;
-  width: 100% !important;
-}
-
-.tags, ul.tags {
-  display: none !important;
-}
+iframe { width: 100% !important; border: none !important; overflow: hidden !important; display: block !important; min-height: 200px !important; }
+.search { display: none !important; }
+body[data-slug="Notas/index"] .search { display: flex !important; justify-content: center !important; margin-top: 1rem !important; margin-bottom: 3rem !important; width: 100% !important; }
+.tags, ul.tags { display: none !important; }
 
 /* ==================================================================
-   15. MODO OSCURO GLOBAL SOBERANO Y UNIFICADO (QUARTZ & CUSTOM SCRIPTS)
+   15. MODO OSCURO GLOBAL SOBERANO Y UNIFICADO
    ================================================================== */
 html[saved-theme="dark"], html.dark-mode, body.dark-mode {
   background-color: #000000 !important;
   color: #e0eaf5 !important;
 
-  /* --- VARIABLES NATIVAS DE PALETA DE QUARTZ (NEGRO ABSOLUTO) --- */
+  /* VARIABLES QUARTZ */
   --light: #000000 !important;       
   --lightgray: rgba(224, 234, 245, 0.2) !important; 
   --darkgray: #e0eaf5 !important;    
@@ -404,59 +324,41 @@ html[saved-theme="dark"], html.dark-mode, body.dark-mode {
   --secondary: #84add7 !important;   
   --tertiary: #a3c2e1 !important;    
 
-  /* --- REESCRITURA DE ELEMENTOS INTEGRADOS --- */
-  .page {
-    background-color: #000000 !important;
-  }
+  .page { background-color: #000000 !important; }
 
+  /* RECUADRO RESTAURADO EN #3c3c3c */
   .page-header header {
-    background-color: transparent !important;
-    border: none !important;
-
-    .links a:visited {
-      color: #a3c2e1 !important; /* Corrige los enlaces visitados del header */
-    }
+    background-color: #3c3c3c !important;
+    border: 1px solid rgba(224, 234, 245, 0.2) !important;
+    .links a:visited { color: #a3c2e1 !important; }
   }
 
-  .page-title, 
-  .page-title a,
-  article h1, 
-  article h2, 
-  article h3, 
-  article h4, 
-  article h5, 
-  article h6,
-  h1.article-title {
+  .page-title, .page-title a, article h1, article h2, article h3, article h4, article h5, article h6, h1.article-title { color: #e0eaf5 !important; }
+  .links a, .nav-links a, article p a, ul.section-ul li > .desc a { color: #84add7 !important; }
+  .links a:hover, .nav-links a:hover, article p a:hover { color: #a3c2e1 !important; }
+  article p, article li, ul.section-ul li > .desc { color: #e0eaf5 !important; }
+  ul.section-ul li > .meta { color: rgba(224, 234, 245, 0.5) !important; }
+
+  /* WEBMENTIONS EN MODO OSCURO */
+  .webmention-box, .webmentions-container {
+    background-color: rgba(60, 60, 60, 0.2) !important;
+    border-color: rgba(224, 234, 245, 0.2) !important;
+  }
+  .webmention-box label, .webmention-desc, .wm-no-mentions, .wm-loading, .wm-text, .wm-text p { color: #e0eaf5 !important; }
+  .webmention-title, .webmentions-title, .wm-author { color: #84add7 !important; }
+  .wm-meta { color: rgba(224, 234, 245, 0.5) !important; }
+  .wm-input-group input {
+    background-color: rgba(0, 0, 0, 0.6) !important;
+    border-color: rgba(224, 234, 245, 0.2) !important;
     color: #e0eaf5 !important;
   }
-
-  .links a, 
-  .nav-links a,
-  article p a,
-  ul.section-ul li > .desc a {
-    color: #84add7 !important;
+  .wm-submit {
+    background-color: #84add7 !important;
+    color: #000000 !important;
   }
 
-  .links a:hover,
-  .nav-links a:hover,
-  article p a:hover {
-    color: #a3c2e1 !important;
-  }
-
-  article p, 
-  article li,
-  ul.section-ul li > .desc {
-    color: #e0eaf5 !important;
-  }
-
-  ul.section-ul li > .meta {
-    color: rgba(224, 234, 245, 0.5) !important;
-  }
-
-  /* --- COMPORTAMIENTO PARA DISPOSITIVOS MÓVILES EN MODO OSCURO --- */
   @media screen and (max-width: 800px) {
-    .links a, 
-    .nav-links a {
+    .links a, .nav-links a {
       border: 1px solid #e0eaf5 !important;
       color: #c1d6ec !important;
       padding: 0.4rem 0.8rem !important;
@@ -465,101 +367,50 @@ html[saved-theme="dark"], html.dark-mode, body.dark-mode {
       background-color: rgba(60, 60, 60, 0.3) !important;
       display: inline-block !important;
     }
-    .page-header header {
-      background-color: transparent !important;
+  }
+
+  /* BOTONES ADAPTADOS AL MODO OSCURO */
+  #back-to-top, #goToTopBtn {
+    background-color: #3c3c3c !important;
+    border-color: #e0eaf5 !important;
+    color: #e0eaf5 !important;
+    svg { stroke: #e0eaf5 !important; }
+    &:hover {
+      background-color: #e0eaf5 !important;
+      color: #3c3c3c !important;
+      svg { stroke: #3c3c3c !important; }
     }
   }
 
-  /* --- BOTÓN FLOTANTE MODO OSCURO (COMPORTAMIENTO VISUAL) --- */
   #darkmode-toggle {
     background-color: #3c3c3c !important;
     border-color: #e0eaf5 !important;
     svg { fill: #e0eaf5 !important; }
-    &:hover {
-      background-color: #e0eaf5 !important;
-      svg { fill: #3c3c3c !important; }
-    }
+    &:hover { background-color: #e0eaf5 !important; svg { fill: #3c3c3c !important; } }
   }
 }
 
 /* ==========================================
-   16. BOTONES FLOTANTES DE ACCIÓN INTERACTIVA (SCROLL)
+   16. BOTONES FLOTANTES DE ACCIÓN INTERACTIVA (ESTADO CLARO)
    ========================================== */
-/* --- BOTÓN IR ARRIBA --- */
-#back-to-top {
-  display: none; 
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  z-index: 999;
-  font-size: 1.5rem;
-  border: 1px solid rgba(183, 150, 108, 0.4);
-  outline: none;
-  background-color: rgba(13, 12, 10, 0.9);
-  color: #B7966C; 
-  cursor: pointer;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%; 
-  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-  display: flex !important;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s, visibility 0.3s, background-color 0.3s, transform 0.2s, border-color 0.2s;
-
-  &.visible {
-    display: flex !important;
-    opacity: 1;
-    visibility: visible;
-  }
-
-  &:hover {
-    background-color: #B7966C;
-    color: #0d0c0a;
-    border-color: #E7C8A0;
-    transform: translateY(-3px);
-    svg { stroke: #0d0c0a; }
-  }
+#back-to-top, #goToTopBtn {
+  display: none; position: fixed; bottom: 30px; right: 30px; z-index: 999;
+  font-size: 1.5rem; border: 1px solid rgba(183, 150, 108, 0.4); outline: none;
+  background-color: rgba(13, 12, 10, 0.9); color: #B7966C; cursor: pointer;
+  width: 50px; height: 50px; border-radius: 50%; box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+  display: flex !important; align-items: center; justify-content: center;
+  opacity: 0; visibility: hidden; transition: opacity 0.3s, visibility 0.3s, background-color 0.3s, transform 0.2s, border-color 0.2s;
+  &.visible { display: flex !important; opacity: 1; visibility: visible; }
+  &:hover { background-color: #B7966C; color: #0d0c0a; border-color: #E7C8A0; transform: translateY(-3px); svg { stroke: #0d0c0a; } }
 }
 
-/* --- BOTÓN CAMBIO DE MODO (INTERRUPTOR FLOTANTE BASE) --- */
 #darkmode-toggle {
-  position: fixed !important;
-  left: 30px !important;
-  bottom: 30px !important;
-  right: auto !important;
-  top: auto !important;
-  z-index: 999;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.2s ease, background-color 0.3s;
-  background-color: rgba(13, 12, 10, 0.9) !important;
-  border: 1px solid rgba(183, 150, 108, 0.4) !important;
-  border-radius: 50% !important;
-  width: 50px !important;
-  height: 50px !important;
-  display: flex !important;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-
-  svg {
-    fill: #B7966C !important; 
-    width: 22px !important;
-    height: 22px !important;
-  }
-
-  &:hover {
-    background-color: #B7966C !important;
-    border-color: #E7C8A0 !important;
-    transform: translateY(-3px);
-    svg { fill: #0d0c0a !important; }
-  }
-
-  &.show-dark-scroll {
-    opacity: 1 !important;
-    visibility: visible !important;
-  }
+  position: fixed !important; left: 30px !important; bottom: 30px !important; right: auto !important; top: auto !important;
+  z-index: 999; opacity: 0; visibility: hidden; transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.2s ease, background-color 0.3s;
+  background-color: rgba(13, 12, 10, 0.9) !important; border: 1px solid rgba(183, 150, 108, 0.4) !important;
+  border-radius: 50% !important; width: 50px !important; height: 50px !important;
+  display: flex !important; align-items: center; justify-content: center; cursor: pointer;
+  svg { fill: #B7966C !important; width: 22px !important; height: 22px !important; }
+  &:hover { background-color: #B7966C !important; border-color: #E7C8A0 !important; transform: translateY(-3px); svg { fill: #0d0c0a !important; } }
+  &.show-dark-scroll { opacity: 1 !important; visibility: visible !important; }
 }
