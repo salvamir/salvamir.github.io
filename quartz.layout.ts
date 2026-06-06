@@ -7,10 +7,11 @@ export const sharedPageComponents: SharedLayout = {
   header: [
     Component.PageTitle(),
     Component.Spacer(),
-    // Eliminamos Component.Search() y Component.Darkmode()
     Component.DesktopOnly(Component.NavLinks()), 
   ],
-  afterBody: [],
+  afterBody: [
+    Component.Darkmode(), // <-- LO VOLVEMOS A AGREGAR ACÁ
+  ],
   footer: Component.Footer(),
 }
 

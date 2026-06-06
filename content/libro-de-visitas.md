@@ -1,10 +1,9 @@
 ---
 title: Libro de Visitas
 ---
-
 <iframe id="visitas-iframe" src="/static/widget-visitas.html" style="width: 100%; border: none; overflow: hidden;" scrolling="no"></iframe>
+
 <script>
-  // Este script escucha al widget y estira el iframe automáticamente en tu nota
   window.addEventListener('message', function(e) {
     if (e.data && e.data.type === 'resize-iframe') {
       const iframe = document.getElementById('visitas-iframe');
