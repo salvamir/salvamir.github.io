@@ -9,6 +9,18 @@ export default ((opts?: Options) => {
   const Footer: QuartzComponent = ({ displayClass, cfg }: QuartzComponentProps) => {
     return (
       <footer class={`${displayClass ?? ""}`}>
+        
+        {/* Contenedor central para el botón de música */}
+        <div class="footer-center-container">
+          <button id="music-player-btn" aria-label="Reproducir música" title="Reproducir música">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 18V5l12-2v13"></path>
+              <circle cx="6" cy="18" r="3"></circle>
+              <circle cx="18" cy="16" r="3"></circle>
+            </svg>
+          </button>
+        </div>
+
         {/* Botón Back To Top (ID Unificado) */}
         <button id="back-to-top" aria-label="Volver arriba">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -24,7 +36,44 @@ export default ((opts?: Options) => {
   
   Footer.afterDOMLoaded = `
     document.addEventListener("nav", () => {
-      // 1. CONTROL DE SCRIPTS - IR ARRIBA
+      
+      // --- 1. REPRODUCTOR DE MÚSICA (YOUTUBE INVISIBLE) ---
+      // Creamos el reproductor en el body principal para que la música NO se corte al cambiar de página
+      let ytIframe = document.getElementById("yt-global-player");
+      if (!ytIframe) {
+        ytIframe = document.createElement("iframe");
+        ytIframe.id = "yt-global-player";
+        ytIframe.style.display = "none";
+        ytIframe.setAttribute("allow", "autoplay");
+        // Cargamos el link con la API activada (enablejsapi=1) y en bucle (loop=1)
+        ytIframe.src = "https://www.youtube-nocookie.com/embed/ANkxRGvl1VY?enablejsapi=1&autoplay=0&loop=1&playlist=ANkxRGvl1VY";
+        document.body.appendChild(ytIframe);
+      }
+
+      const musicBtn = document.getElementById("music-player-btn");
+      if (musicBtn) {
+        // Sincronizar el aspecto del botón si la música ya estaba sonando
+        if (window.musicIsPlaying) {
+          musicBtn.classList.add("playing");
+        }
+
+        musicBtn.addEventListener("click", () => {
+          // Alternar estado
+          window.musicIsPlaying = !window.musicIsPlaying;
+          
+          if (window.musicIsPlaying) {
+            musicBtn.classList.add("playing");
+            // Le manda el comando "play" al video invisible
+            ytIframe.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+          } else {
+            musicBtn.classList.remove("playing");
+            // Le manda el comando "pause" al video invisible
+            ytIframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+          }
+        });
+      }
+
+      // --- 2. CONTROL DE SCRIPTS - IR ARRIBA ---
       const backToTop = document.getElementById("back-to-top")
       if (backToTop) {
         const handleScroll = () => {
@@ -49,7 +98,7 @@ export default ((opts?: Options) => {
         })
       }
 
-      // 2. CONTROL DE SCRIPTS - MODO OSCURO EN SCROLL (IZQUIERDA)
+      // --- 3. CONTROL DE SCRIPTS - MODO OSCURO EN SCROLL (IZQUIERDA) ---
       const darkBtn = document.getElementById("darkmode-toggle")
       if (darkBtn) {
         const checkDarkScroll = () => {

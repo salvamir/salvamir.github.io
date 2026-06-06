@@ -495,3 +495,61 @@ html[saved-theme="dark"], html.dark-mode, body.dark-mode {
   &:hover { background-color: #B7966C !important; border-color: #E7C8A0 !important; transform: translateY(-3px); svg { fill: #0d0c0a !important; } }
   &.show-dark-scroll { opacity: 1 !important; visibility: visible !important; }
 }
+/* ==========================================
+   17. BOTÓN DE MÚSICA EN EL FOOTER
+   ========================================== */
+.footer-center-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+#music-player-btn {
+  background: transparent;
+  border: 1px solid rgba(183, 150, 108, 0.4);
+  color: #B7966C;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+#music-player-btn:hover {
+  background-color: rgba(183, 150, 108, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Estado cuando la música está SONANDO (Modo Claro) */
+#music-player-btn.playing {
+  background-color: #B7966C;
+  color: #1a1714;
+  border-color: #E7C8A0;
+  box-shadow: 0 0 10px rgba(183, 150, 108, 0.4);
+}
+
+/* --- Adaptación a Modo Oscuro de Quartz --- */
+html[saved-theme="dark"] #music-player-btn, 
+html.dark-mode #music-player-btn {
+  border-color: rgba(224, 234, 245, 0.4) !important;
+  color: #84add7 !important;
+}
+
+html[saved-theme="dark"] #music-player-btn:hover, 
+html.dark-mode #music-player-btn:hover {
+  background-color: rgba(132, 173, 215, 0.1) !important;
+}
+
+/* Estado cuando la música está SONANDO (Modo Oscuro) */
+html[saved-theme="dark"] #music-player-btn.playing, 
+html.dark-mode #music-player-btn.playing {
+  background-color: #84add7 !important;
+  color: #000000 !important;
+  border-color: #e0eaf5 !important;
+  box-shadow: 0 0 10px rgba(132, 173, 215, 0.4) !important;
+}
