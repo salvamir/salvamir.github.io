@@ -217,7 +217,7 @@ article p {
 
 /* ==========================================
    7. LISTA DE NOTAS Y FECHAS
-   ========================================== */
+   ========================================= */
 ul.section-ul {
   padding: 0 !important;
   margin: 1.5rem 0 !important;
@@ -389,73 +389,102 @@ body[data-slug="Notas/index"] .search {
   display: none !important;
 }
 
-/* ==========================================
-   15. MODO OSCURO GLOBAL SOBERANO
-   ========================================= */
-html.dark-mode, body.dark-mode {
+/* ==================================================================
+   15. MODO OSCURO GLOBAL SOBERANO Y UNIFICADO (QUARTZ & CUSTOM SCRIPTS)
+   ================================================================== */
+html[saved-theme="dark"], html.dark-mode, body.dark-mode {
   background-color: #000000 !important;
   color: #e0eaf5 !important;
-}
 
-html.dark-mode .page {
-  background-color: #000000 !important;
-}
+  /* --- VARIABLES NATIVAS DE PALETA DE QUARTZ (NEGRO ABSOLUTO) --- */
+  --light: #000000 !important;       
+  --lightgray: rgba(224, 234, 245, 0.2) !important; 
+  --darkgray: #e0eaf5 !important;    
+  --dark: #84add7 !important;        
+  --secondary: #84add7 !important;   
+  --tertiary: #a3c2e1 !important;    
 
-/* CORREGIDO: Se removió el background gris oscuro que rompía la limpieza visual del recuadro sobre Música */
-html.dark-mode .page-header header {
-  background-color: transparent !important;
-  border: none !important;
-}
+  /* --- REESCRITURA DE ELEMENTOS INTEGRADOS --- */
+  .page {
+    background-color: #000000 !important;
+  }
 
-html.dark-mode .page-title, 
-html.dark-mode .page-title a,
-html.dark-mode article h1, 
-html.dark-mode article h2, 
-html.dark-mode article h3, 
-html.dark-mode article h4, 
-html.dark-mode article h5, 
-html.dark-mode article h6,
-html.dark-mode h1.article-title {
-  color: #e0eaf5 !important;
-}
+  .page-header header {
+    background-color: transparent !important;
+    border: none !important;
 
-html.dark-mode .links a, 
-html.dark-mode .nav-links a,
-html.dark-mode article p a,
-html.dark-mode ul.section-ul li > .desc a {
-  color: #84add7 !important;
-}
+    .links a:visited {
+      color: #a3c2e1 !important; /* Corrige los enlaces visitados del header */
+    }
+  }
 
-html.dark-mode .page-header header .links a:visited,
-html.dark-mode .links a:hover,
-html.dark-mode .nav-links a:hover,
-html.dark-mode article p a:hover {
-  color: #a3c2e1 !important;
-}
+  .page-title, 
+  .page-title a,
+  article h1, 
+  article h2, 
+  article h3, 
+  article h4, 
+  article h5, 
+  article h6,
+  h1.article-title {
+    color: #e0eaf5 !important;
+  }
 
-html.dark-mode article p, 
-html.dark-mode article li,
-html.dark-mode ul.section-ul li > .desc {
-  color: #e0eaf5 !important;
-}
+  .links a, 
+  .nav-links a,
+  article p a,
+  ul.section-ul li > .desc a {
+    color: #84add7 !important;
+  }
 
-html.dark-mode ul.section-ul li > .meta {
-  color: rgba(224, 234, 245, 0.5) !important;
-}
+  .links a:hover,
+  .nav-links a:hover,
+  article p a:hover {
+    color: #a3c2e1 !important;
+  }
 
-@media screen and (max-width: 800px) {
-  html.dark-mode .links a, 
-  html.dark-mode .nav-links a {
-    border: 1px solid #e0eaf5 !important;
-    color: #c1d6ec !important;
-    padding: 0.4rem 0.8rem !important;
-    border-radius: 6px !important;
-    margin: 0.2rem !important;
-    background-color: rgba(60, 60, 60, 0.3) !important;
-    display: inline-block !important;
+  article p, 
+  article li,
+  ul.section-ul li > .desc {
+    color: #e0eaf5 !important;
+  }
+
+  ul.section-ul li > .meta {
+    color: rgba(224, 234, 245, 0.5) !important;
+  }
+
+  /* --- COMPORTAMIENTO PARA DISPOSITIVOS MÓVILES EN MODO OSCURO --- */
+  @media screen and (max-width: 800px) {
+    .links a, 
+    .nav-links a {
+      border: 1px solid #e0eaf5 !important;
+      color: #c1d6ec !important;
+      padding: 0.4rem 0.8rem !important;
+      border-radius: 6px !important;
+      margin: 0.2rem !important;
+      background-color: rgba(60, 60, 60, 0.3) !important;
+      display: inline-block !important;
+    }
+    .page-header header {
+      background-color: transparent !important;
+    }
+  }
+
+  /* --- BOTÓN FLOTANTE MODO OSCURO (COMPORTAMIENTO VISUAL) --- */
+  #darkmode-toggle {
+    background-color: #3c3c3c !important;
+    border-color: #e0eaf5 !important;
+    svg { fill: #e0eaf5 !important; }
+    &:hover {
+      background-color: #e0eaf5 !important;
+      svg { fill: #3c3c3c !important; }
+    }
   }
 }
 
+/* ==========================================
+   16. BOTONES FLOTANTES DE ACCIÓN INTERACTIVA (SCROLL)
+   ========================================== */
 /* --- BOTÓN IR ARRIBA --- */
 #back-to-top {
   display: none; 
@@ -495,7 +524,7 @@ html.dark-mode ul.section-ul li > .meta {
   }
 }
 
-/* --- BOTÓN MODO OSCURO (FLOTANTE) --- */
+/* --- BOTÓN CAMBIO DE MODO (INTERRUPTOR FLOTANTE BASE) --- */
 #darkmode-toggle {
   position: fixed !important;
   left: 30px !important;
@@ -532,15 +561,5 @@ html.dark-mode ul.section-ul li > .meta {
   &.show-dark-scroll {
     opacity: 1 !important;
     visibility: visible !important;
-  }
-}
-
-html.dark-mode #darkmode-toggle {
-  background-color: #3c3c3c !important;
-  border-color: #e0eaf5 !important;
-  svg { fill: #e0eaf5 !important; }
-  &:hover {
-    background-color: #e0eaf5 !important;
-    svg { fill: #3c3c3c !important; }
   }
 }

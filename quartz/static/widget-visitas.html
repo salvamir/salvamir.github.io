@@ -4,17 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    /* --- VARIABLES POR DEFECTO (MODO CLARO) --- */
+    /* --- VARIABLES POR DEFECTO (MODO CLARO - INTEGRADO AL MARRÓN PRINCIPAL) --- */
     :root {
-      --bg-card: #1a1714;
-      --bg-canvas: #faf7f2;
+      --bg-canvas: #1a1714; /* ¡Cambiado de #faf7f2 para eliminar el bloque blanco! */
+      --bg-card: rgba(255, 255, 255, 0.03);
       --text-main: #e3ded6;
       --accent: #b7966c;
       --border-color: rgba(168, 158, 149, 0.3);
-      --input-bg: #1a1714;
+      --input-bg: rgba(0, 0, 0, 0.2);
     }
     
-    /* --- VARIABLES EN MODO OSCURO REESCRITAS (NEGRO ABSOLUTO) --- */
+    /* --- VARIABLES EN MODO OSCURO (NEGRO ABSOLUTO) --- */
     html[data-theme="dark"], body.dark-mode {
       --bg-canvas: #000000 !important;
       --bg-card: rgba(60, 60, 60, 0.2) !important;
@@ -33,7 +33,6 @@
       transition: background 0.3s ease, color 0.3s ease;
     }
     
-    /* Mantenemos tus estilos existentes del contenedor y formulario */
     .guestbook-container {
       padding: 10px;
       max-width: 100%;
@@ -48,16 +47,13 @@
     </div>
 
   <script>
-  // --- REDIMENSIONADO DINÁMICO ---
   function triggerResizeUpdate() {
     const realHeight = document.documentElement.scrollHeight || document.body.scrollHeight;
     window.parent.postMessage({ type: 'resize-iframe', height: realHeight }, '*');
     
     try {
       const parentIframe = window.parent.document.getElementById('visitas-iframe');
-      if (parentIframe) {
-        parentIframe.style.height = realHeight + 'px';
-      }
+      if (parentIframe) parentIframe.style.height = realHeight + 'px';
     } catch (e) {}
   }
 
@@ -68,12 +64,21 @@
     setTimeout(triggerResizeUpdate, 1000);
   });
 
-  // --- SINCRONIZADOR DEFINITIVO DE MODO OSCURO ---
+  // --- SINCRONIZADOR DEFINITIVO EN TIEMPO REAL CON QUARTZ ---
   function syncTheme() {
-    const localTheme = localStorage.getItem('theme');
-    const htmlRoot = document.documentElement;
+    let isDark = localStorage.getItem('theme') === 'dark';
     
-    if (localTheme === 'dark') {
+    try {
+      if (window.parent && window.parent.document) {
+        const parentHtml = window.parent.document.documentElement;
+        if (parentHtml.getAttribute('saved-theme') === 'dark' || parentHtml.classList.contains('dark')) {
+          isDark = true;
+        }
+      }
+    } catch(e) {}
+
+    const htmlRoot = document.documentElement;
+    if (isDark) {
       htmlRoot.setAttribute('data-theme', 'dark');
       document.body.classList.add('dark-mode');
     } else {
@@ -84,8 +89,18 @@
   }
 
   syncTheme();
-  // Escucha cambios directos en tiempo real por si cambian de modo mientras ven la página
   window.addEventListener('storage', (e) => { if (e.key === 'theme') syncTheme(); });
+
+  // MutationObserver para capturar el cambio al hacer clic en el botón flotante del inicio sin recargar
+  try {
+    if (window.parent && window.parent.document) {
+      const observer = new MutationObserver(() => syncTheme());
+      observer.observe(window.parent.document.documentElement, {
+        attributes: true,
+        attributeFilter: ['saved-theme', 'class']
+      });
+    }
+  } catch (e) {}
   </script>
 </body>
 </html>

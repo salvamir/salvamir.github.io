@@ -264,14 +264,20 @@
         if (theme === 'dark') {
             document.body.classList.add('dark-mode');
             htmlRoot.setAttribute('data-theme', 'dark');
-            toggleIcon.innerText = "🌙";
+            if (toggleIcon) toggleIcon.innerText = "🌙";
             toggleBtn.innerHTML = '<span id="darkModeIcon">🌙</span> Modo Oscuro';
         } else {
             document.body.classList.remove('dark-mode');
             htmlRoot.setAttribute('data-theme', 'light');
-            toggleIcon.innerText = "☀️";
+            if (toggleIcon) toggleIcon.innerText = "☀️";
             toggleBtn.innerHTML = '<span id="darkModeIcon">☀️</span> Modo Claro';
         }
+        triggerResizeUpdate();
+    }
+
+    function triggerResizeUpdate() {
+        const realHeight = document.documentElement.scrollHeight || document.body.scrollHeight;
+        window.parent.postMessage({ type: 'resize-iframe-musica', height: realHeight }, '*');
     }
 
     // Cargar preferencia persistente unificada con Quartz
@@ -282,6 +288,10 @@
         const currentTheme = htmlRoot.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
         localStorage.setItem('theme', currentTheme);
         applyTheme(currentTheme);
-    </script>
+    }); // <--- ¡Aquí estaba el error! Ahora cerrado correctamente.
+
+    window.addEventListener('load', triggerResizeUpdate);
+    window.addEventListener('resize', triggerResizeUpdate);
+  </script>
 </body>
 </html>
