@@ -31,24 +31,21 @@ export default ((opts?: Options) => {
   const Footer: QuartzComponent = ({ displayClass }: QuartzComponentProps) => {
     return (
       <footer class={`${displayClass ?? ""}`}>
-        {/* Contenedor unificado para los tres controles */}
+        {/* Controles Minimalistas: Música y Modo Oscuro juntos en el centro */}
         <div class="footer-controls">
-          
-          {/* Botón de Música Minimalista */}
           <button id="music-player-btn" aria-label="Reproducir música" title="Reproducir música">
             <MusicIcon />
           </button>
 
-          {/* Botón de Modo Oscuro NUEVO */}
           <button id="custom-darkmode-btn" aria-label="Cambiar modo" title="Cambiar modo">
             <MoonIcon />
           </button>
-          
-          {/* Botón Volver Arriba */}
-          <button id="back-to-top" aria-label="Volver arriba" title="Volver arriba">
-            <ArrowUpIcon />
-          </button>
         </div>
+
+        {/* Botón Volver Arriba (Restaurado a su posición flotante original) */}
+        <button id="back-to-top" aria-label="Volver arriba" title="Volver arriba">
+          <ArrowUpIcon />
+        </button>
       </footer>
     )
   }
@@ -58,15 +55,16 @@ export default ((opts?: Options) => {
   Footer.afterDOMLoaded = `
     document.addEventListener("nav", () => {
       
-      // --- 1. MÚSICA INVISIBLE ---
+      // --- 1. TRUCO DEL REPRODUCTOR INVISIBLE PERSISTENTE ---
+      // Al agregarlo a document.documentElement (fuera del body), sobrevive a los cambios de página (SPA) de Quartz
       let ytPlayer = document.getElementById("yt-global-player");
       if (!ytPlayer) {
         ytPlayer = document.createElement("iframe");
         ytPlayer.id = "yt-global-player";
-        ytPlayer.style.cssText = "position:absolute; width:1px; height:1px; top:-10px; left:-10px; opacity:0; pointer-events:none; border:none; overflow:hidden;";
+        ytPlayer.style.cssText = "position:fixed; width:1px; height:1px; top:-100px; left:-100px; opacity:0; pointer-events:none; border:none; overflow:hidden;";
         ytPlayer.setAttribute("allow", "autoplay");
         ytPlayer.src = "https://www.youtube-nocookie.com/embed/ANkxRGvl1VY?enablejsapi=1&autoplay=0&loop=1&playlist=ANkxRGvl1VY";
-        document.body.appendChild(ytPlayer);
+        document.documentElement.appendChild(ytPlayer);
       }
 
       const musicBtn = document.getElementById("music-player-btn");
@@ -85,11 +83,26 @@ export default ((opts?: Options) => {
         });
       }
 
-      // --- 2. VOLVER ARRIBA ---
+      // --- 2. CONTROL DE SCRIPTS - VOLVER ARRIBA (RESTAURADO CON SCROLL) ---
       const backToTop = document.getElementById("back-to-top")
       if (backToTop) {
+        const handleScroll = () => {
+          if (window.scrollY > 300) {
+            backToTop.classList.add("visible")
+          } else {
+            backToTop.classList.remove("visible")
+          }
+        }
+        
+        window.addEventListener("scroll", handleScroll)
+        handleScroll() // Evaluacion inicial preventiva
+        
         backToTop.addEventListener("click", () => {
           window.scrollTo({ top: 0, behavior: "smooth" })
+        })
+        
+        window.addCleanup(() => {
+          window.removeEventListener("scroll", handleScroll)
         })
       }
 
@@ -97,12 +110,10 @@ export default ((opts?: Options) => {
       const customThemeBtn = document.getElementById("custom-darkmode-btn");
       if (customThemeBtn) {
         customThemeBtn.addEventListener("click", () => {
-          // Buscamos el botón nativo de Quartz y simulamos un clic
           const nativeBtn = document.getElementById("darkmode-toggle");
           if (nativeBtn && nativeBtn.id !== "custom-darkmode-btn") {
             nativeBtn.click();
           } else {
-            // Fallback manual por si alguna vez borras el nativo
             const html = document.documentElement;
             const currentTheme = html.getAttribute("saved-theme") || "light";
             const newTheme = currentTheme === "light" ? "dark" : "light";

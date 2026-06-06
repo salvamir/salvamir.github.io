@@ -479,3 +479,116 @@ body.dark-mode .footer-controls button {
   50% { transform: scale(1.15); }
   100% { transform: scale(1); }
 }
+/* ==========================================
+   16. CONTROLES DEL FOOTER (MÚSICA Y MODO OSCURO)
+   ========================================== */
+.footer-controls {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 1.5rem !important; 
+  margin-top: 1rem !important; 
+  padding-bottom: 1.5rem !important;
+  margin-bottom: 0 !important;
+}
+
+.footer-controls button {
+  background: transparent !important;
+  border: none !important;
+  color: #e3dac9 !important; 
+  cursor: pointer !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: auto !important;
+  height: auto !important;
+  outline: none !important;
+  transition: color 0.3s ease, transform 0.2s ease !important;
+
+  svg { display: block !important; }
+
+  &:hover {
+    color: #B7966C !important; 
+    transform: scale(1.1) translateY(-3px) !important;
+    background: transparent !important;
+  }
+}
+
+.footer-controls button.playing {
+  color: #B7966C !important; 
+  filter: drop-shadow(0 0 5px rgba(183, 150, 108, 0.4)) !important;
+  animation: pulseMusic 2s infinite ease-in-out !important;
+}
+
+/* Adaptación automática al Modo Oscuro para botones del footer */
+html[saved-theme="dark"] .footer-controls button,
+html[data-theme="dark"] .footer-controls button, 
+body.dark-mode .footer-controls button {
+  color: #e0eaf5 !important; 
+  &:hover { color: #84add7 !important; }
+  &.playing {
+    color: #84add7 !important;
+    filter: drop-shadow(0 0 5px rgba(132, 173, 215, 0.4)) !important;
+  }
+}
+
+@keyframes pulseMusic {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+
+/* Ocultamos el botón nativo de modo oscuro (el flotante de la izquierda) */
+.darkmode { display: none !important; }
+
+/* ==========================================
+   17. BOTÓN FLOTANTE "VOLVER ARRIBA" (RESTAURADO)
+   ========================================== */
+#back-to-top, #goToTopBtn {
+  display: none; 
+  position: fixed; 
+  bottom: 30px; 
+  right: 30px; 
+  z-index: 999;
+  font-size: 1.5rem; 
+  border: 1px solid rgba(183, 150, 108, 0.4) !important; 
+  outline: none;
+  background-color: rgba(13, 12, 10, 0.9) !important; 
+  color: #B7966C !important; 
+  cursor: pointer;
+  width: 50px !important; 
+  height: 50px !important; 
+  border-radius: 50% !important; 
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+  align-items: center; 
+  justify-content: center;
+  opacity: 0; 
+  visibility: hidden; 
+  transition: opacity 0.3s, visibility 0.3s, background-color 0.3s, transform 0.2s, border-color 0.2s;
+  
+  &.visible { display: flex !important; opacity: 1; visibility: visible; }
+  &:hover { 
+    background-color: #B7966C !important; 
+    color: #0d0c0a !important; 
+    border-color: #E7C8A0 !important; 
+    transform: translateY(-3px); 
+    svg { stroke: #0d0c0a; } 
+  }
+}
+
+/* Adaptación a Modo Oscuro del botón Volver Arriba */
+html[saved-theme="dark"] #back-to-top,
+html[saved-theme="dark"] #goToTopBtn,
+body.dark-mode #goToTopBtn {
+  background-color: #3c3c3c !important;
+  border-color: #e0eaf5 !important;
+  color: #e0eaf5 !important;
+  svg { stroke: #e0eaf5 !important; }
+  &:hover {
+    background-color: #e0eaf5 !important;
+    color: #3c3c3c !important;
+    svg { stroke: #3c3c3c !important; }
+  }
+}
