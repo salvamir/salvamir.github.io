@@ -6,15 +6,15 @@
   <style>
     /* --- VARIABLES POR DEFECTO (MODO CLARO) --- */
     :root {
-      --bg-canvas: transparent; /* Permite heredar el marrón del padre en modo claro */
       --bg-card: #1a1714;
+      --bg-canvas: transparent; /* Permite heredar el fondo del padre en modo claro */
       --text-main: #e3ded6;
       --accent: #b7966c;
       --border-color: rgba(168, 158, 149, 0.3);
       --input-bg: rgba(0, 0, 0, 0.2);
     }
     
-    /* --- VARIABLES EN MODO OSCURO (FONDO NEGRO ABSOLUTO) --- */
+    /* --- VARIABLES EN MODO OSCURO (NEGRO ABSOLUTO) --- */
     html[data-theme="dark"], body.dark-mode {
       --bg-canvas: #000000 !important; /* Forzamos negro total al activar modo oscuro */
       --bg-card: rgba(60, 60, 60, 0.2) !important;
@@ -27,7 +27,7 @@
     html, body {
       margin: 0;
       padding: 0;
-      background-color: var(--bg-canvas) !important; /* Utiliza la variable definida arriba */
+      background-color: var(--bg-canvas) !important;
       color: var(--text-main);
       font-family: "New York", Georgia, serif;
       transition: background-color 0.3s ease, color 0.3s ease;
@@ -39,7 +39,7 @@
       padding: 10px; 
       box-sizing: border-box; 
       padding-bottom: 40px;
-      background-color: var(--bg-canvas) !important; /* Asegura el fondo correcto */
+      background-color: var(--bg-canvas) !important;
     }
     
     .guestbook-main-title { text-align: center; font-size: 2.5rem; margin-bottom: 1.5rem; }

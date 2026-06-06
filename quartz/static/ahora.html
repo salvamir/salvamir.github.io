@@ -17,7 +17,7 @@
         }
 
         /* --- PALETA MODO OSCURO UNIFICADA --- */
-        body.dark-mode {
+        html[data-theme="dark"], body.dark-mode {
             --bg-main: #000000;
             --text-main: #e0eaf5;
             --accent-dorado: #e0eaf5;
@@ -227,26 +227,25 @@
             transform: translateY(-3px);
         }
 
-        /* --- ESTILOS BOTÓN MODO OSCURO EN FOOTER --- */
+        /* --- BOTÓN MODO OSCURO CIRCULAR --- */
         .dark-mode-toggle {
             background: none;
             border: 1px solid var(--border-color);
-            color: var(--accent-muted);
-            padding: 10px 20px;
-            border-radius: 20px;
+            color: var(--text-main);
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
             cursor: pointer;
-            font-family: system-ui, sans-serif;
-            font-size: 0.9rem;
+            font-size: 1.2rem;
             margin: 2rem 0 3rem 0;
             transition: all 0.3s ease;
             display: flex;
+            justify-content: center;
             align-items: center;
-            gap: 8px;
         }
         .dark-mode-toggle:hover {
             background-color: var(--card-bg);
             border-color: var(--accent-dorado);
-            color: var(--text-main);
         }
     </style>
 </head>
@@ -388,8 +387,8 @@
 
     </div>
 
-    <button id="darkModeToggle" class="dark-mode-toggle">
-        <span id="darkModeIcon">☀️</span> Modo Claro
+    <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Cambiar modo">
+        ☀️
     </button>
 
     <div id="lightboxModal" class="lightbox-modal">
@@ -447,32 +446,28 @@
 
         // --- LÓGICA DE MODO OSCURO GLOBAL PERSISTENTE ---
         const toggleBtn = document.getElementById('darkModeToggle');
-        const toggleIcon = document.getElementById('darkModeIcon');
+        const htmlRoot = document.documentElement;
 
-        function updateToggleBtn() {
-            if (document.body.classList.contains('dark-mode')) {
-                toggleIcon.innerText = "🌙";
-                toggleBtn.innerHTML = '<span id="darkModeIcon">🌙</span>';
+        function applyTheme(theme) {
+            if (theme === 'dark') {
+                document.body.classList.add('dark-mode');
+                htmlRoot.setAttribute('data-theme', 'dark');
+                toggleBtn.innerText = "🌙";
             } else {
-                toggleIcon.innerText = "☀️";
-                toggleBtn.innerHTML = '<span id="darkModeIcon">☀️</span>';
+                document.body.classList.remove('dark-mode');
+                htmlRoot.setAttribute('data-theme', 'light');
+                toggleBtn.innerText = "☀️";
             }
         }
 
-        // Cargar preferencia guardada
-        if (localStorage.getItem('theme') === 'dark') {
-            document.body.classList.add('dark-mode');
-        }
-        updateToggleBtn();
+        // Cargar preferencia guardada unificada con Quartz
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        applyTheme(savedTheme);
 
         toggleBtn.addEventListener('click', () => {
-            document.body.classList.toggle('dark-mode');
-            if (document.body.classList.contains('dark-mode')) {
-                localStorage.setItem('theme', 'dark');
-            } else {
-                localStorage.setItem('theme', 'light');
-            }
-            updateToggleBtn();
+            const currentTheme = htmlRoot.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+            localStorage.setItem('theme', currentTheme);
+            applyTheme(currentTheme);
         });
     </script>
 </body>
