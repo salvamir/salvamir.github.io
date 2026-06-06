@@ -10,7 +10,7 @@ export const sharedPageComponents: SharedLayout = {
     Component.DesktopOnly(Component.NavLinks()), 
   ],
   afterBody: [
-    Component.Darkmode(), // <-- LO VOLVEMOS A AGREGAR ACÁ
+    Component.Darkmode(), // <-- LO VOLVEMOS A AGREGAR ACÁ PARA COLOCARLO EN EL FOOTER
   ],
   footer: Component.Footer(),
 }

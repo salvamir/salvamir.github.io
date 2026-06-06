@@ -12,6 +12,7 @@
       --accent: #b7966c;
       --border-color: rgba(168, 158, 149, 0.3);
       --page-header-bg: transparent;
+      --header-padding: 0px; /* Manejo limpio por variables */
     }
     
     /* --- PALETA MODO OSCURO SOLICITADA --- */
@@ -21,7 +22,8 @@
       --text-main: #e0eaf5;
       --accent: #84add7;
       --border-color: rgba(224, 234, 245, 0.2);
-      --page-header-bg: #3c3c3c;
+      --page-header-bg: transparent; /* CORREGIDO: Evita que aparezca un recuadro molesto recubriendo el título */
+      --header-padding: 0px;
     }
     
     html, body {
@@ -47,7 +49,7 @@
     }
 
     body.dark-mode .full-review a {
-      color: #a3c2e1; /* Link secundario en modo oscuro */
+      color: #a3c2e1;
     }
 
     .container {
@@ -56,14 +58,17 @@
       padding: 10px;
       box-sizing: border-box;
       padding-bottom: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
-    /* Título y Recuadro */
+    /* Título y Cabecera */
     .page-header {
       text-align: center;
       margin-bottom: 3rem;
       background: var(--page-header-bg);
-      padding: var(--page-header-bg) === 'transparent' ? 0 : 2rem 1rem;
+      padding: var(--header-padding);
       border-radius: 24px;
       transition: background 0.3s ease;
     }
@@ -80,7 +85,7 @@
     }
     
     body.dark-mode .page-title {
-      color: #e0eaf5; /* Títulos principales en modo oscuro */
+      color: #e0eaf5;
     }
     
     .page-desc {
@@ -94,6 +99,7 @@
     /* Grilla Dinámica */
     .music-grid {
       width: 100%;
+      max-width: 1200px;
       column-gap: 20px;
     }
     @media (max-width: 599px) { .music-grid { column-count: 1; } }
@@ -127,7 +133,7 @@
       aspect-ratio: 1 / 1;
       background: #000;
       overflow: hidden;
-      cursor: zoom-in; 
+      cursor: zoom-in;
     }
     .cover-img {
       width: 100%;
@@ -139,10 +145,12 @@
     .cover-img:hover {
       opacity: 0.85;
     }
-    
     .play-overlay {
       position: absolute;
-      top: 0; left: 0; width: 100%; height: 100%;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
       background: rgba(26, 23, 20, 0.4);
       display: flex;
       justify-content: center;
@@ -165,263 +173,126 @@
       justify-content: center;
       align-items: center;
       cursor: pointer;
-      padding-left: 6px; 
+      padding-left: 6px;
       box-shadow: 0 4px 15px rgba(0,0,0,0.5);
       transition: transform 0.2s;
     }
     body.dark-mode .play-btn {
       color: #000000;
     }
-    .play-btn:hover { transform: scale(1.1); }
+    .play-btn:hover {
+      transform: scale(1.1);
+    }
 
     /* Textos */
-    .album-info { padding: 16px; cursor: pointer; }
+    .album-info {
+      padding: 16px;
+      cursor: pointer;
+    }
     .album-title {
-      font-size: 1.3rem; margin: 0 0 5px 0;
-      color: var(--accent); font-family: system-ui, sans-serif;
+      font-size: 1.3rem;
+      margin: 0 0 5px 0;
+      color: var(--accent);
+      font-family: system-ui, sans-serif;
     }
     body.dark-mode .album-title {
       color: #e0eaf5;
     }
-    
     .album-artist {
-      font-size: 0.95rem; margin: 0 0 12px 0;
-      opacity: 0.7; font-family: system-ui, sans-serif;
+      font-size: 0.95rem;
+      margin: 0 0 12px 0;
+      opacity: 0.7;
+      font-family: system-ui, sans-serif;
     }
     body.dark-mode .album-artist {
-      color: #a3c2e1; /* Enlaces secundarios estilizados para datos */
+      color: #a3c2e1;
     }
-
     .album-summary {
-      font-size: 0.95rem; line-height: 1.5; margin: 0; opacity: 0.9;
+      font-size: 0.95rem;
+      line-height: 1.5;
+      margin: 0;
+      opacity: 0.9;
     }
     .read-more-text {
-      color: var(--accent); font-weight: bold;
-      font-family: system-ui, sans-serif; font-size: 0.85rem;
-      display: block; margin-top: 10px;
+      color: var(--accent);
+      font-weight: bold;
+      font-family: system-ui, sans-serif;
+      font-size: 0.85rem;
+      display: block;
+      margin-top: 10px;
     }
-    .full-review { display: none; }
-
-    /* Modals (Lightbox) */
-    .lightbox-modal {
-      display: none; position: fixed; z-index: 9999;
-      left: 0; top: 0; width: 100%; height: 100%;
-      background-color: rgba(13, 12, 10, 0.93);
-      backdrop-filter: blur(10px);
-      justify-content: center; align-items: center;
-      padding: 1.5rem; box-sizing: border-box;
-    }
-    
-    .lightbox-content {
-      max-width: 90%; max-height: 80vh; border-radius: 12px;
-      box-shadow: 0 10px 40px rgba(0,0,0,0.8);
-      border: 1px solid var(--border-color);
-      animation: zoomIn 0.25s ease forwards;
+    .full-review {
+      display: none;
     }
 
-    .lightbox-card-reading {
-      background: #1e1b18;
-      border: 1px solid var(--border-color);
-      border-radius: 16px;
-      max-width: 600px;
-      width: 100%;
-      max-height: 85vh;
-      overflow-y: auto;
-      padding: 2rem;
-      box-sizing: border-box;
-      box-shadow: 0 10px 40px rgba(0,0,0,0.8);
-      animation: zoomIn 0.25s ease forwards;
+    /* Estilos Botón Modo Oscuro */
+    .dark-mode-toggle {
+        background: none;
+        border: 1px solid var(--border-color);
+        color: var(--accent);
+        padding: 10px 20px;
+        border-radius: 20px;
+        cursor: pointer;
+        font-family: system-ui, sans-serif;
+        font-size: 0.9rem;
+        margin: 2rem 0;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        gap: 8px;
     }
-    body.dark-mode .lightbox-card-reading {
-      background: #111111;
+    .dark-mode-toggle:hover {
+        background-color: var(--bg-card);
+        border-color: var(--accent);
+        color: var(--text-main);
     }
-    
-    .lightbox-card-reading::-webkit-scrollbar { width: 6px; }
-    .lightbox-card-reading::-webkit-scrollbar-thumb { background: var(--border-color); border-radius: 4px; }
-
-    .lightbox-card-reading .album-title { font-size: 1.8rem; margin-bottom: 0.4rem; }
-    .lightbox-card-reading .album-artist { font-size: 1.1rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.75rem; }
-    .lightbox-card-reading .full-review { display: block !important; }
-    .lightbox-card-reading .full-review h3 { font-size: 1.2rem; color: var(--accent); margin-top: 1.5rem; font-family: system-ui, sans-serif; }
-    .lightbox-card-reading .full-review p { line-height: 1.6; font-size: 0.98rem; color: var(--text-main); }
-    .lightbox-card-reading .full-review ol { padding-left: 20px; color: var(--text-main); }
-    .lightbox-card-reading .full-review li { margin-bottom: 10px; line-height: 1.5; }
-
-    .lightbox-modal.closing { animation: fadeOutBg 0.25s ease forwards; }
-    .lightbox-modal.closing .lightbox-content,
-    .lightbox-modal.closing .lightbox-card-reading { animation: zoomOut 0.25s ease forwards; }
-
-    @keyframes zoomIn { from { transform: scale(0.95); opacity: 0; } to { transform: scale(1); opacity: 1; } }
-    @keyframes zoomOut { from { transform: scale(1); opacity: 1; } to { transform: scale(0.95); opacity: 0; } }
-    @keyframes fadeOutBg { from { opacity: 1; } to { opacity: 0; } }
   </style>
 </head>
 <body>
 
-<div class="container">
-  <div class="page-header">
-    <a href="/" class="page-title" title="Volver al inicio">Música</a>
-    <p class="page-desc">Mi colección de música.</p>
-  </div>
+  <div class="container">
+    <header class="page-header">
+      <a href="/" class="page-title">Salva Más De Cerca</a>
+      <p class="page-desc">Opiniones y apreciaciones sobre álbumes de música.</p>
+    </header>
 
-  <div class="music-grid">
-    <div class="album-card">
-      <div class="cover-container" data-embed="https://www.youtube.com/embed/videoseries?si=CuINtYrUFCXCEIu0&list=OLAK5uy_kG_IyeAEb5Vyhxr0ETM73qmimj_WnMiLk&autoplay=1">
-        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fis1-ssl.mzstatic.com%2Fimage%2Fthumb%2FMusic221%2Fv4%2F66%2Fee%2F30%2F66ee30fe-df8b-4bba-a77a-bd8d4704f408%2F24UMGIM72459.rgb.jpg%2F1200x1200bf-60.jpg&f=1&nofb=1&ipt=f238657cc30278613eef8e19f83365a6aed63cf510dfcf31d3464fa1b372fc3c" alt="Portada de Love & Hyperbole" class="cover-img">
-        <div class="play-overlay">
-          <button class="play-btn" title="Reproducir en YouTube">▶</button>
-        </div>
+    <div class="music-grid">
       </div>
 
-      <div class="album-info">
-        <h2 class="album-title">Love & Hyperbole</h2>
-        <p class="album-artist">Alessia Cara</p>
-        
-        <div class="album-summary">
-          Este disco es una revolución de Alessia para nosotros sus fans. Es el primer trabajo en el que explora estilos como el folk, balada romántica y rock pop, demostrando un inmenso avance en su carrera.
-          <span class="read-more-text">Leer análisis completo ⬎</span>
-        </div>
-
-        <div class="full-review">
-          <h3>Análisis</h3>
-          <p>Este disco es una revolución de Alessia para nosotros sus fans. Ella en su discografía nunca hizo algo tan musicalmente elaborado como este disco. Es el primer trabajo en el que explore estilos como el folk, balada romántica y rock pop. Ella es más de una versión estilizada del R&B.</p>
-          <p>Con respecto a la narrativa y la estética, sinceramente, me fascina. Esta parte del análisis es más personal, así que no esperen nada técnico. Me encanta como logró contar una historia tan simple de manera tan madura, sencilla y desarrollada. Yo valoro mucho este disco, no tanto porque el disco sea en si mismo una obra única en cuanto a narrativa o musicalidad, sino más bien por el inmenso avance que implica en la carrera de Alessia Cara. Creo que eso es lo que realmente importa al fin y al cabo: El desarrollo y progreso del artista. En este disco, Alessia se luce. Logramos verla como la artista femenina que es, con toda su impronta a flor de piel en las canciones.</p>
-          <p>Yo interpreto la narrativa del álbum como un crecimiento romántico e individual del personaje, que inicialmente se encuentra en un estado base neutral, casi negativo. Progresivamente, este protagonista desarrolla, a lo largo del disco, la humildad de saberse necesitado de amor, cariño y afecto; y finalmente lo encuentra. Esta historia tan simple, plana si se quiere, y sencilla, es completamente humana. Y es narrada, por sobre todo, por una mujer. Y ahí es donde entra el color del disco. Alessia se ocupó de demostrarnos su crecimiento y madurez musical, contándonos la historia de la manera más humana y femenina posible. Esa transparencia es muy tangible en el disco (tanto musical como gráficamente, la verdad que las imágenes y los videoclips suman muchísimo a la descripción conceptual), y personalmente, entendí todo cuando supe que las canciones fueron compuestas y grabadas en un 90% en vivo. Esta "humanidad y sencillez" hacen del disco un trabajo maduro y transparente, (una virtud valiosa en la era de la AI, ahora que están surging tantos "artistas de AI"). En fin, vale la pena escucharlo. Para más detalles, pueden entrar a <a href="https://covver.com/magazine/wogBRvfyXXAydkS2RYGL/1" target="_blank">este sitio.</a></p>
-          
-          <h3>Canciones</h3>
-          <ol>
-            <li><strong>Go Outside!</strong> - Funky Groove, es el respiro principal del disco. Implica un cambio de aire porque después de esto, todas las canciones adquieren otro tono. Esto suena más circular.</li>
-            <li><strong>Left Alone</strong> - Nos pone en contexto respecto de la narrativa: Un personaje solitario, autosuficiente, estereotipado que no necesita de un consuelo romántico. Musicalmente, también sienta un poquito las bases.</li>
-            <li><strong>Dead Man</strong> - Jazz Groove, en algunas partes hace acordar a las vibras de Monster.</li>
-            <li><strong>Subside</strong> - Me encanta la estructura, muy original el planteo de la canción. Me gusta que es una mezcla interesante entre una balada romántica y R&B. Me fascina el toque íntimo que le da el arreglo de voces.</li>
-            <li><strong>Run Run</strong> - Es la segunda canción más seductora del disco. Si pudiese ponerle un color, sería morado con lentejuelas.</li>
-            <li><strong>Drive</strong> - Mi primera impresión fue pensar en una versión femenina de Shawn Mendes, pero el estribillo trajo el groove R&B característico del disco.</li>
-            <li><strong>Get To You</strong> - Me sorprendió lo Pop Rock que percibí este tema. Está genial, la verdad no me lo esperaba en la linea musical que estaba adquiriendo el disco.</li>
-            <li><strong>(Isn't it) Obvious</strong> - Es el más clásico/propio tratándose de Alessia Cara. Sintetiza el matiz de su trayectoria musical.</li>
-            <li><strong>Garden Interlude</strong> - Sinceramente esta canción se me hizo bastante neutral en cuanto a la trama del disco.</li>
-            <li><strong>Nighttime thing</strong> - Es el alivio "Girly Pop" del disco. Buena elección, el track comercial que hacía falta.</li>
-            <li><strong>Feels Right</strong> - El momento de auto-motivación del protagonista, previo al quiebre.</li>
-            <li><strong>Fire</strong> - La verdad que esta canción me encanta. Es una completa revolución tratándose de Alessia... Mención especial al bridge, que es genial. Es el culmen del disco.</li>
-            <li><strong>Slow Motion</strong> - Es la canción seductora, hace ver a la protagonista como una persona segura de sí misma.</li>
-            <li><strong>Clearly</strong> - Es el reposo absoluto, se despeja el cielo después de la tormenta, el protagonista llega por fin a Ítaca.</li>
-          </ol>
-        </div>
-      </div>
-    </div>
+    <button id="darkModeToggle" class="dark-mode-toggle">
+        <span id="darkModeIcon">☀️</span> Modo Claro
+    </button>
   </div>
-</div>
 
-<div id="imageLightbox" class="lightbox-modal">
-  <img class="lightbox-content" id="lightboxImg">
-</div>
+  <script>
+    const toggleBtn = document.getElementById('darkModeToggle');
+    const toggleIcon = document.getElementById('darkModeIcon');
 
-<div id="cardLightbox" class="lightbox-modal">
-  <div class="lightbox-card-reading" id="lightboxCardBody"></div>
-</div>
-
-<script>
-  // Sincronización proactiva de Tema
-  function applyTheme(theme) {
-    if (theme === "dark") {
-      document.body.classList.add("dark-mode");
-    } else {
-      document.body.classList.remove("dark-mode");
-    }
-  }
-
-  // Escuchar carga directa o postMessage del contenedor principal de Quartz
-  applyTheme(localStorage.getItem("theme"));
-  window.addEventListener("message", (e) => {
-    if (e.data && e.data.type === "sync-dark-mode") {
-      applyTheme(e.data.theme);
-    }
-  });
-
-  document.addEventListener('DOMContentLoaded', () => {
-    const imgModal = document.getElementById('imageLightbox');
-    const cardModal = document.getElementById('cardLightbox');
-    const lightboxImg = document.getElementById('lightboxImg');
-    const lightboxCardBody = document.getElementById('lightboxCardBody');
-    let activeModal = null;
-
-    function closeModal() {
-      if (!activeModal || activeModal.classList.contains("closing")) return;
-      activeModal.classList.add("closing");
-      setTimeout(() => {
-        activeModal.style.display = 'none';
-        activeModal.classList.remove("closing");
-        activeModal = null;
-      }, 250);
-    }
-
-    document.querySelectorAll('.play-btn').forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        e.stopPropagation(); 
-        const container = btn.closest('.cover-container');
-        const embedUrl = container.getAttribute('data-embed');
-        if (embedUrl) {
-          container.innerHTML = `<iframe width="100%" height="100%" src="${embedUrl}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="border-radius:0;"></iframe>`;
+    function updateToggleBtn() {
+        if (document.body.classList.contains('dark-mode')) {
+            toggleIcon.innerText = "🌙";
+            toggleBtn.innerHTML = '<span id="darkModeIcon">🌙</span> Modo Oscuro';
+        } else {
+            toggleIcon.innerText = "☀️";
+            toggleBtn.innerHTML = '<span id="darkModeIcon">☀️</span> Modo Claro';
         }
-      });
-    });
+    }
 
-    document.querySelectorAll('.cover-container').forEach(container => {
-      container.addEventListener('click', (e) => {
-        if (container.querySelector('iframe')) return;
-        e.stopPropagation(); 
-        const img = container.querySelector('.cover-img');
-        if (img) {
-          imgModal.style.display = 'flex';
-          lightboxImg.src = img.src;
-          activeModal = imgModal;
+    // Cargar preferencia persistente compartida
+    if (localStorage.getItem('theme') === 'dark') {
+        document.body.classList.add('dark-mode');
+    }
+    updateToggleBtn();
+
+    toggleBtn.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+        if (document.body.classList.contains('dark-mode')) {
+            localStorage.setItem('theme', 'dark');
+        } else {
+            localStorage.setItem('theme', 'light');
         }
-      });
+        updateToggleBtn();
     });
-
-    document.querySelectorAll('.album-card').forEach(card => {
-      card.addEventListener('click', (e) => {
-        if (e.target.closest('.cover-container')) return;
-        cardModal.style.display = 'flex';
-        const title = card.querySelector('.album-title').innerText;
-        const artist = card.querySelector('.album-artist').innerText;
-        const fullReviewHtml = card.querySelector('.full-review').innerHTML;
-
-        lightboxCardBody.innerHTML = `
-          <h2 class="album-title">${title}</h2>
-          <p class="album-artist">${artist}</p>
-          <div class="full-review">${fullReviewHtml}</div>
-        `;
-        activeModal = cardModal;
-      });
-    });
-
-    imgModal.addEventListener('click', closeModal);
-    cardModal.addEventListener('click', (e) => { if (e.target === cardModal) closeModal(); });
-    window.addEventListener('scroll', () => { if (activeModal) closeModal(); });
-    window.addEventListener('wheel', (e) => {
-      if (activeModal === cardModal && e.target.closest('#lightboxCardBody')) return; 
-      if (activeModal) closeModal();
-    }, { passive: true });
-    window.addEventListener('touchmove', (e) => {
-      if (activeModal === cardModal && e.target.closest('#lightboxCardBody')) return; 
-      if (activeModal) closeModal();
-    }, { passive: true });
-  });
-
-  function triggerResizeUpdate() {
-    const container = document.querySelector('.container');
-    const realHeight = container.offsetHeight + 40;
-    window.parent.postMessage({ type: 'resize-iframe-musica', height: realHeight }, '*');
-    try {
-      const parentIframe = window.parent.document.getElementById('musica-iframe');
-      if (parentIframe) parentIframe.style.height = realHeight + 'px';
-    } catch (e) {}
-  }
-  const resizeObserver = new ResizeObserver(() => triggerResizeUpdate());
-  window.addEventListener('load', () => {
-    resizeObserver.observe(document.querySelector('.container'));
-    setTimeout(triggerResizeUpdate, 500);
-  });
-</script>
+  </script>
 </body>
 </html>

@@ -5,19 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Colección De Fotos</title>
   <style>
+    /* --- VARIABLES POR DEFECTO (MODO CLARO / PALETA TRADICIONAL) --- */
     :root {
-      --bg-main: #1A1714; /* Color fijo y exacto de la página principal corregido */
+      --bg-main: #1A1714; 
       --text-main: #e3ded6;
       --accent: #b7966c;
       --modal-bg: rgba(0, 0, 0, 0.85);
+      --card-bg: rgba(255, 255, 255, 0.03);
+    }
+
+    /* --- VARIABLES EN MODO OSCURO (PALETA INTEGRADA CON QUARTZ) --- */
+    body.dark-mode {
+      --bg-main: #000000;
+      --text-main: #e0eaf5;
+      --accent: #84add7;
+      --modal-bg: rgba(0, 0, 0, 0.95);
+      --card-bg: rgba(60, 60, 60, 0.2);
     }
 
     body {
       margin: 0;
       padding: 20px;
-      background-color: var(--bg-main) !important; /* Forzamos el fondo exacto */
+      background-color: var(--bg-main) !important;
       color: var(--text-main);
       font-family: "New York", Georgia, serif;
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
 
     .gallery-container {
@@ -57,6 +69,8 @@
       overflow: hidden;
       cursor: pointer;
       position: relative;
+      background-color: var(--card-bg);
+      transition: background-color 0.3s ease;
     }
 
     .gallery-item img {
@@ -80,7 +94,7 @@
       top: 0;
       width: 100%; 
       height: 100%; 
-      overflow: hidden; /* Evitamos doble scroll cuando está abierto */
+      overflow: hidden;
       background-color: var(--modal-bg);
       backdrop-filter: blur(5px);
     }
@@ -95,13 +109,11 @@
       animation: zoomIn 0.3s ease forwards;
     }
 
-    /* Animaciones de Entrada */
     @keyframes zoomIn {
       from { transform: scale(0.9); opacity: 0; }
       to { transform: scale(1); opacity: 1; }
     }
 
-    /* Animaciones de Salida (Retorno suave) */
     .modal.closing {
       animation: fadeOutBg 0.25s ease forwards;
     }
@@ -109,14 +121,8 @@
       animation: zoomOut 0.25s ease forwards;
     }
 
-    @keyframes fadeOutBg {
-      from { opacity: 1; }
-      to { opacity: 0; }
-    }
-    @keyframes zoomOut {
-      from { transform: scale(1); opacity: 1; }
-      to { transform: scale(0.9); opacity: 0; }
-    }
+    @keyframes fadeOutBg { from { opacity: 1; } to { opacity: 0; } }
+    @keyframes zoomOut { from { transform: scale(1); opacity: 1; } to { transform: scale(0.9); opacity: 0; } }
 
     .close-btn {
       position: absolute;
@@ -129,7 +135,6 @@
       cursor: pointer;
       z-index: 1000;
     }
-
     .close-btn:hover {
       color: var(--accent);
     }
@@ -140,23 +145,22 @@
         position: fixed;
         bottom: 30px;
         right: 30px;
-        z-index: 998; /* Ajustado para que quede debajo del modal */
+        z-index: 998;
         font-size: 1.5rem;
-        border: 1px solid rgba(183, 150, 108, 0.4);
+        border: 1px solid var(--accent);
         outline: none;
-        background-color: rgba(13, 12, 10, 0.9);
-        color: #B7966C; 
+        background-color: var(--bg-main);
+        color: var(--accent); 
         cursor: pointer;
         width: 50px;
         height: 50px;
         border-radius: 50%; 
         box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-        transition: background-color 0.3s, transform 0.2s, border-color 0.2s;
+        transition: background-color 0.3s, transform 0.2s, border-color 0.2s, color 0.3s;
     }
     #goToTopBtn:hover {
-        background-color: #B7966C;
-        color: #0d0c0a;
-        border-color: #E7C8A0;
+        background-color: var(--accent);
+        color: var(--bg-main);
         transform: translateY(-3px);
     }
   </style>
@@ -199,14 +203,9 @@
   const closeBtn = document.querySelector(".close-btn");
   let isModalOpen = false;
   
-  // Función centralizada para cerrar el modal suavemente
   function closeModal() {
     if (!isModalOpen || modal.classList.contains("closing")) return;
-    
-    // Agregamos la clase que dispara la animación CSS de salida
     modal.classList.add("closing");
-    
-    // Esperamos a que termine la animación (250ms) para ocultar de verdad
     setTimeout(() => {
       modal.style.display = "none";
       modal.classList.remove("closing");
@@ -214,7 +213,6 @@
     }, 250);
   }
 
-  // Abrir imagen
   document.querySelectorAll(".gallery-item img").forEach(img => {
     img.onclick = function() {
       modal.style.display = "block";
@@ -223,23 +221,18 @@
     }
   });
 
-  // Eventos para cerrar la imagen
   closeBtn.onclick = closeModal;
   modal.onclick = (e) => { if (e.target === modal) closeModal(); };
   document.addEventListener('keydown', (e) => { if (e.key === "Escape") closeModal(); });
 
-  // ¡NUEVO!: Cierra suavemente la imagen si el usuario hace scroll
   window.addEventListener('scroll', () => {
     if (isModalOpen) closeModal();
   });
 
   // --- LÓGICA DEL BOTÓN IR ARRIBA ---
   const goToTopBtn = document.getElementById("goToTopBtn");
-
   window.addEventListener('scroll', () => {
-      // Ignorar la lógica del botón si el modal está abierto para evitar conflictos
       if (isModalOpen) return; 
-
       if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
           goToTopBtn.style.display = "block";
       } else {
@@ -248,11 +241,48 @@
   });
 
   goToTopBtn.addEventListener('click', () => {
-      window.scrollTo({
-          top: 0,
-          behavior: 'smooth'
-      });
+      window.scrollTo({ top: 0, behavior: 'smooth' });
   });
+
+  // --- SINCRONIZADOR DE MODO OSCURO CON QUARTZ ---
+  function syncTheme() {
+    // Quartz guarda la preferencia en localStorage como 'theme' o en la estructura de Quartz
+    const localTheme = localStorage.getItem('theme');
+    // Alternativa: ver si el documento padre directo tiene el atributo dark
+    let isDark = localTheme === 'dark';
+    
+    try {
+      if (window.parent && window.parent.document) {
+        const parentHtml = window.parent.document.documentElement;
+        if (parentHtml.getAttribute('saved-theme') === 'dark' || parentHtml.classList.contains('dark')) {
+          isDark = true;
+        }
+      }
+    } catch(e) { /* Evitar bloqueos de origen cruzado */ }
+
+    if (isDark) {
+      document.body.classList.add('dark-mode');
+    } else {
+      document.body.classList.remove('dark-mode');
+    }
+  }
+
+  // Ejecutar al cargar la página
+  syncTheme();
+
+  // Escuchar cambios del LocalStorage (por si cambian el botón en otra pestaña o sección)
+  window.addEventListener('storage', (e) => {
+    if (e.key === 'theme') syncTheme();
+  });
+
+  // Escuchar clicks globales en el body del padre por si cambia en vivo
+  try {
+    if (window.parent && window.parent.document) {
+      window.parent.document.addEventListener('click', () => {
+        setTimeout(syncTheme, 50);
+      });
+    }
+  } catch(e) {}
 </script>
 </body>
 </html>
