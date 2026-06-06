@@ -18,7 +18,6 @@
       background: transparent;
       color: var(--text-main);
       font-family: "New York", Georgia, serif;
-      /* Se eliminó el overflow: hidden de acá para permitir que el contenido mida lo que tenga que medir */
     }
     
     .guestbook-container { 
@@ -26,7 +25,6 @@
       margin: 0 auto; 
       padding: 10px; 
       box-sizing: border-box; 
-      /* Añadimos un padding inferior para asegurar que nada quede al borde */
       padding-bottom: 40px;
     }
     
@@ -293,31 +291,29 @@
     fetchEntries();
   });
 
-  // SISTEMA INFALIBLE: EL WIDGET CONTROLA AL PADRE
   function triggerResizeUpdate() {
     const container = document.querySelector('.guestbook-container');
-    const realHeight = container.offsetHeight + 40; // Altura real + margen
+    if (!container) return;
+    const realHeight = container.offsetHeight + 40;
     
-    // Método 1: Aviso por mensaje (por si acaso)
+    // Le avisa al script de la nota .md cuánto mide para que se adapte perfectamente
     window.parent.postMessage({ type: 'resize-iframe', height: realHeight }, '*');
     
-    // Método 2 (El Definitivo): Manipulación directa del DOM padre.
-    // Como están en el mismo dominio, el iframe se auto-estira saltándose cualquier bloqueo de Quartz.
     try {
       const parentIframe = window.parent.document.getElementById('visitas-iframe');
       if (parentIframe) {
         parentIframe.style.height = realHeight + 'px';
       }
     } catch (e) {
-      console.warn("No se pudo acceder al DOM padre directamente.");
+      // Ignorar bloqueo cross-origin si ocurre
     }
   }
 
-  // Observamos únicamente el div principal para que la medición sea exacta
   const resizeObserver = new ResizeObserver(() => triggerResizeUpdate());
   window.addEventListener('load', () => {
-    resizeObserver.observe(document.querySelector('.guestbook-container'));
-    setTimeout(triggerResizeUpdate, 1000); // Doble chequeo
+    const container = document.querySelector('.guestbook-container');
+    if (container) resizeObserver.observe(container);
+    setTimeout(triggerResizeUpdate, 1000);
   });
 </script>
 </body>

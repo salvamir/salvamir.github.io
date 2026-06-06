@@ -11,6 +11,17 @@
       --text-main: #e3ded6;
       --accent: #b7966c;
       --border-color: rgba(168, 158, 149, 0.3);
+      --page-header-bg: transparent;
+    }
+    
+    /* --- PALETA MODO OSCURO SOLICITADA --- */
+    body.dark-mode {
+      --bg-main: #000000;
+      --bg-card: rgba(60, 60, 60, 0.2);
+      --text-main: #e0eaf5;
+      --accent: #84add7;
+      --border-color: rgba(224, 234, 245, 0.2);
+      --page-header-bg: #3c3c3c;
     }
     
     html, body {
@@ -19,18 +30,24 @@
       background: var(--bg-main);
       color: var(--text-main);
       font-family: "New York", 'Times New Roman', Georgia, serif;
+      transition: background 0.3s ease, color 0.3s ease;
     }
+
     /* Estilo para los links dentro del análisis */
     .full-review a {
       color: var(--accent);
-      text-decoration: none; /* Le quita el subrayado feo por defecto */
-      font-weight: bold; /* Opcional: lo hace un poco más grueso para que resalte */
+      text-decoration: none; 
+      font-weight: bold; 
       transition: opacity 0.2s ease;
     }
 
     .full-review a:hover {
       opacity: 0.8;
-      text-decoration: underline; /* Le agrega un subrayado sutil al pasar el mouse */
+      text-decoration: underline; 
+    }
+
+    body.dark-mode .full-review a {
+      color: #a3c2e1; /* Link secundario en modo oscuro */
     }
 
     .container {
@@ -41,11 +58,16 @@
       padding-bottom: 40px;
     }
 
-    /* Título */
+    /* Título y Recuadro */
     .page-header {
       text-align: center;
       margin-bottom: 3rem;
+      background: var(--page-header-bg);
+      padding: var(--page-header-bg) === 'transparent' ? 0 : 2rem 1rem;
+      border-radius: 24px;
+      transition: background 0.3s ease;
     }
+    
     .page-title {
       font-family: 'Times New Roman', serif;
       font-size: 2.5rem;
@@ -56,9 +78,11 @@
       margin-bottom: 0.5rem;
       transition: transform 0.2s ease, color 0.2s ease;
     }
-    .page-title:hover {
-      transform: scale(1.05);
+    
+    body.dark-mode .page-title {
+      color: #e0eaf5; /* Títulos principales en modo oscuro */
     }
+    
     .page-desc {
       font-size: 1.1rem;
       opacity: 0.8;
@@ -90,10 +114,10 @@
       box-sizing: border-box;
       overflow: hidden;
       cursor: pointer;
-      transition: border-color 0.3s ease, transform 0.2s ease;
+      transition: border-color 0.3s ease, transform 0.2s ease, background 0.3s ease;
     }
     .album-card:hover {
-      border-color: rgba(183, 150, 108, 0.4);
+      border-color: var(--accent);
     }
 
     /* Contenedor Portada */
@@ -103,7 +127,7 @@
       aspect-ratio: 1 / 1;
       background: #000;
       overflow: hidden;
-      cursor: zoom-in; /* Indica que la imagen se puede expandir */
+      cursor: zoom-in; 
     }
     .cover-img {
       width: 100%;
@@ -145,6 +169,9 @@
       box-shadow: 0 4px 15px rgba(0,0,0,0.5);
       transition: transform 0.2s;
     }
+    body.dark-mode .play-btn {
+      color: #000000;
+    }
     .play-btn:hover { transform: scale(1.1); }
 
     /* Textos */
@@ -153,10 +180,18 @@
       font-size: 1.3rem; margin: 0 0 5px 0;
       color: var(--accent); font-family: system-ui, sans-serif;
     }
+    body.dark-mode .album-title {
+      color: #e0eaf5;
+    }
+    
     .album-artist {
       font-size: 0.95rem; margin: 0 0 12px 0;
       opacity: 0.7; font-family: system-ui, sans-serif;
     }
+    body.dark-mode .album-artist {
+      color: #a3c2e1; /* Enlaces secundarios estilizados para datos */
+    }
+
     .album-summary {
       font-size: 0.95rem; line-height: 1.5; margin: 0; opacity: 0.9;
     }
@@ -180,13 +215,13 @@
     .lightbox-content {
       max-width: 90%; max-height: 80vh; border-radius: 12px;
       box-shadow: 0 10px 40px rgba(0,0,0,0.8);
-      border: 1px solid rgba(183, 150, 108, 0.3);
+      border: 1px solid var(--border-color);
       animation: zoomIn 0.25s ease forwards;
     }
 
     .lightbox-card-reading {
       background: #1e1b18;
-      border: 1px solid rgba(183, 150, 108, 0.3);
+      border: 1px solid var(--border-color);
       border-radius: 16px;
       max-width: 600px;
       width: 100%;
@@ -197,16 +232,19 @@
       box-shadow: 0 10px 40px rgba(0,0,0,0.8);
       animation: zoomIn 0.25s ease forwards;
     }
+    body.dark-mode .lightbox-card-reading {
+      background: #111111;
+    }
     
     .lightbox-card-reading::-webkit-scrollbar { width: 6px; }
-    .lightbox-card-reading::-webkit-scrollbar-thumb { background: rgba(183, 150, 108, 0.3); border-radius: 4px; }
+    .lightbox-card-reading::-webkit-scrollbar-thumb { background: var(--border-color); border-radius: 4px; }
 
     .lightbox-card-reading .album-title { font-size: 1.8rem; margin-bottom: 0.4rem; }
-    .lightbox-card-reading .album-artist { font-size: 1.1rem; margin-bottom: 1.5rem; border-bottom: 1px solid rgba(183, 150, 108, 0.15); padding-bottom: 0.75rem; }
+    .lightbox-card-reading .album-artist { font-size: 1.1rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.75rem; }
     .lightbox-card-reading .full-review { display: block !important; }
     .lightbox-card-reading .full-review h3 { font-size: 1.2rem; color: var(--accent); margin-top: 1.5rem; font-family: system-ui, sans-serif; }
-    .lightbox-card-reading .full-review p { line-height: 1.6; font-size: 0.98rem; color: #e3dac9; }
-    .lightbox-card-reading .full-review ol { padding-left: 20px; color: #e3dac9; }
+    .lightbox-card-reading .full-review p { line-height: 1.6; font-size: 0.98rem; color: var(--text-main); }
+    .lightbox-card-reading .full-review ol { padding-left: 20px; color: var(--text-main); }
     .lightbox-card-reading .full-review li { margin-bottom: 10px; line-height: 1.5; }
 
     .lightbox-modal.closing { animation: fadeOutBg 0.25s ease forwards; }
@@ -216,22 +254,18 @@
     @keyframes zoomIn { from { transform: scale(0.95); opacity: 0; } to { transform: scale(1); opacity: 1; } }
     @keyframes zoomOut { from { transform: scale(1); opacity: 1; } to { transform: scale(0.95); opacity: 0; } }
     @keyframes fadeOutBg { from { opacity: 1; } to { opacity: 0; } }
-
   </style>
 </head>
 <body>
 
 <div class="container">
-  
   <div class="page-header">
     <a href="/" class="page-title" title="Volver al inicio">Música</a>
     <p class="page-desc">Mi colección de música.</p>
   </div>
 
   <div class="music-grid">
-    
     <div class="album-card">
-      
       <div class="cover-container" data-embed="https://www.youtube.com/embed/videoseries?si=CuINtYrUFCXCEIu0&list=OLAK5uy_kG_IyeAEb5Vyhxr0ETM73qmimj_WnMiLk&autoplay=1">
         <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fis1-ssl.mzstatic.com%2Fimage%2Fthumb%2FMusic221%2Fv4%2F66%2Fee%2F30%2F66ee30fe-df8b-4bba-a77a-bd8d4704f408%2F24UMGIM72459.rgb.jpg%2F1200x1200bf-60.jpg&f=1&nofb=1&ipt=f238657cc30278613eef8e19f83365a6aed63cf510dfcf31d3464fa1b372fc3c" alt="Portada de Love & Hyperbole" class="cover-img">
         <div class="play-overlay">
@@ -274,7 +308,6 @@
         </div>
       </div>
     </div>
-
   </div>
 </div>
 
@@ -287,6 +320,23 @@
 </div>
 
 <script>
+  // Sincronización proactiva de Tema
+  function applyTheme(theme) {
+    if (theme === "dark") {
+      document.body.classList.add("dark-mode");
+    } else {
+      document.body.classList.remove("dark-mode");
+    }
+  }
+
+  // Escuchar carga directa o postMessage del contenedor principal de Quartz
+  applyTheme(localStorage.getItem("theme"));
+  window.addEventListener("message", (e) => {
+    if (e.data && e.data.type === "sync-dark-mode") {
+      applyTheme(e.data.theme);
+    }
+  });
+
   document.addEventListener('DOMContentLoaded', () => {
     const imgModal = document.getElementById('imageLightbox');
     const cardModal = document.getElementById('cardLightbox');
@@ -304,26 +354,21 @@
       }, 250);
     }
 
-    // 1. CLICK EN PLAY -> Carga iframe de YouTube
     document.querySelectorAll('.play-btn').forEach(btn => {
       btn.addEventListener('click', (e) => {
-        e.stopPropagation(); // Evita que se abra el modal de la imagen
+        e.stopPropagation(); 
         const container = btn.closest('.cover-container');
         const embedUrl = container.getAttribute('data-embed');
-        
         if (embedUrl) {
           container.innerHTML = `<iframe width="100%" height="100%" src="${embedUrl}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="border-radius:0;"></iframe>`;
         }
       });
     });
 
-    // 2. CLICK EN LA PORTADA -> Expande solo la imagen
     document.querySelectorAll('.cover-container').forEach(container => {
       container.addEventListener('click', (e) => {
-        // Si el usuario hace click y ya está reproduciendo el iframe, no hacemos nada
         if (container.querySelector('iframe')) return;
-        
-        e.stopPropagation(); // Evita que se dispare el evento de la tarjeta/texto
+        e.stopPropagation(); 
         const img = container.querySelector('.cover-img');
         if (img) {
           imgModal.style.display = 'flex';
@@ -333,12 +378,9 @@
       });
     });
 
-    // 3. CLICK EN EL TEXTO -> Expande el recuadro entero
     document.querySelectorAll('.album-card').forEach(card => {
       card.addEventListener('click', (e) => {
-        // Previene la apertura si se hizo click en la zona de la portada
         if (e.target.closest('.cover-container')) return;
-
         cardModal.style.display = 'flex';
         const title = card.querySelector('.album-title').innerText;
         const artist = card.querySelector('.album-artist').innerText;
@@ -353,13 +395,8 @@
       });
     });
 
-    // Cierre general de Modals
     imgModal.addEventListener('click', closeModal);
-    cardModal.addEventListener('click', (e) => {
-      if (e.target === cardModal) closeModal();
-    });
-
-    // Cierra con el scroll
+    cardModal.addEventListener('click', (e) => { if (e.target === cardModal) closeModal(); });
     window.addEventListener('scroll', () => { if (activeModal) closeModal(); });
     window.addEventListener('wheel', (e) => {
       if (activeModal === cardModal && e.target.closest('#lightboxCardBody')) return; 
@@ -369,10 +406,8 @@
       if (activeModal === cardModal && e.target.closest('#lightboxCardBody')) return; 
       if (activeModal) closeModal();
     }, { passive: true });
-
   });
 
-  // Ajustes de altura para Quartz
   function triggerResizeUpdate() {
     const container = document.querySelector('.container');
     const realHeight = container.offsetHeight + 40;
@@ -388,6 +423,5 @@
     setTimeout(triggerResizeUpdate, 500);
   });
 </script>
-
 </body>
 </html>
