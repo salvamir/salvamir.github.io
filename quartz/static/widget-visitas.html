@@ -6,6 +6,7 @@
   <style>
     /* --- VARIABLES POR DEFECTO (MODO CLARO) --- */
     :root {
+      --bg-canvas: transparent; /* Permite heredar el marrón del padre en modo claro */
       --bg-card: #1a1714;
       --text-main: #e3ded6;
       --accent: #b7966c;
@@ -13,8 +14,9 @@
       --input-bg: rgba(0, 0, 0, 0.2);
     }
     
-    /* --- VARIABLES EN MODO OSCURO --- */
+    /* --- VARIABLES EN MODO OSCURO (FONDO NEGRO ABSOLUTO) --- */
     html[data-theme="dark"], body.dark-mode {
+      --bg-canvas: #000000 !important; /* Forzamos negro total al activar modo oscuro */
       --bg-card: rgba(60, 60, 60, 0.2) !important;
       --text-main: #e0eaf5 !important;
       --accent: #84add7 !important;
@@ -25,10 +27,10 @@
     html, body {
       margin: 0;
       padding: 0;
-      background: transparent !important; /* HEREDA EL FONDO DEL PADRE EN CUALQUIER MODO */
+      background-color: var(--bg-canvas) !important; /* Utiliza la variable definida arriba */
       color: var(--text-main);
       font-family: "New York", Georgia, serif;
-      transition: color 0.3s ease;
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
     
     .guestbook-container { 
@@ -37,7 +39,7 @@
       padding: 10px; 
       box-sizing: border-box; 
       padding-bottom: 40px;
-      background: transparent !important; /* HEREDA EL FONDO DEL PADRE EN CUALQUIER MODO */
+      background-color: var(--bg-canvas) !important; /* Asegura el fondo correcto */
     }
     
     .guestbook-main-title { text-align: center; font-size: 2.5rem; margin-bottom: 1.5rem; }
@@ -48,7 +50,7 @@
     .guestbook-section.active { display: block; }
     
     #paint-canvas { 
-      background: #faf7f2 !important; /* El cuadro de dibujo sí necesita su fondo fijo para que las líneas se vean */
+      background: #faf7f2 !important; /* El cuadro de dibujo sí necesita su fondo claro para que las líneas negras se vean */
       border-radius: 8px; 
       display: block; 
       margin: 0 auto 20px auto; 

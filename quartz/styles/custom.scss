@@ -331,12 +331,13 @@ html[saved-theme="dark"], html.dark-mode, body.dark-mode {
   }
 
   .page-header header {
-    background-color: #3c3c3c !important;
+    background-color: #3c3c3c !important; /* Mantiene el fondo oscuro en PC */
     border: 1px solid rgba(224, 234, 245, 0.2) !important;
 
     /* ACÁ ELIMINAMOS EL FONDO BLANCO DE LOS BOTONES RSS/MAIL EN MODO OSCURO */
     .links a, .nav-links a {
       background-color: transparent !important;
+      border: none !important;
     }
     
     .links a:visited {
@@ -362,6 +363,7 @@ html[saved-theme="dark"], html.dark-mode, body.dark-mode {
   ul.section-ul li > .desc a {
     color: #84add7 !important;
     background-color: transparent !important; /* Refuerzo de transparencia para los enlaces */
+    border: none !important;
   }
 
   .links a:hover,
@@ -399,20 +401,22 @@ html[saved-theme="dark"], html.dark-mode, body.dark-mode {
     color: #000000 !important;
   }
 
-  /* --- COMPORTAMIENTO PARA DISPOSITIVOS MÓVILES EN MODO OSCURO --- */
+  /* --- CORRECCIONES PARA CELULAR EN MODO OSCURO --- */
   @media screen and (max-width: 800px) {
     .links a, 
     .nav-links a {
-      border: 1px solid #e0eaf5 !important;
+      /* Aquí forzamos que en celular NO haya fondo ni bordes blancos/grises para rss/mail */
+      border: none !important;
+      background-color: transparent !important;
       color: #c1d6ec !important;
       padding: 0.4rem 0.8rem !important;
-      border-radius: 6px !important;
       margin: 0.2rem !important;
-      background-color: rgba(60, 60, 60, 0.3) !important;
       display: inline-block !important;
     }
     .page-header header {
-      background-color: transparent !important;
+      /* Restauramos el fondo del recuadro principal en celulares */
+      background-color: #3c3c3c !important;
+      border: 1px solid rgba(224, 234, 245, 0.2) !important;
     }
   }
 
