@@ -58,7 +58,7 @@
       align-items: center;
     }
 
-    /* Título y Cabecera Limpios */
+    /* Título y Cabecera Limpios e Interactivos */
     .page-header {
       text-align: center;
       margin-bottom: 3rem;
@@ -70,16 +70,27 @@
     .page-title {
       font-family: 'Times New Roman', serif;
       font-size: 2.5rem;
-      color: #E7C8A0;
+      color: #E7C8A0; /* Dorado en Modo Claro */
       text-decoration: none;
       font-weight: bold;
       display: inline-block;
       margin-bottom: 0.5rem;
       transition: transform 0.2s ease, color 0.2s ease;
     }
+
+    /* Hover interactivo para el Título en Modo Claro */
+    .page-title:hover {
+      transform: scale(1.05);
+      color: #b7966c;
+    }
     
     html[data-theme="dark"] .page-title {
-      color: #e0eaf5;
+      color: #e0eaf5; /* Blanco/Gris en Modo Oscuro */
+    }
+
+    /* Hover interactivo para el Título en Modo Oscuro */
+    html[data-theme="dark"] .page-title:hover {
+      color: #84add7; 
     }
     
     .page-desc {
@@ -113,11 +124,11 @@
       width: 100%;
       box-sizing: border-box;
       overflow: hidden;
-      cursor: pointer;
       transition: border-color 0.3s ease, transform 0.2s ease, background 0.3s ease;
     }
     .album-card:hover {
       border-color: var(--accent);
+      transform: translateY(-3px);
     }
 
     .cover-container {
@@ -126,7 +137,7 @@
       aspect-ratio: 1 / 1;
       background: #000;
       overflow: hidden;
-      cursor: zoom-in;
+      cursor: pointer;
     }
     .cover-img {
       width: 100%;
@@ -137,6 +148,7 @@
     }
     .cover-img:hover {
       opacity: 0.85;
+      transform: scale(1.02);
     }
     .play-overlay {
       position: absolute;
@@ -213,8 +225,15 @@
       display: block;
       margin-top: 10px;
     }
+    
+    /* El texto de la review que se expande */
     .full-review {
       display: none;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid var(--border-color);
     }
 
     /* Botón simplificado solo con icono */
@@ -243,11 +262,12 @@
 
   <div class="container">
     <header class="page-header">
-      <a href="/" class="page-title" title="Volver al inicio">Música</a>
+      <a href="/" target="_parent" class="page-title" title="Volver al inicio">Música</a>
       <p class="page-desc">Mi colección de música.</p>
     </header>
 
     <div class="music-grid">
+      
       <div class="album-card">
         <div class="cover-container" data-embed="https://www.youtube.com/embed/videoseries?si=CuINtYrUFCXCEIu0&list=OLAK5uy_kG_IyeAEb5Vyhxr0ETM73qmimj_WnMiLk&autoplay=1">
           <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fis1-ssl.mzstatic.com%2Fimage%2Fthumb%2FMusic221%2Fv4%2F66%2Fee%2F30%2F66ee30fe-df8b-4bba-a77a-bd8d4704f408%2F24UMGIM72459.rgb.jpg%2F1200x1200bf-60.jpg&f=1&nofb=1&ipt=f238657cc30278613eef8e19f83365a6aed63cf510dfcf31d3464fa1b372fc3c" alt="Portada de Love & Hyperbole" class="cover-img">
@@ -255,6 +275,7 @@
             <button class="play-btn" title="Reproducir en YouTube">▶</button>
           </div>
         </div>
+        
         <div class="album-info">
           <h2 class="album-title">Love & Hyperbole</h2>
           <p class="album-artist">Alessia Cara</p>
@@ -262,9 +283,13 @@
             Este disco es una revolución de Alessia para nosotros sus fans. Es el primer trabajo en el que explora estilos como el folk, balada romántica y rock pop, demostrando un inmenso avance en su carrera.
             <span class="read-more-text">Leer análisis completo ⬎</span>
           </div>
+          
+          <div class="full-review">
+            Las letras son profundamente honestas, tocando temas desde la vulnerabilidad de enamorarse hasta las exageraciones que creamos en nuestra propia mente. El nivel de producción es excelente, dándole a su voz característica un marco orgánico y emotivo que no habíamos escuchado antes.
+          </div>
         </div>
       </div>
-    </div>
+      </div>
 
     <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Cambiar modo">
         ☀️
@@ -272,6 +297,7 @@
   </div>
 
   <script>
+    // --- LÓGICA DE MODO OSCURO GLOBAL ---
     const toggleBtn = document.getElementById('darkModeToggle');
     const htmlRoot = document.documentElement;
 
@@ -287,7 +313,6 @@
         }
     }
 
-    // Sincronizar unificado con Quartz y LocalStorage global
     const savedTheme = localStorage.getItem('theme') || 'light';
     applyTheme(savedTheme);
 
@@ -297,9 +322,53 @@
         applyTheme(currentTheme);
     });
 
+
+    // --- LÓGICA DE INTERACTIVIDAD DE LOS ALBUMES ---
+    
+    // 1. Clic en la portada para inyectar YouTube
+    document.querySelectorAll('.cover-container').forEach(container => {
+      container.addEventListener('click', function() {
+        const embedUrl = this.getAttribute('data-embed');
+        if (!embedUrl) return;
+        
+        // Reemplaza la imagen por un iframe de YouTube
+        this.innerHTML = `<iframe width="100%" height="100%" src="${embedUrl}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="position:absolute; top:0; left:0;"></iframe>`;
+        this.style.cursor = 'default'; // Quita la manito de cursor
+      });
+    });
+
+    // 2. Clic en la información para desplegar la reseña
+    document.querySelectorAll('.album-info').forEach(info => {
+      info.addEventListener('click', function() {
+        const summary = this.querySelector('.album-summary');
+        const review = this.querySelector('.full-review');
+        const readMoreText = this.querySelector('.read-more-text');
+
+        if (review.style.display === 'block') {
+          review.style.display = 'none';
+          readMoreText.innerText = 'Leer análisis completo ⬎';
+        } else {
+          review.style.display = 'block';
+          readMoreText.innerText = 'Ocultar análisis ⬏';
+        }
+      });
+    });
+
+
     // --- SINCRONIZADOR GLOBAL DEFINITIVO DE RESIZE DE IFRAME ---
     setInterval(() => {
       try {
+        // Chequeo de tema forzado desde el padre por si cambia repentinamente
+        const isDark = localStorage.getItem('theme') === 'dark' || 
+                      (window.parent && window.parent.document.documentElement.getAttribute('saved-theme') === 'dark');
+        
+        if (isDark && !document.body.classList.contains('dark-mode')) {
+          applyTheme('dark');
+        } else if (!isDark && document.body.classList.contains('dark-mode')) {
+          applyTheme('light');
+        }
+
+        // Ajuste de altura del Iframe
         const h = document.body.scrollHeight;
         const parentIframe = window.parent.document.getElementById('musica-iframe');
         if (parentIframe && parentIframe.style.height !== h + 'px') {
