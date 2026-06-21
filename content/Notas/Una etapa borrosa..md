@@ -7,7 +7,8 @@ Este cuatrimestre está siendo para mi un tiempo borroso. No me acuerdo de nada,
 
 Confío en que todo esto va a disiparse con el tiempo. Solía tener mucho más claros mis objetivos, propósitos y proyectos. Ahora mismo estoy cuestionándome todo y ya. Sin responder nada, por ahora. Está bueno igual aprovechar el invierno para preguntarse todo eso. 
 
-Estoy usando este tiempo para absorver del entorno lo que toque. Estos días transplanté unas suculentas y puse plantas en mi cuarto. Es díficil hacer jardinería con este frío y con la poca energía humana que tengo.![[plantita.jpg|378]]![[planta.jpg|376]]
+Estoy usando este tiempo para absorver del entorno lo que toque. Estos días transplanté unas suculentas y puse plantas en mi cuarto. Es díficil hacer jardinería con este frío y con la poca energía humana que tengo.
+![[plantita.jpg|378]]![[planta.jpg|376]]
 
 Iremos viendo como crecen. Entiendo que no hay que hacer estas cosas en invierno, porque las plantas se secan. 
 <div class="webmention-box">
