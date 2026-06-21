@@ -135,7 +135,35 @@
             opacity: 0.85;
         }
 
-        /* --- LIGHTBOX MODAL --- */
+        /* --- NUEVO FORMATO: COMPONENTE AUTOMATED SLIDESHOW CAROUSEL --- */
+        .post-slideshow-container {
+            width: 100%;
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: var(--bg-main);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            position: relative;
+            aspect-ratio: 16 / 10;
+        }
+        .post-slideshow-track {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.8s cubic-bezier(0.45, 0, 0.55, 1);
+        }
+        .post-slideshow-track img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            flex-shrink: 0;
+            cursor: pointer;
+            transition: opacity 0.2s ease;
+        }
+        .post-slideshow-track img:hover {
+            opacity: 0.85;
+        }
+
+        /* --- LIGHTBOX MODAL ENRIQUECIDO --- */
         .lightbox-modal {
             display: none;
             position: fixed;
@@ -183,6 +211,34 @@
         }
         .close-btn:hover {
             color: var(--accent-muted);
+        }
+
+        /* Flechas del Lightbox */
+        .lightbox-nav {
+            display: none; /* Controlado dinámicamente por JS */
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-main);
+            font-size: 3rem;
+            font-weight: bold;
+            cursor: pointer;
+            user-select: none;
+            transition: color 0.2s, transform 0.2s;
+            padding: 1.5rem;
+            z-index: 10000;
+        }
+        .lightbox-nav:hover {
+            color: var(--accent-muted);
+            transform: translateY(-50%) scale(1.1);
+        }
+        #prevBtn { left: 1.5rem; }
+        #nextBtn { right: 1.5rem; }
+
+        @media (max-width: 600px) {
+            .lightbox-nav { font-size: 2.2rem; padding: 0.5rem; }
+            #prevBtn { left: 0.5rem; }
+            #nextBtn { right: 0.5rem; }
         }
 
         @keyframes zoomIn {
@@ -258,6 +314,25 @@
         </header>
         
         <div class="post-card">
+            <div class="post-date">21/06/2026</div>
+            <div class="post-text">
+                <strong>Este mes fue infinito. Todos estos meses fueron infinitos.</strong>
+                Además de rendir, cursar, rendir, estudiar y rendir, tuve un poco de vida. Aquí están las pruebas.
+            </div>
+            <div class="post-slideshow-container">
+                <div class="post-slideshow-track">
+                    <img src="fotos-galeria/diadesol.jpg" alt="Un lindo día de sol en medio de la rutina." class="lightbox-trigger">
+                    <img src="fotos-galeria/emii.jpg" alt="Salida con la Emi para despejar la cabeza." class="lightbox-trigger">
+                    <img src="fotos-galeria/emiyydrac.jpg" alt="Reunidos con Emi y Drac." class="lightbox-trigger">
+                    <img src="fotos-galeria/chorizos.jpg" alt="Unos buenos chorizos para cortar la semana." class="lightbox-trigger">
+                    <img src="fotos-galeria/cowork.jpg" alt="Sesión intensa de estudio en el cowork." class="lightbox-trigger">
+                    <img src="fotos-galeria/nuevoorden.jpg" alt="Poniéndole un poco de orden al caos diario." class="lightbox-trigger">
+                    <img src="fotos-galeria/juanysalva.jpg" alt="Conversando con Juany." class="lightbox-trigger">
+                </div>
+            </div>
+        </div>
+
+        <div class="post-card">
             <div class="post-date">05/06/2026</div>
             <div class="post-text">
                 <strong>El segundo cafesito de la semana</strong>
@@ -290,7 +365,7 @@
             </div>
         </div>
 
-<div class="post-card">
+        <div class="post-card">
             <div class="post-date">30/05/2026</div>
             <div class="post-text">
                 <strong>Planté una suculenta</strong>
@@ -426,7 +501,9 @@
 
     <div id="lightboxModal" class="lightbox-modal">
         <span class="close-btn" id="closeBtn">&times;</span>
+        <span class="lightbox-nav" id="prevBtn">&#10094;</span>
         <img class="lightbox-content" id="lightboxImg">
+        <span class="lightbox-nav" id="nextBtn">&#10095;</span>
         <div class="lightbox-caption" id="lightboxCaption"></div>
     </div>
 
@@ -437,7 +514,12 @@
         const modalImg = document.getElementById('lightboxImg');
         const captionText = document.getElementById('lightboxCaption');
         const closeBtn = document.getElementById('closeBtn');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        
         let isModalOpen = false;
+        let currentGalleryImages = [];
+        let currentGalleryIndex = 0;
 
         function closeModal() {
             if (!isModalOpen || modal.classList.contains("closing")) return;
@@ -449,19 +531,86 @@
             }, 250);
         }
 
+        // Sincroniza visualmente la foto abierta y gestiona si mostrar o no las flechas
+        function updateLightboxView() {
+            if (currentGalleryImages.length > 0) {
+                const activeImg = currentGalleryImages[currentGalleryIndex];
+                modalImg.src = activeImg.src;
+                captionText.innerText = activeImg.alt || "";
+
+                if (currentGalleryImages.length > 1) {
+                    prevBtn.style.display = 'block';
+                    nextBtn.style.display = 'block';
+                } else {
+                    prevBtn.style.display = 'none';
+                    nextBtn.style.display = 'none';
+                }
+            }
+        }
+
+        function showNextImage(e) {
+            if (e) e.stopPropagation();
+            if (currentGalleryImages.length <= 1) return;
+            currentGalleryIndex = (currentGalleryIndex + 1) % currentGalleryImages.length;
+            updateLightboxView();
+        }
+
+        function showPrevImage(e) {
+            if (e) e.stopPropagation();
+            if (currentGalleryImages.length <= 1) return;
+            currentGalleryIndex = (currentGalleryIndex - 1 + currentGalleryImages.length) % currentGalleryImages.length;
+            updateLightboxView();
+        }
+
+        // Event listener dinámico adaptado para agrupar las imágenes de CADA post independientemente
         document.querySelectorAll('.lightbox-trigger').forEach(image => {
             image.addEventListener('click', () => {
+                const parentCard = image.closest('.post-card');
+                if (parentCard) {
+                    currentGalleryImages = Array.from(parentCard.querySelectorAll('.lightbox-trigger'));
+                    currentGalleryIndex = currentGalleryImages.indexOf(image);
+                } else {
+                    currentGalleryImages = [image];
+                    currentGalleryIndex = 0;
+                }
+                
                 modal.style.display = 'flex';
-                modalImg.src = image.src;
-                captionText.innerText = image.alt; 
+                updateLightboxView();
                 isModalOpen = true;
             });
         });
 
+        // Controles interactivos del Lightbox
         closeBtn.addEventListener('click', closeModal);
-        modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
-        document.addEventListener('keydown', (e) => { if (e.key === "Escape") closeModal(); });
+        nextBtn.addEventListener('click', showNextImage);
+        prevBtn.addEventListener('click', showPrevImage);
+        
+        modal.addEventListener('click', (e) => { 
+            if (e.target === modal) closeModal(); 
+        });
+        
+        document.addEventListener('keydown', (e) => { 
+            if (e.key === "Escape") closeModal(); 
+            if (isModalOpen && currentGalleryImages.length > 1) {
+                if (e.key === "ArrowRight") showNextImage();
+                if (e.key === "ArrowLeft") showPrevImage();
+            }
+        });
+
         window.addEventListener('scroll', () => { if (isModalOpen) closeModal(); });
+
+        // --- SISTEMA AUTOMATIZADO DE DESPLAZAMIENTO SUAVE (20 SEGUNDOS) ---
+        document.querySelectorAll('.post-slideshow-container').forEach(container => {
+            const track = container.querySelector('.post-slideshow-track');
+            const slides = track ? track.querySelectorAll('img') : [];
+            if (slides.length <= 1) return;
+
+            let currentIndex = 0;
+            setInterval(() => {
+                currentIndex = (currentIndex + 1) % slides.length;
+                track.style.transform = `translateX(-${currentIndex * 100}%)`;
+            }, 20000); // Ejecuta cada exactamente 20000ms (20 segundos)
+        });
 
         // --- BOTÓN IR ARRIBA ---
         const goToTopBtn = document.getElementById("goToTopBtn");
@@ -493,7 +642,6 @@
             }
         }
 
-        // Cargar preferencia guardada unificada con Quartz
         const savedTheme = localStorage.getItem('theme') || 'light';
         applyTheme(savedTheme);
 
