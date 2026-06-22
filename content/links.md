@@ -55,6 +55,7 @@ Te dejo otros lugares interesantes para ver. Podés encontrar nuevas páginas po
 > - [Jayfa](https://www.flickr.com/photos/jayfa_mocs/page2). Lego creator & artist.
 > - [TextKit](https://www.textkit.com/): Here you will find some Ancient Greek and Latin text.
 > - [Paintbook Link.](https://codepen.io/alperentalaslioglu/pen/yPGgvP)
+> - [Gear Page:](https://www.thegearpage.net/board/index.php) A small community.
 
 > [!note]+ Geology
 > > [!todo]- Blogs and news
