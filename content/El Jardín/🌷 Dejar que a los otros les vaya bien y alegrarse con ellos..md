@@ -10,4 +10,4 @@ Como dijo ayer en la misa el padre Tomi: Hoy te pido Jesús que intercedas por m
 
 Se que estoy en el mundo sin ser de el. Ayudame a sentirlo esta semana en las cosas simples, naturales, humildes, sencillas. Dame esa visión en tercera persona, para verte a vos en la Creación, en las "casualidades" y en la gente que me rodea, sobre todo. Ayudame a concentrarme (verdaderamente) en los problemas y angustias de la gente, tanto como en sus alegrías y éxitos. Ayudame a tenerte como motivo. Como pasión. Vos sos mi pasión, sos mi proyecto de vida. Sos mi plan más apasionante, seguirte y trabajar por tu Reino en mi vida cotidiana es lo que me apasiona. Gracias Jesús por esto. Amén.
 
-[[🪻Sobre la vida plena]] [[🪸 Sobre las buenas notas]] [[🪴 Sobre la importancia de las cosas]]
+[[🪻 Sobre la vida plena]] [[🪸 Sobre las buenas notas]] [[🪴 Sobre la importancia de las cosas]]
