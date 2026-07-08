@@ -1,4 +1,4 @@
-Me doy cuenta, Jesús, que vivo luchando por vivir realmente. Me apasiona la vida virtual casi tanto como la vida real. Le dedico mucho más tiempo del que quiero. No es vida eso, es una simulación de: humanidad, silencio, calma, tranquilidad, libertad.
+#arbolito Me doy cuenta, Jesús, que vivo luchando por vivir realmente. Me apasiona la vida virtual casi tanto como la vida real. Le dedico mucho más tiempo del que quiero. No es vida eso, es una simulación de: humanidad, silencio, calma, tranquilidad, libertad.
 Cualquier tipo de contacto aislado (yo solo) con la virtualidad cumple ese requisito. 
 
 No existe una "realidad virtual" o una "vida digital". Me niego a considerar válidos esos conceptos. En todo caso existe una "presencia" de cada uno de nosotros los humanos (bueno, casi todos, de cada vez más de nosotros) en la virtualidad. En el internet. 

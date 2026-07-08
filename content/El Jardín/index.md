@@ -8,3 +8,12 @@ Esto viene a ser un lugar dónde hago públicos mis pensamientos/oraciones/ideas
 La idea no es encontrarse con algo cronológicamente acomodado como lo es todo en el blog. *Acá deposito semillas que de a poco van creciendo* y voy procesandolas. En la vida real, todo esto pasa en un cuaderno, pero quiero dejar cierta huella de eso en algún lado. El mundo virtual es una manera de "pseudo-inmortalizar" todo esto que anda en mi cabeza.
 Disfrútenlo.
 
+> *Animate a explorar las etiquetas para ver como fueron evolucionando mis ideas.* 
+
+| ![[yuyo 2.png\|116]] | ![[helecho.png\|117]] | ![[arbolito.png\|245]] |
+| -------------------- | --------------------- | ---------------------- |
+
+
+
+
+

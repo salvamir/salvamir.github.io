@@ -1,1 +1,2 @@
+#yuyo 
 —Únicamente los niños saben lo que buscan —dijo el principito. Pierden el tiempo con una muñeca de trapo que viene a ser lo más importante para ellos y si se la quitan, lloran... —¡Qué suerte tienen! —dijo el guardavía. [[🍁 Sobre el llamado a vivir para horizontes inmensos...]][[Sencillez]][[🌻 Hay que animarse a salir al aire libre más seguido.]][[🪸 Sobre las buenas notas]]

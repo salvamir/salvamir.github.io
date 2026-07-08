@@ -1,3 +1,4 @@
+#arbolito 
 ¿Se puede vivir plenamente teniendo que estar todos los días delante de una pantalla, conectado a internet y rodeado de conexiones bluetooth? Supongo que sí... Debe ser cuestión de adaptarse.
 
 Nada en internet es verdadero. Nada virtual es real eso está clarísimo... ¿Qué busco en las pantallas entonces? ¿Qué busca uno en las redes sociales, en los videos de Youtube, en las páginas web? 

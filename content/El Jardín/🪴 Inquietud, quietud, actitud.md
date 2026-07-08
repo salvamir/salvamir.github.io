@@ -1,3 +1,4 @@
+#helecho 
 Inquietud. Quietud. Actitud. Creo que ya sé porqué estás cansado. No porque tu esfuerzo sea mucho ni muy intenso. Sino porqué está mal direccionado.
 
 Estás buscando cambiar el entorno. Las circunstancias. El ambiente. La situación. El clima. El tiempo. Los días restantes. Los eventos. La gente que te rodea. Tu lugar.

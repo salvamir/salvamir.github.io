@@ -1,3 +1,4 @@
+#helecho 
 El coral me hace pensar en algo poco entendible a simple vista. Representa una idea que si la ves así nomás, en "la superficie", te puede parecer disruptiva, o chocante o poco personal. Un poco es así el pensamiento que tengo, si lo ves desde lejos.
 
 No me gusta aspirar a las mejores notas siempre. Porque en un sentido práctico, para poder tener buenas notas en mi facultad y carrera, y para poder llevarla perfectamente al día (como vengo haciendo yo hasta ahora), tenés que hacer demasiados sacrificios. Y creo que al final no vale tanto la pena.

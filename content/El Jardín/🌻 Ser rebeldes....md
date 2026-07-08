@@ -1,3 +1,4 @@
+#helecho 
 En estos momentos de violencia, de sexualidad brutal, salvaje, hemos de ser rebeldes. Tú y yo somos rebeldes: no nos da la gana dejarnos llevar por la corriente, y ser unas bestias.
 
 si algún día, viajando por África cruzan el desierto. Si por casualidad pasan por allí, no se apresuren, se los ruego, y deténganse un poco, precisamente bajo la estrella.

@@ -1,3 +1,4 @@
+#arbolito 
 A veces me cuesta un poco la envidia. Quizás porque soy muy autocompasivo y me enfoco demasiado en lo mucho que me cuestan las cosas. Me doy cuenta, Jesús, que soy medio dramatico en general. Cuando las cosas no van como me esperaba, me desanimo y me dejo aplastar por el mundo. Y cuando de repente me sacás de esa situación, pareciera que no te veo, y la alegría me dura un ratito y después me olvido.
 
 *"En los días buenos se olvidan los malos, y en los malos se olvidan los buenos... (Algún capítulo del Eclesiastico)"*
