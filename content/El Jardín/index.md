@@ -11,7 +11,7 @@ Disfrútenlo.
 > *Animate a explorar las etiquetas para ver como fueron evolucionando mis ideas.* 
 > #yuyo #helecho #arbolito 
 
-| ![[yuyo.png\|125]] | ![[helecho.png\|117]] | ![[arbolito.png]] |
+| ![[yuyo.png\|134]] | ![[helecho.png\|147]] | ![[arbolito.png]] |
 | ------------------ | --------------------- | ----------------- |
 
 
