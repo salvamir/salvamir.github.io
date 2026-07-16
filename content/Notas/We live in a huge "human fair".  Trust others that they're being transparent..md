@@ -1,5 +1,10 @@
-#conversaciones 
-
+---
+cssclasses:
+  - blog-post
+date: 2026-07-16
+tags:
+  - conversaciones
+---
 This post is a reply to [this](https://finest.day/posts/friction-as-a-form-of-appreciation) Sebastian's entry. He talked about how guestbooks are a great way to share with others you care about them in this artificial and digitalized community we made. 
 My guestbook here is also a demonstration that many people around the world cared about t**his avatar that I'm here.** That drives me crazy... 
 
@@ -17,6 +22,8 @@ I'm not sure, because nor Sebastian or me know each other and doesn't know if th
 In real life is easy to know if someone is not interested in what you're saying to them. Is easy to know if they're lying to you. But here, in this digital version of a real conversation, is hard to know. I think that's the point of blogging: If you're willing to actually know other's strange people thoughts about life and trascendental stuff, come here and met them in their small personal internet's corner. Most blogs I read felt sincere and transparent. Because here no-one listen to you. Better said: not everybody sees/listens you. Only those who **really** want to know you and what do you think, write, live, etc actually pay attention to your words and **take their time to receive your message.**  I think that's what Sebastian called in his entry as "friction". 
 
 I picture this phenomena like a big "artisanal fair" where each person has their own space to share whatever they want. People walking around those spaces (me around Sebastian's blog recently, you right now, and every person who had read something personal on this small "virtual city") are aware of what kind of content they're offered to be fed up with, and consciously decide which one collect and **ruminate**. 
+
+![[feriaartesanal.jpg|405]]
 
 Parts of my *own real life* are shown here. I'm being open to you, the reader. I trust you. And I think that's what me and Sebastian (correct me if I'm wrong) amaze the most. Both of us are  trusting that the other is sharing a real part of their lives, even tho this digital medium is not quite "real". 
 
