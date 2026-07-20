@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>El Jardín Digital - Aventura Interactiva</title>
+  <!-- Cargamos Kaboom.js desde CDN -->
+  <script src="https://unpkg.com/kaboom@3000.1.17/dist/kaboom.js"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #000000;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    canvas {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+<script>
+  // 1. INICIALIZAR KABOOM (Configurado a 1920x1080 con escalado automático)
+  kaboom({
+    width: 1920,
+    height: 1080,
+    letterbox: true,
+    background: [0, 0, 0],
+  });
+
+  // 2. CARGAR RECURSOS (Imágenes)
+  loadSprite("sala1", "assets/sala1.png");
+  loadSprite("sala2", "assets/sala2.png");
+  loadSprite("sala3", "assets/sala3.png");
+  loadSprite("sala4", "assets/sala4.png");
+  loadSprite("sala5", "assets/sala5.png");
+
+  // CARGAR RECURSOS (Audios)
+  loadSound("musica", "assets/musica_fondo.mp3");
+  loadSound("clickSFX", "assets/click.mp3");
+  loadSound("hoverSFX", "assets/hover.mp3");
+
+  // 3. FUNCIONES AUXILIARES Y AUDIO
+
+  // Variable y función para la música de fondo continua
+  let musicaIniciada = false;
+
+  function reproducirMusica() {
+    if (!musicaIniciada) {
+      play("musica", { loop: true, volume: 0.4 });
+      musicaIniciada = true;
+    }
+  }
+
+  // Sistema de Cuadro de Diálogo Retro
+  function mostrarTexto(mensaje) {
+    destroyAll("cajaTexto");
+
+    add([
+      rect(1600, 150, { radius: 12 }),
+      pos(960, 950),
+      anchor("center"),
+      color(15, 15, 15),
+      outline(3, rgb(231, 200, 160)),
+      fixed(),
+      "cajaTexto"
+    ]);
+
+    add([
+      text(mensaje, { size: 36, width: 1500, align: "center" }),
+      pos(960, 950),
+      anchor("center"),
+      color(238, 221, 204),
+      fixed(),
+      "cajaTexto"
+    ]);
+
+    wait(4, () => destroyAll("cajaTexto"));
+  }
+
+  // Helper para crear zonas interactivas (Con sonidos integrados)
+  function crearZonaInteractiva(x, y, ancho, alto, alHacerClic, alPasarMouse, alSalirMouse) {
+    const zona = add([
+      rect(ancho, alto),
+      pos(x, y),
+      opacity(0), // Se mantiene invisible
+      area(),
+    ]);
+
+    let estaSobreElemento = false;
+
+    zona.onClick(() => {
+      reproducirMusica();
+      play("clickSFX");
+      setCursor("default");
+      alHacerClic();
+    });
+
+    zona.onHover(() => {
+      setCursor("pointer");
+      if (!estaSobreElemento) {
+        reproducirMusica();
+        play("hoverSFX");
+        estaSobreElemento = true;
+      }
+      if (alPasarMouse) alPasarMouse();
+    });
+
+    zona.onHoverEnd(() => {
+      setCursor("default");
+      estaSobreElemento = false;
+      if (alSalirMouse) alSalirMouse();
+    });
+
+    return zona;
+  }
+
+  // TRUCO DE DESARROLLADOR: Muestra coordenadas al hacer clic y activa música en la primera interacción
+  onClick(() => {
+    reproducirMusica();
+    const p = mousePos();
+    console.log(`Coordenadas -> X: ${Math.round(p.x)}, Y: ${Math.round(p.y)}`);
+  });
+
+  // =========================================================================
+  // 4. DEFINICIÓN DE LAS ESCENAS (SALAS)
+  // =========================================================================
+
+  // --- SALA 1: JARDÍN DIGITAL ---
+  scene("sala1", () => {
+    add([sprite("sala1"), pos(0, 0)]);
+
+    crearZonaInteractiva(1750, 200, 150, 400, () => go("sala2"));
+    crearZonaInteractiva(850, 950, 200, 120, () => go("sala5"));
+
+    crearZonaInteractiva(100, 700, 300, 300, () => {
+      mostrarTexto("Es un pequeño brote de tiza. Parece crecer con el tiempo.");
+    });
+  });
+
+  // --- SALA 2 ---
+  scene("sala2", () => {
+    add([sprite("sala2"), pos(0, 0)]);
+
+    crearZonaInteractiva(20, 400, 150, 300, () => go("sala1"));
+    crearZonaInteractiva(1750, 400, 150, 300, () => go("sala3"));
+    crearZonaInteractiva(850, 20, 300, 150, () => go("sala4"));
+  });
+
+  // --- SALA 3 ---
+  scene("sala3", () => {
+    add([sprite("sala3"), pos(0, 0)]);
+
+    crearZonaInteractiva(20, 400, 150, 300, () => go("sala2"));
+  });
+
+  // --- SALA 4 ---
+  scene("sala4", () => {
+    add([sprite("sala4"), pos(0, 0)]);
+
+    crearZonaInteractiva(1750, 100, 150, 300, () => go("sala5"));
+    crearZonaInteractiva(800, 400, 300, 400, () => {
+      mostrarTexto("Escuchas ondas de frecuencia resonando en el silencio...");
+    });
+  });
+
+  // --- SALA 5 ---
+  scene("sala5", () => {
+    add([sprite("sala5"), pos(0, 0)]);
+
+    crearZonaInteractiva(50, 800, 200, 200, () => go("sala4"));
+    crearZonaInteractiva(850, 450, 220, 220, () => {
+      window.top.location.href = "https://salva.thedev.id/El-Jardin";
+    });
+  });
+
+  // =========================================================================
+  // 5. INICIALIZACIÓN
+  // =========================================================================
+  go("sala1");
+
+</script>
+</body>
+</html>

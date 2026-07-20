@@ -5,8 +5,16 @@ We have 195 countries in all the planet, by the date I'm writing this. Studying 
 I'm basing my studies on this two pages: [Countries Of The World](https://www.nationsonline.org/index.html), and [Flags Of The World.](https://flagpedia.net). (In spanish: [paises.net](https://www.paises.net)). Some of the things I'll be reading could be from Wikipedia too. The project progress/log is documented here. 
 
 <font color="#ffff00"><font color="#ffff00">Disclaimer</font>: </font>Everything here is found out there on the web and is not my personal opinion AT ALL. I did not went to any (or most) of the countries I mention here. This is only informational, personal and educational, for me. Those are only data, numbers, stats, not opinions or thoughts I had. 
+
+## Day #3 - Cyprus 🇨🇾
+Their flag's etymology name comes from a greek word refered to "copper", the most recognizable mineral from the country. In spanish is called "República de Chipre". Is an Island from the Mediterranean sea. It's culture is a merge of Greek 🇬🇷 and Turkish cypriots 🇹🇷.  There people speaks mostly greek. The color of the country outline in their flag is also refered to copper, as a yellow-ish mineral. Crossed branches of the flag should represent the desire of peace of the island.
+
+There is a lot of famous people from Cyprus, but I only can mention a [guy](https://en.wikipedia.org/wiki/Demis_Hassabis) who is a computer scientists and worked for Google developing DeepMind Project. The country is divided by six districts. The capital of Cyprus is a city called Nicosia. Most of the people in Cyprus is Catholic Orthodox. And there are some Catholics too. That's great.
+
+![[cyrpus.png|437]]
+
 ## Day #2 - Kosovo 🇽🇰
-I learnt about this country some very sad stories. Kosovo is a pretty young country placed in Southeast Europe, limited by Serbia 🇷🇸 (North and Northwest), Albania 🇦🇱 (Southeast), North Macedonia 🇲🇰 (Southwest), Montenegro (East). 
+I've learnt about this country some very sad stories. Kosovo is a pretty young country placed in Southeast Europe, limited by Serbia 🇷🇸 (North and Northwest), Albania 🇦🇱 (Southeast), North Macedonia 🇲🇰 (Southwest), Montenegro (East). 
 
 It was in war with Serbia🇷🇸 recently, 20 years ago. Right now, the conflicts lives in society. This conflict stills alive and thats proved by the Mitrovica Bridge. It divides two completely different communities: The serbs and the albanians, one of each live in their side of the river. 
 The [Kosovo etymology](https://en.wikipedia.org/wiki/Kosovo#Etymology) is related to "blackbird" in some way. 

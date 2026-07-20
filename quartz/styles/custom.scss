@@ -527,3 +527,12 @@ body.dark-mode #goToTopBtn {
     svg { stroke: #3c3c3c !important; }
   }
 }
+
+/* ==========================================
+   OCULTAR "items under this folder" SOLAMENTE EN ESTA PÁGINA
+   ========================================== */
+body[data-slug="index"] p:has(+ ul.section-ul),
+body[data-slug="El-Jardín/index"] p:has(+ ul.section-ul),
+body[data-slug="El-Jardin/index"] p:has(+ ul.section-ul) {
+  display: none !important;
+}

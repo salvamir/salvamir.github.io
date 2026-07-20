@@ -9,12 +9,7 @@ La idea no es encontrarse con algo cronológicamente acomodado como lo es todo e
 Disfrútenlo.
 
 > *Animate a explorar las etiquetas para ver como fueron evolucionando mis ideas.* 
+> 
 > #yuyo #helecho #arbolito 
-
-| ![[yuyo.png\|134]] | ![[helecho.png\|147]] | ![[arbolito.png]] |
-| ------------------ | --------------------- | ----------------- |
-
-
-
 
 

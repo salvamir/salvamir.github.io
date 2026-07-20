@@ -54,7 +54,7 @@ description: Acá me gusta coleccionar detalles de mi vida.
     <area target="" alt="Acá guardo todos los libros que me acuerdo de haber leído. Solía ser bastante lector antes." title="Libros" href="https://salvamir.github.io/librería" coords="449,154,585,207" shape="rect">
     <area target="" alt="Una especie de feed de instagram pero más casual" title="Ahora" href="https://salvamir.github.io/static/ahora.html" coords="316,13,412,112" shape="rect">
     <area target="" alt="Un intento de inmortalizar mi cuadernito. Estoy implementando cosas interesantes." title="Notas" href="https://salvamir.github.io/Notas" coords="347,94,485,180" shape="rect">
-    <area target="" alt="Se puso muy de moda, estoy tratando de implementarlo" title="Jardin Digital" href="https://salvamir.github.io/El-Jardín" coords="394,49,578,116" shape="rect">
+    <area target="" alt="Se puso muy de moda, estoy tratando de implementarlo" title="Jardin Digital" href="https://salvamir.github.io/static/juego/" coords="394,49,578,116" shape="rect">
   </map>
 </div>
 
@@ -62,7 +62,7 @@ description: Acá me gusta coleccionar detalles de mi vida.
   <a href="https://salvamir.github.io" class="boton-pildora">Inicio</a>
   <a href="https://salvamir.github.io/static/musica.html" class="boton-pildora">Música</a>
   <a href="https://salvamir.github.io/algo-mas" class="boton-pildora">Algo Más</a>
-  <a href="https://salvamir.github.io/El-Jardín" class="boton-pildora">Jardín Digital</a>
+  <a href="https://salvamir.github.io/static/juego/" class="boton-pildora">Jardín Digital</a>
   <a href="https://salvamir.github.io/Notas" class="boton-pildora">Notas</a>
   <a href="https://salvamir.github.io/librería" class="boton-pildora">Libros</a>
   <a href="https://salvamir.github.io/static/ahora.html" class="boton-pildora">Ahora</a>
