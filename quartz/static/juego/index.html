@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>El Jardín Digital - Aventura Interactiva</title>
-  <!-- Cargamos Kaboom.js desde CDN -->
+  <title>La casa.</title>
   <script src="https://unpkg.com/kaboom@3000.1.17/dist/kaboom.js"></script>
   <style>
     body {
@@ -25,7 +24,7 @@
 <body>
 
 <script>
-  // 1. INICIALIZAR KABOOM (Configurado a 1920x1080 con escalado automático)
+  // 1. INICIALIZAR KABOOM
   kaboom({
     width: 1920,
     height: 1080,
@@ -33,21 +32,18 @@
     background: [0, 0, 0],
   });
 
-  // 2. CARGAR RECURSOS (Imágenes)
+  // 2. CARGAR RECURSOS
   loadSprite("sala1", "assets/sala1.png");
   loadSprite("sala2", "assets/sala2.png");
   loadSprite("sala3", "assets/sala3.png");
   loadSprite("sala4", "assets/sala4.png");
   loadSprite("sala5", "assets/sala5.png");
 
-  // CARGAR RECURSOS (Audios)
   loadSound("musica", "assets/musica_fondo.mp3");
   loadSound("clickSFX", "assets/click.mp3");
   loadSound("hoverSFX", "assets/hover.mp3");
 
   // 3. FUNCIONES AUXILIARES Y AUDIO
-
-  // Variable y función para la música de fondo continua
   let musicaIniciada = false;
 
   function reproducirMusica() {
@@ -57,7 +53,6 @@
     }
   }
 
-  // Sistema de Cuadro de Diálogo Retro
   function mostrarTexto(mensaje) {
     destroyAll("cajaTexto");
 
@@ -83,12 +78,11 @@
     wait(4, () => destroyAll("cajaTexto"));
   }
 
-  // Helper para crear zonas interactivas (Con sonidos integrados)
   function crearZonaInteractiva(x, y, ancho, alto, alHacerClic, alPasarMouse, alSalirMouse) {
     const zona = add([
       rect(ancho, alto),
       pos(x, y),
-      opacity(0), // Se mantiene invisible
+      opacity(0),
       area(),
     ]);
 
@@ -120,70 +114,43 @@
     return zona;
   }
 
-  // TRUCO DE DESARROLLADOR: Muestra coordenadas al hacer clic y activa música en la primera interacción
+  // =========================================================================
+  // MEDIDOR VISUAL DE COORDENADAS (APARECE EN PANTALLA)
+  // =========================================================================
+  const indicador = add([
+    text("Mueve el mouse...", { size: 32 }),
+    pos(40, 40),
+    color(255, 230, 0), // Amarillo brillante
+    fixed(),
+    z(9999) // Se dibuja sobre cualquier imagen
+  ]);
+
+  onMouseMove((p) => {
+    indicador.text = `X: ${Math.round(p.x)}  |  Y: ${Math.round(p.y)}`;
+  });
+
   onClick(() => {
     reproducirMusica();
-    const p = mousePos();
-    console.log(`Coordenadas -> X: ${Math.round(p.x)}, Y: ${Math.round(p.y)}`);
   });
 
   // =========================================================================
-  // 4. DEFINICIÓN DE LAS ESCENAS (SALAS)
+  // 4. ESCENAS (SALAS)
   // =========================================================================
-
-  // --- SALA 1: JARDÍN DIGITAL ---
   scene("sala1", () => {
     add([sprite("sala1"), pos(0, 0)]);
-
     crearZonaInteractiva(1750, 200, 150, 400, () => go("sala2"));
-    crearZonaInteractiva(850, 950, 200, 120, () => go("sala5"));
-
-    crearZonaInteractiva(100, 700, 300, 300, () => {
-      mostrarTexto("Es un pequeño brote de tiza. Parece crecer con el tiempo.");
-    });
   });
 
-  // --- SALA 2 ---
   scene("sala2", () => {
     add([sprite("sala2"), pos(0, 0)]);
-
     crearZonaInteractiva(20, 400, 150, 300, () => go("sala1"));
-    crearZonaInteractiva(1750, 400, 150, 300, () => go("sala3"));
-    crearZonaInteractiva(850, 20, 300, 150, () => go("sala4"));
   });
 
-  // --- SALA 3 ---
-  scene("sala3", () => {
-    add([sprite("sala3"), pos(0, 0)]);
+  scene("sala3", () => { add([sprite("sala3"), pos(0, 0)]); });
+  scene("sala4", () => { add([sprite("sala4"), pos(0, 0)]); });
+  scene("sala5", () => { add([sprite("sala5"), pos(0, 0)]); });
 
-    crearZonaInteractiva(20, 400, 150, 300, () => go("sala2"));
-  });
-
-  // --- SALA 4 ---
-  scene("sala4", () => {
-    add([sprite("sala4"), pos(0, 0)]);
-
-    crearZonaInteractiva(1750, 100, 150, 300, () => go("sala5"));
-    crearZonaInteractiva(800, 400, 300, 400, () => {
-      mostrarTexto("Escuchas ondas de frecuencia resonando en el silencio...");
-    });
-  });
-
-  // --- SALA 5 ---
-  scene("sala5", () => {
-    add([sprite("sala5"), pos(0, 0)]);
-
-    crearZonaInteractiva(50, 800, 200, 200, () => go("sala4"));
-    crearZonaInteractiva(850, 450, 220, 220, () => {
-      window.top.location.href = "https://salva.thedev.id/El-Jardin";
-    });
-  });
-
-  // =========================================================================
-  // 5. INICIALIZACIÓN
-  // =========================================================================
   go("sala1");
-
 </script>
 </body>
 </html>
