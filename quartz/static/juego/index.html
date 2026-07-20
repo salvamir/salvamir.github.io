@@ -115,37 +115,48 @@
   }
 
   // =========================================================================
-  // MEDIDOR VISUAL DE COORDENADAS (APARECE EN PANTALLA)
+  // ESCENAS (SALAS)
   // =========================================================================
-  const indicador = add([
-    text("Mueve el mouse...", { size: 32 }),
-    pos(40, 40),
-    color(255, 230, 0), // Amarillo brillante
-    fixed(),
-    z(9999) // Se dibuja sobre cualquier imagen
-  ]);
 
-  onMouseMove((p) => {
-    indicador.text = `X: ${Math.round(p.x)}  |  Y: ${Math.round(p.y)}`;
-  });
-
-  onClick(() => {
-    reproducirMusica();
-  });
-
-  // =========================================================================
-  // 4. ESCENAS (SALAS)
-  // =========================================================================
+// --- SALA 1: JARDÍN DIGITAL ---
   scene("sala1", () => {
     add([sprite("sala1"), pos(0, 0)]);
-    crearZonaInteractiva(1750, 200, 150, 400, () => go("sala2"));
+
+    // 1. Flecha inferior: lleva a la Sala 2
+    crearZonaInteractiva(547, 934, 127, 133, () => go("sala2"));
+
+    // 2. Tallo / Yuyos laterales: abre el tag #yuyo
+    crearZonaInteractiva(13, 1, 124, 529, () => {
+      window.top.location.href = "https://salvamir.github.io/tags/yuyo";
+    });
+
+    crearZonaInteractiva(680, 931, 807, 144, () => {
+      window.top.location.href = "https://salvamir.github.io/tags/helecho";
+    });
+
+    crearZonaInteractiva(1488, 302, 67, 641, () => {
+      window.top.location.href = "https://salvamir.github.io/tags/arbolito";
+    });
+
+    crearZonaInteractiva(1420, 117, 146, 165, () => {
+      window.top.location.href = "https://salvamir.github.io";
+    });
+
+
+    crearZonaInteractiva(6, 573, 102, 157, () => {
+      mostrarTexto("Es una roca... quién sabe cual será su historia petrogenética.");
+    });
+
+
   });
 
+  // --- SALA 2 ---
   scene("sala2", () => {
     add([sprite("sala2"), pos(0, 0)]);
-    crearZonaInteractiva(20, 400, 150, 300, () => go("sala1"));
+    // Aquí agregarás las flechas/objetos de la Sala 2 cuando los midas
   });
 
+  // --- RESTO DE SALAS ---
   scene("sala3", () => { add([sprite("sala3"), pos(0, 0)]); });
   scene("sala4", () => { add([sprite("sala4"), pos(0, 0)]); });
   scene("sala5", () => { add([sprite("sala5"), pos(0, 0)]); });
