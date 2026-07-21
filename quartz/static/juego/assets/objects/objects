@@ -1,0 +1,34 @@
+public/
+└── assets/
+    ├── objects/
+    │   ├── cajon1_abierto.png
+    │   ├── cajon2_abierto.png
+    │   ├── cajon3_abierto.png
+    │   ├── comoda.png
+    │   ├── cuaderno.png
+    │   ├── cuchillo.png
+    │   ├── encendedor.png
+    │   ├── foco.png
+    │   ├── lampara_encendida.png
+    │   ├── llave.png
+    │   ├── osito.png
+    │   ├── osito_roto.png
+    │   ├── papel.png
+    │   ├── pizarra.png
+    │   └── pizarra_papel.png
+    ├── salas/
+    │   ├── sala1.png
+    │   ├── sala2.png
+    │   ├── sala3.png
+    │   ├── sala4.png
+    │   └── sala5.png
+    └── sounds/
+        ├── burn.mp3
+        ├── click.mp3
+        ├── corta.mp3
+        ├── drawer.mp3
+        ├── hover.mp3
+        ├── key.mp3
+        ├── light.mp3
+        ├── musica_fondo.mp3
+        └── typewriter.mp3
