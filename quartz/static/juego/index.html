@@ -11,7 +11,7 @@
     }
     body {
       margin: 0;
-      padding: 40px;
+      padding: 0;
       background-color: #000000;
       overflow: hidden;
       display: flex;
@@ -43,14 +43,14 @@
   // =========================================================================
   // 2. RESOURCE LOADING (ROOMS, OBJECTS & SOUNDS)
   // =========================================================================
-  // Background Rooms (assets/salas/)
+  // Background Rooms
   loadSprite("sala1", "assets/salas/sala1.png");
   loadSprite("sala2", "assets/salas/sala2.png");
   loadSprite("sala3", "assets/salas/sala3.png");
   loadSprite("sala4", "assets/salas/sala4.png");
   loadSprite("sala5", "assets/salas/sala5.png");
 
-  // Objects (assets/objects/)
+  // Objects
   loadSprite("papel", "assets/objects/papel.png");
   loadSprite("pizarra", "assets/objects/pizarra.png");
   loadSprite("pizarra_papel", "assets/objects/pizarra_papel.png");
@@ -61,14 +61,14 @@
   loadSprite("cajon1_abierto", "assets/objects/cajon1_abierto.png");
   loadSprite("cajon2_abierto", "assets/objects/cajon2_abierto.png");
   loadSprite("cajon3_abierto", "assets/objects/cajon3_abierto.png");
-  loadSprite("lampara_apagada", "assets/objects/lampara_apagada.png"); // <- NUEVA IMAGEN
+  loadSprite("lampara_apagada", "assets/objects/lampara_apagada.png");
   loadSprite("lampara_encendida", "assets/objects/lampara_encendida.png");
   loadSprite("foco", "assets/objects/foco.png");
   loadSprite("cuaderno", "assets/objects/cuaderno.png");
   loadSprite("encendedor", "assets/objects/encendedor.png");
   loadSprite("llave", "assets/objects/llave.png");
 
-  // Sound Effects (assets/sounds/)
+  // Sound Effects
   loadSound("musica", "assets/sounds/musica_fondo.mp3");
   loadSound("clickSFX", "assets/sounds/click.mp3");
   loadSound("hoverSFX", "assets/sounds/hover.mp3");
@@ -294,7 +294,12 @@
 
   // --- ROOM 1 ---
   scene("sala1", () => {
-    add([sprite("sala1"), pos(0, 0), z(0)]);
+    add([
+      sprite("sala1"),
+      pos(960, 540),
+      anchor("center"),
+      z(0)
+    ]);
 
     crearZonaInteractiva(547, 934, 127, 133, () => go("sala2"));
     crearZonaInteractiva(13, 1, 124, 529, () => { window.top.location.href = "https://salvamir.github.io/tags/yuyo"; });
@@ -306,32 +311,44 @@
 
   // --- ROOM 2 ---
   scene("sala2", () => {
-    add([sprite("sala2"), pos(0, 0), z(0)]);
+    add([
+      sprite("sala2"),
+      pos(960, 540),
+      anchor("center"),
+      z(0)
+    ]);
 
     crearZonaInteractiva(680, 8, 182, 127, () => go("sala1"));
     crearZonaInteractiva(1379, 679, 187, 125, () => go("sala3"));
     crearZonaInteractiva(9, 675, 174, 138, () => go("sala4"));
   });
 
-  // --- ROOM 3: PUZZLE ESCAPE ROOM ---
+  // =========================================================================
+  // --- ROOM 3: ESCAPE ROOM (CON CAPAS Y ENCADENAMIENTO PERFECTO) ---
+  // =========================================================================
   scene("sala3", () => {
-    // Fondo base de la habitación
-    add([sprite("sala3"), pos(0, 0), z(0)]);
+    // CAPA 0: Fondo base centrado de la habitación
+    add([
+      sprite("sala3"),
+      pos(960, 540),
+      anchor("center"),
+      z(0)
+    ]);
+    
     renderizarInventario();
 
     // ---------------------------------------------------------------------
-    // STEP 1: PAPEL EN EL SUELO
+    // PASO 1: PAPEL EN EL SUELO (Suelo centro-inferior)
     // ---------------------------------------------------------------------
     if (!s3_papelRecogido) {
       const sprPapel = add([
         sprite("papel"),
-        pos(920, 750),
-        area(),
+        pos(800, 850),
         anchor("center"),
         z(5)
       ]);
 
-      crearZonaInteractiva(870, 700, 100, 100, () => {
+      crearZonaInteractiva(750, 800, 100, 100, () => {
         s3_papelRecogido = true;
         destroy(sprPapel);
         agregarAlInventario("papel", "Paper");
@@ -340,17 +357,25 @@
     }
 
     // ---------------------------------------------------------------------
-    // STEP 2: PIZARRA Y CUCHILLO
+    // PASO 2: PIZARRA, NOTA PINCHADA Y CUCHILLO (Pared superior izquierda)
     // ---------------------------------------------------------------------
+    const posPizarraX = 200;
+    const posPizarraY = 180;
+
     if (!s3_pizarraQuemada) {
       const spritePizarraNombre = s3_papelPinchado ? "pizarra_papel" : "pizarra";
-      add([sprite(spritePizarraNombre), pos(250, 200), z(5)]);
+      
+      add([
+        sprite(spritePizarraNombre),
+        pos(posPizarraX, posPizarraY),
+        z(5)
+      ]);
 
-      crearZonaInteractiva(250, 200, 300, 250, () => {
+      crearZonaInteractiva(posPizarraX, posPizarraY, 300, 220, () => {
         if (itemSeleccionado === "encendedor") {
-          animarFuego(400, 325, () => {
+          animarFuego(posPizarraX + 150, posPizarraY + 110, () => {
             s3_pizarraQuemada = true;
-            mostrarTexto("The cork board burned fiercely and collapsed! Something fell to the floor...");
+            mostrarTexto("The cork board burned fiercely and collapsed! A shiny key fell to the floor...");
             go("sala3");
           });
         } else if (itemSeleccionado === "papel" && !s3_papelPinchado) {
@@ -365,10 +390,15 @@
         }
       });
 
+      // Cuchillo al lado de la pizarra (Capa 6)
       if (s3_papelPinchado && !s3_cuchilloRecogido) {
-        add([sprite("cuchillo"), pos(560, 300), area(), z(6)]);
-        
-        crearZonaInteractiva(550, 290, 80, 80, () => {
+        add([
+          sprite("cuchillo"),
+          pos(posPizarraX + 310, posPizarraY + 80),
+          z(6)
+        ]);
+
+        crearZonaInteractiva(posPizarraX + 300, posPizarraY + 70, 80, 80, () => {
           s3_cuchilloRecogido = true;
           agregarAlInventario("cuchillo", "Knife");
           mostrarTexto("You picked up the knife.");
@@ -376,9 +406,14 @@
         });
       }
     } else if (!s3_llaveSalidaRecogida) {
-      add([sprite("llave"), pos(350, 450), area(), z(6)]);
+      // Llave de la salida caída en el suelo tras quemar la pizarra (Capa 6)
+      add([
+        sprite("llave"),
+        pos(posPizarraX + 120, posPizarraY + 250),
+        z(6)
+      ]);
 
-      crearZonaInteractiva(330, 430, 80, 80, () => {
+      crearZonaInteractiva(posPizarraX + 100, posPizarraY + 230, 80, 80, () => {
         s3_llaveSalidaRecogida = true;
         play("llaveSFX");
         agregarAlInventario("llave_salida", "Exit Key");
@@ -388,55 +423,73 @@
     }
 
     // ---------------------------------------------------------------------
-    // STEP 3: OSITO DE PELUCHE
+    // PASO 3: OSITO DE PELUCHE (Suelo inferior izquierdo)
     // ---------------------------------------------------------------------
-    const spriteOsitoNombre = s3_ositoRoto ? "osito_roto" : "osito";
-    add([sprite(spriteOsitoNombre), pos(300, 700), z(5)]);
+    const ositoX = 280;
+    const ositoY = 780;
 
-    crearZonaInteractiva(300, 700, 150, 150, () => {
+    const spriteOsitoNombre = s3_ositoRoto ? "osito_roto" : "osito";
+    const capaOsito = s3_ositoRoto ? 7 : 5;
+
+    add([
+      sprite(spriteOsitoNombre),
+      pos(ositoX, ositoY),
+      anchor("center"),
+      z(capaOsito)
+    ]);
+
+    crearZonaInteractiva(ositoX - 80, ositoY - 80, 160, 160, () => {
       if (itemSeleccionado === "encendedor") {
         mostrarTexto("Better not burn the teddy bear... whatever is inside might get destroyed too.");
       } else if (!s3_ositoRoto && itemSeleccionado === "cuchillo") {
         play("cortaSFX");
         s3_ositoRoto = true;
-        mostrarTexto("You sliced open the teddy bear with the knife. Inside the stuffing, there's a small key.");
-        go("sala3");
-      } else if (s3_ositoRoto && !s3_llave1Recogida) {
         s3_llave1Recogida = true;
         play("llaveSFX");
         agregarAlInventario("llave1", "Dresser Key");
-        mostrarTexto("You picked up the key found inside the bear.");
-      } else if (!s3_ositoRoto) {
-        mostrarTexto("A very old teddy bear. It feels unusually bulky...");
-      } else {
+        mostrarTexto("You sliced open the teddy bear with the knife. You retrieved a small key from inside!");
+        go("sala3");
+      } else if (s3_ositoRoto) {
         mostrarTexto("The teddy bear is torn open and empty.");
+      } else {
+        mostrarTexto("A very old teddy bear. It feels unusually bulky...");
       }
     });
 
     // ---------------------------------------------------------------------
-    // STEP 4 & 5: CÓMODA, LÁMPARA Y CAJONES (SISTEMA DE CAPAS Z)
+    // PASO 4 Y 5: CÓMODA, LÁMPARA Y CAJONES SUPERPUESTOS (Lateral derecho)
     // ---------------------------------------------------------------------
-    // Coordenada base de la cómoda
     const comodaX = 1350;
-    const comodaY = 500;
+    const comodaY = 480;
 
     // 1. Mueble Base (Capa 5)
-    add([sprite("comoda"), pos(comodaX, comodaY), z(5)]);
+    add([
+      sprite("comoda"),
+      pos(comodaX, comodaY),
+      z(5)
+    ]);
 
-    // 2. Lámpara: Apagada al inicio, Encendida si se pone el foco (Capa 6)
-    if (!s3_focoPuesto) {
-      add([sprite("lampara_apagada"), pos(comodaX, comodaY), z(6)]);
-    } else {
-      add([sprite("lampara_encendida"), pos(comodaX, comodaY), z(6)]);
+    // 2. Lámpara sobre el mueble (Capa 6)
+    const spriteLampara = s3_focoPuesto ? "lampara_encendida" : "lampara_apagada";
+    add([
+      sprite(spriteLampara),
+      pos(comodaX, comodaY),
+      z(6)
+    ]);
+
+    // 3. Superposición de Cajones Abiertos (Capa 7 - Directamente sobre la cómoda)
+    if (s3_cajon1Abierto) {
+      add([sprite("cajon1_abierto"), pos(comodaX, comodaY), z(7)]);
+    }
+    if (s3_focoPuesto) {
+      add([sprite("cajon2_abierto"), pos(comodaX, comodaY), z(7)]);
+    }
+    if (s3_acertijoResuelto) {
+      add([sprite("cajon3_abierto"), pos(comodaX, comodaY), z(7)]);
     }
 
-    // 3. Cajones Abiertos (Capa 7 - Aparecen encima de la cómoda)
-    if (s3_cajon1Abierto) add([sprite("cajon1_abierto"), pos(comodaX, comodaY), z(7)]);
-    if (s3_focoPuesto)    add([sprite("cajon2_abierto"), pos(comodaX, comodaY), z(7)]);
-    if (s3_acertijoResuelto) add([sprite("cajon3_abierto"), pos(comodaX, comodaY), z(7)]);
-
-    // Zona interactiva del Mueble / Lámpara
-    crearZonaInteractiva(comodaX, comodaY, 300, 400, () => {
+    // Zona interactiva de la Cómoda y Lámpara
+    crearZonaInteractiva(comodaX, comodaY, 320, 420, () => {
       if (itemSeleccionado === "encendedor") {
         mostrarTexto("The dresser is made of heavy wood, it won't burn easily.");
       } 
@@ -450,49 +503,41 @@
         mostrarTexto("You unlocked the top drawer! You found a light bulb inside.");
         go("sala3");
       } 
-      // Pone el foco -> Prende la lámpara
+      // Coloca el foco -> Se enciende la lámpara y abre cajón 2
       else if (s3_cajon1Abierto && !s3_focoPuesto && itemSeleccionado === "foco") {
         play("lamparaSFX");
         play("cajonSFX");
         s3_focoPuesto = true;
+        s3_cuadernoRecogido = true;
         removerDelInventario("foco");
-        mostrarTexto("You screwed the bulb into the lamp. It lit up and unlocked the second drawer!");
+        agregarAlInventario("cuaderno", "Notebook");
+        mostrarTexto("You screwed the bulb into the lamp. It lit up, unlocked the second drawer, and you got a Notebook!");
         go("sala3");
       } 
-      // Obtiene el Cuaderno
-      else if (s3_focoPuesto && !s3_cuadernoRecogido) {
-        s3_cuadernoRecogido = true;
-        agregarAlInventario("cuaderno", "Notebook");
-        mostrarTexto("You collected the notebook from the second drawer.");
-      } 
-      // Acertijo del Cuaderno
+      // Resuelve el acertijo del Cuaderno -> Abre cajón 3
       else if (s3_cuadernoRecogido && !s3_acertijoResuelto) {
         const respuesta = window.prompt(
-          'The notebook reads:\n"Some people count their days with the things their have in mind. How many things do I have in mind now?"\n\nEnter your answer:'
+          'The notebook reads:\n"Some people count their days with the things they have in mind. How many things do I have in mind now?"\n\nEnter your answer:'
         );
         if (respuesta === "4") {
           play("cajonSFX");
           s3_acertijoResuelto = true;
-          mostrarTexto("Correct answer! A mechanical click unlocked the third drawer.");
+          s3_encendedorRecogido = true;
+          agregarAlInventario("encendedor", "Lighter");
+          mostrarTexto("Correct answer! The bottom drawer unlocked and you obtained a Lighter!");
           go("sala3");
         } else {
           mostrarTexto("Nothing happened... that doesn't seem to be the correct answer.");
         }
-      } 
-      // Obtiene el Encendedor
-      else if (s3_acertijoResuelto && !s3_encendedorRecogido) {
-        s3_encendedorRecogido = true;
-        agregarAlInventario("encendedor", "Lighter");
-        mostrarTexto("You found a lighter in the bottom drawer.");
       } else {
         mostrarTexto("An old wooden dresser with drawers and a lamp on top.");
       }
     });
 
     // ---------------------------------------------------------------------
-    // STEP 6: PUERTA DE SALIDA HACIA LA SALA 4
+    // PASO 6: PUERTA DE SALIDA (Top Center - Libre de obstáculos)
     // ---------------------------------------------------------------------
-    crearZonaInteractiva(910, 30, 100, 100, () => {
+    crearZonaInteractiva(860, 20, 200, 160, () => {
       if (itemSeleccionado === "llave_salida" || s3_llaveSalidaRecogida) {
         play("llaveSFX");
         removerDelInventario("llave_salida");
@@ -505,8 +550,23 @@
   });
 
   // --- REST OF ROOMS ---
-  scene("sala4", () => { add([sprite("sala4"), pos(0, 0), z(0)]); });
-  scene("sala5", () => { add([sprite("sala5"), pos(0, 0), z(0)]); });
+  scene("sala4", () => { 
+    add([
+      sprite("sala4"), 
+      pos(960, 540), 
+      anchor("center"), 
+      z(0)
+    ]); 
+  });
+
+  scene("sala5", () => { 
+    add([
+      sprite("sala5"), 
+      pos(960, 540), 
+      anchor("center"), 
+      z(0)
+    ]); 
+  });
 
   go("sala1");
 </script>

@@ -5,16 +5,8 @@ public/
     │   ├── cajon2_abierto.png
     │   ├── cajon3_abierto.png
     │   ├── comoda.png
-    │   ├── cuaderno.png
-    │   ├── cuchillo.png
-    │   ├── encendedor.png
-    │   ├── foco.png
     │   ├── lampara_encendida.png
-    │   ├── llave.png
-    │   ├── osito.png
-    │   ├── osito_roto.png
     │   ├── papel.png
-    │   ├── pizarra.png
     │   └── pizarra_papel.png
     ├── salas/
     │   ├── sala1.png
