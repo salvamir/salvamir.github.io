@@ -6,20 +6,26 @@
   <title>La casa.</title>
   <script src="https://unpkg.com/kaboom@3000.1.17/dist/kaboom.js"></script>
   <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background-color: #000000;
-      overflow: hidden;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-    canvas {
-      display: block;
-    }
-  </style>
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    padding: 40px; /* 👈 Cambia este número para aumentar o reducir el margen */
+    background-color: #000000; /* Color del fondo de los márgenes */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+  }
+  canvas {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+  }
+</style>
 </head>
 <body>
 
@@ -115,7 +121,7 @@
   }
 
   // =========================================================================
-  // ESCENAS (SALAS)
+  //                             ESCENAS (SALAS)
   // =========================================================================
 
 // --- SALA 1: JARDÍN DIGITAL ---
@@ -141,7 +147,6 @@
     crearZonaInteractiva(1420, 117, 146, 165, () => {
       window.top.location.href = "https://salvamir.github.io";
     });
-
 
     crearZonaInteractiva(6, 573, 102, 157, () => {
       mostrarTexto("Es una roca... quién sabe cual será su historia petrogenética.");
