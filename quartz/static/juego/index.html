@@ -313,12 +313,12 @@
       z(0)
     ]);
 
-    crearZonaInteractiva(610, 1000, 127, 133, () => go("sala2"));
-    crearZonaInteractiva(75, 265, 124, 529, () => { window.top.location.href = "https://salvamir.github.io/tags/yuyo"; });
-    crearZonaInteractiva(1080, 1000, 807, 144, () => { window.top.location.href = "https://salvamir.github.io/tags/helecho"; });
-    crearZonaInteractiva(1520, 620, 67, 641, () => { window.top.location.href = "https://salvamir.github.io/tags/arbolito"; });
-    crearZonaInteractiva(1490, 200, 146, 165, () => { window.top.location.href = "https://salvamir.github.io"; });
-    crearZonaInteractiva(57, 650, 102, 157, () => { mostrarTexto("It's a rock... who knows what its petrogenetic history might be."); });
+    crearZonaInteractiva(548, 935, 126, 143, () => go("sala2"));
+    crearZonaInteractiva(7, 6, 138, 928, () => { window.top.location.href = "https://salvamir.github.io/tags/yuyo"; });
+    crearZonaInteractiva(676, 931, 880, 139, () => { window.top.location.href = "https://salvamir.github.io/tags/helecho"; });
+    crearZonaInteractiva(1480, 302, 75, 647, () => { window.top.location.href = "https://salvamir.github.io/tags/arbolito"; });
+    crearZonaInteractiva(1439, 122, 126, 163, () => { window.top.location.href = "https://salvamir.github.io"; });
+    crearZonaInteractiva(11, 574, 94, 151, () => { mostrarTexto("It's a rock... who knows what its petrogenetic history might be."); });
   });
 
   // --- ROOM 2 ---
@@ -330,14 +330,12 @@
       z(0)
     ]);
 
-    crearZonaInteractiva(770, 70, 182, 127, () => go("sala1"));
-    crearZonaInteractiva(1470, 740, 187, 125, () => go("sala3"));
-    crearZonaInteractiva(95, 740, 174, 138, () => go("sala4"));
+    crearZonaInteractiva(673, 11, 194, 118, () => go("sala1"));
+    crearZonaInteractiva(19, 678, 160, 132, () => go("sala3"));
+    crearZonaInteractiva(1387, 674, 180, 134, () => go("sala4"));
   });
 
-  // =========================================================================
-  // --- ROOM 3: ESCAPE ROOM ---
-  // =========================================================================
+  // --- ROOM 3 ---
   scene("sala3", () => {
     // Fondo centrado
     add([
@@ -350,7 +348,7 @@
     renderizarInventario();
 
     // ---------------------------------------------------------------------
-    // PASO 1: PAPEL EN EL SUELO
+    //                        STEPS FOR LEAVING THE ROOM
     // ---------------------------------------------------------------------
     if (!s3_papelRecogido) {
       add([
@@ -577,6 +575,8 @@
       anchor("center"), 
       z(0)
     ]); 
+      crearZonaInteractiva(1362, 66, 204, 216, () => go("sala3"));
+      crearZonaInteractiva(1, 7, 141, 155, () => go("sala5"));
   });
 
   scene("sala5", () => { 
@@ -586,6 +586,8 @@
       anchor("center"), 
       z(0)
     ]); 
+      crearZonaInteractiva(1473, 507, 86, 184, () => go("sala4"));
+      crearZonaInteractiva(285, 894, 93, 165, () => go("sala1"));
   });
 
   go("sala1");
