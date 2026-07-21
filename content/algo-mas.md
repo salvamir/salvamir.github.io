@@ -5,7 +5,7 @@ title: ¿Algo más?
 > Estoy dejando de añadir plantas al jardín, para dedicarme a hacerlas crecer un poco. 
 
 ## ~~Welcome to my mind...~~
-Is a escape room game I'm currently working on. Give it a try [here](https://salvamir.github.io/static/juego/).
+Is a escape room game I'm currently working on. Give it a try [here](https://salvamir.github.io/static/juego/). For now is only a prototype. Is inspired by the Cube Scape Saga of Rusty Lake. 
 ## <font color="#9bbb59">E</font><font color="#4bacc6">x</font><font color="#f79646">p</font><font color="#b2a2c7">l</font><font color="#31859b">o</font><font color="#953734">r</font><font color="#c4bd97">e</font> The World! 
 What's this? Go to [[Explore The World!|this]] page and find out!
 ## Progreso:
