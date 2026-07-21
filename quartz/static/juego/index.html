@@ -132,7 +132,7 @@
     ]);
 
     const objetoTexto = add([
-      text("", { size: 24, width: 1020, align: "center" }),
+      text("", { size: 22, width: 1040, align: "center" }),
       pos(960, 960),
       anchor("center"),
       color(238, 221, 204),
@@ -142,7 +142,7 @@
     ]);
 
     let charIdx = 0;
-    const velocidadLectura = 0.035;
+    const velocidadLectura = 0.04;
 
     typewriterLoop = loop(velocidadLectura, () => {
       if (charIdx < mensaje.length) {
@@ -150,8 +150,8 @@
         objetoTexto.text = mensaje.slice(0, charIdx);
 
         const caracterActual = mensaje[charIdx - 1];
-        if (caracterActual !== " ") {
-          play("typewriterSFX", { volume: 0.25, speed: rand(0.95, 1.05) });
+        if (caracterActual !== " " && charIdx % 2 === 0) {
+          play("typewriterSFX", { volume: 0.2, speed: rand(0.95, 1.05) });
         }
       } else {
         if (typewriterLoop) {
@@ -159,7 +159,7 @@
           typewriterLoop = null;
         }
 
-        wait(5, () => {
+        wait(4, () => {
           if (objetoTexto.text === mensaje) {
             destroyAll("cajaTexto");
           }
@@ -214,22 +214,24 @@
     destroyAll("uiInventario");
 
     add([
-      rect(1920, 90),
+      rect(1920, 80),
       pos(0, 0),
-      color(20, 20, 20),
-      opacity(0.85),
+      color(15, 15, 15),
+      opacity(0.9),
       fixed(),
       z(90),
       "uiInventario"
     ]);
 
     inventario.forEach((item, index) => {
-      const slotX = 50 + (index * 160);
+      const slotX = 40 + (index * 170);
+      const esSeleccionado = (itemSeleccionado === item.id);
 
       const slot = add([
-        rect(140, 70, { radius: 8 }),
+        rect(150, 60, { radius: 8 }),
         pos(slotX, 10),
-        color(itemSeleccionado === item.id ? rgb(231, 200, 160) : rgb(45, 45, 45)),
+        color(esSeleccionado ? rgb(231, 200, 160) : rgb(40, 40, 40)),
+        outline(2, esSeleccionado ? rgb(255, 255, 255) : rgb(100, 100, 100)),
         area(),
         fixed(),
         z(91),
@@ -237,16 +239,25 @@
       ]);
 
       add([
-        text(item.nombre, { size: 18, width: 130, align: "center" }),
-        pos(slotX + 70, 45),
+        text(item.nombre, { size: 18, width: 140, align: "center" }),
+        pos(slotX + 75, 40),
         anchor("center"),
-        color(255, 255, 255),
+        color(esSeleccionado ? rgb(0, 0, 0) : rgb(240, 240, 240)),
         fixed(),
         z(92),
         "uiInventario"
       ]);
 
+      slot.onHover(() => {
+        setCursor("pointer");
+      });
+
+      slot.onHoverEnd(() => {
+        setCursor("default");
+      });
+
       slot.onClick(() => {
+        play("clickSFX");
         itemSeleccionado = (itemSeleccionado === item.id) ? null : item.id;
         renderizarInventario();
       });
@@ -257,9 +268,10 @@
     const zona = add([
       rect(ancho, alto),
       pos(x, y),
+      anchor("center"),
       opacity(0),
       area(),
-      z(20)
+      z(80)
     ]);
 
     let estaSobreElemento = false;
@@ -301,12 +313,12 @@
       z(0)
     ]);
 
-    crearZonaInteractiva(547, 934, 127, 133, () => go("sala2"));
-    crearZonaInteractiva(13, 1, 124, 529, () => { window.top.location.href = "https://salvamir.github.io/tags/yuyo"; });
-    crearZonaInteractiva(680, 931, 807, 144, () => { window.top.location.href = "https://salvamir.github.io/tags/helecho"; });
-    crearZonaInteractiva(1488, 302, 67, 641, () => { window.top.location.href = "https://salvamir.github.io/tags/arbolito"; });
-    crearZonaInteractiva(1420, 117, 146, 165, () => { window.top.location.href = "https://salvamir.github.io"; });
-    crearZonaInteractiva(6, 573, 102, 157, () => { mostrarTexto("It's a rock... who knows what its petrogenetic history might be."); });
+    crearZonaInteractiva(610, 1000, 127, 133, () => go("sala2"));
+    crearZonaInteractiva(75, 265, 124, 529, () => { window.top.location.href = "https://salvamir.github.io/tags/yuyo"; });
+    crearZonaInteractiva(1080, 1000, 807, 144, () => { window.top.location.href = "https://salvamir.github.io/tags/helecho"; });
+    crearZonaInteractiva(1520, 620, 67, 641, () => { window.top.location.href = "https://salvamir.github.io/tags/arbolito"; });
+    crearZonaInteractiva(1490, 200, 146, 165, () => { window.top.location.href = "https://salvamir.github.io"; });
+    crearZonaInteractiva(57, 650, 102, 157, () => { mostrarTexto("It's a rock... who knows what its petrogenetic history might be."); });
   });
 
   // --- ROOM 2 ---
@@ -318,16 +330,16 @@
       z(0)
     ]);
 
-    crearZonaInteractiva(680, 8, 182, 127, () => go("sala1"));
-    crearZonaInteractiva(1379, 679, 187, 125, () => go("sala3"));
-    crearZonaInteractiva(9, 675, 174, 138, () => go("sala4"));
+    crearZonaInteractiva(770, 70, 182, 127, () => go("sala1"));
+    crearZonaInteractiva(1470, 740, 187, 125, () => go("sala3"));
+    crearZonaInteractiva(95, 740, 174, 138, () => go("sala4"));
   });
 
   // =========================================================================
-  // --- ROOM 3: ESCAPE ROOM (CON CAPAS Y ENCADENAMIENTO PERFECTO) ---
+  // --- ROOM 3: ESCAPE ROOM ---
   // =========================================================================
   scene("sala3", () => {
-    // CAPA 0: Fondo base centrado de la habitación
+    // Fondo centrado
     add([
       sprite("sala3"),
       pos(960, 540),
@@ -338,29 +350,30 @@
     renderizarInventario();
 
     // ---------------------------------------------------------------------
-    // PASO 1: PAPEL EN EL SUELO (Suelo centro-inferior)
+    // PASO 1: PAPEL EN EL SUELO
     // ---------------------------------------------------------------------
     if (!s3_papelRecogido) {
-      const sprPapel = add([
+      add([
         sprite("papel"),
-        pos(800, 850),
+        pos(750, 820),
         anchor("center"),
+        scale(0.35),
         z(5)
       ]);
 
-      crearZonaInteractiva(750, 800, 100, 100, () => {
+      crearZonaInteractiva(750, 820, 180, 180, () => {
         s3_papelRecogido = true;
-        destroy(sprPapel);
         agregarAlInventario("papel", "Paper");
         mostrarTexto("Welcome to my house. Whenever you dive deeper into your mind, is not sure you will know the path outside. Want to give the adventure a try?");
+        go("sala3");
       });
     }
 
     // ---------------------------------------------------------------------
-    // PASO 2: PIZARRA, NOTA PINCHADA Y CUCHILLO (Pared superior izquierda)
+    // PASO 2: PIZARRA, NOTA PINCHADA Y CUCHILLO
     // ---------------------------------------------------------------------
-    const posPizarraX = 200;
-    const posPizarraY = 180;
+    const posPizarraX = 350;
+    const posPizarraY = 260;
 
     if (!s3_pizarraQuemada) {
       const spritePizarraNombre = s3_papelPinchado ? "pizarra_papel" : "pizarra";
@@ -368,12 +381,14 @@
       add([
         sprite(spritePizarraNombre),
         pos(posPizarraX, posPizarraY),
+        anchor("center"),
+        scale(0.5),
         z(5)
       ]);
 
-      crearZonaInteractiva(posPizarraX, posPizarraY, 300, 220, () => {
+      crearZonaInteractiva(posPizarraX, posPizarraY, 450, 300, () => {
         if (itemSeleccionado === "encendedor") {
-          animarFuego(posPizarraX + 150, posPizarraY + 110, () => {
+          animarFuego(posPizarraX, posPizarraY, () => {
             s3_pizarraQuemada = true;
             mostrarTexto("The cork board burned fiercely and collapsed! A shiny key fell to the floor...");
             go("sala3");
@@ -390,15 +405,17 @@
         }
       });
 
-      // Cuchillo al lado de la pizarra (Capa 6)
+      // Cuchillo al lado de la pizarra
       if (s3_papelPinchado && !s3_cuchilloRecogido) {
         add([
           sprite("cuchillo"),
-          pos(posPizarraX + 310, posPizarraY + 80),
+          pos(620, 260),
+          anchor("center"),
+          scale(0.35),
           z(6)
         ]);
 
-        crearZonaInteractiva(posPizarraX + 300, posPizarraY + 70, 80, 80, () => {
+        crearZonaInteractiva(620, 260, 120, 120, () => {
           s3_cuchilloRecogido = true;
           agregarAlInventario("cuchillo", "Knife");
           mostrarTexto("You picked up the knife.");
@@ -406,14 +423,16 @@
         });
       }
     } else if (!s3_llaveSalidaRecogida) {
-      // Llave de la salida caída en el suelo tras quemar la pizarra (Capa 6)
+      // Llave de salida caída tras quemar la pizarra
       add([
         sprite("llave"),
-        pos(posPizarraX + 120, posPizarraY + 250),
+        pos(posPizarraX, posPizarraY + 200),
+        anchor("center"),
+        scale(0.35),
         z(6)
       ]);
 
-      crearZonaInteractiva(posPizarraX + 100, posPizarraY + 230, 80, 80, () => {
+      crearZonaInteractiva(posPizarraX, posPizarraY + 200, 120, 120, () => {
         s3_llaveSalidaRecogida = true;
         play("llaveSFX");
         agregarAlInventario("llave_salida", "Exit Key");
@@ -423,22 +442,21 @@
     }
 
     // ---------------------------------------------------------------------
-    // PASO 3: OSITO DE PELUCHE (Suelo inferior izquierdo)
+    // PASO 3: OSITO DE PELUCHE
     // ---------------------------------------------------------------------
-    const ositoX = 280;
-    const ositoY = 780;
-
+    const ositoX = 320;
+    const ositoY = 800;
     const spriteOsitoNombre = s3_ositoRoto ? "osito_roto" : "osito";
-    const capaOsito = s3_ositoRoto ? 7 : 5;
 
     add([
       sprite(spriteOsitoNombre),
       pos(ositoX, ositoY),
       anchor("center"),
-      z(capaOsito)
+      scale(0.4),
+      z(5)
     ]);
 
-    crearZonaInteractiva(ositoX - 80, ositoY - 80, 160, 160, () => {
+    crearZonaInteractiva(ositoX, ositoY, 200, 200, () => {
       if (itemSeleccionado === "encendedor") {
         mostrarTexto("Better not burn the teddy bear... whatever is inside might get destroyed too.");
       } else if (!s3_ositoRoto && itemSeleccionado === "cuchillo") {
@@ -457,43 +475,47 @@
     });
 
     // ---------------------------------------------------------------------
-    // PASO 4 Y 5: CÓMODA, LÁMPARA Y CAJONES SUPERPUESTOS (Lateral derecho)
+    // PASO 4 Y 5: CÓMODA Y LÁMPARA
     // ---------------------------------------------------------------------
-    const comodaX = 1350;
-    const comodaY = 480;
+    const comodaX = 1520;
+    const comodaY = 680;
+    const lamparaY = 320;
 
-    // 1. Mueble Base (Capa 5)
+    // Cómoda base
     add([
       sprite("comoda"),
       pos(comodaX, comodaY),
+      anchor("center"),
+      scale(0.55),
       z(5)
     ]);
 
-    // 2. Lámpara sobre el mueble (Capa 6)
+    // Lámpara
     const spriteLampara = s3_focoPuesto ? "lampara_encendida" : "lampara_apagada";
     add([
       sprite(spriteLampara),
-      pos(comodaX, comodaY),
+      pos(comodaX, lamparaY),
+      anchor("center"),
+      scale(0.55),
       z(6)
     ]);
 
-    // 3. Superposición de Cajones Abiertos (Capa 7 - Directamente sobre la cómoda)
+    // Cajones superpuestos
     if (s3_cajon1Abierto) {
-      add([sprite("cajon1_abierto"), pos(comodaX, comodaY), z(7)]);
+      add([sprite("cajon1_abierto"), pos(comodaX, comodaY), anchor("center"), scale(0.55), z(7)]);
     }
     if (s3_focoPuesto) {
-      add([sprite("cajon2_abierto"), pos(comodaX, comodaY), z(7)]);
+      add([sprite("cajon2_abierto"), pos(comodaX, comodaY), anchor("center"), scale(0.55), z(7)]);
     }
     if (s3_acertijoResuelto) {
-      add([sprite("cajon3_abierto"), pos(comodaX, comodaY), z(7)]);
+      add([sprite("cajon3_abierto"), pos(comodaX, comodaY), anchor("center"), scale(0.55), z(7)]);
     }
 
-    // Zona interactiva de la Cómoda y Lámpara
-    crearZonaInteractiva(comodaX, comodaY, 320, 420, () => {
+    // Zona interactiva Mueble + Lámpara
+    crearZonaInteractiva(comodaX, 500, 400, 650, () => {
       if (itemSeleccionado === "encendedor") {
         mostrarTexto("The dresser is made of heavy wood, it won't burn easily.");
       } 
-      // Abre Cajón 1
       else if (!s3_cajon1Abierto && itemSeleccionado === "llave1") {
         play("llaveSFX");
         play("cajonSFX");
@@ -503,7 +525,6 @@
         mostrarTexto("You unlocked the top drawer! You found a light bulb inside.");
         go("sala3");
       } 
-      // Coloca el foco -> Se enciende la lámpara y abre cajón 2
       else if (s3_cajon1Abierto && !s3_focoPuesto && itemSeleccionado === "foco") {
         play("lamparaSFX");
         play("cajonSFX");
@@ -514,7 +535,6 @@
         mostrarTexto("You screwed the bulb into the lamp. It lit up, unlocked the second drawer, and you got a Notebook!");
         go("sala3");
       } 
-      // Resuelve el acertijo del Cuaderno -> Abre cajón 3
       else if (s3_cuadernoRecogido && !s3_acertijoResuelto) {
         const respuesta = window.prompt(
           'The notebook reads:\n"Some people count their days with the things they have in mind. How many things do I have in mind now?"\n\nEnter your answer:'
@@ -535,9 +555,9 @@
     });
 
     // ---------------------------------------------------------------------
-    // PASO 6: PUERTA DE SALIDA (Top Center - Libre de obstáculos)
+    // PASO 6: PUERTA DE SALIDA (Arriba Centro)
     // ---------------------------------------------------------------------
-    crearZonaInteractiva(860, 20, 200, 160, () => {
+    crearZonaInteractiva(960, 80, 250, 160, () => {
       if (itemSeleccionado === "llave_salida" || s3_llaveSalidaRecogida) {
         play("llaveSFX");
         removerDelInventario("llave_salida");
