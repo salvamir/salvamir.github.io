@@ -1,2 +1,0 @@
-#yuyo 
-Reza, espera y no te preocupes. La preocupación es inútil. Dios es misericordioso y escuchará tu oración. [[🌳 Como vivir santamente el sábado]]

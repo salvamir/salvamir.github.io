@@ -1,5 +1,7 @@
 #helecho 
-No te dejes robar la paz de tu corazón! [[🌱 ¿Dónde ves el Cielo vos?]]
+
+> [!note] De algún libro...
+> No te dejes robar la paz de tu corazón!
 
 (Regado el 1/07/2026 a las 1 de la mañana ajhfajha debería dormirme ya che) 
 

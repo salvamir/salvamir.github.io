@@ -33,7 +33,12 @@ Otra forma de vivir apasionadamente la rutina es darse tiempos "humanos". En la 
 > ¿O dejarás solo a Jesús en el Calvario?
 > La decisión está en tus manos. Cristo te llama a la vida, a la alegría y a la santidad.
 
-El deporte es la mejor manera de descansar humanamente. 
+## Preocuparse es lo más inhumano que existe.
+
+> [!note]+ La preocupación es inútil.
+> Reza, espera y no te preocupes. La preocupación es inútil. Dios es misericordioso y escuchará tu oración.
+
+## El deporte es la mejor manera de descansar humanamente. 
 
 > [!note]+ El deporte como descanso humano.
 > *"El deporte es un don divino que perfecciona la unidad del hombre: fortalece el cuerpo, esclarece la mente y templa la voluntad. Al exigir disciplina y sacrificio, ordena las pasiones y dispone el alma para recibir, con mayor libertad, la acción de la Gracia. Como todo bien participado, su fin es la virtud; por ello, el deporte solo es auténtico cuando se orienta al bien y se aleja del vicio. Aquella actividad que se rinde a la vanidad o al pecado se desvirtúa de su origen, pues un ejercicio que carece de sacrificio y orden no solo pierde su eficacia, sino que deja de ser verdadera perfección del hombre."*

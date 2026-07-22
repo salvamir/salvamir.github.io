@@ -54,5 +54,17 @@ Esta es una oración de hace un tiempo y hoy la traigo al presente... Es muy ton
 > [!note]+ Estudiar, salir afuera y pantallas.
 > ¡Sal al aire libre todo el tiempo que puedas! Debes ser un estudiante sano, jovial, rebosante de fuerzas, de corazón ardiente, generoso, de espíritu pronto, vivaracho, que sabe reírse de corazón, pero... que también tiene un sentido delicado de la dignidad de su alma.
 
+## Las pantallas me alejaron de ser un "humano"
+La otra vez rezaba esto:
+> [!note] Quietud, inquietud, actitud.
+> 
+> *Inquietud. Quietud. Actitud. Son palabras que se parecen mucho. Creo que ya sé porqué estás cansado. No porque tu esfuerzo sea mucho ni muy intenso. Sino porqué está mal direccionado.*
+> *Estás buscando cambiar el entorno. Las circunstancias. El ambiente. La situación. El clima. El tiempo. Los días restantes. Los eventos. La gente que te rodea. Tu lugar.*
+> *Estás queriendo moverte y cambiar de lugar. Quizás porque creés que vas a estar más tranquilo allá y por eso estás impaciente. Im(sin)pac(paz)iente(esencia). En tu interior no hay paz con tu presente.*
+> *Quizás se trata de permanecer en movimiento enérgico con el alma quieta y con actitud entregada, siempre en la presencia de Dios. No busques cambiar tus circunstancias. Ellas cambian solas. Cambiá vos. Quieto.*
+> *Quedate acá, un rato, quieto. Con Dios. Y mirá para arriba con calma. Para atrás con gratitud y para adelante con esperanza. (Leer salmo 125 y releer cap 82 "Dios te quiere y tu no lo sabes")*
+> 
 
-[[🪻 Sobre la vida plena]][[🪻 Un poquito de vida]][[🌷 Una conversación con Dios]]
+Me pasa que generalmente estar mucho tiempo en la computadora me hace hacer todo más aceleradamente. El andar mucho tiempo en auto y caminar poco también. El acostumbrarme a la luz de una pantalla y no a la del sol....
+
+[[🪻 Sobre la vida plena]]
