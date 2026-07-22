@@ -1,59 +1,82 @@
 @use "./base.scss";
 
-/* Achica toda la escala base de la página y pone Times New Roman para TODO el sitio */
-html {
+/* =========================================
+   1. CENTRADO GLOBAL ABSOLUTO (BODY Y HTML)
+   ========================================= */
+html, body {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
   font-size: 16px !important; 
   font-family: 'Times New Roman', serif !important; 
 }
 
 /* =========================================
-   1. DISTRIBUCIÓN DE ESPACIO TIPO "DANIEL" (GRILLA PRINCIPAL)
+   2. CONTENEDOR PRINCIPAL Y ESTRUCTURA
    ========================================= */
 .page {
   display: flex !important;
-  justify-content: center !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
   width: 100% !important;
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-.page #quartz-body {
-  display: block !important;
-  width: 100% !important;
-  max-width: 700px !important;    
+  max-width: 100% !important;
   margin: 0 auto !important;
-  padding: 4rem 2rem !important;  
+  padding: 0 !important;
   box-sizing: border-box !important;
 }
 
-.center {
+.page #quartz-body {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
   width: 100% !important;
-  max-width: 100% !important;
-  margin: 0 !important;
-  padding: 0 !important;
+  max-width: 700px !important;    
+  margin: 0 auto !important;
+  padding: 3rem 1.5rem !important;  
+  box-sizing: border-box !important;
 }
 
-/* Ocultamos literalmente todo lo demás (barras laterales), sin dejar rastro */
+.center, article, .page-header {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+}
+
+/* Ocultar completamente las barras laterales sin dejar espacio fantasma */
 .sidebar, .left, .right {
   display: none !important;
   width: 0 !important;
+  height: 0 !important;
   margin: 0 !important;
   padding: 0 !important;
   flex: none !important;
 }
 
 /* =========================================
-   2. EL HEADER LIMPIO CON TIPOGRAFÍA FIJA (CONSOLIDADO)
+   3. HEADER LIMPIO Y CENTRADO (SIN GLOBO)
    ========================================= */
-header {
+header, .page-header header {
   display: flex !important;
   flex-direction: column !important;
   align-items: center !important; 
   text-align: center !important;
   width: 100% !important;
-  margin-top: 2rem !important;    
-  margin-bottom: 4rem !important; 
+  max-width: 700px !important;
+  margin: 0 auto 2rem auto !important;
+  padding: 0 !important;
   gap: 0.5rem !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
 }
 
 .page-title, .page-title a {
@@ -78,14 +101,14 @@ header {
 
 .links a, .nav-links a {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif !important; 
-  color: #e3dac9 !important;    
+  color: #e3dac9 !important;     
   text-decoration: none !important;
   font-size: 1.15rem !important;
   font-weight: 500 !important;
 }
 
 /* =========================================
-   3. OCULTAR GRAFO (EXCEPTO EN JARDÍN)
+   4. OCULTAR GRAFO (EXCEPTO EN JARDÍN)
    ========================================= */
 .graph, .graph-outer, #graph-container, .component.graph, .backlinks, .component.backlinks {
   display: none !important;
@@ -108,9 +131,8 @@ body[data-slug="El-Jardin"] {
 }
 
 /* =========================================
-   4. FOOTER Y TEXTOS PRINCIPALES
+   5. FOOTER Y TEXTOS PRINCIPALES
    ========================================= */
-/* ANIQUILAR LA LÍNEA SEPARADORA QUE INYECTA QUARTZ */
 hr, .center > hr, .page > hr {
   display: none !important;
 }
@@ -135,7 +157,7 @@ article p {
 }
 
 /* =========================================
-   5. PARED DE BADGES RETRO
+   6. PARED DE BADGES RETRO
    ========================================= */
 .badge-wall {
   display: flex !important;
@@ -166,7 +188,7 @@ article p {
 }
 
 /* ==========================================
-   6. MENÚS / CALLOUTS
+   7. MENÚS / CALLOUTS
    ========================================== */
 .callout {
   padding: 0.8rem 1.2rem !important; 
@@ -220,7 +242,7 @@ article p {
 .callout[data-callout="warning"] .callout-title { color: #d98a4c !important; }
 
 /* ==========================================
-   7. LISTA DE NOTAS Y FECHAS
+   8. LISTA DE NOTAS Y FECHAS
    ========================================= */
 ul.section-ul {
   padding: 0 !important;
@@ -247,44 +269,26 @@ ul.section-ul li > .meta {
 ul.section-ul li > .desc { margin: 0 !important; }
 
 /* ==========================================
-   8. ENCABEZADO Y MENÚ DE NAVEGACIÓN
+   9. HOVER DE ENLACES
    ========================================= */
-.page-header header {
-  background-color: rgba(255, 255, 255, 0.04) !important; 
-  padding: 2.5rem 1.5rem 2rem 1.5rem !important; 
-  border-radius: 24px !important; 
-  max-width: 700px !important; 
-  margin: 0 auto 2rem auto !important; 
-  box-sizing: border-box !important;
-}
-
-.page-header header .links a {
+.links a {
   display: inline-block !important; 
   transition: transform 0.2s ease, color 0.2s ease !important; 
 }
-.page-header header .links a:hover { transform: translateY(-4px) !important; }
-.page-header header .links a:visited { color: #ffffff !important; }
+.links a:hover { transform: translateY(-4px) !important; }
+.links a:visited { color: #ffffff !important; }
 
 /* ==========================================
-   9. AJUSTES PARA CELULARES (RESPONSIVE)
+   10. RESPONSIVE / CELULARES
    ========================================= */
 @media screen and (max-width: 800px) {
-  .page { display: block !important; padding: 0 !important; }
   .page #quartz-body { padding: 1.5rem 1rem !important; width: 100% !important; box-sizing: border-box !important; }
-  .center { width: 100% !important; margin: 0 !important; padding: 0 !important; }
-  .page-header header {
-    background-color: rgba(255, 255, 255, 0.05) !important; 
-    padding: 1.5rem 1rem !important; 
-    border-radius: 20px !important;
-    width: 100% !important;
-    box-sizing: border-box !important;
-  }
   .page-title, .page-title a { font-size: 2rem !important; word-break: break-word !important; }
   .mobile-only { display: none !important; }
 }
 
 /* ==========================================
-   10. TIPOGRAFÍA Y OCULTAR TÍTULOS
+   11. TIPOGRAFÍA Y OCULTAR TÍTULOS REPETIDOS
    ========================================== */
 article h1, article h2, article h3, article h4, article h5, article h6,
 h1.article-title, .content-meta, .tags { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif !important; }
@@ -309,22 +313,18 @@ body[data-slug="El-Jardin/index"] h1.article-title, body[data-slug="El-Jardin/in
   color: #B7966C !important;
 }
 
-/* ==========================================
-   13. IFRAME LIBRO DE VISITAS / BUSCADOR
-   ========================================= */
 iframe { width: 100% !important; border: none !important; overflow: hidden !important; display: block !important; min-height: 200px !important; }
 .search { display: none !important; }
 body[data-slug="Notas/index"] .search { display: flex !important; justify-content: center !important; margin-top: 1rem !important; margin-bottom: 3rem !important; width: 100% !important; }
 .tags, ul.tags { display: none !important; }
 
 /* ==================================================================
-   15. MODO OSCURO GLOBAL SOBERANO Y UNIFICADO
+   12. MODO OSCURO GLOBAL SOBERANO Y UNIFICADO
    ================================================================== */
 html[saved-theme="dark"], html.dark-mode, body.dark-mode {
   background-color: #000000 !important;
   color: #e0eaf5 !important;
 
-  /* --- VARIABLES NATIVAS DE PALETA DE QUARTZ --- */
   --light: #000000 !important;       
   --lightgray: rgba(224, 234, 245, 0.2) !important; 
   --darkgray: #e0eaf5 !important;    
@@ -332,14 +332,13 @@ html[saved-theme="dark"], html.dark-mode, body.dark-mode {
   --secondary: #84add7 !important;   
   --tertiary: #a3c2e1 !important;    
 
-  /* --- REESCRITURA DE ELEMENTOS --- */
-  .page {
+  .page, body {
     background-color: #000000 !important;
   }
 
-  .page-header header {
-    background-color: #3c3c3c !important;
-    border: 1px solid rgba(224, 234, 245, 0.2) !important;
+  .page-header header, header {
+    background-color: transparent !important;
+    border: none !important;
 
     .links a, .nav-links a {
       background-color: transparent !important;
@@ -373,44 +372,10 @@ html[saved-theme="dark"], html.dark-mode, body.dark-mode {
   ul.section-ul li > .meta {
     color: rgba(224, 234, 245, 0.5) !important;
   }
-
-  /* --- WEBMENTIONS EN MODO OSCURO --- */
-  .webmention-box, .webmentions-container {
-    background-color: rgba(60, 60, 60, 0.2) !important;
-    border-color: rgba(224, 234, 245, 0.2) !important;
-  }
-  .webmention-box label, .webmention-desc, .wm-no-mentions, .wm-loading, .wm-text, .wm-text p { color: #e0eaf5 !important; }
-  .webmention-title, .webmentions-title, .wm-author { color: #84add7 !important; }
-  .wm-meta { color: rgba(224, 234, 245, 0.5) !important; }
-  .wm-input-group input {
-    background-color: rgba(0, 0, 0, 0.6) !important;
-    border-color: rgba(224, 234, 245, 0.2) !important;
-    color: #e0eaf5 !important;
-  }
-  .wm-submit {
-    background-color: #84add7 !important;
-    color: #000000 !important;
-  }
-
-  /* --- CORRECCIONES PARA CELULAR EN MODO OSCURO --- */
-  @media screen and (max-width: 800px) {
-    .links a, .nav-links a {
-      border: none !important;
-      background-color: transparent !important;
-      color: #c1d6ec !important;
-      padding: 0.4rem 0.8rem !important;
-      margin: 0.2rem !important;
-      display: inline-block !important;
-    }
-    .page-header header {
-      background-color: #3c3c3c !important;
-      border: 1px solid rgba(224, 234, 245, 0.2) !important;
-    }
-  }
 }
 
 /* ==========================================
-   16. CONTROLES DEL FOOTER (MÚSICA Y MODO OSCURO)
+   13. CONTROLES Y BOTÓN FLOTANTE
    ========================================== */
 .footer-controls {
   display: flex !important;
@@ -419,7 +384,6 @@ html[saved-theme="dark"], html.dark-mode, body.dark-mode {
   gap: 1.5rem !important; 
   margin-top: 1rem !important; 
   padding-bottom: 1.5rem !important;
-  margin-bottom: 0 !important;
 }
 
 .footer-controls button {
@@ -427,110 +391,31 @@ html[saved-theme="dark"], html.dark-mode, body.dark-mode {
   border: none !important;
   color: #e3dac9 !important; 
   cursor: pointer !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  width: auto !important;
-  height: auto !important;
-  outline: none !important;
   transition: color 0.3s ease, transform 0.2s ease !important;
 
-  svg { display: block !important; }
-
-  &:hover {
-    color: #B7966C !important; 
-    transform: scale(1.1) translateY(-3px) !important;
-    background: transparent !important;
-  }
+  &:hover { color: #B7966C !important; transform: scale(1.1) translateY(-3px) !important; }
 }
 
-.footer-controls button.playing {
-  color: #B7966C !important; 
-  filter: drop-shadow(0 0 5px rgba(183, 150, 108, 0.4)) !important;
-  animation: pulseMusic 2s infinite ease-in-out !important;
-}
-
-/* Adaptación automática al Modo Oscuro para botones del footer */
-html[saved-theme="dark"] .footer-controls button,
-html[data-theme="dark"] .footer-controls button, 
-body.dark-mode .footer-controls button {
-  color: #e0eaf5 !important; 
-  &:hover { color: #84add7 !important; }
-  &.playing {
-    color: #84add7 !important;
-    filter: drop-shadow(0 0 5px rgba(132, 173, 215, 0.4)) !important;
-  }
-}
-
-@keyframes pulseMusic {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.15); }
-  100% { transform: scale(1); }
-}
-
-/* Ocultamos el botón nativo de modo oscuro (el flotante de la izquierda) */
 .darkmode { display: none !important; }
 
-/* ==========================================
-   17. BOTÓN FLOTANTE "VOLVER ARRIBA" (RESTAURADO Y MÁS PEQUEÑO)
-   ========================================== */
 #back-to-top, #goToTopBtn {
   display: none; 
   position: fixed; 
   bottom: 30px; 
   right: 30px; 
   z-index: 999;
-  font-size: 1rem !important; /* Ajuste sutil del icono interno */
   border: 1px solid rgba(183, 150, 108, 0.4) !important; 
-  outline: none;
   background-color: rgba(13, 12, 10, 0.9) !important; 
   color: #B7966C !important; 
-  cursor: pointer;
-  width: 35px !important; /* REDUCIDO A 35PX */
-  height: 35px !important; /* REDUCIDO A 35PX */
+  width: 35px !important; 
+  height: 35px !important; 
   border-radius: 50% !important; 
-  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
   align-items: center; 
   justify-content: center;
-  opacity: 0; 
-  visibility: hidden; 
-  transition: opacity 0.3s, visibility 0.3s, background-color 0.3s, transform 0.2s, border-color 0.2s;
   
-  svg {
-    width: 18px !important; /* SVG un poco más pequeño para combinar con el tamaño de 35px */
-    height: 18px !important;
-  }
-  
-  &.visible { display: flex !important; opacity: 1; visibility: visible; }
-  &:hover { 
-    background-color: #B7966C !important; 
-    color: #0d0c0a !important; 
-    border-color: #E7C8A0 !important; 
-    transform: translateY(-3px); 
-    svg { stroke: #0d0c0a; } 
-  }
+  &.visible { display: flex !important; }
 }
 
-/* Adaptación a Modo Oscuro del botón Volver Arriba */
-html[saved-theme="dark"] #back-to-top,
-html[saved-theme="dark"] #goToTopBtn,
-body.dark-mode #goToTopBtn {
-  background-color: #3c3c3c !important;
-  border-color: #e0eaf5 !important;
-  color: #e0eaf5 !important;
-  svg { stroke: #e0eaf5 !important; }
-  &:hover {
-    background-color: #e0eaf5 !important;
-    color: #3c3c3c !important;
-    svg { stroke: #3c3c3c !important; }
-  }
-}
-
-/* ==========================================
-   OCULTAR "items under this folder" SOLAMENTE EN ESTA PÁGINA
-   ========================================== */
 body[data-slug="index"] p:has(+ ul.section-ul),
 body[data-slug="El-Jardín/index"] p:has(+ ul.section-ul),
 body[data-slug="El-Jardin/index"] p:has(+ ul.section-ul) {
