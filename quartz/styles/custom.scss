@@ -107,28 +107,6 @@ header, .page-header header {
   font-weight: 500 !important;
 }
 
-/* ----------------------------------------------------
-   MODIFICACIÓN DE SÍMBOLOS/TEXTO DE NAVLINKS VÍA CSS
-   (Si no usas quartz.layout.ts, modifica estas líneas)
-   ---------------------------------------------------- */
-/* Reemplazo para el enlace RSS */
-.links a[href*="index.xml"], .nav-links a[href*="index.xml"] {
-  font-size: 0 !important; /* Oculta el texto y emoji original */
-}
-.links a[href*="index.xml"]::after, .nav-links a[href*="index.xml"]::after {
-  content: "📡 RSS" !important; /* Cambia "📡 RSS" por el ícono/texto que gustes */
-  font-size: 1.15rem !important;
-}
-
-/* Reemplazo para el enlace Mail */
-.links a[href^="mailto:"], .nav-links a[href^="mailto:"] {
-  font-size: 0 !important; /* Oculta el texto y emoji original */
-}
-.links a[href^="mailto:"]::after, .nav-links a[href^="mailto:"]::after {
-  content: "✉️ Contacto" !important; /* Cambia "✉️ Contacto" por el ícono/texto que gustes */
-  font-size: 1.15rem !important;
-}
-
 /* =========================================
    4. OCULTAR GRAFO (EXCEPTO EN JARDÍN)
    ========================================= */
