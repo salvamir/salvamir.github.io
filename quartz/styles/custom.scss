@@ -60,7 +60,7 @@ html, body {
 }
 
 /* =========================================
-   3. HEADER LIMPIO Y CENTRADO (SIN GLOBO)
+   3. HEADER LIMPIO Y CENTRADO
    ========================================= */
 header, .page-header header {
   display: flex !important;
@@ -105,6 +105,28 @@ header, .page-header header {
   text-decoration: none !important;
   font-size: 1.15rem !important;
   font-weight: 500 !important;
+}
+
+/* ----------------------------------------------------
+   MODIFICACIÓN DE SÍMBOLOS/TEXTO DE NAVLINKS VÍA CSS
+   (Si no usas quartz.layout.ts, modifica estas líneas)
+   ---------------------------------------------------- */
+/* Reemplazo para el enlace RSS */
+.links a[href*="index.xml"], .nav-links a[href*="index.xml"] {
+  font-size: 0 !important; /* Oculta el texto y emoji original */
+}
+.links a[href*="index.xml"]::after, .nav-links a[href*="index.xml"]::after {
+  content: "📡 RSS" !important; /* Cambia "📡 RSS" por el ícono/texto que gustes */
+  font-size: 1.15rem !important;
+}
+
+/* Reemplazo para el enlace Mail */
+.links a[href^="mailto:"], .nav-links a[href^="mailto:"] {
+  font-size: 0 !important; /* Oculta el texto y emoji original */
+}
+.links a[href^="mailto:"]::after, .nav-links a[href^="mailto:"]::after {
+  content: "✉️ Contacto" !important; /* Cambia "✉️ Contacto" por el ícono/texto que gustes */
+  font-size: 1.15rem !important;
 }
 
 /* =========================================
@@ -293,6 +315,7 @@ ul.section-ul li > .desc { margin: 0 !important; }
 article h1, article h2, article h3, article h4, article h5, article h6,
 h1.article-title, .content-meta, .tags { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif !important; }
 
+/* Reglas para ocultar títulos y metadatos en páginas específicas */
 body[data-slug="index"] h1.article-title, body[data-slug="index"] .content-meta,
 body[data-slug="ahora"] h1.article-title, body[data-slug="ahora"] .content-meta,
 body[data-slug="Proyectos/explore-the-world!"] h1.article-title, body[data-slug="galería"] .content-meta,
@@ -305,7 +328,14 @@ body[data-slug="Notas/index"] h1.article-title, body[data-slug="Notas/index"] .c
 body[data-slug="El-Jardín/index"] h1.article-title, body[data-slug="El-Jardín/index"] .content-meta,
 body[data-slug="Música/index"] h1.article-title, body[data-slug="Música/index"] .content-meta,
 body[data-slug="Musica/index"] h1.article-title, body[data-slug="Musica/index"] .content-meta,
-body[data-slug="El-Jardin/index"] h1.article-title, body[data-slug="El-Jardin/index"] .content-meta {
+body[data-slug="El-Jardin/index"] h1.article-title, body[data-slug="El-Jardin/index"] .content-meta,
+/* Ocultar "¿Algo más?" y sus variantes */
+body[data-slug="algo-mas"] h1.article-title, body[data-slug="algo-mas"] .content-meta,
+body[data-slug="Algo-mas"] h1.article-title, body[data-slug="Algo-mas"] .content-meta,
+body[data-slug="algo-más"] h1.article-title, body[data-slug="algo-más"] .content-meta,
+body[data-slug="Algo-más"] h1.article-title, body[data-slug="Algo-más"] .content-meta,
+body[data-slug="algo-mas"] article > h1:first-child, body[data-slug="Algo-mas"] article > h1:first-child,
+body[data-slug="algo-más"] article > h1:first-child, body[data-slug="Algo-más"] article > h1:first-child {
   display: none !important;
 }
 
