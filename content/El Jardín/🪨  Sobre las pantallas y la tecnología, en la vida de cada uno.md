@@ -19,6 +19,38 @@ Porque estoy en ese camino ahora... Estoy volviendo para atrás, recolectando la
 
 ¿Existe el equilibrio entre estos dos mundos? ¿Pueden ser realmente medios de vida? ¿medios de oración y de cercanía a Dios, a la Creación, a la gente y a uno mismo?
 
-No me imagino como pueda ser eso... Pero creo que eso es lo que estoy buscando, Señor. Estoy buscando entender esta realidad controversial y juxtapuesta en la que me estás llamando a vivir. Porque al final del día, la vida real es una sola y es trascendentalmente temporal. Amén.
+No me imagino como pueda ser eso... Pero creo que eso es lo que estoy buscando, Señor. Estoy buscando entender esta realidad controversial y juxtapuesta en la que me estás llamando a vivir. Porque al final del día, la vida real es una sola y es trascendentalmente temporal. 
+
+---
+
+> [!note]+ Oración sobre la tecnología en mi vida diaria.
+> Jesús, hace bastante tiempo que no sabemos nada del otro. Vengo viviendo solo mi vida, envuelto en mis propósitos y mis cosas. Sin tenerte en cuenta.
+   Eso nos hizo la falta de conversación.
+>  
+>  Tengo metida en la cabeza una pregunta ¿Cual es el sentido de este cuaderno, si al final sigo siendo adicto a mi celular y sigo pendiente de él? Además, se suma a esto el celular viejito, que es muy cómodo de llevar porque es pequeño. ¿Cual es el punto de todo esto si la alternativa virtual sigue ahi y yo sigo atendiéndola? ¿Que estoy haciendo? ¿Por que de no tener un celular funcional pasé a tener dos hiper-funcionales? ¿Por qué estoy eligiendo esto?
+>  
+>  Me siento exhausto de este tema. La tecnología me gusta demasiado, y no estoy pudiendo tener con ella una relación sana ¿Cómo salgo de esto Jesús? ¿Que tengo que elegir para parecerme a vos? Ya se que la solución es siempre pensar en los demás más que en mi...
+>  
+> Todo *esto* está quitándome libertad. No quiero renunciar a las comodidades que me brindan ambos mundos, no tanto por las comodidades en si, sino porque en algunas ocasiones son muy útiles.
+> 
+>  Estoy quitándome la libertad, realmente...
+>  
+> Amén.
+
+Esta es una oración de hace un tiempo y hoy la traigo al presente... Es muy tonta si uno la ve de lejos. Pero a mi me despierta una herida muy grande: La tecnología en mi día a día no es un medio de escape SIEMPRE, muchas veces es mi vida en sí. Y me cuestiono si este blog lentamente va a reemplazar mi cuaderno para toda la eternidad. No quiero que mi intimidad esté únicamente acá... No quiero que sea virtual, falsa, de mentira. ¿Lo es? A veces se siente como que todo esto soy yo fingiendo. Es raro y parece super dramático. Es que yo soy una persona muy introvertida, y las cosas las maquino así. Dándoles su lugar, su espacio, su color, su tiempo. Dándoles un orden y un "nombre". Y el blog me sirvió mucho para eso también. 
+
+> [!note]+ Otra oración sobre las pantallas...
+> Me doy cuenta, Jesús, que vivo luchando por vivir realmente. Me apasiona la vida virtual casi tanto como la vida real. Le dedico mucho más tiempo del que quiero. No es vida eso, es una simulación de: humanidad, silencio, calma, tranquilidad, libertad.
+> Cualquier tipo de contacto aislado (yo solo) con la virtualidad cumple ese requisito. 
+> 
+> No existe una "realidad virtual" o una "vida digital". Me niego a considerar válidos esos conceptos. En todo caso existe una "presencia" de cada uno de nosotros los humanos (bueno, casi todos, de cada vez más de nosotros) en la virtualidad. En el internet. 
+> 
+> ¿Por qué será que quiero dedicar tanto tiempo a edificarme un castillo de arena en la virtualidad? ¿Por qué me apasiona tanto la web, la tecnología, el internet? ¿Que "impulso" estoy saciando con esta "comida"?
+> 
+> Este pensamiento está muymuy atado a otro ([[🪻 Sobre la vida plena]] ) 
+> Quiero poder mirar a mi pasión por la virtualidad como un instante tercero de mi vida, como una herramienta, como un medio de ocio que, en el fondo y en esencia, permanece igual, estable y no cambia y no me necesita y yo, por sobre todo, no lo necesito.
+> Quiero ver a esta pasión en tercera persona. En minúscula, en contraste con un cerro, un río, el viento, una carrera, un mate con germán, un perro, un beso, un mar, un "hola me abris?" de facu. Quiero prender y apagar el internet por mi mismo y no por el. No por inercia.
+
+
 
 [[🌱 ¿Cuánto tiempo tenemos?]][[🪻 Sobre la vida plena]][[🪻 Un poquito de vida]][[🌷 Una conversación con Dios]]

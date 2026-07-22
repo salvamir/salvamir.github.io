@@ -1,2 +1,0 @@
-#yuyo 
-Cuando yo era niño vivía en una casa antigua en la que, según la leyenda, había un tesoro escondido. Sin duda que nadie supo jamás descubrirlo y quizás nadie lo buscó, pero parecía toda encantada por ese tesoro. Mi casa ocultaba un secreto en el fondo de su corazón... —Sí —le dije al principito— ya se trate de la casa, de las estrellas o del desierto, lo que les embellece es invisible. —Me gusta —dijo el principito— que estés de acuerdo con mi zorro. [[🌷 Una conversación con Dios]] [[🌱 Sobre el sentido de las cosas]] [[🌱 Sobre la libertad]]

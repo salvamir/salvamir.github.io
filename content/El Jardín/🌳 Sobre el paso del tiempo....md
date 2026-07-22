@@ -7,5 +7,30 @@ El tiempo es algo muy raro. Me sorprende y me asusta lo rápido que se me pasaro
 
 Dios seguro me permita quedarme con algunas sensaciones, personas, palabras, canciones, colores, miedos, ideas de ese Salva de 20 años que todavía existe. Pero me asusta saber que llegará el día en el que ya no exista **yo**, sino un Salva que ha de vivir y existir sola y exclusivamente en su presente, diferente del *mío*, y el ya no se acuerde de mi.
 
+---
+
+> [!note]+ Extracto de "Cartas del diablo a su sobrino""
+> Al parecer, Él quiere que algunos —pero sólo muy pocos— de los animales humanos con que está poblando el Cielo hayan tenido la experiencia de resistirnos a lo largo de una vida terrenal de sesenta o setenta años.
+> 
+> La presencia de Jesús es seguridad entre las incertidumbres. 
+
+> [!note]+ Extracto de un cuento de Borges.
+> "Los grandes ideales se forjan en la juventud y se realizan en la madurez. Los hombres aman el pasado y contra ese amor nada puedo, ni pueden mis verdugos, pero alguna vez habrá un hombre que sienta como yo, y ese destruirá mi muralla, como yo he destruido los libros, y ese borrara mi memoria y será mi sombra y mi espejo y no lo sabrá."
+> 
+> Shih Huang Ti. 
+
+> [!note]+ ¿Qué son 53 minutos?
+> Era un comerciante de píldoras perfeccionadas que quitan la sed. Se toma una por semana y ya no se sienten ganas de beber.
+> 
+> —¿Por qué vendes eso? —preguntó el principito. —Porque con esto se economiza mucho tiempo. Según el cálculo hecho por los expertos, se ahorran cincuenta y tres minutos por semana. 
+> —¿Y qué se hace con esos cincuenta y tres minutos? 
+> —Lo que cada uno quiere... " 
+> 
+> "Si yo dispusiera de cincuenta y tres minutos —pensó el principito— caminaría suavemente hacia una fuente..."
+
+> [!note]
+> Sí, por el contrario, es consciente de que le pueden esperar cosas horribles, y reza para pedir las virtudes necesarias para enfrentarse con tales horrores, y entretanto se ocupa del presente, porque en éste, y sólo en éste, residen todos los deberes, toda la gracia, toda la sabiduría y todo el placer, su estado es enormemente indeseable y debe ser atacado al instante
+
+
 [[🌱 Sobre el sentido de las cosas]]
 [[🌷 Sobre la vida "real"]]

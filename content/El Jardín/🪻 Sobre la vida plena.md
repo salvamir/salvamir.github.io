@@ -13,3 +13,6 @@ Debe ser que vivir plenamente es elegir *otra cosa*...
 Elegir las experiencias nítidas de la vida. Esos instantes que posta son vivir y seguro tiene que ver con la libertad y la incomodidad y la pasión y el desapego.
 
 Quizás esa "otra cosa" sea experimentar nítidamente al otro y a la creación, y hacerlo con serenidad, pausa, detenimiento... y eligiendo esa *otra cosa* uno deja de experimentar apasionada y nítidamente cosas intrascendentes y deja de intentar hacerlas durar y deja de ver todo con tanta nostalgia y entonces si; uno es capaz de soltar la pasión desenfrenada por lo material y las tensiones de las buenas notas y es capaz, por fin, de decir con calma y sentido del humor: **"ya fue, igual no era para tanto... bueno, ¿a *otra cosa*?"**
+
+> [!note]+ Vivir del sol y la lluvia.
+> ¡Sal al aire libre todo el tiempo que puedas! Debes ser un estudiante sano, jovial, rebosante de fuerzas, de corazón ardiente, generoso, de espíritu pronto, vivaracho, que sabe reírse de corazón, pero... que también tiene un sentido delicado de la dignidad de su alma.

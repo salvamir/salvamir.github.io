@@ -11,4 +11,18 @@ Como dijo ayer en la misa el padre Tomi: Hoy te pido Jesús que intercedas por m
 
 Se que estoy en el mundo sin ser de el. Ayudame a sentirlo esta semana en las cosas simples, naturales, humildes, sencillas. Dame esa visión en tercera persona, para verte a vos en la Creación, en las "casualidades" y en la gente que me rodea, sobre todo. Ayudame a concentrarme (verdaderamente) en los problemas y angustias de la gente, tanto como en sus alegrías y éxitos. Ayudame a tenerte como motivo. Como pasión. Vos sos mi pasión, sos mi proyecto de vida. Sos mi plan más apasionante, seguirte y trabajar por tu Reino en mi vida cotidiana es lo que me apasiona. Gracias Jesús por esto. Amén.
 
+> [!note]+ El apuro según el Principito.
+> —Los hombres —dijo el principito— se meten en los rápidos pero no saben dónde van ni lo que quieren. . . Entonces se agitan y dan vueltas...  Y añadió:
+> —¡No vale la pena!...
+
+> [!note]+ Estuvimos tan cerca...
+> Ante esta realidad elijo –¡y me impongo!– la gratitud
+
+## La sobre-exigencia nunca hace bien. Pero hay que saber notarla.
+No me gusta aspirar a las mejores notas siempre. Porque en un sentido práctico, para poder tener buenas notas en mi facultad y carrera, y para poder llevarla perfectamente al día (como vengo haciendo yo hasta ahora), tenés que hacer demasiados sacrificios. Y creo que al final no vale tanto la pena.
+
+El estilo de vida universitario es sacrificado en varios sentidos y no estoy en contra de eso, así lo elegí. Pero me doy cuenta que sacrifiqué tiempo de calidad con mi familia, juntadas verdaderas y largas con mis amigos, charlas distendidas, caminatas, cerros, deporte, formación católica, evangelización, etc por algo que en el fondo no repercute seriamente en mi vida. [[🌷 Sobre la vida "real"]]
+
+Percibo que, en mi vida, el estudio está manifestándose como un deseo desmedido de éxito. Como con perfeccionismo y con desconfianza en el plan de Dios. Tengo un grado de sobre-estructuración y organización en mis estudios que es ridículo. 
+
 [[🪻 Sobre la vida plena]] [[🪸 Sobre las buenas notas]] [[🪴 Sobre la importancia de las cosas]]
