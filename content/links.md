@@ -56,6 +56,10 @@ Te dejo otros lugares interesantes para ver. Podés encontrar nuevas páginas po
 > - [TextKit](https://www.textkit.com/): Here you will find some Ancient Greek and Latin text.
 > - [Paintbook Link.](https://codepen.io/alperentalaslioglu/pen/yPGgvP)
 > - [Gear Page:](https://www.thegearpage.net/board/index.php) A small community.
+> - [Landchads:](https://landchad.net) Tutorials For Privacy-focused internet's presence.
+> - [Nitter](https://nitter.net): A small alternative to twitter.
+> - [Not Related!](https://notrelated.xyz): Maybe some interesting podcasts.
+> - [Based Cooking:](https://based.cooking) Recipes, that's it.
 
 > [!note]+ Geology
 > > [!todo]- Blogs and news
