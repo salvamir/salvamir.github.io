@@ -51,6 +51,8 @@ Esta es una oración de hace un tiempo y hoy la traigo al presente... Es muy ton
 > Quiero poder mirar a mi pasión por la virtualidad como un instante tercero de mi vida, como una herramienta, como un medio de ocio que, en el fondo y en esencia, permanece igual, estable y no cambia y no me necesita y yo, por sobre todo, no lo necesito.
 > Quiero ver a esta pasión en tercera persona. En minúscula, en contraste con un cerro, un río, el viento, una carrera, un mate con germán, un perro, un beso, un mar, un "hola me abris?" de facu. Quiero prender y apagar el internet por mi mismo y no por el. No por inercia.
 
+> [!note]+ Estudiar, salir afuera y pantallas.
+> ¡Sal al aire libre todo el tiempo que puedas! Debes ser un estudiante sano, jovial, rebosante de fuerzas, de corazón ardiente, generoso, de espíritu pronto, vivaracho, que sabe reírse de corazón, pero... que también tiene un sentido delicado de la dignidad de su alma.
 
 
-[[🌱 ¿Cuánto tiempo tenemos?]][[🪻 Sobre la vida plena]][[🪻 Un poquito de vida]][[🌷 Una conversación con Dios]]
+[[🪻 Sobre la vida plena]][[🪻 Un poquito de vida]][[🌷 Una conversación con Dios]]

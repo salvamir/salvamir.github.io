@@ -1,2 +1,0 @@
-#arbolito 
-Como se vive la vocación... me lleva a otros. No hay vocaciones para vivirlas en solitario. La vocación no termina en uno mismo, finaliza en el alma del vecino

@@ -27,5 +27,14 @@ El Señor espera nuestra respuesta, nuestras resoluciones firmes y generosas. «
 > [!note]+ Vivir para la muerte.
 > Quiero vivir para que cuando muera, alguien pueda decir esto de mi: Puedo testimoniar el heroísmo con el que se ha empeñado, hasta el último aliento, por crecer en las virtudes, por arder sin residuos, por no ofrecer la mínima resistencia a la gracia, esperándolo todo de la mano amorosa de Dios
 
+## La vocación eterna del hombre.
+Como se vive la vocación... me lleva a otros. No hay vocaciones para vivirlas en solitario. La vocación no termina en uno mismo, finaliza en el alma del vecino.
+
+> [!note]+ El hombre es inmenso también....
+> ¿Dónde están los horizontes inmensos? No es en el pecado ni en las responsabilidades cotidianas donde encontramos la diferencia que tenemos con los animales. Sino en las estrellas. Dios nos hizo para las estrellas (horizontes inmensos)
+> 
+
+> [!note]+ El horizonte inmenso.
+> ¿Dónde buscar el sentido? El brillo de las estrellas me produce, aunque no sepa cómo ni por qué, una sensación de paz y seguridad infinitas. Creo que es allí, en las vastas y eternas leyes de la materia, y no en las preocupaciones, en los pecados y en los problemas cotidianos de los hombres, donde lo que en nosotros pueda haber de superior al animal debe buscar el sosiego y la esperanza.
 
 [[🌺 La vocación no me aisla]] [[🌳 Sobre el paso del tiempo...]]

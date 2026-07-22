@@ -16,3 +16,14 @@ Quizás esa "otra cosa" sea experimentar nítidamente al otro y a la creación, 
 
 > [!note]+ Vivir del sol y la lluvia.
 > ¡Sal al aire libre todo el tiempo que puedas! Debes ser un estudiante sano, jovial, rebosante de fuerzas, de corazón ardiente, generoso, de espíritu pronto, vivaracho, que sabe reírse de corazón, pero... que también tiene un sentido delicado de la dignidad de su alma.
+
+## Vivir plenamente tiene que ver con la visión...
+Ver la vida cotidiana con resolución y detalle. Vivirla apasionadamente, dejarse conmover y desorientar. Quiero llegar a decir "¿Qué estaba haciendo?" tras contemplar absorto a Dios en mi vida... En las hojas de los árboles, en un par de ojos, en el sol, en el viento...
+
+> [!note]+ Como si fuese la última vez
+> "Si imaginamos cómo viviríamos un solo día de nuestra vida, si solo fuese uno... Seguramente valoraríamos cada detalle."
+
+El que tiene buen ojo no solo se detiene en la Creación obviamente. Que eso lo lleve al otro. Quiero que mi vida sea estar atento al otro también.
+
+> [!note]+ Lo único importante.
+> Estimo que era lo único importante. Volver a empezar con seriedad la vida, antes de que nos alcance la muerte. Hacer todo el bien posible mientras estemos aquí abajo entre los hombres. Dios está cerca de los que tienen roto el corazón.
