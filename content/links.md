@@ -36,6 +36,7 @@ Te dejo otros lugares interesantes para ver. Podés encontrar nuevas páginas po
 > - [Small Seasons.](https://smallseasons.guide/)
 > - [The Autodidacts](https://www.autodidacts.io/tips-for-boosting-energy-levels-mitochondrial-function/)
 > - [Interconnected](https://interconnected.org/home/).
+> - [Gwern](https://gwern.net). Unique style.
 
 > [!abstract]- Philosophy, Religion and History
 > - [Christian Info](https://elcristiano.info/): Great info about the church.
