@@ -3,4 +3,8 @@ Me cuestiono mucho el intento de escribir en dos idiomas esta página, quizás d
 
 Es un poco una mentira, porque seguramente, el jardín esté repleto de ideas en español, ya que todo lo que escribo en *mi cuaderno* es en español, lógicamente. 
 
+---
+
+Quiero explorar la idea de que cada lenguaje funciona como una nueva forma de pensar. Me da curiosidad el como pueda afectar eso en mi introspección... en mi oración, etc. 
+
 [[🌷 Sobre la vida "real"]]
