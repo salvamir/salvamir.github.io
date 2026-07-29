@@ -5,6 +5,7 @@ description: Acá me gusta coleccionar detalles de mi vida. Es mi cuaderno infin
 <style>
   .mis-botones-inicio {
     display: flex;
+    justify-content: center; /* <-- Esto centra los botones */
     flex-wrap: wrap;
     gap: 10px;
     margin: 20px 0;
