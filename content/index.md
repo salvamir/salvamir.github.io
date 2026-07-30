@@ -31,7 +31,7 @@ description: Acá me gusta coleccionar detalles de mi vida. Es mi cuaderno infin
 </style>
 
 <div class="mis-botones-inicio">
-  <a href="https://salvamir.github.io/Notas" class="boton-pildora">Notas</a>
+  <a href="https://salvamir.github.io/Notas/" class="boton-pildora">Notas</a>
   <a href="https://salvamir.github.io/static/ahora.html" class="boton-pildora">Ahora</a>
   <a href="https://salvamir.github.io/libro-de-visitas" class="boton-pildora">Visitas</a>
 </div>
