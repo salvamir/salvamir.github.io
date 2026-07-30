@@ -1,5 +1,5 @@
 # <center>El mapa de toda mi página web</center>
-Bueno, infinito puntualmente no es. Este es el gran mapa. Mi página tiene muchos lugares, y para no abrumar a nadie existe esto. Si estás en un celular, vas a ver botones...
+ Bueno, infinito puntualmente no es. Este es el gran mapa. Mi página tiene muchos lugares, y para no abrumar a nadie existe esto. Si estás en un celular, vas a ver botones...
 <style>
   /* 1. ESTADO BASE: Mostramos el mapa, escondemos los botones */
   .mapa-escritorio {
