@@ -115,9 +115,9 @@ article > .content-meta {
     display: none !important;
 }
 
-/* Mostrar SOLO en las notas con cssclass "blog-post" */
-.blog-post article > h1.article-title, 
-.blog-post article > .content-meta {
+/* Mostrar SOLO en las notas dentro del directorio /Notas */
+body[data-slug^="Notas/"] article > h1.article-title, 
+body[data-slug^="Notas/"] article > .content-meta {
     display: block !important;
 }
 

@@ -1,22 +1,36 @@
 import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "./types"
 import style from "./styles/footer.scss"
 
-// SVGs Minimalistas sin animaciones extrañas
+// SVGs Minimalistas
 const RssIcon = () => (
-  <svg xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
     <path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle>
   </svg>
 )
 
 const MailIcon = () => (
-  <svg xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
     <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline>
   </svg>
 )
 
 const MoonIcon = () => (
-  <svg xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
     <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+  </svg>
+)
+
+const SunIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="5"></circle>
+    <line x1="12" y1="1" x2="12" y2="3"></line>
+    <line x1="12" y1="21" x2="12" y2="23"></line>
+    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+    <line x1="1" y1="12" x2="3" y2="12"></line>
+    <line x1="21" y1="12" x2="23" y2="12"></line>
+    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
   </svg>
 )
 
@@ -29,21 +43,28 @@ export default ((opts?: Options) => {
     return (
       <footer class={`${displayClass ?? ""}`}>
         <div class="footer-controls" style={{ display: 'flex', gap: '1.5rem', justifyContent: 'center' }}>
-          <a href="[https://salvamir.github.io/index.xml](https://salvamir.github.io/index.xml)" aria-label="RSS Feed" title="RSS" style={{ color: 'inherit', background: 'none' }}>
+          <a href="https://salvamir.github.io/index.xml" aria-label="RSS Feed" title="RSS" style={{ color: 'inherit', background: 'none' }}>
             <RssIcon/>
           </a>
           <a href="mailto:pez.arroz.tabla@proton.me" aria-label="Enviar Email" title="Email" style={{ color: 'inherit', background: 'none' }}>
             <MailIcon/>
           </a>
           <button id="custom-darkmode-btn" aria-label="Cambiar modo" title="Cambiar modo" style={{ background: 'transparent', border: 'none', color: 'inherit', cursor: 'pointer', padding: 0 }}>
-            <MoonIcon/>
+            <span class="icon-moon"><MoonIcon/></span>
+            <span class="icon-sun" style={{ display: 'none' }}><SunIcon/></span>
           </button>
         </div>
       </footer>
     )
   }
 
-  Footer.css = style
+  // Agregamos el CSS para que los íconos cambien sin necesidad de transiciones/animaciones raras
+  Footer.css = style + `
+    html[saved-theme="dark"] .icon-moon { display: none !important; }
+    html[saved-theme="dark"] .icon-sun { display: block !important; }
+    html[saved-theme="light"] .icon-moon { display: block !important; }
+    html[saved-theme="light"] .icon-sun { display: none !important; }
+  `
   
   Footer.afterDOMLoaded = `
     document.addEventListener("nav", () => {
