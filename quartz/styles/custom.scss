@@ -431,3 +431,37 @@ body[data-slug="El-Jardín/index"] p:has(+ ul.section-ul),
 body[data-slug="El-Jardin/index"] p:has(+ ul.section-ul) {
   display: none !important;
 }
+
+/* =========================================
+   TWEAKS DE QUARTZ (Grafo, Títulos y Explorador)
+   ========================================= */
+
+/* 1. Ocultar el grafo en todas las páginas por defecto */
+.graph {
+    display: none !important;
+}
+
+/* Mostrar el grafo SOLO en la nota con cssclass "el-jardin" */
+.el-jardin .graph {
+    display: block !important;
+}
+
+/* 2. Mostrar los nombres enteros en el explorador de la izquierda */
+.explorer ul li a {
+    white-space: normal !important;
+    text-overflow: clip !important;
+    overflow: visible !important;
+    display: block;
+}
+
+/* 3. Ocultar títulos (h1) y fechas (meta) autogenerados en todas las notas */
+article > h1.article-title, 
+article > .content-meta {
+    display: none !important;
+}
+
+/* Mostrar títulos y fechas SOLO en las notas con cssclass "blog-post" */
+.blog-post article > h1.article-title, 
+.blog-post article > .content-meta {
+    display: block !important;
+}
