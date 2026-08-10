@@ -11,7 +11,7 @@ html, body {
   flex-direction: column !important;
   align-items: center !important;
   justify-content: flex-start !important;
-  font-size: 18px !important; /* Texto global más grande (18px base) */
+  font-size: 18px !important;
   font-family: 'Times New Roman', serif !important; 
 }
 
@@ -105,7 +105,7 @@ header, .page-header header {
 }
 
 /* =========================================
-   4. TÍTULOS Y ENCABEZADOS (MODO CLARO Y OSCURO)
+   4. TÍTULOS Y ENCABEZADOS
    ========================================= */
 article h1, article h2, article h3, article h4, article h5, article h6,
 h1.article-title, .content-meta, .tags { 
@@ -113,7 +113,6 @@ h1.article-title, .content-meta, .tags {
     color: var(--secondary) !important;
 }
 
-/* Control de visualización de títulos principales */
 article h1.article-title, 
 article .article-title,
 article .content-meta,
@@ -172,7 +171,6 @@ body[data-slug^="Notas/"] article .content-meta {
     margin: 0;
 }
 
-/* Desplegables en Ya! */
 .now-container details {
     padding-top: 0.5rem;
 }
@@ -331,7 +329,7 @@ ul.section-ul li > .meta {
 }
 
 /* =========================================
-   8. FOOTER Y BOTONES (SIN EFFECTO HOVER BLANCO)
+   8. FOOTER Y BOTONES (SIN EFECTO HOVER DE COLOR)
    ========================================= */
 hr, .center > hr, .page > hr {
   display: none !important;
@@ -361,14 +359,14 @@ button.darkmode,
   border: none !important;
   color: var(--gray) !important; 
   cursor: pointer !important;
-  transition: none !important;
+  transition: opacity 0.15s ease !important;
   transform: none !important;
-  opacity: 1 !important;
+  opacity: 0.75 !important;
   outline: none !important;
   box-shadow: none !important;
 }
 
-/* Desactivar cambio a blanco en hover */
+/* Mantener el color sin cambios en hover, solo cambiar opacidad ligeramente */
 .footer-controls button:hover, 
 .footer-controls a:hover,
 button.darkmode:hover, 
@@ -377,20 +375,54 @@ button.darkmode:hover,
 .footer-controls a:hover *,
 button.darkmode:hover *, 
 .dark-mode-toggle:hover * { 
-  color: var(--secondary) !important; 
+  color: var(--gray) !important; 
   fill: currentColor !important;
   stroke: currentColor !important;
   transform: none !important; 
   transition: none !important;
   opacity: 1 !important;
   filter: none !important;
+  background: transparent !important;
 }
 
 .darkmode { display: none !important; }
 
 /* =========================================
-   9. REGLAS UNIFICADAS MODO OSCURO
+   9. REGLAS UNIFICADAS DE TEMAS
    ========================================= */
+
+/* MODO CLARO (PALETA MARRÓN Y ANARANJADA) */
+html[saved-theme="light"],
+html[data-theme="light"],
+html:not([saved-theme="dark"]) {
+  background-color: #fdfbf7 !important;
+  color: #1a1714 !important;
+
+  --light: #fdfbf7 !important;      
+  --lightgray: #e3dac9 !important; 
+  --gray: #a89e95 !important;    
+  --darkgray: #2b2b2b !important;        
+  --dark: #1a1714 !important;        
+  --secondary: #c05621 !important; /* ANARANJADO / MARRÓN MODO CLARO */  
+  --tertiary: #E7C8A0 !important;
+
+  .page, body {
+    background-color: #fdfbf7 !important;
+  }
+
+  .page-title, .page-title a, 
+  article h1, article h2, article h3, article h4, article h5, article h6, 
+  h1.article-title, .now-heading, .now-date, .now-container summary {
+    color: #c05621 !important;
+  }
+
+  .links a, .nav-links a, article p a, ul.section-ul li > .desc a {
+    color: #c05621 !important;
+    background-color: transparent !important;
+  }
+}
+
+/* MODO OSCURO (PALETA AZUL) */
 html[saved-theme="dark"], 
 html[data-theme="dark"], 
 html.dark, 
@@ -412,7 +444,7 @@ body.dark-mode {
   .page-title, .page-title a, 
   article h1, article h2, article h3, article h4, article h5, article h6, 
   h1.article-title, .now-heading, .now-date, .now-container summary {
-    color: #84add7 !important; /* Fuerza azul en todos los títulos de Ya!.md y notas */
+    color: #84add7 !important;
   }
 
   .links a, .nav-links a, article p a, ul.section-ul li > .desc a {

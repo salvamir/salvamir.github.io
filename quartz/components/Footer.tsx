@@ -49,25 +49,21 @@ export default ((opts?: Options) => {
   const Footer: QuartzComponent = ({ displayClass }: QuartzComponentProps) => {
     return (
       <footer class={`${displayClass ?? ""}`}>
-        <div class="footer-controls" style={{ display: 'flex', gap: '1.5rem', justifyContent: 'center', alignItems: 'center', padding: '1rem 0' }}>
-          {/* 1. RSS */}
-          <a href="/index.xml" aria-label="RSS Feed" title="RSS" style={{ color: 'inherit', background: 'none', display: 'inline-flex', alignItems: 'center' }}>
+        <div class="footer-controls">
+          <a href="/index.xml" aria-label="RSS Feed" title="RSS">
             <RssIcon/>
           </a>
 
-          {/* 2. Email */}
-          <a href="mailto:pez.arroz.tabla@proton.me" aria-label="Enviar Email" title="Email" style={{ color: 'inherit', background: 'none', display: 'inline-flex', alignItems: 'center' }}>
+          <a href="mailto:pez.arroz.tabla@proton.me" aria-label="Enviar Email" title="Email">
             <MailIcon/>
           </a>
 
-          {/* 3. Modo Oscuro / Claro */}
-          <button id="custom-darkmode-btn" aria-label="Cambiar modo" title="Cambiar modo" style={{ background: 'transparent', border: 'none', color: 'inherit', cursor: 'pointer', padding: 0, display: 'inline-flex', alignItems: 'center' }}>
-            <span class="icon-moon" style={{ display: 'inline-flex', alignItems: 'center' }}><MoonIcon/></span>
-            <span class="icon-sun" style={{ display: 'none', alignItems: 'center' }}><SunIcon/></span>
+          <button id="custom-darkmode-btn" aria-label="Cambiar modo" title="Cambiar modo">
+            <span class="icon-moon"><MoonIcon/></span>
+            <span class="icon-sun"><SunIcon/></span>
           </button>
 
-          {/* 4. Volver arriba */}
-          <button id="custom-scrolltop-btn" aria-label="Volver arriba" title="Volver arriba" style={{ background: 'transparent', border: 'none', color: 'inherit', cursor: 'pointer', padding: 0, display: 'inline-flex', alignItems: 'center' }}>
+          <button id="custom-scrolltop-btn" aria-label="Volver arriba" title="Volver arriba">
             <ArrowUpIcon/>
           </button>
         </div>
@@ -75,36 +71,77 @@ export default ((opts?: Options) => {
     )
   }
 
-  // Alternar iconos según el tema guardado en html[saved-theme]
   Footer.css = style + `
+    .footer-controls {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem 0;
+    }
+
+    .footer-controls a,
+    .footer-controls button {
+      background: transparent !important;
+      border: none !important;
+      color: inherit !important;
+      cursor: pointer;
+      padding: 0 !important;
+      margin: 0 !important;
+      display: inline-flex !important;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none !important;
+      box-shadow: none !important;
+      outline: none !important;
+      -webkit-tap-highlight-color: transparent;
+      opacity: 0.75;
+      transition: opacity 0.15s ease;
+    }
+
+    .footer-controls a:hover,
+    .footer-controls button:hover,
+    .footer-controls a:focus,
+    .footer-controls button:focus {
+      opacity: 1 !important;
+      background: transparent !important;
+      border: none !important;
+      outline: none !important;
+      box-shadow: none !important;
+      text-decoration: none !important;
+    }
+
+    .footer-controls .icon-moon,
+    .footer-controls .icon-sun {
+      display: inline-flex;
+      align-items: center;
+    }
+
     html[saved-theme="dark"] .icon-moon { display: none !important; }
     html[saved-theme="dark"] .icon-sun { display: inline-flex !important; }
     html[saved-theme="light"] .icon-moon { display: inline-flex !important; }
     html[saved-theme="light"] .icon-sun { display: none !important; }
   `
-  
-  // Scripts interactivos nativos de Quartz para SPA
+
   Footer.afterDOMLoaded = `
     document.addEventListener("nav", () => {
-      // Toggle de Modo Oscuro
       const customThemeBtn = document.getElementById("custom-darkmode-btn");
       if (customThemeBtn) {
-        customThemeBtn.addEventListener("click", () => {
+        customThemeBtn.onclick = () => {
           const html = document.documentElement;
           const currentTheme = html.getAttribute("saved-theme") || "light";
           const newTheme = currentTheme === "light" ? "dark" : "light";
           html.setAttribute("saved-theme", newTheme);
           localStorage.setItem("theme", newTheme);
           document.dispatchEvent(new CustomEvent("themechange", { detail: { theme: newTheme } }));
-        });
+        };
       }
 
-      // Scroll a la parte superior
       const scrollTopBtn = document.getElementById("custom-scrolltop-btn");
       if (scrollTopBtn) {
-        scrollTopBtn.addEventListener("click", () => {
+        scrollTopBtn.onclick = () => {
           window.scrollTo({ top: 0, behavior: "smooth" });
-        });
+        };
       }
     })
   `
