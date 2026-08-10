@@ -13,7 +13,7 @@ html, body {
   justify-content: flex-start !important;
   font-size: 18px !important;
   font-family: 'Times New Roman', serif !important; 
-  background-color: #eaad60 !important;
+  background-color: #1a1714 !important;
 }
 
 /* =========================================
@@ -392,35 +392,39 @@ button.darkmode:hover *,
    9. REGLAS DE PALETAS (MODO CLARO Y OSCURO)
    ========================================= */
 
-/* MODO CLARO: NUEVA PALETA INVERTIDA */
+/* MODO CLARO: PALETA EXTRAÍDA DE MÚSICA */
 html[saved-theme="light"],
 html[data-theme="light"],
 html:not([saved-theme="dark"]) {
-  background-color: #eaad60 !important;
-  color: #3a0f00 !important;
+  background-color: #1a1714 !important;
+  color: #e3ded6 !important;
 
-  --light: #eaad60 !important;      
-  --lightgray: #be8548 !important; 
-  --gray: #925e30 !important;    
-  --darkgray: #663618 !important;        
-  --dark: #3a0f00 !important;        
-  --secondary: #3a0f00 !important;  
-  --tertiary: #be8548 !important;
+  --light: #1a1714 !important;      
+  --lightgray: #2e2a25 !important; 
+  --gray: #a89e95 !important;    
+  --darkgray: #e3ded6 !important;        
+  --dark: #E7C8A0 !important;        
+  --secondary: #b7966c !important;  
+  --tertiary: #E7C8A0 !important;
 
   .page, body {
-    background-color: #eaad60 !important;
-    color: #3a0f00 !important;
+    background-color: #1a1714 !important;
+    color: #e3ded6 !important;
   }
 
   .page-title, .page-title a, 
   article h1, article h2, article h3, article h4, article h5, article h6, 
   h1.article-title, .now-heading, .now-date, .now-container summary {
-    color: #3a0f00 !important;
+    color: #E7C8A0 !important;
   }
 
   .links a, .nav-links a, article p a, ul.section-ul li > .desc a {
-    color: #3a0f00 !important;
+    color: #b7966c !important;
     background-color: transparent !important;
+  }
+
+  .links a:hover, .nav-links a:hover, article p a:hover {
+    color: #E7C8A0 !important;
   }
 }
 
