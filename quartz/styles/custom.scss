@@ -49,7 +49,7 @@ html, body {
   box-sizing: border-box !important;
 }
 
-/* Ocultar completamente las barras laterales y el EXPLORADOR sin dejar espacio fantasma */
+/* Ocultar completamente las barras laterales y el EXPLORADOR */
 .sidebar, .left, .right, .explorer {
   display: none !important;
   width: 0 !important;
@@ -110,14 +110,18 @@ header, .page-header header {
 /* =========================================
    4. TÍTULOS Y METADATOS (OCULTOS POR DEFECTO)
    ========================================= */
-article > h1.article-title, 
-article > .content-meta {
+article h1.article-title, 
+article .article-title,
+article .content-meta,
+.article-title,
+.content-meta {
     display: none !important;
 }
 
 /* Mostrar SOLO en las notas dentro del directorio /Notas */
-body[data-slug^="Notas/"] article > h1.article-title, 
-body[data-slug^="Notas/"] article > .content-meta {
+body[data-slug^="Notas/"] article h1.article-title, 
+body[data-slug^="Notas/"] article .article-title,
+body[data-slug^="Notas/"] article .content-meta {
     display: block !important;
 }
 
@@ -317,7 +321,7 @@ iframe { width: 100% !important; border: none !important; overflow: hidden !impo
 body[data-slug="Notas/index"] .search { display: flex !important; justify-content: center !important; margin-top: 1rem !important; margin-bottom: 3rem !important; width: 100% !important; }
 .tags, ul.tags { display: none !important; }
 
-/* Ocultar "¿Algo más?" específico que quedó suelto */
+/* Ocultar "¿Algo más?" específico */
 body[data-slug="algo-mas"] article > h1:first-child, body[data-slug="Algo-mas"] article > h1:first-child,
 body[data-slug="algo-más"] article > h1:first-child, body[data-slug="Algo-más"] article > h1:first-child {
   display: none !important;
@@ -380,7 +384,7 @@ html[saved-theme="dark"], html.dark-mode, body.dark-mode {
 }
 
 /* ==========================================
-   14. CONTROLES Y BOTÓN FLOTANTE
+   14. CONTROLES Y BOTÓN MODO OSCURO SIN ANIMACIÓN
    ========================================== */
 .footer-controls {
   display: flex !important;
@@ -391,14 +395,21 @@ html[saved-theme="dark"], html.dark-mode, body.dark-mode {
   padding-bottom: 1.5rem !important;
 }
 
-.footer-controls button {
+.footer-controls button, 
+button.darkmode, 
+.dark-mode-toggle {
   background: transparent !important;
   border: none !important;
   color: #e3dac9 !important; 
   cursor: pointer !important;
-  transition: color 0.3s ease, transform 0.2s ease !important;
+  transition: none !important;
+  transform: none !important;
 
-  &:hover { color: #B7966C !important; transform: scale(1.1) translateY(-3px) !important; }
+  &:hover { 
+    color: #B7966C !important; 
+    transform: none !important; 
+    transition: none !important;
+  }
 }
 
 .darkmode { display: none !important; }
