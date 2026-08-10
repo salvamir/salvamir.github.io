@@ -147,239 +147,6 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
     const text = url.startsWith("tags/") ? "#" + url.substring(5) : (data.get(url)?.title ?? url)
     return {
       id: url,
-      text: String(text), // AQUÍ ESTÁ EL CAMBIO: Muestra el nombre entero
-      tags: data.get(url)?.tags ?? [],
-    }
-  })
-  const graphData: { nodes: NodeData[]; links: LinkData[] } = {
-    nodes,
-    links: links
-      .filter((l) => neighbourhood.has(l.source) && neighbourhood.has(l.target))
-      .map((l) => ({
-        source: nodes.find((n) => n.id === l.source)!,
-        target: nodes.find((n) => n.id === l.target)!,
-      })),
-  }
-
-  const width = graph.offsetWidth
-  const height = Math.max(graph.offsetHeight, 250)
-
-  // we virtualize the simulation and use pixi to actually render it
-  const simulation: Simulation<NodeData, LinkData> = forceSimulation<NodeData>(graphData.nodes)
-    .force("charge", forceManyBody().strength(-100 * repelForce))
-    .force("center", forceCenter().strength(centerForce))
-    .force("link", forceLink(graphData.links).distance(linkDistance))
-    .force("collide", forceCollide<NodeData>((n) => nodeRadius(n)).iterations(3))
-
-  const radius = (Math.min(width, height) / 2) * 0.8
-  if (enableRadial) simulation.force("radial", forceRadial(radius).strength(0.2))
-
-  // precompute style prop strings as pixi doesn't support css variables
-  const cssVars = [
-    "--secondary",
-    "--tertiary",
-    "--gray",
-    "--light",
-    "--lightgray",
-    "--dark",
-    "--darkgray",
-    "--bodyFont",
-  ] as const
-  const computedStyleMap = cssVars.reduce(
-    (acc, key) => {
-      acc[key] = getComputedStyle(document.documentElement).getPropertyValue(key)
-      return acc
-    },
-    {} as Record<(typeof cssVars)[number], string>,
-  )
-
-  // calculate color
-  const color = (d: NodeData) => {
-    const isCurrent = d.id === slug
-    if (isCurrent) {
-      return computedStyleMap["--secondary"]
-    } else if (visited.has(d.id) || d.id.startsWith("tags/")) {
-      return computedStyleMap["--tertiary"]
-    } else {
-      return computedStyleMap["--gray"]
-    }
-  }
-
-  // AJUSTE: Nodos ligeramente más grandes y definidos
-  function nodeRadius(d: NodeData) {
-    const numLinks = graphData.links.filter(
-      (l) => l.source.id === d.id || l.target.id === d.id,
-    ).length
-    return 3 + Math.sqrt(numLinks) * 1.2
-  }
-
-  let hoveredNodeId: string | null = null
-  let hoveredNeighbours: Set<string> = new Set()
-  const linkRenderData: LinkRenderData[] = []
-  const nodeRenderData: NodeRenderData[] = []
-  function updateHoverInfo(newHoveredId: string | null) {
-    hoveredNodeId = newHoveredId
-
-    if (newHoveredId === null) {
-      hoveredNeighboursAquí tienes el código modificado. Me he centrado en realizar ajustes específicos para que la vista del gráfico (Graph View) sea mucho más limpia, útil y estética, cumpliendo exactamente con lo que pediste:
-
-1.  **Nombres completos:** Modifiqué la asignación de `text` al generar los nodos para que muestre el título entero de la nota en lugar de extraer solo el primer carácter (`[...String(text)][0]`).
-2.  **Zoom claro y preciso:** Ajusté los límites del zoom (`scaleExtent`) y suavicé la curva de opacidad (`scaleOpacity`) para que al acercarte las etiquetas aparezcan de forma más natural y legible, sin saturar la pantalla de golpe.
-3.  **Estética de las etiquetas:** Reduje ligeramente el multiplicador de la fuente y ajusté el ancla (`anchor.y = 1.8`) para que los nombres enteros no se superpongan tan bruscamente con los círculos de los nodos.
-
-### Código actualizado:
-
-```typescript
-import type { ContentDetails } from "../../plugins/emitters/contentIndex"
-import {
-  SimulationNodeDatum,
-  SimulationLinkDatum,
-  Simulation,
-  forceSimulation,
-  forceManyBody,
-  forceCenter,
-  forceLink,
-  forceCollide,
-  forceRadial,
-  zoomIdentity,
-  select,
-  drag,
-  zoom,
-} from "d3"
-import { Text, Graphics, Application, Container, Circle } from "pixi.js"
-import { Group as TweenGroup, Tween as Tweened } from "@tweenjs/tween.js"
-import { registerEscapeHandler, removeAllChildren } from "./util"
-import { FullSlug, SimpleSlug, getFullSlug, resolveRelative, simplifySlug } from "../../util/path"
-import { D3Config } from "../Graph"
-
-type GraphicsInfo = {
-  color: string
-  gfx: Graphics
-  alpha: number
-  active: boolean
-}
-
-type NodeData = {
-  id: SimpleSlug
-  text: string
-  tags: string[]
-} & SimulationNodeDatum
-
-type SimpleLinkData = {
-  source: SimpleSlug
-  target: SimpleSlug
-}
-
-type LinkData = {
-  source: NodeData
-  target: NodeData
-} & SimulationLinkDatum<NodeData>
-
-type LinkRenderData = GraphicsInfo & {
-  simulationData: LinkData
-}
-
-type NodeRenderData = GraphicsInfo & {
-  simulationData: NodeData
-  label: Text
-}
-
-const localStorageKey = "graph-visited"
-function getVisited(): Set<SimpleSlug> {
-  return new Set(JSON.parse(localStorage.getItem(localStorageKey) ?? "[]"))
-}
-
-function addToVisited(slug: SimpleSlug) {
-  const visited = getVisited()
-  visited.add(slug)
-  localStorage.setItem(localStorageKey, JSON.stringify([...visited]))
-}
-
-type TweenNode = {
-  update: (time: number) => void
-  stop: () => void
-}
-
-async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
-  const slug = simplifySlug(fullSlug)
-  const visited = getVisited()
-  removeAllChildren(graph)
-
-  let {
-    drag: enableDrag,
-    zoom: enableZoom,
-    depth,
-    scale,
-    repelForce,
-    centerForce,
-    linkDistance,
-    fontSize,
-    opacityScale,
-    removeTags,
-    showTags,
-    focusOnHover,
-    enableRadial,
-  } = JSON.parse(graph.dataset["cfg"]!) as D3Config
-
-  const data: Map<SimpleSlug, ContentDetails> = new Map(
-    Object.entries<ContentDetails>(await fetchData).map(([k, v]) => [
-      simplifySlug(k as FullSlug),
-      v,
-    ]),
-  )
-  const links: SimpleLinkData[] = []
-  const tags: SimpleSlug[] = []
-  const validLinks = new Set(data.keys())
-
-  const tweens = new Map<string, TweenNode>()
-  for (const [source, details] of data.entries()) {
-    const outgoing = details.links ?? []
-
-    for (const dest of outgoing) {
-      if (validLinks.has(dest)) {
-        links.push({ source: source, target: dest })
-      }
-    }
-
-    if (showTags) {
-      const localTags = details.tags
-        .filter((tag) => !removeTags.includes(tag))
-        .map((tag) => simplifySlug(("tags/" + tag) as FullSlug))
-
-      tags.push(...localTags.filter((tag) => !tags.includes(tag)))
-
-      for (const tag of localTags) {
-        links.push({ source: source, target: tag })
-      }
-    }
-  }
-
-  const neighbourhood = new Set<SimpleSlug>()
-  const wl: (SimpleSlug | "__SENTINEL")[] = [slug, "__SENTINEL"]
-  if (depth >= 0) {
-    while (depth >= 0 && wl.length > 0) {
-      // compute neighbours
-      const cur = wl.shift()!
-      if (cur === "__SENTINEL") {
-        depth--
-        wl.push("__SENTINEL")
-      } else {
-        neighbourhood.add(cur)
-        const outgoing = links.filter((l) => l.source === cur)
-        const incoming = links.filter((l) => l.target === cur)
-        wl.push(...outgoing.map((l) => l.target), ...incoming.map((l) => l.source))
-      }
-    }
-  } else {
-    validLinks.forEach((id) => neighbourhood.add(id))
-    if (showTags) tags.forEach((tag) => neighbourhood.add(tag))
-  }
-
-  const nodes = [...neighbourhood].map((url) => {
-    const text = url.startsWith("tags/") ? "#" + url.substring(5) : (data.get(url)?.title ?? url)
-    return {
-      id: url,
-      // Aquí el cambio principal: Conservamos el nombre entero en lugar de solo la primera letra
       text: text, 
       tags: data.get(url)?.tags ?? [],
     }
@@ -492,7 +259,7 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
       // if we are hovering over a node, we want to highlight the immediate neighbours
       // with full alpha and the rest with default alpha
       if (hoveredNodeId) {
-        alpha = l.active ? 1 : 0.15 // Rebajado levemente para una estética más limpia de fondo
+        alpha = l.active ? 1 : 0.15 
       }
 
       l.color = l.active ? computedStyleMap["--gray"] : computedStyleMap["--lightgray"]
@@ -513,7 +280,7 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
     const tweenGroup = new TweenGroup()
 
     const defaultScale = 1 / scale
-    const activeScale = defaultScale * 1.05 // Suavizado para que los textos largos no crezcan excesivamente
+    const activeScale = defaultScale * 1.05 
 
     for (const n of nodeRenderData) {
       const nodeId = n.simulationData.id
@@ -613,10 +380,8 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
       eventMode: "none",
       text: n.text,
       alpha: 0,
-      // Anchor en Y ajustado para separar el nombre entero del nodo y que respire visualmente
       anchor: { x: 0.5, y: 1.8 },
       style: {
-        // Reducido levemente el tamaño base para acomodar palabras enteras
         fontSize: fontSize * 12, 
         fill: computedStyleMap["--dark"],
         fontFamily: `${computedStyleMap["--bodyFont"]}, "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", emoji`,
@@ -739,14 +504,12 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
           [0, 0],
           [width, height],
         ])
-        // Rango de zoom ajustado para permitir acercarse lo suficiente sin perderse en el vacío
         .scaleExtent([0.4, 5])
         .on("zoom", ({ transform }) => {
           currentTransform = transform
           stage.scale.set(transform.k, transform.k)
           stage.position.set(transform.x, transform.y)
 
-          // Zoom ajustado para una transición de texto más estética y escalonada
           const scale = transform.k * opacityScale
           let scaleOpacity = Math.max((scale - 0.9) / 2.5, 0)
           const activeNodes = nodeRenderData.filter((n) => n.active).flatMap((n) => n.label)
