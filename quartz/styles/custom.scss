@@ -13,7 +13,7 @@ html, body {
   justify-content: flex-start !important;
   font-size: 18px !important;
   font-family: 'Times New Roman', serif !important; 
-  background-color: #f2e8dc !important; /* Fondo marrón/pergamino por defecto */
+  background-color: #eaad60 !important;
 }
 
 /* =========================================
@@ -392,34 +392,34 @@ button.darkmode:hover *,
    9. REGLAS DE PALETAS (MODO CLARO Y OSCURO)
    ========================================= */
 
-/* MODO CLARO: MARRÓN / ANARANJADO */
+/* MODO CLARO: NUEVA PALETA INVERTIDA */
 html[saved-theme="light"],
 html[data-theme="light"],
 html:not([saved-theme="dark"]) {
-  background-color: #f2e8dc !important;
-  color: #1a1714 !important;
+  background-color: #eaad60 !important;
+  color: #3a0f00 !important;
 
-  --light: #f2e8dc !important;      
-  --lightgray: #e3dac9 !important; 
-  --gray: #a89e95 !important;    
-  --darkgray: #2b2b2b !important;        
-  --dark: #1a1714 !important;        
-  --secondary: #c05621 !important; /* ANARANJADO / ÓXIDO */  
-  --tertiary: #E7C8A0 !important;
+  --light: #eaad60 !important;      
+  --lightgray: #be8548 !important; 
+  --gray: #925e30 !important;    
+  --darkgray: #663618 !important;        
+  --dark: #3a0f00 !important;        
+  --secondary: #3a0f00 !important;  
+  --tertiary: #be8548 !important;
 
   .page, body {
-    background-color: #f2e8dc !important;
-    color: #1a1714 !important;
+    background-color: #eaad60 !important;
+    color: #3a0f00 !important;
   }
 
   .page-title, .page-title a, 
   article h1, article h2, article h3, article h4, article h5, article h6, 
   h1.article-title, .now-heading, .now-date, .now-container summary {
-    color: #c05621 !important;
+    color: #3a0f00 !important;
   }
 
   .links a, .nav-links a, article p a, ul.section-ul li > .desc a {
-    color: #c05621 !important;
+    color: #3a0f00 !important;
     background-color: transparent !important;
   }
 }
@@ -436,7 +436,7 @@ body.dark-mode {
   --lightgray: rgba(224, 234, 245, 0.2) !important; 
   --darkgray: #d6d3d1 !important;    
   --dark: #e0eaf5 !important;        
-  --secondary: #84add7 !important; /* AZUL EN MODO OSCURO */  
+  --secondary: #84add7 !important;  
   --tertiary: #a3c2e1 !important;    
 
   .page, body {

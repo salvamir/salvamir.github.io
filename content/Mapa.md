@@ -51,7 +51,7 @@
     <area target="" alt="Libros" title="Acá guardo todos los libros que me acuerdo de haber leído. Solía ser bastante lector antes." href="https://salvamir.github.io/librería" coords="449,154,585,207" shape="rect">
     <area target="" alt="Ahora" title="Actualizaciones casi diarias de mi vida." href="https://salvamir.github.io/static/ahora.html" coords="316,13,412,112" shape="rect">
     <area target="" alt="Notas" title="Un intento de inmortalizar mi cuadernito. Estoy implementando cosas interesantes." href="https://salvamir.github.io/Notas" coords="347,94,485,180" shape="rect">
-    <area target="" alt="Jardín Digital" title="Lugar dónde plasmo lo que aprendo de mi cabeza." href="https://salvamir.github.io/El-Jardin/" coords="394,49,578,116" shape="rect">
+    <area target="" alt="Jardín Digital" title="Lugar dónde plasmo lo que aprendo de mi cabeza." href="https://salvamir.github.io/El-Jard%C3%ADn/" coords="394,49,578,116" shape="rect">
   </map>
 </div>
 
