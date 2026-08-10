@@ -1,5 +1,7 @@
 import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "./types"
 import style from "./styles/footer.scss"
+import darkmodeStyle from "./styles/darkmode.scss"
+import darkmodeScript from "./scripts/darkmode.inline"
 
 interface Options {
   links: Record<string, string>
@@ -134,6 +136,7 @@ export default ((opts?: Options) => {
     )
   }
 
-  Footer.css = style
+  Footer.beforeJSX = darkmodeScript
+  Footer.css = style + "\n" + darkmodeStyle
   return Footer
 }) satisfies QuartzComponentConstructor

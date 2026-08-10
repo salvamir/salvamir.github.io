@@ -51,7 +51,7 @@
         .feed-container {
             width: 100%;
             max-width: 600px;
-            padding: 3rem 1.5rem;
+            padding: 3rem 1.5rem 1rem 1.5rem;
             box-sizing: border-box;
         }
 
@@ -156,13 +156,24 @@
         .img-box:hover .alt-text {
             opacity: 1;
         }
+
+        /* --- IFRAME FOOTER NATIVO --- */
+        .footer-iframe {
+            width: 100%;
+            max-width: 600px;
+            height: 110px;
+            border: none;
+            overflow: hidden;
+            background: transparent;
+            margin-bottom: 2rem;
+        }
     </style>
 </head>
 <body>
 
 <div class="feed-container">
     <header>
-        <h1><a href="/" title="Volver al inicio">Ahora</a></h1>
+        <h1><a href="/">Ahora</a></h1>
         <p>Archivo de lo que voy viviendo.</p>
     </header>
 
@@ -569,6 +580,9 @@
     </div>
 
 </div>
+
+<!-- FOOTER INTEGRADO DE LA PÁGINA PRINCIPAL -->
+<iframe src="/index.html#footer" class="footer-iframe"></iframe>
 
 </body>
 </html>
