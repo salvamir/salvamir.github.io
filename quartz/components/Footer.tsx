@@ -1,86 +1,68 @@
-import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "./types"
-import style from "./styles/footer.scss"
+"use client";
 
-// SVGs Minimalistas
-const RssIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle>
-  </svg>
-)
+import React from "react";
+// Si usas lucide-react (o puedes reemplazar con tus propios SVGs):
+import { Rss, Mail, Sun, Moon, ArrowUp } from "lucide-react";
 
-const MailIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline>
-  </svg>
-)
+export default function Footer() {
+  const [isDark, setIsDark] = React.useState(true);
 
-const MoonIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-  </svg>
-)
+  // Función para volver al inicio de la página suavemente
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
 
-const SunIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <circle cx="12" cy="12" r="5"></circle>
-    <line x1="12" y1="1" x2="12" y2="3"></line>
-    <line x1="12" y1="21" x2="12" y2="23"></line>
-    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-    <line x1="1" y1="12" x2="3" y2="12"></line>
-    <line x1="21" y1="12" x2="23" y2="12"></line>
-    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-  </svg>
-)
+  const toggleTheme = () => {
+    setIsDark(!isDark);
+    // Lógica adicional de cambio de tema si la usas (ej. document.documentElement.classList.toggle('dark'))
+  };
 
-interface Options {
-  links: Record<string, string>
+  return (
+    <footer className="w-full py-8 flex justify-center items-center">
+      <div className="flex items-center justify-center gap-6">
+        {/* RSS */}
+        <a
+          href="/rss.xml"
+          aria-label="RSS Feed"
+          className="text-[#8e8d8a] transition-none hover:text-[#8e8d8a] focus:outline-none"
+        >
+          <Rss className="w-5 h-5 stroke-[1.75]" />
+        </a>
+
+        {/* Email */}
+        <a
+          href="mailto:tu-email@ejemplo.com"
+          aria-label="Contacto por Email"
+          className="text-[#8e8d8a] transition-none hover:text-[#8e8d8a] focus:outline-none"
+        >
+          <Mail className="w-5 h-5 stroke-[1.75]" />
+        </a>
+
+        {/* Modo Claro / Oscuro */}
+        <button
+          onClick={toggleTheme}
+          aria-label="Cambiar tema"
+          className="text-[#8e8d8a] transition-none hover:text-[#8e8d8a] bg-transparent border-0 p-0 cursor-pointer focus:outline-none"
+        >
+          {isDark ? (
+            <Sun className="w-5 h-5 stroke-[1.75]" />
+          ) : (
+            <Moon className="w-5 h-5 stroke-[1.75]" />
+          )}
+        </button>
+
+        {/* NUEVO: Ir al inicio */}
+        <button
+          onClick={scrollToTop}
+          aria-label="Volver al inicio"
+          className="text-[#8e8d8a] transition-none hover:text-[#8e8d8a] bg-transparent border-0 p-0 cursor-pointer focus:outline-none"
+        >
+          <ArrowUp className="w-5 h-5 stroke-[1.75]" />
+        </button>
+      </div>
+    </footer>
+  );
 }
-
-export default ((opts?: Options) => {
-  const Footer: QuartzComponent = ({ displayClass }: QuartzComponentProps) => {
-    return (
-      <footer class={`${displayClass ?? ""}`}>
-        <div class="footer-controls" style={{ display: 'flex', gap: '1.5rem', justifyContent: 'center' }}>
-          <a href="https://salvamir.github.io/index.xml" aria-label="RSS Feed" title="RSS" style={{ color: 'inherit', background: 'none' }}>
-            <RssIcon/>
-          </a>
-          <a href="mailto:pez.arroz.tabla@proton.me" aria-label="Enviar Email" title="Email" style={{ color: 'inherit', background: 'none' }}>
-            <MailIcon/>
-          </a>
-          <button id="custom-darkmode-btn" aria-label="Cambiar modo" title="Cambiar modo" style={{ background: 'transparent', border: 'none', color: 'inherit', cursor: 'pointer', padding: 0 }}>
-            <span class="icon-moon"><MoonIcon/></span>
-            <span class="icon-sun" style={{ display: 'none' }}><SunIcon/></span>
-          </button>
-        </div>
-      </footer>
-    )
-  }
-
-  // Agregamos el CSS para que los íconos cambien sin necesidad de transiciones/animaciones raras
-  Footer.css = style + `
-    html[saved-theme="dark"] .icon-moon { display: none !important; }
-    html[saved-theme="dark"] .icon-sun { display: block !important; }
-    html[saved-theme="light"] .icon-moon { display: block !important; }
-    html[saved-theme="light"] .icon-sun { display: none !important; }
-  `
-  
-  Footer.afterDOMLoaded = `
-    document.addEventListener("nav", () => {
-      // Modo oscuro nativo
-      const customThemeBtn = document.getElementById("custom-darkmode-btn");
-      if (customThemeBtn) {
-        customThemeBtn.addEventListener("click", () => {
-          const html = document.documentElement;
-          const currentTheme = html.getAttribute("saved-theme") || "light";
-          const newTheme = currentTheme === "light" ? "dark" : "light";
-          html.setAttribute("saved-theme", newTheme);
-          localStorage.setItem("theme", newTheme);
-          document.dispatchEvent(new CustomEvent("themechange", { detail: { theme: newTheme } }));
-        });
-      }
-    })
-  `
-  return Footer
-}) satisfies QuartzComponentConstructor

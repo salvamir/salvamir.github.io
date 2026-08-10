@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ahora — Salva Más De Cerca</title>
     <style>
-        /* --- ESTILOS GENERALES Y PALETA DE COLORES --- */
+        /* --- PALETA DE COLORES Y MODO OSCURO GLOBAL --- */
         :root {
             --bg-main: #1a1714;
             --text-main: #e3dac9;
@@ -13,10 +13,19 @@
             --accent-muted: #B7966C;
             --card-bg: rgba(255, 255, 255, 0.03);
             --border-color: rgba(183, 150, 108, 0.15);
-            --lightbox-bg: rgba(13, 12, 10, 0.92);
         }
 
-        /* --- PALETA MODO OSCURO UNIFICADA --- */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-main: #000000;
+                --text-main: #e0eaf5;
+                --accent-dorado: #e0eaf5;
+                --accent-muted: #84add7;
+                --card-bg: rgba(60, 60, 60, 0.2);
+                --border-color: rgba(224, 234, 245, 0.2);
+            }
+        }
+
         html[data-theme="dark"], body.dark-mode {
             --bg-main: #000000;
             --text-main: #e0eaf5;
@@ -24,7 +33,6 @@
             --accent-muted: #84add7;
             --card-bg: rgba(60, 60, 60, 0.2);
             --border-color: rgba(224, 234, 245, 0.2);
-            --lightbox-bg: rgba(0, 0, 0, 0.95);
         }
 
         body {
@@ -37,7 +45,6 @@
             flex-direction: column;
             align-items: center;
             min-height: 100vh;
-            transition: background-color 0.3s ease, color 0.3s ease;
         }
 
         /* --- CONTENEDOR DEL FEED --- */
@@ -48,7 +55,7 @@
             box-sizing: border-box;
         }
 
-        /* --- ENCABEZADO DE LA PÁGINA --- */
+        /* --- ENCABEZADO --- */
         header {
             text-align: center;
             margin-bottom: 3rem;
@@ -60,20 +67,15 @@
             margin: 0 0 0.5rem 0;
             text-decoration: none;
             display: inline-block;
-            transition: transform 0.2s ease, color 0.2s ease;
-        }
-        header h1 a:hover {
-            transform: scale(1.05);
         }
         header p {
             color: var(--text-main);
             opacity: 0.6;
             font-size: 1rem;
-            margin: 0;
-            margin-top: 0.5rem;
+            margin: 0.5rem 0 0 0;
         }
 
-        /* --- DISEÑO DE LOS POSTS --- */
+        /* --- POST CARDS --- */
         .post-card {
             background-color: var(--card-bg);
             border: 1px solid var(--border-color);
@@ -82,11 +84,6 @@
             margin-bottom: 2.5rem;
             box-sizing: border-box;
             box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-            transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.3s ease;
-        }
-        .post-card:hover {
-            border-color: var(--accent-muted);
-            transform: translateY(-2px);
         }
 
         .post-date {
@@ -112,196 +109,52 @@
             font-size: 1.05rem;
         }
 
+        /* --- GALERÍA DE IMÁGENES PLANA CON ALT TEXT Y CLICKEABLE --- */
         .post-image-wrapper {
             width: 100%;
             border-radius: 8px;
             overflow: hidden;
-            background-color: rgba(0,0,0,0.2);
             border: 1px solid rgba(255, 255, 255, 0.05);
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2px;
+            gap: 6px;
             background-color: var(--bg-main);
         }
-        .post-image-wrapper img {
+
+        .img-box {
+            position: relative;
+            display: block;
+            text-decoration: none;
+            overflow: hidden;
+        }
+
+        .img-box img {
             width: 100%;
             height: 100%;
+            max-height: 400px;
             object-fit: cover;
             display: block;
-            cursor: pointer;
-            transition: opacity 0.2s ease;
-        }
-        .post-image-wrapper img:hover {
-            opacity: 0.85;
         }
 
-        /* --- NUEVO FORMATO: COMPONENTE AUTOMATED SLIDESHOW CAROUSEL --- */
-        .post-slideshow-container {
-            width: 100%;
-            border-radius: 8px;
-            overflow: hidden;
-            background-color: var(--bg-main);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            position: relative;
-            aspect-ratio: 16 / 10;
-        }
-        .post-slideshow-track {
-            display: flex;
-            width: 100%;
-            height: 100%;
-            transition: transform 0.8s cubic-bezier(0.45, 0, 0.55, 1);
-        }
-        .post-slideshow-track img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            flex-shrink: 0;
-            cursor: pointer;
-            transition: opacity 0.2s ease;
-        }
-        .post-slideshow-track img:hover {
-            opacity: 0.85;
-        }
-
-        /* --- LIGHTBOX MODAL ENRIQUECIDO --- */
-        .lightbox-modal {
-            display: none;
-            position: fixed;
-            z-index: 9999;
+        /* Zócalo de Alt Text al hacer hover */
+        .img-box .alt-text {
+            position: absolute;
+            bottom: 0;
             left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: var(--lightbox-bg);
-            backdrop-filter: blur(10px);
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            padding: 2rem;
+            right: 0;
+            background: rgba(0, 0, 0, 0.82);
+            color: #ffffff;
+            font-size: 0.8rem;
+            line-height: 1.35;
+            padding: 8px 10px;
+            opacity: 0;
+            transition: opacity 0.2s ease;
+            pointer-events: none;
             box-sizing: border-box;
         }
-        .lightbox-content {
-            max-width: 90%;
-            max-height: 75vh;
-            border-radius: 12px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.8);
-            border: 1px solid var(--border-color);
-            animation: zoomIn 0.25s ease forwards;
-        }
-        .lightbox-caption {
-            margin-top: 1.5rem;
-            color: var(--accent-dorado);
-            font-family: 'Times New Roman', serif;
-            font-size: 1.15rem;
-            text-align: center;
-            max-width: 600px;
-            line-height: 1.5;
-            animation: fadeIn 0.4s ease forwards;
-        }
-        .close-btn {
-            position: absolute;
-            top: 1.5rem;
-            right: 2rem;
-            color: var(--text-main);
-            font-size: 2.5rem;
-            font-weight: bold;
-            cursor: pointer;
-            transition: color 0.2s;
-            z-index: 10000;
-        }
-        .close-btn:hover {
-            color: var(--accent-muted);
-        }
 
-        /* Flechas del Lightbox */
-        .lightbox-nav {
-            display: none; /* Controlado dinámicamente por JS */
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            color: var(--text-main);
-            font-size: 3rem;
-            font-weight: bold;
-            cursor: pointer;
-            user-select: none;
-            transition: color 0.2s, transform 0.2s;
-            padding: 1.5rem;
-            z-index: 10000;
-        }
-        .lightbox-nav:hover {
-            color: var(--accent-muted);
-            transform: translateY(-50%) scale(1.1);
-        }
-        #prevBtn { left: 1.5rem; }
-        #nextBtn { right: 1.5rem; }
-
-        @media (max-width: 600px) {
-            .lightbox-nav { font-size: 2.2rem; padding: 0.5rem; }
-            #prevBtn { left: 0.5rem; }
-            #nextBtn { right: 0.5rem; }
-        }
-
-        @keyframes zoomIn {
-            from { transform: scale(0.95); opacity: 0; }
-            to { transform: scale(1); opacity: 1; }
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        .lightbox-modal.closing { animation: fadeOutBg 0.25s ease forwards; }
-        .lightbox-modal.closing .lightbox-content,
-        .lightbox-modal.closing .lightbox-caption { animation: zoomOut 0.25s ease forwards; }
-
-        @keyframes fadeOutBg { from { opacity: 1; } to { opacity: 0; } }
-        @keyframes zoomOut { from { transform: scale(1); opacity: 1; } to { transform: scale(0.95); opacity: 0; } }
-
-        /* --- BOTÓN IR ARRIBA --- */
-        #goToTopBtn {
-            display: none;
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            z-index: 998;
-            font-size: 1.5rem;
-            border: 1px solid var(--border-color);
-            outline: none;
-            background-color: var(--lightbox-bg);
-            color: var(--accent-muted);
-            cursor: pointer;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-            transition: background-color 0.3s, transform 0.2s, border-color 0.2s, color 0.3s;
-        }
-        #goToTopBtn:hover {
-            background-color: var(--accent-muted);
-            color: var(--bg-main);
-            border-color: var(--accent-dorado);
-            transform: translateY(-3px);
-        }
-
-        /* --- BOTÓN MODO OSCURO CIRCULAR --- */
-        .dark-mode-toggle {
-            background: none;
-            border: 1px solid var(--border-color);
-            color: var(--text-main);
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
-            cursor: pointer;
-            font-size: 1.2rem;
-            margin: 2rem 0 3rem 0;
-            transition: all 0.3s ease;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .dark-mode-toggle:hover {
-            background-color: var(--card-bg);
-            border-color: var(--accent-dorado);
+        .img-box:hover .alt-text {
+            opacity: 1;
         }
     </style>
 </head>
@@ -320,7 +173,10 @@
             La pachi se recibió finalmente. La verdad que tantos años de estudio deben dejarte agotado. Supongo que ella no se olvidará del 27/07/2026 nunca, yo no me olvidaría.
         </div>
         <div class="post-image-wrapper">
-            <img src="fotos-galeria/recibida.jpeg" alt="Todos juntos." class="lightbox-trigger">
+            <a href="fotos-galeria/recibida.jpeg" target="_blank" class="img-box">
+                <img src="fotos-galeria/recibida.jpeg" alt="Todos juntos.">
+                <span class="alt-text">Todos juntos.</span>
+            </a>
         </div>
     </div>
 
@@ -330,12 +186,19 @@
             <strong>Resumen de Junio en casi la mitad de Julio</strong>
             Me acordé de muchas fotos de momentos lindos de Junio. Quiero subirlos para acordarme que no fue todo solamente estudiar y sufrir y quejarse.
         </div>
-        <div class="post-slideshow-container">
-            <div class="post-slideshow-track">
-                <img src="fotos-galeria/lafamiliaylosprimos.jpg" alt="Vinieron primos a la casa y conversamos y compartimos un rato." class="lightbox-trigger">
-                <img src="fotos-galeria/vamosargentina.jpg" alt="primer indicio que yo humano mortal noté de que estabamos en el mundial" class="lightbox-trigger">
-                <img src="fotos-galeria/confranylatrini.jpg" alt="fue el cumple de fran y comimos con su familia. Hace mucho que no los veo les mando un abrazo enorme." class="lightbox-trigger">
-            </div>
+        <div class="post-image-wrapper">
+            <a href="fotos-galeria/lafamiliaylosprimos.jpg" target="_blank" class="img-box">
+                <img src="fotos-galeria/lafamiliaylosprimos.jpg" alt="Vinieron primos a la casa y conversamos y compartimos un rato.">
+                <span class="alt-text">Vinieron primos a la casa y conversamos y compartimos un rato.</span>
+            </a>
+            <a href="fotos-galeria/vamosargentina.jpg" target="_blank" class="img-box">
+                <img src="fotos-galeria/vamosargentina.jpg" alt="primer indicio que yo humano mortal noté de que estabamos en el mundial">
+                <span class="alt-text">primer indicio que yo humano mortal noté de que estabamos en el mundial</span>
+            </a>
+            <a href="fotos-galeria/confranylatrini.jpg" target="_blank" class="img-box">
+                <img src="fotos-galeria/confranylatrini.jpg" alt="fue el cumple de fran y comimos con su familia. Hace mucho que no los veo les mando un abrazo enorme.">
+                <span class="alt-text">fue el cumple de fran y comimos con su familia. Hace mucho que no los veo les mando un abrazo enorme.</span>
+            </a>
         </div>
     </div>
 
@@ -345,12 +208,19 @@
             <strong>Fuimos a tafí y a la final también.</strong>
             Este es de los primeros mundiales que veo activamente porque no soy muy futbolero pero me estoy re divirtiendo. Nos tomamos una semanita en tafí y los invité a los chicos y se sintió como un mes entero de descanso que hermoso.
         </div>
-        <div class="post-slideshow-container">
-            <div class="post-slideshow-track">
-                <img src="fotos-galeria/camionetabarro.jpeg" alt="fuimos a pescar pero tuvimos un contratiempo..." class="lightbox-trigger">
-                <img src="fotos-galeria/felizcumplemaria.jpeg" alt="feliz cumplee maria espero que lo hayas pasado lindo. Justo cuando somos finalistas que locura" class="lightbox-trigger">
-                <img src="fotos-galeria/jugando.jpeg" alt="nos copamos con Cube Escape Paradox jajajja" class="lightbox-trigger">
-            </div>
+        <div class="post-image-wrapper">
+            <a href="fotos-galeria/camionetabarro.jpeg" target="_blank" class="img-box">
+                <img src="fotos-galeria/camionetabarro.jpeg" alt="fuimos a pescar pero tuvimos un contratiempo...">
+                <span class="alt-text">fuimos a pescar pero tuvimos un contratiempo...</span>
+            </a>
+            <a href="fotos-galeria/felizcumplemaria.jpeg" target="_blank" class="img-box">
+                <img src="fotos-galeria/felizcumplemaria.jpeg" alt="feliz cumplee maria espero que lo hayas pasado lindo. Justo cuando somos finalistas que locura">
+                <span class="alt-text">feliz cumplee maria espero que lo hayas pasado lindo. Justo cuando somos finalistas que locura</span>
+            </a>
+            <a href="fotos-galeria/jugando.jpeg" target="_blank" class="img-box">
+                <img src="fotos-galeria/jugando.jpeg" alt="nos copamos con Cube Escape Paradox jajajja">
+                <span class="alt-text">nos copamos con Cube Escape Paradox jajajja</span>
+            </a>
         </div>
     </div>
   
@@ -360,13 +230,23 @@
             <strong>Recordando tiempos oscuros</strong>
             Me encantan estas cuatro fotos adjuntas porque demuestran muy bien como me esforcé en ser una persona humana sensible y cansable este cuatrimestre espantoso. Para que yo no me diga a mi mismo después que no hago nada más que estudiar sin razón. Estudié y lo hice con mucho empeño, buena onda y muy buena compañía a pesar de todo. 
         </div>
-        <div class="post-slideshow-container">
-            <div class="post-slideshow-track">
-                <img src="fotos-galeria/salvandopaleo.png" alt="jajajaj juancho y yo probablemente nos habremos quedado hasta tarde. Siempre nos quedamos hasta tarde." class="lightbox-trigger">
-                <img src="fotos-galeria/salvandofisica.png" alt="ahora con la emi. Las noches de cowork fueron muchas largas y oscuras. dormí muy poco esos meses. Me da risa ver como fueron cambiando los looks de mi compu, da para charla" class="lightbox-trigger">
-                <img src="fotos-galeria/buenosapuntes.jpg" alt="Fui aprendiendo a administrar mejor la energía a la hora de tomar nota. Ya voy a hablar mejor sobre eso." class="lightbox-trigger">
-                <img src="fotos-galeria/malosapuntes.jpg" alt="Por ejemplo, esta vez no supe administrar bien mi energía a la hora de tomar nota jajahfajhsf. Que locura como influye el &quot;factor humano&quot; en estas cosas. La verdad que lo dí todo. Me encanta comparar estas dos fotos porque se ve con toda claridad lo mucho que me esforcé. Es muy importante descansar, no solo el cuerpo durmiendo bien, sino el alma, dandole lugar a la vida humana." class="lightbox-trigger">
-            </div>
+        <div class="post-image-wrapper">
+            <a href="fotos-galeria/salvandopaleo.png" target="_blank" class="img-box">
+                <img src="fotos-galeria/salvandopaleo.png" alt="jajajaj juancho y yo probablemente nos habremos quedado hasta tarde. Siempre nos quedamos hasta tarde.">
+                <span class="alt-text">jajajaj juancho y yo probablemente nos habremos quedado hasta tarde. Siempre nos quedamos hasta tarde.</span>
+            </a>
+            <a href="fotos-galeria/salvandofisica.png" target="_blank" class="img-box">
+                <img src="fotos-galeria/salvandofisica.png" alt="ahora con la emi. Las noches de cowork fueron muchas largas y oscuras. dormí muy poco esos meses. Me da risa ver como fueron cambiando los looks de mi compu, da para charla">
+                <span class="alt-text">ahora con la emi. Las noches de cowork fueron muchas largas y oscuras. dormí muy poco esos meses. Me da risa ver como fueron cambiando los looks de mi compu, da para charla</span>
+            </a>
+            <a href="fotos-galeria/buenosapuntes.jpg" target="_blank" class="img-box">
+                <img src="fotos-galeria/buenosapuntes.jpg" alt="Fui aprendiendo a administrar mejor la energía a la hora de tomar nota. Ya voy a hablar mejor sobre eso.">
+                <span class="alt-text">Fui aprendiendo a administrar mejor la energía a la hora de tomar nota. Ya voy a hablar mejor sobre eso.</span>
+            </a>
+            <a href="fotos-galeria/malosapuntes.jpg" target="_blank" class="img-box">
+                <img src="fotos-galeria/malosapuntes.jpg" alt="Por ejemplo, esta vez no supe administrar bien mi energía a la hora de tomar nota jajahfajhsf. Que locura como influye el factor humano en estas cosas. La verdad que lo dí todo. Me encanta comparar estas dos fotos porque se ve con toda claridad lo mucho que me esforcé. Es muy importante descansar, no solo el cuerpo durmiendo bien, sino el alma, dandole lugar a la vida humana.">
+                <span class="alt-text">Por ejemplo, esta vez no supe administrar bien mi energía a la hora de tomar nota jajahfajhsf. Que locura como influye el factor humano en estas cosas. La verdad que lo dí todo. Me encanta comparar estas dos fotos porque se ve con toda claridad lo mucho que me esforcé. Es muy importante descansar, no solo el cuerpo durmiendo bien, sino el alma, dandole lugar a la vida humana.</span>
+            </a>
         </div>
     </div>
 
@@ -376,17 +256,39 @@
             <strong>Por fin un breve descanso.</strong>
             Me colgué un poco de subir cosas al blog, pero estuve reflexionando mucho y la nube en la que venía viviendo está de a poquito disipándose.Estoy contento porque el Señor me regaló un respiro. Fue el día de la Patria y lo disfruté mucho. Pasaron varias cosas en esta primer semana de vacaciones, tanto que se siente como si hubiese pasado más tiempo. Empecé folklore. Estoy muy contento porque el invierno/otoño está durando mucho y yo estoy pudiendo disfrutarlo bastante. 
         </div>
-        <div class="post-slideshow-container">
-            <div class="post-slideshow-track">
-                <img src="fotos-galeria/avionfacu.jpg" alt="Facu sacó esta foto de fran volando. La verdad que me encanta." class="lightbox-trigger">
-                <img src="fotos-galeria/camadepier.png" alt="el padre tomás estuvo en la casa de Pier cuando fue su día, que lujo." class="lightbox-trigger">
-                <img src="fotos-galeria/cosasdepier.png" alt="se me hace super interesante y entusiasmante pensar en que esa persona verdaderamente existió y vivió muy cerca de Jesús toda su vida, y hacía cosas normales como tener un cuaderno dónde anotaba cosas." class="lightbox-trigger">
-                <img src="fotos-galeria/elotoñosigue.jpg" alt="gracias Señor por este clima tan acogedor. No quiero olvidarmelo nunca." class="lightbox-trigger">
-                <img src="fotos-galeria/elsol.jpg" alt="disfruté mucho del otoño, gracias gracias gracias. miren de linda que me salió la foto yo la siento casi real. Me pone cursi el invierno." class="lightbox-trigger">
-                <img src="fotos-galeria/emilinda.jpg" alt="con la emi salimos a un bar super lujoso por primera vez y conversamos un montón. Seguro algún día de estos lo documente un poquito." class="lightbox-trigger">
-                <img src="fotos-galeria/viendoelpartido.jpg" alt="DETALLE IMPORTANTE: ARRANCO EL MUNDIAL y Argentina viene muy bien." class="lightbox-trigger">
-                <img src="fotos-galeria/visitapadres.jpg" alt="hoy vinieron los oratorianos dsp de tanto tiempo. Los extrañamos, me regaló mi papá ayer una boina y hoy la regalé yo a un seminarista que parecía quererla mucho. Mi papá no sabe, no le digan jeje." class="lightbox-trigger">
-            </div>
+        <div class="post-image-wrapper">
+            <a href="fotos-galeria/avionfacu.jpg" target="_blank" class="img-box">
+                <img src="fotos-galeria/avionfacu.jpg" alt="Facu sacó esta foto de fran volando. La verdad que me encanta.">
+                <span class="alt-text">Facu sacó esta foto de fran volando. La verdad que me encanta.</span>
+            </a>
+            <a href="fotos-galeria/camadepier.png" target="_blank" class="img-box">
+                <img src="fotos-galeria/camadepier.png" alt="el padre tomás estuvo en la casa de Pier cuando fue su día, que lujo.">
+                <span class="alt-text">el padre tomás estuvo en la casa de Pier cuando fue su día, que lujo.</span>
+            </a>
+            <a href="fotos-galeria/cosasdepier.png" target="_blank" class="img-box">
+                <img src="fotos-galeria/cosasdepier.png" alt="se me hace super interesante y entusiasmante pensar en que esa persona verdaderamente existió y vivió muy cerca de Jesús toda su vida, y hacía cosas normales como tener un cuaderno dónde anotaba cosas.">
+                <span class="alt-text">se me hace super interesante y entusiasmante pensar en que esa persona verdaderamente existió y vivió muy cerca de Jesús toda su vida, y hacía cosas normales como tener un cuaderno dónde anotaba cosas.</span>
+            </a>
+            <a href="fotos-galeria/elotoñosigue.jpg" target="_blank" class="img-box">
+                <img src="fotos-galeria/elotoñosigue.jpg" alt="gracias Señor por este clima tan acogedor. No quiero olvidarmelo nunca.">
+                <span class="alt-text">gracias Señor por este clima tan acogedor. No quiero olvidarmelo nunca.</span>
+            </a>
+            <a href="fotos-galeria/elsol.jpg" target="_blank" class="img-box">
+                <img src="fotos-galeria/elsol.jpg" alt="disfruté mucho del otoño, gracias gracias gracias. miren de linda que me salió la foto yo la siento casi real. Me pone cursi el invierno.">
+                <span class="alt-text">disfruté mucho del otoño, gracias gracias gracias. miren de linda que me salió la foto yo la siento casi real. Me pone cursi el invierno.</span>
+            </a>
+            <a href="fotos-galeria/emilinda.jpg" target="_blank" class="img-box">
+                <img src="fotos-galeria/emilinda.jpg" alt="con la emi salimos a un bar super lujoso por primera vez y conversamos un montón. Seguro algún día de estos lo documente un poquito.">
+                <span class="alt-text">con la emi salimos a un bar super lujoso por primera vez y conversamos un montón. Seguro algún día de estos lo documente un poquito.</span>
+            </a>
+            <a href="fotos-galeria/viendoelpartido.jpg" target="_blank" class="img-box">
+                <img src="fotos-galeria/viendoelpartido.jpg" alt="DETALLE IMPORTANTE: ARRANCO EL MUNDIAL y Argentina viene muy bien.">
+                <span class="alt-text">DETALLE IMPORTANTE: ARRANCO EL MUNDIAL y Argentina viene muy bien.</span>
+            </a>
+            <a href="fotos-galeria/visitapadres.jpg" target="_blank" class="img-box">
+                <img src="fotos-galeria/visitapadres.jpg" alt="hoy vinieron los oratorianos dsp de tanto tiempo. Los extrañamos, me regaló mi papá ayer una boina y hoy la regalé yo a un seminarista que parecía quererla mucho. Mi papá no sabe, no le digan jeje.">
+                <span class="alt-text">hoy vinieron los oratorianos dsp de tanto tiempo. Los extrañamos, me regaló mi papá ayer una boina y hoy la regalé yo a un seminarista que parecía quererla mucho. Mi papá no sabe, no le digan jeje.</span>
+            </a>
         </div>
     </div>
 
@@ -396,16 +298,35 @@
             <strong>Este mes fue infinito. Todos estos meses fueron infinitos. Pero hoy es el día del padre.</strong>
             Además de rendir, cursar, rendir, estudiar y rendir, tuve un poco de vida. Aquí están las pruebas. Feliz día pa! Te mereces un descanso.
         </div>
-        <div class="post-slideshow-container">
-            <div class="post-slideshow-track">
-                <img src="fotos-galeria/diadelpadre.jpeg" alt="gracias pa por tanto te queremos" class="lightbox-trigger">
-                <img src="fotos-galeria/emiii.jpg" alt="miren que linda" class="lightbox-trigger">
-                <img src="fotos-galeria/emiyydrac.jpg" alt="siambonando" class="lightbox-trigger">
-                <img src="fotos-galeria/chorizos.jpg" alt="chorizos aegeticos" class="lightbox-trigger">
-                <img src="fotos-galeria/cowork.jpg" alt="esta fotito representa mejor que ninguna como fueron estos meses. Gracias lopes por tu compañía." class="lightbox-trigger">
-                <img src="fotos-galeria/nuevoorden.jpg" alt="Cambié un poquito las cosas de lugar" class="lightbox-trigger">
-                <img src="fotos-galeria/juanysalva.jpg" alt="con poliedro como siempre" class="lightbox-trigger">
-            </div>
+        <div class="post-image-wrapper">
+            <a href="fotos-galeria/diadelpadre.jpeg" target="_blank" class="img-box">
+                <img src="fotos-galeria/diadelpadre.jpeg" alt="gracias pa por tanto te queremos">
+                <span class="alt-text">gracias pa por tanto te queremos</span>
+            </a>
+            <a href="fotos-galeria/emiii.jpg" target="_blank" class="img-box">
+                <img src="fotos-galeria/emiii.jpg" alt="miren que linda">
+                <span class="alt-text">miren que linda</span>
+            </a>
+            <a href="fotos-galeria/emiyydrac.jpg" target="_blank" class="img-box">
+                <img src="fotos-galeria/emiyydrac.jpg" alt="siambonando">
+                <span class="alt-text">siambonando</span>
+            </a>
+            <a href="fotos-galeria/chorizos.jpg" target="_blank" class="img-box">
+                <img src="fotos-galeria/chorizos.jpg" alt="chorizos aegeticos">
+                <span class="alt-text">chorizos aegeticos</span>
+            </a>
+            <a href="fotos-galeria/cowork.jpg" target="_blank" class="img-box">
+                <img src="fotos-galeria/cowork.jpg" alt="esta fotito representa mejor que ninguna como fueron estos meses. Gracias lopes por tu compañía.">
+                <span class="alt-text">esta fotito representa mejor que ninguna como fueron estos meses. Gracias lopes por tu compañía.</span>
+            </a>
+            <a href="fotos-galeria/nuevoorden.jpg" target="_blank" class="img-box">
+                <img src="fotos-galeria/nuevoorden.jpg" alt="Cambié un poquito las cosas de lugar">
+                <span class="alt-text">Cambié un poquito las cosas de lugar</span>
+            </a>
+            <a href="fotos-galeria/juanysalva.jpg" target="_blank" class="img-box">
+                <img src="fotos-galeria/juanysalva.jpg" alt="con poliedro como siempre">
+                <span class="alt-text">con poliedro como siempre</span>
+            </a>
         </div>
     </div>
 
@@ -416,7 +337,10 @@
             Me da curiosidad este país.
         </div>
         <div class="post-image-wrapper">
-            <img src="fotos-galeria/paraguay.png" alt="Mis papas la sacaron cuando se fueron de cita por unas semanas allá." class="lightbox-trigger">
+            <a href="fotos-galeria/paraguay.png" target="_blank" class="img-box">
+                <img src="fotos-galeria/paraguay.png" alt="Mis papas la sacaron cuando se fueron de cita por unas semanas allá.">
+                <span class="alt-text">Mis papas la sacaron cuando se fueron de cita por unas semanas allá.</span>
+            </a>
         </div>
     </div>
 
@@ -427,7 +351,10 @@
             La Emi me volvió adicto a los cafeistos y Fran me hizo ejercer la adicción. Hablamos de cosas tremendas, como la digitalización de la vida y lo raro que se siente. También de como Google eventualmente iba a conquistar el planeta.
         </div>
         <div class="post-image-wrapper">
-            <img src="fotos-galeria/franysalva.jpg" alt="la foto no me favorece para nada, pasa que recién volvía de tafí." class="lightbox-trigger">
+            <a href="fotos-galeria/franysalva.jpg" target="_blank" class="img-box">
+                <img src="fotos-galeria/franysalva.jpg" alt="la foto no me favorece para nada, pasa que recién volvía de tafí.">
+                <span class="alt-text">la foto no me favorece para nada, pasa que recién volvía de tafí.</span>
+            </a>
         </div>
     </div>
 
@@ -438,7 +365,10 @@
            Fue linda la campaña pero me dejó muerto. Lo peor de ir de caminata no es que caminemos mucho, es que paramos cada dos minutos por media hora y eso te cansa mucho. Aparte no habia llegado a afeitarme.
         </div>
         <div class="post-image-wrapper">
-            <img src="fotos-galeria/catrielysalva.jpg" alt="Estabamos muestreando (no estabamos muestreando claramente)." class="lightbox-trigger">
+            <a href="fotos-galeria/catrielysalva.jpg" target="_blank" class="img-box">
+                <img src="fotos-galeria/catrielysalva.jpg" alt="Estabamos muestreando (no estabamos muestreando claramente).">
+                <span class="alt-text">Estabamos muestreando (no estabamos muestreando claramente).</span>
+            </a>
         </div>
     </div>
 
@@ -449,7 +379,10 @@
             Acaba de empezar la semana y estabamos todos cansados. Fran nos invitó a tomar un café a la Shell. Es muy gracioso como es un evento masculino tomar un café en una estación de servicio. Hablamos de varias cosas como la frustración, las novias, el paso del tiempo, el futuro, el trabajo, el estudio y nuestros miedos. Estabamos todos un poquito bajoneados, quizás es la famosa crisis de los 20.
         </div>
         <div class="post-image-wrapper">
-            <img src="fotos-galeria/franyfacu.jpg" alt="Facu nunca te devolví la plata del cafe perdón. Dejá de tirarte para abajo, lo estás haciendo muy bien." class="lightbox-trigger">
+            <a href="fotos-galeria/franyfacu.jpg" target="_blank" class="img-box">
+                <img src="fotos-galeria/franyfacu.jpg" alt="Facu nunca te devolví la plata del cafe perdón. Dejá de tirarte para abajo, lo estás haciendo muy bien.">
+                <span class="alt-text">Facu nunca te devolví la plata del cafe perdón. Dejá de tirarte para abajo, lo estás haciendo muy bien.</span>
+            </a>
         </div>
     </div>
 
@@ -460,7 +393,10 @@
             En mi casa, mi mamá nos quiere a los varones como los cuidadores oficiales del jardín. Todos lo intentamos y tratamos de perseverar lo más que se puede. En el verano más que nada hacemos algo. Yo tengo la condición de tocar-matar en la jardinería. Así que estoy entrenando, esta va a ser mi primer plantita oficialmente mía y voy a encargarme de no muera. Voy a estar contandoles como viene la mano.
         </div>
         <div class="post-image-wrapper">
-            <img src="fotos-galeria/suculenta.jpg" alt="se la ve bien por ahora. Quiero tener más plantitas en macetas. me está gustando su presencia en mi cuarto." class="lightbox-trigger">
+            <a href="fotos-galeria/suculenta.jpg" target="_blank" class="img-box">
+                <img src="fotos-galeria/suculenta.jpg" alt="se la ve bien por ahora. Quiero tener más plantitas en macetas. me está gustando su presencia en mi cuarto.">
+                <span class="alt-text">se la ve bien por ahora. Quiero tener más plantitas en macetas. me está gustando su presencia en mi cuarto.</span>
+            </a>
         </div>
     </div>
 
@@ -471,10 +407,13 @@
             Hoy deberíamos todos tener una escarapela.
         </div>
         <div class="post-image-wrapper">
-            <img src="fotos-galeria/25demayo.jpg" alt="me encanta este dibujito, estoy a punto de usarlo de badge." class="lightbox-trigger">
+            <a href="fotos-galeria/25demayo.jpg" target="_blank" class="img-box">
+                <img src="fotos-galeria/25demayo.jpg" alt="me encanta este dibujito, estoy a punto de usarlo de badge.">
+                <span class="alt-text">me encanta este dibujito, estoy a punto de usarlo de badge.</span>
+            </a>
         </div>
     </div>
-    
+
     <div class="post-card">
         <div class="post-date">24/05/2026</div>
         <div class="post-text">
@@ -482,10 +421,16 @@
             la idea era hacer un antes y un después pero hice solo un antes.
         </div> 
         <div class="post-image-wrapper">
-            <img src="fotos-galeria/desorden.jpg" alt="todo eso guarde vieron? bueno, mi mama lo hace todos los días" class="lightbox-trigger">
-            <img src="fotos-galeria/desordenn.jpg" alt="esto también" class="lightbox-trigger">
+            <a href="fotos-galeria/desorden.jpg" target="_blank" class="img-box">
+                <img src="fotos-galeria/desorden.jpg" alt="todo eso guarde vieron? bueno, mi mama lo hace todos los días">
+                <span class="alt-text">todo eso guarde vieron? bueno, mi mama lo hace todos los días</span>
+            </a>
+            <a href="fotos-galeria/desordenn.jpg" target="_blank" class="img-box">
+                <img src="fotos-galeria/desordenn.jpg" alt="esto también">
+                <span class="alt-text">esto también</span>
+            </a>
         </div>
-     </div>
+    </div>
 
     <div class="post-card">
         <div class="post-date">20/05/2026</div>
@@ -494,10 +439,22 @@
             Me encanta cómo se ve el otoño. Acá es como que el sol es muy brillante y todo se ve en reposo. Es muy descansador.
         </div>
         <div class="post-image-wrapper">
-            <img src="fotos-galeria/otoñoenlafacultad.jpg" alt="el otoño es la mejor estación sin duda" class="lightbox-trigger">
-            <img src="fotos-galeria/casadelvecino.jpg" alt="me encanta cuando las hojas se ven como acariciadas por el sol" class="lightbox-trigger">
-            <img src="fotos-galeria/arbolysol.jpg" alt="se siente re limpio todo no?" class="lightbox-trigger">
-            <img src="fotos-galeria/arbolsoleado.jpeg" alt="esta foto no es de hoy pero miren esta genial el sol a eso me refiero" class="lightbox-trigger">
+            <a href="fotos-galeria/otoñoenlafacultad.jpg" target="_blank" class="img-box">
+                <img src="fotos-galeria/otoñoenlafacultad.jpg" alt="el otoño es la mejor estación sin duda">
+                <span class="alt-text">el otoño es la mejor estación sin duda</span>
+            </a>
+            <a href="fotos-galeria/casadelvecino.jpg" target="_blank" class="img-box">
+                <img src="fotos-galeria/casadelvecino.jpg" alt="me encanta cuando las hojas se ven como acariciadas por el sol">
+                <span class="alt-text">me encanta cuando las hojas se ven como acariciadas por el sol</span>
+            </a>
+            <a href="fotos-galeria/arbolysol.jpg" target="_blank" class="img-box">
+                <img src="fotos-galeria/arbolysol.jpg" alt="se siente re limpio todo no?">
+                <span class="alt-text">se siente re limpio todo no?</span>
+            </a>
+            <a href="fotos-galeria/arbolsoleado.jpeg" target="_blank" class="img-box">
+                <img src="fotos-galeria/arbolsoleado.jpeg" alt="esta foto no es de hoy pero miren esta genial el sol a eso me refiero">
+                <span class="alt-text">esta foto no es de hoy pero miren esta genial el sol a eso me refiero</span>
+            </a>
         </div>
     </div>
 
@@ -508,7 +465,10 @@
             Quedaba un poco más lejos. Hablamos de lo frustrado que me sentí por la facultad.
         </div>
         <div class="post-image-wrapper">
-            <img src="fotos-galeria/emisonriendo.jpg" alt="hacia un friiio, para vos salva del futuro que después lo extrañas" class="lightbox-trigger">
+            <a href="fotos-galeria/emisonriendo.jpg" target="_blank" class="img-box">
+                <img src="fotos-galeria/emisonriendo.jpg" alt="hacia un friiio, para vos salva del futuro que después lo extrañas">
+                <span class="alt-text">hacia un friiio, para vos salva del futuro que después lo extrañas</span>
+            </a>
         </div>
     </div>
 
@@ -519,8 +479,14 @@
             Drac festejó su cumple en su casa, Germán cocinó las hamburguesas a la parrilla. Fran y yo llegamos cuando todo ya estaba hecho y las novias estaban invitadas. Nos sacamos un par de fotos. Tocamos la "Chacarera Del Desautado".
         </div>
         <div class="post-image-wrapper">
-            <img src="fotos-galeria/cumpledracc.jpeg" alt="mirenlo a german es glorioso (esbroma)" class="lightbox-trigger">
-            <img src="fotos-galeria/cumpledraccc.jpeg" alt="fran tio como te quiero" class="lightbox-trigger">
+            <a href="fotos-galeria/cumpledracc.jpeg" target="_blank" class="img-box">
+                <img src="fotos-galeria/cumpledracc.jpeg" alt="mirenlo a german es glorioso (esbroma)">
+                <span class="alt-text">mirenlo a german es glorioso (esbroma)</span>
+            </a>
+            <a href="fotos-galeria/cumpledraccc.jpeg" target="_blank" class="img-box">
+                <img src="fotos-galeria/cumpledraccc.jpeg" alt="fran tio como te quiero">
+                <span class="alt-text">fran tio como te quiero</span>
+            </a>
         </div>
     </div>
 
@@ -531,7 +497,10 @@
             Salimos con la Emi a comer hamburguesas para conversar y ponernos al día por un rato. Venimos teniendo semanas muy largas y frías.
         </div>
         <div class="post-image-wrapper">
-            <img src="fotos-galeria/hamburguesaspostpascua.jpg" alt="es objetivamente mejor la pepsi que la coca" class="lightbox-trigger">
+            <a href="fotos-galeria/hamburguesaspostpascua.jpg" target="_blank" class="img-box">
+                <img src="fotos-galeria/hamburguesaspostpascua.jpg" alt="es objetivamente mejor la pepsi que la coca">
+                <span class="alt-text">es objetivamente mejor la pepsi que la coca</span>
+            </a>
         </div>
     </div>
 
@@ -542,7 +511,10 @@
             Al final salió todo bien. Estuve sin celular por esos días y me sirvió mucho para entregarme a los otros.
         </div>
         <div class="post-image-wrapper">
-            <img src="fotos-galeria/conloschicos.jpg" alt="llevé el micro celu y saqué varias fotitos wuju" class="lightbox-trigger">
+            <a href="fotos-galeria/conloschicos.jpg" target="_blank" class="img-box">
+                <img src="fotos-galeria/conloschicos.jpg" alt="llevé el micro celu y saqué varias fotitos wuju">
+                <span class="alt-text">llevé el micro celu y saqué varias fotitos wuju</span>
+            </a>
         </div>
     </div>
 
@@ -553,8 +525,14 @@
             Fuimos con los chicos a buscar madera para que lolo pueda tallar. Terminamos talando un árbol.
         </div>
         <div class="post-image-wrapper">
-            <img src="fotos-galeria/coyuyo.jpg" alt="una metamorfala!" class="lightbox-trigger">
-            <img src="fotos-galeria/frangerman.jpg" alt="de que hablarán..." class="lightbox-trigger">
+            <a href="fotos-galeria/coyuyo.jpg" target="_blank" class="img-box">
+                <img src="fotos-galeria/coyuyo.jpg" alt="una metamorfala!">
+                <span class="alt-text">una metamorfala!</span>
+            </a>
+            <a href="fotos-galeria/frangerman.jpg" target="_blank" class="img-box">
+                <img src="fotos-galeria/frangerman.jpg" alt="de que hablarán...">
+                <span class="alt-text">de que hablarán...</span>
+            </a>
         </div>
     </div>
 
@@ -565,8 +543,14 @@
             Hoy la Emi de la nada me llamó para preguntarme si quería salir a comer papas. Le dije que si.
         </div>
         <div class="post-image-wrapper">
-            <img src="fotos-galeria/comiendopapas.jpg" alt="está bueno animarse a salir de la nada che" class="lightbox-trigger">
-            <img src="fotos-galeria/sonriendopapas.jpg" alt="estaban ricas" class="lightbox-trigger">
+            <a href="fotos-galeria/comiendopapas.jpg" target="_blank" class="img-box">
+                <img src="fotos-galeria/comiendopapas.jpg" alt="está bueno animarse a salir de la nada che">
+                <span class="alt-text">está bueno animarse a salir de la nada che</span>
+            </a>
+            <a href="fotos-galeria/sonriendopapas.jpg" target="_blank" class="img-box">
+                <img src="fotos-galeria/sonriendopapas.jpg" alt="estaban ricas">
+                <span class="alt-text">estaban ricas</span>
+            </a>
         </div>
     </div>
 
@@ -577,167 +561,14 @@
             Fue medio agotador, pero estuvo genial, los chicos le pusieron un montón de esfuerzo, recen por nosotros, para que salga todo bien.
         </div>
         <div class="post-image-wrapper">
-            <img src="fotos-galeria/prepascua.jpg" alt="teniamos un miedo tio chaval macho" class="lightbox-trigger">
+            <a href="fotos-galeria/prepascua.jpg" target="_blank" class="img-box">
+                <img src="fotos-galeria/prepascua.jpg" alt="teniamos un miedo tio chaval macho">
+                <span class="alt-text">teniamos un miedo tio chaval macho</span>
+            </a>
         </div>
     </div>
 
 </div>
 
-    <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Cambiar modo">
-        ☀️
-    </button>
-
-    <div id="lightboxModal" class="lightbox-modal">
-        <span class="close-btn" id="closeBtn">&times;</span>
-        <span class="lightbox-nav" id="prevBtn">&#10094;</span>
-        <img class="lightbox-content" id="lightboxImg">
-        <span class="lightbox-nav" id="nextBtn">&#10095;</span>
-        <div class="lightbox-caption" id="lightboxCaption"></div>
-    </div>
-
-    <button id="goToTopBtn" title="Volver arriba">&#8593;</button> 
-
-    <script>
-        const modal = document.getElementById('lightboxModal');
-        const modalImg = document.getElementById('lightboxImg');
-        const captionText = document.getElementById('lightboxCaption');
-        const closeBtn = document.getElementById('closeBtn');
-        const prevBtn = document.getElementById('prevBtn');
-        const nextBtn = document.getElementById('nextBtn');
-        
-        let isModalOpen = false;
-        let currentGalleryImages = [];
-        let currentGalleryIndex = 0;
-
-        function closeModal() {
-            if (!isModalOpen || modal.classList.contains("closing")) return;
-            modal.classList.add("closing");
-            setTimeout(() => {
-                modal.style.display = 'none';
-                modal.classList.remove("closing");
-                isModalOpen = false;
-            }, 250);
-        }
-
-        // Sincroniza visualmente la foto abierta y gestiona si mostrar o no las flechas
-        function updateLightboxView() {
-            if (currentGalleryImages.length > 0) {
-                const activeImg = currentGalleryImages[currentGalleryIndex];
-                modalImg.src = activeImg.src;
-                captionText.innerText = activeImg.alt || "";
-
-                if (currentGalleryImages.length > 1) {
-                    prevBtn.style.display = 'block';
-                    nextBtn.style.display = 'block';
-                } else {
-                    prevBtn.style.display = 'none';
-                    nextBtn.style.display = 'none';
-                }
-            }
-        }
-
-        function showNextImage(e) {
-            if (e) e.stopPropagation();
-            if (currentGalleryImages.length <= 1) return;
-            currentGalleryIndex = (currentGalleryIndex + 1) % currentGalleryImages.length;
-            updateLightboxView();
-        }
-
-        function showPrevImage(e) {
-            if (e) e.stopPropagation();
-            if (currentGalleryImages.length <= 1) return;
-            currentGalleryIndex = (currentGalleryIndex - 1 + currentGalleryImages.length) % currentGalleryImages.length;
-            updateLightboxView();
-        }
-
-        // Event listener dinámico adaptado para agrupar las imágenes de CADA post independientemente
-        document.querySelectorAll('.lightbox-trigger').forEach(image => {
-            image.addEventListener('click', () => {
-                const parentCard = image.closest('.post-card');
-                if (parentCard) {
-                    currentGalleryImages = Array.from(parentCard.querySelectorAll('.lightbox-trigger'));
-                    currentGalleryIndex = currentGalleryImages.indexOf(image);
-                } else {
-                    currentGalleryImages = [image];
-                    currentGalleryIndex = 0;
-                }
-                
-                modal.style.display = 'flex';
-                updateLightboxView();
-                isModalOpen = true;
-            });
-        });
-
-        // Controles interactivos del Lightbox
-        closeBtn.addEventListener('click', closeModal);
-        nextBtn.addEventListener('click', showNextImage);
-        prevBtn.addEventListener('click', showPrevImage);
-        
-        modal.addEventListener('click', (e) => { 
-            if (e.target === modal) closeModal(); 
-        });
-        
-        document.addEventListener('keydown', (e) => { 
-            if (e.key === "Escape") closeModal(); 
-            if (isModalOpen && currentGalleryImages.length > 1) {
-                if (e.key === "ArrowRight") showNextImage();
-                if (e.key === "ArrowLeft") showPrevImage();
-            }
-        });
-
-        window.addEventListener('scroll', () => { if (isModalOpen) closeModal(); });
-
-        // --- SISTEMA AUTOMATIZADO DE DESPLAZAMIENTO SUAVE (20 SEGUNDOS) ---
-        document.querySelectorAll('.post-slideshow-container').forEach(container => {
-            const track = container.querySelector('.post-slideshow-track');
-            const slides = track ? track.querySelectorAll('img') : [];
-            if (slides.length <= 1) return;
-
-            let currentIndex = 0;
-            setInterval(() => {
-                currentIndex = (currentIndex + 1) % slides.length;
-                track.style.transform = `translateX(-${currentIndex * 100}%)`;
-            }, 20000); // Ejecuta cada exactamente 20000ms (20 segundos)
-        });
-
-        // --- BOTÓN IR ARRIBA ---
-        const goToTopBtn = document.getElementById("goToTopBtn");
-        window.addEventListener('scroll', () => {
-            if (isModalOpen) return; 
-            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-                goToTopBtn.style.display = "block";
-            } else {
-                goToTopBtn.style.display = "none";
-            }
-        });
-        goToTopBtn.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-
-        // --- LÓGICA DE MODO OSCURO GLOBAL PERSISTENTE ---
-        const toggleBtn = document.getElementById('darkModeToggle');
-        const htmlRoot = document.documentElement;
-
-        function applyTheme(theme) {
-            if (theme === 'dark') {
-                document.body.classList.add('dark-mode');
-                htmlRoot.setAttribute('data-theme', 'dark');
-                toggleBtn.innerText = "🌙";
-            } else {
-                document.body.classList.remove('dark-mode');
-                htmlRoot.setAttribute('data-theme', 'light');
-                toggleBtn.innerText = "☀️";
-            }
-        }
-
-        const savedTheme = localStorage.getItem('theme') || 'light';
-        applyTheme(savedTheme);
-
-        toggleBtn.addEventListener('click', () => {
-            const currentTheme = htmlRoot.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-            localStorage.setItem('theme', currentTheme);
-            applyTheme(currentTheme);
-        });
-    </script>
 </body>
 </html>

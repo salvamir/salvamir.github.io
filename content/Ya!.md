@@ -1,16 +1,13 @@
 <div class="now-container">
-
 <p class="now-intro">
 Acá se encuentran actualizaciones relativamente continuas de las etapas que estoy viviendo. Sirve como un almacenamiento más específicos de las etapas que me tocan.
 </p>
-
 <section class="now-card">
 <div class="now-date">Agosto 2026</div>
 <div class="now-content">
 <p>Acabo de terminar las vacaciones y estoy todavía esforzandome en preparar la cabeza. Mañana arrancan las clases y estoy motivado, pero no termino de aceptarlo. Me estoy esforzando en no priorizar tanto la facultad y en enfocarme más en descansar humanamente también. Doy gracias por el hermoso descanso que tuve. Doy gracias por todos los propositos nuevos para este cuatrimestre, confío en el futuro que Dios me prepara. Se que el está obrando mucho en mi vida, lo he visto y se que sigue hacerlo. Brindis por este nuevo arranque!</p>
 </div>
 </section>
-
 <details>
 <summary><span>Previamente…</span></summary>
 <ul class="now-events">
@@ -31,7 +28,5 @@ Acá se encuentran actualizaciones relativamente continuas de las etapas que est
 </div>
 </li>
 </ul>
-
 </details>
-
 </div>
