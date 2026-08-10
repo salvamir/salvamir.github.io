@@ -1,6 +1,3 @@
----
-cssclasses: blog-post
----
 <style>
     .book-collection {
         background-color: var(--surface, transparent);

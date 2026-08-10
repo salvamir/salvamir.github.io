@@ -1,7 +1,3 @@
----
-cssclasses: blog-post
----
-
 <style>
     .timeline-container {
         font-family: var(--sans);
