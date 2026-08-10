@@ -1,7 +1,7 @@
 @use "./base.scss";
 
 /* =========================================
-   1. CENTRADO GLOBAL ABSOLUTO (BODY Y HTML)
+   1. TAMAÑO GLOBAL Y CENTRADO
    ========================================= */
 html, body {
   margin: 0 !important;
@@ -11,7 +11,7 @@ html, body {
   flex-direction: column !important;
   align-items: center !important;
   justify-content: flex-start !important;
-  font-size: 16px !important; 
+  font-size: 18px !important; /* Texto global más grande (18px base) */
   font-family: 'Times New Roman', serif !important; 
 }
 
@@ -35,7 +35,7 @@ html, body {
   flex-direction: column !important;
   align-items: center !important;
   width: 100% !important;
-  max-width: 700px !important;    
+  max-width: 720px !important;    
   margin: 0 auto !important;
   padding: 3rem 1.5rem !important;  
   box-sizing: border-box !important;
@@ -49,7 +49,7 @@ html, body {
   box-sizing: border-box !important;
 }
 
-/* Ocultar completamente las barras laterales y el EXPLORADOR */
+/* Ocultar barras laterales */
 .sidebar, .left, .right, .explorer {
   display: none !important;
   width: 0 !important;
@@ -60,7 +60,7 @@ html, body {
 }
 
 /* =========================================
-   3. HEADER LIMPIO Y CENTRADO
+   3. HEADER Y NAVEGACIÓN
    ========================================= */
 header, .page-header header {
   display: flex !important;
@@ -68,21 +68,18 @@ header, .page-header header {
   align-items: center !important; 
   text-align: center !important;
   width: 100% !important;
-  max-width: 700px !important;
+  max-width: 720px !important;
   margin: 0 auto 2rem auto !important;
   padding: 0 !important;
   gap: 0.5rem !important;
   background: transparent !important;
-  background-color: transparent !important;
   border: none !important;
-  border-radius: 0 !important;
-  box-shadow: none !important;
 }
 
 .page-title, .page-title a {
   font-family: 'Times New Roman', serif !important; 
-  font-size: 2.5rem !important; 
-  color: #E7C8A0 !important;
+  font-size: 2.6rem !important; 
+  color: var(--secondary) !important;
   margin: 0 !important;
   font-weight: 700 !important;
 }
@@ -101,15 +98,22 @@ header, .page-header header {
 
 .links a, .nav-links a {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif !important; 
-  color: #e3dac9 !important;      
+  color: var(--secondary) !important;      
   text-decoration: none !important;
   font-size: 1.15rem !important;
   font-weight: 500 !important;
 }
 
 /* =========================================
-   4. TÍTULOS Y METADATOS (OCULTOS POR DEFECTO)
+   4. TÍTULOS Y ENCABEZADOS (MODO CLARO Y OSCURO)
    ========================================= */
+article h1, article h2, article h3, article h4, article h5, article h6,
+h1.article-title, .content-meta, .tags { 
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif !important; 
+    color: var(--secondary) !important;
+}
+
+/* Control de visualización de títulos principales */
 article h1.article-title, 
 article .article-title,
 article .content-meta,
@@ -118,7 +122,6 @@ article .content-meta,
     display: none !important;
 }
 
-/* Mostrar SOLO en las notas dentro del directorio /Notas */
 body[data-slug^="Notas/"] article h1.article-title, 
 body[data-slug^="Notas/"] article .article-title,
 body[data-slug^="Notas/"] article .content-meta {
@@ -126,334 +129,8 @@ body[data-slug^="Notas/"] article .content-meta {
 }
 
 /* =========================================
-   5. OCULTAR GRAFO (EXCEPTO EN JARDÍN)
+   5. LÍNEA DE TIEMPO / NOTA YA!
    ========================================= */
-.graph, .graph-outer, #graph-container, .component.graph, .backlinks, .component.backlinks {
-  display: none !important;
-}
-
-/* Mostrar Grafo por slug o cssclass */
-body[data-slug^="El-Jardín"] .graph, body[data-slug^="El-Jardin"] .graph,
-body[data-slug="El-Jardín"] .graph, body[data-slug="El-Jardin"] .graph,
-.el-jardin .graph {
-  display: block !important;
-  height: 400px !important;
-  margin-top: 2rem !important;
-  margin-bottom: 3rem !important;
-  border: 2px solid rgba(168, 158, 149, 0.3) !important;
-  border-radius: 12px !important;
-  background-color: rgba(0, 0, 0, 0.15) !important;
-  overflow: hidden !important;
-}
-
-/* =========================================
-   6. FOOTER Y TEXTOS PRINCIPALES
-   ========================================= */
-hr, .center > hr, .page > hr {
-  display: none !important;
-}
-
-footer {
-  text-align: center !important;
-  margin-top: 3rem !important;
-  padding-bottom: 2rem !important;
-  border: none !important;
-  border-top: none !important;
-  box-shadow: none !important;
-  outline: none !important;
-}
-
-article p, article li {
-  font-size: 0.95rem !important; 
-  line-height: 1.6 !important; 
-}
-
-article p {
-  margin-bottom: 1.5rem !important; 
-}
-
-/* =========================================
-   7. PARED DE BADGES RETRO
-   ========================================= */
-.badge-wall {
-  display: flex !important;
-  flex-direction: row !important;
-  flex-wrap: wrap !important;
-  justify-content: center !important; 
-  gap: 8px !important;                
-  margin: 2rem 0 !important;
-}
-
-.badge-wall a {
-  display: inline-block !important;
-  border: none !important;          
-  padding: 0 !important;
-  margin: 0 !important;
-  background: none !important;
-}
-
-.badge-wall img {
-  width: 88px !important;            
-  height: 31px !important;          
-  object-fit: fill !important;      
-  display: block !important;
-}
-
-.badge-wall a::after, .badge-wall a svg, .badge-wall a .external-link-icon {
-  display: none !important;
-}
-
-/* ==========================================
-   8. MENÚS / CALLOUTS
-   ========================================== */
-.callout {
-  padding: 0.8rem 1.2rem !important; 
-  margin: 1rem 0 !important;
-  height: auto !important;
-  border-radius: 8px !important;
-}
-
-.callout .callout-icon { display: none !important; }
-
-.callout .callout-title {
-  display: flex !important;
-  flex-direction: row !important;
-  align-items: center !important;
-  justify-content: space-between !important; 
-  margin: 0 !important;
-  padding: 0 !important;
-  width: 100% !important; 
-}
-
-.callout .callout-title .callout-title-inner { 
-  margin: 0 !important; 
-  flex: 1 !important; 
-  text-align: left !important;
-}
-
-.callout .fold-icon {
-  margin: 0 !important;
-  display: flex !important;
-  align-items: center !important;
-}
-
-.callout .callout-content {
-  padding: 0 !important;
-  margin: 0 !important;
-}
-
-.callout[data-callout="info"] { border-color: #d4b895 !important; background-color: rgba(212, 184, 149, 0.1) !important; }
-.callout[data-callout="info"] .callout-title { color: #d4b895 !important; }
-.callout[data-callout="error"] { border-color: #82b0a2 !important; background-color: rgba(130, 176, 162, 0.1) !important; }
-.callout[data-callout="error"] .callout-title { color: #82b0a2 !important; }
-.callout[data-callout="abstract"] { border-color: #9c8a7b !important; background-color: rgba(156, 138, 123, 0.1) !important; }
-.callout[data-callout="abstract"] .callout-title { color: #9c8a7b !important; }
-.callout[data-callout="success"] { border-color: #cda34f !important; background-color: rgba(205, 163, 79, 0.1) !important; }
-.callout[data-callout="success"] .callout-title { color: #cda34f !important; }
-.callout[data-callout="note"] { border-color: #a06a50 !important; background-color: rgba(160, 106, 80, 0.1) !important; }
-.callout[data-callout="note"] .callout-title { color: #a06a50 !important; }
-.callout[data-callout="todo"] { border-color: #b59b7c !important; background-color: rgba(181, 155, 124, 0.1) !important; }
-.callout[data-callout="todo"] .callout-title { color: #b59b7c !important; }
-.callout[data-callout="warning"] { border-color: #d98a4c !important; background-color: rgba(217, 138, 76, 0.1) !important; }
-.callout[data-callout="warning"] .callout-title { color: #d98a4c !important; }
-
-/* ==========================================
-   9. LISTA DE NOTAS Y FECHAS
-   ========================================= */
-ul.section-ul {
-  padding: 0 !important;
-  margin: 1.5rem 0 !important;
-  list-style: none !important;
-}
-
-ul.section-ul li {
-  display: flex !important;
-  flex-direction: row !important;
-  align-items: baseline !important; 
-  gap: 1.5rem !important; 
-  margin-bottom: 1.2rem !important;
-}
-
-ul.section-ul li > .meta {
-  min-width: 120px !important; 
-  margin: 0 !important;
-  color: rgba(244, 235, 216, 0.6) !important; 
-  text-align: left !important;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif !important;
-}
-
-ul.section-ul li > .desc { margin: 0 !important; }
-
-/* ==========================================
-   10. HOVER DE ENLACES
-   ========================================= */
-.links a {
-  display: inline-block !important; 
-  transition: transform 0.2s ease, color 0.2s ease !important; 
-}
-.links a:hover { transform: translateY(-4px) !important; }
-.links a:visited { color: #ffffff !important; }
-
-/* ==========================================
-   11. RESPONSIVE / CELULARES
-   ========================================= */
-@media screen and (max-width: 800px) {
-  .page #quartz-body { padding: 1.5rem 1rem !important; width: 100% !important; box-sizing: border-box !important; }
-  .page-title, .page-title a { font-size: 2rem !important; word-break: break-word !important; }
-  .mobile-only { display: none !important; }
-}
-
-/* ==========================================
-   12. TIPOGRAFÍA Y ESTILOS EXTRA
-   ========================================== */
-article h1, article h2, article h3, article h4, article h5, article h6,
-h1.article-title, .content-meta, .tags { 
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif !important; 
-}
-
-.callout summary.callout-title, .callout summary.callout-title .callout-title-inner, .callout summary.callout-title .fold-icon {
-  color: #B7966C !important;
-}
-
-iframe { width: 100% !important; border: none !important; overflow: hidden !important; display: block !important; min-height: 200px !important; }
-
-.search { display: none !important; }
-body[data-slug="Notas/index"] .search { display: flex !important; justify-content: center !important; margin-top: 1rem !important; margin-bottom: 3rem !important; width: 100% !important; }
-.tags, ul.tags { display: none !important; }
-
-/* Ocultar "¿Algo más?" específico */
-body[data-slug="algo-mas"] article > h1:first-child, body[data-slug="Algo-mas"] article > h1:first-child,
-body[data-slug="algo-más"] article > h1:first-child, body[data-slug="Algo-más"] article > h1:first-child {
-  display: none !important;
-}
-
-/* ==================================================================
-   13. MODO OSCURO GLOBAL SOBERANO Y UNIFICADO
-   ================================================================== */
-html[saved-theme="dark"], html.dark-mode, body.dark-mode {
-  background-color: #000000 !important;
-  color: #e0eaf5 !important;
-
-  --light: #000000 !important;      
-  --lightgray: rgba(224, 234, 245, 0.2) !important; 
-  --darkgray: #e0eaf5 !important;    
-  --dark: #84add7 !important;        
-  --secondary: #84add7 !important;   
-  --tertiary: #a3c2e1 !important;    
-
-  .page, body {
-    background-color: #000000 !important;
-  }
-
-  .page-header header, header {
-    background-color: transparent !important;
-    border: none !important;
-
-    .links a, .nav-links a {
-      background-color: transparent !important;
-      border: none !important;
-    }
-    
-    .links a:visited {
-      color: #a3c2e1 !important;
-    }
-  }
-
-  .page-title, .page-title a, article h1, article h2, article h3, article h4, article h5, article h6, h1.article-title {
-    color: #e0eaf5 !important;
-  }
-
-  .links a, .nav-links a, article p a, ul.section-ul li > .desc a {
-    color: #84add7 !important;
-    background-color: transparent !important;
-    border: none !important;
-  }
-
-  .links a:hover, .nav-links a:hover, article p a:hover {
-    color: #a3c2e1 !important;
-    background-color: transparent !important; 
-  }
-
-  article p, article li, ul.section-ul li > .desc {
-    color: #e0eaf5 !important;
-  }
-
-  ul.section-ul li > .meta {
-    color: rgba(224, 234, 245, 0.5) !important;
-  }
-}
-
-/* ==========================================
-   14. CONTROLES Y BOTONES DEL FOOTER (SIN EFECTO HOVER)
-   ========================================== */
-.footer-controls {
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  gap: 1.5rem !important; 
-  margin-top: 1rem !important; 
-  padding-bottom: 1.5rem !important;
-}
-
-.footer-controls button, 
-.footer-controls a,
-button.darkmode, 
-.dark-mode-toggle {
-  background: transparent !important;
-  border: none !important;
-  color: inherit !important; 
-  cursor: pointer !important;
-  transition: none !important;
-  transform: none !important;
-  opacity: 1 !important;
-  outline: none !important;
-  box-shadow: none !important;
-}
-
-.footer-controls button:hover, 
-.footer-controls a:hover,
-button.darkmode:hover, 
-.dark-mode-toggle:hover,
-.footer-controls button:hover *, 
-.footer-controls a:hover *,
-button.darkmode:hover *, 
-.dark-mode-toggle:hover * { 
-  color: inherit !important; 
-  fill: currentColor !important;
-  stroke: currentColor !important;
-  transform: none !important; 
-  transition: none !important;
-  opacity: 1 !important;
-  filter: none !important;
-}
-
-.darkmode { display: none !important; }
-
-#back-to-top, #goToTopBtn {
-  display: none; 
-  position: fixed; 
-  bottom: 30px; 
-  right: 30px; 
-  z-index: 999;
-  border: 1px solid rgba(183, 150, 108, 0.4) !important; 
-  background-color: rgba(13, 12, 10, 0.9) !important; 
-  color: #B7966C !important; 
-  width: 35px !important; 
-  height: 35px !important; 
-  border-radius: 50% !important; 
-  align-items: center; 
-  justify-content: center;
-  
-  &.visible { display: flex !important; }
-}
-
-body[data-slug="index"] p:has(+ ul.section-ul),
-body[data-slug="El-Jardín/index"] p:has(+ ul.section-ul),
-body[data-slug="El-Jardin/index"] p:has(+ ul.section-ul) {
-  display: none !important;
-}
-
-/* Estilos para la línea de tiempo / Ahora */
 .now-container {
     max-width: 680px;
     margin: 0 auto;
@@ -468,8 +145,8 @@ body[data-slug="El-Jardin/index"] p:has(+ ul.section-ul) {
 }
 
 .now-intro {
-    font-size: 0.95rem;
-    color: var(--gray);
+    font-size: 1rem;
+    color: var(--darkgray);
     margin: 0;
 }
 
@@ -479,32 +156,32 @@ body[data-slug="El-Jardin/index"] p:has(+ ul.section-ul) {
     gap: 0.5rem;
 }
 
-.now-date {
-    font-size: 0.875rem;
+.now-date, .now-heading {
+    font-size: 1rem;
     font-weight: 600;
-    color: var(--gray);
+    color: var(--secondary) !important;
     letter-spacing: 0.02em;
 }
 
 .now-content {
-    font-size: 1rem;
-    color: var(--textNormal);
+    font-size: 1.05rem;
+    color: var(--dark);
 }
 
 .now-content p {
     margin: 0;
 }
 
-/* Sección desplegable */
+/* Desplegables en Ya! */
 .now-container details {
     padding-top: 0.5rem;
 }
 
 .now-container summary {
     cursor: pointer;
-    color: var(--gray);
-    font-size: 0.95rem;
-    font-weight: 500;
+    color: var(--secondary) !important;
+    font-size: 1rem;
+    font-weight: 600;
     list-style: none;
     display: inline-flex;
     align-items: center;
@@ -523,7 +200,7 @@ body[data-slug="El-Jardin/index"] p:has(+ ul.section-ul) {
     height: 0;
     border-top: 4px solid transparent;
     border-bottom: 4px solid transparent;
-    border-left: 6px solid var(--gray);
+    border-left: 6px solid var(--secondary);
     flex-shrink: 0;
 }
 
@@ -531,7 +208,6 @@ body[data-slug="El-Jardin/index"] p:has(+ ul.section-ul) {
     transform: rotate(90deg);
 }
 
-/* Timeline */
 .now-events {
     list-style: none !important;
     padding: 1.5rem 0 0 0 !important;
@@ -555,7 +231,7 @@ body[data-slug="El-Jardin/index"] p:has(+ ul.section-ul) {
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background-color: var(--gray);
+    background-color: var(--secondary);
     justify-self: center;
     align-self: center;
 }
@@ -568,14 +244,6 @@ body[data-slug="El-Jardin/index"] p:has(+ ul.section-ul) {
     height: 100%;
 }
 
-.now-heading {
-    grid-area: heading;
-    font-size: 0.875rem;
-    font-weight: 600;
-    color: var(--gray);
-    align-self: center;
-}
-
 .now-event-content {
     grid-area: content;
     padding-bottom: 1.5rem;
@@ -585,6 +253,194 @@ body[data-slug="El-Jardin/index"] p:has(+ ul.section-ul) {
     display: none;
 }
 
-.now-event:last-child .now-event-content {
-    padding-bottom: 0;
+/* =========================================
+   6. GRAFO, LISTAS Y CONTENIDOS
+   ========================================= */
+.graph, .graph-outer, #graph-container, .component.graph, .backlinks, .component.backlinks {
+  display: none !important;
 }
+
+body[data-slug^="El-Jardín"] .graph, body[data-slug^="El-Jardin"] .graph,
+body[data-slug="El-Jardín"] .graph, body[data-slug="El-Jardin"] .graph,
+.el-jardin .graph {
+  display: block !important;
+  height: 400px !important;
+  margin: 2rem 0 3rem 0 !important;
+  border: 1px solid var(--lightgray) !important;
+  border-radius: 12px !important;
+  background-color: rgba(0, 0, 0, 0.15) !important;
+  overflow: hidden !important;
+}
+
+article p, article li {
+  font-size: 1.05rem !important; 
+  line-height: 1.65 !important; 
+}
+
+article p {
+  margin-bottom: 1.5rem !important; 
+}
+
+ul.section-ul {
+  padding: 0 !important;
+  margin: 1.5rem 0 !important;
+  list-style: none !important;
+}
+
+ul.section-ul li {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: baseline !important; 
+  gap: 1.5rem !important; 
+  margin-bottom: 1.2rem !important;
+}
+
+ul.section-ul li > .meta {
+  min-width: 120px !important; 
+  margin: 0 !important;
+  color: var(--gray) !important; 
+  text-align: left !important;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif !important;
+}
+
+/* =========================================
+   7. CALLOUTS
+   ========================================= */
+.callout {
+  padding: 0.8rem 1.2rem !important; 
+  margin: 1rem 0 !important;
+  border-radius: 8px !important;
+}
+
+.callout .callout-icon { display: none !important; }
+
+.callout .callout-title {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: space-between !important; 
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important; 
+}
+
+.callout summary.callout-title, 
+.callout summary.callout-title .callout-title-inner, 
+.callout summary.callout-title .fold-icon {
+  color: var(--secondary) !important;
+}
+
+/* =========================================
+   8. FOOTER Y BOTONES (SIN EFFECTO HOVER BLANCO)
+   ========================================= */
+hr, .center > hr, .page > hr {
+  display: none !important;
+}
+
+footer {
+  text-align: center !important;
+  margin-top: 3rem !important;
+  padding-bottom: 2rem !important;
+  border: none !important;
+}
+
+.footer-controls {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 1.5rem !important; 
+  margin-top: 1rem !important; 
+  padding-bottom: 1.5rem !important;
+}
+
+.footer-controls button, 
+.footer-controls a,
+button.darkmode, 
+.dark-mode-toggle {
+  background: transparent !important;
+  border: none !important;
+  color: var(--gray) !important; 
+  cursor: pointer !important;
+  transition: none !important;
+  transform: none !important;
+  opacity: 1 !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Desactivar cambio a blanco en hover */
+.footer-controls button:hover, 
+.footer-controls a:hover,
+button.darkmode:hover, 
+.dark-mode-toggle:hover,
+.footer-controls button:hover *, 
+.footer-controls a:hover *,
+button.darkmode:hover *, 
+.dark-mode-toggle:hover * { 
+  color: var(--secondary) !important; 
+  fill: currentColor !important;
+  stroke: currentColor !important;
+  transform: none !important; 
+  transition: none !important;
+  opacity: 1 !important;
+  filter: none !important;
+}
+
+.darkmode { display: none !important; }
+
+/* =========================================
+   9. REGLAS UNIFICADAS MODO OSCURO
+   ========================================= */
+html[saved-theme="dark"], 
+html[data-theme="dark"], 
+html.dark, 
+body.dark-mode {
+  background-color: #000000 !important;
+  color: #e0eaf5 !important;
+
+  --light: #000000 !important;      
+  --lightgray: rgba(224, 234, 245, 0.2) !important; 
+  --darkgray: #d6d3d1 !important;    
+  --dark: #e0eaf5 !important;        
+  --secondary: #84add7 !important; /* AZUL PARA TÍTULOS Y ENLACES EN MODO OSCURO */  
+  --tertiary: #a3c2e1 !important;    
+
+  .page, body {
+    background-color: #000000 !important;
+  }
+
+  .page-title, .page-title a, 
+  article h1, article h2, article h3, article h4, article h5, article h6, 
+  h1.article-title, .now-heading, .now-date, .now-container summary {
+    color: #84add7 !important; /* Fuerza azul en todos los títulos de Ya!.md y notas */
+  }
+
+  .links a, .nav-links a, article p a, ul.section-ul li > .desc a {
+    color: #84add7 !important;
+    background-color: transparent !important;
+  }
+
+  .links a:hover, .nav-links a:hover, article p a:hover {
+    color: #a3c2e1 !important;
+  }
+
+  article p, article li, ul.section-ul li > .desc, .now-content {
+    color: #e0eaf5 !important;
+  }
+
+  ul.section-ul li > .meta {
+    color: rgba(224, 234, 245, 0.5) !important;
+  }
+}
+
+/* =========================================
+   10. ADAPTACIÓN A CELULARES
+   ========================================= */
+@media screen and (max-width: 800px) {
+  .page #quartz-body { padding: 1.5rem 1rem !important; width: 100% !important; }
+  .page-title, .page-title a { font-size: 2rem !important; word-break: break-word !important; }
+  .mobile-only { display: none !important; }
+}
+
+.search, .tags, ul.tags { display: none !important; }
+body[data-slug="Notas/index"] .search { display: flex !important; justify-content: center !important; margin: 1rem 0 3rem 0 !important; width: 100% !important; }

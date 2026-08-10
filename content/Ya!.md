@@ -1,6 +1,7 @@
+## Ultimamente...
 <div class="now-container">
 <p class="now-intro">
-Acá se encuentran actualizaciones relativamente continuas de las etapas que estoy viviendo. Sirve como un almacenamiento más específicos de las etapas que me tocan.
+Acá se encuentran actualizaciones de las etapas que estoy viviendo. Sirve como un almacenamiento más específicos de las etapas que me tocan.
 </p>
 <section class="now-card">
 <div class="now-date">Agosto 2026</div>

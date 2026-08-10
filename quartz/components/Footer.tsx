@@ -1,68 +1,49 @@
-"use client";
+import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "./types"
+import style from "./styles/footer.scss"
 
-import React from "react";
-// Si usas lucide-react (o puedes reemplazar con tus propios SVGs):
-import { Rss, Mail, Sun, Moon, ArrowUp } from "lucide-react";
-
-export default function Footer() {
-  const [isDark, setIsDark] = React.useState(true);
-
-  // Función para volver al inicio de la página suavemente
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
-
-  const toggleTheme = () => {
-    setIsDark(!isDark);
-    // Lógica adicional de cambio de tema si la usas (ej. document.documentElement.classList.toggle('dark'))
-  };
-
-  return (
-    <footer className="w-full py-8 flex justify-center items-center">
-      <div className="flex items-center justify-center gap-6">
-        {/* RSS */}
-        <a
-          href="/rss.xml"
-          aria-label="RSS Feed"
-          className="text-[#8e8d8a] transition-none hover:text-[#8e8d8a] focus:outline-none"
-        >
-          <Rss className="w-5 h-5 stroke-[1.75]" />
-        </a>
-
-        {/* Email */}
-        <a
-          href="mailto:tu-email@ejemplo.com"
-          aria-label="Contacto por Email"
-          className="text-[#8e8d8a] transition-none hover:text-[#8e8d8a] focus:outline-none"
-        >
-          <Mail className="w-5 h-5 stroke-[1.75]" />
-        </a>
-
-        {/* Modo Claro / Oscuro */}
-        <button
-          onClick={toggleTheme}
-          aria-label="Cambiar tema"
-          className="text-[#8e8d8a] transition-none hover:text-[#8e8d8a] bg-transparent border-0 p-0 cursor-pointer focus:outline-none"
-        >
-          {isDark ? (
-            <Sun className="w-5 h-5 stroke-[1.75]" />
-          ) : (
-            <Moon className="w-5 h-5 stroke-[1.75]" />
-          )}
-        </button>
-
-        {/* NUEVO: Ir al inicio */}
-        <button
-          onClick={scrollToTop}
-          aria-label="Volver al inicio"
-          className="text-[#8e8d8a] transition-none hover:text-[#8e8d8a] bg-transparent border-0 p-0 cursor-pointer focus:outline-none"
-        >
-          <ArrowUp className="w-5 h-5 stroke-[1.75]" />
-        </button>
-      </div>
-    </footer>
-  );
+interface Options {
+  links: Record<string, string>
 }
+
+export default ((opts?: Options) => {
+  const Footer: QuartzComponent = ({ displayClass }: QuartzComponentProps) => {
+    const links = opts?.links ?? {}
+    return (
+      <footer className={`${displayClass ?? ""}`}>
+        <hr />
+        <ul>
+          {Object.entries(links).map(([text, link]) => (
+            <li>
+              <a href={link}>{text}</a>
+            </li>
+          ))}
+          <li>
+            <button
+              onClick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+              aria-label="Volver arriba"
+              style="background: none; border: none; cursor: pointer; color: inherit; padding: 0; display: inline-flex; align-items: center;"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M12 19V5" />
+                <path d="m5 12 7-7 7 7" />
+              </svg>
+            </button>
+          </li>
+        </ul>
+      </footer>
+    )
+  }
+
+  Footer.css = style
+  return Footer
+}) satisfies QuartzComponentConstructor

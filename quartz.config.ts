@@ -15,39 +15,39 @@ const config: QuartzConfig = {
     analytics: {
       provider: "plausible",
     },
-    locale: "en-US",
+    locale: "es-ES",
     baseUrl: "salvamir.github.io",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
     theme: {
-      fontOrigin: "local", /* CORRECCIÓN: Le decimos que use las fuentes de la PC, no de Google */
+      fontOrigin: "local",
       cdnCaching: true,
       typography: {
-        header: "Times New Roman", /* CORRECCIÓN: Títulos */
-        body: "Times New Roman",   /* CORRECCIÓN: Textos */
-        code: "Courier New",       /* CORRECCIÓN: Letra clásica de sistema para bloques de código */
+        header: "Times New Roman",
+        body: "Times New Roman",
+        code: "Courier New",
       },
       colors: {
         lightMode: {
-          light: "#231d19",
-          lightgray: "#3e352f",
+          light: "#fdfbf7",
+          lightgray: "#e3dac9",
           gray: "#a89e95",
-          darkgray: "#d6d3d1",
-          dark: "#ede9e6",
-          secondary: "#eeddcc",
+          darkgray: "#2b2b2b",
+          dark: "#1a1714",
+          secondary: "#c05621", // Anaranjado para títulos en modo claro
           tertiary: "#E7C8A0",
-          highlight: "rgba(143, 159, 169, 0.15)",
+          highlight: "rgba(192, 86, 33, 0.15)",
           textHighlight: "#b3aa0288",
         },
         darkMode: {
-          light: "#231d19",
-          lightgray: "#3e352f",
-          gray: "#a89e95",
+          light: "#000000",
+          lightgray: "#1c1c1e",
+          gray: "#8e8d8a",
           darkgray: "#d6d3d1",
-          dark: "#ede9e6",
-          secondary: "#eeddcc",
-          tertiary: "#E7C8A0",
-          highlight: "rgba(143, 159, 169, 0.15)",
+          dark: "#e0eaf5",
+          secondary: "#84add7", // Azul para títulos en modo oscuro
+          tertiary: "#a3c2e1",
+          highlight: "rgba(132, 173, 215, 0.15)",
           textHighlight: "#b3aa0288",
         },
       },
@@ -88,8 +88,6 @@ const config: QuartzConfig = {
       Plugin.Static(),
       Plugin.Favicon(),
       Plugin.NotFoundPage(),
-      // Comment out CustomOgImages to speed up build time
-      // Plugin.CustomOgImages(),
     ],
   },
 }
