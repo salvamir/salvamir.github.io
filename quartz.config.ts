@@ -29,12 +29,12 @@ const config: QuartzConfig = {
       },
       colors: {
         lightMode: {
-          light: "#fdfbf7",
-          lightgray: "#e3dac9",
+          light: "#f2e8dc", // Fondo marrón suave / pergamino cálido (ya no se ve blanco)
+          lightgray: "#e3dac9", // Beige/marrón claro para bordes y separadores
           gray: "#a89e95",
           darkgray: "#2b2b2b",
           dark: "#1a1714",
-          secondary: "#c05621", // Anaranjado para títulos en modo claro
+          secondary: "#c05621", // Anaranjado / óxido para títulos y enlaces
           tertiary: "#E7C8A0",
           highlight: "rgba(192, 86, 33, 0.15)",
           textHighlight: "#b3aa0288",
@@ -45,7 +45,7 @@ const config: QuartzConfig = {
           gray: "#8e8d8a",
           darkgray: "#d6d3d1",
           dark: "#e0eaf5",
-          secondary: "#84add7", // Azul para títulos en modo oscuro
+          secondary: "#84add7", // Azul para modo oscuro
           tertiary: "#a3c2e1",
           highlight: "rgba(132, 173, 215, 0.15)",
           textHighlight: "#b3aa0288",
