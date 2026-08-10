@@ -13,6 +13,7 @@ html, body {
   justify-content: flex-start !important;
   font-size: 18px !important;
   font-family: 'Times New Roman', serif !important; 
+  background-color: #f2e8dc !important; /* Fondo marrón/pergamino por defecto */
 }
 
 /* =========================================
@@ -28,6 +29,7 @@ html, body {
   margin: 0 auto !important;
   padding: 0 !important;
   box-sizing: border-box !important;
+  background-color: transparent !important;
 }
 
 .page #quartz-body {
@@ -266,7 +268,7 @@ body[data-slug="El-Jardín"] .graph, body[data-slug="El-Jardin"] .graph,
   margin: 2rem 0 3rem 0 !important;
   border: 1px solid var(--lightgray) !important;
   border-radius: 12px !important;
-  background-color: rgba(0, 0, 0, 0.15) !important;
+  background-color: rgba(0, 0, 0, 0.05) !important;
   overflow: hidden !important;
 }
 
@@ -329,7 +331,7 @@ ul.section-ul li > .meta {
 }
 
 /* =========================================
-   8. FOOTER Y BOTONES (SIN EFECTO HOVER DE COLOR)
+   8. FOOTER Y BOTONES
    ========================================= */
 hr, .center > hr, .page > hr {
   display: none !important;
@@ -366,7 +368,6 @@ button.darkmode,
   box-shadow: none !important;
 }
 
-/* Mantener el color sin cambios en hover, solo cambiar opacidad ligeramente */
 .footer-controls button:hover, 
 .footer-controls a:hover,
 button.darkmode:hover, 
@@ -388,26 +389,27 @@ button.darkmode:hover *,
 .darkmode { display: none !important; }
 
 /* =========================================
-   9. REGLAS UNIFICADAS DE TEMAS
+   9. REGLAS DE PALETAS (MODO CLARO Y OSCURO)
    ========================================= */
 
-/* MODO CLARO (PALETA MARRÓN Y ANARANJADA) */
+/* MODO CLARO: MARRÓN / ANARANJADO */
 html[saved-theme="light"],
 html[data-theme="light"],
 html:not([saved-theme="dark"]) {
-  background-color: #fdfbf7 !important;
+  background-color: #f2e8dc !important;
   color: #1a1714 !important;
 
-  --light: #fdfbf7 !important;      
+  --light: #f2e8dc !important;      
   --lightgray: #e3dac9 !important; 
   --gray: #a89e95 !important;    
   --darkgray: #2b2b2b !important;        
   --dark: #1a1714 !important;        
-  --secondary: #c05621 !important; /* ANARANJADO / MARRÓN MODO CLARO */  
+  --secondary: #c05621 !important; /* ANARANJADO / ÓXIDO */  
   --tertiary: #E7C8A0 !important;
 
   .page, body {
-    background-color: #fdfbf7 !important;
+    background-color: #f2e8dc !important;
+    color: #1a1714 !important;
   }
 
   .page-title, .page-title a, 
@@ -422,7 +424,7 @@ html:not([saved-theme="dark"]) {
   }
 }
 
-/* MODO OSCURO (PALETA AZUL) */
+/* MODO OSCURO: AZUL */
 html[saved-theme="dark"], 
 html[data-theme="dark"], 
 html.dark, 
@@ -434,11 +436,12 @@ body.dark-mode {
   --lightgray: rgba(224, 234, 245, 0.2) !important; 
   --darkgray: #d6d3d1 !important;    
   --dark: #e0eaf5 !important;        
-  --secondary: #84add7 !important; /* AZUL PARA TÍTULOS Y ENLACES EN MODO OSCURO */  
+  --secondary: #84add7 !important; /* AZUL EN MODO OSCURO */  
   --tertiary: #a3c2e1 !important;    
 
   .page, body {
     background-color: #000000 !important;
+    color: #e0eaf5 !important;
   }
 
   .page-title, .page-title a, 
