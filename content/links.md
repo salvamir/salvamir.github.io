@@ -37,6 +37,8 @@ Te dejo otros lugares interesantes para ver. Podés encontrar nuevas páginas po
 > - [The Autodidacts](https://www.autodidacts.io/tips-for-boosting-energy-levels-mitochondrial-function/)
 > - [Interconnected](https://interconnected.org/home/).
 > - [Gwern](https://gwern.net). Unique style.
+> - [Ky](https://ky.fyi). Is pretty well done it's design. I love the idea of the /now page.
+> - [Aleem](https://aleemshaun.com/photos). Another person living their life. Interesting.
 
 > [!abstract]- Philosophy, Religion and History
 > - [Christian Info](https://elcristiano.info/): Great info about the church.

@@ -8,4 +8,4 @@ const NavLinks: QuartzComponent = ({ displayClass }: QuartzComponentProps) => {
     </nav>
   )
 }
-export default (() => NavLinks) satisfies QuartzComponentConstructor
+export default (() => NavLinks) satisfies 
