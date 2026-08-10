@@ -1,24 +1,19 @@
 import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "./types"
 import style from "./styles/footer.scss"
-import darkmodeStyle from "./styles/darkmode.scss"
-import darkmodeScript from "./scripts/darkmode.inline"
+import DarkmodeConstructor from "./Darkmode"
 
 interface Options {
   links: Record<string, string>
 }
 
-const customDarkmodeFix = `
-html[saved-theme="dark"] .darkmode .sun { display: inline-block !important; }
-html[saved-theme="dark"] .darkmode .moon { display: none !important; }
-html[saved-theme="light"] .darkmode .sun { display: none !important; }
-html[saved-theme="light"] .darkmode .moon { display: inline-block !important; }
-html:not([saved-theme]) .darkmode .sun { display: inline-block !important; }
-html:not([saved-theme]) .darkmode .moon { display: none !important; }
-`
-
 export default ((opts?: Options) => {
-  const Footer: QuartzComponent = ({ displayClass }: QuartzComponentProps) => {
+  // Instanciamos el componente nativo Darkmode de Quartz
+  const Darkmode = DarkmodeConstructor()
+
+  const Footer: QuartzComponent = (props: QuartzComponentProps) => {
+    const { displayClass } = props
     const links = opts?.links ?? {}
+
     return (
       <footer className={`${displayClass ?? ""}`}>
         <hr />
@@ -28,6 +23,8 @@ export default ((opts?: Options) => {
               <a href={link}>{text}</a>
             </li>
           ))}
+          
+          {/* 1. RSS Feed */}
           <li>
             <a
               href="/index.xml"
@@ -51,6 +48,8 @@ export default ((opts?: Options) => {
               </svg>
             </a>
           </li>
+
+          {/* 2. Correo */}
           <li>
             <a
               href="mailto:pez.arroz.tabla@proton.me"
@@ -73,51 +72,13 @@ export default ((opts?: Options) => {
               </svg>
             </a>
           </li>
-          <li>
-            <button
-              class="darkmode"
-              id="darkmode-toggle"
-              aria-label="Cambiar modo oscuro"
-              style="background: none; border: none; cursor: pointer; color: inherit; padding: 0; display: inline-flex; align-items: center;"
-            >
-              <svg
-                class="sun"
-                xmlns="http://www.w3.org/2000/svg"
-                width="18"
-                height="18"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.75"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <circle cx="12" cy="12" r="4" />
-                <path d="M12 2v2" />
-                <path d="M12 20v2" />
-                <path d="m4.93 4.93 1.41 1.41" />
-                <path d="m17.66 17.66 1.41 1.41" />
-                <path d="M2 12h2" />
-                <path d="M20 12h2" />
-                <path d="m4.93 19.07 1.41-1.41" />
-                <path d="m17.66 6.34 1.41-1.41" />
-              </svg>
-              <svg
-                class="moon"
-                xmlns="http://www.w3.org/2000/svg"
-                width="18"
-                height="18"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.75"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
-              </svg>
-            </button>
+
+          {/* 3. Botón Nativo de Modo Oscuro */}
+          <li style="display: inline-flex; align-items: center;">
+            <Darkmode {...props} />
           </li>
+
+          {/* 4. Volver Arriba */}
           <li>
             <button
               onClick="window.scrollTo({ top: 0, behavior: 'smooth' })"
@@ -145,7 +106,8 @@ export default ((opts?: Options) => {
     )
   }
 
-  Footer.beforeJSX = darkmodeScript
-  Footer.css = style + "\n" + darkmodeStyle + "\n" + customDarkmodeFix
+  // Vinculamos el script e inline CSS oficiales de Darkmode a Footer
+  Footer.beforeJSX = Darkmode.beforeJSX
+  Footer.css = style + "\n" + (Darkmode.css ?? "")
   return Footer
 }) satisfies QuartzComponentConstructor
