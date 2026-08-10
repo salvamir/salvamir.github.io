@@ -7,6 +7,15 @@ interface Options {
   links: Record<string, string>
 }
 
+const customDarkmodeFix = `
+html[saved-theme="dark"] .darkmode .sun { display: inline-block !important; }
+html[saved-theme="dark"] .darkmode .moon { display: none !important; }
+html[saved-theme="light"] .darkmode .sun { display: none !important; }
+html[saved-theme="light"] .darkmode .moon { display: inline-block !important; }
+html:not([saved-theme]) .darkmode .sun { display: inline-block !important; }
+html:not([saved-theme]) .darkmode .moon { display: none !important; }
+`
+
 export default ((opts?: Options) => {
   const Footer: QuartzComponent = ({ displayClass }: QuartzComponentProps) => {
     const links = opts?.links ?? {}
@@ -137,6 +146,6 @@ export default ((opts?: Options) => {
   }
 
   Footer.beforeJSX = darkmodeScript
-  Footer.css = style + "\n" + darkmodeStyle
+  Footer.css = style + "\n" + darkmodeStyle + "\n" + customDarkmodeFix
   return Footer
 }) satisfies QuartzComponentConstructor
