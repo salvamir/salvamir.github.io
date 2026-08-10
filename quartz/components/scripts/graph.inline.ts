@@ -452,37 +452,43 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
 
   let currentTransform = zoomIdentity
   if (enableDrag) {
-    select<HTMLCanvasElement, NodeData undefined |>(app.canvas).call(
-      drag<HTMLCanvasElement, NodeData undefined |>()
+    select<HTMLCanvasElement, NodeData | undefined>(app.canvas).call(
+      drag<HTMLCanvasElement, NodeData | undefined>()
         .container(() => app.canvas)
         .subject(() => graphData.nodes.find((n) => n.id === hoveredNodeId))
         .on("start", function dragstarted(event) {
           if (!event.active) simulation.alphaTarget(1).restart()
-          event.subject.fx = event.subject.x
-          event.subject.fy = event.subject.y
-          event.subject.__initialDragPos = {
-            x: event.subject.x,
-            y: event.subject.y,
-            fx: event.subject.fx,
-            fy: event.subject.fy,
+          if (event.subject) {
+            event.subject.fx = event.subject.x
+            event.subject.fy = event.subject.y
+            event.subject.__initialDragPos = {
+              x: event.subject.x,
+              y: event.subject.y,
+              fx: event.subject.fx,
+              fy: event.subject.fy,
+            }
           }
           dragStartTime = Date.now()
           dragging = true
         })
         .on("drag", function dragged(event) {
-          const initPos = event.subject.__initialDragPos
-          event.subject.fx = initPos.x + (event.x - initPos.x) / currentTransform.k
-          event.subject.fy = initPos.y + (event.y - initPos.y) / currentTransform.k
+          if (event.subject) {
+            const initPos = event.subject.__initialDragPos
+            event.subject.fx = initPos.x + (event.x - initPos.x) / currentTransform.k
+            event.subject.fy = initPos.y + (event.y - initPos.y) / currentTransform.k
+          }
         })
         .on("end", function dragended(event) {
           if (!event.active) simulation.alphaTarget(0)
-          event.subject.fx = null
-          event.subject.fy = null
+          if (event.subject) {
+            event.subject.fx = null
+            event.subject.fy = null
+          }
           dragging = false
 
           // if the time between mousedown and mouseup is short, we consider it a click
-          if (Date.now() - dragStartTime < 500) {
-            const node = graphData.nodes.find((n) => n.id === event.subject.id) as NodeData
+          if (Date.now() - dragStartTime < 500 && event.subject) {
+            const node = graphData.nodes.find((n) => n.id === event.subject!.id) as NodeData
             const targ = resolveRelative(fullSlug, node.id)
             window.spaNavigate(new URL(targ, window.location.toString()))
           }
