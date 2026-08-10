@@ -49,8 +49,8 @@ html, body {
   box-sizing: border-box !important;
 }
 
-/* Ocultar completamente las barras laterales sin dejar espacio fantasma */
-.sidebar, .left, .right {
+/* Ocultar completamente las barras laterales y el EXPLORADOR sin dejar espacio fantasma */
+.sidebar, .left, .right, .explorer {
   display: none !important;
   width: 0 !important;
   height: 0 !important;
@@ -101,37 +101,49 @@ header, .page-header header {
 
 .links a, .nav-links a {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif !important; 
-  color: #e3dac9 !important;     
+  color: #e3dac9 !important;      
   text-decoration: none !important;
   font-size: 1.15rem !important;
   font-weight: 500 !important;
 }
 
 /* =========================================
-   4. OCULTAR GRAFO (EXCEPTO EN JARDÍN)
+   4. TÍTULOS Y METADATOS (OCULTOS POR DEFECTO)
+   ========================================= */
+article > h1.article-title, 
+article > .content-meta {
+    display: none !important;
+}
+
+/* Mostrar SOLO en las notas con cssclass "blog-post" */
+.blog-post article > h1.article-title, 
+.blog-post article > .content-meta {
+    display: block !important;
+}
+
+/* =========================================
+   5. OCULTAR GRAFO (EXCEPTO EN JARDÍN)
    ========================================= */
 .graph, .graph-outer, #graph-container, .component.graph, .backlinks, .component.backlinks {
   display: none !important;
 }
 
-body[data-slug^="El-Jardín"], 
-body[data-slug="El-Jardín"],
-body[data-slug^="El-Jardin"], 
-body[data-slug="El-Jardin"] {
-  .graph, .graph-outer, #graph-container, .component.graph {
-    display: block !important;
-    height: 400px !important;
-    margin-top: 2rem !important;
-    margin-bottom: 3rem !important;
-    border: 2px solid rgba(168, 158, 149, 0.3) !important;
-    border-radius: 12px !important;
-    background-color: rgba(0, 0, 0, 0.15) !important;
-    overflow: hidden !important;
-  }
+/* Mostrar Grafo por slug o cssclass */
+body[data-slug^="El-Jardín"] .graph, body[data-slug^="El-Jardin"] .graph,
+body[data-slug="El-Jardín"] .graph, body[data-slug="El-Jardin"] .graph,
+.el-jardin .graph {
+  display: block !important;
+  height: 400px !important;
+  margin-top: 2rem !important;
+  margin-bottom: 3rem !important;
+  border: 2px solid rgba(168, 158, 149, 0.3) !important;
+  border-radius: 12px !important;
+  background-color: rgba(0, 0, 0, 0.15) !important;
+  overflow: hidden !important;
 }
 
 /* =========================================
-   5. FOOTER Y TEXTOS PRINCIPALES
+   6. FOOTER Y TEXTOS PRINCIPALES
    ========================================= */
 hr, .center > hr, .page > hr {
   display: none !important;
@@ -157,7 +169,7 @@ article p {
 }
 
 /* =========================================
-   6. PARED DE BADGES RETRO
+   7. PARED DE BADGES RETRO
    ========================================= */
 .badge-wall {
   display: flex !important;
@@ -188,7 +200,7 @@ article p {
 }
 
 /* ==========================================
-   7. MENÚS / CALLOUTS
+   8. MENÚS / CALLOUTS
    ========================================== */
 .callout {
   padding: 0.8rem 1.2rem !important; 
@@ -242,7 +254,7 @@ article p {
 .callout[data-callout="warning"] .callout-title { color: #d98a4c !important; }
 
 /* ==========================================
-   8. LISTA DE NOTAS Y FECHAS
+   9. LISTA DE NOTAS Y FECHAS
    ========================================= */
 ul.section-ul {
   padding: 0 !important;
@@ -269,7 +281,7 @@ ul.section-ul li > .meta {
 ul.section-ul li > .desc { margin: 0 !important; }
 
 /* ==========================================
-   9. HOVER DE ENLACES
+   10. HOVER DE ENLACES
    ========================================= */
 .links a {
   display: inline-block !important; 
@@ -279,7 +291,7 @@ ul.section-ul li > .desc { margin: 0 !important; }
 .links a:visited { color: #ffffff !important; }
 
 /* ==========================================
-   10. RESPONSIVE / CELULARES
+   11. RESPONSIVE / CELULARES
    ========================================= */
 @media screen and (max-width: 800px) {
   .page #quartz-body { padding: 1.5rem 1rem !important; width: 100% !important; box-sizing: border-box !important; }
@@ -288,35 +300,11 @@ ul.section-ul li > .desc { margin: 0 !important; }
 }
 
 /* ==========================================
-   11. TIPOGRAFÍA Y OCULTAR TÍTULOS REPETIDOS
+   12. TIPOGRAFÍA Y ESTILOS EXTRA
    ========================================== */
 article h1, article h2, article h3, article h4, article h5, article h6,
-h1.article-title, .content-meta, .tags { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif !important; }
-
-/* Reglas para ocultar títulos y metadatos en páginas específicas */
-body[data-slug="index"] h1.article-title, body[data-slug="index"] .content-meta,
-body[data-slug="ahora"] h1.article-title, body[data-slug="ahora"] .content-meta,
-body[data-slug="Proyectos/explore-the-world!"] h1.article-title, body[data-slug="galería"] .content-meta,
-body[data-slug="Proyectos/explore-the-world!"] h1.article-title, body[data-slug="galeria"] .content-meta,
-body[data-slug="links"] h1.article-title, body[data-slug="links"] .content-meta,
-body[data-slug="librería"] h1.article-title, body[data-slug="librería"] .content-meta,
-body[data-slug="libreria"] h1.article-title, body[data-slug="libreria"] .content-meta,
-body[data-slug="libro-de-visitas"] h1.article-title, body[data-slug="libro-de-visitas"] .content-meta,
-body[data-slug="Notas/index"] h1.article-title, body[data-slug="Notas/index"] .content-meta,
-body[data-slug="El-Jardín/index"] h1.article-title, body[data-slug="El-Jardín/index"] .content-meta,
-body[data-slug="Música/index"] h1.article-title, body[data-slug="Música/index"] .content-meta,
-body[data-slug="Musica/index"] h1.article-title, body[data-slug="Musica/index"] .content-meta,
-body[data-slug="El-Jardin/index"] h1.article-title, body[data-slug="El-Jardin/index"] .content-meta,
-/* Ocultar "¿Algo más?" y sus variantes */
-body[data-slug="algo-mas"] h1.article-title, body[data-slug="algo-mas"] .content-meta,
-body[data-slug="mapa"] h1.article-title, body[data-slug="algo-mas"] .content-meta,
-body[data-slug="Mapa"] h1.article-title, body[data-slug="algo-mas"] .content-meta,
-body[data-slug="Algo-mas"] h1.article-title, body[data-slug="Algo-mas"] .content-meta,
-body[data-slug="algo-más"] h1.article-title, body[data-slug="algo-más"] .content-meta,
-body[data-slug="Algo-más"] h1.article-title, body[data-slug="Algo-más"] .content-meta,
-body[data-slug="algo-mas"] article > h1:first-child, body[data-slug="Algo-mas"] article > h1:first-child,
-body[data-slug="algo-más"] article > h1:first-child, body[data-slug="Algo-más"] article > h1:first-child {
-  display: none !important;
+h1.article-title, .content-meta, .tags { 
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif !important; 
 }
 
 .callout summary.callout-title, .callout summary.callout-title .callout-title-inner, .callout summary.callout-title .fold-icon {
@@ -324,18 +312,25 @@ body[data-slug="algo-más"] article > h1:first-child, body[data-slug="Algo-más"
 }
 
 iframe { width: 100% !important; border: none !important; overflow: hidden !important; display: block !important; min-height: 200px !important; }
+
 .search { display: none !important; }
 body[data-slug="Notas/index"] .search { display: flex !important; justify-content: center !important; margin-top: 1rem !important; margin-bottom: 3rem !important; width: 100% !important; }
 .tags, ul.tags { display: none !important; }
 
+/* Ocultar "¿Algo más?" específico que quedó suelto */
+body[data-slug="algo-mas"] article > h1:first-child, body[data-slug="Algo-mas"] article > h1:first-child,
+body[data-slug="algo-más"] article > h1:first-child, body[data-slug="Algo-más"] article > h1:first-child {
+  display: none !important;
+}
+
 /* ==================================================================
-   12. MODO OSCURO GLOBAL SOBERANO Y UNIFICADO
+   13. MODO OSCURO GLOBAL SOBERANO Y UNIFICADO
    ================================================================== */
 html[saved-theme="dark"], html.dark-mode, body.dark-mode {
   background-color: #000000 !important;
   color: #e0eaf5 !important;
 
-  --light: #000000 !important;       
+  --light: #000000 !important;      
   --lightgray: rgba(224, 234, 245, 0.2) !important; 
   --darkgray: #e0eaf5 !important;    
   --dark: #84add7 !important;        
@@ -385,7 +380,7 @@ html[saved-theme="dark"], html.dark-mode, body.dark-mode {
 }
 
 /* ==========================================
-   13. CONTROLES Y BOTÓN FLOTANTE
+   14. CONTROLES Y BOTÓN FLOTANTE
    ========================================== */
 .footer-controls {
   display: flex !important;
@@ -430,38 +425,4 @@ body[data-slug="index"] p:has(+ ul.section-ul),
 body[data-slug="El-Jardín/index"] p:has(+ ul.section-ul),
 body[data-slug="El-Jardin/index"] p:has(+ ul.section-ul) {
   display: none !important;
-}
-
-/* =========================================
-   TWEAKS DE QUARTZ (Grafo, Títulos y Explorador)
-   ========================================= */
-
-/* 1. Ocultar el grafo en todas las páginas por defecto */
-.graph {
-    display: none !important;
-}
-
-/* Mostrar el grafo SOLO en la nota con cssclass "el-jardin" */
-.el-jardin .graph {
-    display: block !important;
-}
-
-/* 2. Mostrar los nombres enteros en el explorador de la izquierda */
-.explorer ul li a {
-    white-space: normal !important;
-    text-overflow: clip !important;
-    overflow: visible !important;
-    display: block;
-}
-
-/* 3. Ocultar títulos (h1) y fechas (meta) autogenerados en todas las notas */
-article > h1.article-title, 
-article > .content-meta {
-    display: none !important;
-}
-
-/* Mostrar títulos y fechas SOLO en las notas con cssclass "blog-post" */
-.blog-post article > h1.article-title, 
-.blog-post article > .content-meta {
-    display: block !important;
 }
