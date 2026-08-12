@@ -1,4 +1,5 @@
 #arbolito 
+
 Escribo esto básicamente a oscuras. No consigo ver lo que escribo nítidamente, pero se que está ahí. Nunca entendí lo que es ser libre verdaderamente. Quizás tiene que ver con poder escribir lento sin ver los renglones... Eso parece tener que ver con la seguridad. Ser libre y ser seguro tienen mucho que ver...
 
 Señor, yo creo que la libertad es algo que casi consigue Juati por completo. El la confundió con el desapego, que es muy valioso también.

@@ -1,4 +1,5 @@
 #arbolito 
+
 Dicen que los santos tuvieron una vida plena. Yo creo que el abuelo es santo, asi que seguro tuvo una vida plena. No lo conocí bien, pero sus hijos que más lo conocieron dicen que cuando le preguntaba algún amigo que anduvo haciendo el le respondía: **"meta vivir"**
 
 Los hijos de la tía Cristina dicen de ella que también tuvo una vida plena. En su velorio había mucha gente, y estaban todos contentos, conversando tranquilos ¿Será que quienes tuvieron o tienen una vida plena viven tranquilos aunque su vida no sea exactamente tranquila? ¿Y por eso en su muerte quienes los quieren se quedan tranquilos?
