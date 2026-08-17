@@ -79,6 +79,21 @@ Quiero animarme a posponer un poco la facultad y demás responsabilidades, para 
     setupLyket();
   })();
 </script>
+<script src="https://giscus.app/client.js"
+        data-repo="salvamir/salvamir.github.io"
+        data-repo-id="R_kgDOR__zrQ"
+        data-category="General"
+        data-category-id="DIC_kwDOR__zrc4DDmDq"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="transparent_dark"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+</script>
 <div class="webmention-box">
 <h3 class="webmention-title">Enviar una respuesta</h3>
 <p class="webmention-desc">Si respondiste a esta nota en tu blog, pegá el enlace acá abajo para vincularlo. Así yo me entero, y podemos seguir conversando.</p>

@@ -30,6 +30,86 @@ Esta publicación es un comentario nada más. Entre las personas que venimos cha
 - [On Small Seasons and long calendars](https://rosszurowski.com/log/2018/small-seasons-long-calendars), de Ross Zurowski
 - [A personal unit of time](https://danielslife.blog/posts/a-personal-unit-of-time), [Living with the seasons](https://danielslife.blog/posts/living-with-the-seasons), and  [Noticing the small seasons](https://danielslife.blog/posts/noticing-the-small-seasons), todos de Daniel.
 - [Summer and gardening](https://rafaelkuebler.github.io/posts/20250703-summer-and-gardening/), de Rafa.
+<div class="upvote-container">
+  <button id="like-btn" class="upvote-button" aria-label="Like">
+    <span class="upvote-icon">♥</span>
+    <span id="like-count" class="upvote-count">...</span>
+  </button>
+</div>
+
+<script>
+  (function() {
+    const PUBLIC_TOKEN = "pt_0f23483825f44e5cba6914e14bc023";
+    const NAMESPACE = "blog";
+
+    function setupLyket() {
+      const rawPath = window.location.pathname.replace(/^\/|\/$/g, "");
+      const pageId = (rawPath || "home").replace(/[^a-zA-Z0-9_-]/g, "_");
+
+      const btn = document.getElementById("like-btn");
+      const countEl = document.getElementById("like-count");
+      if (!btn || !countEl) return;
+
+      const storageKey = `lyket_liked_${pageId}`;
+      if (localStorage.getItem(storageKey)) {
+        btn.classList.add("upvoted");
+      }
+
+      // Obtener me gustas desde Lyket
+      fetch(`https://api.lyket.dev/v1/like-buttons/${NAMESPACE}/${pageId}`, {
+        headers: { "x-api-key": PUBLIC_TOKEN }
+      })
+      .then(res => res.json())
+      .then(data => {
+        if (data && data.data && data.data.attributes) {
+          countEl.textContent = data.data.attributes.total_likes;
+        } else {
+          countEl.textContent = "0";
+        }
+      })
+      .catch(() => { countEl.textContent = "0"; });
+
+      // Registrar nuevo me gusta
+      btn.onclick = () => {
+        if (localStorage.getItem(storageKey)) return;
+
+        btn.disabled = true;
+        fetch(`https://api.lyket.dev/v1/like-buttons/${NAMESPACE}/${pageId}/press`, {
+          method: "PUT",
+          headers: { "x-api-key": PUBLIC_TOKEN }
+        })
+        .then(res => res.json())
+        .then(data => {
+          if (data && data.data && data.data.attributes) {
+            countEl.textContent = data.data.attributes.total_likes;
+            localStorage.setItem(storageKey, "true");
+            btn.classList.add("upvoted");
+          }
+        })
+        .catch(err => console.error(err))
+        .finally(() => { btn.disabled = false; });
+      };
+    }
+
+    document.addEventListener("nav", setupLyket);
+    setupLyket();
+  })();
+</script>
+<script src="https://giscus.app/client.js"
+        data-repo="salvamir/salvamir.github.io"
+        data-repo-id="R_kgDOR__zrQ"
+        data-category="General"
+        data-category-id="DIC_kwDOR__zrc4DDmDq"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="transparent_dark"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+</script>
 <div class="webmention-box">
 <h3 class="webmention-title">Enviar una respuesta</h3>
 <p class="webmention-desc">Si respondiste a esta nota en tu blog, pegá el enlace acá abajo para vincularlo. Así yo me entero, y podemos seguir conversando.</p>

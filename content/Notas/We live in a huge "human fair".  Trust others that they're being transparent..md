@@ -53,7 +53,86 @@ And the Internet, believe it or not, have so much things that matters. You'll fi
 I agree with you on this topic, Sebastian: Having a guestbook signed by avatars of real people, is a prove of care of others about parts of my own personal life. The list of websites you published in your entry is fun. I'm willing to start signing those guestbooks too. 
 
 I'm happy to know that not only my family and friends care about what I think. Feels great knowing that other people around the world found their own path through this huge (recently called by me) "digitalized human fair". Thanks for reading till this word. You made an effort and I appreciate it. Hope you have something to think about now... I'm waiting to read your thoughts!
+<div class="upvote-container">
+  <button id="like-btn" class="upvote-button" aria-label="Like">
+    <span class="upvote-icon">♥</span>
+    <span id="like-count" class="upvote-count">...</span>
+  </button>
+</div>
 
+<script>
+  (function() {
+    const PUBLIC_TOKEN = "pt_0f23483825f44e5cba6914e14bc023";
+    const NAMESPACE = "blog";
+
+    function setupLyket() {
+      const rawPath = window.location.pathname.replace(/^\/|\/$/g, "");
+      const pageId = (rawPath || "home").replace(/[^a-zA-Z0-9_-]/g, "_");
+
+      const btn = document.getElementById("like-btn");
+      const countEl = document.getElementById("like-count");
+      if (!btn || !countEl) return;
+
+      const storageKey = `lyket_liked_${pageId}`;
+      if (localStorage.getItem(storageKey)) {
+        btn.classList.add("upvoted");
+      }
+
+      // Obtener me gustas desde Lyket
+      fetch(`https://api.lyket.dev/v1/like-buttons/${NAMESPACE}/${pageId}`, {
+        headers: { "x-api-key": PUBLIC_TOKEN }
+      })
+      .then(res => res.json())
+      .then(data => {
+        if (data && data.data && data.data.attributes) {
+          countEl.textContent = data.data.attributes.total_likes;
+        } else {
+          countEl.textContent = "0";
+        }
+      })
+      .catch(() => { countEl.textContent = "0"; });
+
+      // Registrar nuevo me gusta
+      btn.onclick = () => {
+        if (localStorage.getItem(storageKey)) return;
+
+        btn.disabled = true;
+        fetch(`https://api.lyket.dev/v1/like-buttons/${NAMESPACE}/${pageId}/press`, {
+          method: "PUT",
+          headers: { "x-api-key": PUBLIC_TOKEN }
+        })
+        .then(res => res.json())
+        .then(data => {
+          if (data && data.data && data.data.attributes) {
+            countEl.textContent = data.data.attributes.total_likes;
+            localStorage.setItem(storageKey, "true");
+            btn.classList.add("upvoted");
+          }
+        })
+        .catch(err => console.error(err))
+        .finally(() => { btn.disabled = false; });
+      };
+    }
+
+    document.addEventListener("nav", setupLyket);
+    setupLyket();
+  })();
+</script>
+<script src="https://giscus.app/client.js"
+        data-repo="salvamir/salvamir.github.io"
+        data-repo-id="R_kgDOR__zrQ"
+        data-category="General"
+        data-category-id="DIC_kwDOR__zrc4DDmDq"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="transparent_dark"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+</script>
 <div class="webmention-box">
 <h3 class="webmention-title">Send me your response</h3>
 <p class="webmention-desc">if you answered me on your own website, link that post here below.</p>
