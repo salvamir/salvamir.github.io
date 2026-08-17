@@ -1,1 +1,1 @@
-I'm Salvador, it's meaning is "Savior". Is one of the nicknames Jesus have. I enjoy learning. I try to do as much as I can to keep my house clean and organized. I live with my 5 siblings. 
+I'm Salvador, which means "Savior". Is one of the nicknames Jesus have. I'm curious about why my parents decided to give me such name. I enjoy learning. I try to do as much as I can to keep my house clean and organized. I live with my 5 siblings. 

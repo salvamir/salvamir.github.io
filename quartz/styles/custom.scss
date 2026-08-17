@@ -483,3 +483,51 @@ body.dark-mode {
 
 .search, .tags, ul.tags { display: none !important; }
 body[data-slug="Notas/index"] .search { display: flex !important; justify-content: center !important; margin: 1rem 0 3rem 0 !important; width: 100% !important; }
+
+/* Estilos para el botón de me gusta minimalista */
+.upvote-container {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+/* =========================================
+   11. Likes
+   ========================================= */
+
+.upvote-button {
+  background: transparent !important;
+  border: none !important;
+  color: var(--secondary) !important;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: inherit;
+  font-size: 1.1rem;
+  padding: 0.3rem 0.6rem;
+  transition: transform 0.15s ease;
+  outline: none;
+}
+
+.upvote-button:hover:not(:disabled) {
+  transform: scale(1.15);
+}
+
+.upvote-button:disabled {
+  cursor: default;
+  opacity: 0.75;
+}
+
+.upvote-icon {
+  font-size: 1.3rem;
+  line-height: 1;
+}
+
+.upvote-button.upvoted .upvote-icon {
+  color: #e74c3c !important;
+}
+
+.upvote-count {
+  font-size: 1rem;
+}

@@ -13,7 +13,56 @@ Eso es un gran aliento para mi. Como un suspiro. Por eso quiero aprovechar el em
 
 Quiero, por lo pronto, leer la Biblia una vez al día y retomar el ejercicio, por lo menos 20min. 
 Quiero animarme a posponer un poco la facultad y demás responsabilidades, para priorizar estas cosas humanas, que tanto bien me hacen.
+<div class="upvote-container">
+  <button id="counter-upvote-btn" class="upvote-button" aria-label="Dar me gusta">
+    <span class="upvote-icon">♡</span>
+    <span id="counter-upvote-count" class="upvote-count">...</span>
+  </button>
+</div>
 
+<script>
+  (function() {
+    const NAMESPACE = "salvamir-blog";
+    const pageId = window.location.pathname.replace(/\//g, "-").replace(/^-|-$/g, "") || "home";
+    
+    const btn = document.getElementById("counter-upvote-btn");
+    const countEl = document.getElementById("counter-upvote-count");
+    const iconEl = btn.querySelector(".upvote-icon");
+    const storageKey = `counter-voted-${pageId}`;
+
+    // Consultar conteo actual
+    fetch(`https://api.counterapi.dev/v1/${NAMESPACE}/${pageId}`)
+      .then(res => res.json())
+      .then(data => {
+        countEl.textContent = data.count ?? 0;
+      })
+      .catch(() => { countEl.textContent = "0"; });
+
+    // Estado si ya votó
+    if (localStorage.getItem(storageKey)) {
+      btn.disabled = true;
+      iconEl.textContent = "♥";
+      btn.classList.add("upvoted");
+    }
+
+    // Sumar 1 al contador
+    btn.addEventListener("click", () => {
+      if (localStorage.getItem(storageKey)) return;
+
+      fetch(`https://api.counterapi.dev/v1/${NAMESPACE}/${pageId}/up`)
+        .then(res => res.json())
+        .then(data => {
+          if (data.count !== undefined) {
+            countEl.textContent = data.count;
+            iconEl.textContent = "♥";
+            btn.disabled = true;
+            btn.classList.add("upvoted");
+            localStorage.setItem(storageKey, "true");
+          }
+        });
+    });
+  })();
+</script>
 <div class="webmention-box">
 <h3 class="webmention-title">Enviar una respuesta</h3>
 <p class="webmention-desc">Si respondiste a esta nota en tu blog, pegá el enlace acá abajo para vincularlo. Así yo me entero, y podemos seguir conversando.</p>
