@@ -23,20 +23,20 @@ Nunca va a reemplazar al cuaderno porque es imposible reemplazar cosas reales co
     const PUBLIC_TOKEN = "pt_0f23483825f44e5cba6914e14bc023";
     const NAMESPACE = "blog";
 
-    function setupLyket() {
-      const rawPath = window.location.pathname.replace(/^\/|\/$/g, "");
-      const pageId = (rawPath || "home").replace(/[^a-zA-Z0-9_-]/g, "_");
-
+    function initLyket() {
       const btn = document.getElementById("like-btn");
       const countEl = document.getElementById("like-count");
       if (!btn || !countEl) return;
 
-      const storageKey = `lyket_liked_${pageId}`;
+      const rawPath = window.location.pathname.replace(/^\/|\/$/g, "");
+      const pageId = (rawPath || "home").replace(/[^a-zA-Z0-9_-]/g, "_");
+      const storageKey = `lyket_${pageId}`;
+
       if (localStorage.getItem(storageKey)) {
         btn.classList.add("upvoted");
       }
 
-      // Obtener me gustas desde Lyket
+      // 1. Obtener likes desde Lyket
       fetch(`https://api.lyket.dev/v1/like-buttons/${NAMESPACE}/${pageId}`, {
         headers: { "x-api-key": PUBLIC_TOKEN }
       })
@@ -50,8 +50,9 @@ Nunca va a reemplazar al cuaderno porque es imposible reemplazar cosas reales co
       })
       .catch(() => { countEl.textContent = "0"; });
 
-      // Registrar nuevo me gusta
-      btn.onclick = () => {
+      // 2. Registrar clic
+      btn.onclick = (e) => {
+        e.preventDefault();
         if (localStorage.getItem(storageKey)) return;
 
         btn.disabled = true;
@@ -72,8 +73,9 @@ Nunca va a reemplazar al cuaderno porque es imposible reemplazar cosas reales co
       };
     }
 
-    document.addEventListener("nav", setupLyket);
-    setupLyket();
+    // Reactivar en cada cambio de página en Quartz
+    document.addEventListener("nav", initLyket);
+    initLyket();
   })();
 </script>
 <script src="https://giscus.app/client.js"

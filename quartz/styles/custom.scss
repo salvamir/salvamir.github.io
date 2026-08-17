@@ -252,32 +252,33 @@ body[data-slug^="Notas/"] article .content-meta {
 .now-event:last-child .now-line {
     display: none;
 }
-
 /* =========================================
    6. GRAFO, LISTAS Y CONTENIDOS
    ========================================= */
-/* Ocultar el grafo y backlinks en todas las páginas por defecto */
-.graph, .backlinks, .component.backlinks {
+/* Ocultar el grafo en TODAS las páginas por defecto */
+.graph, 
+.graph-outer, 
+.global-graph-outer, 
+.component.graph {
   display: none !important;
 }
 
-/* Mostrar el grafo ÚNICAMENTE en la página Plantas */
-body[data-slug^="Plantas"] .graph, 
-body[data-slug^="plantas"] .graph,
-body[data-slug="Plantas"] .graph, 
+/* Mostrar el grafo local ÚNICAMENTE en la página exacta de Plantas */
 body[data-slug="plantas"] .graph,
-.plantas .graph {
+body[data-slug="Plantas"] .graph {
   display: block !important;
   margin: 2rem 0 3rem 0 !important;
 }
 
-/* Restaurar la visibilidad de los elementos e iconos internos del grafo */
-body[data-slug^="Plantas"] .graph *, 
-body[data-slug^="plantas"] .graph *,
-body[data-slug="Plantas"] .graph *, 
-body[data-slug="plantas"] .graph *,
-.plantas .graph * {
-  display: revert !important;
+body[data-slug="plantas"] .graph > .graph-outer,
+body[data-slug="Plantas"] .graph > .graph-outer {
+  display: block !important;
+  height: 250px !important;
+}
+
+/* Permitir que el modo modal global funcione solo al activarse voluntariamente */
+.global-graph-outer.active {
+  display: block !important;
 }
 /* =========================================
    7. CALLOUTS
