@@ -256,53 +256,29 @@ body[data-slug^="Notas/"] article .content-meta {
 /* =========================================
    6. GRAFO, LISTAS Y CONTENIDOS
    ========================================= */
-.graph, .graph-outer, #graph-container, .component.graph, .backlinks, .component.backlinks {
+/* Ocultar el grafo y backlinks en todas las páginas por defecto */
+.graph, .backlinks, .component.backlinks {
   display: none !important;
 }
 
-body[data-slug^="El-Jardín"] .graph, body[data-slug^="El-Jardin"] .graph,
-body[data-slug="El-Jardín"] .graph, body[data-slug="El-Jardin"] .graph,
-.el-jardin .graph {
+/* Mostrar el grafo ÚNICAMENTE en la página Plantas */
+body[data-slug^="Plantas"] .graph, 
+body[data-slug^="plantas"] .graph,
+body[data-slug="Plantas"] .graph, 
+body[data-slug="plantas"] .graph,
+.plantas .graph {
   display: block !important;
-  height: 400px !important;
   margin: 2rem 0 3rem 0 !important;
-  border: 1px solid var(--lightgray) !important;
-  border-radius: 12px !important;
-  background-color: rgba(0, 0, 0, 0.05) !important;
-  overflow: hidden !important;
 }
 
-article p, article li {
-  font-size: 1.05rem !important; 
-  line-height: 1.65 !important; 
+/* Restaurar la visibilidad de los elementos e iconos internos del grafo */
+body[data-slug^="Plantas"] .graph *, 
+body[data-slug^="plantas"] .graph *,
+body[data-slug="Plantas"] .graph *, 
+body[data-slug="plantas"] .graph *,
+.plantas .graph * {
+  display: revert !important;
 }
-
-article p {
-  margin-bottom: 1.5rem !important; 
-}
-
-ul.section-ul {
-  padding: 0 !important;
-  margin: 1.5rem 0 !important;
-  list-style: none !important;
-}
-
-ul.section-ul li {
-  display: flex !important;
-  flex-direction: row !important;
-  align-items: baseline !important; 
-  gap: 1.5rem !important; 
-  margin-bottom: 1.2rem !important;
-}
-
-ul.section-ul li > .meta {
-  min-width: 120px !important; 
-  margin: 0 !important;
-  color: var(--gray) !important; 
-  text-align: left !important;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif !important;
-}
-
 /* =========================================
    7. CALLOUTS
    ========================================= */
@@ -492,42 +468,50 @@ body[data-slug="Notas/index"] .search { display: flex !important; justify-conten
 }
 
 /* =========================================
-   11. Likes
+   11. LIKES (ESTILO BEAR BLOG)
    ========================================= */
+.upvote-container {
+  display: flex !important;
+  justify-content: flex-start !important;
+  margin: 1.5rem 0 !important;
+}
 
 .upvote-button {
   background: transparent !important;
   border: none !important;
-  color: var(--secondary) !important;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-family: inherit;
-  font-size: 1.1rem;
-  padding: 0.3rem 0.6rem;
-  transition: transform 0.15s ease;
-  outline: none;
+  color: var(--gray) !important;
+  cursor: pointer !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.35rem !important;
+  font-family: inherit !important;
+  font-size: 0.9rem !important;
+  padding: 0 !important;
+  outline: none !important;
+  transform: none !important;
+  transition: opacity 0.15s ease !important;
 }
 
+/* Sin agrandamiento ni saltos en hover */
 .upvote-button:hover:not(:disabled) {
-  transform: scale(1.15);
+  transform: none !important;
+  opacity: 0.7;
 }
 
 .upvote-button:disabled {
   cursor: default;
-  opacity: 0.75;
+  opacity: 0.6;
 }
 
 .upvote-icon {
-  font-size: 1.3rem;
-  line-height: 1;
+  font-size: 0.9rem !important;
+  line-height: 1 !important;
 }
 
-.upvote-button.upvoted .upvote-icon {
-  color: #e74c3c !important;
+.upvote-button.upvoted {
+  color: var(--secondary) !important;
 }
 
 .upvote-count {
-  font-size: 1rem;
+  font-size: 0.9rem !important;
 }

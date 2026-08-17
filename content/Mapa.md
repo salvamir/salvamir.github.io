@@ -51,7 +51,7 @@
     <area target="" alt="Libros" title="Acá guardo todos los libros que me acuerdo de haber leído. Solía ser bastante lector antes." href="https://salvamir.github.io/librería" coords="449,154,585,207" shape="rect">
     <area target="" alt="Ahora" title="Actualizaciones casi diarias de mi vida." href="https://salvamir.github.io/static/ahora.html" coords="316,13,412,112" shape="rect">
     <area target="" alt="Notas" title="Un intento de inmortalizar mi cuadernito. Estoy implementando cosas interesantes." href="https://salvamir.github.io/Notas" coords="347,94,485,180" shape="rect">
-    <area target="" alt="Jardín Digital" title="Lugar dónde plasmo lo que aprendo de mi cabeza." href="https://salvamir.github.io/El-Jardín/" coords="394,49,578,116" shape="rect">
+    <area target="" alt="Jardín Digital" title="Lugar dónde plasmo lo que aprendo de mi cabeza." href="https://salvamir.github.io/Plantas/" coords="394,49,578,116" shape="rect">
   </map>
 </div>
 
@@ -59,7 +59,7 @@
   <a href="https://salvamir.github.io/about" class="boton-pildora">Sobre Mi</a>
   <a href="https://salvamir.github.io/static/musica.html" class="boton-pildora">Música</a>
   <a href="https://salvamir.github.io/algo-mas" class="boton-pildora">Algo Más</a>
-  <a href="https://salvamir.github.io/El-Jardín/" class="boton-pildora">Jardín Digital</a>
+  <a href="https://salvamir.github.io/Plantas/" class="boton-pildora">Jardín Digital</a>
   <a href="https://salvamir.github.io/Notas" class="boton-pildora">Notas</a>
   <a href="https://salvamir.github.io/librería" class="boton-pildora">Libros</a>
   <a href="https://salvamir.github.io/static/ahora.html" class="boton-pildora">Ahora</a>

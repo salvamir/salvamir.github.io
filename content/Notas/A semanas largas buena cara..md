@@ -14,54 +14,64 @@ Eso es un gran aliento para mi. Como un suspiro. Por eso quiero aprovechar el em
 Quiero, por lo pronto, leer la Biblia una vez al día y retomar el ejercicio, por lo menos 20min. 
 Quiero animarme a posponer un poco la facultad y demás responsabilidades, para priorizar estas cosas humanas, que tanto bien me hacen.
 <div class="upvote-container">
-  <button id="counter-upvote-btn" class="upvote-button" aria-label="Dar me gusta">
-    <span class="upvote-icon">♡</span>
-    <span id="counter-upvote-count" class="upvote-count">...</span>
+  <button id="like-btn" class="upvote-button" aria-label="Like">
+    <span class="upvote-icon">♥</span>
+    <span id="like-count" class="upvote-count">...</span>
   </button>
 </div>
 
 <script>
-  (function() {
-    const NAMESPACE = "salvamir-blog";
-    const pageId = window.location.pathname.replace(/\//g, "-").replace(/^-|-$/g, "") || "home";
+  function setupLikeButton() {
+    const NAMESPACE = "salva_mas_de_cerca"; // Tu espacio único en CounterAPI
     
-    const btn = document.getElementById("counter-upvote-btn");
-    const countEl = document.getElementById("counter-upvote-count");
-    const iconEl = btn.querySelector(".upvote-icon");
-    const storageKey = `counter-voted-${pageId}`;
+    // Normalizar la URL para usarla como clave (sin barras ni caracteres especiales)
+    const rawPath = window.location.pathname.replace(/^\/|\/$/g, "");
+    const pageKey = (rawPath || "home").replace(/[^a-zA-Z0-9_]/g, "_");
+    
+    const btn = document.getElementById("like-btn");
+    const countEl = document.getElementById("like-count");
+    if (!btn || !countEl) return;
 
-    // Consultar conteo actual
-    fetch(`https://api.counterapi.dev/v1/${NAMESPACE}/${pageId}`)
-      .then(res => res.json())
-      .then(data => {
-        countEl.textContent = data.count ?? 0;
-      })
-      .catch(() => { countEl.textContent = "0"; });
+    const storageKey = `liked_${pageKey}`;
+    const hasLiked = localStorage.getItem(storageKey);
 
-    // Estado si ya votó
-    if (localStorage.getItem(storageKey)) {
-      btn.disabled = true;
-      iconEl.textContent = "♥";
+    if (hasLiked) {
       btn.classList.add("upvoted");
     }
 
-    // Sumar 1 al contador
-    btn.addEventListener("click", () => {
+    // 1. Obtener el contador actual
+    fetch(`https://api.counterapi.dev/v1/${NAMESPACE}/${pageKey}`)
+      .then((res) => res.json())
+      .then((data) => {
+        countEl.textContent = data.count !== undefined ? data.count : 0;
+      })
+      .catch(() => {
+        countEl.textContent = "0";
+      });
+
+    // 2. Incrementar el contador al hacer clic
+    btn.onclick = () => {
       if (localStorage.getItem(storageKey)) return;
 
-      fetch(`https://api.counterapi.dev/v1/${NAMESPACE}/${pageId}/up`)
-        .then(res => res.json())
-        .then(data => {
+      btn.disabled = true;
+      fetch(`https://api.counterapi.dev/v1/${NAMESPACE}/${pageKey}/up`)
+        .then((res) => res.json())
+        .then((data) => {
           if (data.count !== undefined) {
             countEl.textContent = data.count;
-            iconEl.textContent = "♥";
-            btn.disabled = true;
-            btn.classList.add("upvoted");
             localStorage.setItem(storageKey, "true");
+            btn.classList.add("upvoted");
           }
+        })
+        .finally(() => {
+          btn.disabled = false;
         });
-    });
-  })();
+    };
+  }
+
+  // Compatibilidad con la navegación SPA de Quartz
+  document.addEventListener("nav", setupLikeButton);
+  setupLikeButton();
 </script>
 <div class="webmention-box">
 <h3 class="webmention-title">Enviar una respuesta</h3>
