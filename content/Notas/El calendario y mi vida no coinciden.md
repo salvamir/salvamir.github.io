@@ -124,22 +124,46 @@ Esta publicación es un comentario nada más. Entre las personas que venimos cha
     initLyket();
   })();
 </script>
-<script src="https://giscus.app/client.js"
-        data-repo="salvamir/salvamir.github.io"
-        data-repo-id="R_kgDOR__zrQ"
-        data-category="General"
-        data-category-id="DIC_kwDOR__zrc4DDmDq"
-        data-mapping="pathname"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="bottom"
-        data-theme="transparent_dark"
-        data-lang="en"
-        crossorigin="anonymous"
-        async>
-</script>
+<div style="margin-top: 3rem;">
+  <div id="cusdis_thread"
+    data-host="https://cusdis.com"
+    data-app-id="eefceffe-c1b3-4c45-bcd8-c1d0327e4d83"
+    data-page-id=""
+    data-page-url=""
+    data-page-title=""
+    data-theme="dark"
+  ></div>
+</div>
 
+<script>
+  (function() {
+    function initCusdis() {
+      const thread = document.getElementById("cusdis_thread");
+      if (!thread) return;
+
+      // Inyectar datos dinámicos de la nota actual
+      const rawPath = window.location.pathname.replace(/^\/|\/$/g, "");
+      thread.dataset.pageId = rawPath || "home";
+      thread.dataset.pageUrl = window.location.href;
+      thread.dataset.pageTitle = document.title;
+
+      // Re-renderizar si ya existe en la navegación SPA de Quartz
+      if (window.CUSDIS && typeof window.CUSDIS.initial === 'function') {
+        window.CUSDIS.initial();
+      } else if (!document.getElementById("cusdis-script")) {
+        const script = document.createElement("script");
+        script.id = "cusdis-script";
+        script.src = "https://cusdis.com/js/cusdis.es.js";
+        script.async = true;
+        script.defer = true;
+        document.body.appendChild(script);
+      }
+    }
+
+    document.addEventListener("nav", initCusdis);
+    initCusdis();
+  })();
+</script>
 <div class="webmention-box">
 <h3 class="webmention-title">Enviar una respuesta</h3>
 <p class="webmention-desc">Si respondiste a esta nota en tu blog, pegá el enlace acá abajo para vincularlo. Así yo me entero, y podemos seguir conversando.</p>
