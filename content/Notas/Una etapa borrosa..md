@@ -8,38 +8,14 @@ Este cuatrimestre está siendo para mi un tiempo borroso. No me acuerdo de nada,
 Confío en que todo esto va a disiparse con el tiempo. Solía tener mucho más claros mis objetivos, propósitos y proyectos. Ahora mismo estoy cuestionándome todo y ya. Sin responder nada, por ahora. Está bueno igual aprovechar el invierno para preguntarse todo eso. 
 
 Estoy usando este tiempo para absorver del entorno lo que toque. Estos días transplanté unas suculentas y puse plantas en mi cuarto. Es díficil hacer jardinería con este frío y con la poca energía humana que tengo.
+
 ![[plantita.jpg|378]]![[planta.jpg|376]]
 
 Iremos viendo como crecen. Entiendo que no hay que hacer estas cosas en invierno, porque las plantas se secan. 
+<!-- CONTENEDORES DE INTERFAZ -->
 <div id="lyket-heart-button" style="margin-top: 2rem;"></div>
 
-<script src="https://unpkg.com/@lyket/widget@latest/dist/lyket.js?apiKey=pt_0f23483825f44e5cba6914e14bc023"></script>
-
-<script>
-  (function() {
-    function loadLyket() {
-      const container = document.getElementById("lyket-heart-button");
-      if (!container) return;
-
-      // Generar el ID automáticamente usando la URL de la nota
-      const path = window.location.pathname.replace(/^\/|\/$/g, "") || "home";
-      const autoId = path.replace(/[^a-zA-Z0-9_-]/g, "_");
-
-      container.setAttribute("data-lyket-type", "like");
-      container.setAttribute("data-lyket-namespace", "blog");
-      container.setAttribute("data-lyket-id", autoId);
-      container.setAttribute("data-lyket-template", "heart");
-
-      if (window.Lyket && typeof window.Lyket.init === "function") {
-        window.Lyket.init();
-      }
-    }
-
-    document.addEventListener("nav", loadLyket);
-    loadLyket();
-  })();
-</script>
-<div style="margin-top: 3rem;">
+<div style="margin-top: 2rem;">
   <div id="cusdis_thread"
     data-host="https://cusdis.com"
     data-app-id="eefceffe-c1b3-4c45-bcd8-c1d0327e4d83"
@@ -50,55 +26,27 @@ Iremos viendo como crecen. Entiendo que no hay que hacer estas cosas en invierno
   ></div>
 </div>
 
-<script>
-  (function() {
-    function initCusdis() {
-      const thread = document.getElementById("cusdis_thread");
-      if (!thread) return;
-
-      // Inyectar datos dinámicos de la nota actual
-      const rawPath = window.location.pathname.replace(/^\/|\/$/g, "");
-      thread.dataset.pageId = rawPath || "home";
-      thread.dataset.pageUrl = window.location.href;
-      thread.dataset.pageTitle = document.title;
-
-      // Re-renderizar si ya existe en la navegación SPA de Quartz
-      if (window.CUSDIS && typeof window.CUSDIS.initial === 'function') {
-        window.CUSDIS.initial();
-      } else if (!document.getElementById("cusdis-script")) {
-        const script = document.createElement("script");
-        script.id = "cusdis-script";
-        script.src = "https://cusdis.com/js/cusdis.es.js";
-        script.async = true;
-        script.defer = true;
-        document.body.appendChild(script);
-      }
-    }
-
-    document.addEventListener("nav", initCusdis);
-    initCusdis();
-  })();
-</script>
 <div class="webmention-box">
-<h3 class="webmention-title">Enviar una respuesta</h3>
-<p class="webmention-desc">Si respondiste a esta nota en tu blog, pegá el enlace acá abajo para vincularlo. Así yo me entero, y podemos seguir conversando.</p>
-<form action="https://webmention.io/salvamir.github.io/webmention" method="POST" class="webmention-form">
-<input type="hidden" name="target" id="wm-target-url" value="">
-<div class="wm-input-group">
-<label for="wm-source">URL de tu post:</label>
-<input type="url" name="source" id="wm-source" placeholder="https://tu-sitio.com/mi-respuesta" required>
-<button type="submit" class="wm-submit">Enviar</button>
-</div>
-</form>
+  <h3 class="webmention-title">Enviar una respuesta</h3>
+  <p class="webmention-desc">Si respondiste a esta nota en tu blog, pegá el enlace acá abajo para vincularlo. Así yo me entero, y podemos seguir conversando.</p>
+  <form action="https://webmention.io/salvamir.github.io/webmention" method="POST" class="webmention-form">
+    <input type="hidden" name="target" id="wm-target-url" value="">
+    <div class="wm-input-group">
+      <label for="wm-source">URL de tu post:</label>
+      <input type="url" name="source" id="wm-source" placeholder="https://tu-sitio.com/mi-respuesta" required>
+      <button type="submit" class="wm-submit">Enviar</button>
+    </div>
+  </form>
 </div>
 
 <div class="webmentions-container">
-<h3 class="webmentions-title">Respuestas de la comunidad</h3>
-<div id="webmentions-list">
-<p class="wm-loading">Buscando respuestas...</p>
-</div>
+  <h3 class="webmentions-title">Respuestas de la comunidad</h3>
+  <div id="webmentions-list">
+    <p class="wm-loading">Buscando respuestas...</p>
+  </div>
 </div>
 
+<!-- ESTILOS VISUALES -->
 <style>
 .webmention-box, .webmentions-container {
   margin-top: 2rem;
@@ -131,9 +79,7 @@ Iremos viendo como crecen. Entiendo que no hay que hacer estas cosas en invierno
   gap: 10px;
   align-items: center;
 }
-.wm-input-group label {
-  display: none; 
-}
+.wm-input-group label { display: none; }
 .wm-input-group input[type="url"] {
   flex-grow: 1;
   padding: 10px 12px;
@@ -187,9 +133,7 @@ Iremos viendo como crecen. Entiendo que no hay que hacer estas cosas en invierno
   border: 1px solid rgba(183, 150, 108, 0.4);
   object-fit: cover;
 }
-.wm-content {
-  flex-grow: 1;
-}
+.wm-content { flex-grow: 1; }
 .wm-header {
   display: flex;
   align-items: baseline;
@@ -203,9 +147,7 @@ Iremos viendo como crecen. Entiendo que no hay que hacer estas cosas en invierno
   text-decoration: none;
   font-size: 0.95rem;
 }
-.wm-author:hover {
-  text-decoration: underline;
-}
+.wm-author:hover { text-decoration: underline; }
 .wm-meta {
   font-size: 0.75rem;
   color: #e3ded6;
@@ -216,70 +158,110 @@ Iremos viendo como crecen. Entiendo que no hay que hacer estas cosas en invierno
   font-size: 0.9rem;
   line-height: 1.45;
 }
-.wm-text p {
-  margin: 0;
-}
+.wm-text p { margin: 0; }
 </style>
 
+<!-- LÓGICA COMPATIBLE CON QUARTZ SPA -->
 <script>
-document.addEventListener("DOMContentLoaded", function() {
-  const currentUrl = window.location.href.split('#')[0];
-  const targetInput = document.getElementById("wm-target-url");
-  if (targetInput) targetInput.value = currentUrl;
+  (function() {
+    function initWidgets() {
+      const rawPath = window.location.pathname.replace(/^\/|\/$/g, "");
+      const currentUrl = window.location.href.split('#')[0];
+      const autoId = (rawPath || "home").replace(/[^a-zA-Z0-9_-]/g, "_");
 
-  const listContainer = document.getElementById("webmentions-list");
-  if (!listContainer) return;
-  
-  const apiUrl = `https://webmention.io/api/mentions.jf2?target=${encodeURIComponent(currentUrl)}`;
-  
-  fetch(apiUrl)
-    .then(response => response.json())
-    .then(data => {
-      if (!data.children || data.children.length === 0) {
-        listContainer.innerHTML = '<p class="wm-no-mentions">Todavía no hay respuestas para esta nota. ¡Sé el primero en comentar desde tu sitio!</p>';
-        return;
-      }
-      
-      listContainer.innerHTML = "";
-      
-      data.children.forEach(mention => {
-        const authorName = mention.author?.name || "Lector Anónimo";
-        const authorUrl = mention.author?.url || "#";
-        const defaultAvatar = `data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 24 24' fill='none' stroke='%23b7966c' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2'></path><circle cx='12' cy='7' r='4'></circle></svg>`;
-        const authorPhoto = mention.author?.photo || defaultAvatar;
-        const pubDate = mention.published ? new Date(mention.published).toLocaleDateString(undefined, {year: 'numeric', month: 'short', day: 'numeric'}) : "Reciente";
-        
-        let mentionText = "";
-        if (mention.content?.html) {
-          mentionText = mention.content.html;
-        } else if (mention.content?.text) {
-          mentionText = `<p>${mention.content.text}</p>`;
-        } else if (mention['wm-property'] === 'like-of') {
-          mentionText = `<p style="font-style: italic; opacity: 0.7;">Le dio "Me gusta" a esta nota desde su plataforma.</p>`;
-        } else if (mention['wm-property'] === 'repost-of') {
-          mentionText = `<p style="font-style: italic; opacity: 0.7;">Reposteó este artículo en su blog.</p>`;
-        } else {
-          mentionText = `<p style="font-style: italic; opacity: 0.7;">Mencionó esta publicación desde su web.</p>`;
+      // 1. Inicializar Lyket (Likes)
+      const lyketContainer = document.getElementById("lyket-heart-button");
+      if (lyketContainer) {
+        lyketContainer.setAttribute("data-lyket-type", "like");
+        lyketContainer.setAttribute("data-lyket-namespace", "blog");
+        lyketContainer.setAttribute("data-lyket-id", autoId);
+        lyketContainer.setAttribute("data-lyket-template", "heart");
+
+        if (!document.getElementById("lyket-script")) {
+          const script = document.createElement("script");
+          script.id = "lyket-script";
+          script.src = "https://unpkg.com/@lyket/widget@latest/dist/lyket.js?apiKey=pt_0f23483825f44e5cba6914e14bc023";
+          script.onload = function() {
+            if (window.Lyket && typeof window.Lyket.init === "function") {
+              window.Lyket.init();
+            }
+          };
+          document.head.appendChild(script);
+        } else if (window.Lyket && typeof window.Lyket.init === "function") {
+          window.Lyket.init();
         }
-        
-        const commentStructure = `
-          <div class="wm-comment">
-            <img src="${authorPhoto}" class="wm-avatar" alt="${authorName}" onerror="this.src='${defaultAvatar}'">
-            <div class="wm-content">
-              <div class="wm-header">
-                <a href="${authorUrl}" target="_blank" rel="noopener noreferrer" class="wm-author">${authorName}</a>
-                <span class="wm-meta">${pubDate}</span>
-              </div>
-              <div class="wm-text">${mentionText}</div>
-            </div>
-          </div>
-        `;
-        listContainer.insertAdjacentHTML("beforeend", commentStructure);
-      });
-    })
-    .catch(err => {
-      console.error("Error al cargar Webmentions:", err);
-      listContainer.innerHTML = '<p class="wm-no-mentions">Hubo un problema al cargar los comentarios del servidor.</p>';
-    });
-});
+      }
+
+      // 2. Inicializar Cusdis (Comentarios)
+      const cusdisThread = document.getElementById("cusdis_thread");
+      if (cusdisThread) {
+        cusdisThread.dataset.pageId = rawPath || "home";
+        cusdisThread.dataset.pageUrl = currentUrl;
+        cusdisThread.dataset.pageTitle = document.title;
+
+        if (!document.getElementById("cusdis-script")) {
+          const script = document.createElement("script");
+          script.id = "cusdis-script";
+          script.src = "https://cusdis.com/js/cusdis.es.js";
+          script.async = true;
+          script.defer = true;
+          document.head.appendChild(script);
+        } else if (window.CUSDIS && typeof window.CUSDIS.initial === "function") {
+          window.CUSDIS.initial();
+        }
+      }
+
+      // 3. Inicializar Webmentions
+      const targetInput = document.getElementById("wm-target-url");
+      if (targetInput) targetInput.value = currentUrl;
+
+      const listContainer = document.getElementById("webmentions-list");
+      if (listContainer) {
+        const apiUrl = `https://webmention.io/api/mentions.jf2?target=${encodeURIComponent(currentUrl)}`;
+        fetch(apiUrl)
+          .then(res => res.json())
+          .then(data => {
+            if (!data.children || data.children.length === 0) {
+              listContainer.innerHTML = '<p class="wm-no-mentions">Todavía no hay respuestas para esta nota. ¡Sé el primero en comentar desde tu sitio!</p>';
+              return;
+            }
+            listContainer.innerHTML = "";
+            data.children.forEach(mention => {
+              const authorName = mention.author?.name || "Lector Anónimo";
+              const authorUrl = mention.author?.url || "#";
+              const defaultAvatar = `data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 24 24' fill='none' stroke='%23b7966c' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2'></path><circle cx='12' cy='7' r='4'></circle></svg>`;
+              const authorPhoto = mention.author?.photo || defaultAvatar;
+              const pubDate = mention.published ? new Date(mention.published).toLocaleDateString(undefined, {year: 'numeric', month: 'short', day: 'numeric'}) : "Reciente";
+              
+              let mentionText = "";
+              if (mention.content?.html) mentionText = mention.content.html;
+              else if (mention.content?.text) mentionText = `<p>${mention.content.text}</p>`;
+              else if (mention['wm-property'] === 'like-of') mentionText = `<p style="font-style: italic; opacity: 0.7;">Le dio "Me gusta" a esta nota desde su plataforma.</p>`;
+              else if (mention['wm-property'] === 'repost-of') mentionText = `<p style="font-style: italic; opacity: 0.7;">Reposteó este artículo en su blog.</p>`;
+              else mentionText = `<p style="font-style: italic; opacity: 0.7;">Mencionó esta publicación desde su web.</p>`;
+
+              const commentStructure = `
+                <div class="wm-comment">
+                  <img src="${authorPhoto}" class="wm-avatar" alt="${authorName}" onerror="this.src='${defaultAvatar}'">
+                  <div class="wm-content">
+                    <div class="wm-header">
+                      <a href="${authorUrl}" target="_blank" rel="noopener noreferrer" class="wm-author">${authorName}</a>
+                      <span class="wm-meta">${pubDate}</span>
+                    </div>
+                    <div class="wm-text">${mentionText}</div>
+                  </div>
+                </div>
+              `;
+              listContainer.insertAdjacentHTML("beforeend", commentStructure);
+            });
+          })
+          .catch(() => {
+            listContainer.innerHTML = '<p class="wm-no-mentions">Hubo un problema al cargar los comentarios del servidor.</p>';
+          });
+      }
+    }
+
+    document.addEventListener("nav", initWidgets);
+    initWidgets();
+  })();
 </script>
