@@ -13,6 +13,7 @@ Eso es un gran aliento para mi. Como un suspiro. Por eso quiero aprovechar el em
 
 Quiero, por lo pronto, leer la Biblia una vez al día y retomar el ejercicio, por lo menos 20min. 
 Quiero animarme a posponer un poco la facultad y demás responsabilidades, para priorizar estas cosas humanas, que tanto bien me hacen.
+
 <div class="upvote-container">
   <button id="like-btn" class="upvote-button" aria-label="Like">
     <span class="upvote-icon">♥</span>
@@ -21,57 +22,62 @@ Quiero animarme a posponer un poco la facultad y demás responsabilidades, para 
 </div>
 
 <script>
-  function setupLikeButton() {
-    const NAMESPACE = "salva_mas_de_cerca"; // Tu espacio único en CounterAPI
-    
-    // Normalizar la URL para usarla como clave (sin barras ni caracteres especiales)
-    const rawPath = window.location.pathname.replace(/^\/|\/$/g, "");
-    const pageKey = (rawPath || "home").replace(/[^a-zA-Z0-9_]/g, "_");
-    
-    const btn = document.getElementById("like-btn");
-    const countEl = document.getElementById("like-count");
-    if (!btn || !countEl) return;
+  (function() {
+    const PUBLIC_TOKEN = "pt_0f23483825f44e5cba6914e14bc023";
+    const NAMESPACE = "blog";
 
-    const storageKey = `liked_${pageKey}`;
-    const hasLiked = localStorage.getItem(storageKey);
+    function setupLyket() {
+      const rawPath = window.location.pathname.replace(/^\/|\/$/g, "");
+      const pageId = (rawPath || "home").replace(/[^a-zA-Z0-9_-]/g, "_");
 
-    if (hasLiked) {
-      btn.classList.add("upvoted");
-    }
+      const btn = document.getElementById("like-btn");
+      const countEl = document.getElementById("like-count");
+      if (!btn || !countEl) return;
 
-    // 1. Obtener el contador actual
-    fetch(`https://api.counterapi.dev/v1/${NAMESPACE}/${pageKey}`)
-      .then((res) => res.json())
-      .then((data) => {
-        countEl.textContent = data.count !== undefined ? data.count : 0;
+      const storageKey = `lyket_liked_${pageId}`;
+      if (localStorage.getItem(storageKey)) {
+        btn.classList.add("upvoted");
+      }
+
+      // Obtener me gustas desde Lyket
+      fetch(`https://api.lyket.dev/v1/like-buttons/${NAMESPACE}/${pageId}`, {
+        headers: { "x-api-key": PUBLIC_TOKEN }
       })
-      .catch(() => {
-        countEl.textContent = "0";
-      });
+      .then(res => res.json())
+      .then(data => {
+        if (data && data.data && data.data.attributes) {
+          countEl.textContent = data.data.attributes.total_likes;
+        } else {
+          countEl.textContent = "0";
+        }
+      })
+      .catch(() => { countEl.textContent = "0"; });
 
-    // 2. Incrementar el contador al hacer clic
-    btn.onclick = () => {
-      if (localStorage.getItem(storageKey)) return;
+      // Registrar nuevo me gusta
+      btn.onclick = () => {
+        if (localStorage.getItem(storageKey)) return;
 
-      btn.disabled = true;
-      fetch(`https://api.counterapi.dev/v1/${NAMESPACE}/${pageKey}/up`)
-        .then((res) => res.json())
-        .then((data) => {
-          if (data.count !== undefined) {
-            countEl.textContent = data.count;
+        btn.disabled = true;
+        fetch(`https://api.lyket.dev/v1/like-buttons/${NAMESPACE}/${pageId}/press`, {
+          method: "PUT",
+          headers: { "x-api-key": PUBLIC_TOKEN }
+        })
+        .then(res => res.json())
+        .then(data => {
+          if (data && data.data && data.data.attributes) {
+            countEl.textContent = data.data.attributes.total_likes;
             localStorage.setItem(storageKey, "true");
             btn.classList.add("upvoted");
           }
         })
-        .finally(() => {
-          btn.disabled = false;
-        });
-    };
-  }
+        .catch(err => console.error(err))
+        .finally(() => { btn.disabled = false; });
+      };
+    }
 
-  // Compatibilidad con la navegación SPA de Quartz
-  document.addEventListener("nav", setupLikeButton);
-  setupLikeButton();
+    document.addEventListener("nav", setupLyket);
+    setupLyket();
+  })();
 </script>
 <div class="webmention-box">
 <h3 class="webmention-title">Enviar una respuesta</h3>
@@ -85,14 +91,12 @@ Quiero animarme a posponer un poco la facultad y demás responsabilidades, para 
 </div>
 </form>
 </div>
-
 <div class="webmentions-container">
 <h3 class="webmentions-title">Respuestas de la comunidad</h3>
 <div id="webmentions-list">
 <p class="wm-loading">Buscando respuestas...</p>
 </div>
 </div>
-
 <style>
 .webmention-box, .webmentions-container {
   margin-top: 2rem;
