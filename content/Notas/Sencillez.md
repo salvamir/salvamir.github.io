@@ -12,71 +12,32 @@ Esta semana, quiero enfocarme en aceptar con alegría lo que me toque vivir. Des
 Por eso mismo, creo que la sencillez de Dios la vivo en carne propia cuando dejo de querer cambiar mis circunstancias. ¿Tengo una semana de cursado muy intensa? A llevarse vianda, agua y ropa comoda a la facultad. ¿Tengo adicción a mi celular y quisiera tener uno peor pero no lo tengo? A dejar el celular y a otra cosa mariposa. ¿Quisiera tocar la guitarra pero tengo que estudiar y estoy harto de que sea así siempre? A descansar mirando a mi entorno. Mirar a los otros cuando estoy triste es lo mejor que hice alguna vez. Concentrarse en las preocupaciones de otros y rezar por ellos cuando mi cruz se siente muy áspera me ayuda a darme cuenta que mis problemas son mínimos y que no son el centro del mundo. 
 
 La naturaleza sigue ahí alabando a Dios con su sencillez. Yo doy gloria a Dios viviendo sencillamente. 
-<div class="upvote-container">
-  <button id="like-btn" class="upvote-button" aria-label="Like">
-    <span class="upvote-icon">♥</span>
-    <span id="like-count" class="upvote-count">...</span>
-  </button>
-</div>
+<div id="lyket-heart-button" style="margin-top: 2rem;"></div>
+
+<script src="https://unpkg.com/@lyket/widget@latest/dist/lyket.js?apiKey=pt_0f23483825f44e5cba6914e14bc023"></script>
 
 <script>
   (function() {
-    const PUBLIC_TOKEN = "pt_0f23483825f44e5cba6914e14bc023";
-    const NAMESPACE = "blog";
+    function loadLyket() {
+      const container = document.getElementById("lyket-heart-button");
+      if (!container) return;
 
-    function initLyket() {
-      const btn = document.getElementById("like-btn");
-      const countEl = document.getElementById("like-count");
-      if (!btn || !countEl) return;
+      // Generar el ID automáticamente usando la URL de la nota
+      const path = window.location.pathname.replace(/^\/|\/$/g, "") || "home";
+      const autoId = path.replace(/[^a-zA-Z0-9_-]/g, "_");
 
-      const rawPath = window.location.pathname.replace(/^\/|\/$/g, "");
-      const pageId = (rawPath || "home").replace(/[^a-zA-Z0-9_-]/g, "_");
-      const storageKey = `lyket_${pageId}`;
+      container.setAttribute("data-lyket-type", "like");
+      container.setAttribute("data-lyket-namespace", "blog");
+      container.setAttribute("data-lyket-id", autoId);
+      container.setAttribute("data-lyket-template", "heart");
 
-      if (localStorage.getItem(storageKey)) {
-        btn.classList.add("upvoted");
+      if (window.Lyket && typeof window.Lyket.init === "function") {
+        window.Lyket.init();
       }
-
-      // 1. Obtener likes desde Lyket
-      fetch(`https://api.lyket.dev/v1/like-buttons/${NAMESPACE}/${pageId}`, {
-        headers: { "x-api-key": PUBLIC_TOKEN }
-      })
-      .then(res => res.json())
-      .then(data => {
-        if (data && data.data && data.data.attributes) {
-          countEl.textContent = data.data.attributes.total_likes;
-        } else {
-          countEl.textContent = "0";
-        }
-      })
-      .catch(() => { countEl.textContent = "0"; });
-
-      // 2. Registrar clic
-      btn.onclick = (e) => {
-        e.preventDefault();
-        if (localStorage.getItem(storageKey)) return;
-
-        btn.disabled = true;
-        fetch(`https://api.lyket.dev/v1/like-buttons/${NAMESPACE}/${pageId}/press`, {
-          method: "PUT",
-          headers: { "x-api-key": PUBLIC_TOKEN }
-        })
-        .then(res => res.json())
-        .then(data => {
-          if (data && data.data && data.data.attributes) {
-            countEl.textContent = data.data.attributes.total_likes;
-            localStorage.setItem(storageKey, "true");
-            btn.classList.add("upvoted");
-          }
-        })
-        .catch(err => console.error(err))
-        .finally(() => { btn.disabled = false; });
-      };
     }
 
-    // Reactivar en cada cambio de página en Quartz
-    document.addEventListener("nav", initLyket);
-    initLyket();
+    document.addEventListener("nav", loadLyket);
+    loadLyket();
   })();
 </script>
 <div style="margin-top: 3rem;">

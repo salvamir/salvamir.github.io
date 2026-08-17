@@ -11,71 +11,32 @@ Pasa que rindo un evaluativo importante de química dentro de poco y no entiendo
 Cuestión, me re gusta esto de poder dibujar ahora también acá, se siente como realmente estar rezando. 
 
 Nunca va a reemplazar al cuaderno porque es imposible reemplazar cosas reales con [[🌷 Sobre la vida "real"|virtualidades]] como ésta. Pero me parece que es una idea genial y que me va a ayudar mucho a expresarme, y por lo tanto, a poder sentirme más identificado con las cosas que anote una vez que pase el tiempo.
-<div class="upvote-container">
-  <button id="like-btn" class="upvote-button" aria-label="Like">
-    <span class="upvote-icon">♥</span>
-    <span id="like-count" class="upvote-count">...</span>
-  </button>
-</div>
+<div id="lyket-heart-button" style="margin-top: 2rem;"></div>
+
+<script src="https://unpkg.com/@lyket/widget@latest/dist/lyket.js?apiKey=pt_0f23483825f44e5cba6914e14bc023"></script>
 
 <script>
   (function() {
-    const PUBLIC_TOKEN = "pt_0f23483825f44e5cba6914e14bc023";
-    const NAMESPACE = "blog";
+    function loadLyket() {
+      const container = document.getElementById("lyket-heart-button");
+      if (!container) return;
 
-    function initLyket() {
-      const btn = document.getElementById("like-btn");
-      const countEl = document.getElementById("like-count");
-      if (!btn || !countEl) return;
+      // Generar el ID automáticamente usando la URL de la nota
+      const path = window.location.pathname.replace(/^\/|\/$/g, "") || "home";
+      const autoId = path.replace(/[^a-zA-Z0-9_-]/g, "_");
 
-      const rawPath = window.location.pathname.replace(/^\/|\/$/g, "");
-      const pageId = (rawPath || "home").replace(/[^a-zA-Z0-9_-]/g, "_");
-      const storageKey = `lyket_${pageId}`;
+      container.setAttribute("data-lyket-type", "like");
+      container.setAttribute("data-lyket-namespace", "blog");
+      container.setAttribute("data-lyket-id", autoId);
+      container.setAttribute("data-lyket-template", "heart");
 
-      if (localStorage.getItem(storageKey)) {
-        btn.classList.add("upvoted");
+      if (window.Lyket && typeof window.Lyket.init === "function") {
+        window.Lyket.init();
       }
-
-      // 1. Obtener likes desde Lyket
-      fetch(`https://api.lyket.dev/v1/like-buttons/${NAMESPACE}/${pageId}`, {
-        headers: { "x-api-key": PUBLIC_TOKEN }
-      })
-      .then(res => res.json())
-      .then(data => {
-        if (data && data.data && data.data.attributes) {
-          countEl.textContent = data.data.attributes.total_likes;
-        } else {
-          countEl.textContent = "0";
-        }
-      })
-      .catch(() => { countEl.textContent = "0"; });
-
-      // 2. Registrar clic
-      btn.onclick = (e) => {
-        e.preventDefault();
-        if (localStorage.getItem(storageKey)) return;
-
-        btn.disabled = true;
-        fetch(`https://api.lyket.dev/v1/like-buttons/${NAMESPACE}/${pageId}/press`, {
-          method: "PUT",
-          headers: { "x-api-key": PUBLIC_TOKEN }
-        })
-        .then(res => res.json())
-        .then(data => {
-          if (data && data.data && data.data.attributes) {
-            countEl.textContent = data.data.attributes.total_likes;
-            localStorage.setItem(storageKey, "true");
-            btn.classList.add("upvoted");
-          }
-        })
-        .catch(err => console.error(err))
-        .finally(() => { btn.disabled = false; });
-      };
     }
 
-    // Reactivar en cada cambio de página en Quartz
-    document.addEventListener("nav", initLyket);
-    initLyket();
+    document.addEventListener("nav", loadLyket);
+    loadLyket();
   })();
 </script>
 <div style="margin-top: 3rem;">
