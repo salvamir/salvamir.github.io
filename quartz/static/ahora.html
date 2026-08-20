@@ -4,6 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ahora — Salva Más De Cerca</title>
+
+    <script>
+    (function () {
+        const theme = localStorage.getItem("theme");
+
+        if (theme === "dark") {
+            document.documentElement.setAttribute("data-theme", "dark");
+        } else {
+            document.documentElement.removeAttribute("data-theme");
+        }
+    })();
+    </script>
     <style>
         /* --- PALETA DE COLORES Y MODO OSCURO GLOBAL --- */
         :root {
@@ -13,6 +25,15 @@
             --accent-muted: #B7966C;
             --card-bg: rgba(255, 255, 255, 0.03);
             --border-color: rgba(183, 150, 108, 0.15);
+        }
+
+        html[data-theme="dark"] {
+            --bg-main: #000000;
+            --text-main: #e0eaf5;
+            --accent-dorado: #e0eaf5;
+            --accent-muted: #84add7;
+            --card-bg: rgba(60, 60, 60, 0.2);
+            --border-color: rgba(224, 234, 245, 0.2);
         }
 
         body {
