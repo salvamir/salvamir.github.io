@@ -1,5 +1,7 @@
 import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "./types"
 import style from "./styles/footer.scss"
+// @ts-ignore
+import tagCloudScript from "./scripts/tagcloud.inline"
 
 // SVGs Minimalistas
 const RssIcon = () => (
@@ -67,6 +69,9 @@ export default ((opts?: Options) => {
             <ArrowUpIcon/>
           </button>
         </div>
+
+        {/* Script inyectado para la nube de tags */}
+        <script dangerouslySetInnerHTML={{ __html: tagCloudScript }} />
       </footer>
     )
   }

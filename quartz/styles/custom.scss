@@ -522,3 +522,49 @@ body[data-slug="Notas/index"] .search { display: flex !important; justify-conten
   width: 100% !important;
   border: none !important;
 }
+
+/* =========================================
+   12. NUBE DE ETIQUETAS
+   ========================================= */
+
+/* Nube de etiquetas estilo Mentimeter en /tags */
+ul.tags-cloud, .tags-container ul, article > ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  padding: 1.5rem 0;
+  margin: 0;
+
+  li {
+    margin: 0 !important;
+    padding: 0 !important;
+    display: inline-flex;
+
+    &::before {
+      content: none !important; /* Elimina viñetas de lista */
+    }
+
+    a.internal.tag-link, a.tag-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.4rem 0.85rem;
+      background-color: rgba(183, 150, 108, 0.12);
+      border: 1px solid rgba(183, 150, 108, 0.3);
+      border-radius: 20px;
+      color: var(--tertiary, #b7966c);
+      text-decoration: none;
+      line-height: 1.1;
+      transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+
+      &:hover {
+        transform: translateY(-2px) scale(1.06);
+        background-color: var(--tertiary, #b7966c);
+        color: var(--bg, #1a1714);
+      }
+    }
+  }
+}

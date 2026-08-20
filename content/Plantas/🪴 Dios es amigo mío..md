@@ -52,4 +52,4 @@ Ambas cosas al mismo tiempo y en el mismo lugar y de igual manera. Es fascinante
 
 A mi me gustan cosas inservibles. Me doy cuenta que mis intereses parecen ser menos útiles o eficientes que los de los otros. No considero que eso sea malo, pero me genera cierta repulsión. Todo eso me hace sufrir y rumiar mucho y cuestionarme lo que hago a cada rato. Y en cierta forma está bien. Pero hoy noté que Dios también está atento a esas cosas. Si a mi me divierte y relaja el alma jugar con Legos como un changuito, a Dios le parece santo y eso me lleva a la santidad. Porque todo lo que mueve mi corazón, sea grande o pequeño, sea doloroso o entusiasmante, [[🪴 Sobre la importancia de las cosas|es una semilla puesta por Dios]]. No hay que dejarla ahí sin nada de atención.
 
-[[🌷 Dejar que a los otros les vaya bien y alegrarse con ellos.]]
+[[🌳 Dejar que a los otros les vaya bien y alegrarse con ellos.]]

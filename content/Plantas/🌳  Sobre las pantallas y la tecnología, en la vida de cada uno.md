@@ -48,7 +48,7 @@ Esta es una oración de hace un tiempo y hoy la traigo al presente... Es muy ton
 > 
 > ¿Por qué será que quiero dedicar tanto tiempo a edificarme un castillo de arena en la virtualidad? ¿Por qué me apasiona tanto la web, la tecnología, el internet? ¿Que "impulso" estoy saciando con esta "comida"?
 > 
-> Este pensamiento está muymuy atado a otro ([[🪻 Sobre la vida plena]] ) 
+> Este pensamiento está muymuy atado a otro ([[🌳 Sobre la vida plena]] ) 
 > Quiero poder mirar a mi pasión por la virtualidad como un instante tercero de mi vida, como una herramienta, como un medio de ocio que, en el fondo y en esencia, permanece igual, estable y no cambia y no me necesita y yo, por sobre todo, no lo necesito.
 > Quiero ver a esta pasión en tercera persona. En minúscula, en contraste con un cerro, un río, el viento, una carrera, un mate con germán, un perro, un beso, un mar, un "hola me abris?" de facu. Quiero prender y apagar el internet por mi mismo y no por el. No por inercia.
 
@@ -68,4 +68,4 @@ La otra vez rezaba esto:
 
 Me pasa que generalmente estar mucho tiempo en la computadora me hace hacer todo más aceleradamente. El andar mucho tiempo en auto y caminar poco también. El acostumbrarme a la luz de una pantalla y no a la del sol....
 
-[[🪻 Sobre la vida plena]]
+[[🌳 Sobre la vida plena]]

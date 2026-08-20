@@ -31,4 +31,4 @@ El estilo de vida universitario es sacrificado en varios sentidos y no estoy en 
 
 Percibo que, en mi vida, el estudio está manifestándose como un deseo desmedido de éxito. Como con perfeccionismo y con desconfianza en el plan de Dios. Tengo un grado de sobre-estructuración y organización en mis estudios que es ridículo. 
 
-[[🪻 Sobre la vida plena]] [[🪸 Sobre las buenas notas]] [[🪴 Sobre la importancia de las cosas]]
+[[🌳 Sobre la vida plena]] [[🪸 Sobre las buenas notas]] [[🪴 Sobre la importancia de las cosas]]

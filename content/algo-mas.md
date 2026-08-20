@@ -4,9 +4,7 @@ title: ¿Algo más?
 > [!info] Últimas actualizaciones
 > Estoy dejando de añadir plantas al jardín, para dedicarme a hacerlas crecer un poco. 
 
-## ~~Escape Room Game.~~
-Is a escape room game I'm [[Plantas/index|currently]] working on. Give it a try [here](https://salvamir.github.io/static/juego/). For now is only a prototype. Is inspired by the Cube Scape Saga of Rusty Lake. 
-## <font color="#9bbb59">E</font><font color="#4bacc6">x</font><font color="#f79646">p</font><font color="#b2a2c7">l</font><font color="#31859b">o</font><font color="#953734">r</font><font color="#c4bd97">e</font> The World! 
+ ## **<font color="#9bbb59">E</font><font color="#4bacc6">x</font><font color="#f79646">p</font><font color="#b2a2c7">l</font><font color="#31859b">o</font><font color="#953734">r</font><font color="#c4bd97">e</font> The World!** 
 What's this? Go to [[Explore The World!|this]] page and find out!
 ## Progreso:
 Ahora estoy copado con este proyecto, así que quiero aprovechar el empujón e ir mostrando mi avance.
@@ -34,6 +32,8 @@ Ahora estoy copado con este proyecto, así que quiero aprovechar el empujón e i
 - ~~Incorporar caja de respuestas~~
 - ~~Corregir distribución en el espacio del libro de visitas~~
 - ~~Conseguir que mi página pueda ser encontrada por cualquier motor de búsqueda.~~
+## ~~Escape Room Game.~~
+Is a escape room game I'm [[Plantas/index|currently]] working on. Give it a try [here](https://salvamir.github.io/static/juego/). For now is only a prototype. Is inspired by the Cube Scape Saga of Rusty Lake.
 ## Cómo tener mi propia página web.
 Son infinitas las maneras de hacerte tu página. No soy desarrollador, asi que solo puedo proponerte las salidas fáciles. Por lo pronto, podés arrancar haciendote un blog en [Bear](https://bearblog.dev/accounts/login/?next=/nubes/dashboard/) o en [Pika!](https://pika.page). También, podés hacerte una plantilla de presentación en [Carrd](https://carrd.co), o en [Canva](https://www.canva.com/website-builder/), o en [Wordpress](https://wordpress.com). Podés explorar [Neocities](https://neocities.org), pero no es tanto mi estilo. 
 Si querés una solución eficiente, te recomiendo empezar por Pika!, la versión gratuita es bastante completa. 

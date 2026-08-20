@@ -1,5 +1,5 @@
 ---
-title: Salva Más De Cerca
+title: Salvador
 description: Acá me gusta coleccionar detalles de mi vida. Es mi cuaderno infinito.
 ---
 <style>
@@ -36,11 +36,8 @@ description: Acá me gusta coleccionar detalles de mi vida. Es mi cuaderno infin
   <a href="https://salvamir.github.io/libro-de-visitas" class="boton-pildora">Visitas</a><a href="https://salvamir.github.io/Etapas" class="boton-pildora">Etapas</a>
 </div>
 
-Soy Salvador, y soy estudiante, músico, católico y Argentino. Acá tengo archivados momentos, ideas, pensamientos, fotos, cuentos, etc. Es como una caja de recuerdos enorme. La diseñé pensando en un cuaderno [[Mapa|infinito]]. Acá aprendo mucho de mi mismo.
-## La redondela:
-Estas son las personas que leo en internet. Sus páginas son parecidas a la mía, por si te interesa conocerlas: 
-- ["Living With The Seasons", de Daniel. ](https://danielslife.blog/posts/living-with-the-seasons) 
-- ["Biking Is Fun", de Nolan.](https://nolancaudill.com/2026/03/16/biking-is-fun/) 
-- ["Simplicity and Less", de Rafael.](https://rafaelkuebler.github.io/posts/20251207-simplicity-and-less/) 
-- ["Secret Garden", de Tanner.](https://t0.vc/secret-garden) 
-- ["Sitting Under The Shale", de Michael.](https://michaelg.bearblog.dev/new-post-new/)![[salvaylaplanta.gif]]
+Algún erudito recibió alguna vez a un extravagante vendedor de Biblias. Ambos se llevaron una sorpresa esa tarde. Por su parte, el intelectual agregó a su lista de vicios una nueva adicción: La ansiedad de querer y no poder conocer todas las palabras escritas en el infinito paginar del libro de arena. 
+Este blog es mi propio libro de arena. Me cansé de llenar cuadernos y no saber que hacer con ellos después. Como es infinito, acá tienen un [[mapa]] para no perderse.
+## <center>La redondela:</center>
+Estas son las personas que leo en internet. Sus páginas son parecidas a la mía, por si te interesa conocerlas: [Daniel](https://danielslife.blog/), [Nolan](https://nolancaudill.com/), [Rafa](https://rafaelkuebler.github.io/), [Tanner](https://tanner.vc), [Michael](https://michaelg.bearblog.dev/blog/), [Robert](https://robertbirming.com/), [Kalena](https://kalenalangford.com), [Seba](https://finest.day/) y [Maggie](https://maggieappleton.com/).
+![[salvaylaplanta.gif|542]]

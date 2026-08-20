@@ -1,3 +1,5 @@
+Esta página está inspirada en [/now](https://nownownow.com/). Quiero seguir con el trend.
+
 <div class="now-container">
 <section class="now-card">
 <div class="now-date">Agosto 2026</div>
