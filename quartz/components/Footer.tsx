@@ -1,7 +1,6 @@
 import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "./types"
 import style from "./styles/footer.scss"
 
-// SVGs Minimalistas
 const RssIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
     <path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle>
@@ -104,11 +103,6 @@ export default ((opts?: Options) => {
     .footer-controls a:focus,
     .footer-controls button:focus {
       opacity: 1 !important;
-      background: transparent !important;
-      border: none !important;
-      outline: none !important;
-      box-shadow: none !important;
-      text-decoration: none !important;
     }
 
     .footer-controls .icon-moon,
@@ -125,6 +119,7 @@ export default ((opts?: Options) => {
 
   Footer.afterDOMLoaded = `
     document.addEventListener("nav", () => {
+      // Lógica de botones nativos
       const customThemeBtn = document.getElementById("custom-darkmode-btn");
       if (customThemeBtn) {
         customThemeBtn.onclick = () => {
@@ -144,62 +139,72 @@ export default ((opts?: Options) => {
         };
       }
 
-      const path = window.location.pathname.replace(/\\/$/, "");
-      if (path === "/tags" || path === "/tags/index.html") {
+      // Lógica robusta del Mentimeter
+      try {
+        console.log("[Mentimeter] Iniciando escaneo...");
         
-        // 1. Buscamos el contenedor padre real que encierra todo
-        const container = document.querySelector(".popover-hint");
-        if (!container || document.getElementById("mentimeter-cloud-container")) return;
+        const container = document.querySelector(".popover-hint") || document.querySelector(".center");
+        if (!container) return;
 
-        // 2. Ocultamos el resumen nativo ("Se han encontrado X etiquetas...")
-        const summaryText = container.querySelector("article + p");
-        if (summaryText) summaryText.style.display = "none";
+        // Buscamos todas las listas de páginas. La página de tags tiene varias, una nota común no.
+        const tagListings = container.querySelectorAll(".page-listing");
+        console.log("[Mentimeter] Listas encontradas: ", tagListings.length);
+        
+        if (tagListings.length <= 1) return; // Si hay 1 o 0, no es el índice de etiquetas
+        if (document.getElementById("mentimeter-cloud-container")) return; // Ya existe
 
         const tagsData = [];
-        
-        // 3. Capturamos los h2 que contienen las etiquetas y recolectamos la info
-        const tagHeaders = container.querySelectorAll("div > h2");
 
-        tagHeaders.forEach(h2 => {
-          const parentDiv = h2.parentElement;
-          const listing = parentDiv ? parentDiv.querySelector(".page-listing") : null;
+        tagListings.forEach(listing => {
+          const parentDiv = listing.parentElement;
+          if (!parentDiv) return;
           
-          if (listing) {
-            const tagName = h2.innerText.replace("#", "").trim();
-            // Contamos la cantidad de notas analizando los "li"
-            const tagCount = listing.querySelectorAll("ul.section-ul > li").length;
-            
-            // Atrapamos la URL exacta para evitar errores si la etiqueta tiene acentos o espacios
-            const tagLinkNode = listing.querySelector("ul.tags a.tag-link");
-            const tagUrl = tagLinkNode ? tagLinkNode.getAttribute("href") : \`/tags/\${tagName}\`;
+          const h2 = parentDiv.querySelector("h2");
+          if (!h2) return;
 
-            if (tagName && tagCount > 0) {
-              tagsData.push({ name: tagName, count: tagCount, href: tagUrl });
-            }
-            
-            // Ocultamos la lista nativa del DOM
-            parentDiv.style.display = "none";
+          const tagName = h2.innerText.replace("#", "").trim();
+          const tagCount = listing.querySelectorAll("li.section-li").length;
+          
+          let tagUrl = \`/tags/\${tagName}\`;
+          const tagLinkNode = listing.querySelector("a.tag-link");
+          if (tagLinkNode) {
+             tagUrl = tagLinkNode.getAttribute("href");
           }
+
+          if (tagName && tagCount > 0) {
+             tagsData.push({ name: tagName, count: tagCount, href: tagUrl });
+          }
+
+          // Ocultamos el bloque original
+          parentDiv.style.display = "none";
         });
+
+        console.log("[Mentimeter] Etiquetas capturadas: ", tagsData);
 
         if (tagsData.length === 0) return;
 
-        const counts = tagsData.map(t => t.count);
-        const minCount = Math.min(...counts);
-        const maxCount = Math.max(...counts);
+        // Ocultar textos basura ("Se han encontrado X etiquetas...")
+        const paragraphs = container.querySelectorAll("p");
+        paragraphs.forEach(p => {
+           if (p.innerText.toLowerCase().includes("etiqueta") || p.innerText.toLowerCase().includes("tag")) {
+              p.style.display = "none";
+           }
+        });
 
-        // 4. Creamos el contenedor del Mentimeter
+        // Crear la nube
         const cloudContainer = document.createElement("div");
         cloudContainer.id = "mentimeter-cloud-container";
         cloudContainer.className = "mentimeter-cloud";
-        
-        // Estilos en línea para garantizar que se vea bien independientemente del CSS
         cloudContainer.style.display = "flex";
         cloudContainer.style.flexWrap = "wrap";
         cloudContainer.style.gap = "1.2rem";
         cloudContainer.style.justifyContent = "center";
         cloudContainer.style.marginTop = "3rem";
         cloudContainer.style.alignItems = "center";
+
+        const counts = tagsData.map(t => t.count);
+        const minCount = Math.min(...counts);
+        const maxCount = Math.max(...counts);
 
         tagsData.forEach(tag => {
           const pill = document.createElement("a");
@@ -217,21 +222,27 @@ export default ((opts?: Options) => {
           pill.style.textDecoration = "none";
           pill.style.transition = "transform 0.2s ease";
           
-          // Efecto hover sutil embebido
           pill.onmouseover = () => pill.style.transform = "scale(1.05)";
           pill.onmouseout = () => pill.style.transform = "scale(1)";
 
-          pill.innerHTML = \`\${tag.name} <span class="mentimeter-tag-count" style="opacity:0.6; font-size:0.7em; margin-left:2px;">(\${tag.count})</span>\`;
+          pill.innerHTML = \`\${tag.name} <span style="opacity:0.6; font-size:0.7em; margin-left:2px;">(\${tag.count})</span>\`;
           cloudContainer.appendChild(pill);
         });
 
-        // Insertamos el contenedor justo debajo del artículo
+        // Insertar visualmente después del artículo principal
         const article = container.querySelector("article");
         if (article) {
-          article.parentNode.insertBefore(cloudContainer, article.nextSibling);
+           article.parentNode.insertBefore(cloudContainer, article.nextSibling);
+        } else {
+           container.prepend(cloudContainer);
         }
+        
+        console.log("[Mentimeter] ¡Nube insertada con éxito!");
+
+      } catch (error) {
+        console.error("[Mentimeter] Fallo en la matrix:", error);
       }
-    })
+    });
   `
 
   return Footer
