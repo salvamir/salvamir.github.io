@@ -145,50 +145,63 @@ export default ((opts?: Options) => {
       }
 
       const path = window.location.pathname.replace(/\\/$/, "");
-      if (path === "/tags") {
-        const article = document.querySelector("article");
-        if (!article || document.getElementById("mentimeter-cloud-container")) return;
+      if (path === "/tags" || path === "/tags/index.html") {
+        
+        // 1. Buscamos el contenedor padre real que encierra todo
+        const container = document.querySelector(".popover-hint");
+        if (!container || document.getElementById("mentimeter-cloud-container")) return;
 
-        const tagLinks = Array.from(article.querySelectorAll("a.internal[href*='/tags/']"));
-        const processedHrefs = new Set();
-        const tagData = [];
+        // 2. Ocultamos el resumen nativo ("Se han encontrado X etiquetas...")
+        const summaryText = container.querySelector("article + p");
+        if (summaryText) summaryText.style.display = "none";
 
-        tagLinks.forEach(link => {
-          const href = link.getAttribute("href");
-          if (!href || processedHrefs.has(href) || href === "/tags" || href === "/tags/") return;
-          processedHrefs.add(href);
+        const tagsData = [];
+        
+        // 3. Capturamos los h2 que contienen las etiquetas y recolectamos la info
+        const tagHeaders = container.querySelectorAll("div > h2");
 
-          const tagName = link.textContent.trim();
-          let count = 1;
-          const parent = link.closest("h2, h3, div, li") || link.parentElement;
-          let nextElem = parent ? parent.nextElementSibling : null;
+        tagHeaders.forEach(h2 => {
+          const parentDiv = h2.parentElement;
+          const listing = parentDiv ? parentDiv.querySelector(".page-listing") : null;
+          
+          if (listing) {
+            const tagName = h2.innerText.replace("#", "").trim();
+            // Contamos la cantidad de notas analizando los "li"
+            const tagCount = listing.querySelectorAll("ul.section-ul > li").length;
+            
+            // Atrapamos la URL exacta para evitar errores si la etiqueta tiene acentos o espacios
+            const tagLinkNode = listing.querySelector("ul.tags a.tag-link");
+            const tagUrl = tagLinkNode ? tagLinkNode.getAttribute("href") : \`/tags/\${tagName}\`;
 
-          while (nextElem) {
-            if (nextElem.tagName === "UL" || nextElem.classList.contains("section-ul")) {
-              count = nextElem.querySelectorAll("li").length || 1;
-              break;
+            if (tagName && tagCount > 0) {
+              tagsData.push({ name: tagName, count: tagCount, href: tagUrl });
             }
-            if (nextElem.tagName === "H2" || nextElem.tagName === "H3") break;
-            nextElem = nextElem.nextElementSibling;
+            
+            // Ocultamos la lista nativa del DOM
+            parentDiv.style.display = "none";
           }
-
-          tagData.push({ name: tagName, href: href, count: count });
         });
 
-        if (tagData.length === 0) return;
+        if (tagsData.length === 0) return;
 
-        const elementsToHide = article.querySelectorAll("h2, h3, p:not(:first-child), ul.section-ul");
-        elementsToHide.forEach(el => el.style.display = "none");
-
-        const counts = tagData.map(t => t.count);
+        const counts = tagsData.map(t => t.count);
         const minCount = Math.min(...counts);
         const maxCount = Math.max(...counts);
 
+        // 4. Creamos el contenedor del Mentimeter
         const cloudContainer = document.createElement("div");
         cloudContainer.id = "mentimeter-cloud-container";
         cloudContainer.className = "mentimeter-cloud";
+        
+        // Estilos en línea para garantizar que se vea bien independientemente del CSS
+        cloudContainer.style.display = "flex";
+        cloudContainer.style.flexWrap = "wrap";
+        cloudContainer.style.gap = "1.2rem";
+        cloudContainer.style.justifyContent = "center";
+        cloudContainer.style.marginTop = "3rem";
+        cloudContainer.style.alignItems = "center";
 
-        tagData.forEach(tag => {
+        tagsData.forEach(tag => {
           const pill = document.createElement("a");
           pill.href = tag.href;
           pill.className = "internal mentimeter-tag-pill";
@@ -201,12 +214,22 @@ export default ((opts?: Options) => {
 
           pill.style.fontSize = \`\${fontSize.toFixed(2)}rem\`;
           pill.style.fontWeight = tag.count > (maxCount / 2) ? "700" : "500";
+          pill.style.textDecoration = "none";
+          pill.style.transition = "transform 0.2s ease";
+          
+          // Efecto hover sutil embebido
+          pill.onmouseover = () => pill.style.transform = "scale(1.05)";
+          pill.onmouseout = () => pill.style.transform = "scale(1)";
 
-          pill.innerHTML = \`\${tag.name} <span class="mentimeter-tag-count">(\${tag.count})</span>\`;
+          pill.innerHTML = \`\${tag.name} <span class="mentimeter-tag-count" style="opacity:0.6; font-size:0.7em; margin-left:2px;">(\${tag.count})</span>\`;
           cloudContainer.appendChild(pill);
         });
 
-        article.appendChild(cloudContainer);
+        // Insertamos el contenedor justo debajo del artículo
+        const article = container.querySelector("article");
+        if (article) {
+          article.parentNode.insertBefore(cloudContainer, article.nextSibling);
+        }
       }
     })
   `

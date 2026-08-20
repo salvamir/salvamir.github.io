@@ -46,7 +46,7 @@
     <area target="" alt="¿Algo Más?" title="Solo para curiosos, si no te alcanzó con leer mis notas acá hay cosas más puntuales y aleatorias." href="https://salvamir.github.io/algo-mas" coords="176,218,17,167" shape="rect">
     <area target="" alt="Visitas" title="Me sirve para saber que estuviste acá." href="https://salvamir.github.io/libro-de-visitas" coords="124,205,259,312" shape="rect">
     <area target="" alt="Música" title="Análisis de canciones, discos y más. Es una colección también." href="/static/musica.html" coords="156,85,289,141" shape="rect">
-    <area target="" alt="Inicio" title="Todos somos una historia que merece ser contada y vivida. - Nico (un amigo mío)" href="https://salvamir.github.io/sobre-mi" coords="229,140,362,218" shape="rect">
+    <area target="" alt="Inicio" title="Todos somos una historia que merece ser contada y vivida. - Nico (un amigo mío)" href="https://salvamir.github.io/about" coords="229,140,362,218" shape="rect">
     <area target="" alt="" title="Otros lugares interesantes para visitar" href="https://salvamir.github.io/links" coords="405,281,237,246" shape="rect">
     <area target="" alt="Libros" title="Acá guardo todos los libros que me acuerdo de haber leído. Solía ser bastante lector antes." href="https://salvamir.github.io/librería" coords="449,154,585,207" shape="rect">
     <area target="" alt="Ahora" title="Actualizaciones casi diarias de mi vida." href="https://salvamir.github.io/static/ahora.html" coords="316,13,412,112" shape="rect">
