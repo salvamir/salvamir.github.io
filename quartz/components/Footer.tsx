@@ -119,22 +119,39 @@ export default ((opts?: Options) => {
 
   Footer.afterDOMLoaded = `
     document.addEventListener("nav", () => {
-      // Lógica de botones nativos
+      // Botón de modo claro/oscuro
       const customThemeBtn = document.getElementById("custom-darkmode-btn");
+
       if (customThemeBtn) {
         customThemeBtn.onclick = () => {
           const html = document.documentElement;
           const currentTheme = html.getAttribute("saved-theme") || "light";
           const newTheme = currentTheme === "light" ? "dark" : "light";
+
           html.setAttribute("saved-theme", newTheme);
           localStorage.setItem("theme", newTheme);
-          document.dispatchEvent(new CustomEvent("themechange", { detail: { theme: newTheme } }));
+
+          document.dispatchEvent(
+            new CustomEvent("themechange", {
+              detail: { theme: newTheme },
+            }),
+          );
         };
       }
 
+      // Botón volver arriba
       const scrollTopBtn = document.getElementById("custom-scrolltop-btn");
+
       if (scrollTopBtn) {
         scrollTopBtn.onclick = () => {
-          window.scrollTo({ top: 0, behavior: "smooth" });
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
         };
       }
+    });
+  `
+
+  return Footer
+}) satisfies QuartzComponentConstructor
