@@ -450,7 +450,7 @@ body.dark-mode {
 }
 
 /* =========================================
-   10. ADAPTACIÓN A CELULARES Y OCULTAR BÚSQUEDA
+   10. ADAPTACIÓN A CELULARES Y OCULTAR ELEMENTOS
    ========================================= */
 @media screen and (max-width: 800px) {
   .page #quartz-body { padding: 1.5rem 1rem !important; width: 100% !important; }
@@ -458,9 +458,10 @@ body.dark-mode {
   .mobile-only { display: none !important; }
 }
 
-/* Ocultar únicamente el buscador de Quartz */
-.search { display: none !important; }
-
+/* Ocultar el buscador y las etiquetas por defecto de Quartz en toda la web */
+.search, .tags, ul.tags { 
+  display: none !important; 
+}
 /* =========================================
    11. LIKES (ESTILO BEAR BLOG)
    ========================================= */
