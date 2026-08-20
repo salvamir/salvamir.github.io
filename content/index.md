@@ -37,7 +37,7 @@ description: Acá me gusta coleccionar detalles de mi vida. Es mi cuaderno infin
 </div>
 
 Algún erudito recibió alguna vez a un extravagante vendedor de Biblias. Ambos se llevaron una sorpresa esa tarde. Por su parte, el intelectual agregó a su lista de vicios una nueva adicción: La ansiedad de querer y no poder conocer todas las palabras escritas en el infinito paginar del libro de arena. 
-Este blog es mi propio libro de arena. Me cansé de llenar cuadernos y no saber que hacer con ellos después. Como es infinito, acá tienen un [[mapa]] para no perderse.
+Este blog es mi propio libro de arena. Me cansé de llenar cuadernos y no saber que hacer con ellos después. Como es infinito, acá tienen un [[Mapa|mapa]] para no perderse.
 ## <center>La redondela:</center>
 Estas son las personas que leo en internet. Sus páginas son parecidas a la mía, por si te interesa conocerlas: [Daniel](https://danielslife.blog/), [Nolan](https://nolancaudill.com/), [Rafa](https://rafaelkuebler.github.io/), [Tanner](https://tanner.vc), [Michael](https://michaelg.bearblog.dev/blog/), [Robert](https://robertbirming.com/), [Kalena](https://kalenalangford.com), [Seba](https://finest.day/) y [Maggie](https://maggieappleton.com/).
 ![[salvaylaplanta.gif|542]]

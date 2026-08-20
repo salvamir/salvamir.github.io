@@ -450,7 +450,7 @@ body.dark-mode {
 }
 
 /* =========================================
-   10. ADAPTACIÓN A CELULARES
+   10. ADAPTACIÓN A CELULARES Y OCULTAR BÚSQUEDA
    ========================================= */
 @media screen and (max-width: 800px) {
   .page #quartz-body { padding: 1.5rem 1rem !important; width: 100% !important; }
@@ -458,15 +458,8 @@ body.dark-mode {
   .mobile-only { display: none !important; }
 }
 
-.search, .tags, ul.tags { display: none !important; }
-body[data-slug="Notas/index"] .search { display: flex !important; justify-content: center !important; margin: 1rem 0 3rem 0 !important; width: 100% !important; }
-
-/* Estilos para el botón de me gusta minimalista */
-.upvote-container {
-  display: flex;
-  justify-content: center;
-  margin: 2rem 0;
-}
+/* Ocultar únicamente el buscador de Quartz */
+.search { display: none !important; }
 
 /* =========================================
    11. LIKES (ESTILO BEAR BLOG)
@@ -524,47 +517,47 @@ body[data-slug="Notas/index"] .search { display: flex !important; justify-conten
 }
 
 /* =========================================
-   12. NUBE DE ETIQUETAS
+   12. NUBE DE ETIQUETAS MENTIMETER
    ========================================= */
+.mentimeter-cloud {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 0.8rem 1.2rem !important;
+  padding: 2rem 0 !important;
+  margin: 1rem auto !important;
+  width: 100% !important;
+}
 
-/* Nube de etiquetas estilo Mentimeter en /tags */
-ul.tags-cloud, .tags-container ul, article > ul {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem 1rem;
-  align-items: center;
-  justify-content: center;
-  list-style: none;
-  padding: 1.5rem 0;
-  margin: 0;
+.mentimeter-tag-pill {
+  display: inline-flex !important;
+  align-items: center !important;
+  padding: 0.35em 0.8em !important;
+  border-radius: 999px !important;
+  background: rgba(183, 150, 108, 0.12) !important;
+  border: 1px solid rgba(183, 150, 108, 0.3) !important;
+  color: var(--secondary) !important;
+  text-decoration: none !important;
+  line-height: 1.2 !important;
+  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease !important;
+}
 
-  li {
-    margin: 0 !important;
-    padding: 0 !important;
-    display: inline-flex;
+html[saved-theme="dark"] .mentimeter-tag-pill,
+html[data-theme="dark"] .mentimeter-tag-pill {
+  background: rgba(132, 173, 215, 0.12) !important;
+  border-color: rgba(132, 173, 215, 0.3) !important;
+  color: var(--secondary) !important;
+}
 
-    &::before {
-      content: none !important; /* Elimina viñetas de lista */
-    }
+.mentimeter-tag-pill:hover {
+  transform: translateY(-2px) scale(1.06) !important;
+  background: var(--secondary) !important;
+  color: var(--light) !important;
+}
 
-    a.internal.tag-link, a.tag-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.35rem;
-      padding: 0.4rem 0.85rem;
-      background-color: rgba(183, 150, 108, 0.12);
-      border: 1px solid rgba(183, 150, 108, 0.3);
-      border-radius: 20px;
-      color: var(--tertiary, #b7966c);
-      text-decoration: none;
-      line-height: 1.1;
-      transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
-
-      &:hover {
-        transform: translateY(-2px) scale(1.06);
-        background-color: var(--tertiary, #b7966c);
-        color: var(--bg, #1a1714);
-      }
-    }
-  }
+.mentimeter-tag-count {
+  font-size: 0.75em !important;
+  opacity: 0.75 !important;
+  margin-left: 0.35em !important;
 }

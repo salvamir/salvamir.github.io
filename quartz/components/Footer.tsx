@@ -1,7 +1,5 @@
 import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "./types"
 import style from "./styles/footer.scss"
-// @ts-ignore
-import tagCloudScript from "./scripts/tagcloud.inline"
 
 // SVGs Minimalistas
 const RssIcon = () => (
@@ -69,9 +67,6 @@ export default ((opts?: Options) => {
             <ArrowUpIcon/>
           </button>
         </div>
-
-        {/* Script inyectado para la nube de tags */}
-        <script dangerouslySetInnerHTML={{ __html: tagCloudScript }} />
       </footer>
     )
   }
@@ -147,6 +142,71 @@ export default ((opts?: Options) => {
         scrollTopBtn.onclick = () => {
           window.scrollTo({ top: 0, behavior: "smooth" });
         };
+      }
+
+      const path = window.location.pathname.replace(/\\/$/, "");
+      if (path === "/tags") {
+        const article = document.querySelector("article");
+        if (!article || document.getElementById("mentimeter-cloud-container")) return;
+
+        const tagLinks = Array.from(article.querySelectorAll("a.internal[href*='/tags/']"));
+        const processedHrefs = new Set();
+        const tagData = [];
+
+        tagLinks.forEach(link => {
+          const href = link.getAttribute("href");
+          if (!href || processedHrefs.has(href) || href === "/tags" || href === "/tags/") return;
+          processedHrefs.add(href);
+
+          const tagName = link.textContent.trim();
+          let count = 1;
+          const parent = link.closest("h2, h3, div, li") || link.parentElement;
+          let nextElem = parent ? parent.nextElementSibling : null;
+
+          while (nextElem) {
+            if (nextElem.tagName === "UL" || nextElem.classList.contains("section-ul")) {
+              count = nextElem.querySelectorAll("li").length || 1;
+              break;
+            }
+            if (nextElem.tagName === "H2" || nextElem.tagName === "H3") break;
+            nextElem = nextElem.nextElementSibling;
+          }
+
+          tagData.push({ name: tagName, href: href, count: count });
+        });
+
+        if (tagData.length === 0) return;
+
+        const elementsToHide = article.querySelectorAll("h2, h3, p:not(:first-child), ul.section-ul");
+        elementsToHide.forEach(el => el.style.display = "none");
+
+        const counts = tagData.map(t => t.count);
+        const minCount = Math.min(...counts);
+        const maxCount = Math.max(...counts);
+
+        const cloudContainer = document.createElement("div");
+        cloudContainer.id = "mentimeter-cloud-container";
+        cloudContainer.className = "mentimeter-cloud";
+
+        tagData.forEach(tag => {
+          const pill = document.createElement("a");
+          pill.href = tag.href;
+          pill.className = "internal mentimeter-tag-pill";
+
+          let fontSize = 1.1;
+          if (maxCount > minCount) {
+            const scale = (tag.count - minCount) / (maxCount - minCount);
+            fontSize = 1.0 + scale * 1.6;
+          }
+
+          pill.style.fontSize = \`\${fontSize.toFixed(2)}rem\`;
+          pill.style.fontWeight = tag.count > (maxCount / 2) ? "700" : "500";
+
+          pill.innerHTML = \`\${tag.name} <span class="mentimeter-tag-count">(\${tag.count})</span>\`;
+          cloudContainer.appendChild(pill);
+        });
+
+        article.appendChild(cloudContainer);
       }
     })
   `
