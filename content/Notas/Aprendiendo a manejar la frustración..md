@@ -16,6 +16,3 @@ Se que al final este nudo que estoy viviendo Dios me lo va a mostrar con clarida
 Ayer fue sábado y Dios me regaló mucha alegría y calma. Realmente pude sentir Su Paz. Hoy no la siento como ayer, pero no pasa nada. Elijo reposar estas ideas en María que me cuida. 
 
 Quiero vivir de la mano de Jesús esta etapa. Si parece que la "Vida piola llena de experiencias, caminatas, viajes, juventud y diversión" parece que se me va de las manos, al menos me quedo tranquilo sabiendo que la vida que me toca es la que Dios quiere que viva. Y sé que esta cruz es pequeña, y que la grandota ya la carga Cristo por mí.
-
----
-#### Si querés, podés comentar algo en mi [[libro-de-visitas|libro de visitas.]]
