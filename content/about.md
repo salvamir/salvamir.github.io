@@ -2,7 +2,7 @@
 
 | ![[4.webp\|127]] | ![[2.webp\|130]] | ![[3.webp\|130]] | ![[foto.webp\|128]] |
 | ---------------- | ---------------- | ---------------- | ------------------- |
-# Quién soy.
+### Quién soy.
 Soy Salvador, el significado de mi nombre es bastante autoexplicativo. Vivo con 5 hermanos en la provincia más chiquita del mejor país del mundo. Inventé esta página *para divertirme* y para poder almacenar casi eternamente mis pensamientos, ideas, escritos, etc. Es unacaja inmensa de recuerdos. Soy estudiante, músico, católico y Argentino. Estoy de novio hace rato con una chica preciosa y muy interesante también. 
 
 Hice muchas cosas en lo que llevo de vida. Actualmente, estoy concentrado casi  al 100% en estudiar, pero tengo otras mini ocupaciones, como hacer música, leer repetidas veces los mismos cuentos y los mismos libros, escribir, dibujar (muymuy de vez en cuando), bailar folklore, [estudiar y compartir la Teología Del Cuerpo](https://tdcjovenes23-tuc.my.canva.site/charlas-totus). 
