@@ -13,7 +13,7 @@ Invertí muchísimo tiempo optimizando y sistematizando la sincronización de to
 El problema con el desorden virtual no es el desorden en sí. El problema es que yo, Salvador, no tengo el control absoluto. Y eso me hiere el ego. Porque casi ninguna circunstancia de mi vida puedo controlarla yo. Y el mundo digital parecía ser el horizonte brillante sobre el cual yo iba a poder dominar y tener control absoluto. Y ahora me doy con la realidad de que no es así, y que si lo fuera, tampoco tendría sentido. En ese caso, probablemente gastaría más tiempo ordenando mi vida digital que dejando "huella" o terminando tareas o conectando con la gente.
 
 ## Dejar de planificar, esquematizar y organizar y empezar a disfrutar verdaderamente.
-Ese es mi nuevo propósito. Ahora que ya estamos a una semanita de agosto, quiero proponerme seriamente convivir con el "descontrol". Al fin y al cabo, la vida no nos fue dada para que la controlemos sino para que la habitemos. Algo así dijo un sacerdote en los 10min con Jesús que escuché hoy a la mañana. 
+Ese es mi nuevo propósito. Ahora que ya estamos a una semanita de septiembre, quiero proponerme seriamente convivir con el "descontrol". Al fin y al cabo, la vida no nos fue dada para que la controlemos sino para que la habitemos. Algo así dijo un sacerdote en los 10min con Jesús que escuché hoy a la mañana. 
 
 > [!note] Comentario de un sacerdote en los 10min con Jesús
 > "Dios nos ha dado la vida para que la habitemos y la ordenemos... No al revés"

@@ -1,6 +1,23 @@
 #arbolito 
 
-¿Se puede vivir plenamente teniendo que estar todos los días delante de una pantalla, conectado a internet y rodeado de conexiones bluetooth? Supongo que sí... Debe ser cuestión de adaptarse.
+## <font color="#d8d8d8">Tecnología e Internet.</font>
+Los que me conocen sabrán que, de repente, soy fanático de la tecnología y adicto al internet. Antes eran los videos de youtube, después fueron los reels y tiktoks, y hoy son los blogs. Aprendí a manejar esa necesidad de consumir y obtener dopamina fácil e instantánea. 
+
+Ahora mismo, gracias a Dios te puedo decir que estoy empezando a tener una relación más "sana" con la tecnología. Recen por mi, para que aprenda realmente a darle el espacio que le corresponde a mi celular y a mi computadora, para que no me coman la vida porfa. 
+
+El Internet me parece fascinante desde hace un par de meses. No sabía ni qué era ni como funcionaba, investigué un toque por curioso y me copé. No suelo interesarme por las invenciones del hombre teniendo al alcance de la mano las creaciones de Dios (montañas, cielo, viento, universo, sol, yo, nosotros, etc). Pero esta sin duda me parece una herramienta demasiado potente, más allá del pésimo uso que le demos nosotros.
+
+¿No te parece re loco que un millón de edificios con información nanometrica (servidores) estén conectados a través de cables submarinos de miles de kilometros? y que encima toda esa información sea viejisima. Es tan vasta que nos es, seguramente, imposible acceder a toda. Y esa información es *nuestra*. Los humanos hemos documentado las cosas en los escritos y los libros primero obvio. Después en las fotos. Y ahora, los libros y las fotos yacen duplicados y virtualizados en un servidor digital accesible a todos desde cualquier parte del mundo.
+
+Es un bajón que la "hiperconectividad" del presente nos haya desconectado tanto unos de otros. Las redes sociales no nos acercan nada, de eso estoy seguro. <font color="#fbd5b5">El internet nunca nos va a acercar tanto como quiere parecer, pero la idea no fue esa en un principio.</font> No esperes encontrar nada "real" en este espacio. En todo caso, la información que guardo es humana, sincera y transparente. Pero la realidad es [[🪴 ¿Dónde encuentra la paz mi corazón?|otra cosa]]. Acá es todo archivo, todo virtual, [[We live in a huge "human fair".  Trust others that they're being transparent.|todo muerto]]. La realidad está fuera de la pantalla, la idea de esto es señalarla nada más. 
+
+Esta página existe para que vos, yo y cualquiera que entre pueda sentirse humanamente llamado a vivir plenamente. Mi idea es que, leyendo y percibiendo todo lo que documento acá, pueda darme cuenta de lo superfluo que es, y gente como vos pueda sentirse un poco conectada conmigo, y esa conexión ficticia te haga pensar "eu, tengo que salir de acá y acercarme a la gente real de mi entorno real".
+
+El internet es un invento muy zarpado y muy útil. Me parece indispensable aprender a convivir sanamente con la tecnología para que nos sean propicias. La idea es que podamos prender y apagar la conexión por decisión propia cuando queramos.
+
+Acá en el internet hay muchas cosas valiosas. Algunas de ellas las recopilé en mis [[links|links]]. Por eso, te invito a entrar a [esta](https://liturgiacatolica.org/Lucas/5,1%E2%80%9111.html) página secreta.
+## Sobre las pantallas y la tecnología, en la vida de cada uno
+La sección de arriba describe un poco como viene siendo mi relación con el Internet, pero las preguntas siguen con vida: ¿Se puede vivir plenamente teniendo que estar todos los días delante de una pantalla, conectado a internet y rodeado de conexiones bluetooth? Supongo que sí... Debe ser cuestión de adaptarse.
 
 Nada en internet es verdadero. Nada virtual es real eso está clarísimo... ¿Qué busco en las pantallas entonces? ¿Qué busca uno en las redes sociales, en los videos de Youtube, en las páginas web? 
 
