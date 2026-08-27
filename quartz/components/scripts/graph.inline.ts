@@ -14,10 +14,27 @@ import {
   drag,
   zoom,
 } from "d3"
-import { Text, Graphics, Application, Container, Circle } from "pixi.js"
-import { Group as TweenGroup, Tween as Tweened } from "@tweenjs/tween.js"
-import { registerEscapeHandler, removeAllChildren } from "./util"
-import { FullSlug, SimpleSlug, resolveRelative, simplifySlug } from "../../util/path"
+import {
+  Text,
+  Graphics,
+  Application,
+  Container,
+  Circle,
+} from "pixi.js"
+import {
+  Group as TweenGroup,
+  Tween as Tweened,
+} from "@tweenjs/tween.js"
+import {
+  registerEscapeHandler,
+  removeAllChildren,
+} from "./util"
+import {
+  FullSlug,
+  SimpleSlug,
+  resolveRelative,
+  simplifySlug,
+} from "../../util/path"
 import { D3Config } from "../Graph"
 
 type GraphicsInfo = {
@@ -55,13 +72,20 @@ type NodeRenderData = GraphicsInfo & {
 const localStorageKey = "graph-visited"
 
 function getVisited(): Set<SimpleSlug> {
-  return new Set(JSON.parse(localStorage.getItem(localStorageKey) ?? "[]"))
+  return new Set(
+    JSON.parse(
+      localStorage.getItem(localStorageKey) ?? "[]",
+    ),
+  )
 }
 
 function addToVisited(slug: SimpleSlug) {
   const visited = getVisited()
   visited.add(slug)
-  localStorage.setItem(localStorageKey, JSON.stringify([...visited]))
+  localStorage.setItem(
+    localStorageKey,
+    JSON.stringify([...visited]),
+  )
 }
 
 type TweenNode = {
@@ -69,11 +93,22 @@ type TweenNode = {
   stop: () => void
 }
 
-async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
+async function renderGraph(
+  graph: HTMLElement,
+  fullSlug: FullSlug,
+  overrideConfig?: Partial<D3Config>,
+) {
   const slug = simplifySlug(fullSlug)
   const visited = getVisited()
 
   removeAllChildren(graph)
+
+  const config = {
+    ...(JSON.parse(
+      graph.dataset["cfg"]!,
+    ) as D3Config),
+    ...(overrideConfig ?? {}),
+  }
 
   let {
     drag: enableDrag,
@@ -87,10 +122,15 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
     opacityScale,
     focusOnHover,
     enableRadial,
-  } = JSON.parse(graph.dataset["cfg"]!) as D3Config
+  } = config
 
-  const data: Map<SimpleSlug, ContentDetails> = new Map(
-    Object.entries<ContentDetails>(await fetchData).map(([k, v]) => [
+  const data: Map<
+    SimpleSlug,
+    ContentDetails
+  > = new Map(
+    Object.entries<ContentDetails>(
+      await fetchData,
+    ).map(([k, v]) => [
       simplifySlug(k as FullSlug),
       v,
     ]),
@@ -103,10 +143,6 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
    *
    * Tags y archivos adjuntos quedan completamente fuera
    * del grafo.
-   *
-   * Importante:
-   * NO modificamos la estructura de `data`, porque el grafo
-   * global depende de que todos los contenidos estén disponibles.
    */
 
   const attachmentExtensions = new Set([
@@ -153,38 +189,31 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
   function isNote(id: SimpleSlug): boolean {
     const lower = id.toLowerCase()
 
-    return ![...attachmentExtensions].some((extension) =>
+    return ![
+      ...attachmentExtensions,
+    ].some((extension) =>
       lower.endsWith(extension),
     )
   }
 
-  /*
-   * Todas las notas válidas.
-   *
-   * Los tags NO se agregan acá.
-   */
   const validLinks = new Set(
-    [...data.keys()].filter((id) => isNote(id)),
+    [...data.keys()].filter((id) =>
+      isNote(id),
+    ),
   )
 
   /*
    * ============================================================
    * LINKS
    * ============================================================
-   *
-   * Solamente se crean conexiones:
-   *
-   *      NOTA ───── NOTA
-   *
-   * Nunca:
-   *
-   *      NOTA ───── TAG
-   *      NOTA ───── ADJUNTO
    */
 
   const links: SimpleLinkData[] = []
 
-  for (const [source, details] of data.entries()) {
+  for (const [
+    source,
+    details,
+  ] of data.entries()) {
     if (!validLinks.has(source)) {
       continue
     }
@@ -214,13 +243,15 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
    *
    * depth < 0:
    *   muestra TODAS LAS NOTAS.
-   *
-   * Esta parte es importante para el botón del grafo global.
    */
 
-  const neighbourhood = new Set<SimpleSlug>()
+  const neighbourhood =
+    new Set<SimpleSlug>()
 
-  const wl: (SimpleSlug | "__SENTINEL")[] = [
+  const wl: (
+    | SimpleSlug
+    | "__SENTINEL"
+  )[] = [
     slug,
     "__SENTINEL",
   ]
@@ -242,27 +273,27 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
 
         neighbourhood.add(cur)
 
-        const outgoing = links.filter(
-          (l) => l.source === cur,
-        )
+        const outgoing =
+          links.filter(
+            (l) => l.source === cur,
+          )
 
-        const incoming = links.filter(
-          (l) => l.target === cur,
-        )
+        const incoming =
+          links.filter(
+            (l) => l.target === cur,
+          )
 
         wl.push(
-          ...outgoing.map((l) => l.target),
-          ...incoming.map((l) => l.source),
+          ...outgoing.map(
+            (l) => l.target,
+          ),
+          ...incoming.map(
+            (l) => l.source,
+          ),
         )
       }
     }
   } else {
-    /*
-     * IMPORTANTE:
-     *
-     * Cuando depth es negativo se muestran todas las notas.
-     * No agregamos tags.
-     */
     validLinks.forEach((id) =>
       neighbourhood.add(id),
     )
@@ -274,19 +305,25 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
    * ============================================================
    */
 
-  const nodes = [...neighbourhood].map((url) => {
+  const nodes = [
+    ...neighbourhood,
+  ].map((url) => {
     const text =
       data.get(url)?.title ?? url
 
     return {
       id: url,
       text,
-      tags: data.get(url)?.tags ?? [],
+      tags:
+        data.get(url)?.tags ?? [],
     }
   })
 
   const nodeMap = new Map(
-    nodes.map((node) => [node.id, node]),
+    nodes.map((node) => [
+      node.id,
+      node,
+    ]),
   )
 
   const graphData: {
@@ -298,16 +335,28 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
     links: links
       .filter(
         (l) =>
-          neighbourhood.has(l.source) &&
-          neighbourhood.has(l.target),
+          neighbourhood.has(
+            l.source,
+          ) &&
+          neighbourhood.has(
+            l.target,
+          ),
       )
       .map((l) => ({
-        source: nodeMap.get(l.source)!,
-        target: nodeMap.get(l.target)!,
+        source:
+          nodeMap.get(
+            l.source,
+          )!,
+        target:
+          nodeMap.get(
+            l.target,
+          )!,
       })),
   }
 
-  const width = graph.offsetWidth
+  const width =
+    graph.offsetWidth
+
   const height = Math.max(
     graph.offsetHeight,
     250,
@@ -341,7 +390,9 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
       "link",
       forceLink(
         graphData.links,
-      ).distance(linkDistance),
+      ).distance(
+        linkDistance,
+      ),
     )
     .force(
       "collide",
@@ -351,13 +402,19 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
     )
 
   const radius =
-    (Math.min(width, height) / 2) *
+    (Math.min(
+      width,
+      height,
+    ) /
+      2) *
     0.8
 
   if (enableRadial) {
     simulation.force(
       "radial",
-      forceRadial(radius).strength(0.2),
+      forceRadial(
+        radius,
+      ).strength(0.2),
     )
   }
 
@@ -384,7 +441,9 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
         acc[key] =
           getComputedStyle(
             document.documentElement,
-          ).getPropertyValue(key)
+          ).getPropertyValue(
+            key,
+          )
 
         return acc
       },
@@ -394,7 +453,9 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
       >,
     )
 
-  const color = (d: NodeData) => {
+  const color = (
+    d: NodeData,
+  ) => {
     const isCurrent =
       d.id === slug
 
@@ -402,24 +463,34 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
       return computedStyleMap[
         "--secondary"
       ]
-    } else if (visited.has(d.id)) {
+    } else if (
+      visited.has(d.id)
+    ) {
       return computedStyleMap[
         "--tertiary"
       ]
     } else {
-      return computedStyleMap["--gray"]
+      return computedStyleMap[
+        "--gray"
+      ]
     }
   }
 
-  function nodeRadius(d: NodeData) {
+  function nodeRadius(
+    d: NodeData,
+  ) {
     const numLinks =
       graphData.links.filter(
         (l) =>
-          l.source.id === d.id ||
-          l.target.id === d.id,
+          l.source.id ===
+            d.id ||
+          l.target.id ===
+            d.id,
       ).length
 
-    return 2 + Math.sqrt(numLinks)
+    return 2 + Math.sqrt(
+      numLinks,
+    )
   }
 
   /*
@@ -428,35 +499,46 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
    * ============================================================
    */
 
-  let hoveredNodeId: string | null = null
-  let hoveredNeighbours: Set<string> =
-    new Set()
+  let hoveredNodeId:
+    string | null = null
 
-  const linkRenderData: LinkRenderData[] =
-    []
+  let hoveredNeighbours:
+    Set<string> = new Set()
 
-  const nodeRenderData: NodeRenderData[] =
-    []
+  const linkRenderData:
+    LinkRenderData[] = []
+
+  const nodeRenderData:
+    NodeRenderData[] = []
 
   function updateHoverInfo(
-    newHoveredId: string | null,
+    newHoveredId:
+      string | null,
   ) {
-    hoveredNodeId = newHoveredId
+    hoveredNodeId =
+      newHoveredId
 
-    if (newHoveredId === null) {
-      hoveredNeighbours = new Set()
+    if (
+      newHoveredId === null
+    ) {
+      hoveredNeighbours =
+        new Set()
 
-      for (const n of nodeRenderData) {
+      for (const n of
+        nodeRenderData) {
         n.active = false
       }
 
-      for (const l of linkRenderData) {
+      for (const l of
+        linkRenderData) {
         l.active = false
       }
     } else {
-      hoveredNeighbours = new Set()
+      hoveredNeighbours =
+        new Set()
 
-      for (const l of linkRenderData) {
+      for (const l of
+        linkRenderData) {
         const linkData =
           l.simulationData
 
@@ -482,7 +564,8 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
             newHoveredId
       }
 
-      for (const n of nodeRenderData) {
+      for (const n of
+        nodeRenderData) {
         n.active =
           hoveredNeighbours.has(
             n.simulationData.id,
@@ -506,12 +589,15 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
    */
 
   function renderLinks() {
-    tweens.get("link")?.stop()
+    tweens
+      .get("link")
+      ?.stop()
 
     const tweenGroup =
       new TweenGroup()
 
-    for (const l of linkRenderData) {
+    for (const l of
+      linkRenderData) {
       let alpha = 1
 
       if (hoveredNodeId) {
@@ -521,7 +607,9 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
       }
 
       l.color = l.active
-        ? computedStyleMap["--gray"]
+        ? computedStyleMap[
+            "--gray"
+          ]
         : computedStyleMap[
             "--lightgray"
           ]
@@ -538,7 +626,9 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
 
     tweenGroup
       .getAll()
-      .forEach((tw) => tw.start())
+      .forEach((tw) =>
+        tw.start(),
+      )
 
     tweens.set("link", {
       update:
@@ -549,7 +639,9 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
       stop() {
         tweenGroup
           .getAll()
-          .forEach((tw) => tw.stop())
+          .forEach((tw) =>
+            tw.stop(),
+          )
       },
     })
   }
@@ -561,7 +653,9 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
    */
 
   function renderLabels() {
-    tweens.get("label")?.stop()
+    tweens
+      .get("label")
+      ?.stop()
 
     const tweenGroup =
       new TweenGroup()
@@ -572,12 +666,14 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
     const activeScale =
       defaultScale * 1.05
 
-    for (const n of nodeRenderData) {
+    for (const n of
+      nodeRenderData) {
       const nodeId =
         n.simulationData.id
 
       if (
-        hoveredNodeId === nodeId
+        hoveredNodeId ===
+        nodeId
       ) {
         tweenGroup.add(
           new Tweened<Text>(
@@ -614,7 +710,9 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
 
     tweenGroup
       .getAll()
-      .forEach((tw) => tw.start())
+      .forEach((tw) =>
+        tw.start(),
+      )
 
     tweens.set("label", {
       update:
@@ -625,7 +723,9 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
       stop() {
         tweenGroup
           .getAll()
-          .forEach((tw) => tw.stop())
+          .forEach((tw) =>
+            tw.stop(),
+          )
       },
     })
   }
@@ -637,16 +737,20 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
    */
 
   function renderNodes() {
-    tweens.get("hover")?.stop()
+    tweens
+      .get("hover")
+      ?.stop()
 
     const tweenGroup =
       new TweenGroup()
 
-    for (const n of nodeRenderData) {
+    for (const n of
+      nodeRenderData) {
       let alpha = 1
 
       if (
-        hoveredNodeId !== null &&
+        hoveredNodeId !==
+          null &&
         focusOnHover
       ) {
         alpha = n.active
@@ -667,7 +771,9 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
 
     tweenGroup
       .getAll()
-      .forEach((tw) => tw.start())
+      .forEach((tw) =>
+        tw.start(),
+      )
 
     tweens.set("hover", {
       update:
@@ -678,7 +784,9 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
       stop() {
         tweenGroup
           .getAll()
-          .forEach((tw) => tw.stop())
+          .forEach((tw) =>
+            tw.stop(),
+          )
       },
     })
   }
@@ -689,8 +797,8 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
     renderLabels()
   }
 
-  tweens.forEach((tween) =>
-    tween.stop(),
+  tweens.forEach(
+    (tween) => tween.stop(),
   )
 
   tweens.clear()
@@ -721,7 +829,17 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
     app.canvas,
   )
 
-  const stage = app.stage
+  /*
+   * Asegura que el canvas no bloquee
+   * elementos externos del grafo global.
+   */
+  app.canvas.style.position =
+    "relative"
+  app.canvas.style.zIndex =
+    "1"
+
+  const stage =
+    app.stage
 
   stage.interactive = false
 
@@ -755,7 +873,8 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
    * ============================================================
    */
 
-  for (const n of graphData.nodes) {
+  for (const n of
+    graphData.nodes) {
     const nodeId = n.id
 
     const label =
@@ -826,7 +945,9 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
         .on(
           "pointerleave",
           () => {
-            updateHoverInfo(null)
+            updateHoverInfo(
+              null,
+            )
 
             label.alpha =
               oldLabelOpacity
@@ -845,15 +966,15 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
       label,
     )
 
-    const nodeRenderDatum: NodeRenderData =
-      {
-        simulationData: n,
-        gfx,
-        label,
-        color: color(n),
-        alpha: 1,
-        active: false,
-      }
+    const nodeRenderDatum:
+      NodeRenderData = {
+      simulationData: n,
+      gfx,
+      label,
+      color: color(n),
+      alpha: 1,
+      active: false,
+    }
 
     nodeRenderData.push(
       nodeRenderDatum,
@@ -866,7 +987,8 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
    * ============================================================
    */
 
-  for (const l of graphData.links) {
+  for (const l of
+    graphData.links) {
     const gfx =
       new Graphics({
         interactive: false,
@@ -877,17 +999,17 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
       gfx,
     )
 
-    const linkRenderDatum: LinkRenderData =
-      {
-        simulationData: l,
-        gfx,
-        color:
-          computedStyleMap[
-            "--lightgray"
-          ],
-        alpha: 1,
-        active: false,
-      }
+    const linkRenderDatum:
+      LinkRenderData = {
+      simulationData: l,
+      gfx,
+      color:
+        computedStyleMap[
+          "--lightgray"
+        ],
+      alpha: 1,
+      active: false,
+    }
 
     linkRenderData.push(
       linkRenderDatum,
@@ -1145,8 +1267,7 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
    * ============================================================
    */
 
-  let stopAnimation =
-    false
+  let stopAnimation = false
 
   function animate(
     time: number,
@@ -1227,6 +1348,7 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
 
   return () => {
     stopAnimation = true
+    simulation.stop()
     app.destroy()
   }
 }
@@ -1338,9 +1460,6 @@ document.addEventListener(
     ] as HTMLElement[]
 
     async function renderGlobalGraph() {
-      /*
-       * Evita acumular simulaciones anteriores.
-       */
       cleanupGlobalGraphs()
 
       const globalSlug =
@@ -1352,6 +1471,13 @@ document.addEventListener(
           "active",
         )
 
+        /*
+         * Mantiene el botón/contenedor
+         * del grafo por encima del canvas.
+         */
+        container.style.zIndex =
+          "1000"
+
         const sidebar =
           container.closest(
             ".sidebar",
@@ -1359,7 +1485,7 @@ document.addEventListener(
 
         if (sidebar) {
           sidebar.style.zIndex =
-            "1"
+            "1001"
         }
 
         const graphContainer =
@@ -1377,25 +1503,40 @@ document.addEventListener(
         ) {
           try {
             /*
-             * El grafo global utiliza su propia configuración.
+             * ==================================================
+             * IMPORTANTE
+             * ==================================================
              *
-             * Si depth está configurado como -1 en Quartz,
-             * renderGraph mostrará TODAS LAS NOTAS.
+             * El grafo global SIEMPRE utiliza:
+             *
+             * depth: -1
+             *
+             * Por lo tanto muestra todas las notas,
+             * independientemente de la configuración
+             * del grafo local.
+             *
+             * También forzamos drag y zoom para asegurarnos
+             * de que el grafo global pueda expandirse,
+             * moverse y navegarse.
              */
+
             const cleanup =
               await renderGraph(
                 graphContainer,
                 globalSlug,
+                {
+                  depth: -1,
+                  drag: true,
+                  zoom: true,
+                  focusOnHover: true,
+                  enableRadial: true,
+                },
               )
 
             globalGraphCleanups.push(
               cleanup,
             )
           } catch (error) {
-            /*
-             * Si ocurre un error, evitamos que el botón
-             * parezca completamente muerto.
-             */
             console.error(
               "Error rendering global graph:",
               error,
@@ -1404,6 +1545,9 @@ document.addEventListener(
             container.classList.remove(
               "active",
             )
+
+            container.style.zIndex =
+              ""
 
             if (sidebar) {
               sidebar.style.zIndex =
@@ -1428,6 +1572,9 @@ document.addEventListener(
         container.classList.remove(
           "active",
         )
+
+        container.style.zIndex =
+          ""
 
         const sidebar =
           container.closest(
