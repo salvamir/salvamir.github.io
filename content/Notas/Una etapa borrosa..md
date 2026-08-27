@@ -12,4 +12,5 @@ Estoy usando este tiempo para absorver del entorno lo que toque. Estos días tra
 ![[plantita.jpg|268]]![[planta.jpg|269]]
 
 Iremos viendo como crecen. Entiendo que no hay que hacer estas cosas en invierno, porque las plantas se secan. 
+
 #vidayaprendizaje 

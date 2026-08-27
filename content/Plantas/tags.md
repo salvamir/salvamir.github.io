@@ -5,10 +5,10 @@ Acá están todas las temáticas actuales de mi página web. Algunas no existen 
 
 - [Geología](https://salvamir.github.io/tags/geología)
 - [Música](https://salvamir.github.io/tags/musica)
-- [Aprendizaje](https://salvamir.github.io/tags/aprendizaje)
+- [Aprendizaje](https://salvamir.github.io/tags/vidayaprendizaje)
 - [Tecnología](https://salvamir.github.io/tags/tecnologia)
 - [Teología Del Cuerpo](https://salvamir.github.io/tags/tdc)
-- [Charlas](https://salvamir.github.io/tags/conversaciones/)
+- [Charlas](https://salvamir.github.io/tags/conversaciones)
 - [Estaciones](https://salvamir.github.io/tags/estaciones)
 - [Oraciones](https://salvamir.github.io/tags/oraciones)
 - [Yuyo](https://salvamir.github.io/tags/yuyo)

@@ -33,4 +33,6 @@ Nadie en esa clase pensó seriamente algo sobre esa tontera de la vida. Una plum
 Yo en cambio, sentí a Jesús diciendome:
 
 > _"Yo voy a estar con ustedes todos los días, hasta el fin del mundo"_
+
+
 #oraciones #vidayaprendizaje 

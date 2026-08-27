@@ -8,5 +8,6 @@ Se me hace muy interesante esta idea. Creo que la solución a la mayoría de con
 Me acuerdo que una vez en una clase de Petrología me reí por algo (ya ni de qué me reí me acuerdo jajaja) pero la cosa es que un compañero, de la nada, con cara medio de sonrisa nerviosa y con un tono agresivo casi que me gritó: "¡Salvador, vos siempre te reís de todo!"
 
 No me gustó que me digan eso la verdad, ese día me quedé pensando muchísimo en eso. Creo que no todos entienden el verdadero y sencillo sentido del humor. Es un arte silenciosa. 
+
 #helecho #vidayaprendizaje 
 

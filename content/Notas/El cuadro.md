@@ -14,4 +14,5 @@ Es tremendo como se siente la luz del sol en la cara de esta mujer. Deja mucho p
 Siento a este cuadro como un suspiro. Como una oleada de viento fresco. Lo veo y escucho las hojas de los árboles moverse acariciadas por el sol. Me gustaría ponerlo en un lugar donde siempre pudiese verlo.
 
 El cuadro es bueno porque parece haber detenido el tiempo en ese instante en que esta mujer miró a alguien. Quizás por eso me quita el aliento también, porque parece que la rotación de la Tierra se detuvo un segundo infinito en esa mirada. Muchas veces me sentí mirado así. Habla mucho de la vocación femenina.
+
 #tdc

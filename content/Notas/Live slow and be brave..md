@@ -4,7 +4,7 @@ cssclasses:
 date: 2026-06-01
 ---
 This post is a reply to Daniel's and Rafa's thoughts on [simplicity](https://rafaelkuebler.github.io/posts/20251207-simplicity-and-less/), [overwhelming "needs" of professional growth](https://danielslife.blog/posts/letting-others-be-better), rush and routines.
-Those posts resonated with me. Here I just connected the nodes between them all. #conversaciones 
+Those posts resonated with me. Here I just connected the nodes between them all. 
 
 ---
 
@@ -35,4 +35,5 @@ I encourage you to assume the protagonism of your life, and rest for a little, w
 And if you already feel rested, then go and keep up with your responsibilities. But this time, do everything slowly. Do it with all of yourself: Read slowly, walk slowly, talk slowly. You don't need to rush. Speed is the most un-human thing we ever had. Cars go at 60km/hr, we don't.
 ## Further reading:
 More people commented on this topic, like [Kev](https://kevquirk.com/i-didnt-fail), or [Rihshab](https://blog.rishabhps.com/posts/2026-02-03-content-consumption-productivity-and-lost-art-of-boredom/). Read them, publish something, and keep the conversation alive!
+
 #conversaciones 

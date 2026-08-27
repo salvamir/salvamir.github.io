@@ -28,5 +28,6 @@ No me gusta aspirar a las mejores notas siempre. Porque en un sentido práctico,
 El estilo de vida universitario es sacrificado en varios sentidos y no estoy en contra de eso, así lo elegí. Pero me doy cuenta que sacrifiqué tiempo de calidad con mi familia, juntadas verdaderas y largas con mis amigos, charlas distendidas, caminatas, cerros, deporte, formación católica, evangelización, etc por algo que en el fondo no repercute seriamente en mi vida. 
 
 Percibo que, en mi vida, el estudio está manifestándose como un deseo desmedido de éxito. Como con perfeccionismo y con desconfianza en el plan de Dios. Tengo un grado de sobre-estructuración y organización en mis estudios que es ridículo. 
+[[🌳 Sobre la vida plena]] [[🪴 Sobre la importancia de las cosas]] 
 
-[[🌳 Sobre la vida plena]] [[🪴 Sobre la importancia de las cosas]] #arbolito #oraciones #vidayaprendizaje 
+#arbolito #oraciones #vidayaprendizaje 

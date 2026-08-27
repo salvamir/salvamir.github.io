@@ -45,4 +45,5 @@ Otra forma de vivir apasionadamente la rutina es darse tiempos "humanos". En la 
 > 
 > Lo dijo un padre amigo mío. Me encanta ver las cosas cotidianas de esa forma tan sana.
 
+
 #arbolito  #conversaciones #vidayaprendizaje 

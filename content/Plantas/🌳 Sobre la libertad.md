@@ -21,4 +21,5 @@ Ser libre no implica exactamente tener poco para no tener a que aferrarse. Creo 
 Quiero tener en claro todo esto: El éxito no tiene nada que ver con cosas, plata, responsabilidades, tareas hechas, propósitos cumplidos, proyectos realizados, reconocimientos, notas altas, ir al día con la carrera, tener un buen setup. Pero es confundible.
 
 ¿Cómo puedo yo hoy empezar a ser libre? ¿Como se elige el sufrimiento para adquirir la libertad? (...) Libre es quién puede elegir. Pero si los pájaros son libres y no eligen, ¿qué es la libertad entonces? ¿Es escaparse? Es vivir esa vida. No se me ocurre que palabra usar. No es desconectada, no es calmada o tranquila...
+
 #arbolito 

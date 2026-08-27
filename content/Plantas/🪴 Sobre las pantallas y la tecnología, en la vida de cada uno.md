@@ -82,5 +82,6 @@ La otra vez rezaba esto:
 > 
 
 Me pasa que generalmente estar mucho tiempo en la computadora me hace hacer todo más aceleradamente. El andar mucho tiempo en auto y caminar poco también. El acostumbrarme a la luz de una pantalla y no a la del sol....
+[[🌳 Sobre la vida plena]] 
 
-[[🌳 Sobre la vida plena]] #arbolito #conversaciones #tecnologia 
+#helecho  #conversaciones #tecnologia 

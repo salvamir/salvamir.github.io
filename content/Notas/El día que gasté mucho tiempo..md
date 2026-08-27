@@ -19,4 +19,5 @@ Te entrego Papá esta enfermedad que estoy padeciendo. No es la gran cosa. Event
 Te entrego mi mañana, no sé como vaya a ser ni tampoco como vaya a sentirme. Te doy gracias, porque tengo la certeza de que va a existir, porque sos un Dios Misericordioso, y siempre nos das segundas oportunidades a todos los que las pedimos.
 
 Te pido por todas las personas que están cansadas. Te pido por todos aquellos que buscan descanso en el lugar equivocado. Te pido que me traigas de nuevo a esta oración, cuando yo también me desoriente, y busqué consuelo humano en una pantalla. Cuando busque el sol y las plantas en el celular. Cuando busque el amor, el cariño y la atención fraterna en una red social. Cuando busque una conexión amistosa en Internet. Te pido que, en ese momento, me traigas a la memoria la importancia del momento presente. De la lentitud. Del descanso. Amén.
+
 #oraciones #vidayaprendizaje 

@@ -41,4 +41,5 @@ Este es otro pliegue que me mostró Cesar. La verdad me encantó.
 Vimos muchas otras estructuras más, como laminaciones convolutas, basaltos ventifactos y vesiculares, hogbacks, crestas, ondulas, etc. Fue muy completo. Si bien en esta publicación no estoy diciendo nada de la quimica que estudiamos, fue tremenda esa parte también.
 
 Quiero empezar a publicar más en detalle como vivo las campañas, porque después me olvido. Me sirvió mucho dibujar sobre las fotos también.
+
 #geología 
