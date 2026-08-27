@@ -12,3 +12,5 @@ Seeing the "over-planning phenomena" as my **own** fault (not considering season
 Starting new projects every time is the consequence of willing for gratification and not achieving it. Finishing projects gives me **real** satisfaction, but it takes a lot more effort. When I don't have enough energy, finishing something looks like an impossible task to do. Starting something new feels better for my exhausted soul. I can't absolutely control that reality, so it's logical to feel more tired after "finding rest" on *not-resting* things like scrolling through internet or doing maintenance tasks on my computer. Or starting a new project to cheat my brain and make it think I'm reaching real gratification. Non of those are restful activities for my soul.
 
 I don't have any conclusion. This is just another thought dropped into this huge vault.
+
+#vidayaprendizaje 

@@ -1,5 +1,3 @@
-#arbolito 
-
 A veces me cuesta un poco la envidia. Quizás porque soy muy autocompasivo y me enfoco demasiado en lo mucho que me cuestan las cosas. Me doy cuenta, Jesús, que soy medio dramatico en general. Cuando las cosas no van como me esperaba, me desanimo y me dejo aplastar por el mundo. Y cuando de repente me sacás de esa situación, pareciera que no te veo, y la alegría me dura un ratito y después me olvido.
 
 *"En los días buenos se olvidan los malos, y en los malos se olvidan los buenos... (Algún capítulo del Eclesiastico)"*
@@ -31,4 +29,4 @@ El estilo de vida universitario es sacrificado en varios sentidos y no estoy en 
 
 Percibo que, en mi vida, el estudio está manifestándose como un deseo desmedido de éxito. Como con perfeccionismo y con desconfianza en el plan de Dios. Tengo un grado de sobre-estructuración y organización en mis estudios que es ridículo. 
 
-[[🌳 Sobre la vida plena]] [[🪴 Sobre la importancia de las cosas]]
+[[🌳 Sobre la vida plena]] [[🪴 Sobre la importancia de las cosas]] #arbolito #oraciones #vidayaprendizaje 

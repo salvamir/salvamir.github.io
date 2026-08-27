@@ -13,3 +13,5 @@ Eso es un gran aliento para mi. Como un suspiro. Por eso quiero aprovechar el em
 
 Quiero, por lo pronto, leer la Biblia una vez al día y retomar el ejercicio, por lo menos 20min. 
 Quiero animarme a posponer un poco la facultad y demás responsabilidades, para priorizar estas cosas humanas, que tanto bien me hacen.
+
+#vidayaprendizaje 

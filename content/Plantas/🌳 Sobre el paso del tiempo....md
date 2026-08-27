@@ -1,5 +1,3 @@
-#arbolito 
-
 Ahora estoy en el colectivo yendo a una clase de física II y me puse a pensar en que algún día voy a ser viejito, y no voy a poder moverme tan rápidamente como lo hago ahora. Eventualmente, voy a ser un "adulto real" con responsabilidades reales y más "serias" y no voy a ir a la facultad en colectivo a una clase de física II. 
 
 Mis papás algún día quizás sean abuelos. Algún día el 2026 va a ser lo que es para nosotros hoy el 2016, o el 2010... Probablemente mañana ya no me acuerde nítidamente de éste momento, y eso es como la muerte de este Salva que escribe en su cuaderno ahora y que está como *desapareciendo* a cada instante que pasa...
@@ -32,6 +30,4 @@ Dios seguro me permita quedarme con algunas sensaciones, personas, palabras, can
 > [!note]
 > Sí, por el contrario, es consciente de que le pueden esperar cosas horribles, y reza para pedir las virtudes necesarias para enfrentarse con tales horrores, y entretanto se ocupa del presente, porque en éste, y sólo en éste, residen todos los deberes, toda la gracia, toda la sabiduría y todo el placer, su estado es enormemente indeseable y debe ser atacado al instante
 
-
-[[🌱 Sobre el sentido de las cosas]]
-[[🌷 Sobre la vida "real"]]
+[[🌷 Sobre la vida "real"]] #arbolito 

@@ -12,3 +12,4 @@ Esta semana, quiero enfocarme en aceptar con alegría lo que me toque vivir. Des
 Por eso mismo, creo que la sencillez de Dios la vivo en carne propia cuando dejo de querer cambiar mis circunstancias. ¿Tengo una semana de cursado muy intensa? A llevarse vianda, agua y ropa comoda a la facultad. ¿Tengo adicción a mi celular y quisiera tener uno peor pero no lo tengo? A dejar el celular y a otra cosa mariposa. ¿Quisiera tocar la guitarra pero tengo que estudiar y estoy harto de que sea así siempre? A descansar mirando a mi entorno. Mirar a los otros cuando estoy triste es lo mejor que hice alguna vez. Concentrarse en las preocupaciones de otros y rezar por ellos cuando mi cruz se siente muy áspera me ayuda a darme cuenta que mis problemas son mínimos y que no son el centro del mundo. 
 
 La naturaleza sigue ahí alabando a Dios con su sencillez. Yo doy gloria a Dios viviendo sencillamente. 
+#tecnologia #vidayaprendizaje 

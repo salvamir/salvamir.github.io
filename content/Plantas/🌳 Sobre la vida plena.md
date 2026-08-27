@@ -1,4 +1,3 @@
-#arbolito 
 # Sobre la vida plena.
 Dicen que los santos tuvieron una vida plena. Yo creo que el abuelo es santo, asi que seguro tuvo una vida plena. No lo conocí bien, pero sus hijos que más lo conocieron dicen que cuando le preguntaba algún amigo que anduvo haciendo el le respondía: **"meta vivir"**
 
@@ -28,3 +27,5 @@ El que tiene buen ojo no solo se detiene en la Creación obviamente. Que eso lo 
 
 > [!note]+ Lo único importante.
 > Estimo que era lo único importante. Volver a empezar con seriedad la vida, antes de que nos alcance la muerte. Hacer todo el bien posible mientras estemos aquí abajo entre los hombres. Dios está cerca de los que tienen roto el corazón.
+
+#arbolito 

@@ -1,4 +1,3 @@
-#yuyo 
 # Tratando de entender la pureza y castidad.
 Los que tienen la sabiduría que viene de Dios son puros, ante todo. Además, son amantes de la paz, comprensivos, dóciles, están llenos de misericordia y buenos frutos, son imparciales y sinceros. Los pacíficos siembran la paz y cosechan frutos de justicia.
 
@@ -38,4 +37,4 @@ Como se vive la vocación... me lleva a otros. No hay vocaciones para vivirlas e
 > [!note]+ El horizonte inmenso.
 > ¿Dónde buscar el sentido? El brillo de las estrellas me produce, aunque no sepa cómo ni por qué, una sensación de paz y seguridad infinitas. Creo que es allí, en las vastas y eternas leyes de la materia, y no en las preocupaciones, en los pecados y en los problemas cotidianos de los hombres, donde lo que en nosotros pueda haber de superior al animal debe buscar el sosiego y la esperanza.
 
-[[🌳 Sobre el paso del tiempo...]]
+[[🌳 Sobre el paso del tiempo...]] #yuyo #tdc 

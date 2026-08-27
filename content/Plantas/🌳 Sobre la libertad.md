@@ -1,4 +1,3 @@
-#arbolito 
 # Sobre la verdadera libertad.
 Escribo esto básicamente a oscuras. No consigo ver lo que escribo nítidamente, pero se que está ahí. Nunca entendí lo que es ser libre verdaderamente. Quizás tiene que ver con poder escribir lento sin ver los renglones... Eso parece tener que ver con la seguridad. Ser libre y ser seguro tienen mucho que ver...
 
@@ -22,3 +21,4 @@ Ser libre no implica exactamente tener poco para no tener a que aferrarse. Creo 
 Quiero tener en claro todo esto: El éxito no tiene nada que ver con cosas, plata, responsabilidades, tareas hechas, propósitos cumplidos, proyectos realizados, reconocimientos, notas altas, ir al día con la carrera, tener un buen setup. Pero es confundible.
 
 ¿Cómo puedo yo hoy empezar a ser libre? ¿Como se elige el sufrimiento para adquirir la libertad? (...) Libre es quién puede elegir. Pero si los pájaros son libres y no eligen, ¿qué es la libertad entonces? ¿Es escaparse? Es vivir esa vida. No se me ocurre que palabra usar. No es desconectada, no es calmada o tranquila...
+#arbolito 

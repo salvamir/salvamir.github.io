@@ -11,3 +11,5 @@ Pasa que rindo un evaluativo importante de química dentro de poco y no entiendo
 Cuestión, me re gusta esto de poder dibujar ahora también acá, se siente como realmente estar rezando. 
 
 Nunca va a reemplazar al cuaderno porque es imposible reemplazar cosas reales con [[🌷 Sobre la vida "real"|virtualidades]] como ésta. Pero me parece que es una idea genial y que me va a ayudar mucho a expresarme, y por lo tanto, a poder sentirme más identificado con las cosas que anote una vez que pase el tiempo.
+
+#tecnologia

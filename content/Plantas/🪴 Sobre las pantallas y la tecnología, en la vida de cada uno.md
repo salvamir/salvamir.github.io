@@ -1,5 +1,3 @@
-#arbolito 
-
 # <font color="#d8d8d8">Tecnología e Internet.</font>
 Los que me conocen sabrán que, de repente, soy fanático de la tecnología y adicto al internet. Antes eran los videos de youtube, después fueron los reels y tiktoks, y hoy son los blogs. Aprendí a manejar esa necesidad de consumir y obtener dopamina fácil e instantánea. 
 
@@ -85,4 +83,4 @@ La otra vez rezaba esto:
 
 Me pasa que generalmente estar mucho tiempo en la computadora me hace hacer todo más aceleradamente. El andar mucho tiempo en auto y caminar poco también. El acostumbrarme a la luz de una pantalla y no a la del sol....
 
-[[🌳 Sobre la vida plena]]
+[[🌳 Sobre la vida plena]] #arbolito #conversaciones #tecnologia 

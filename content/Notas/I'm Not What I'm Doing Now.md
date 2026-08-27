@@ -8,3 +8,4 @@ Lately I’ve been meeting new people. I’m working hard with many others to ma
 This happened some days ago. Now I should be studying, but my head hurts and I just don’t have enough energy. 
 
 It’s time to stop thinking of me like a to-do list.
+#vidayaprendizaje 

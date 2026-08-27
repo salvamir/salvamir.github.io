@@ -2,8 +2,6 @@
 cssclasses:
   - blog-post
 date: 2026-07-16
-tags:
-  - conversaciones
 ---
 This post is a reply to [this](https://finest.day/posts/friction-as-a-form-of-appreciation) Sebastian's entry. He talked about how guestbooks are a great way to share with others you care about them in this artificial and digitalized community we made. 
 My guestbook here is also a demonstration that many people around the world cared about t**his avatar that I'm here.** That drives me crazy... 
@@ -53,3 +51,4 @@ And the Internet, believe it or not, have so much things that matters. You'll fi
 I agree with you on this topic, Sebastian: Having a guestbook signed by avatars of real people, is a prove of care of others about parts of my own personal life. The list of websites you published in your entry is fun. I'm willing to start signing those guestbooks too. 
 
 I'm happy to know that not only my family and friends care about what I think. Feels great knowing that other people around the world found their own path through this huge (recently called by me) "digitalized human fair". Thanks for reading till this word. You made an effort and I appreciate it. Hope you have something to think about now... I'm waiting to read your thoughts!
+#tecnologia #conversaciones 

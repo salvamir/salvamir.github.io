@@ -567,3 +567,26 @@ html[data-theme="dark"] .mentimeter-tag-pill {
   opacity: 0.75 !important;
   margin-left: 0.35em !important;
 }
+/* =========================================
+   13. Etiquetas
+   ========================================= */
+a.internal.tag-link,
+a.tag-link {
+  font-size: 0.75rem !important;
+  line-height: 1.2 !important;
+  padding: 0.08rem 0.3rem !important;
+  margin: 0 0.08rem !important;
+  border-radius: 4px !important;
+  font-weight: 400 !important;
+}
+
+/* Menos separación entre tags */
+.tags {
+  gap: 0.2rem !important;
+  margin: 0.5rem 0 !important;
+}
+
+/* Evita que la lista de tags ocupe demasiado */
+.tags > li {
+  margin: 0 !important;
+}

@@ -30,3 +30,4 @@ Me volví más impaciente y menos tolerante a la “satisfacción/gratificación
 Si se ponen a pensarlo seriamente suena hasta ridículo este problema. Cuanta gente existe ahora en una cabañita sin señal atrás del Muñoz, en medio de Tafí… Y yo que tengo todos los “lujos materiales y tecnológicos” me estoy quejando. 
 
 Será que una vida “así” de lujosa, nos quita muchos otros “lujos”…
+#conversaciones 

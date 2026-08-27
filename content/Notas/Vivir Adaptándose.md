@@ -2,9 +2,6 @@
 cssclasses:
   - blog-post
 date: 2026-05-03
-tags:
-  - conversaciones
-  - estaciones
 ---
 Hoy leí por segunda vez [esta](https://danielslife.blog/posts/living-with-the-seasons) publicación de Daniel. 
 
@@ -30,3 +27,4 @@ Esta publicación es un comentario nada más. Entre las personas que venimos cha
 - [On Small Seasons and long calendars](https://rosszurowski.com/log/2018/small-seasons-long-calendars), de Ross Zurowski
 - [A personal unit of time](https://danielslife.blog/posts/a-personal-unit-of-time), [Living with the seasons](https://danielslife.blog/posts/living-with-the-seasons), and  [Noticing the small seasons](https://danielslife.blog/posts/noticing-the-small-seasons), todos de Daniel.
 - [Summer and gardening](https://rafaelkuebler.github.io/posts/20250703-summer-and-gardening/), de Rafa.
+#conversaciones #estaciones 
