@@ -1,5 +1,5 @@
 #helecho 
-
+# Dios es amigo mío.<font color="#d99694"> Ser católico es tener un mejor amigo.</font>
 Estuve pensando mucho en esto últimamente...
 ¿Qué significa? ¿Influye en mi vida cotidiana?
 Dios es amigo mío y es infinitamente grande también. Y uno aún así, sabiendo esto, muchas veces se deja distraer por objetivos temporales y preocupaciones pasajeras e intrascendentes.

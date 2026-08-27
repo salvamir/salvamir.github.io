@@ -1,6 +1,6 @@
 #arbolito 
 
-## <font color="#d8d8d8">Tecnología e Internet.</font>
+# <font color="#d8d8d8">Tecnología e Internet.</font>
 Los que me conocen sabrán que, de repente, soy fanático de la tecnología y adicto al internet. Antes eran los videos de youtube, después fueron los reels y tiktoks, y hoy son los blogs. Aprendí a manejar esa necesidad de consumir y obtener dopamina fácil e instantánea. 
 
 Ahora mismo, gracias a Dios te puedo decir que estoy empezando a tener una relación más "sana" con la tecnología. Recen por mi, para que aprenda realmente a darle el espacio que le corresponde a mi celular y a mi computadora, para que no me coman la vida porfa. 

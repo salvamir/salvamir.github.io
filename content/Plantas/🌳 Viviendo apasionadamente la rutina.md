@@ -1,5 +1,5 @@
 #arbolito  
-
+# Aprendiendo a vivir apasionadamente la rutina.
 ¿Como santifico mi vida corriente? La esencia de la vocación cristiana consiste en santificar la vida corriente.
 
 > [!note]

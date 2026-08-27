@@ -253,32 +253,37 @@ body[data-slug^="Notas/"] article .content-meta {
     display: none;
 }
 /* =========================================
-   6. GRAFO, LISTAS Y CONTENIDOS
+   6. GRAFO
    ========================================= */
-/* Ocultar el grafo en TODAS las páginas por defecto */
-.graph, 
-.graph-outer, 
-.global-graph-outer, 
-.component.graph {
-  display: none !important;
-}
 
-/* Mostrar el grafo local ÚNICAMENTE en la página exacta de Plantas */
-body[data-slug="plantas"] .graph,
-body[data-slug="Plantas"] .graph {
-  display: block !important;
+/*
+ * El grafo se renderiza únicamente desde
+ * quartz.layout.ts en las notas de /Plantas/.
+ *
+ * No usamos display:none global porque
+ * ConditionalRender ya controla dónde existe.
+ */
+
+.graph {
+  width: 100%;
   margin: 2rem 0 3rem 0 !important;
 }
 
-body[data-slug="plantas"] .graph > .graph-outer,
-body[data-slug="Plantas"] .graph > .graph-outer {
-  display: block !important;
+.graph > .graph-outer {
+  width: 100%;
   height: 250px !important;
 }
 
-/* Permitir que el modo modal global funcione solo al activarse voluntariamente */
+
+/* El grafo global permanece oculto
+ * hasta que Quartz lo active.
+ */
+.global-graph-outer {
+  display: none;
+}
+
 .global-graph-outer.active {
-  display: block !important;
+  display: block;
 }
 /* =========================================
    7. CALLOUTS

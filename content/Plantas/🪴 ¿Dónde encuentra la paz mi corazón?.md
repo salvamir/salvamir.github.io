@@ -1,5 +1,5 @@
 #helecho 
-
+# Sobre la verdadera paz interior.
 > [!note] De algún libro...
 > No te dejes robar la paz de tu corazón!
 

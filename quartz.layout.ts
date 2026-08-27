@@ -1,43 +1,100 @@
 import { PageLayout, SharedLayout } from "./quartz/cfg"
 import * as Component from "./quartz/components"
 
-// 1. ELIMINAMOS EL BUSCADOR Y EL MODO OSCURO DEL HEADER
+// Componentes compartidos por todo el sitio
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
+
   header: [
     Component.PageTitle(),
     Component.Spacer(),
-    Component.DesktopOnly(Component.NavLinks()), 
+    Component.DesktopOnly(Component.NavLinks()),
   ],
+
   afterBody: [
-    Component.Darkmode(), // <-- LO VOLVEMOS A AGREGAR ACÁ PARA COLOCARLO EN EL FOOTER
+    Component.Darkmode(),
   ],
+
   footer: Component.Footer(),
 }
 
-// 2. BUSCADOR EN EL CONTENIDO CENTRAL (OCULTO POR CSS SALVO EN PÁGINA ESPECÍFICA) Y TAGLIST COMENTADO
+
+// Layout de las notas individuales
 export const defaultContentPageLayout: PageLayout = {
   beforeBody: [
-    Component.Search(), // <-- Agregado en el cuerpo central
+    Component.Search(),
+
     Component.ArticleTitle(),
+
     Component.ContentMeta(),
-    // Component.TagList(), <-- Comentado para eliminar las etiquetas visualmente al lado de las notas
-    Component.Graph({
-      localGraph: { fontSize: 0.45, nodeSize: 3.0, repulsion: 1.5, linkDistance: 100 },
-      globalGraph: { fontSize: 0.6, nodeSize: 3.5, repulsion: 1.5, linkDistance: 100 },
+
+    // Las etiquetas siguen ocultas visualmente
+    // porque no queremos mostrarlas al lado de las notas.
+    // Component.TagList(),
+
+    // =====================================================
+    // GRAFO: SOLO EN NOTAS DENTRO DE /Plantas/
+    // =====================================================
+    Component.ConditionalRender({
+      component: Component.Graph({
+        localGraph: {
+          drag: true,
+          zoom: true,
+          depth: 1,
+          scale: 1.1,
+          repelForce: 0.5,
+          centerForce: 0.3,
+          linkDistance: 30,
+          fontSize: 0.45,
+          opacityScale: 1,
+          removeTags: [],
+          showTags: true,
+          focusOnHover: true,
+          enableRadial: false,
+        },
+
+        globalGraph: {
+          drag: true,
+          zoom: true,
+          depth: -1,
+          scale: 0.9,
+          repelForce: 0.5,
+          centerForce: 0.3,
+          linkDistance: 30,
+          fontSize: 0.6,
+          opacityScale: 1,
+          removeTags: [],
+          showTags: true,
+          focusOnHover: true,
+          enableRadial: true,
+        },
+      }),
+
+      condition: (page) => {
+        const slug = page.fileData.slug ?? ""
+
+        return (
+          slug.startsWith("Plantas/") ||
+          slug.startsWith("plantas/")
+        )
+      },
     }),
   ],
+
   left: [],
-  right: [], 
+  right: [],
 }
 
-// 3. LO MISMO PARA LA LISTA DE PÁGINAS
+
+// Layout de las páginas de listas
+// (tags, carpetas, etc.)
 export const defaultListPageLayout: PageLayout = {
   beforeBody: [
-    Component.Search(), // <-- Agregado aquí también
-    Component.ArticleTitle(), 
-    Component.ContentMeta()
+    Component.Search(),
+    Component.ArticleTitle(),
+    Component.ContentMeta(),
   ],
+
   left: [],
-  right: [], 
+  right: [],
 }

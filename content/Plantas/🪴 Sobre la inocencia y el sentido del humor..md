@@ -1,5 +1,5 @@
 #helecho 
-
+# Tomarse las cosas con sentido del humor.
 Está sacado de contexto, pero esto lo escribió Nietzsche La última transformación es del león al niño. Un niño es inocencia y olvido. Un nuevo comienzo. Para un niño todo es juego.
 [[🌳 Sobre la libertad]]
 *(Plantado en mayo del 2026)*(Regado el 1/07/2026)*
