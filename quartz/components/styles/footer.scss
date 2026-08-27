@@ -3,24 +3,89 @@ footer {
   margin-bottom: 4rem;
   opacity: 0.7;
 
-
   & a.home-link {
-    text-decoration: none; // Quita el subrayado
-    color: var(--darkgray); // Usa el color del texto normal
-    font-weight: 600; // Un poco más de grosor para que destaque
+    text-decoration: none;
+    color: var(--darkgray);
+    font-weight: 600;
     transition: color 0.2s ease;
 
     &:hover {
-      color: var(--secondary); // Cambia al color de tu tema cuando pasas el ratón
+      color: var(--secondary);
       text-decoration: underline;
     }
   }
 }
+
+/* =========================================
+   CONTROLES DEL FOOTER
+   ========================================= */
+
+.footer-controls {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.footer-controls a,
+.footer-controls button {
+  background: transparent !important;
+  border: none !important;
+  color: inherit !important;
+  cursor: pointer;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  opacity: 0.75;
+  transition: opacity 0.15s ease;
+}
+
+.footer-controls a:hover,
+.footer-controls button:hover,
+.footer-controls a:focus,
+.footer-controls button:focus {
+  opacity: 1 !important;
+}
+
+.footer-controls .icon-moon,
+.footer-controls .icon-sun {
+  display: inline-flex;
+  align-items: center;
+}
+
+html[saved-theme="dark"] .icon-moon {
+  display: none !important;
+}
+
+html[saved-theme="dark"] .icon-sun {
+  display: inline-flex !important;
+}
+
+html[saved-theme="light"] .icon-moon {
+  display: inline-flex !important;
+}
+
+html[saved-theme="light"] .icon-sun {
+  display: none !important;
+}
+
+
+/* =========================================
+   BOTÓN BACK-TO-TOP ORIGINAL DE QUARTZ
+   ========================================= */
+
 #back-to-top {
   position: fixed;
   bottom: 2rem;
   right: 2rem;
-  background-color: var(--light); // Toma el color de fondo de tu tema
+  background-color: var(--light);
   color: var(--darkgray);
   border: 1px solid var(--lightgray);
   border-radius: 50%;
@@ -49,7 +114,11 @@ footer {
   }
 }
 
-// Lo hacemos un poco más pequeño y lo pegamos más a la orilla en celulares
+
+/* =========================================
+   ADAPTACIÓN A CELULARES
+   ========================================= */
+
 @media all and (max-width: 800px) {
   #back-to-top {
     bottom: 1.5rem;
