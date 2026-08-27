@@ -829,10 +829,6 @@ async function renderGraph(
     app.canvas,
   )
 
-  /*
-   * Asegura que el canvas no bloquee
-   * elementos externos del grafo global.
-   */
   app.canvas.style.position =
     "relative"
   app.canvas.style.zIndex =
@@ -1471,10 +1467,6 @@ document.addEventListener(
           "active",
         )
 
-        /*
-         * Mantiene el botón/contenedor
-         * del grafo por encima del canvas.
-         */
         container.style.zIndex =
           "1000"
 
@@ -1502,24 +1494,6 @@ document.addEventListener(
           graphContainer
         ) {
           try {
-            /*
-             * ==================================================
-             * IMPORTANTE
-             * ==================================================
-             *
-             * El grafo global SIEMPRE utiliza:
-             *
-             * depth: -1
-             *
-             * Por lo tanto muestra todas las notas,
-             * independientemente de la configuración
-             * del grafo local.
-             *
-             * También forzamos drag y zoom para asegurarnos
-             * de que el grafo global pueda expandirse,
-             * moverse y navegarse.
-             */
-
             const cleanup =
               await renderGraph(
                 graphContainer,
@@ -1590,6 +1564,33 @@ document.addEventListener(
 
     /*
      * ==========================================================
+     * TOGGLE DEL GRAFO GLOBAL
+     * ==========================================================
+     *
+     * El botón ahora comprueba directamente si el grafo global
+     * está abierto o cerrado.
+     */
+
+    async function toggleGlobalGraph() {
+      const anyGlobalGraphOpen =
+        containers.some(
+          (container) =>
+            container.classList.contains(
+              "active",
+            ),
+        )
+
+      if (
+        anyGlobalGraphOpen
+      ) {
+        hideGlobalGraph()
+      } else {
+        await renderGlobalGraph()
+      }
+    }
+
+    /*
+     * ==========================================================
      * ATAJO CTRL/CMD + G
      * ==========================================================
      */
@@ -1604,22 +1605,7 @@ document.addEventListener(
         !e.shiftKey
       ) {
         e.preventDefault()
-
-        const anyGlobalGraphOpen =
-          containers.some(
-            (container) =>
-              container.classList.contains(
-                "active",
-              ),
-          )
-
-        if (
-          anyGlobalGraphOpen
-        ) {
-          hideGlobalGraph()
-        } else {
-          await renderGlobalGraph()
-        }
+        await toggleGlobalGraph()
       }
     }
 
@@ -1627,6 +1613,11 @@ document.addEventListener(
      * ==========================================================
      * BOTÓN DEL GRAFO GLOBAL
      * ==========================================================
+     *
+     * Se registra directamente sobre el botón.
+     *
+     * stopPropagation() evita que otros listeners o elementos
+     * del grafo interfieran con el click.
      */
 
     const containerIcons =
@@ -1638,8 +1629,11 @@ document.addEventListener(
       containerIcons,
     ).forEach((icon) => {
       const clickHandler =
-        () => {
-          void renderGlobalGraph()
+        (e: Event) => {
+          e.preventDefault()
+          e.stopPropagation()
+
+          void toggleGlobalGraph()
         }
 
       icon.addEventListener(

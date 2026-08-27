@@ -50,13 +50,6 @@ const ArrowUpIcon = () => (
   </svg>
 )
 
-const ArrowRightIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <line x1="5" y1="12" x2="19" y2="12"></line>
-    <polyline points="12 5 19 12 12 19"></polyline>
-  </svg>
-)
-
 interface Options {
   links: Record<string, string>
 }
@@ -91,16 +84,6 @@ export default ((opts?: Options) => {
             <MailIcon />
           </a>
 
-          {/* Volver arriba */}
-          <button
-            id="custom-scrolltop-btn"
-            aria-label="Volver arriba"
-            title="Volver arriba"
-            type="button"
-          >
-            <ArrowUpIcon />
-          </button>
-
           {/* Toggle modo oscuro / claro */}
           <button
             id="custom-darkmode-btn"
@@ -116,14 +99,14 @@ export default ((opts?: Options) => {
             </span>
           </button>
 
-          {/* Página siguiente */}
+          {/* Volver arriba */}
           <button
-            id="custom-forward-btn"
-            aria-label="Página siguiente"
-            title="Página siguiente"
+            id="custom-scrolltop-btn"
+            aria-label="Volver arriba"
+            title="Volver arriba"
             type="button"
           >
-            <ArrowRightIcon />
+            <ArrowUpIcon />
           </button>
 
         </div>
@@ -174,15 +157,6 @@ export default ((opts?: Options) => {
       if (backBtn) {
         backBtn.onclick = () => {
           window.history.back()
-        }
-      }
-
-      // Página siguiente
-      const forwardBtn = document.getElementById("custom-forward-btn")
-
-      if (forwardBtn) {
-        forwardBtn.onclick = () => {
-          window.history.forward()
         }
       }
     })
