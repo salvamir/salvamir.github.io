@@ -1,15 +1,26 @@
+```tsx
 import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "./types"
 import style from "./styles/footer.scss"
 
+const ArrowLeftIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="19" y1="12" x2="5" y2="12"></line>
+    <polyline points="12 5 5 12 12 19"></polyline>
+  </svg>
+)
+
 const RssIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle>
+    <path d="M4 11a9 9 0 0 1 9 9"></path>
+    <path d="M4 4a16 16 0 0 1 16 16"></path>
+    <circle cx="5" cy="19" r="1"></circle>
   </svg>
 )
 
 const MailIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline>
+    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+    <polyline points="22,6 12,13 2,6"></polyline>
   </svg>
 )
 
@@ -40,6 +51,13 @@ const ArrowUpIcon = () => (
   </svg>
 )
 
+const ArrowRightIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="5" y1="12" x2="19" y2="12"></line>
+    <polyline points="12 5 19 12 12 19"></polyline>
+  </svg>
+)
+
 interface Options {
   links: Record<string, string>
 }
@@ -49,22 +67,38 @@ export default ((opts?: Options) => {
     return (
       <footer class={`${displayClass ?? ""}`}>
         <div class="footer-controls">
+
+          {/* Página anterior */}
+          <button id="custom-back-btn" aria-label="Página anterior" title="Página anterior">
+            <ArrowLeftIcon/>
+          </button>
+
+          {/* RSS */}
           <a href="/index.xml" aria-label="RSS Feed" title="RSS">
             <RssIcon/>
           </a>
 
+          {/* Email */}
           <a href="mailto:pez.arroz.tabla@proton.me" aria-label="Enviar Email" title="Email">
             <MailIcon/>
           </a>
 
+          {/* Volver arriba */}
+          <button id="custom-scrolltop-btn" aria-label="Volver arriba" title="Volver arriba">
+            <ArrowUpIcon/>
+          </button>
+
+          {/* Toggle modo oscuro / claro */}
           <button id="custom-darkmode-btn" aria-label="Cambiar modo" title="Cambiar modo">
             <span class="icon-moon"><MoonIcon/></span>
             <span class="icon-sun"><SunIcon/></span>
           </button>
 
-          <button id="custom-scrolltop-btn" aria-label="Volver arriba" title="Volver arriba">
-            <ArrowUpIcon/>
+          {/* Página siguiente */}
+          <button id="custom-forward-btn" aria-label="Página siguiente" title="Página siguiente">
+            <ArrowRightIcon/>
           </button>
+
         </div>
       </footer>
     )
@@ -119,6 +153,7 @@ export default ((opts?: Options) => {
 
   Footer.afterDOMLoaded = `
     document.addEventListener("nav", () => {
+
       // Botón de modo claro/oscuro
       const customThemeBtn = document.getElementById("custom-darkmode-btn");
 
@@ -150,8 +185,27 @@ export default ((opts?: Options) => {
           });
         };
       }
+
+      // Página anterior
+      const backBtn = document.getElementById("custom-back-btn");
+
+      if (backBtn) {
+        backBtn.onclick = () => {
+          window.history.back();
+        };
+      }
+
+      // Página siguiente
+      const forwardBtn = document.getElementById("custom-forward-btn");
+
+      if (forwardBtn) {
+        forwardBtn.onclick = () => {
+          window.history.forward();
+        };
+      }
     });
   `
 
   return Footer
 }) satisfies QuartzComponentConstructor
+```
