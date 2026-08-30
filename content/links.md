@@ -39,6 +39,8 @@ Te dejo otros lugares interesantes para ver. Podés encontrar nuevas páginas po
 > - [Gwern](https://gwern.net). Unique style.
 > - [Ky](https://ky.fyi). Is pretty well done it's design. I love the idea of the /now page.
 > - [Aleem](https://aleemshaun.com/photos). Another person living their life. Interesting.
+> - [Kicks](https://www.kickscondor.com): Inspiring.
+> - [Aron](https://aaronparecki.com/photos): he seems to be logging his whole life there.
 
 > [!abstract]- Philosophy, Religion and History
 > - [Christian Info](https://elcristiano.info/): Great info about the church.
