@@ -1,0 +1,12 @@
+---
+cssclasses:
+  - blog-post
+date: 2026-08-25
+---
+Ahora estoy en el colectivo yendo tarde a una teórica de estructural. Escribir eso hace unos meses era imposible y hace dos años era soñar exageradamente. Me siento medio emo-dark-boy escribiendo esto porque estoy conbla capucha y con la cabeza apoyada en la ventana. Hoy a las 7:30 salió el sol. Oficialmente estamos en primavera, gracias frio querido por tu cariño.
+
+Esta semana el miercoles osea mañana rindo mi primer evaluativo de estructural, rendimos azimuth y rumbo y como plasmar eso en una proyección estereográfica. Me costó entenderlo en clase pero seguro lo entiendo después. El tema es que voy a sacrificar ese evaluativo para estudiar fisica, porque este viernes es la mesa de examen para el final. Voy por electrostática y me quedan un par de tardes y noches nada más... no agendé una consulta ni nada. Vengo durmiendo mal,.pero ayer dormí excepcionalmente.bien. hoy me olvidé la.botella de agua y tengo sed.
+
+La semana q viene me estoy yendo a Bs as a hacer unos trámites y voy a perder un práctico de paleo y su evaluativo, y un práctico y evaluativo de estructural también. Tengo miedo de estas semanas. Principalmente porque creo que le estoy dejando una bola de nieve inmensa al Salva del futuro. Perdón por eso jajjdhahd. En fin, estoy requete cansado. Este año fue un invento, se me está haciendo largo pero estamos en el tobogán ya. Este sábado subimos puertas del cielo con la Emi y estoy entusiasmado. Planeamos hacerlo al menos.
+
+Me di cuenta que no me gusta atrasarme en ninguna escala con la facultad (pequeña escala: ir perdido con los tps y evaluativos y temas que se vean. Gran escala: perder materias y finales desaprobados). Me gusta llevarlo controlado... pero me quedé pensando en lo que rezaba l otra vez sobre el querer tener el control todo el tiempo. Hay muchas personas en este colectivo con muchos problemas y tareas pendientes y muchos angeles de ls gusrda. Mi país es enorme y está lleno de gente que estudia y rinde este viernes y tiene miedo de atrasarse también. Es que también el haberle puesto nombre "carrera" no es nada favorabke. Contra quien será la carrera. Supongo que contra uno mismo, o contra el tiempo. En ese último caso siempre vamos a perder. Ganarle al tiempo es imposible. Por eso qyerer correr ahora no va aportsr nada. Apurarse ahora no tiene sentido porque llego tarde igual. Acabo de bajarme asique voy a ir caminando. El.ultimo tema de la teoria fue falla irstica y no se que sera eso porque falte. Se me axalambronla pierna.
