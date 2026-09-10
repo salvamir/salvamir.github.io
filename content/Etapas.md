@@ -12,7 +12,7 @@ Esta página está inspirada en [/now](https://nownownow.com/). Quiero seguir co
 <ul class="now-events">
 <li class="now-event">
 <div class="now-dot" aria-hidden="true"></div>
-<span class="now-heading">Transición otoño-primavera. (Julio y Agosto 2026)</span>
+<span class="now-heading">Transición otoño-primavera (Julio y Agosto 2026)</span>
 <div class="now-line" aria-hidden="true"></div>
 <div class="now-content now-event-content">
 <p>Empieza a salir el sol más temprano. El frío de las 6.30 es matador, pero a las 8.00 el cerro se ve limpio, sin nubes. Se está terminando el otoño y está viniendo la primavera. Se empezaron a ver las primeras flores ya. **Evento fuera de la rutina**. Acabo de terminar las vacaciones y estoy todavía esforzandome en preparar la cabeza. Mañana arrancan las clases y estoy motivado, pero no termino de aceptarlo. Me estoy esforzando en no priorizar tanto la facultad y en enfocarme más en descansar humanamente también. Doy gracias por el hermoso descanso que tuve. Doy gracias por todos los propositos nuevos para este cuatrimestre, confío en el futuro que Dios me prepara. Se que el está obrando mucho en mi vida, lo he visto y se que sigue hacerlo. Brindis por este nuevo arranque!</p>
@@ -20,7 +20,7 @@ Esta página está inspirada en [/now](https://nownownow.com/). Quiero seguir co
 </li>
 <li class="now-event">
 <div class="now-dot" aria-hidden="true"></div>
-<span class="now-heading">Otoño/Invierno (Junio 2026)</span>
+<span class="now-heading">Otoño/Invierno (Mayo/Junio 2026)</span>
 <div class="now-line" aria-hidden="true"></div>
 <div class="now-content now-event-content">
 <p>Empiezan a haber días de sol, más motivadores. Días de buzito sin camperas. Se notan un montón las hojas que se caen, los árboles empiezan a tener hojas, pero son grises o marrones y se caen. **Rutina introspectiva**. Estoy en un mar de tareas y movimiento máximo universitario. Me agotó todo, pero estoy contento porque ya se termina y de repente, como si nada, ya se pasó medio año. Doy gracias porque el Señor me resolvió este cuatrimestre redondito. Le tengo miedo a los finales, pero también se pasan.</p>
@@ -39,7 +39,7 @@ Esta página está inspirada en [/now](https://nownownow.com/). Quiero seguir co
 <span class="now-heading">Fin del verano (Marzo 2026)</span>
 <div class="now-line" aria-hidden="true"></div>
 <div class="now-content now-event-content">
-<p>Hace poco fue el último día de verano. El último de día de vacaciones. Nos dimos cuenta todos, porque llovió de repente torrencialmente, y desde ahí el sol no volvió a salir a las 10.00hs. Ahora, el día permanece casi 100% nublado. Hace mucho frío y otra vez, mi papa insiste que este es el invierno más frio del año (como lo hace todos los años). Estamos todos más pensativos, expectantes, atentos.</p>
+<p>Hace poco fue el último día de verano. El último de día de vacaciones. Nos dimos cuenta todos, porque llovió de repente torrencialmente, y desde ahí el sol no volvió a salir a las 10.00hs. Ahora, el día permanece casi 100% nublado. Hace mucho frío y otra vez, mi papa insiste que este es el invierno más frio del año (como lo hace todos los años). Estamos todos más pensativos, expectantes, atentos. Arranca la facultad. Después de unas vacaciones largas y relativamente descansadoras, volvemos todos a la rutina.</p>
 </div>
 </li>
 </ul>
