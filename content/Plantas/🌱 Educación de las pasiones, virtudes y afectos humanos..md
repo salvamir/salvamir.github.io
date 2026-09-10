@@ -22,3 +22,5 @@ Dos tipos de bienaventuranzas:
 Sufrimiento como ofrenda es gozo anticipado del cielo en la tierra, temporalmente. Esperanzador, envalentador, alentador.
 La sanación es un regalo de Dios. No siempre Dios elimina el aguijón, Su gracia basta. El saca agua de la arena, vida de la piedra.
 La pasión atormentadora, no siempre, vamos a experimentarla como aliada.
+
+#tdc #yuyo 
