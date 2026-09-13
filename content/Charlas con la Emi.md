@@ -62,8 +62,7 @@ Contexto: "No tenés que seducir a tu varón..." ¿Está mal? No quiero dejar el
 <font color="#92cddc">8/10/2025</font> - El Circulo (Ya entendimos la base de nuestra comunicación)
 Tanto el varón como la mujer tienen lenguajes distintos. Perciben la realidad de manera diferente. Dios los diseñó perfectamente. Tanto es así que la expresión de cariño que el varón espera, la mujer es experta en darla y viceversa. Ambas expresiones de cariño se dan en lenguajes distintos. El varón espera besos y caricias (contacto físico), y la mujer espera palabras de afecto y afirmación (contacto espiritual). 
 Puede pasar que alguno de los dos desee desaforadamente recibir una expresión de cariño en su lenguaje, e instintivamente va de manera descontrolada a reclamarle al otro dicha expresión. Eso provoca la inhibición del otro y se rompe la conversación y la comunicación se complica. Descubrimos que la solución es siempre dar primero la expresión que el otro espera. Ese don despierta en el otro la necesidad de darse también. El saber recibir el don es igualmente una expresión de amor. Es importante saber decir "gracias".
-![[elcirculo.webp]]
-A veces se dan choques que perturban la circulación, estos pueden ser por heridas o por falta de mortificación.
+![[elcirculo.webp|143]]A veces se dan choques que perturban la circulación, estos pueden ser por heridas o por falta de mortificación.
 - **Por heridas:** En una conversación alguien dice algo que toca y abre una herida en el otro que tal vez no sabía que tenía y este reacciona violentamente, el otro escucha y se defiende. Así comienza el conflicto. Por ejemplo:
      X: Ponete el cinturón (orden normal y un poco innecesaria)
      Y: Si, ya me lo estoy poniendo, ya lo sé (herida de impotencia)
