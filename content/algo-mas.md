@@ -9,7 +9,7 @@ What's this? Go to [[Explore The World!|this]] page and find out!
 ## Progreso:
 Ahora estoy copado con este proyecto, así que quiero aprovechar el empujón e ir mostrando mi avance.
 - ~~Crear una página web~~
-- <mark style="background:#b1ffff">Revivir el Graph View, Agregar unas buenas tags y botones de navegación al footer.</mark>
+- Revivir el Graph View, Agregar unas buenas tags y botones de navegación al footer.
 - ~~Crear un járdin digital~~
 - ~~Sacar mi página de Carrd y Pika!~~
 - ~~Personalizar mi página y conseguir una paleta de colores~~
