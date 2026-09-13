@@ -37,6 +37,33 @@ Como se vive la vocación... me lleva a otros. No hay vocaciones para vivirlas e
 > [!note]+ El horizonte inmenso.
 > ¿Dónde buscar el sentido? El brillo de las estrellas me produce, aunque no sepa cómo ni por qué, una sensación de paz y seguridad infinitas. Creo que es allí, en las vastas y eternas leyes de la materia, y no en las preocupaciones, en los pecados y en los problemas cotidianos de los hombres, donde lo que en nosotros pueda haber de superior al animal debe buscar el sosiego y la esperanza.
 
+---
+## Lucha cotidiana. Espera pasiva o activa. Esperar no es no hacer nada.
+Esto es resultado de una de las [[Charlas con la Emi]], vayan a leer otras porque son muy interesantes.
+**Sobre la pornografía y otras adicciones y el pdf que me dio la Emi para leer**
+- El pdf plantea un muy buen esquema para cambiar esta adicción. Nosotros buscamos analizarlo más profunda y personalmente a la luz de Cristo.
+
+Yo traté de verlo más gráficamente imaginando el contraste entre estar atrapado en la oscuridad de un bosque y de repente toparse con la luz del sol saliente atravesando las capas de los árboles.
+
+Hasta ahora, mi "combate" contra la pornografía fue simplemente correr desaforadamente, con los ojos cerrados, buscando huir del bosque hasta "descansar" cuando de repente me choque con el sol.
+
+Encontrarse con el sol, hasta ahora, para mi, significó estar más cerca de la salida, porque desde dentro del bosque, el sol parece ser el único camino al valle entre las montañas.
+
+El pdf me ayudó a verlo de una manera muy distinta. Plantea según nosotros, dos pasos al camino y tres consejos para caminar.
+## El camino
+1. Dejar de contar los días. El que cuenta los días progresivamente se achancha y se acostumbra a verlo como lo describí antes. Se queda con estar cerca del sol. Es el medio más directo a la salida del bosque. Pero... el sol distribuye sus rayos aleatoriamente, no está trazando ningún camino...
+El sol es uno de los tantos recordatorios tangibles que Dios nos regaló para hacernos saber que Él camina con nosotros, pero el es mucho más grande y simple que el Sol.
+El que cuenta los días espera mucho más de lo que lucha. La idea es luchar esperando, esperar luchando, como un boxeador que entrena para una batalla más grande. Esperar al Redentor pero luchando también.
+2. Encontrar la Raíz. Impulso - Alimento/Respuesta.
+El porno no es el problema, es la solución. Es la respuesta, es el alimento a un impulso Santo ¿Cuál es el impulso y por qué quiero alimentarlo con pornografía? ¿Por qué eso no me eso suficiente?
+
+Para responder a todo eso hay que primero conocer mis otros impulsos, su porque y el alimento con que logro satisfacerlos.
+
+> [!note]- Oración
+> Gracias Jesús por estas circunstancias para charlar y pensar los dos, ¡Que bien se está aquí! ¡Hagamos tres carpas! Adoración de las 6 de la mañana, la ciudad está dormida, mediados de enero: no hay nadie y no hay obligaciones inmediatas más que Vos y para colmo llueve. 
+> Ayudame a volver a estas circunstanias cuando cambien. Ayudame a volver a un momento similar que me sirvan de batería para vivir con vos en intimidad otras circunstancias. Amén.
+> 
+
 [[🌳 Sobre el paso del tiempo...]] 
 
 #yuyo #tdc 
