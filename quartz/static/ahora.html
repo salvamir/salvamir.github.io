@@ -1,585 +1,1501 @@
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ahora — Salva Más De Cerca</title>
+    <title>Ahora</title>
 
-    <script>
-    (function () {
-        const theme = localStorage.getItem("theme");
+<script>
+(function () {
+    const theme = localStorage.getItem("theme");
 
-        if (theme === "dark") {
-            document.documentElement.setAttribute("data-theme", "dark");
-        } else {
-            document.documentElement.removeAttribute("data-theme");
-        }
-    })();
-    </script>
-    <style>
-        /* --- PALETA DE COLORES Y MODO OSCURO GLOBAL --- */
-        :root {
-            --bg-main: #1a1714;
-            --text-main: #e3dac9;
-            --accent-dorado: #E7C8A0;
-            --accent-muted: #B7966C;
-            --card-bg: rgba(255, 255, 255, 0.03);
-            --border-color: rgba(183, 150, 108, 0.15);
+    if (theme === "dark") {
+        document.documentElement.setAttribute("data-theme", "dark");
+    } else {
+        document.documentElement.removeAttribute("data-theme");
+    }
+})();
+</script>
+
+<style>
+    /* --- PALETA DE COLORES Y MODO OSCURO GLOBAL --- */
+
+    :root {
+        --bg-main: #1a1714;
+        --text-main: #e3dac9;
+        --accent-dorado: #E7C8A0;
+        --accent-muted: #B7966C;
+        --card-bg: rgba(255, 255, 255, 0.03);
+        --border-color: rgba(183, 150, 108, 0.15);
+    }
+
+    html[data-theme="dark"] {
+        --bg-main: #000000;
+        --text-main: #e0eaf5;
+        --accent-dorado: #e0eaf5;
+        --accent-muted: #84add7;
+        --card-bg: rgba(60, 60, 60, 0.2);
+        --border-color: rgba(224, 234, 245, 0.2);
+    }
+
+    body {
+        background-color: var(--bg-main);
+        color: var(--text-main);
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    /* --- CONTENEDOR DEL FEED --- */
+
+    .feed-container {
+        width: 100%;
+        max-width: 600px;
+        padding: 3rem 1.5rem 1rem 1.5rem;
+        box-sizing: border-box;
+    }
+
+    /* --- ENCABEZADO --- */
+
+    header {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    header h1 a {
+        font-family: 'Times New Roman', serif;
+        font-size: 2.5rem;
+        color: var(--accent-dorado);
+        margin: 0 0 0.5rem 0;
+        text-decoration: none;
+        display: inline-block;
+    }
+
+    header p {
+        color: var(--text-main);
+        opacity: 0.6;
+        font-size: 1rem;
+        margin: 0.5rem 0 0 0;
+    }
+
+    /* --- POST CARDS --- */
+
+    .post-card {
+        background-color: var(--card-bg);
+        border: 1px solid var(--border-color);
+        border-radius: 16px;
+        padding: 1.5rem;
+        margin-bottom: 2.5rem;
+        box-sizing: border-box;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+
+    .post-date {
+        font-family: 'Times New Roman', serif;
+        color: var(--accent-muted);
+        font-size: 1.15rem;
+        font-weight: bold;
+        margin-bottom: 0.75rem;
+        border-bottom: 1px solid var(--border-color);
+        padding-bottom: 0.5rem;
+    }
+
+    .post-text {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin-bottom: 1.2rem;
+        color: var(--text-main);
+    }
+
+    .post-text strong {
+        color: var(--accent-dorado);
+        display: block;
+        margin-bottom: 0.25rem;
+        font-size: 1.05rem;
+    }
+
+    /* --- GALERÍA DE IMÁGENES --- */
+
+    .post-image-wrapper {
+        width: 100%;
+        border-radius: 8px;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        display: block;
+        background-color: var(--bg-main);
+    }
+
+    .img-box {
+        position: relative;
+        display: none;
+        width: 100%;
+        text-decoration: none;
+        overflow: hidden;
+        cursor: pointer;
+    }
+
+    /* Solamente la primera imagen de cada post se muestra inicialmente */
+
+    .img-box:first-child {
+        display: block;
+    }
+
+    .img-box img {
+        width: 100%;
+        height: auto;
+        max-height: 500px;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.2s ease;
+    }
+
+    .img-box:hover img {
+        transform: scale(1.015);
+    }
+
+    .img-box .alt-text {
+        display: none;
+    }
+
+
+    /* =========================================================
+       VISOR DE FOTOS
+       ========================================================= */
+
+    .photo-viewer {
+        position: fixed;
+        inset: 0;
+        z-index: 9999;
+
+        background: rgba(0, 0, 0, 0.94);
+
+        display: none;
+        align-items: center;
+        justify-content: center;
+
+        touch-action: none;
+    }
+
+    .photo-viewer.active {
+        display: flex;
+    }
+
+
+    /* --- TRACK --- */
+
+    .photo-track {
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        overflow: hidden;
+
+        touch-action: none;
+
+        cursor: grab;
+
+        user-select: none;
+        -webkit-user-select: none;
+
+        position: relative;
+    }
+
+    .photo-track.dragging {
+        cursor: grabbing;
+    }
+
+
+    /* --- SLIDE INDIVIDUAL --- */
+
+    .photo-slide {
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        position: absolute;
+        inset: 0;
+
+        box-sizing: border-box;
+
+        padding: 60px 70px 100px;
+    }
+
+    .photo-slide img {
+        max-width: 100%;
+        max-height: 100%;
+
+        width: auto;
+        height: auto;
+
+        object-fit: contain;
+
+        display: block;
+
+        user-select: none;
+        -webkit-user-drag: none;
+        pointer-events: none;
+
+        border-radius: 3px;
+    }
+
+
+    /* --- CAPTION --- */
+
+    .photo-caption {
+        position: absolute;
+
+        left: 50%;
+        bottom: 28px;
+
+        transform: translateX(-50%);
+
+        width: min(700px, calc(100% - 40px));
+
+        box-sizing: border-box;
+
+        background: rgba(0, 0, 0, 0.78);
+        color: #ffffff;
+
+        padding: 10px 14px;
+
+        border-radius: 8px;
+
+        font-size: 0.9rem;
+        line-height: 1.4;
+
+        text-align: center;
+
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+
+        pointer-events: none;
+    }
+
+
+    /* --- BOTÓN CERRAR --- */
+
+    .photo-viewer-close {
+        position: fixed;
+
+        top: 20px;
+        right: 25px;
+
+        z-index: 10001;
+
+        width: 42px;
+        height: 42px;
+
+        border: none;
+        border-radius: 50%;
+
+        background: rgba(255, 255, 255, 0.12);
+        color: white;
+
+        font-size: 28px;
+        line-height: 42px;
+
+        text-align: center;
+
+        cursor: pointer;
+
+        transition: background 0.2s ease;
+    }
+
+    .photo-viewer-close:hover {
+        background: rgba(255, 255, 255, 0.22);
+    }
+
+
+    /* --- CONTADOR --- */
+
+    .photo-counter {
+        position: fixed;
+
+        top: 27px;
+        left: 50%;
+
+        transform: translateX(-50%);
+
+        z-index: 10001;
+
+        color: rgba(255, 255, 255, 0.85);
+
+        font-size: 0.85rem;
+
+        background: rgba(0, 0, 0, 0.55);
+
+        padding: 5px 10px;
+
+        border-radius: 20px;
+
+        pointer-events: none;
+    }
+
+
+    /* --- MOBILE --- */
+
+    @media (max-width: 600px) {
+
+        .photo-slide {
+            padding: 55px 15px 90px;
         }
 
-        html[data-theme="dark"] {
-            --bg-main: #000000;
-            --text-main: #e0eaf5;
-            --accent-dorado: #e0eaf5;
-            --accent-muted: #84add7;
-            --card-bg: rgba(60, 60, 60, 0.2);
-            --border-color: rgba(224, 234, 245, 0.2);
+        .photo-caption {
+            bottom: 18px;
+            font-size: 0.82rem;
         }
 
-        body {
-            background-color: var(--bg-main);
-            color: var(--text-main);
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 100vh;
+        .photo-viewer-close {
+            top: 15px;
+            right: 15px;
         }
+    }
 
-        /* --- CONTENEDOR DEL FEED --- */
-        .feed-container {
-            width: 100%;
-            max-width: 600px;
-            padding: 3rem 1.5rem 1rem 1.5rem;
-            box-sizing: border-box;
-        }
 
-        /* --- ENCABEZADO --- */
-        header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-        header h1 a {
-            font-family: 'Times New Roman', serif;
-            font-size: 2.5rem;
-            color: var(--accent-dorado);
-            margin: 0 0 0.5rem 0;
-            text-decoration: none;
-            display: inline-block;
-        }
-        header p {
-            color: var(--text-main);
-            opacity: 0.6;
-            font-size: 1rem;
-            margin: 0.5rem 0 0 0;
-        }
+    /* --- IFRAME FOOTER NATIVO --- */
 
-        /* --- POST CARDS --- */
-        .post-card {
-            background-color: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 16px;
-            padding: 1.5rem;
-            margin-bottom: 2.5rem;
-            box-sizing: border-box;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-        }
+    .footer-iframe {
+        width: 100%;
+        max-width: 600px;
+        height: 110px;
+        border: none;
+        overflow: hidden;
+        background: transparent;
+        margin-bottom: 2rem;
+    }
+</style>
 
-        .post-date {
-            font-family: 'Times New Roman', serif;
-            color: var(--accent-muted);
-            font-size: 1.15rem;
-            font-weight: bold;
-            margin-bottom: 0.75rem;
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 0.5rem;
-        }
-
-        .post-text {
-            font-size: 0.95rem;
-            line-height: 1.6;
-            margin-bottom: 1.2rem;
-            color: var(--text-main);
-        }
-        .post-text strong {
-            color: var(--accent-dorado);
-            display: block;
-            margin-bottom: 0.25rem;
-            font-size: 1.05rem;
-        }
-
-        /* --- GALERÍA DE IMÁGENES PLANA CON ALT TEXT Y CLICKEABLE --- */
-        .post-image-wrapper {
-            width: 100%;
-            border-radius: 8px;
-            overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 6px;
-            background-color: var(--bg-main);
-        }
-
-        .img-box {
-            position: relative;
-            display: block;
-            text-decoration: none;
-            overflow: hidden;
-        }
-
-        .img-box img {
-            width: 100%;
-            height: 100%;
-            max-height: 400px;
-            object-fit: cover;
-            display: block;
-        }
-
-        /* Zócalo de Alt Text al hacer hover */
-        .img-box .alt-text {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: rgba(0, 0, 0, 0.82);
-            color: #ffffff;
-            font-size: 0.8rem;
-            line-height: 1.35;
-            padding: 8px 10px;
-            opacity: 0;
-            transition: opacity 0.2s ease;
-            pointer-events: none;
-            box-sizing: border-box;
-        }
-
-        .img-box:hover .alt-text {
-            opacity: 1;
-        }
-
-        /* --- IFRAME FOOTER NATIVO --- */
-        .footer-iframe {
-            width: 100%;
-            max-width: 600px;
-            height: 110px;
-            border: none;
-            overflow: hidden;
-            background: transparent;
-            margin-bottom: 2rem;
-        }
-    </style>
 </head>
+
 <body>
 
 <div class="feed-container">
-    <header>
-        <h1><a href="/">Ahora</a></h1>
-        <p>Archivo de lo que voy viviendo.</p>
-    </header>
 
-    <div class="post-card">
-        <div class="post-date">27/07/2026</div>
-        <div class="post-text">
-            <strong>Tenemos una abogada en la familia</strong>
-            La pachi se recibió finalmente. La verdad que tantos años de estudio deben dejarte agotado. Supongo que ella no se olvidará del 27/07/2026 nunca, yo no me olvidaría.
-        </div>
-        <div class="post-image-wrapper">
-            <a href="fotos-galeria/recibida.webp" target="_blank" class="img-box">
-                <img src="fotos-galeria/recibida.webp" alt="Todos juntos.">
-                <span class="alt-text">Todos juntos.</span>
-            </a>
-        </div>
-    </div>
+<header>
+    <h1><a href="/">Ahora</a></h1>
+    <p>Archivo de lo que voy viviendo.</p>
+</header>
 
-    <div class="post-card">
-        <div class="post-date">16/07/2026</div>
-        <div class="post-text">
-            <strong>Resumen de Junio en casi la mitad de Julio</strong>
-            Me acordé de muchas fotos de momentos lindos de Junio. Quiero subirlos para acordarme que no fue todo solamente estudiar y sufrir y quejarse.
-        </div>
-        <div class="post-image-wrapper">
-            <a href="fotos-galeria/lafamiliaylosprimos.webp" target="_blank" class="img-box">
-                <img src="fotos-galeria/lafamiliaylosprimos.webp" alt="Vinieron primos a la casa y conversamos y compartimos un rato.">
-                <span class="alt-text">Vinieron primos a la casa y conversamos y compartimos un rato.</span>
-            </a>
-            <a href="fotos-galeria/vamosargentina.webp" target="_blank" class="img-box">
-                <img src="fotos-galeria/vamosargentina.webp" alt="primer indicio que yo humano mortal noté de que estabamos en el mundial">
-                <span class="alt-text">primer indicio que yo humano mortal noté de que estabamos en el mundial</span>
-            </a>
-            <a href="fotos-galeria/confranylatrini.webp" target="_blank" class="img-box">
-                <img src="fotos-galeria/confranylatrini.webp" alt="fue el cumple de fran y comimos con su familia. Hace mucho que no los veo les mando un abrazo enorme.">
-                <span class="alt-text">fue el cumple de fran y comimos con su familia. Hace mucho que no los veo les mando un abrazo enorme.</span>
-            </a>
-        </div>
+
+<!-- =========================================================
+     12/09/2026
+     ========================================================= -->
+
+<div class="post-card">
+    <div class="post-date">12/09/2026</div>
+
+    <div class="post-text">
+        <strong>Agosto desapareció y septiembre está en esa</strong>
+        No me di ni cuenta igual. Este mes estuve en la estratosfera.
     </div>
 
-    <div class="post-card">
-        <div class="post-date">15/07/2026</div>
-        <div class="post-text">
-            <strong>Fuimos a tafí y a la final también.</strong>
-            Este es de los primeros mundiales que veo activamente porque no soy muy futbolero pero me estoy re divirtiendo. Nos tomamos una semanita en tafí y los invité a los chicos y se sintió como un mes entero de descanso que hermoso.
-        </div>
-        <div class="post-image-wrapper">
-            <a href="fotos-galeria/camionetabarro.webp" target="_blank" class="img-box">
-                <img src="fotos-galeria/camionetabarro.webp" alt="fuimos a pescar pero tuvimos un contratiempo...">
-                <span class="alt-text">fuimos a pescar pero tuvimos un contratiempo...</span>
-            </a>
-            <a href="fotos-galeria/felizcumplemaria.webp" target="_blank" class="img-box">
-                <img src="fotos-galeria/felizcumplemaria.webp" alt="feliz cumplee maria espero que lo hayas pasado lindo. Justo cuando somos finalistas que locura">
-                <span class="alt-text">feliz cumplee maria espero que lo hayas pasado lindo. Justo cuando somos finalistas que locura</span>
-            </a>
-            <a href="fotos-galeria/jugando.webp" target="_blank" class="img-box">
-                <img src="fotos-galeria/jugando.webp" alt="nos copamos con Cube Escape Paradox jajajja">
-                <span class="alt-text">nos copamos con Cube Escape Paradox jajajja</span>
-            </a>
-        </div>
+    <div class="post-image-wrapper">
+
+
+        <a href="fotos-galeria/elcongreso.webp" class="img-box">
+            <img src="fotos-galeria/elcongreso.webp" alt="es una ciudad gigante.">
+            <span class="alt-text">es una ciudad gigante.</span>
+        </a>
+
+        <a href="fotos-galeria/avion.webp" class="img-box">
+            <img src="fotos-galeria/avion.webp" alt="en serio estuve en la estratosfera.">
+            <span class="alt-text">en serio estuve en la estratosfera.</span>
+        </a>
+
+
+        <a href="fotos-galeria/lapachos.webp" class="img-box">
+            <img src="fotos-galeria/lapachos.webp" alt="ya les crecieron las flores.">
+            <span class="alt-text">ya les crecieron las flores.</span>
+        </a>
+
     </div>
-  
-    <div class="post-card">   
-        <div class="post-date">¿?/¿?/2026</div>
-        <div class="post-text">
-            <strong>Recordando tiempos oscuros</strong>
-            Me encantan estas cuatro fotos adjuntas porque demuestran muy bien como me esforcé en ser una persona humana sensible y cansable este cuatrimestre espantoso. Para que yo no me diga a mi mismo después que no hago nada más que estudiar sin razón. Estudié y lo hice con mucho empeño, buena onda y muy buena compañía a pesar de todo. 
-        </div>
-        <div class="post-image-wrapper">
-            <a href="fotos-galeria/salvandopaleo.webp" target="_blank" class="img-box">
-                <img src="fotos-galeria/salvandopaleo.webp" alt="jajajaj juancho y yo probablemente nos habremos quedado hasta tarde. Siempre nos quedamos hasta tarde.">
-                <span class="alt-text">jajajaj juancho y yo probablemente nos habremos quedado hasta tarde. Siempre nos quedamos hasta tarde.</span>
-            </a>
-            <a href="fotos-galeria/salvandofisica.webp" target="_blank" class="img-box">
-                <img src="fotos-galeria/salvandofisica.webp" alt="ahora con la emi. Las noches de cowork fueron muchas largas y oscuras. dormí muy poco esos meses. Me da risa ver como fueron cambiando los looks de mi compu, da para charla">
-                <span class="alt-text">ahora con la emi. Las noches de cowork fueron muchas largas y oscuras. dormí muy poco esos meses. Me da risa ver como fueron cambiando los looks de mi compu, da para charla</span>
-            </a>
-            <a href="fotos-galeria/buenosapuntes.webp" target="_blank" class="img-box">
-                <img src="fotos-galeria/buenosapuntes.webp" alt="Fui aprendiendo a administrar mejor la energía a la hora de tomar nota. Ya voy a hablar mejor sobre eso.">
-                <span class="alt-text">Fui aprendiendo a administrar mejor la energía a la hora de tomar nota. Ya voy a hablar mejor sobre eso.</span>
-            </a>
-            <a href="fotos-galeria/malosapuntes.webp" target="_blank" class="img-box">
-                <img src="fotos-galeria/malosapuntes.webp" alt="Por ejemplo, esta vez no supe administrar bien mi energía a la hora de tomar nota jajahfajhsf. Que locura como influye el factor humano en estas cosas. La verdad que lo dí todo. Me encanta comparar estas dos fotos porque se ve con toda claridad lo mucho que me esforcé. Es muy importante descansar, no solo el cuerpo durmiendo bien, sino el alma, dandole lugar a la vida humana.">
-                <span class="alt-text">Por ejemplo, esta vez no supe administrar bien mi energía a la hora de tomar nota jajahfajhsf. Que locura como influye el factor humano en estas cosas. La verdad que lo dí todo. Me encanta comparar estas dos fotos porque se ve con toda claridad lo mucho que me esforcé. Es muy importante descansar, no solo el cuerpo durmiendo bien, sino el alma, dandole lugar a la vida humana.</span>
-            </a>
-        </div>
+</div>
+
+
+<!-- =========================================================
+     27/07/2026
+     ========================================================= -->
+
+<div class="post-card">
+    <div class="post-date">27/07/2026</div>
+
+    <div class="post-text">
+        <strong>Tenemos una abogada en la familia</strong>
+        La pachi se recibió finalmente. La verdad que tantos años de estudio deben dejarte agotado. Supongo que ella no se olvidará del 27/07/2026 nunca, yo no me olvidaría.
     </div>
 
-    <div class="post-card">
-        <div class="post-date">11/07/2026</div>
-        <div class="post-text">
-            <strong>Por fin un breve descanso.</strong>
-            Me colgué un poco de subir cosas al blog, pero estuve reflexionando mucho y la nube en la que venía viviendo está de a poquito disipándose.Estoy contento porque el Señor me regaló un respiro. Fue el día de la Patria y lo disfruté mucho. Pasaron varias cosas en esta primer semana de vacaciones, tanto que se siente como si hubiese pasado más tiempo. Empecé folklore. Estoy muy contento porque el invierno/otoño está durando mucho y yo estoy pudiendo disfrutarlo bastante. 
-        </div>
-        <div class="post-image-wrapper">
-            <a href="fotos-galeria/avionfacu.webp" target="_blank" class="img-box">
-                <img src="fotos-galeria/avionfacu.webp" alt="Facu sacó esta foto de fran volando. La verdad que me encanta.">
-                <span class="alt-text">Facu sacó esta foto de fran volando. La verdad que me encanta.</span>
-            </a>
-            <a href="fotos-galeria/camadepier.webp" target="_blank" class="img-box">
-                <img src="fotos-galeria/camadepier.webp" alt="el padre tomás estuvo en la casa de Pier cuando fue su día, que lujo.">
-                <span class="alt-text">el padre tomás estuvo en la casa de Pier cuando fue su día, que lujo.</span>
-            </a>
-            <a href="fotos-galeria/cosasdepier.webp" target="_blank" class="img-box">
-                <img src="fotos-galeria/cosasdepier.webp" alt="se me hace super interesante y entusiasmante pensar en que esa persona verdaderamente existió y vivió muy cerca de Jesús toda su vida, y hacía cosas normales como tener un cuaderno dónde anotaba cosas.">
-                <span class="alt-text">se me hace super interesante y entusiasmante pensar en que esa persona verdaderamente existió y vivió muy cerca de Jesús toda su vida, y hacía cosas normales como tener un cuaderno dónde anotaba cosas.</span>
-            </a>
-            <a href="fotos-galeria/elotoñosigue.webp" target="_blank" class="img-box">
-                <img src="fotos-galeria/elotoñosigue.webp" alt="gracias Señor por este clima tan acogedor. No quiero olvidarmelo nunca.">
-                <span class="alt-text">gracias Señor por este clima tan acogedor. No quiero olvidarmelo nunca.</span>
-            </a>
-            <a href="fotos-galeria/elsol.webp" target="_blank" class="img-box">
-                <img src="fotos-galeria/elsol.webp" alt="disfruté mucho del otoño, gracias gracias gracias. miren de linda que me salió la foto yo la siento casi real. Me pone cursi el invierno.">
-                <span class="alt-text">disfruté mucho del otoño, gracias gracias gracias. miren de linda que me salió la foto yo la siento casi real. Me pone cursi el invierno.</span>
-            </a>
-            <a href="fotos-galeria/emilinda.webp" target="_blank" class="img-box">
-                <img src="fotos-galeria/emilinda.webp" alt="con la emi salimos a un bar super lujoso por primera vez y conversamos un montón. Seguro algún día de estos lo documente un poquito.">
-                <span class="alt-text">con la emi salimos a un bar super lujoso por primera vez y conversamos un montón. Seguro algún día de estos lo documente un poquito.</span>
-            </a>
-            <a href="fotos-galeria/viendoelpartido.webp" target="_blank" class="img-box">
-                <img src="fotos-galeria/viendoelpartido.webp" alt="DETALLE IMPORTANTE: ARRANCO EL MUNDIAL y Argentina viene muy bien.">
-                <span class="alt-text">DETALLE IMPORTANTE: ARRANCO EL MUNDIAL y Argentina viene muy bien.</span>
-            </a>
-            <a href="fotos-galeria/visitapadres.webp" target="_blank" class="img-box">
-                <img src="fotos-galeria/visitapadres.webp" alt="hoy vinieron los oratorianos dsp de tanto tiempo. Los extrañamos, me regaló mi papá ayer una boina y hoy la regalé yo a un seminarista que parecía quererla mucho. Mi papá no sabe, no le digan jeje.">
-                <span class="alt-text">hoy vinieron los oratorianos dsp de tanto tiempo. Los extrañamos, me regaló mi papá ayer una boina y hoy la regalé yo a un seminarista que parecía quererla mucho. Mi papá no sabe, no le digan jeje.</span>
-            </a>
-        </div>
+    <div class="post-image-wrapper">
+
+        <a href="fotos-galeria/recibida.webp" class="img-box">
+            <img src="fotos-galeria/recibida.webp" alt="Todos juntos.">
+            <span class="alt-text">Todos juntos.</span>
+        </a>
+
+    </div>
+</div>
+
+
+<!-- =========================================================
+     16/07/2026
+     ========================================================= -->
+
+<div class="post-card">
+    <div class="post-date">16/07/2026</div>
+
+    <div class="post-text">
+        <strong>Resumen de Junio en casi la mitad de Julio</strong>
+        Me acordé de muchas fotos de momentos lindos de Junio. Quiero subirlos para acordarme que no fue todo solamente estudiar y sufrir y quejarse.
     </div>
 
-    <div class="post-card">
-        <div class="post-date">21/06/2026</div>
-        <div class="post-text">
-            <strong>Este mes fue infinito. Todos estos meses fueron infinitos. Pero hoy es el día del padre.</strong>
-            Además de rendir, cursar, rendir, estudiar y rendir, tuve un poco de vida. Aquí están las pruebas. Feliz día pa! Te mereces un descanso.
-        </div>
-        <div class="post-image-wrapper">
-            <a href="fotos-galeria/diadelpadre.webp" target="_blank" class="img-box">
-                <img src="fotos-galeria/diadelpadre.webp" alt="gracias pa por tanto te queremos">
-                <span class="alt-text">gracias pa por tanto te queremos</span>
-            </a>
-            <a href="fotos-galeria/emiii.webp" target="_blank" class="img-box">
-                <img src="fotos-galeria/emiii.webp" alt="miren que linda">
-                <span class="alt-text">miren que linda</span>
-            </a>
-            <a href="fotos-galeria/emiyydrac.webp" target="_blank" class="img-box">
-                <img src="fotos-galeria/emiyydrac.webp" alt="siambonando">
-                <span class="alt-text">siambonando</span>
-            </a>
-            <a href="fotos-galeria/chorizos.webp" target="_blank" class="img-box">
-                <img src="fotos-galeria/chorizos.webp" alt="chorizos aegeticos">
-                <span class="alt-text">chorizos aegeticos</span>
-            </a>
-            <a href="fotos-galeria/cowork.webp" target="_blank" class="img-box">
-                <img src="fotos-galeria/cowork.webp" alt="esta fotito representa mejor que ninguna como fueron estos meses. Gracias lopes por tu compañía.">
-                <span class="alt-text">esta fotito representa mejor que ninguna como fueron estos meses. Gracias lopes por tu compañía.</span>
-            </a>
-            <a href="fotos-galeria/nuevoorden.webp" target="_blank" class="img-box">
-                <img src="fotos-galeria/nuevoorden.webp" alt="Cambié un poquito las cosas de lugar">
-                <span class="alt-text">Cambié un poquito las cosas de lugar</span>
-            </a>
-            <a href="fotos-galeria/juanysalva.webp" target="_blank" class="img-box">
-                <img src="fotos-galeria/juanysalva.webp" alt="con poliedro como siempre">
-                <span class="alt-text">con poliedro como siempre</span>
-            </a>
-        </div>
+    <div class="post-image-wrapper">
+
+        <a href="fotos-galeria/lafamiliaylosprimos.webp" class="img-box">
+            <img src="fotos-galeria/lafamiliaylosprimos.webp" alt="Vinieron primos a la casa y conversamos y compartimos un rato.">
+            <span class="alt-text">Vinieron primos a la casa y conversamos y compartimos un rato.</span>
+        </a>
+
+        <a href="fotos-galeria/vamosargentina.webp" class="img-box">
+            <img src="fotos-galeria/vamosargentina.webp" alt="primer indicio que yo humano mortal noté de que estabamos en el mundial">
+            <span class="alt-text">primer indicio que yo humano mortal noté de que estabamos en el mundial</span>
+        </a>
+
+        <a href="fotos-galeria/confranylatrini.webp" class="img-box">
+            <img src="fotos-galeria/confranylatrini.webp" alt="fue el cumple de fran y comimos con su familia. Hace mucho que no los veo les mando un abrazo enorme.">
+            <span class="alt-text">fue el cumple de fran y comimos con su familia. Hace mucho que no los veo les mando un abrazo enorme.</span>
+        </a>
+
+    </div>
+</div>
+
+
+<!-- =========================================================
+     15/07/2026
+     ========================================================= -->
+
+<div class="post-card">
+    <div class="post-date">15/07/2026</div>
+
+    <div class="post-text">
+        <strong>Fuimos a tafí y a la final también.</strong>
+        Este es de los primeros mundiales que veo activamente porque no soy muy futbolero pero me estoy re divirtiendo. Nos tomamos una semanita en tafí y los invité a los chicos y se sintió como un mes entero de descanso que hermoso.
     </div>
 
-    <div class="post-card">
-        <div class="post-date">0?/0?/2026</div>
-        <div class="post-text">
-            <strong>Una foto de Paraguay 🇵🇾</strong>
-            Me da curiosidad este país.
-        </div>
-        <div class="post-image-wrapper">
-            <a href="fotos-galeria/paraguay.webp" target="_blank" class="img-box">
-                <img src="fotos-galeria/paraguay.webp" alt="Mis papas la sacaron cuando se fueron de cita por unas semanas allá.">
-                <span class="alt-text">Mis papas la sacaron cuando se fueron de cita por unas semanas allá.</span>
-            </a>
-        </div>
+    <div class="post-image-wrapper">
+
+        <a href="fotos-galeria/camionetabarro.webp" class="img-box">
+            <img src="fotos-galeria/camionetabarro.webp" alt="fuimos a pescar pero tuvimos un contratiempo...">
+            <span class="alt-text">fuimos a pescar pero tuvimos un contratiempo...</span>
+        </a>
+
+        <a href="fotos-galeria/felizcumplemaria.webp" class="img-box">
+            <img src="fotos-galeria/felizcumplemaria.webp" alt="feliz cumplee maria espero que lo hayas pasado lindo. Justo cuando somos finalistas que locura">
+            <span class="alt-text">feliz cumplee maria espero que lo hayas pasado lindo. Justo cuando somos finalistas que locura</span>
+        </a>
+
+        <a href="fotos-galeria/jugando.webp" class="img-box">
+            <img src="fotos-galeria/jugando.webp" alt="nos copamos con Cube Escape Paradox jajajja">
+            <span class="alt-text">nos copamos con Cube Escape Paradox jajajja</span>
+        </a>
+
+    </div>
+</div>
+
+
+<!-- =========================================================
+     ¿?/¿?/2026
+     ========================================================= -->
+
+<div class="post-card">
+    <div class="post-date">¿?/¿?/2026</div>
+
+    <div class="post-text">
+        <strong>Recordando tiempos oscuros</strong>
+        Me encantan estas cuatro fotos adjuntas porque demuestran muy bien como me esforcé en ser una persona humana sensible y cansable este cuatrimestre espantoso. Para que yo no me diga a mi mismo después que no hago nada más que estudiar sin razón. Estudié y lo hice con mucho empeño, buena onda y muy buena compañía a pesar de todo.
     </div>
 
-    <div class="post-card">
-        <div class="post-date">05/06/2026</div>
-        <div class="post-text">
-            <strong>El segundo cafesito de la semana</strong>
-            La Emi me volvió adicto a los cafeistos y Fran me hizo ejercer la adicción. Hablamos de cosas tremendas, como la digitalización de la vida y lo raro que se siente. También de como Google eventualmente iba a conquistar el planeta.
-        </div>
-        <div class="post-image-wrapper">
-            <a href="fotos-galeria/franysalva.webp" target="_blank" class="img-box">
-                <img src="fotos-galeria/franysalva.webp" alt="la foto no me favorece para nada, pasa que recién volvía de tafí.">
-                <span class="alt-text">la foto no me favorece para nada, pasa que recién volvía de tafí.</span>
-            </a>
-        </div>
+    <div class="post-image-wrapper">
+
+        <a href="fotos-galeria/salvandopaleo.webp" class="img-box">
+            <img src="fotos-galeria/salvandopaleo.webp" alt="jajajaj juancho y yo probablemente nos habremos quedado hasta tarde. Siempre nos quedamos hasta tarde.">
+            <span class="alt-text">jajajaj juancho y yo probablemente nos habremos quedado hasta tarde. Siempre nos quedamos hasta tarde.</span>
+        </a>
+
+        <a href="fotos-galeria/salvandofisica.webp" class="img-box">
+            <img src="fotos-galeria/salvandofisica.webp" alt="ahora con la emi. Las noches de cowork fueron muchas largas y oscuras. dormí muy poco esos meses. Me da risa ver como fueron cambiando los looks de mi compu, da para charla">
+            <span class="alt-text">ahora con la emi. Las noches de cowork fueron muchas largas y oscuras. dormí muy poco esos meses. Me da risa ver como fueron cambiando los looks de mi compu, da para charla</span>
+        </a>
+
+        <a href="fotos-galeria/buenosapuntes.webp" class="img-box">
+            <img src="fotos-galeria/buenosapuntes.webp" alt="Fui aprendiendo a administrar mejor la energía a la hora de tomar nota. Ya voy a hablar mejor sobre eso.">
+            <span class="alt-text">Fui aprendiendo a administrar mejor la energía a la hora de tomar nota. Ya voy a hablar mejor sobre eso.</span>
+        </a>
+
+        <a href="fotos-galeria/malosapuntes.webp" class="img-box">
+            <img src="fotos-galeria/malosapuntes.webp" alt="Por ejemplo, esta vez no supe administrar bien mi energía a la hora de tomar nota jajahfajhsf. Que locura como influye el factor humano en estas cosas. La verdad que lo dí todo. Me encanta comparar estas dos fotos porque se ve con toda claridad lo mucho que me esforcé. Es muy importante descansar, no solo el cuerpo durmiendo bien, sino el alma, dandole lugar a la vida humana.">
+            <span class="alt-text">Por ejemplo, esta vez no supe administrar bien mi energía a la hora de tomar nota jajahfajhsf. Que locura como influye el factor humano en estas cosas. La verdad que lo dí todo. Me encanta comparar estas dos fotos porque se ve con toda claridad lo mucho que me esforcé. Es muy importante descansar, no solo el cuerpo durmiendo bien, sino el alma, dandole lugar a la vida humana.</span>
+        </a>
+
+    </div>
+</div>
+
+
+<!-- =========================================================
+     11/07/2026
+     ========================================================= -->
+
+<div class="post-card">
+    <div class="post-date">11/07/2026</div>
+
+    <div class="post-text">
+        <strong>Por fin un breve descanso.</strong>
+        Me colgué un poco de subir cosas al blog, pero estuve reflexionando mucho y la nube en la que venía viviendo está de a poquito disipándose.Estoy contento porque el Señor me regaló un respiro. Fue el día de la Patria y lo disfruté mucho. Pasaron varias cosas en esta primer semana de vacaciones, tanto que se siente como si hubiese pasado más tiempo. Empecé folklore. Estoy muy contento porque el invierno/otoño está durando mucho y yo estoy pudiendo disfrutarlo bastante.
     </div>
 
-    <div class="post-card">
-        <div class="post-date">03/06/2026</div>
-        <div class="post-text">
-            <strong>Viajé a Tafí con la gente de Petrología</strong>
-           Fue linda la campaña pero me dejó muerto. Lo peor de ir de caminata no es que caminemos mucho, es que paramos cada dos minutos por media hora y eso te cansa mucho. Aparte no habia llegado a afeitarme.
-        </div>
-        <div class="post-image-wrapper">
-            <a href="fotos-galeria/catrielysalva.webp" target="_blank" class="img-box">
-                <img src="fotos-galeria/catrielysalva.webp" alt="Estabamos muestreando (no estabamos muestreando claramente).">
-                <span class="alt-text">Estabamos muestreando (no estabamos muestreando claramente).</span>
-            </a>
-        </div>
+    <div class="post-image-wrapper">
+
+        <a href="fotos-galeria/avionfacu.webp" class="img-box">
+            <img src="fotos-galeria/avionfacu.webp" alt="Facu sacó esta foto de fran volando. La verdad que me encanta.">
+            <span class="alt-text">Facu sacó esta foto de fran volando. La verdad que me encanta.</span>
+        </a>
+
+        <a href="fotos-galeria/camadepier.webp" class="img-box">
+            <img src="fotos-galeria/camadepier.webp" alt="el padre tomás estuvo en la casa de Pier cuando fue su día, que lujo.">
+            <span class="alt-text">el padre tomás estuvo en la casa de Pier cuando fue su día, que lujo.</span>
+        </a>
+
+        <a href="fotos-galeria/cosasdepier.webp" class="img-box">
+            <img src="fotos-galeria/cosasdepier.webp" alt="se me hace super interesante y entusiasmante pensar en que esa persona verdaderamente existió y vivió muy cerca de Jesús toda su vida, y hacía cosas normales como tener un cuaderno dónde anotaba cosas.">
+            <span class="alt-text">se me hace super interesante y entusiasmante pensar en que esa persona verdaderamente existió y vivió muy cerca de Jesús toda su vida, y hacía cosas normales como tener un cuaderno dónde anotaba cosas.</span>
+        </a>
+
+        <a href="fotos-galeria/elotoñosigue.webp" class="img-box">
+            <img src="fotos-galeria/elotoñosigue.webp" alt="gracias Señor por este clima tan acogedor. No quiero olvidarmelo nunca.">
+            <span class="alt-text">gracias Señor por este clima tan acogedor. No quiero olvidarmelo nunca.</span>
+        </a>
+
+        <a href="fotos-galeria/elsol.webp" class="img-box">
+            <img src="fotos-galeria/elsol.webp" alt="disfruté mucho del otoño, gracias gracias gracias. miren de linda que me salió la foto yo la siento casi real. Me pone cursi el invierno.">
+            <span class="alt-text">disfruté mucho del otoño, gracias gracias gracias. miren de linda que me salió la foto yo la siento casi real. Me pone cursi el invierno.</span>
+        </a>
+
+        <a href="fotos-galeria/emilinda.webp" class="img-box">
+            <img src="fotos-galeria/emilinda.webp" alt="con la emi salimos a un bar super lujoso por primera vez y conversamos un montón. Seguro algún día de estos lo documente un poquito.">
+            <span class="alt-text">con la emi salimos a un bar super lujoso por primera vez y conversamos un montón. Seguro algún día de estos lo documente un poquito.</span>
+        </a>
+
+        <a href="fotos-galeria/viendoelpartido.webp" class="img-box">
+            <img src="fotos-galeria/viendoelpartido.webp" alt="DETALLE IMPORTANTE: ARRANCO EL MUNDIAL y Argentina viene muy bien.">
+            <span class="alt-text">DETALLE IMPORTANTE: ARRANCO EL MUNDIAL y Argentina viene muy bien.</span>
+        </a>
+
+        <a href="fotos-galeria/visitapadres.webp" class="img-box">
+            <img src="fotos-galeria/visitapadres.webp" alt="hoy vinieron los oratorianos dsp de tanto tiempo. Los extrañamos, me regaló mi papá ayer una boina y hoy la regalé yo a un seminarista que parecía quererla mucho. Mi papá no sabe, no le digan jeje.">
+            <span class="alt-text">hoy vinieron los oratorianos dsp de tanto tiempo. Los extrañamos, me regaló mi papá ayer una boina y hoy la regalé yo a un seminarista que parecía quererla mucho. Mi papá no sabe, no le digan jeje.</span>
+        </a>
+
+    </div>
+</div>
+
+
+<!-- =========================================================
+     21/06/2026
+     ========================================================= -->
+
+<div class="post-card">
+    <div class="post-date">21/06/2026</div>
+
+    <div class="post-text">
+        <strong>Este mes fue infinito. Todos estos meses fueron infinitos. Pero hoy es el día del padre.</strong>
+        Además de rendir, cursar, rendir, estudiar y rendir, tuve un poco de vida. Aquí están las pruebas. Feliz día pa! Te mereces un descanso.
     </div>
 
-    <div class="post-card">
-        <div class="post-date">01/06/2026</div>
-        <div class="post-text">
-            <strong>Recibiendo junio con un cafesito</strong>
-            Acaba de empezar la semana y estabamos todos cansados. Fran nos invitó a tomar un café a la Shell. Es muy gracioso como es un evento masculino tomar un café en una estación de servicio. Hablamos de varias cosas como la frustración, las novias, el paso del tiempo, el futuro, el trabajo, el estudio y nuestros miedos. Estabamos todos un poquito bajoneados, quizás es la famosa crisis de los 20.
-        </div>
-        <div class="post-image-wrapper">
-            <a href="fotos-galeria/franyfacu.webp" target="_blank" class="img-box">
-                <img src="fotos-galeria/franyfacu.webp" alt="Facu nunca te devolví la plata del cafe perdón. Dejá de tirarte para abajo, lo estás haciendo muy bien.">
-                <span class="alt-text">Facu nunca te devolví la plata del cafe perdón. Dejá de tirarte para abajo, lo estás haciendo muy bien.</span>
-            </a>
-        </div>
+    <div class="post-image-wrapper">
+
+        <a href="fotos-galeria/diadelpadre.webp" class="img-box">
+            <img src="fotos-galeria/diadelpadre.webp" alt="gracias pa por tanto te queremos">
+            <span class="alt-text">gracias pa por tanto te queremos</span>
+        </a>
+
+        <a href="fotos-galeria/emiii.webp" class="img-box">
+            <img src="fotos-galeria/emiii.webp" alt="miren que linda">
+            <span class="alt-text">miren que linda</span>
+        </a>
+
+        <a href="fotos-galeria/emiyydrac.webp" class="img-box">
+            <img src="fotos-galeria/emiyydrac.webp" alt="siambonando">
+            <span class="alt-text">siambonando</span>
+        </a>
+
+        <a href="fotos-galeria/chorizos.webp" class="img-box">
+            <img src="fotos-galeria/chorizos.webp" alt="chorizos aegeticos">
+            <span class="alt-text">chorizos aegeticos</span>
+        </a>
+
+        <a href="fotos-galeria/cowork.webp" class="img-box">
+            <img src="fotos-galeria/cowork.webp" alt="esta fotito representa mejor que ninguna como fueron estos meses. Gracias lopes por tu compañía.">
+            <span class="alt-text">esta fotito representa mejor que ninguna como fueron estos meses. Gracias lopes por tu compañía.</span>
+        </a>
+
+        <a href="fotos-galeria/nuevoorden.webp" class="img-box">
+            <img src="fotos-galeria/nuevoorden.webp" alt="Cambié un poquito las cosas de lugar">
+            <span class="alt-text">Cambié un poquito las cosas de lugar</span>
+        </a>
+
+        <a href="fotos-galeria/juanysalva.webp" class="img-box">
+            <img src="fotos-galeria/juanysalva.webp" alt="con poliedro como siempre">
+            <span class="alt-text">con poliedro como siempre</span>
+        </a>
+
+    </div>
+</div>
+
+
+<!-- =========================================================
+     0?/0?/2026
+     ========================================================= -->
+
+<div class="post-card">
+    <div class="post-date">0?/0?/2026</div>
+
+    <div class="post-text">
+        <strong>Una foto de Paraguay 🇵🇾</strong>
+        Me da curiosidad este país.
     </div>
 
-    <div class="post-card">
-        <div class="post-date">30/05/2026</div>
-        <div class="post-text">
-            <strong>Planté una suculenta</strong>
-            En mi casa, mi mamá nos quiere a los varones como los cuidadores oficiales del jardín. Todos lo intentamos y tratamos de perseverar lo más que se puede. En el verano más que nada hacemos algo. Yo tengo la condición de tocar-matar en la jardinería. Así que estoy entrenando, esta va a ser mi primer plantita oficialmente mía y voy a encargarme de no muera. Voy a estar contandoles como viene la mano.
-        </div>
-        <div class="post-image-wrapper">
-            <a href="fotos-galeria/suculenta.webp" target="_blank" class="img-box">
-                <img src="fotos-galeria/suculenta.webp" alt="se la ve bien por ahora. Quiero tener más plantitas en macetas. me está gustando su presencia en mi cuarto.">
-                <span class="alt-text">se la ve bien por ahora. Quiero tener más plantitas en macetas. me está gustando su presencia en mi cuarto.</span>
-            </a>
-        </div>
+    <div class="post-image-wrapper">
+
+        <a href="fotos-galeria/paraguay.webp" class="img-box">
+            <img src="fotos-galeria/paraguay.webp" alt="Mis papas la sacaron cuando se fueron de cita por unas semanas allá.">
+            <span class="alt-text">Mis papas la sacaron cuando se fueron de cita por unas semanas allá.</span>
+        </a>
+
+    </div>
+</div>
+
+
+<!-- =========================================================
+     05/06/2026
+     ========================================================= -->
+
+<div class="post-card">
+    <div class="post-date">05/06/2026</div>
+
+    <div class="post-text">
+        <strong>El segundo cafesito de la semana</strong>
+        La Emi me volvió adicto a los cafeistos y Fran me hizo ejercer la adicción. Hablamos de cosas tremendas, como la digitalización de la vida y lo raro que se siente. También de como Google eventualmente iba a conquistar el planeta.
     </div>
 
-    <div class="post-card">
-        <div class="post-date">25/05/2026</div>
-        <div class="post-text">
-            <strong>Feliz día de la Patria</strong>
-            Hoy deberíamos todos tener una escarapela.
-        </div>
-        <div class="post-image-wrapper">
-            <a href="fotos-galeria/25demayo.webp" target="_blank" class="img-box">
-                <img src="fotos-galeria/25demayo.webp" alt="me encanta este dibujito, estoy a punto de usarlo de badge.">
-                <span class="alt-text">me encanta este dibujito, estoy a punto de usarlo de badge.</span>
-            </a>
-        </div>
+    <div class="post-image-wrapper">
+
+        <a href="fotos-galeria/franysalva.webp" class="img-box">
+            <img src="fotos-galeria/franysalva.webp" alt="la foto no me favorece para nada, pasa que recién volvía de tafí.">
+            <span class="alt-text">la foto no me favorece para nada, pasa que recién volvía de tafí.</span>
+        </a>
+
+    </div>
+</div>
+
+
+<!-- =========================================================
+     03/06/2026
+     ========================================================= -->
+
+<div class="post-card">
+    <div class="post-date">03/06/2026</div>
+
+    <div class="post-text">
+        <strong>Viajé a Tafí con la gente de Petrología</strong>
+        Fue linda la campaña pero me dejó muerto. Lo peor de ir de caminata no es que caminemos mucho, es que paramos cada dos minutos por media hora y eso te cansa mucho. Aparte no habia llegado a afeitarme.
     </div>
 
-    <div class="post-card">
-        <div class="post-date">24/05/2026</div>
-        <div class="post-text">
-            <strong>Caos</strong>
-            la idea era hacer un antes y un después pero hice solo un antes.
-        </div> 
-        <div class="post-image-wrapper">
-            <a href="fotos-galeria/desorden.webp" target="_blank" class="img-box">
-                <img src="fotos-galeria/desorden.webp" alt="todo eso guarde vieron? bueno, mi mama lo hace todos los días">
-                <span class="alt-text">todo eso guarde vieron? bueno, mi mama lo hace todos los días</span>
-            </a>
-            <a href="fotos-galeria/desordenn.webp" target="_blank" class="img-box">
-                <img src="fotos-galeria/desordenn.webp" alt="esto también">
-                <span class="alt-text">esto también</span>
-            </a>
-        </div>
+    <div class="post-image-wrapper">
+
+        <a href="fotos-galeria/catrielysalva.webp" class="img-box">
+            <img src="fotos-galeria/catrielysalva.webp" alt="Estabamos muestreando (no estabamos muestreando claramente).">
+            <span class="alt-text">Estabamos muestreando (no estabamos muestreando claramente).</span>
+        </a>
+
+    </div>
+</div>
+
+
+<!-- =========================================================
+     01/06/2026
+     ========================================================= -->
+
+<div class="post-card">
+    <div class="post-date">01/06/2026</div>
+
+    <div class="post-text">
+        <strong>Recibiendo junio con un cafesito</strong>
+        Acaba de empezar la semana y estabamos todos cansados. Fran nos invitó a tomar un café a la Shell. Es muy gracioso como es un evento masculino tomar un café en una estación de servicio. Hablamos de varias cosas como la frustración, las novias, el paso del tiempo, el futuro, el trabajo, el estudio y nuestros miedos. Estabamos todos un poquito bajoneados, quizás es la famosa crisis de los 20.
     </div>
 
-    <div class="post-card">
-        <div class="post-date">20/05/2026</div>
-        <div class="post-text">
-            <strong>Estoy viviendo el otoño</strong>
-            Me encanta cómo se ve el otoño. Acá es como que el sol es muy brillante y todo se ve en reposo. Es muy descansador.
-        </div>
-        <div class="post-image-wrapper">
-            <a href="fotos-galeria/otoñoenlafacultad.webp" target="_blank" class="img-box">
-                <img src="fotos-galeria/otoñoenlafacultad.webp" alt="el otoño es la mejor estación sin duda">
-                <span class="alt-text">el otoño es la mejor estación sin duda</span>
-            </a>
-            <a href="fotos-galeria/casadelvecino.webp" target="_blank" class="img-box">
-                <img src="fotos-galeria/casadelvecino.webp" alt="me encanta cuando las hojas se ven como acariciadas por el sol">
-                <span class="alt-text">me encanta cuando las hojas se ven como acariciadas por el sol</span>
-            </a>
-            <a href="fotos-galeria/arbolysol.webp" target="_blank" class="img-box">
-                <img src="fotos-galeria/arbolysol.webp" alt="se siente re limpio todo no?">
-                <span class="alt-text">se siente re limpio todo no?</span>
-            </a>
-            <a href="fotos-galeria/arbolsoleado.webp" target="_blank" class="img-box">
-                <img src="fotos-galeria/arbolsoleado.webp" alt="esta foto no es de hoy pero miren esta genial el sol a eso me refiero">
-                <span class="alt-text">esta foto no es de hoy pero miren esta genial el sol a eso me refiero</span>
-            </a>
-        </div>
+    <div class="post-image-wrapper">
+
+        <a href="fotos-galeria/franyfacu.webp" class="img-box">
+            <img src="fotos-galeria/franyfacu.webp" alt="Facu nunca te devolví la plata del cafe perdón. Dejá de tirarte para abajo, lo estás haciendo muy bien.">
+            <span class="alt-text">Facu nunca te devolví la plata del cafe perdón. Dejá de tirarte para abajo, lo estás haciendo muy bien.</span>
+        </a>
+
+    </div>
+</div>
+
+
+<!-- =========================================================
+     30/05/2026
+     ========================================================= -->
+
+<div class="post-card">
+    <div class="post-date">30/05/2026</div>
+
+    <div class="post-text">
+        <strong>Planté una suculenta</strong>
+        En mi casa, mi mamá nos quiere a los varones como los cuidadores oficiales del jardín. Todos lo intentamos y tratamos de perseverar lo más que se puede. En el verano más que nada hacemos algo. Yo tengo la condición de tocar-matar en la jardinería. Así que estoy entrenando, esta va a ser mi primer plantita oficialmente mía y voy a encargarme de no muera. Voy a estar contandoles como viene la mano.
     </div>
 
-    <div class="post-card">
-        <div class="post-date">16/05/2026</div>
-        <div class="post-text">
-            <strong>Conociendo un barsito nuevo</strong>
-            Quedaba un poco más lejos. Hablamos de lo frustrado que me sentí por la facultad.
-        </div>
-        <div class="post-image-wrapper">
-            <a href="fotos-galeria/emisonriendo.webp" target="_blank" class="img-box">
-                <img src="fotos-galeria/emisonriendo.webp" alt="hacia un friiio, para vos salva del futuro que después lo extrañas">
-                <span class="alt-text">hacia un friiio, para vos salva del futuro que después lo extrañas</span>
-            </a>
-        </div>
+    <div class="post-image-wrapper">
+
+        <a href="fotos-galeria/suculenta.webp" class="img-box">
+            <img src="fotos-galeria/suculenta.webp" alt="se la ve bien por ahora. Quiero tener más plantitas en macetas. me está gustando su presencia en mi cuarto.">
+            <span class="alt-text">se la ve bien por ahora. Quiero tener más plantitas en macetas. me está gustando su presencia en mi cuarto.</span>
+        </a>
+
+    </div>
+</div>
+
+
+<!-- =========================================================
+     25/05/2026
+     ========================================================= -->
+
+<div class="post-card">
+    <div class="post-date">25/05/2026</div>
+
+    <div class="post-text">
+        <strong>Feliz día de la Patria</strong>
+        Hoy deberíamos todos tener una escarapela.
     </div>
 
-    <div class="post-card">
-        <div class="post-date">17/04/2026</div>
-        <div class="post-text">
-            <strong>Cumple Draculín 20 años. 🎉</strong>
-            Drac festejó su cumple en su casa, Germán cocinó las hamburguesas a la parrilla. Fran y yo llegamos cuando todo ya estaba hecho y las novias estaban invitadas. Nos sacamos un par de fotos. Tocamos la "Chacarera Del Desautado".
-        </div>
-        <div class="post-image-wrapper">
-            <a href="fotos-galeria/cumpledracc.webp" target="_blank" class="img-box">
-                <img src="fotos-galeria/cumpledracc.webp" alt="mirenlo a german es glorioso (esbroma)">
-                <span class="alt-text">mirenlo a german es glorioso (esbroma)</span>
-            </a>
-            <a href="fotos-galeria/cumpledraccc.webp" target="_blank" class="img-box">
-                <img src="fotos-galeria/cumpledraccc.webp" alt="fran tio como te quiero">
-                <span class="alt-text">fran tio como te quiero</span>
-            </a>
-        </div>
+    <div class="post-image-wrapper">
+
+        <a href="fotos-galeria/25demayo.webp" class="img-box">
+            <img src="fotos-galeria/25demayo.webp" alt="me encanta este dibujito, estoy a punto de usarlo de badge.">
+            <span class="alt-text">me encanta este dibujito, estoy a punto de usarlo de badge.</span>
+        </a>
+
+    </div>
+</div>
+
+
+<!-- =========================================================
+     24/05/2026
+     ========================================================= -->
+
+<div class="post-card">
+    <div class="post-date">24/05/2026</div>
+
+    <div class="post-text">
+        <strong>Caos</strong>
+        la idea era hacer un antes y un después pero hice solo un antes.
     </div>
 
-    <div class="post-card">
-        <div class="post-date">10/04/2026</div>
-        <div class="post-text">
-            <strong>Salida con la Emi después de Pascua</strong>
-            Salimos con la Emi a comer hamburguesas para conversar y ponernos al día por un rato. Venimos teniendo semanas muy largas y frías.
-        </div>
-        <div class="post-image-wrapper">
-            <a href="fotos-galeria/hamburguesaspostpascua.webp" target="_blank" class="img-box">
-                <img src="fotos-galeria/hamburguesaspostpascua.webp" alt="es objetivamente mejor la pepsi que la coca">
-                <span class="alt-text">es objetivamente mejor la pepsi que la coca</span>
-            </a>
-        </div>
+    <div class="post-image-wrapper">
+
+        <a href="fotos-galeria/desorden.webp" class="img-box">
+            <img src="fotos-galeria/desorden.webp" alt="todo eso guarde vieron? bueno, mi mama lo hace todos los días">
+            <span class="alt-text">todo eso guarde vieron? bueno, mi mama lo hace todos los días</span>
+        </a>
+
+        <a href="fotos-galeria/desordenn.webp" class="img-box">
+            <img src="fotos-galeria/desordenn.webp" alt="esto también">
+            <span class="alt-text">esto también</span>
+        </a>
+
+    </div>
+</div>
+
+
+<!-- =========================================================
+     20/05/2026
+     ========================================================= -->
+
+<div class="post-card">
+    <div class="post-date">20/05/2026</div>
+
+    <div class="post-text">
+        <strong>Estoy viviendo el otoño</strong>
+        Me encanta cómo se ve el otoño. Acá es como que el sol es muy brillante y todo se ve en reposo. Es muy descansador.
     </div>
 
-    <div class="post-card">
-        <div class="post-date">05/04/2026</div>
-        <div class="post-text">
-            <strong>Cierre Pascua Joven</strong>
-            Al final salió todo bien. Estuve sin celular por esos días y me sirvió mucho para entregarme a los otros.
-        </div>
-        <div class="post-image-wrapper">
-            <a href="fotos-galeria/conloschicos.webp" target="_blank" class="img-box">
-                <img src="fotos-galeria/conloschicos.webp" alt="llevé el micro celu y saqué varias fotitos wuju">
-                <span class="alt-text">llevé el micro celu y saqué varias fotitos wuju</span>
-            </a>
-        </div>
+    <div class="post-image-wrapper">
+
+        <a href="fotos-galeria/otoñoenlafacultad.webp" class="img-box">
+            <img src="fotos-galeria/otoñoenlafacultad.webp" alt="el otoño es la mejor estación sin duda">
+            <span class="alt-text">el otoño es la mejor estación sin duda</span>
+        </a>
+
+        <a href="fotos-galeria/casadelvecino.webp" class="img-box">
+            <img src="fotos-galeria/casadelvecino.webp" alt="me encanta cuando las hojas se ven como acariciadas por el sol">
+            <span class="alt-text">me encanta cuando las hojas se ven como acariciadas por el sol</span>
+        </a>
+
+        <a href="fotos-galeria/arbolysol.webp" class="img-box">
+            <img src="fotos-galeria/arbolysol.webp" alt="se siente re limpio todo no?">
+            <span class="alt-text">se siente re limpio todo no?</span>
+        </a>
+
+        <a href="fotos-galeria/arbolsoleado.webp" class="img-box">
+            <img src="fotos-galeria/arbolsoleado.webp" alt="esta foto no es de hoy pero miren esta genial el sol a eso me refiero">
+            <span class="alt-text">esta foto no es de hoy pero miren esta genial el sol a eso me refiero</span>
+        </a>
+
+    </div>
+</div>
+
+
+<!-- =========================================================
+     16/05/2026
+     ========================================================= -->
+
+<div class="post-card">
+    <div class="post-date">16/05/2026</div>
+
+    <div class="post-text">
+        <strong>Conociendo un barsito nuevo</strong>
+        Quedaba un poco más lejos. Hablamos de lo frustrado que me sentí por la facultad.
     </div>
 
-    <div class="post-card">
-        <div class="post-date">23/03/2026</div>
-        <div class="post-text">
-            <strong>El árbol del siambon</strong>
-            Fuimos con los chicos a buscar madera para que lolo pueda tallar. Terminamos talando un árbol.
-        </div>
-        <div class="post-image-wrapper">
-            <a href="fotos-galeria/coyuyo.webp" target="_blank" class="img-box">
-                <img src="fotos-galeria/coyuyo.webp" alt="una metamorfala!">
-                <span class="alt-text">una metamorfala!</span>
-            </a>
-            <a href="fotos-galeria/frangerman.webp" target="_blank" class="img-box">
-                <img src="fotos-galeria/frangerman.webp" alt="de que hablarán...">
-                <span class="alt-text">de que hablarán...</span>
-            </a>
-        </div>
+    <div class="post-image-wrapper">
+
+        <a href="fotos-galeria/emisonriendo.webp" class="img-box">
+            <img src="fotos-galeria/emisonriendo.webp" alt="hacia un friiio, para vos salva del futuro que después lo extrañas">
+            <span class="alt-text">hacia un friiio, para vos salva del futuro que después lo extrañas</span>
+        </a>
+
+    </div>
+</div>
+
+
+<!-- =========================================================
+     17/04/2026
+     ========================================================= -->
+
+<div class="post-card">
+    <div class="post-date">17/04/2026</div>
+
+    <div class="post-text">
+        <strong>Cumple Draculín 20 años. 🎉</strong>
+        Drac festejó su cumple en su casa, Germán cocinó las hamburguesas a la parrilla. Fran y yo llegamos cuando todo ya estaba hecho y las novias estaban invitadas. Nos sacamos un par de fotos. Tocamos la "Chacarera Del Desautado".
     </div>
 
-    <div class="post-card">
-        <div class="post-date">22/03/2026</div>
-        <div class="post-text">
-            <strong>Comiendo Papas</strong>
-            Hoy la Emi de la nada me llamó para preguntarme si quería salir a comer papas. Le dije que si.
-        </div>
-        <div class="post-image-wrapper">
-            <a href="fotos-galeria/comiendopapas.webp" target="_blank" class="img-box">
-                <img src="fotos-galeria/comiendopapas.webp" alt="está bueno animarse a salir de la nada che">
-                <span class="alt-text">está bueno animarse a salir de la nada che</span>
-            </a>
-            <a href="fotos-galeria/sonriendopapas.webp" target="_blank" class="img-box">
-                <img src="fotos-galeria/sonriendopapas.webp" alt="estaban ricas">
-                <span class="alt-text">estaban ricas</span>
-            </a>
-        </div>
+    <div class="post-image-wrapper">
+
+        <a href="fotos-galeria/cumpledracc.webp" class="img-box">
+            <img src="fotos-galeria/cumpledracc.webp" alt="mirenlo a german es glorioso (esbroma)">
+            <span class="alt-text">mirenlo a german es glorioso (esbroma)</span>
+        </a>
+
+        <a href="fotos-galeria/cumpledraccc.webp" class="img-box">
+            <img src="fotos-galeria/cumpledraccc.webp" alt="fran tio como te quiero">
+            <span class="alt-text">fran tio como te quiero</span>
+        </a>
+
+    </div>
+</div>
+
+
+<!-- =========================================================
+     10/04/2026
+     ========================================================= -->
+
+<div class="post-card">
+    <div class="post-date">10/04/2026</div>
+
+    <div class="post-text">
+        <strong>Salida con la Emi después de Pascua</strong>
+        Salimos con la Emi a comer hamburguesas para conversar y ponernos al día por un rato. Venimos teniendo semanas muy largas y frías.
     </div>
 
-    <div class="post-card">
-        <div class="post-date">21/03/2026</div>
-        <div class="post-text">
-            <strong>Convivencia pre-Pascua Joven</strong>
-            Fue medio agotador, pero estuvo genial, los chicos le pusieron un montón de esfuerzo, recen por nosotros, para que salga todo bien.
-        </div>
-        <div class="post-image-wrapper">
-            <a href="fotos-galeria/prepascua.webp" target="_blank" class="img-box">
-                <img src="fotos-galeria/prepascua.webp" alt="teniamos un miedo tio chaval macho">
-                <span class="alt-text">teniamos un miedo tio chaval macho</span>
-            </a>
-        </div>
+    <div class="post-image-wrapper">
+
+        <a href="fotos-galeria/hamburguesaspostpascua.webp" class="img-box">
+            <img src="fotos-galeria/hamburguesaspostpascua.webp" alt="es objetivamente mejor la pepsi que la coca">
+            <span class="alt-text">es objetivamente mejor la pepsi que la coca</span>
+        </a>
+
     </div>
+</div>
+
+
+<!-- =========================================================
+     05/04/2026
+     ========================================================= -->
+
+<div class="post-card">
+    <div class="post-date">05/04/2026</div>
+
+    <div class="post-text">
+        <strong>Cierre Pascua Joven</strong>
+        Al final salió todo bien. Estuve sin celular por esos días y me sirvió mucho para entregarme a los otros.
+    </div>
+
+    <div class="post-image-wrapper">
+
+        <a href="fotos-galeria/conloschicos.webp" class="img-box">
+            <img src="fotos-galeria/conloschicos.webp" alt="llevé el micro celu y saqué varias fotitos wuju">
+            <span class="alt-text">llevé el micro celu y saqué varias fotitos wuju</span>
+        </a>
+
+    </div>
+</div>
+
+
+<!-- =========================================================
+     23/03/2026
+     ========================================================= -->
+
+<div class="post-card">
+    <div class="post-date">23/03/2026</div>
+
+    <div class="post-text">
+        <strong>El árbol del siambon</strong>
+        Fuimos con los chicos a buscar madera para que lolo pueda tallar. Terminamos talando un árbol.
+    </div>
+
+    <div class="post-image-wrapper">
+
+        <a href="fotos-galeria/coyuyo.webp" class="img-box">
+            <img src="fotos-galeria/coyuyo.webp" alt="una metamorfala!">
+            <span class="alt-text">una metamorfala!</span>
+        </a>
+
+        <a href="fotos-galeria/frangerman.webp" class="img-box">
+            <img src="fotos-galeria/frangerman.webp" alt="de que hablarán...">
+            <span class="alt-text">de que hablarán...</span>
+        </a>
+
+    </div>
+</div>
+
+
+<!-- =========================================================
+     22/03/2026
+     ========================================================= -->
+
+<div class="post-card">
+    <div class="post-date">22/03/2026</div>
+
+    <div class="post-text">
+        <strong>Comiendo Papas</strong>
+        Hoy la Emi de la nada me llamó para preguntarme si quería salir a comer papas. Le dije que si.
+    </div>
+
+    <div class="post-image-wrapper">
+
+        <a href="fotos-galeria/comiendopapas.webp" class="img-box">
+            <img src="fotos-galeria/comiendopapas.webp" alt="está bueno animarse a salir de la nada che">
+            <span class="alt-text">está bueno animarse a salir de la nada che</span>
+        </a>
+
+        <a href="fotos-galeria/sonriendopapas.webp" class="img-box">
+            <img src="fotos-galeria/sonriendopapas.webp" alt="estaban ricas">
+            <span class="alt-text">estaban ricas</span>
+        </a>
+
+    </div>
+</div>
+
+
+<!-- =========================================================
+     21/03/2026
+     ========================================================= -->
+
+<div class="post-card">
+    <div class="post-date">21/03/2026</div>
+
+    <div class="post-text">
+        <strong>Convivencia pre-Pascua Joven</strong>
+        Fue medio agotador, pero estuvo genial, los chicos le pusieron un montón de esfuerzo, recen por nosotros, para que salga todo bien.
+    </div>
+
+    <div class="post-image-wrapper">
+
+        <a href="fotos-galeria/prepascua.webp" class="img-box">
+            <img src="fotos-galeria/prepascua.webp" alt="teniamos un miedo tio chaval macho">
+            <span class="alt-text">teniamos un miedo tio chaval macho</span>
+        </a>
+
+    </div>
+</div>
 
 </div>
+
+
+<!-- =============================================================
+     VISOR GLOBAL DE FOTOS
+     ============================================================= -->
+
+<div class="photo-viewer" id="photoViewer" aria-hidden="true">
+
+    <button
+        class="photo-viewer-close"
+        id="photoViewerClose"
+        aria-label="Cerrar">
+        ×
+    </button>
+
+    <div class="photo-counter" id="photoCounter"></div>
+
+    <div class="photo-track" id="photoTrack"></div>
+
+</div>
+
+
+<script>
+/* ================================================================
+   VISOR DE FOTOS CON SWIPE
+   ================================================================ */
+
+(function () {
+
+    const viewer = document.getElementById("photoViewer");
+    const track = document.getElementById("photoTrack");
+    const closeButton = document.getElementById("photoViewerClose");
+    const counter = document.getElementById("photoCounter");
+
+    let currentIndex = 0;
+    let photos = [];
+
+    let startX = 0;
+    let currentX = 0;
+    let isDragging = false;
+
+    let previousBodyOverflow = "";
+
+
+    /* ------------------------------------------------------------
+       OBTENER LAS FOTOS DEL POST
+       ------------------------------------------------------------ */
+
+    function getPostPhotos(imageBox) {
+
+        const post = imageBox.closest(".post-card");
+
+        if (!post) {
+            return [];
+        }
+
+        const imageBoxes =
+            post.querySelectorAll(".post-image-wrapper .img-box");
+
+        return Array.from(imageBoxes).map(function (box) {
+
+            const img = box.querySelector("img");
+
+            if (!img) {
+                return null;
+            }
+
+            return {
+                src: img.src,
+                alt: img.getAttribute("alt") || ""
+            };
+
+        }).filter(Boolean);
+    }
+
+
+    /* ------------------------------------------------------------
+       MOSTRAR UNA FOTO
+       ------------------------------------------------------------ */
+
+    function showPhoto(animate) {
+
+        track.innerHTML = "";
+
+        if (!photos[currentIndex]) {
+            return;
+        }
+
+        const photo = photos[currentIndex];
+
+        const slide = document.createElement("div");
+        slide.className = "photo-slide";
+
+        const image = document.createElement("img");
+
+        image.src = photo.src;
+        image.alt = photo.alt;
+
+        slide.appendChild(image);
+
+
+        if (photo.alt.trim() !== "") {
+
+            const caption = document.createElement("div");
+
+            caption.className = "photo-caption";
+            caption.textContent = photo.alt;
+
+            slide.appendChild(caption);
+        }
+
+
+        track.appendChild(slide);
+
+
+        if (photos.length > 1) {
+
+            counter.textContent =
+                (currentIndex + 1) + " / " + photos.length;
+
+        } else {
+
+            counter.textContent = "";
+        }
+
+
+        if (animate) {
+
+            slide.style.opacity = "0";
+
+            requestAnimationFrame(function () {
+
+                slide.style.transition =
+                    "opacity 0.18s ease";
+
+                slide.style.opacity = "1";
+
+            });
+
+        }
+    }
+
+
+    /* ------------------------------------------------------------
+       ABRIR VISOR
+       ------------------------------------------------------------ */
+
+    function openViewer(imageBox) {
+
+        photos = getPostPhotos(imageBox);
+
+        if (photos.length === 0) {
+            return;
+        }
+
+
+        const post = imageBox.closest(".post-card");
+
+        const imageBoxes =
+            Array.from(
+                post.querySelectorAll(
+                    ".post-image-wrapper .img-box"
+                )
+            );
+
+
+        currentIndex = imageBoxes.indexOf(imageBox);
+
+        if (currentIndex < 0) {
+            currentIndex = 0;
+        }
+
+
+        viewer.classList.add("active");
+
+        viewer.setAttribute(
+            "aria-hidden",
+            "false"
+        );
+
+
+        previousBodyOverflow =
+            document.body.style.overflow;
+
+        document.body.style.overflow = "hidden";
+
+
+        showPhoto(false);
+    }
+
+
+    /* ------------------------------------------------------------
+       CERRAR VISOR
+       ------------------------------------------------------------ */
+
+    function closeViewer() {
+
+        viewer.classList.remove("active");
+
+        viewer.setAttribute(
+            "aria-hidden",
+            "true"
+        );
+
+
+        document.body.style.overflow =
+            previousBodyOverflow;
+
+
+        track.innerHTML = "";
+
+        photos = [];
+
+        currentIndex = 0;
+
+        counter.textContent = "";
+    }
+
+
+    /* ------------------------------------------------------------
+       FOTO ANTERIOR
+       ------------------------------------------------------------ */
+
+    function showPrevious() {
+
+        if (currentIndex <= 0) {
+            return;
+        }
+
+        currentIndex--;
+
+        showPhoto(true);
+    }
+
+
+    /* ------------------------------------------------------------
+       FOTO SIGUIENTE
+       ------------------------------------------------------------ */
+
+    function showNext() {
+
+        if (currentIndex >= photos.length - 1) {
+            return;
+        }
+
+        currentIndex++;
+
+        showPhoto(true);
+    }
+
+
+    /* ------------------------------------------------------------
+       CLICK EN LAS FOTOS DEL BLOG
+       ------------------------------------------------------------ */
+
+    document
+        .querySelectorAll(
+            ".post-image-wrapper .img-box"
+        )
+        .forEach(function (imageBox) {
+
+            imageBox.addEventListener(
+                "click",
+                function (event) {
+
+                    event.preventDefault();
+
+                    openViewer(imageBox);
+                }
+            );
+
+        });
+
+
+    /* ------------------------------------------------------------
+       CERRAR
+       ------------------------------------------------------------ */
+
+    closeButton.addEventListener(
+        "click",
+        closeViewer
+    );
+
+
+    /* ------------------------------------------------------------
+       CLICK EN EL FONDO
+       ------------------------------------------------------------ */
+
+    viewer.addEventListener(
+        "click",
+        function (event) {
+
+            if (event.target === viewer) {
+                closeViewer();
+            }
+
+        }
+    );
+
+
+    /* ------------------------------------------------------------
+       TECLADO
+       ------------------------------------------------------------ */
+
+    document.addEventListener(
+        "keydown",
+        function (event) {
+
+            if (!viewer.classList.contains("active")) {
+                return;
+            }
+
+
+            if (event.key === "Escape") {
+                closeViewer();
+                return;
+            }
+
+
+            if (event.key === "ArrowLeft") {
+                showPrevious();
+                return;
+            }
+
+
+            if (event.key === "ArrowRight") {
+                showNext();
+                return;
+            }
+
+        }
+    );
+
+
+    /* ============================================================
+       SWIPE
+       ============================================================ */
+
+    track.addEventListener(
+        "pointerdown",
+        function (event) {
+
+            if (
+                event.pointerType === "mouse" &&
+                event.button !== 0
+            ) {
+                return;
+            }
+
+
+            if (photos.length <= 1) {
+                return;
+            }
+
+
+            isDragging = true;
+
+            startX = event.clientX;
+            currentX = event.clientX;
+
+            track.classList.add("dragging");
+
+            track.setPointerCapture(
+                event.pointerId
+            );
+        }
+    );
+
+
+    track.addEventListener(
+        "pointermove",
+        function (event) {
+
+            if (!isDragging) {
+                return;
+            }
+
+            currentX = event.clientX;
+
+        }
+    );
+
+
+    function finishSwipe(event) {
+
+        if (!isDragging) {
+            return;
+        }
+
+
+        isDragging = false;
+
+        track.classList.remove("dragging");
+
+
+        const difference =
+            currentX - startX;
+
+
+        const swipeThreshold = 50;
+
+
+        if (
+            Math.abs(difference) >=
+            swipeThreshold
+        ) {
+
+            if (difference < 0) {
+
+                showNext();
+
+            } else {
+
+                showPrevious();
+
+            }
+
+        }
+
+
+        if (
+            event.pointerId !== undefined
+        ) {
+
+            try {
+
+                track.releasePointerCapture(
+                    event.pointerId
+                );
+
+            } catch (error) {
+
+                /* Ya fue liberado. */
+
+            }
+
+        }
+
+    }
+
+
+    track.addEventListener(
+        "pointerup",
+        finishSwipe
+    );
+
+
+    track.addEventListener(
+        "pointercancel",
+        finishSwipe
+    );
+
+
+})();
+</script>
+
 </body>
 </html>
