@@ -2,6 +2,18 @@
 Acá van a encontrarse con todas las conversaciones profundas que tuvimos con la Emi. De cada charla anotamos lo que fuimos aprendiendo. Estar de novio es hermoso, la vocación matrimonial es hermosa. Nunca hay que perder el entusiasmo por aprender del otro, enamorarse es un choque de planetas. Quizás alguna pareja allá por la amplitud del mundo se encuentre algún día con esto y saque contenido que le sirva. Ojalá que si. Disfruten leer las charlas como nosotros disfrutamos tenerlas.
 
 ---
+# Redescubriendo el diálogo.
+24/09/2026 - Escribo esto en el colectivo varias horas después de la charla. Me quedé pensando. El padre Pío nos prestó un libro que se llama "Los novios de Caná". Se trata de como los novios de Caná conocen a Jesús antes de invitarlo a su casamiento.
+
+• Hemos hablado de como nuestras conversaciones se han vuelto cada vez más perezosas y rutinarias y como hemos dejado un poco de lado las charlas profundas. Indagamos un poco en el "porqué" de todo esto. 
+
+   - Dijimos que tal vez tenga que ver con la etapa que nos toca vivir (estudiar mucho y tener poco tiempo para nosotros mismos.). Creemos que tal vez no tenemos nada de que hablar más que horarios y cronogramas porque es en lo único en lo que pensamos.
+   - Analizamos también el hecho d que hace rato no tenemos tiempo de calidad individual, cada uno por su lado. El noviazgo es aprender a colisionar dos planetas distintos. Hace rato que cada uno no pasa tiempo en ese planeta impenetrable que es la interioridad personal.
+   - Expresamos el miedo al silencio que le tenemos en nuestro noviazgo. Muchas veces no hablar se siente como estar en veredas diferentes. No es para nada así.
+   - Nos propusimos redescubrir el dialogo en la pareja a través de una vida interior más activa y personal. Queremos que conversar se sienta apasionante de nuevo, porque no sabemos con que descubrimiento nuevo puede venir el otro.
+
+
+---
 # Tecnología y la excitación de la mujer.
 <font color="#92cddc">24/01/2026</font> - Escribo esto varios días después, pero ese día hablamos por llamada y llovía y yo dormía en el cuarto de mis papás. Todos menos Lolo están de viaje. Este tema es muy profundo, yo hablé mucho...
 - Tecnología e Internet y macro-empresas: Como el internet cambió y nos cambió a nosotros, nos aceleró y nos volvió impacientes y perdimos energía y nos volvimos todos menos sociales.
