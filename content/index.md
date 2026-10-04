@@ -35,7 +35,7 @@ description: Acá me gusta coleccionar detalles de mi vida. Es mi cuaderno infin
   <a href="https://salvamir.github.io/static/ahora.html"
    class="boton-pildora"
    data-router-ignore>Ahora</a>
-  <a href="https://salvamir.github.io/libro-de-visitas" class="boton-pildora">Visitas</a><a href="https://salvamir.github.io/Etapas" class="boton-pildora">Etapas</a>
+  <a href="https://salvamir.github.io/libro-de-visitas" class="boton-pildora">Visitas</a>
 </div>
 
 Algún erudito recibió alguna vez a un extravagante vendedor de Biblias en su casa. Ambos se llevaron una sorpresa esa tarde. Por su parte, el intelectual agregó a su lista de vicios una nueva adicción: La ansiedad de querer y no poder conocer todas las palabras escritas en el infinito paginar del [libro de arena](https://es.wikipedia.org/wiki/El_libro_de_arena). 

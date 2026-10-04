@@ -36,3 +36,9 @@ yt-dlp -i -f "bv*[ext=mp4]+ba[ext=m4a]/b[ext=mp4]" --embed-metadata --embed-thum
 
 / CONVERT AN IMAGE INTO WEBP
 cwebp -lossless elcirculo.png -o elcirculo.webp
+
+Contras
+
+Facultad: 132435$4/vA
+Personal: =%p3Ce5i7o%"
+Otros: 061220#S4LV4m2 230206#EM1

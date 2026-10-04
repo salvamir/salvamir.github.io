@@ -66,4 +66,5 @@
   <a href="https://salvamir.github.io/static/ahora.html" class="boton-pildora">Ahora</a>
   <a href="https://salvamir.github.io/links" class="boton-pildora">Links</a>
   <a href="https://salvamir.github.io/libro-de-visitas" class="boton-pildora">Visitas</a>
+  <a href="https://salvamir.github.io/Etapas" class="boton-pildora">Etapas</a>
 </div>
