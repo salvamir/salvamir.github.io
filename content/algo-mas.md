@@ -8,35 +8,36 @@ title: ¿Algo más?
 > [[Charlas con la Emi|Charlas con la Emi.]]
 > [[Etapas|Etapas.]]
 
+> [!abstract]- Progreso
+> Ahora estoy copado con este proyecto, así que quiero aprovechar el empujón e ir mostrando mi avance.
+> - ~~Crear una página web~~
+> - Revivir el Graph View, Agregar unas buenas tags y botones de navegación al footer.
+> - ~~Crear un járdin digital~~
+> - ~~Sacar mi página de Carrd y Pika!~~
+> - ~~Personalizar mi página y conseguir una paleta de colores~~
+> - ~~Crear un link RSS~~
+> - ~~Tener un libro de visitas~~
+> - ~~Tener un guestbook NATIVO~~
+> - ~~Mejorar la galería~~
+> - <mark style="background:#fff88f">Crear mi propio badge</mark>
+> - ~~Cambiar colores de los !abstracts~~
+> - ~~Tener un favicon hecho a mano~~
+> - <mark style="background:#fff88f">Incorporar Pretext</mark>
+> - ~~Crear página de musica~~
+> - ~~Mejorar el feed de ahora~~
+> - ~~Agregar etiquetas~~
+> - ~~Agregar alt text a la galeria~~
+> - ~~Eliminar galería para siempre jamás~~
+> - ~~Agregar barra de búsqueda a la carpeta de notas.~~
+> - <mark style="background:#fff88f">Tener un dominio propio</mark>
+> - <mark style="background:#fff88f">Tener un short url</mark>
+> - ~~Tener un buen modo oscuro~~
+> - ~~Incorporar caja de respuestas~~
+> - ~~Corregir distribución en el espacio del libro de visitas~~
+> - ~~Conseguir que mi página pueda ser encontrada por cualquier motor de búsqueda.~~
+
  ## **<font color="#9bbb59">E</font><font color="#4bacc6">x</font><font color="#f79646">p</font><font color="#b2a2c7">l</font><font color="#31859b">o</font><font color="#953734">r</font><font color="#c4bd97">e</font> The World!** 
 What's this? Go to [[Explore The World!|this]] page and find out!
-## Progreso:
-Ahora estoy copado con este proyecto, así que quiero aprovechar el empujón e ir mostrando mi avance.
-- ~~Crear una página web~~
-- Revivir el Graph View, Agregar unas buenas tags y botones de navegación al footer.
-- ~~Crear un járdin digital~~
-- ~~Sacar mi página de Carrd y Pika!~~
-- ~~Personalizar mi página y conseguir una paleta de colores~~
-- ~~Crear un link RSS~~
-- ~~Tener un libro de visitas~~
-- ~~Tener un guestbook NATIVO~~
-- ~~Mejorar la galería~~
-- <mark style="background:#fff88f">Crear mi propio badge</mark>
-- ~~Cambiar colores de los !abstracts~~
-- ~~Tener un favicon hecho a mano~~
-- <mark style="background:#fff88f">Incorporar Pretext</mark>
-- ~~Crear página de musica~~
-- ~~Mejorar el feed de ahora~~
-- ~~Agregar etiquetas~~
-- ~~Agregar alt text a la galeria~~
-- ~~Eliminar galería para siempre jamás~~
-- ~~Agregar barra de búsqueda a la carpeta de notas.~~
-- <mark style="background:#fff88f">Tener un dominio propio</mark>
-- <mark style="background:#fff88f">Tener un short url</mark>
-- ~~Tener un buen modo oscuro~~
-- ~~Incorporar caja de respuestas~~
-- ~~Corregir distribución en el espacio del libro de visitas~~
-- ~~Conseguir que mi página pueda ser encontrada por cualquier motor de búsqueda.~~
 ## ~~Escape Room Game.~~
 Is a escape room game I'm [[Plantas/index|currently]] working on. Give it a try [here](https://salvamir.github.io/static/juego/). For now is only a prototype. Is inspired by the Cube Scape Saga of Rusty Lake.
 ## Cómo tener mi propia página web.
