@@ -1,0 +1,1 @@
+Todas las ideas y notas que van creciendo en mi cabeza, eventualmente, necesitan consolidar en algo concreto, preciso, elaborado y obviamente: pensado. Acá están los resultados de todos mis pensamientos ya procesados, con ejemplos, fuentes, imágenes, videos, audios, y mucho texto. Quiero hacerlos dinámicos para poder releerlos con ganas después. Quiero ponerles mucho empeño.
