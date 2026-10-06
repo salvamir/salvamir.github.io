@@ -1,0 +1,3 @@
+Sources:
+About time perception: [Chronophenomenology]([Cronofenomenología: El tiempo subjetivo y el reloj elástico](https://www.scielo.org.mx/scielo.php?script=sci_arttext&pid=S0185-33252011000400010)).
+Time Speeds Up During Flow States: [A Study in Virtual Reality with the Video Game Thumper]([https://brill.com/view/journals/time/9/4/article-p353_353.xml#top](https://brill.com/view/journals/time/9/4/article-p353_353.xml#top))
