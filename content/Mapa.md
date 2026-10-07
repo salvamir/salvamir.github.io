@@ -1,4 +1,4 @@
- Bueno, infinito puntualmente no es. Este es el gran mapa. Mi página tiene muchos lugares, y para no abrumar a nadie existe esto. Si estás en un celular, vas a ver botones...
+ Bueno, infinito puntualmente no es. Este es el gran mapa. Mi página tiene muchos lugares, y para no abrumar a nadie existe esto. 
 <div class="menu-celular">
   <a href="https://salvamir.github.io/about" class="boton-pildora">Sobre Mi</a>
   <a href="https://salvamir.github.io/static/musica.html" class="boton-pildora">Música</a>
