@@ -2,7 +2,17 @@
 Te dejo otros lugares interesantes para ver. Podés encontrar nuevas páginas por [acá](https://wiby.org). Esta es mi <font color="#fbd5b5">gran lista</font> de páginas web que me gustan. Las anoto así no me las olvido.
 
 > [!abstract]- Search Engines
-> - [Marginalia](([Marginalia Search](https://marginalia-search.com/)), [OldMarginalia]([Marginalia Search](https://old-search.marginalia.nu/)), [SearchMySite]([Blog Search Engine & Website Search Tool | Search My Site](https://searchmysite.net/)), [Metacrawler]([Metacrawler](https://www.metacrawler.com/)), [Wiby]([Wiby - Search Engine for the Classic Web](https://wiby.org/)), [Ecosia]([Ecosia - the search engine that plants trees](https://www.ecosia.org/)), [Mojeek]([Mojeek](https://www.mojeek.com/)), [Kagi]([Kagi Small Web](https://kagi.com/smallweb/)), [Clew]([Clew](https://clew.se/)), [Blogsearch]([Blog Search](https://blogsearch.io/)), [DuckduckgoLite]([DuckDuckGo Lite: Fast, Lightweight Private Search](https://lite.duckduckgo.com/lite/)).
+> - [Marginalia]([MarginaliaSearch](https://marginalia-search.com/))
+> - [OldMarginalia]([MarginaliaSearch](https://old-search.marginalia.nu/)) 
+> - [SearchMySite]([SearchMySite](https://searchmysite.net/))
+> - [Metacrawler]([Metacrawler](https://www.metacrawler.com/))
+> - [Wiby]([WibySearch](https://wiby.org/))
+> - [Ecosia]([Ecosia](https://www.ecosia.org/))
+> - [Mojeek]([Mojeek](https://www.mojeek.com/))
+> - [Kagi]([Kagi](https://kagi.com/smallweb/))
+> - [Clew]([Clew](https://clew.se/))
+> - [Blogsearch]([BlogSearch](https://blogsearch.io/))
+> - [DuckduckgoLite]([DuckDuckGoLite](https://lite.duckduckgo.com/lite/))
 
 > [!abstract]- Directories
 > - [¡BlogBlog!](https://blogblog.es) Blogs en español
