@@ -315,6 +315,35 @@ body[data-slug^="Notas/"] article .content-meta {
 /* =========================================
    8. FOOTER Y BOTONES
    ========================================= */
+
+/* BOTONES DEL MENÚ PRINCIPAL */
+
+.menu-celular {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.boton-pildora {
+  padding: 10px 20px !important;
+  border: 1px solid var(--tertiary, #ccc) !important;
+  border-radius: 25px !important;
+  text-decoration: none !important;
+  color: var(--dark, #333) !important;
+  font-weight: 600 !important;
+  font-size: 15px !important;
+  background-color: transparent !important;
+  transition: background-color 0.2s !important;
+}
+
+.boton-pildora svg,
+.boton-pildora .external-link-icon {
+  display: none !important;
+}
+
+
 hr, .center > hr, .page > hr {
   display: none !important;
 }
@@ -467,108 +496,9 @@ body.dark-mode {
 .search, .tags, ul.tags { 
   display: none !important; 
 }
-/* =========================================
-   11. LIKES (ESTILO BEAR BLOG)
-   ========================================= */
-.upvote-container {
-  display: flex !important;
-  justify-content: flex-start !important;
-  margin: 1.5rem 0 !important;
-}
-
-.upvote-button {
-  background: transparent !important;
-  border: none !important;
-  color: var(--gray) !important;
-  cursor: pointer !important;
-  display: inline-flex !important;
-  align-items: center !important;
-  gap: 0.35rem !important;
-  font-family: inherit !important;
-  font-size: 0.9rem !important;
-  padding: 0 !important;
-  outline: none !important;
-  transform: none !important;
-  transition: opacity 0.15s ease !important;
-}
-
-/* Sin agrandamiento ni saltos en hover */
-.upvote-button:hover:not(:disabled) {
-  transform: none !important;
-  opacity: 0.7;
-}
-
-.upvote-button:disabled {
-  cursor: default;
-  opacity: 0.6;
-}
-
-.upvote-icon {
-  font-size: 0.9rem !important;
-  line-height: 1 !important;
-}
-
-.upvote-button.upvoted {
-  color: var(--secondary) !important;
-}
-
-.upvote-count {
-  font-size: 0.9rem !important;
-}
-
-#cusdis_thread iframe {
-  color-scheme: dark !important;
-  width: 100% !important;
-  border: none !important;
-}
 
 /* =========================================
-   12. NUBE DE ETIQUETAS MENTIMETER
-   ========================================= */
-.mentimeter-cloud {
-  display: flex !important;
-  flex-wrap: wrap !important;
-  justify-content: center !important;
-  align-items: center !important;
-  gap: 0.8rem 1.2rem !important;
-  padding: 2rem 0 !important;
-  margin: 1rem auto !important;
-  width: 100% !important;
-}
-
-.mentimeter-tag-pill {
-  display: inline-flex !important;
-  align-items: center !important;
-  padding: 0.35em 0.8em !important;
-  border-radius: 999px !important;
-  background: rgba(183, 150, 108, 0.12) !important;
-  border: 1px solid rgba(183, 150, 108, 0.3) !important;
-  color: var(--secondary) !important;
-  text-decoration: none !important;
-  line-height: 1.2 !important;
-  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease !important;
-}
-
-html[saved-theme="dark"] .mentimeter-tag-pill,
-html[data-theme="dark"] .mentimeter-tag-pill {
-  background: rgba(132, 173, 215, 0.12) !important;
-  border-color: rgba(132, 173, 215, 0.3) !important;
-  color: var(--secondary) !important;
-}
-
-.mentimeter-tag-pill:hover {
-  transform: translateY(-2px) scale(1.06) !important;
-  background: var(--secondary) !important;
-  color: var(--light) !important;
-}
-
-.mentimeter-tag-count {
-  font-size: 0.75em !important;
-  opacity: 0.75 !important;
-  margin-left: 0.35em !important;
-}
-/* =========================================
-   13. Etiquetas
+   11. Etiquetas
    ========================================= */
 a.internal.tag-link,
 a.tag-link {
