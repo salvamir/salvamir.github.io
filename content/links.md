@@ -2,17 +2,17 @@
 Te dejo otros lugares interesantes para ver. Podés encontrar nuevas páginas por [acá](https://wiby.org). Esta es mi <font color="#fbd5b5">gran lista</font> de páginas web que me gustan. Las anoto así no me las olvido.
 
 > [!abstract]- Search Engines
-> - [Marginalia]([MarginaliaSearch](https://marginalia-search.com/))
-> - [OldMarginalia]([MarginaliaSearch](https://old-search.marginalia.nu/)) 
-> - [SearchMySite]([SearchMySite](https://searchmysite.net/))
-> - [Metacrawler]([Metacrawler](https://www.metacrawler.com/))
-> - [Wiby]([WibySearch](https://wiby.org/))
-> - [Ecosia]([Ecosia](https://www.ecosia.org/))
-> - [Mojeek]([Mojeek](https://www.mojeek.com/))
-> - [Kagi]([Kagi](https://kagi.com/smallweb/))
-> - [Clew]([Clew](https://clew.se/))
-> - [Blogsearch]([BlogSearch](https://blogsearch.io/))
-> - [DuckduckgoLite]([DuckDuckGoLite](https://lite.duckduckgo.com/lite/))
+> - [Marginalia Search](https://marginalia-search.com/)
+> - [MarginaliaOldSearch](https://old-search.marginalia.nu/)
+> - [SearchMySite](https://searchmysite.net/)
+> - [Metacrawler](https://www.metacrawler.com/)
+> - [WibySearch](https://wiby.org/)
+> - [Ecosia](https://www.ecosia.org/)
+> - [Mojeek](https://www.mojeek.com/)
+> - [Kagi](https://kagi.com/smallweb/)
+> - [Clew](https://clew.se/)
+> - [BlogSearch](https://blogsearch.io/)
+> - [DuckDuckGoLite](https://lite.duckduckgo.com/lite/)
 
 > [!abstract]- Directories
 > - [¡BlogBlog!](https://blogblog.es) Blogs en español
