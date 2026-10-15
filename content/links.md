@@ -111,6 +111,7 @@ Te dejo otros lugares interesantes para ver. Podés encontrar nuevas páginas po
 > - [All Free LEGO MOCs: Building Instructions for Every Model](https://mocinstructions.com/mocs)
 > - [Portal - Eurobricks Forums](https://www.eurobricks.com/forum/)
 > - [LEGO Instructions, Free LEGO instructions Database, LEGO assembly instructions](https://lego.brickinstructions.com/)
+> - [BrickHub.org - Let's Build Great LEGO Models!](https://brickhub.org/)
 ## ¡Gracias por venir!
 
 <div class="badge-wall">
