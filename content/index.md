@@ -41,4 +41,4 @@ description: Acá me gusta coleccionar detalles de mi vida. Es mi cuaderno infin
 </div>
 
 Este es mi propio [libro de arena](https://es.wikipedia.org/wiki/El_libro_de_arena). Es mi intento de "inmortalizar" mis ideas. Estas son las personas que leo en internet. Sus páginas son parecidas a la mía, por si te interesa conocerlas: [Daniel](https://danielslife.blog/), [Nolan](https://nolancaudill.com/), [Rafa](https://rafaelkuebler.github.io/), [Manu](https://manuelmoreale.com/), [Tanner](https://tanner.vc), [Michael](https://michaelg.bearblog.dev/blog/), [Robert](https://robertbirming.com/), [Kalena](https://kalenalangford.com), [Seba](https://finest.day/), [Luke](https://lukesmith.xyz/), [The Autodidacts ](https://www.autodidacts.io)y [Maggie](https://maggieappleton.com/).
-![[salvaylaplanta.gif|540]]
+![[salvaylaplanta.gif|700]]
