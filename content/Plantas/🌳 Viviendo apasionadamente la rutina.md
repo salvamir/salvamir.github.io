@@ -34,6 +34,7 @@ Otra forma de vivir apasionadamente la rutina es darse tiempos "humanos". En la 
 > La decisión está en tus manos. Cristo te llama a la vida, a la alegría y a la santidad.
 
 ## Preocuparse es lo más inhumano que existe.
+Pero es lo más [[Every problem is a challenge to face.|común]].
 
 > [!note]+ La preocupación es inútil.
 > Reza, espera y no te preocupes. La preocupación es inútil. Dios es misericordioso y escuchará tu oración.

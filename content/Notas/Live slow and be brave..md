@@ -28,9 +28,9 @@ I practice this, and helps me calm down. Living slowly and stopping by the detai
 
 Being always busy make us less human. What is the point of all those activities, if we miss the really important things? People says that doing nothing with others is an unproductive activity. I miss being unproductive with friends. I don't have time for my family now. I "don't have" time for praying either.
 
-The solution to this hustle culture is doing nothing. But we don't have the braveness for stepping aside of our "extra busy and important life". Spending time in other's life is the most unproductive thing someone can do, that's what the world says.
+The solution to this hustle culture is doing nothing. But we don't have the braveness for stepping aside of our "extra busy and important life". [[El día que gasté mucho tiempo.|Spending time ]]in other's life is the most unproductive thing someone can do, that's what the world says.
 
-I encourage you to assume the protagonism of your life, and rest for a little, without worrying about nothing. Probably, nothing will happen. I'm sure that important task can wait some hours. Put down your phone and let yourself bore for a little. Focus on simple things again. Be with others outside, drink something with a friend, pray or look at the trees.
+I encourage you to[[Every problem is a challenge to face.|assume the protagonism of your life]], and rest for a little, without worrying about nothing. Probably, nothing will happen. I'm sure that important task can wait some hours. Put down your phone and let yourself bore for a little. Focus on simple things again. Be with others outside, drink something with a friend, pray or look at the trees.
 
 And if you already feel rested, then go and keep up with your responsibilities. But this time, do everything slowly. Do it with all of yourself: Read slowly, walk slowly, talk slowly. You don't need to rush. Speed is the most un-human thing we ever had. Cars go at 60km/hr, we don't.
 ## Further reading:
