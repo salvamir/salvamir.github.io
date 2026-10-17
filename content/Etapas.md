@@ -2,14 +2,22 @@ Esta página está inspirada en [/now](https://nownownow.com/). Quiero seguir co
 
 <div class="now-container">
 <section class="now-card">
-<div class="now-date">Primavera (Septiembre 2026)</div>
-<div class="now-content">
-<p>Los árboles ya casi todos tienen flores. Los lapachos ya casi todos son rosas en la Avenida. Hace calor desde las 10.00hs. Estoy empezando a dejar de llevar campera a la facultad. Voy con más ropa de la que uso, nos vamos preparando para el verano. El clima no se decide y cada tanto se nubla y llueve. El mes arrancó patas para arriba en muchos aspectos de mi vida. Pero lentamente, me doy cuenta que estoy aprendiendo a <span style="font-size: 24px">equilibrar mi rutina</span>. El poder vivir la rutina equilibradamente me entusiasma y me da esperanza. Suelo caer en el pensamiento de que solo existe el equilibrio cuando hay una pausa fuera de la rutina. Muchos mini proyectitos están refloreciendo y recobrando el aire. Los círculos que comprenden mi vida empiezan a dilatarse de a poco, y no estoy abrumadoramente inmerso en el estudio. Durante las vacaciones inicié muchas actividades (como folklore, trabajar, hacer música con la pachi, practicar inglés todos los días, hacer ejercicio, ir a apostoles de lourdes, etc) y me propuse seguirlas bajo "cualquier costo". Estoy descubriendo que ese costo no es más que el orden. Y que vivir en orden y vivir equilibradamente <span style="font-size: 20px">no son lo mismo</span>, y está genial ese descubrimiento. Hoy un profe me dijo de chiste en una clase: "Salvador, en esta materia estás caminando cerca del abismo, <span class="tc-color tc-color--cyan" style="color: var(--color-cyan)">pendiendo de un hilo</span>" Yo épicamente le dije que siempre estoy pendiendo de un hilo.</p>
+<div class="now-date">"Verano" (Octubre 2026)</div>
+<p>Octubre ya está en la mitad y yo casi que no me di cuenta. Anduve de un lado a otro, cambiando a cada rato de entorno, gente y responsabilidades. Ahora me toca estudiar, y no consigo centrar la cabeza. Estoy disperso y cansado. Con muchas cosas en la mente... El año está siendo intenso. Estamos viviendo El Super Niño y llueve todo el tiempo. Es octubre, pero hace frío. Ahora tengo un buzo abrigado. Es raro, porque no creo que vaya a acordarme de esto nunca. Es raro porque no creo estar reaccionando de manera normal, no debería haberme acostumbrado tan rápido a un verano sin calor. Esto no pasa en Tucumán. Dentro de poco viajo al exterior, es un viaje importante. Y me voy a un lugar donde va a nevar mucho. Quién sabe... quizás este año de verdad no voy a experimentar el verano tal como solía conocerlo.</p>
 </div>
 </section>
 <details>
 <summary><span>Previamente…</span></summary>
 <ul class="now-events">
+</li>
+<li class="now-event">
+<div class="now-dot" aria-hidden="true"></div>
+<span class="now-heading">Primavera y "Verano" (Agosto y Septiembre 2026)</span>
+<div class="now-line" aria-hidden="true"></div>
+<div class="now-content now-event-content">
+<p>Los árboles ya casi todos tienen flores. Los lapachos ya casi todos son rosas en la Avenida. Hace calor desde las 10.00hs. Estoy empezando a dejar de llevar campera a la facultad. Voy con más ropa de la que uso, nos vamos preparando para el verano. El clima no se decide y cada tanto se nubla y llueve. El mes arrancó patas para arriba en muchos aspectos de mi vida. Pero lentamente, me doy cuenta que estoy aprendiendo a <span style="font-size: 24px">equilibrar mi rutina</span>. El poder vivir la rutina equilibradamente me entusiasma y me da esperanza. Suelo caer en el pensamiento de que solo existe el equilibrio cuando hay una pausa fuera de la rutina. Muchos mini proyectitos están refloreciendo y recobrando el aire. Los círculos que comprenden mi vida empiezan a dilatarse de a poco, y no estoy abrumadoramente inmerso en el estudio. Durante las vacaciones inicié muchas actividades (como folklore, trabajar, hacer música con la pachi, practicar inglés todos los días, hacer ejercicio, ir a apostoles de lourdes, etc) y me propuse seguirlas bajo "cualquier costo". Estoy descubriendo que ese costo no es más que el orden. Y que vivir en orden y vivir equilibradamente <span style="font-size: 20px">no son lo mismo</span>, y está genial ese descubrimiento. Hoy un profe me dijo de chiste en una clase: "Salvador, en esta materia estás caminando cerca del abismo, <span class="tc-color tc-color--cyan" style="color: var(--color-cyan)">pendiendo de un hilo</span>" Yo épicamente le dije que siempre estoy pendiendo de un hilo.</p>
+</div>
+</li>
 <li class="now-event">
 <div class="now-dot" aria-hidden="true"></div>
 <span class="now-heading">Otoño/Primavera (Julio y Agosto 2026)</span>
