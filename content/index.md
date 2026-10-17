@@ -39,10 +39,12 @@ description: Acá me gusta coleccionar detalles de mi vida. Es mi cuaderno infin
 </div>
 
 Este blog es <span style="font-size: 18px">mi propio</span> [libro de arena](https://es.wikipedia.org/wiki/El_libro_de_arena). Me cansé de llenar cuadernos y no saber que hacer con ellos después. 
+Estas son las personas que leo en internet. Sus páginas son parecidas a la mía, por si te interesa conocerlas: [Daniel](https://danielslife.blog/), [Nolan](https://nolancaudill.com/), [Rafa](https://rafaelkuebler.github.io/), [Manu](https://manuelmoreale.com/), [Tanner](https://tanner.vc), [Michael](https://michaelg.bearblog.dev/blog/), [Robert](https://robertbirming.com/), [Kalena](https://kalenalangford.com), [Seba](https://finest.day/), [Luke](https://lukesmith.xyz/), [The Autodidacts ](https://www.autodidacts.io)y [Maggie](https://maggieappleton.com/).
 
 <div class="mis-botones-inicio">
   <a href="https://salvamir.github.io/mapa/" class="boton-pildora">Mapa</a>
   <a href="https://salvamir.github.io/about" class="boton-pildora">Yo</a>
 </div>
 
-Estas son las personas que leo en internet. Sus páginas son parecidas a la mía, por si te interesa conocerlas: [Daniel](https://danielslife.blog/), [Nolan](https://nolancaudill.com/), [Rafa](https://rafaelkuebler.github.io/), [Manu](https://manuelmoreale.com/), [Tanner](https://tanner.vc), [Michael](https://michaelg.bearblog.dev/blog/), [Robert](https://robertbirming.com/), [Kalena](https://kalenalangford.com), [Seba](https://finest.day/), [Luke](https://lukesmith.xyz/), [The Autodidacts ](https://www.autodidacts.io)y [Maggie](https://maggieappleton.com/).![[salvaylaplanta.gif|700]]
+
+![[salvaylaplanta.gif|700]]
