@@ -1,7 +1,7 @@
  Bueno, infinito puntualmente no es. Este es el gran mapa. Mi página tiene muchos lugares, y para no abrumar a nadie existe esto. 
 <div class="menu-celular">
   <a href="https://salvamir.github.io/about" class="boton-pildora">Sobre Mi</a>
-  <a href="https://salvamir.github.io/static/musica.html" class="boton-pildora">Música</a>
+  <a href="https://salvamir.github.io/musica" class="boton-pildora">Música</a>
   <a href="https://salvamir.github.io/Charlas-con-la-Emi" class="boton-pildora">Charlas con la Emi</a>
   <a href="https://salvamir.github.io/algo-mas" class="boton-pildora">Algo Más</a>
   <a href="https://salvamir.github.io/Plantas/" class="boton-pildora">Jardín Digital</a>
