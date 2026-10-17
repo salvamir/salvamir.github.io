@@ -116,11 +116,11 @@ Te dejo otros lugares interesantes para ver. Podés encontrar nuevas páginas po
 
 <div class="badge-wall">
   <a href="https://ko-fi.com/s/4662b19f61"><img src="/Anexos/WrittenByAHuman.svg"></a>
-  <a href="https://kagi.com/smallweb"><img src="/Anexos/kagi-small-web.png"></a>
-  <a href="TU_ENLACE_AQUÍ"><img src="/Anexos/made-on-macintosh 1.gif"></a>
+  <a href="https://kagi.com/smallweb"><img src="/Anexos/kagi-small-web.webp"></a>
+  <a href="TU_ENLACE_AQUÍ"><img src="/Anexos/made-on-macintosh.gif"></a>
   <a href="TU_ENLACE_AQUÍ"><img src="/Anexos/delete-tiktok.gif"></a>
   <a href="TU_ENLACE_AQUÍ"><img src="/Anexos/socialmedia.webp"></a>
-  <a href="https://binomech.net"><img src="/Anexos/binomech.png"></a>
+  <a href="https://binomech.net"><img src="/Anexos/binomech.webp"></a>
   <a href="http://watar.com.ar"><img src="/Anexos/watar.gif"></a>
   <a href="https://www.esuntipazo.com"><img src="/Anexos/esuntipazo.gif"></a>
   <a href="https://luiscarlospando.com"><img src="/Anexos/luis-carlos-pando.gif"></a>

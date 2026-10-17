@@ -1,6 +1,6 @@
 
-| ![[foto.webp\|216]] |
-| ------------------- |
+| ![[foto.webp\|77x116]] |     |     |     |
+| ---------------------- | --- | --- | --- |
 ### Quién soy.
 Soy Salvador, el significado de mi nombre es bastante autoexplicativo. Vivo con 5 hermanos en la provincia más chiquita del mejor país del mundo. Inventé esta página *para divertirme*, <span style="font-size: 20px">aprender</span> y para poder procesar y almacenar casi eternamente mis pensamientos, ideas, escritos, etc. Es una caja inmensa de recuerdos. Soy estudiante, músico, católico y Argentino. Estoy de novio hace rato con una chica preciosa y muy interesante también. 
 
