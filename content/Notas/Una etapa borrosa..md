@@ -9,7 +9,7 @@ Confío en que todo esto va a disiparse con el tiempo. Solía tener mucho más c
 
 Estoy usando este tiempo para absorver del entorno lo que toque. Estos días transplanté unas suculentas y puse plantas en mi cuarto. Es díficil hacer jardinería con este frío y con la poca energía humana que tengo.
 
-![[plantita.jpg|268]]![[planta.jpg|269]]
+![[plantita.webp|268]]![[planta.webp|269]]
 
 Iremos viendo como crecen. Entiendo que no hay que hacer estas cosas en invierno, porque las plantas se secan. 
 

@@ -21,7 +21,7 @@ In real life is easy to know if someone is not interested in what you're saying 
 
 I picture this phenomena like a big "artisanal fair" where each person has their own space to share whatever they want. People walking around those spaces (me around Sebastian's blog recently, you right now, and every person who had read something personal on this small "virtual city") are aware of what kind of content they're offered to be fed up with, and consciously decide which one collect and **ruminate**. 
 
-![[feriaartesanal.jpg|405]]
+![[feriaartesanal.webp|405]]
 
 Parts of my *own real life* are shown here. I'm being open to you, the reader. I trust you. And I think that's what me and Sebastian (correct me if I'm wrong) amaze the most. Both of us are  trusting that the other is sharing a real part of their lives, even tho this digital medium is not quite "real". 
 

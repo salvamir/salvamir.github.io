@@ -51,5 +51,5 @@ El RSS (Really Simple Syndification) es básicamente una manera de poder enterar
 Me encanta la naturaleza y salir de caminatas. Me encanta tafí a pesar de que casi nunca elijo ir. Siempre termino priorizando la facultad, pero esa es otra charla.
 Varios de los cuadros que van a encontrar en esta página son de Tafí y los hizo un tío mío. 
 Te dejo fotos para que te den ganas de dejar la pantalla y salir afuera:
-![[tafiii.mp4]]![[tafi.jpg]]
-![[tafif.jpg]]
+![[tafiii.mp4]]![[tafi.webp]]
+![[tafif.webp]]

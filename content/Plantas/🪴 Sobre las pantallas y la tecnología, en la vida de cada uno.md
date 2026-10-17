@@ -27,7 +27,7 @@ Sinceramente Papá Dios, me agota pensar en celulares y computadoras. Son mi obs
 
 En lo más profundo de mi intimidad, cuando las luces se apagan, cuando las pantallas se vuelven negras, cuando las conexiones desaparecen y nos quedamos vos y yo solos... En ese momento, realmente entiendo que me hiciste para horizontes inmensos... Pero a la vez, me dejaste entrar en este mundo hyperconectado e hyperapantallado, que a la vez es un mundo hypersolitario e hyperabrumado. 
 
-![[Red de preguntas.png]]
+![[Red de preguntas.webp]]
 
 No quiero reemplazar la luz de mi celular por la luz de Tu sol Señor. Es bastante vergonzoso y hasta parece una hipocresía total esto que estoy haciendo ahora: Son la 1.02 de la mañana, debería estar estudiando paleontología a ful porque mañana rindo y tengo un día muy largo (hoy es 23 de junio del 2026, para vos salva del futuro que te olvidas todo) y estoy rezando por medio de una computadora... y está oración voy a subirla a Internet. 
 

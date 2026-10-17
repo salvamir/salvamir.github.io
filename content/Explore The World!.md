@@ -11,7 +11,7 @@ Their flag's etymology name comes from a greek word refered to "copper", the mos
 
 There is a lot of famous people from Cyprus, but I only can mention a [guy](https://en.wikipedia.org/wiki/Demis_Hassabis) who is a computer scientists and worked for Google developing DeepMind Project. The country is divided by six districts. The capital of Cyprus is a city called Nicosia. Most of the people in Cyprus is Catholic Orthodox. And there are some Catholics too. That's great.
 
-![[cyrpus.png|437]]
+![[cyrpus.webp|437]]
 
 ## Day #2 - Kosovo 🇽🇰
 I've learnt about this country some very sad stories. Kosovo is a pretty young country placed in Southeast Europe, limited by Serbia 🇷🇸 (North and Northwest), Albania 🇦🇱 (Southeast), North Macedonia 🇲🇰 (Southwest), Montenegro (East). 
@@ -21,11 +21,11 @@ The [Kosovo etymology](https://en.wikipedia.org/wiki/Kosovo#Etymology) is relate
 
 Kosovo's flag is truly unique, it has the country map as the central motif, the same as Cyprus🇨🇾. The six stars are a reference to the six ethnics that live there. The two main ethnics are Albanians and serbs. That's why you might see out there (social media) many Albania flags but made blue. I think it is because many kosovar people stills identifies with Albania as their nation. Or maybe they are decedent's of Albanian people idk. Dua Lipa is Albanian, but was raised in Kosovo. So she says about herself that she's Kosovar. 
 
-![[mind collage.jpg|388]]
+![[mind collage.webp|388]]
 
 ## Day #1 - Albania 🇦🇱
 I've learnt about Albania a lot of things today. It's capital is **Tirana** (Tiranë). It corresponds to the [Balkan Peninsula](https://en.wikipedia.org/wiki/Balkans) and Southeast Europe. It has the perfect mix of beaches and mountains (or at least, that's what people says). In it's capital, there's no enough place to park your car so people leave their car with their parking lights on "anywhere" and they're good to go. 
-![[Albania.png]]
+![[Albania.webp]]
 
 There you have a [brief story](https://flagpedia.net/albania)of the Albania flag: 
 > [!note]+ Albania Flag
@@ -36,5 +36,5 @@ Albanians are very [warm hearted](https://youtu.be/7ulXp0fpG44) people. They wil
 St. Mother Teresa was from Albania! That's awesome. Albania is a very religious country of Europe (I want to know if it is the most). Their main religions are Islam, Ortodox Catholics and then us, the Roman Catholics (Wuju!), but those are just stats... maybe they aren't as religious as their stats says. 
 
 The geology of Albania is mainly leaded by recently uplifted and reshaped mountains range. The one I've read most about is called [Albanian Alps](https://en.wikipedia.org/wiki/Albanian_Alps), made primarily by carbonate and igneous rocks. 
-![[Albania-Tirana.png]]
+![[Albania-Tirana.webp]]
 

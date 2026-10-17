@@ -30,7 +30,7 @@ Me doy cuenta, mirando hacia atrás desde ahora, que a mi vida la tengo yo tambi
 Tengo una imagen muy nítida de mi vida antes, durante e inmediatamente después de la pandemia, pero no recuerdo exactamente a cuantos años de calendario corresponden. Puedo describir estas etapas, pero no encuadrarlas en mi calendario.
 
 
-![[etapa-calendario.png]]
+![[etapa-calendario.webp]]
 Algo así es lo que quiero mostrarles. Es como si la etapa real simplemente fuese muy diferente al calendario gris que usamos nosotros. 
 
 Esto me pasa a pequeña escala también. <u>En un mismo día hay diferentes etapas o temporadas</u>. A la mañana bien temprano, la energía mental es poca, sigo medio dormido y confundido, con pensamientos medio de ensueños todavía... a la mañana un poquito más tarde tipo 10.00hrs mi energía mental/social/emocional y conciencia personal llegan a su culmen de desarrollo, y a medida que se acerca el mediodía entran en declive nuevamente, porque empiezo a tener hambre. La siesta es un momento de pausa y reflexivo, que nos lleva lentamente a la tarde, y que a su vez nos lleva a la noche, en dónde esa energía mental termina de descender y ya cuesta mucho pensar en responsabilidades y tareas arduas, y queda solo el silencio, la oración y el descanso.
@@ -43,7 +43,7 @@ Esto me pasa a pequeña escala también. <u>En un mismo día hay diferentes etap
 Este último punto nos lleva a lo siguiente:
 ## Los cambios de etapa no son directos.
 Pero el paso de los días si. En un calendario normal, el contacto entre días numéricos es<font color="#fac08f"> neto.</font> Eso es muy confuso para nuestro sistema de tiempo humano. 
-![[difusion.png]]
+![[difusion.webp]]
 Así, nos sucede que sentimos como que la vida "nos lleva por delante" o que las responsabilidades nos consumen. Esta frustración o estrés se deben nada más y nada menos que a la transición. 
 
 Nuestro trabajo, estudio, y vida productiva en general funcionan en contactos netos y cambios directos y concisos. Entonces, sucede muy seguido que, mientras nuestra vida eficiente avanza de cuadrado en cuadrado, nosotros seguimos viviendo una etapa anterior. Y por eso estamos humanamente *desfazados* de nuestra propia vida. Eso es muy frustrante, porque se siente como que estamos corriendo sin alcanzar nunca a esos cuadrados que pasan de uno a otro muy rápidamente. Se siente como estar siempre por detrás.
