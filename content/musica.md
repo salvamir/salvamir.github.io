@@ -25,8 +25,8 @@ More info at:
 ### Love & Hyperbole 
 Alessia Cara - 2025
 
-| ![[Love & Hyperbole - Alessia Cara.webp\|243]] | ![[Love & Hyperbole - Alessia.webp\|351x180]] |
-| ----------------------------------- | --------------------------------------- |
+| ![[Love & Hyperbole - Alessia Cara.webp\|161x121]] | ![[Love & Hyperbole - Alessia.webp\|229x118]] |
+| -------------------------------------------------- | --------------------------------------------- |
 
 - This album tells a really specific story that makes it, at least for me, one of the best Pop and R&B albums of this year. I think is one of the most developed albums of her career as a musician. I've been listening to Alessia for quite a while now. And I can say that, in this new album, she nailed it. This piece have a lot of personality. It have a pretty distinguishable sound that I couldn't find in any album recently. Or at least, I couldn't find it in addition to its simplicity and "easy to listen to" kinda vibe.
 - [Spotify](https://open.spotify.com/intl-es/album/6B7J2anabeL3P2kKK6UsOJ) - [Youtube](https://www.youtube.com/playlist?list=PLDvfnjuISZ4imd1B4Hwh6JotzN3olAUUn)
