@@ -12,7 +12,7 @@ Many people say used to be like this: A place where you could find the answer or
 
 Now, the internet isn't that useful anymore, and we need to find a solution to all of this. If we want to make it useful again, or at least, manage a way to surf thorough the garbage and stumble by quality information. 
 #### What does people say about this?
-There are a lot of opinions out there. This are some I've found on reddit and I think **are worth to look at**, as they actually sume to the subject we are discussing about now.
+There are a lot of opinions out there. These are some I've found on reddit and I think **are worth to look at**, as they actually sume to the subject we are discussing about now.
 
 | ![[The Infinite Humanity's Library (in progres.)-1792378737888.webp\|355]] | ![[The Infinite Humanity's Library (in progres.)-1792378791896.webp\|325]] |
 | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- |

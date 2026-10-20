@@ -4,7 +4,14 @@ cssclasses:
   - blog-post
 ---
 # The music I enjoy.
-Here you'll find a list of all the recent albums/tracks/sounds I've been listening too. I enjoy a lot learning about the back-story of each piece. I usually dig deeper inside the creative process of the artist doing they work.
+Here you'll find a list of all the recent albums/tracks/sounds I've been listening too. I enjoy a lot learning about the back-story of each piece. I usually dig deeper inside the creative process of the artist.
+
+---
+## Vino Y Colores
+Sur - 2026
+![[musica-1792538652904.webp|296]]
+- Es un sonido auténtico y sincero. Este disco empieza en el instante después del peor error. Es compañero del fracasado; de quién no tomó una decisión correcta. Verdaderamente, en ese momento, la fibra más humana del herido busca solamente eso: Vino y Colores. Lo que más me gustó fue lo bien que logra expresar la sensación de una diversión loca e insana, y su consecuente reflexión y existencialismo. Me da curiosidad saber en que pensaban los artistas al componer todo esto; al ser su album debut, es esperable que no tenga un "concepto definido". Los album debut, en mi experiencia, suelen ser un rejunte de las mejores canciones del artista.
+- [Spotify](https://open.spotify.com/album/0ip3sPulqecTjfaIfgXuvS?si=T4tvCymESSmR36USAVOygg).
 
 ---
 ## The Light For Days
@@ -28,7 +35,7 @@ Alessia Cara - 2025
 | ![[Love & Hyperbole - Alessia Cara.webp\|161x121]] | ![[Love & Hyperbole - Alessia.webp\|229x118]] |
 | -------------------------------------------------- | --------------------------------------------- |
 
-- This album tells a really specific story that makes it, at least for me, one of the best Pop and R&B albums of this year. I think is one of the most developed albums of her career as a musician. I've been listening to Alessia for quite a while now. And I can say that, in this new album, she nailed it. This piece have a lot of personality. It have a pretty distinguishable sound that I couldn't find in any album recently. Or at least, I couldn't find it in addition to its simplicity and "easy to listen to" kinda vibe.
+- It tells a really specific story that makes the album one of the best Pop and R&B albums of this year. At least at human expression and storytelling. I think is one of the most developed albums of her career as a musician. I've been listening to Alessia for quite a while now. And I can say that, in this new album, she nailed it. This piece have a lot of personality. It have a pretty distinguishable sound that I couldn't find in any album recently. Or at least, I couldn't find it in addition to its simplicity and "easy to listen to" kinda vibe.
 - [Spotify](https://open.spotify.com/intl-es/album/6B7J2anabeL3P2kKK6UsOJ) - [Youtube](https://www.youtube.com/playlist?list=PLDvfnjuISZ4imd1B4Hwh6JotzN3olAUUn)
 More info at:
 - [Love & Hyperbole - Wikipedia](https://en.wikipedia.org/wiki/Love_%26_Hyperbole)
