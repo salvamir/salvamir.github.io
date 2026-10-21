@@ -13,7 +13,7 @@ Esta página existe para que vos, yo y cualquiera que entre pueda sentirse human
 
 El internet es un invento muy zarpado y muy útil. Me parece indispensable aprender a convivir sanamente con la tecnología para que nos sean propicias. La idea es que podamos prender y apagar la conexión por decisión propia cuando queramos.
 
-Acá en el internet hay muchas cosas valiosas. Algunas de ellas las recopilé en mis [[links|links]]. Por eso, te invito a entrar a [esta](https://liturgiacatolica.org/Lucas/5,1%E2%80%9111.html) página secreta.
+Acá en el internet [[The Infinite Library (in progres...)|hay muchas cosas]] valiosas. Algunas de ellas las recopilé en mis [[links|links]]. Por eso, te invito a entrar a [esta](https://liturgiacatolica.org/Lucas/5,1%E2%80%9111.html) página secreta.
 ## Sobre las pantallas y la tecnología, en la vida de cada uno
 La sección de arriba describe un poco como viene siendo mi relación con el Internet, pero las preguntas siguen con vida: ¿Se puede vivir plenamente teniendo que estar todos los días delante de una pantalla, conectado a internet y rodeado de conexiones bluetooth? Supongo que sí... Debe ser cuestión de adaptarse.
 

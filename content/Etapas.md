@@ -51,5 +51,3 @@ Esta página está inspirada en [/now](https://nownownow.com/). Quiero seguir co
 </div>
 </li>
 </ul>
-</details>
-</div>

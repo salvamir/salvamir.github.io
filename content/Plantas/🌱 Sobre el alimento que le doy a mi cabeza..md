@@ -7,7 +7,7 @@ Lo que consumo afecta mi comportamiento y viceversa. También he estado más con
 
 La realidad es que mis hábitos van mucho más allá de lo que una aplicación pueda decir. Muchas veces ese trackeo de decisiones fue impreciso, tajante, irregular, por lo que en cierto sentido, no es perfectamente representativo.
 
-![[Habits.webp|239]]
+![[Habits.webp|258]]
 
 Como se ve en la imagen, hay hábitos que quise desarrollar. Pero sin duda no "[[🌱 Educación de las pasiones, virtudes y afectos humanos.|quiero" profundamente]]. Estoy seguro y convencido de que el único requisito para desarrollar un hábito, al final del día, es querer. Más allá de todas las complicaciones rutinarias.
 

@@ -95,8 +95,8 @@ Te dejo otros lugares interesantes para ver. Podés encontrar nuevas páginas po
 > > - [Atlas de Petrología Ígnea.](https://petroignea.wordpress.com)
 > > - [Atlas de Mineralogía Óptica.](http://www.mineralogiaoptica.es) y [Lista De Minerales Formadores De Roca.](https://www.ugr.es/~velilla/atlas_mineral.html#Neso)
 > > - [Apuntes de Geología General](https://www.geovirtual2.cl)
-> > - [Time Scale Creator. 
-](https://timescalecreator.org/tsclite/index/index.php)
+> > - [Time Scale Creator. ](https://timescalecreator.org/tsclite/index/index.php)
+> > - [Haakon Fossen Structural Geology textbook](https://folk.uib.no/nglhe/StructuralGeoBook.html)
 
 > [!abstract]- Webrings
 > *Disclaimer: I do not like most of them actually. That's why I put them here at the end of the page. I think you can absolutely find more healthy websites for yourself. But who knows, maybe you find something cool and meaningful here.*
