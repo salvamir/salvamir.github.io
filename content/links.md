@@ -79,6 +79,7 @@ Te dejo otros lugares interesantes para ver. Podés encontrar nuevas páginas po
 > - [Nitter](https://nitter.net): A small alternative to twitter.
 > - [Not Related!](https://notrelated.xyz): Maybe some interesting podcasts.
 > - [Based Cooking:](https://based.cooking) Recipes, that's it.
+> - [Flash Museum - Flash Games Online for Free 🕹️](https://flashmuseum.net/)
 
 > [!note]+ Geology
 > > [!todo]- Blogs and news
