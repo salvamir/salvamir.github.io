@@ -3,7 +3,7 @@ Acá van a encontrarse con todas las conversaciones profundas que tuvimos con la
 
 ---
 # Redescubriendo el diálogo.
-24/09/2026 - Escribo esto en el colectivo varias horas después de la charla. Me quedé pensando. El padre Pío nos prestó un libro que se llama "Los novios de Caná". Se trata de como los novios de Caná conocen a Jesús antes de invitarlo a su casamiento.
+<span class="tc-color tc-color--cyan" style="color: var(--color-cyan)">24/09/2026</span> - Escribo esto en el colectivo varias horas después de la charla. Me quedé pensando. El padre Pío nos prestó un libro que se llama "Los novios de Caná". Se trata de como los novios de Caná conocen a Jesús antes de invitarlo a su casamiento.
 
 • Hemos hablado de como nuestras conversaciones se han vuelto cada vez más perezosas y rutinarias y como hemos dejado un poco de lado las charlas profundas. Indagamos un poco en el "porqué" de todo esto. 
 
