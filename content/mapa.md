@@ -1,8 +1,28 @@
- Bueno, infinito puntualmente no es. Este es el gran mapa. Mi página tiene muchos lugares, y para no abrumar a nadie existe esto. 
+ Bueno, infinito puntualmente no es. Este es el gran mapa. Mi página tiene muchos lugares, y para no abrumar a nadie existe esto. Lo muestro en dos formatos para que sea más cómodo.
+
+Inicio:
+- [[libro-de-visitas|Visitas]]
+- [Ahora](https://salvamir.github.io/static/ahora.html)
+- [[tags|Tags]]
+- [[links|Links]]
+- [[algo-mas|¿Algo Más?]]
+Ocio:
+- [Música](https://rateyourmusic.com/collection/ForwardFish/)
+- [[librería|Libros]]
+- [Videos](https://www.youtube.com/playlist?list=PLv3B3w8gAhTibLqGsg7Yc3NbuZd1mzUsY)
+- [Proyecto Musical Abandonado](https://open.spotify.com/artist/30wWmc6TT8C1uJ1rqxH72D?si=KgGkmkWFSYawBZa0_VloSw)
+Cuaderno:
+- [[Charlas Con La Emi]]
+- [[Notas/index|Notas]]
+- [[Plantas/index|Jardín Digital]]
+- [[Ensayos/index|Ensayos]]
+- [[Etapas|Etapas]]
+
+
 <div class="menu-celular">
   <a href="https://salvamir.github.io/about" class="boton-pildora">Sobre Mi</a>
   <a href="https://rateyourmusic.com/collection/ForwardFish/" class="boton-pildora">Música</a>
-  <a href="https://youtube.com/playlist?list=PLv3B3w8gAhTibLqGsg7Yc3NbuZd1mzUsY">Videos</a>
+  <a href="https://youtube.com/playlist?list=PLv3B3w8gAhTibLqGsg7Yc3NbuZd1mzUsY" class="boton-pildora">Videos</a>
   <a href="https://salvamir.github.io/Charlas-con-la-Emi" class="boton-pildora">Charlas con la Emi</a>
   <a href="https://salvamir.github.io/algo-mas" class="boton-pildora">Algo Más</a>
   <a href="https://salvamir.github.io/Plantas/" class="boton-pildora">Jardín Digital</a>
