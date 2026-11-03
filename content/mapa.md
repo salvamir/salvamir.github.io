@@ -6,11 +6,13 @@ Inicio:
 - [[tags|Tags]]
 - [[links|Links]]
 - [[algo-mas|¿Algo Más?]]
+
 Ocio:
-- [Música](https://rateyourmusic.com/collection/ForwardFish/)
+- [Reseñas de Música](https://rateyourmusic.com/collection/ForwardFish/)
 - [[librería|Libros]]
 - [Videos](https://www.youtube.com/playlist?list=PLv3B3w8gAhTibLqGsg7Yc3NbuZd1mzUsY)
 - [Proyecto Musical Abandonado](https://open.spotify.com/artist/30wWmc6TT8C1uJ1rqxH72D?si=KgGkmkWFSYawBZa0_VloSw)
+
 Cuaderno:
 - [[Charlas Con La Emi]]
 - [[Notas/index|Notas]]
