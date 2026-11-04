@@ -19,6 +19,7 @@ Te dejo otros lugares interesantes para ver. Podés encontrar nuevas páginas po
 > - [BigList](http://biglist.terraaeon.com/index.html) Various blog-style webpages.
 > - [BlogRoll](https://blogroll.org/) Vast blog's directory.
 > - [IndieSeek]([https://indieseek.xyz/](https://indieseek.xyz/)). Another one.
+> - [StackExchange](https://stackexchange.com/sites). Find great online communities.
 
 > [!abstract]- Personal Webpages
 > - [Eric Murphy](https://ericmurphy.xyz/): He’s a web developer who also has a personal website where he post about tech things.
@@ -89,6 +90,7 @@ Te dejo otros lugares interesantes para ver. Podés encontrar nuevas páginas po
 > > - [Ciencias De La Geología.](https://geologyscience.com) Looks like AI but ain't (I think)
 > > - [Geology and Earth Science.](https://geology.com) Big old school geo-encyclopedia.
 > > - [Quimper Geology.](https://quimpergeology.org/resources/blogs/) Vast news, discoveries and research.
+> > - [Earth Science](https://earthscience.stackexchange.com/). An internet community for asking geological questions.
 > 
 > > [!todo]- Useful Tools
 > > - [Geology Courses](https://courses.spatialthoughts.com)
