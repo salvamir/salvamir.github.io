@@ -43,3 +43,4 @@ Not all the sources I've found are exactly focused on the topic. That's why I th
 - [Can The Internet Overcome Its Chaos and Turn into a 21st-century Library?](https://www.byarcadia.org/post/how-are-libraries-changing-in-the-21st-century), by Arcadia.
 - [The Internet according to me](https://ryantrimble.com/blog/the-internet-according-to-me/), by Ryan Trimble.
 - [The Secret Web](https://blog.clew.se/posts/secret-web/), by Benjamin Hollom
+- [We really like personal sites but the internet has been turning into poisonous garbage at an alarming rate](https://www.mmmx.cloud/we-really-like-personal-sites-but-the-internet-has-been-turning-into-poisonous-garbage-at-an-alarming-rate/)
