@@ -18,6 +18,7 @@ El internet está lleno de cosas curiosas para ver. Tomate un tiempo de ocio y [
 > - [Clew](https://clew.se/)
 > - [BlogSearch](https://blogsearch.io/)
 > - [DuckDuckGoLite](https://lite.duckduckgo.com/lite/)
+> - [Closer · Catholic resources to draw near to God](https://closerapp.neocities.org/)
 
 > [!abstract]- Directories
 > - [¡BlogBlog!](https://blogblog.es) Blogs en español
