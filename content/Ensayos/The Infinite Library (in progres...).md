@@ -38,9 +38,10 @@ This reality feels overwhelming bigger than us. It feels like there is no hope f
 ## There's any hope for the internet? <span class="tc-color tc-color--green" style="color: var(--color-green)">Let's find out the solution.</span>
 I've spent a lot of time thinking and researching about this so you don't need to do it. We all have a lot of tools in our hands to solve this, actually. Maybe the internet feels useless because <span class="tc-color tc-color--pink" style="color: var(--color-pink)">surfing the quality content on it is getting harder every day</span>. We have to re-learn how to use the internet again.
 Here is a list of all the ways I use everyday to surf the web:
-- Better search engines or search tools:
-- Big wikis and libraries again:
-- Better if personal websites:
+- Search engines or search tools:
+Don't use Google, Bing or Yandex for searching the web
+- Big wikis and libraries:
+- Personal websites:
 - Directories
 
 
