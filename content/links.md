@@ -6,26 +6,16 @@ El internet está lleno de cosas curiosas para ver. Tomate un tiempo de ocio y [
 
 ---
 
-> [!abstract]- Search Engines
-> - [Marginalia Search](https://marginalia-search.com/)
-> - [MarginaliaOldSearch](https://old-search.marginalia.nu/)
-> - [SearchMySite](https://searchmysite.net/)
-> - [Metacrawler](https://www.metacrawler.com/)
-> - [WibySearch](https://wiby.org/)
-> - [Ecosia](https://www.ecosia.org/)
-> - [Mojeek](https://www.mojeek.com/)
-> - [Kagi](https://kagi.com/smallweb/)
-> - [Clew](https://clew.se/)
-> - [BlogSearch](https://blogsearch.io/)
-> - [DuckDuckGoLite](https://lite.duckduckgo.com/lite/)
-> - [Closer · Catholic resources to draw near to God](https://closerapp.neocities.org/)
-
 > [!abstract]- Directories
 > - [¡BlogBlog!](https://blogblog.es) Blogs en español
 > - [BigList](http://biglist.terraaeon.com/index.html) Various blog-style webpages.
 > - [BlogRoll](https://blogroll.org/) Vast blog's directory.
 > - [IndieSeek]([https://indieseek.xyz/](https://indieseek.xyz/)). Another one.
-> - [StackExchange](https://stackexchange.com/sites). Find great online communities.
+> - [XXIIVV](https://webring.xxiivv.com/)
+> - [Webring:](https://geekring.net/) Only if you’re bored.
+> - [Hotline](https://hotlinewebring.club/)
+> - [IndieWeb](https://🕸💍.ws/directory).
+> - [LainChain](https://foreverliketh.is/#2-lainchan-webring)
 
 > [!abstract]- Personal Webpages
 > - [Eric Murphy](https://ericmurphy.xyz/): He’s a web developer who also has a personal website where he post about tech things.
@@ -76,12 +66,10 @@ El internet está lleno de cosas curiosas para ver. Tomate un tiempo de ocio y [
 > - [Project Gutenberg](https://www.gutenberg.org/) List Of E-books
 > - [Tucumán Turismo:](https://www.tucutur.com.ar/index.html) Hay muchas cosas interesantes de mi provincia paisano acá adentro vayan a leerlo.
 > - [Free Music:](https://lamusicagratis.com/) It doesn’t need to be explained.
-> - [Rate Your Music:](https://rateyourmusic.com/) I guess you already know what to expect.
 > - [ElevenTy](https://www.11ty.dev/)
 > - [Jayfa](https://www.flickr.com/photos/jayfa_mocs/page2). Lego creator & artist.
 > - [TextKit](https://www.textkit.com/): Here you will find some Ancient Greek and Latin text.
 > - [Paintbook Link.](https://codepen.io/alperentalaslioglu/pen/yPGgvP)
-> - [Gear Page:](https://www.thegearpage.net/board/index.php) A small community.
 > - [Landchads:](https://landchad.net) Tutorials For Privacy-focused internet's presence.
 > - [Nitter](https://nitter.net): A small alternative to twitter.
 > - [Not Related!](https://notrelated.xyz): Maybe some interesting podcasts.
@@ -96,7 +84,6 @@ El internet está lleno de cosas curiosas para ver. Tomate un tiempo de ocio y [
 > > - [Ciencias De La Geología.](https://geologyscience.com) Looks like AI but ain't (I think)
 > > - [Geology and Earth Science.](https://geology.com) Big old school geo-encyclopedia.
 > > - [Quimper Geology.](https://quimpergeology.org/resources/blogs/) Vast news, discoveries and research.
-> > - [Earth Science](https://earthscience.stackexchange.com/). An internet community for asking geological questions.
 > 
 > > [!todo]- Useful Tools
 > > - [Geology Courses](https://courses.spatialthoughts.com)
@@ -106,15 +93,6 @@ El internet está lleno de cosas curiosas para ver. Tomate un tiempo de ocio y [
 > > - [Apuntes de Geología General](https://www.geovirtual2.cl)
 > > - [Time Scale Creator. ](https://timescalecreator.org/tsclite/index/index.php)
 > > - [Haakon Fossen Structural Geology textbook](https://folk.uib.no/nglhe/StructuralGeoBook.html)
-
-> [!abstract]- Webrings
-> *Disclaimer: I do not like most of them actually. That's why I put them here at the end of the page. I think you can absolutely find more healthy websites for yourself. But who knows, maybe you find something cool and meaningful here.*
-> 
-> - [XXIIVV](https://webring.xxiivv.com/)
-> - [Webring:](https://geekring.net/) Only if you’re bored.
-> - [Hotline](https://hotlinewebring.club/)
-> - [IndieWeb](https://🕸💍.ws/directory).
-> - [LainChain](https://foreverliketh.is/#2-lainchan-webring)
 
 > [!abstract]- Lego Sites
 > - [All Free LEGO MOCs: Building Instructions for Every Model](https://mocinstructions.com/mocs)

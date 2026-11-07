@@ -37,18 +37,50 @@ Now, we don't enter the internet knowing what we are looking for... Well, in som
 This reality feels overwhelming bigger than us. It feels like there is no hope for surfing the web usefully and with serendipity anymore...
 ## There's any hope for the internet? <span class="tc-color tc-color--green" style="color: var(--color-green)">Let's find out the solution.</span>
 I've spent a lot of time thinking and researching about this so you don't need to do it. We all have a lot of tools in our hands to solve this, actually. Maybe the internet feels useless because <span class="tc-color tc-color--pink" style="color: var(--color-pink)">surfing the quality content on it is getting harder every day</span>. We have to re-learn how to use the internet again.
-Here is a list of all the ways I use everyday to surf the web:
-- **Search engines or search tools:**
-Don't use Google, Bing or Yandex for searching the web
-[Privacy Redirect](https://privacyredirect.com/index.html)
-- **Big wikis and libraries:**
-[La Guía de Química](https://quimica.laguia2000.com/)
-[Philosophica: Enciclopedia filosofica on line](https://www.philosophica.info/index.html)
-- **Directories:**
+Here is a list of all the ways I use everyday to surf the web usefully:
+##### **Search engines and search tools:**
+Searching useful information has changed. Now, our trusted sites must fulfill these requirements: 
+1. Must contain actual information and resources. No ads, sponsorships, or only good titles.
+2. Must be human-made. And human-thought. Personal opinions rise up again from the ashes, and sites like Reddit, Facebook or Youtube become new again. 
+3. Must be free of paywalls. This one is more hard to find, but I've found a lot of great things for free. 
+If you want to obtain a little amount of "just fine" information **instantly**, use Google's Search Engine. If you want to dive in a topic, read what real people think about it, or just dig deeper, don't use Google, Bing or Yandex for searching the web anymore. 
+
+Those search engines only provide sponsored results or AI made websites. Those are completely useless sites to look for  in this case, and they only want to waste your time. Try these instead:
+>[!abstract]- Not Mainstream Search Engines
+> - [Marginalia Search](https://marginalia-search.com/)
+> - [MarginaliaOldSearch](https://old-search.marginalia.nu/)
+> - [SearchMySite](https://searchmysite.net/)
+> - [Metacrawler](https://www.metacrawler.com/)
+> - [WibySearch](https://wiby.org/)
+> - [Ecosia](https://www.ecosia.org/)
+> - [Mojeek](https://www.mojeek.com/)
+> - [Kagi](https://kagi.com/smallweb/)
+> - [Clew](https://clew.se/)
+> - [BlogSearch](https://blogsearch.io/)
+> - [DuckDuckGoLite](https://lite.duckduckgo.com/lite/)
+> - [Closer · Catholic resources to draw near to God](https://closerapp.neocities.org/)
+
+[Privacy Redirect](https://privacyredirect.com/index.html) (a website that allows you to enter sites like Twitter or Reddit, without ads, without algorithm, without distractions)
+[NewPipe]([NewPipe - a free YouTube client](https://newpipe.net/)) or [FreeTube]([FreeTube - The Private YouTube Client](https://freetubeapp.io/)) (free and fully capable ways of using Youtube, without any kind of restrictions or distractions)
+##### **Big wikis and libraries:**
+Finding scientific proved information entirely for free online, is quite difficult now. Aside from Youtube, I've tried this websites listed below, and they never failed me.
+[La Guía](https://quimica.laguia2000.com/): This website contains a lot of useful little essays about almost every topic.
+[Philosophica](https://www.philosophica.info/index.html): Philosophy data online for free.
+[Sci-bot](https://sci-bot.ru/): Find [real]([Sci-Hub](https://www.sci-hub.box/)) scientific papers about almost anything. 
+[Scholar Google](https://scholar.google.com/) I've found great sites here!
+
+**Communities**
+The social aspect of the web is already covered by Facebook, Reddit and Instagram. You won't probably make new friends here, and that's fine. That's not the [[We live in a huge "human fair".  Trust others that they're being transparent.|point of the internet.]] But I can say that if you have a hobby or an specific interest, if you search enough, you'll probably find an online community for sharing it.
+[Rate Your Music:](https://rateyourmusic.com/) For musicians and music lovers in general. You can also visit [this]([Guitar Forum - The Gear Page](https://www.thegearpage.net/board/index.php)).
+[Earth Science](https://earthscience.stackexchange.com/) Probably only scientific and really curious people will enjoy this. About geology there are a lot of [good sites]([Earth Science Blogs – Quimper Geological Society](https://quimpergeology.org/resources/blogs/)).
+[LEGO Forums](https://www.eurobricks.com/forum/) A place for sharing LEGO MOCS and find new creations.
+[StackExchange](https://stackexchange.com/sites). Find great online communities. Mostly about technology stuff.
+##### **Directories:**
 [How to surf the web](https://sadgrl.online/guides/surf/)
 [Web links by Ashido Tetrisu](https://www.ashido.com/ashidooutlinks.html#personal)
-- **Personal websites:**
-
+##### **Personal websites:**
+These are all the people I read on Internet. They all publish pretty interesting ideas. I've already had a little talk with some of them too.
+[Daniel](https://danielslife.blog/), [Nolan](https://nolancaudill.com/), [Rafa](https://rafaelkuebler.github.io/), [Manu](https://manuelmoreale.com/), [Tanner](https://tanner.vc), [Michael](https://michaelg.bearblog.dev/blog/), [Robert](https://robertbirming.com/), [Kalena](https://kalenalangford.com), [Seba](https://finest.day/), [Luke](https://lukesmith.xyz/), [The Autodidacts ](https://www.autodidacts.io), [Sophie]([sophie dot garden](https://sophie.garden/)) and [Maggie](https://maggieappleton.com/).
 
 
 
