@@ -73,7 +73,7 @@ header, .page-header header {
   max-width: 720px !important;
   margin: 0 auto 2rem auto !important;
   padding: 0 !important;
-  gap: 0.5rem !important;
+  gap: 0.2rem !important;
   background: transparent !important;
   border: none !important;
 }
@@ -110,20 +110,26 @@ header, .page-header header {
    4. TÍTULOS Y ENCABEZADOS
    ========================================= */
 
-/* Todos los encabezados propios y títulos de Quartz usan Times New Roman. */
-.page-title,
-.page-title a,
-article h1,
-article h2,
-article h3,
-article h4,
-article h5,
-article h6 {
+/* Tipografía y espaciado general de todos los encabezados. */
+body .page article :is(h1, h2, h3, h4, h5, h6) {
   font-family: "Times New Roman", Times, serif !important;
   color: var(--secondary) !important;
+  margin-block-start: 0.8rem !important;
+  margin-block-end: 0.25rem !important;
 }
 
-/* La metadata (fecha y tiempo de lectura) conserva una tipografía neutra. */
+/* Reducir todavía más la separación entre dos encabezados consecutivos. */
+body .page article :is(h1, h2, h3, h4, h5, h6)
++ :is(h1, h2, h3, h4, h5, h6) {
+  margin-block-start: 0.1rem !important;
+}
+
+/* Reducir la separación cuando el subtítulo es un párrafo. */
+body .page article :is(h1, h2, h3, h4, h5, h6) + p {
+  margin-block-start: 0.2rem !important;
+}
+
+/* La metadata conserva una tipografía neutra. */
 .content-meta,
 .tags {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif !important;
