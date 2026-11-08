@@ -1,3 +1,4 @@
+
 @use "./base.scss";
 
 /* =========================================
@@ -12,7 +13,7 @@ html, body {
   align-items: center !important;
   justify-content: flex-start !important;
   font-size: 18px !important;
-  font-family: 'Times New Roman', serif !important; 
+  font-family: 'Times New Roman', serif !important;
   background-color: #1a1714 !important;
 }
 
@@ -37,9 +38,9 @@ html, body {
   flex-direction: column !important;
   align-items: center !important;
   width: 100% !important;
-  max-width: 720px !important;    
+  max-width: 720px !important;
   margin: 0 auto !important;
-  padding: 3rem 1.5rem !important;  
+  padding: 3rem 1.5rem !important;
   box-sizing: border-box !important;
 }
 
@@ -67,7 +68,7 @@ html, body {
 header, .page-header header {
   display: flex !important;
   flex-direction: column !important;
-  align-items: center !important; 
+  align-items: center !important;
   text-align: center !important;
   width: 100% !important;
   max-width: 720px !important;
@@ -79,8 +80,8 @@ header, .page-header header {
 }
 
 .page-title, .page-title a {
-  font-family: 'Times New Roman', serif !important; 
-  font-size: 2.6rem !important; 
+  font-family: 'Times New Roman', serif !important;
+  font-size: 2.6rem !important;
   color: var(--secondary) !important;
   margin: 0 !important;
   font-weight: 700 !important;
@@ -99,8 +100,8 @@ header, .page-header header {
 }
 
 .links a, .nav-links a {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif !important; 
-  color: var(--secondary) !important;      
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif !important;
+  color: var(--secondary) !important;
   text-decoration: none !important;
   font-size: 1.15rem !important;
   font-weight: 500 !important;
@@ -110,23 +111,30 @@ header, .page-header header {
    4. TÍTULOS Y ENCABEZADOS
    ========================================= */
 
-/* Tipografía y espaciado general de todos los encabezados. */
+/* Tipografía, márgenes y espaciado de todos los encabezados. */
 body .page article :is(h1, h2, h3, h4, h5, h6) {
   font-family: "Times New Roman", Times, serif !important;
   color: var(--secondary) !important;
+
+  /* Margen superior entre secciones */
   margin-block-start: 0.8rem !important;
-  margin-block-end: 0.25rem !important;
+
+  /* Eliminar el espacio inferior del encabezado */
+  margin-block-end: 0 !important;
+
+  line-height: 1.2 !important;
 }
 
-/* Reducir todavía más la separación entre dos encabezados consecutivos. */
-body .page article :is(h1, h2, h3, h4, h5, h6)
-+ :is(h1, h2, h3, h4, h5, h6) {
-  margin-block-start: 0.1rem !important;
+/* Reducir el espacio entre un encabezado y el elemento siguiente.
+   Funciona con párrafos, otros encabezados, listas y bloques. */
+body .page article :is(h1, h2, h3, h4, h5, h6) + * {
+  margin-block-start: 0.15rem !important;
 }
 
-/* Reducir la separación cuando el subtítulo es un párrafo. */
-body .page article :is(h1, h2, h3, h4, h5, h6) + p {
-  margin-block-start: 0.2rem !important;
+/* Tratamiento específico para subtítulos escritos como párrafos. */
+body .page article :is(h1, h2, h3, h4, h5, h6) + p,
+body .page article :is(h1, h2, h3, h4, h5, h6) + p.ahora-subtitle {
+  margin-block-start: 0.15rem !important;
 }
 
 /* La metadata conserva una tipografía neutra. */
@@ -278,6 +286,7 @@ body[data-slug^="notas/"] article .content-meta {
 .now-event:last-child .now-line {
     display: none;
 }
+
 /* =========================================
    6. GRAFO
    ========================================= */
@@ -300,7 +309,6 @@ body[data-slug^="notas/"] article .content-meta {
   height: 250px !important;
 }
 
-
 /* El grafo global permanece oculto
  * hasta que Quartz lo active.
  */
@@ -311,29 +319,32 @@ body[data-slug^="notas/"] article .content-meta {
 .global-graph-outer.active {
   display: block;
 }
+
 /* =========================================
    7. CALLOUTS
    ========================================= */
 .callout {
-  padding: 0.8rem 1.2rem !important; 
+  padding: 0.8rem 1.2rem !important;
   margin: 1rem 0 !important;
   border-radius: 8px !important;
 }
 
-.callout .callout-icon { display: none !important; }
+.callout .callout-icon {
+  display: none !important;
+}
 
 .callout .callout-title {
   display: flex !important;
   flex-direction: row !important;
   align-items: center !important;
-  justify-content: space-between !important; 
+  justify-content: space-between !important;
   margin: 0 !important;
   padding: 0 !important;
-  width: 100% !important; 
+  width: 100% !important;
 }
 
-.callout summary.callout-title, 
-.callout summary.callout-title .callout-title-inner, 
+.callout summary.callout-title,
+.callout summary.callout-title .callout-title-inner,
 .callout summary.callout-title .fold-icon {
   color: var(--secondary) !important;
 }
@@ -369,7 +380,6 @@ body[data-slug^="notas/"] article .content-meta {
   display: none !important;
 }
 
-
 hr, .center > hr, .page > hr {
   display: none !important;
 }
@@ -385,18 +395,18 @@ footer {
   display: flex !important;
   justify-content: center !important;
   align-items: center !important;
-  gap: 1.5rem !important; 
-  margin-top: 1rem !important; 
+  gap: 1.5rem !important;
+  margin-top: 1rem !important;
   padding-bottom: 1.5rem !important;
 }
 
-.footer-controls button, 
+.footer-controls button,
 .footer-controls a,
-button.darkmode, 
+button.darkmode,
 .dark-mode-toggle {
   background: transparent !important;
   border: none !important;
-  color: var(--gray) !important; 
+  color: var(--gray) !important;
   cursor: pointer !important;
   transition: opacity 0.15s ease !important;
   transform: none !important;
@@ -405,25 +415,27 @@ button.darkmode,
   box-shadow: none !important;
 }
 
-.footer-controls button:hover, 
+.footer-controls button:hover,
 .footer-controls a:hover,
-button.darkmode:hover, 
+button.darkmode:hover,
 .dark-mode-toggle:hover,
-.footer-controls button:hover *, 
+.footer-controls button:hover *,
 .footer-controls a:hover *,
-button.darkmode:hover *, 
-.dark-mode-toggle:hover * { 
-  color: var(--gray) !important; 
+button.darkmode:hover *,
+.dark-mode-toggle:hover * {
+  color: var(--gray) !important;
   fill: currentColor !important;
   stroke: currentColor !important;
-  transform: none !important; 
+  transform: none !important;
   transition: none !important;
   opacity: 1 !important;
   filter: none !important;
   background: transparent !important;
 }
 
-.darkmode { display: none !important; }
+.darkmode {
+  display: none !important;
+}
 
 /* =========================================
    9. REGLAS DE PALETAS (MODO CLARO Y OSCURO)
@@ -436,12 +448,12 @@ html:not([saved-theme="dark"]) {
   background-color: #1a1714 !important;
   color: #e3ded6 !important;
 
-  --light: #1a1714 !important;      
-  --lightgray: #2e2a25 !important; 
-  --gray: #a89e95 !important;    
-  --darkgray: #e3ded6 !important;        
-  --dark: #E7C8A0 !important;        
-  --secondary: #b7966c !important;  
+  --light: #1a1714 !important;
+  --lightgray: #2e2a25 !important;
+  --gray: #a89e95 !important;
+  --darkgray: #e3ded6 !important;
+  --dark: #E7C8A0 !important;
+  --secondary: #b7966c !important;
   --tertiary: #E7C8A0 !important;
 
   .page, body {
@@ -449,8 +461,8 @@ html:not([saved-theme="dark"]) {
     color: #e3ded6 !important;
   }
 
-  .page-title, .page-title a, 
-  article h1, article h2, article h3, article h4, article h5, article h6, 
+  .page-title, .page-title a,
+  article h1, article h2, article h3, article h4, article h5, article h6,
   h1.article-title, .now-heading, .now-date, .now-container summary {
     color: #E7C8A0 !important;
   }
@@ -466,27 +478,27 @@ html:not([saved-theme="dark"]) {
 }
 
 /* MODO OSCURO: AZUL */
-html[saved-theme="dark"], 
-html[data-theme="dark"], 
-html.dark, 
+html[saved-theme="dark"],
+html[data-theme="dark"],
+html.dark,
 body.dark-mode {
   background-color: #000000 !important;
   color: #e0eaf5 !important;
 
-  --light: #000000 !important;      
-  --lightgray: rgba(224, 234, 245, 0.2) !important; 
-  --darkgray: #d6d3d1 !important;    
-  --dark: #e0eaf5 !important;        
-  --secondary: #84add7 !important;  
-  --tertiary: #a3c2e1 !important;    
+  --light: #000000 !important;
+  --lightgray: rgba(224, 234, 245, 0.2) !important;
+  --darkgray: #d6d3d1 !important;
+  --dark: #e0eaf5 !important;
+  --secondary: #84add7 !important;
+  --tertiary: #a3c2e1 !important;
 
   .page, body {
     background-color: #000000 !important;
     color: #e0eaf5 !important;
   }
 
-  .page-title, .page-title a, 
-  article h1, article h2, article h3, article h4, article h5, article h6, 
+  .page-title, .page-title a,
+  article h1, article h2, article h3, article h4, article h5, article h6,
   h1.article-title, .now-heading, .now-date, .now-container summary {
     color: #84add7 !important;
   }
@@ -513,18 +525,28 @@ body.dark-mode {
    10. ADAPTACIÓN A CELULARES Y OCULTAR ELEMENTOS
    ========================================= */
 @media screen and (max-width: 800px) {
-  .page #quartz-body { padding: 1.5rem 1rem !important; width: 100% !important; }
-  .page-title, .page-title a { font-size: 2rem !important; word-break: break-word !important; }
-  .mobile-only { display: none !important; }
+  .page #quartz-body {
+    padding: 1.5rem 1rem !important;
+    width: 100% !important;
+  }
+
+  .page-title, .page-title a {
+    font-size: 2rem !important;
+    word-break: break-word !important;
+  }
+
+  .mobile-only {
+    display: none !important;
+  }
 }
 
 /* Ocultar el buscador y las etiquetas por defecto de Quartz en toda la web */
-.search, .tags, ul.tags { 
-  display: none !important; 
+.search, .tags, ul.tags {
+  display: none !important;
 }
 
 /* =========================================
-   11. Etiquetas
+   11. ETIQUETAS
    ========================================= */
 a.internal.tag-link,
 a.tag-link {
@@ -547,12 +569,17 @@ a.tag-link {
   margin: 0 !important;
 }
 
-
 /* =========================================
-   12. TIPOGRAFÍA Y ESPACIADO DE TÍTULOS
+   12. TIPOGRAFÍA DE TÍTULOS
    ========================================= */
 
-/* Todos los títulos Markdown usan Times New Roman. */
+/*
+ * La sección 4 controla todos los márgenes
+ * de los encabezados y sus subtítulos.
+ * Esta sección conserva únicamente la tipografía
+ * para evitar reglas de espaciado contradictorias.
+ */
+
 h1,
 h2,
 h3,
@@ -562,7 +589,6 @@ h6 {
   font-family: "Times New Roman", Times, serif !important;
 }
 
-/* Ajuste uniforme de márgenes para encabezados dentro del contenido. */
 .page h1,
 .page h2,
 .page h3,
@@ -570,37 +596,10 @@ h6 {
 .page h5,
 .page h6 {
   font-family: "Times New Roman", Times, serif !important;
-  margin-top: 1rem !important;
-  margin-bottom: 0 !important;
   line-height: 1.2 !important;
 }
 
-/* Sin separación entre un título y el subtítulo/encabezado siguiente. */
-.page :is(h1, h2, h3, h4, h5, h6) + :is(h1, h2, h3, h4, h5, h6, p) {
-  margin-top: 0 !important;
-}
-
-/* El título automático de Quartz y su metadata también quedan juntos en Notas. */
-.page .article-title {
-  margin-bottom: 0 !important;
-}
-
-.page .article-title + .content-meta {
-  margin-top: 0 !important;
-  margin-bottom: 0 !important;
-}
-
-.page .content-meta + p {
-  margin-top: 0 !important;
-}
-
-/* También elimina el hueco entre el título de página y un subtítulo inmediato. */
-.page .page-title + p,
-.page-header .page-title + p {
-  margin-top: 0 !important;
-}
-
-/* El título propio de la cabecera mantiene su estilo y no añade margen. */
+/* El título propio de la cabecera mantiene su estilo. */
 .page .page-title {
   font-family: "Times New Roman", Times, serif !important;
   margin: 0 !important;
