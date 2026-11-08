@@ -109,24 +109,22 @@ header, .page-header header {
 /* =========================================
    4. TÍTULOS Y ENCABEZADOS
    ========================================= */
-article h1, article h2, article h3, article h4, article h5, article h6,
-h1.article-title, .content-meta, .tags { 
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif !important; 
-    color: var(--secondary) !important;
+.page-title,
+.page-title a,
+article h1,
+article h2,
+article h3,
+article h4,
+article h5,
+article h6 {
+  font-family: "Times New Roman", Times, serif !important;
+  color: var(--secondary) !important;
 }
 
-article h1.article-title, 
-article .article-title,
-article .content-meta,
-.article-title,
-.content-meta {
-    display: none !important;
-}
-
-body[data-slug^="Notas/"] article h1.article-title, 
-body[data-slug^="Notas/"] article .article-title,
-body[data-slug^="Notas/"] article .content-meta {
-    display: block !important;
+.content-meta,
+.tags {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif !important;
+  color: var(--secondary) !important;
 }
 
 /* =========================================
@@ -523,14 +521,28 @@ a.tag-link {
 
 
 /* =========================================
-   12. Titulos
+   12. TIPOGRAFÍA Y ESPACIADO DE TÍTULOS
    ========================================= */
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+.page article h1,
+.page article h2,
+.page article h3,
+.page article h4,
+.page article h5,
+.page article h6 {
   font-family: "Times New Roman", Times, serif !important;
+  margin-top: 1rem !important;
+  margin-bottom: 0.4rem !important;
+  line-height: 1.2 !important;
+}
+
+/* Primer título de cada artículo */
+.page article > h1:first-child {
+  margin-top: 0.25rem !important;
+}
+
+/* Título principal de Quartz */
+.page .page-title {
+  font-family: "Times New Roman", Times, serif !important;
+  margin: 0 !important;
 }
