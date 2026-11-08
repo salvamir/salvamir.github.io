@@ -36,7 +36,7 @@ Now, we don't enter the internet knowing what we are looking for... Well, in som
 
 This reality feels overwhelming bigger than us. It feels like there is no hope for surfing the web usefully and with serendipity anymore...
 ## There's any hope for the internet? <span class="tc-color tc-color--green" style="color: var(--color-green)">Let's find out the solution.</span>
-I've spent a lot of time thinking and researching about this so you don't need to do it. We all have a lot of tools in our hands to solve this, actually. Maybe the internet feels useless because <span class="tc-color tc-color--pink" style="color: var(--color-pink)">surfing the quality content on it is getting harder every day</span>. We have to re-learn how to use the internet again.
+I spent a lot of time thinking and researching about this so you don't need to do it. We all have a lot of tools in our hands to solve this, actually. Maybe the internet feels useless because <span class="tc-color tc-color--pink" style="color: var(--color-pink)">surfing the quality content on it is getting harder every day</span>. We have to re-learn how to use the internet again.
 Here is a list of all the ways I use everyday to surf the web usefully:
 ##### **Search engines and search tools:**
 Searching useful information has changed. Now, our trusted sites must fulfill these requirements: 
@@ -68,21 +68,23 @@ Finding scientific proved information entirely for free online, is quite difficu
 - [Philosophica](https://www.philosophica.info/index.html): Philosophy data online for free.
 - [Sci-bot](https://sci-bot.ru/): Find [real]([Sci-Hub](https://www.sci-hub.box/)) scientific papers about almost anything. 
 - [Scholar Google](https://scholar.google.com/) I've found great sites here!
-
-**Communities**
+##### **Communities**
 The social aspect of the web is already covered by Facebook, Reddit and Instagram. You won't probably make new friends here, and that's fine. That's not the [[We live in a huge "human fair".  Trust others that they're being transparent.|point of the internet.]] But I can say that if you have a hobby or an specific interest, if you search enough, you'll probably find an online community for sharing it.
 - [Rate Your Music:](https://rateyourmusic.com/) For musicians and music lovers in general. You can also visit [this]([Guitar Forum - The Gear Page](https://www.thegearpage.net/board/index.php)).
 - [Earth Science](https://earthscience.stackexchange.com/) Probably only scientific and really curious people will enjoy this. About geology there are a lot of [good sites]([Earth Science Blogs – Quimper Geological Society](https://quimpergeology.org/resources/blogs/)).
 - [LEGO Forums](https://www.eurobricks.com/forum/) A place for sharing LEGO MOCS and find new creations.
 - [StackExchange](https://stackexchange.com/sites). Find great online communities. Mostly about technology stuff.
 ##### **Directories:**
+Exploring the web also implies not searching at all. At times, you might find yourself exploring random sites and their links. On this side of the Internet, people links to their pages other websites they enjoyed. I have my own [[links]] page too. Here you have some of the most vast links pages I've found.
 - [How to surf the web](https://sadgrl.online/guides/surf/)
 - [Web links by Ashido Tetrisu](https://www.ashido.com/ashidooutlinks.html#personal)
 ##### **Personal websites:**
 These are all the people I read on Internet. They all publish pretty interesting ideas. I've already had a little talk with some of them too.
 [Daniel](https://danielslife.blog/), [Nolan](https://nolancaudill.com/), [Rafa](https://rafaelkuebler.github.io/), [Manu](https://manuelmoreale.com/), [Tanner](https://tanner.vc), [Michael](https://michaelg.bearblog.dev/blog/), [Robert](https://robertbirming.com/), [Kalena](https://kalenalangford.com), [Seba](https://finest.day/), [Luke](https://lukesmith.xyz/), [The Autodidacts ](https://www.autodidacts.io), [Sophie]([sophie dot garden](https://sophie.garden/)) and [Maggie](https://maggieappleton.com/).
-
-
+## Purpose And <span class="tc-color tc-color--blue" style="color: var(--color-blue)">Conclusion</span>.
+I wanted to end this essay by saying that, at the end of the day, the Internet still is a tool made for helping us achieving something. But it's also catchy and interesting... More interesting than the reality many times. I don't want to use the internet in an addictive way anymore. I know there are a lot of great things to learn and consume. I want to **use** the internet more than to be conducted by it. I want to create, think, draw and learn by doing, not by seeing others create, think, draw or learn. 
+##### Creating must be the thing that I do the most on the internet. 
+The "wasted time" on the internet comes when it isolates from my beloved ones. And when I spend many hours "searching for something" that I can't find there. I enter the internet looking for: new interesting things to discover and learn, to feel connected with others, to have some kind of sense of adventure, or simple to be feed up by content from the algorithm. Being aware of that helps me regulate my use of it. Hope this helps somebody out there as much as it helped me.
 
 **Resources and further reading**:
 Not all the sources I've found are exactly focused on the topic. That's why I think they have their own quality. 
