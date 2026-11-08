@@ -22,7 +22,7 @@
 ---
 
 Cuaderno:
-- [[Charlas Con La Emi]]
+- [[Charlas con la Emi|Charlas Con La Emi]]
 - [[Notas/index|Notas]]
 - [[Plantas/index|Jardín Digital]]
 - [[Ensayos/index|Ensayos]]

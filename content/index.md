@@ -47,7 +47,6 @@ Este es mi propio [libro de arena](https://es.wikipedia.org/wiki/El_libro_de_are
 
 > [!cite]"Verano" (Octubre 2026)
 > Octubre ya está en la mitad y yo casi que no me di cuenta. Anduve de un lado a otro, cambiando a cada rato de entorno, gente y responsabilidades. Ahora me toca estudiar, y no consigo centrar la cabeza. Estoy disperso y cansado. Con muchas cosas en la mente... El año está siendo intenso. Estamos viviendo El Super Niño y llueve todo el tiempo. Es octubre, pero hace frío. Ahora tengo un buzo abrigado. Es raro, porque no creo que vaya a acordarme de esto nunca. Es raro porque no creo estar reaccionando de manera normal, no debería haberme acostumbrado tan rápido a un verano sin calor. Esto no pasa en Tucumán. Dentro de poco viajo al exterior, es un viaje importante. Y me voy a un lugar donde va a nevar mucho. Quién sabe... quizás este año de verdad no voy a experimentar el verano tal como solía conocerlo. <a ref="https://salvamir.github.io/Etapas"> Continuar Leyendo... </a>
-
 # <center>Notas</center>
 <p class="ahora-subtitle">Anotaciones de mi cuaderno</p>
 
