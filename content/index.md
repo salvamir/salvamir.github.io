@@ -46,7 +46,7 @@ Este es mi propio [libro de arena](https://es.wikipedia.org/wiki/El_libro_de_are
 <p class="ahora-subtitle">Las etapas que me tocan vivir</p>
 
 > [!cite]"Verano" (Octubre 2026)
-> Octubre ya está en la mitad y yo casi que no me di cuenta. Anduve de un lado a otro, cambiando a cada rato de entorno, gente y responsabilidades. Ahora me toca estudiar, y no consigo centrar la cabeza. Estoy disperso y cansado. Con muchas cosas en la mente... El año está siendo intenso. Estamos viviendo El Super Niño y llueve todo el tiempo. Es octubre, pero hace frío. Ahora tengo un buzo abrigado. Es raro, porque no creo que vaya a acordarme de esto nunca. Es raro porque no creo estar reaccionando de manera normal, no debería haberme acostumbrado tan rápido a un verano sin calor. Esto no pasa en Tucumán. Dentro de poco viajo al exterior, es un viaje importante. Y me voy a un lugar donde va a nevar mucho. Quién sabe... quizás este año de verdad no voy a experimentar el verano tal como solía conocerlo. <a ref="https://salvamir.github.io/Etapas"> Continuar Leyendo... </a>
+> Octubre ya está en la mitad y yo casi que no me di cuenta. Anduve de un lado a otro, cambiando a cada rato de entorno, gente y responsabilidades. Ahora me toca estudiar, y no consigo centrar la cabeza. Estoy disperso y cansado. Con muchas cosas en la mente... El año está siendo intenso. Estamos viviendo El Super Niño y llueve todo el tiempo. Es octubre, pero hace frío. Ahora tengo un buzo abrigado. Es raro, porque no creo que vaya a acordarme de esto nunca. Es raro porque no creo estar reaccionando de manera normal, no debería haberme acostumbrado tan rápido a un verano sin calor. Esto no pasa en Tucumán. Dentro de poco viajo al exterior, es un viaje importante. Y me voy a un lugar donde va a nevar mucho. Quién sabe... quizás este año de verdad no voy a experimentar el verano tal como solía conocerlo.[Continuar Leyendo...](https://salvamir.github.io/Etapas)
 # <center>Notas</center>
 <p class="ahora-subtitle">Anotaciones de mi cuaderno</p>
 
@@ -55,7 +55,7 @@ Este es mi propio [libro de arena](https://es.wikipedia.org/wiki/El_libro_de_are
 > Hoy leí por segunda vez [esta](https://danielslife.blog/posts/living-with-the-seasons) publicación de Daniel. 
 > Es verdad que muchas veces ser productivo pareciera ser que es no dejarse influenciar por las circunstancias. Como que la productividad es igual a la perseverancia ante todo. No creo que sea así.
 > Perseverar en nuestros propósitos es bueno y sano. Nos hace bien.
-> Pero nunca habia pensado en la productividad como una virtud tan humana y adaptable. Si las estaciones cambian, que cambien nuestras rutinas, nuestras comidas, nuestros propósitos, nuestra forma de encarar las circunstancias que no cambiaron. Me pareció genial verlo así. Asi que, como Daniel, yo también quise hacer una breve descripción de como me gustaría adaptarme a las estaciones. <a ref= "https://salvamir.github.io/Notas/Vivir-Adapt%C3%A1ndose">Continuar Leyendo... <a/>
+> Pero nunca habia pensado en la productividad como una virtud tan humana y adaptable. Si las estaciones cambian, que cambien nuestras rutinas, nuestras comidas, nuestros propósitos, nuestra forma de encarar las circunstancias que no cambiaron. Me pareció genial verlo así. Asi que, como Daniel, yo también quise hacer una breve descripción de como me gustaría adaptarme a las estaciones. [Continuar Leyendo... ](https://salvamir.github.io/Notas/Vivir-Adapt%C3%A1ndose)<a/>
 
 <style>
 /* =========================================
