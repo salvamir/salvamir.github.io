@@ -109,6 +109,8 @@ header, .page-header header {
 /* =========================================
    4. TÍTULOS Y ENCABEZADOS
    ========================================= */
+
+/* Todos los encabezados propios y títulos de Quartz usan Times New Roman. */
 .page-title,
 .page-title a,
 article h1,
@@ -121,10 +123,30 @@ article h6 {
   color: var(--secondary) !important;
 }
 
+/* La metadata (fecha y tiempo de lectura) conserva una tipografía neutra. */
 .content-meta,
 .tags {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif !important;
   color: var(--secondary) !important;
+}
+
+/* Ocultar el título automático y sus metadatos en todo el sitio. */
+article h1.article-title,
+article .article-title,
+article .content-meta,
+.article-title,
+.content-meta {
+  display: none !important;
+}
+
+/* Mostrar título automático, fecha y tiempo de lectura solamente en Notas/. */
+body[data-slug^="Notas/"] article h1.article-title,
+body[data-slug^="Notas/"] article .article-title,
+body[data-slug^="Notas/"] article .content-meta,
+body[data-slug^="notas/"] article h1.article-title,
+body[data-slug^="notas/"] article .article-title,
+body[data-slug^="notas/"] article .content-meta {
+  display: block !important;
 }
 
 /* =========================================
@@ -524,24 +546,55 @@ a.tag-link {
    12. TIPOGRAFÍA Y ESPACIADO DE TÍTULOS
    ========================================= */
 
-.page article h1,
-.page article h2,
-.page article h3,
-.page article h4,
-.page article h5,
-.page article h6 {
+/* Todos los títulos Markdown usan Times New Roman. */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Times New Roman", Times, serif !important;
+}
+
+/* Ajuste uniforme de márgenes para encabezados dentro del contenido. */
+.page h1,
+.page h2,
+.page h3,
+.page h4,
+.page h5,
+.page h6 {
   font-family: "Times New Roman", Times, serif !important;
   margin-top: 1rem !important;
-  margin-bottom: 0.4rem !important;
+  margin-bottom: 0 !important;
   line-height: 1.2 !important;
 }
 
-/* Primer título de cada artículo */
-.page article > h1:first-child {
-  margin-top: 0.25rem !important;
+/* Sin separación entre un título y el subtítulo/encabezado siguiente. */
+.page :is(h1, h2, h3, h4, h5, h6) + :is(h1, h2, h3, h4, h5, h6, p) {
+  margin-top: 0 !important;
 }
 
-/* Título principal de Quartz */
+/* El título automático de Quartz y su metadata también quedan juntos en Notas. */
+.page .article-title {
+  margin-bottom: 0 !important;
+}
+
+.page .article-title + .content-meta {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.page .content-meta + p {
+  margin-top: 0 !important;
+}
+
+/* También elimina el hueco entre el título de página y un subtítulo inmediato. */
+.page .page-title + p,
+.page-header .page-title + p {
+  margin-top: 0 !important;
+}
+
+/* El título propio de la cabecera mantiene su estilo y no añade margen. */
 .page .page-title {
   font-family: "Times New Roman", Times, serif !important;
   margin: 0 !important;
