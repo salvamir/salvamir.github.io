@@ -54,13 +54,10 @@ Este es mi propio [libro de arena](https://es.wikipedia.org/wiki/El_libro_de_are
 > Perseverar en nuestros propósitos es bueno y sano. Nos hace bien.
 > Pero nunca habia pensado en la productividad como una virtud tan humana y adaptable. Si las estaciones cambian, que cambien nuestras rutinas, nuestras comidas, nuestros propósitos, nuestra forma de encarar las circunstancias que no cambiaron. Me pareció genial verlo así. Asi que, como Daniel, yo también quise hacer una breve descripción de como me gustaría adaptarme a las estaciones. [Continuar Leyendo... ](https://salvamir.github.io/Notas/Vivir-Adapt%C3%A1ndose)<a/>
 
-
 <p class="ahora-subtitle">Y como se conectan entre sí</p>
-
-<div class="graph"><div class="graph-outer"><div class="graph-container" data-cfg='{"drag":true,"zoom":true,"depth":1,"scale":1.1,"repelForce":0.5,"centerForce":0.3,"linkDistance":30,"fontSize":0.6,"opacityScale":1,"removeTags":[],"showTags":true,"focusOnHover":false,"enableRadial":false}'></div></div></div>
+<div class="graph"><div class="graph-outer"><div class="graph-container" data-cfg='{"drag":true,"zoom":true,"depth":5,"scale":1.1,"repelForce":0.5,"centerForce":0.3,"linkDistance":10,"fontSize":0.6,"opacityScale":1,"removeTags":[],"showTags":true,"focusOnHover":false,"enableRadial":false}'></div></div></div>
 
 <p class="ahora-subtitle">Todos los otros lugares para explorar</p>
-
 <div class="menu-celular">
   <a href="https://salvamir.github.io/about" class="boton-pildora">Sobre Mi</a>
   <a href="https://rateyourmusic.com/collection/ForwardFish/" class="boton-pildora">Música</a>
