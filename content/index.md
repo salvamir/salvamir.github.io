@@ -57,7 +57,7 @@ Este es mi propio [libro de arena](https://es.wikipedia.org/wiki/El_libro_de_are
 <p class="ahora-subtitle">Y como se conectan entre sí</p>
 <div class="graph"><div class="graph-outer"><div class="graph-container" data-cfg='{"drag":true,"zoom":true,"depth":5,"scale":1.1,"repelForce":0.5,"centerForce":0.3,"linkDistance":10,"fontSize":0.6,"opacityScale":1,"removeTags":[],"showTags":true,"focusOnHover":false,"enableRadial":false}'></div></div></div>
 
-![[caida.gif]]
+![[caidaaa.gif]]
 
 <p class="ahora-subtitle">Todos los otros lugares para explorar</p>
 <div class="menu-celular">
