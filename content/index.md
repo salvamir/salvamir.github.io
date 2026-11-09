@@ -54,6 +54,24 @@ Este es mi propio [libro de arena](https://es.wikipedia.org/wiki/El_libro_de_are
 > Pero nunca habia pensado en la productividad como una virtud tan humana y adaptable. Si las estaciones cambian, que cambien nuestras rutinas, nuestras comidas, nuestros propósitos, nuestra forma de encarar las circunstancias que no cambiaron. Me pareció genial verlo así. Asi que, como Daniel, yo también quise hacer una breve descripción de como me gustaría adaptarme a las estaciones. [Continuar Leyendo... ](https://salvamir.github.io/Notas/Vivir-Adapt%C3%A1ndose)<a/>
 
 
+<div class="menu-celular">
+  <a href="https://salvamir.github.io/about" class="boton-pildora">Sobre Mi</a>
+  <a href="https://rateyourmusic.com/collection/ForwardFish/" class="boton-pildora">Música</a>
+  <a href="https://youtube.com/playlist?list=PLv3B3w8gAhTibLqGsg7Yc3NbuZd1mzUsY" class="boton-pildora">Videos</a>
+  <a href="https://salvamir.github.io/Charlas-con-la-Emi" class="boton-pildora">Charlas con la Emi</a>
+  <a href="https://salvamir.github.io/algo-mas" class="boton-pildora">Algo Más</a>
+  <a href="https://salvamir.github.io/Plantas/" class="boton-pildora">Jardín Digital</a>
+  <a href="https://salvamir.github.io/Notas" class="boton-pildora">Notas</a>
+  <a href="https://salvamir.github.io/librería" class="boton-pildora">Libros</a>
+  <a href="https://salvamir.github.io/static/ahora.html" class="boton-pildora">Ahora</a>
+  <a href="https://salvamir.github.io/links" class="boton-pildora">Links</a>
+  <a href="https://salvamir.github.io/libro-de-visitas" class="boton-pildora">Visitas</a>
+  <a href="https://salvamir.github.io/Etapas" class="boton-pildora">Etapas</a>
+  <a href="https://salvamir.github.io/Ensayos" class="boton-pildora">Ensayos</a>
+  <a href="https://salvamir.github.io/Plantas/tags" class="boton-pildora">Tags</a>
+</div>
+
+
 <style>
  /* =========================================   AHORA — ESTILOS ADAPTADOS DEL ARCHIVO ORIGINAL   ========================================= */.ahora-embed {
   /* Paleta clara: coincide con la paleta clara personalizada de Quartz */
