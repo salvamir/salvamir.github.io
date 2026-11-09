@@ -54,6 +54,32 @@ Este es mi propio [libro de arena](https://es.wikipedia.org/wiki/El_libro_de_are
 > Perseverar en nuestros propósitos es bueno y sano. Nos hace bien.
 > Pero nunca habia pensado en la productividad como una virtud tan humana y adaptable. Si las estaciones cambian, que cambien nuestras rutinas, nuestras comidas, nuestros propósitos, nuestra forma de encarar las circunstancias que no cambiaron. Me pareció genial verlo así. Asi que, como Daniel, yo también quise hacer una breve descripción de como me gustaría adaptarme a las estaciones. [Continuar Leyendo... ](https://salvamir.github.io/Notas/Vivir-Adapt%C3%A1ndose)<a/>
 
+
+<p class="ahora-subtitle">Y como se conectan entre sí</p>
+<div class="graph graph-inline">
+  <div class="graph-outer">
+
+    <div
+      class="graph-container"
+      data-cfg='{"drag":true,"zoom":true,"depth":1,"scale":1.1,"repelForce":0.5,"centerForce":0.3,"linkDistance":30,"fontSize":0.6,"opacityScale":1,"removeTags":[],"showTags":true,"focusOnHover":false,"enableRadial":false}'>
+    </div>
+
+    <button
+      class="global-graph-icon"
+      aria-label="Global Graph"
+      title="Abrir grafo global">⤢</button>
+
+  </div>
+
+  <div class="global-graph-outer">
+    <div
+      class="global-graph-container"
+      data-cfg='{"drag":true,"zoom":true,"depth":-1,"scale":0.9,"repelForce":0.5,"centerForce":0.2,"linkDistance":30,"fontSize":0.6,"opacityScale":1,"removeTags":[],"showTags":true,"focusOnHover":true,"enableRadial":true}'>
+    </div>
+  </div>
+
+</div>
+
 <p class="ahora-subtitle">Todos los otros lugares para explorar</p>
 
 <div class="menu-celular">

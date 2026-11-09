@@ -73,11 +73,17 @@ export const defaultContentPageLayout: PageLayout = {
       condition: (page) => {
         const slug = page.fileData.slug ?? ""
 
-        return (
+  // Mostrar automáticamente en Plantas
+        const isPlantPage =
           slug.startsWith("Plantas/") ||
           slug.startsWith("plantas/")
-        )
-      },
+
+  // Permitir activarlo individualmente desde cualquier nota
+       const enableGraph =
+         page.fileData.frontmatter?.graph === true
+
+       return isPlantPage || enableGraph
+     },
     }),
   ],
 
