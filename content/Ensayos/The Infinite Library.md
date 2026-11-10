@@ -68,6 +68,7 @@ Finding scientific proved information entirely for free online, is quite difficu
 - [Philosophica](https://www.philosophica.info/index.html): Philosophy data online for free.
 - [Sci-bot](https://sci-bot.ru/): Find [real]([Sci-Hub](https://www.sci-hub.box/)) scientific papers about almost anything. 
 - [Scholar Google](https://scholar.google.com/) I've found great sites here!
+- [Geology Textbooks](https://gotbooks.miracosta.edu/). Site like this are you should be looking for.
 ##### **Communities**
 The social aspect of the web is already covered by Facebook, Reddit and Instagram. You won't probably make new friends here, and that's fine. That's not the [[We live in a huge "human fair".  Trust others that they're being transparent.|point of the internet.]] But I can say that if you have a hobby or an specific interest, if you search enough, you'll probably find an online community for sharing it.
 - [Rate Your Music:](https://rateyourmusic.com/) For musicians and music lovers in general. You can also visit [this]([Guitar Forum - The Gear Page](https://www.thegearpage.net/board/index.php)).

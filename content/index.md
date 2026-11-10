@@ -38,45 +38,25 @@ description: Acá me gusta coleccionar detalles de mi vida. Es mi cuaderno infin
   <a href="https://salvamir.github.io/libro-de-visitas" class="boton-pildora">Visitas</a>
 </div>
 
-Este es mi propio [libro de arena](https://es.wikipedia.org/wiki/El_libro_de_arena). Es mi intento de "inmortalizar" mis ideas. Si tenés unos minutos, empezá explorando esta página por [[El cuadro|acá]]. También está a tu disposición el mapa. Te muestro un poco de lo que vas a encontrarte explorando por mi página web.
+Este es mi propio [libro de arena](https://es.wikipedia.org/wiki/El_libro_de_arena). Es mi intento de "inmortalizar" mis ideas. Si tenés unos minutos, empezá [[El cuadro|leyendo esto]].
 ![[salvaylaplanta.gif|700]]
 <p class="ahora-subtitle">Las etapas que me tocan vivir</p>
 
 > [!cite]"Verano" (Octubre 2026)
-> Octubre ya está en la mitad y yo casi que no me di cuenta. Anduve de un lado a otro, cambiando a cada rato de entorno, gente y responsabilidades. Ahora me toca estudiar, y no consigo centrar la cabeza. Estoy disperso y cansado. Con muchas cosas en la mente... El año está siendo intenso. Estamos viviendo El Super Niño y llueve todo el tiempo. Es octubre, pero hace frío. Ahora tengo un buzo abrigado. Es raro, porque no creo que vaya a acordarme de esto nunca. Es raro porque no creo estar reaccionando de manera normal, no debería haberme acostumbrado tan rápido a un verano sin calor. Esto no pasa en Tucumán. Dentro de poco viajo al exterior, es un viaje importante. Y me voy a un lugar donde va a nevar mucho. Quién sabe... quizás este año de verdad no voy a experimentar el verano tal como solía conocerlo. [Continuar Leyendo...](https://salvamir.github.io/Etapas)
+> Octubre ya está en la mitad y yo casi que no me di cuenta. Anduve de un lado a otro, cambiando a cada rato de entorno, gente y responsabilidades. Ahora me toca estudiar, y no consigo centrar la cabeza. Estoy disperso y cansado. Con muchas cosas en la mente... El año está siendo intenso. Estamos viviendo El Super Niño y llueve todo el tiempo. Es octubre, pero hace frío. Ahora tengo un buzo abrigado. Es raro... [Continuar Leyendo...](https://salvamir.github.io/Etapas)
 
+![[grow.gif]]
 <p class="ahora-subtitle">Anotaciones de mi cuaderno</p>
 
 > [!cite] Vivir Adaptándose
 > ### Cómo adaptar mi vida a las estaciones.
 > Hoy leí por segunda vez [esta](https://danielslife.blog/posts/living-with-the-seasons) publicación de Daniel. 
-> Es verdad que muchas veces ser productivo pareciera ser que es no dejarse influenciar por las circunstancias. Como que la productividad es igual a la perseverancia ante todo. No creo que sea así.
-> Perseverar en nuestros propósitos es bueno y sano. Nos hace bien.
-> Pero nunca habia pensado en la productividad como una virtud tan humana y adaptable. Si las estaciones cambian, que cambien nuestras rutinas, nuestras comidas, nuestros propósitos, nuestra forma de encarar las circunstancias que no cambiaron. Me pareció genial verlo así. Asi que, como Daniel, yo también quise hacer una breve descripción de como me gustaría adaptarme a las estaciones. [Continuar Leyendo... ](https://salvamir.github.io/Notas/Vivir-Adapt%C3%A1ndose)<a/>
+> Es verdad que muchas veces ser productivo pareciera ser que es no dejarse influenciar por las circunstancias. Como que la productividad es igual a la perseverancia ante todo. No creo que sea así. [Continuar Leyendo... ](https://salvamir.github.io/Notas/Vivir-Adapt%C3%A1ndose)
 
 <p class="ahora-subtitle">Y como se conectan entre sí</p>
-<div class="graph"><div class="graph-outer"><div class="graph-container" data-cfg='{"drag":true,"zoom":true,"depth":5,"scale":1.1,"repelForce":0.5,"centerForce":0.3,"linkDistance":10,"fontSize":0.6,"opacityScale":1,"removeTags":[],"showTags":true,"focusOnHover":false,"enableRadial":false}'></div></div></div>
+<div class="graph"><div class="graph-outer"><div class="graph-container" data-cfg='{"drag":true,"zoom":true,"depth":2,"scale":1.1,"repelForce":0.5,"centerForce":0.3,"linkDistance":10,"fontSize":0.6,"opacityScale":1,"removeTags":[],"showTags":true,"focusOnHover":false,"enableRadial":false}'></div></div></div>
 
 ![[caidaaa.gif]]
-
-<p class="ahora-subtitle">Todos los otros lugares para explorar</p>
-<div class="menu-celular">
-  <a href="https://salvamir.github.io/about" class="boton-pildora">Sobre Mi</a>
-  <a href="https://rateyourmusic.com/collection/ForwardFish/" class="boton-pildora">Música</a>
-  <a href="https://youtube.com/playlist?list=PLv3B3w8gAhTibLqGsg7Yc3NbuZd1mzUsY" class="boton-pildora">Videos</a>
-  <a href="https://salvamir.github.io/Charlas-con-la-Emi" class="boton-pildora">Charlas con la Emi</a>
-  <a href="https://salvamir.github.io/algo-mas" class="boton-pildora">Algo Más</a>
-  <a href="https://salvamir.github.io/Plantas/" class="boton-pildora">Jardín Digital</a>
-  <a href="https://salvamir.github.io/Notas" class="boton-pildora">Notas</a>
-  <a href="https://salvamir.github.io/librería" class="boton-pildora">Libros</a>
-  <a href="https://salvamir.github.io/static/ahora.html" class="boton-pildora">Ahora</a>
-  <a href="https://salvamir.github.io/links" class="boton-pildora">Links</a>
-  <a href="https://salvamir.github.io/libro-de-visitas" class="boton-pildora">Visitas</a>
-  <a href="https://salvamir.github.io/Etapas" class="boton-pildora">Etapas</a>
-  <a href="https://salvamir.github.io/Ensayos" class="boton-pildora">Ensayos</a>
-  <a href="https://salvamir.github.io/Plantas/tags" class="boton-pildora">Tags</a>
-</div>
-
 
 <style>
  /* =========================================   AHORA — ESTILOS ADAPTADOS DEL ARCHIVO ORIGINAL   ========================================= */.ahora-embed {
