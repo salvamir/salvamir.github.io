@@ -40,24 +40,23 @@ description: Acá me gusta coleccionar detalles de mi vida. Es mi cuaderno infin
 
 Este es mi propio [libro de arena](https://es.wikipedia.org/wiki/El_libro_de_arena). Es mi intento de "inmortalizar" mis ideas. Si tenés unos minutos, empezá [[El cuadro|leyendo esto]].
 ![[salvaylaplanta.gif|700]]
-<p class="ahora-subtitle">Las etapas que me tocan vivir</p>
 
 > [!cite]"Verano" (Octubre 2026)
 > Octubre ya está en la mitad y yo casi que no me di cuenta. Anduve de un lado a otro, cambiando a cada rato de entorno, gente y responsabilidades. Ahora me toca estudiar, y no consigo centrar la cabeza. Estoy disperso y cansado. Con muchas cosas en la mente... El año está siendo intenso. Estamos viviendo El Super Niño y llueve todo el tiempo. Es octubre, pero hace frío. Ahora tengo un buzo abrigado. Es raro... [Continuar Leyendo...](https://salvamir.github.io/Etapas)
 
 ![[caidaaa.gif]]
 
-<p class="ahora-subtitle">Anotaciones de mi cuaderno</p>
+<p style="text-align: center; margin: 0.5rem 0 0.8rem; color: var(--darkgray); opacity: 0.75; font-family: Georgia, 'Times New Roman', serif; font-size: 0.9rem; font-style: italic; letter-spacing: 0.025em;">Todos estamos un poco en caída libre...</p>
 
 > [!cite] Vivir Adaptándose
 > ### Cómo adaptar mi vida a las estaciones.
 > Hoy leí por segunda vez [esta](https://danielslife.blog/posts/living-with-the-seasons) publicación de Daniel. 
 > Es verdad que muchas veces ser productivo pareciera ser que es no dejarse influenciar por las circunstancias. Como que la productividad es igual a la perseverancia ante todo. No creo que sea así. [Continuar Leyendo... ](https://salvamir.github.io/Notas/Vivir-Adapt%C3%A1ndose)
 
-<p class="ahora-subtitle">Y como se conectan entre sí</p>
+<p style="text-align: center; margin: 0.5rem 0 0.9rem; color: var(--darkgray); opacity: 0.75; font-family: Georgia, 'Times New Roman', serif; font-size: 0.8rem; font-style: italic; letter-spacing: 0.025em;">Este es un mapa de conexiones. Exploralo.</p>
 <div class="graph"><div class="graph-outer"><div class="graph-container" data-cfg='{"drag":true,"zoom":true,"depth":5,"scale":1.1,"repelForce":0.5,"centerForce":0.3,"linkDistance":10,"fontSize":0.6,"opacityScale":1,"removeTags":[],"showTags":true,"focusOnHover":false,"enableRadial":false}'></div></div></div>
 
 ![[grow.gif|267x94]]
 
-
+<p style="text-align: center; margin: 0.5rem 0 0.9rem; color: var(--darkgray); opacity: 0.75; font-family: Georgia, 'Times New Roman', serif; font-size: 0.8rem; font-style: italic; letter-spacing: 0.025em;">Dios siempre siembra y trabaja su sembrado. Nunca lo deja a la deriva.</p>
 
