@@ -1,4 +1,5 @@
  Bueno, infinito puntualmente no es. Este es el gran mapa. Mi página tiene muchos lugares, y para no abrumar a nadie existe esto. Lo muestro en dos formatos para que sea más cómodo.
+ 
 Cuaderno:
 - [[Charlas con la Emi|Charlas Con La Emi]]
 - [[Notas/index|Notas]]
