@@ -21,7 +21,11 @@ Now you can keep going.
 ---
 
 Let the environment be rushed if they want. Let others keep growing, but you don't need all of it. You can live more simply if you want. You just need to be brave.
-![[rush.webp]]
+<img src="https://gram.social/storage/m/_v2/1023047758427013684/4796c06ff-5eacf7/442rZa5EJVT3/3IuTCRg5eybgiynBcG1juiR2183USTrF4PRqdb9I.webp"
+alt="A drawing of myself watching everybody running."
+style="weight=auto;height=auto"
+loading="lazy">
+<p style="text-align: center; margin: 0.5rem 0 0.8rem; color: var(--darkgray); opacity: 0.75; font-family: Georgia, 'Times New Roman', serif; font-size: 0.9rem; font-style: italic; letter-spacing: 0.025em;">Everybody have too much to do in this city...</p>
 What I'm trying to say is: If we focus on being conscious of our hustle, then its easy to pause. And pause is the solution. Is that simple: When you know you're walking too fast, just stop, pause and wait for a little. You don't need to rush. And you can keep waiting for life. Look at the trees, listen to people and your environment, close your eyes, take a breath.
 
 I practice this, and helps me calm down. Living slowly and stopping by the details, is the way I found of making everyday feel memorable.

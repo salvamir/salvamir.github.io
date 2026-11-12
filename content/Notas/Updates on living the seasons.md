@@ -8,9 +8,15 @@ Yesterday night some insects entered my room. That's the sign I have that spring
 The first days of every season feels great and nostalgic. Maybe I feel more enthusiastic about it right now, but I'm sure I'll miss the winter. Studying with warmer weather ain't always that great. Maybe I need to get used to it again. 
 
 I've noticed that waking up earlier is getting much easier, and that's another sign of spring. My friends and I are getting back to hike. I lost inspiration this winter, but now I'm willing to explore more my "music making" because I "feel like I'm having a great idea". Many times that happens to me. Inspiration just flows through my fingers and then suddenly it begins to grow again from the ashes. Kind of a life cycle. Maybe entering this new season will mean a fresh start for my creative process. I hope it is, because I'm actually missing that awesome inspiration I used to have.
-
-
-![[caminata.webp|299]]![[caminataa.webp|298]]
+<img src="https://gram.social/storage/m/_v2/1023047758427013684/4796c06ff-5eacf7/CTKuF9CDNVI8/hjwXVJBbbDuf7O9W4XrSk7tazvr7vUHUr1WVjHHP.webp"
+alt="Fotos de una caminata"
+style="height=200px; weight=100px"
+loading="lazy">
+<img src="https://gram.social/storage/m/_v2/1023047758427013684/4796c06ff-5eacf7/EUUYVf73rclV/Fu7ikwptMSlCKzgKJExQKDp3pZESqM36DCEnSotQ.webp"
+alt="Fotos de una caminata"
+style="height=200px; weight=100px"
+loading="lazy">
+<p style="text-align: center; margin: 0.5rem 0 0.8rem; color: var(--darkgray); opacity: 0.75; font-family: Georgia, 'Times New Roman', serif; font-size: 0.9rem; font-style: italic; letter-spacing: 0.025em;">Fotos de una caminata</p>
 
 I had the energy to restart some projects I had the last spring, like going to the gym or doing more outdoors activities. I started dancing folklore in my town so that helps me perseverate. I'm learning how to be more patient with my learning curve. I'm trying to have a re-encounter with God this season, because I left Him a little bit alone this last months. Maybe cold weather made myself more cold too, and now the sun is making myself smile more. 
 

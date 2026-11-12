@@ -28,9 +28,11 @@ Todos conocemos varios tipos de calendarios diferentes: el calendario académico
 Me doy cuenta, mirando hacia atrás desde ahora, que a mi vida la tengo yo también dividida en etapas. En fases o mejor dicho "temporadas". Me animo a decir que todos pensamos en nuestra vida de esa forma, pero para poder comunicarlo a los otros, es necesario encasillar esa idea en el marco en "cuadrillé" del calendario anual, que les decía antes. 
 
 Tengo una imagen muy nítida de mi vida antes, durante e inmediatamente después de la pandemia, pero no recuerdo exactamente a cuantos años de calendario corresponden. Puedo describir estas etapas, pero no encuadrarlas en mi calendario.
-
-
-![[https://gram.social/storage/m/_v2/1023047758427013684/4796c06ff-5eacf7/hFy8ldKsIFIL/85UiY4XSi9vNKZr1Je3TGJSfe244E2KqWLr2C0Db.webp](https://gram.social/storage/m/_v2/1023047758427013684/4796c06ff-5eacf7/hFy8ldKsIFIL/85UiY4XSi9vNKZr1Je3TGJSfe244E2KqWLr2C0Db.webp)
+<img src="https://gram.social/storage/m/_v2/1023047758427013684/4796c06ff-5eacf7/hFy8ldKsIFIL/85UiY4XSi9vNKZr1Je3TGJSfe244E2KqWLr2C0Db.webp"
+alt="Este es un diagrama de lo que estamos hablando"
+style="width: auto; height: auto;"
+loading="lazy">
+<p style="text-align: center; margin: 0.5rem 0 0.8rem; color: var(--darkgray); opacity: 0.75; font-family: Georgia, 'Times New Roman', serif; font-size: 0.9rem; font-style: italic; letter-spacing: 0.025em;">Gráfico de una etapa difiriendo de unas semanas en un mes específico</p>
 Algo así es lo que quiero mostrarles. Es como si la etapa real simplemente fuese muy diferente al calendario gris que usamos nosotros. 
 
 Esto me pasa a pequeña escala también. <u>En un mismo día hay diferentes etapas o temporadas</u>. A la mañana bien temprano, la energía mental es poca, sigo medio dormido y confundido, con pensamientos medio de ensueños todavía... a la mañana un poquito más tarde tipo 10.00hrs mi energía mental/social/emocional y conciencia personal llegan a su culmen de desarrollo, y a medida que se acerca el mediodía entran en declive nuevamente, porque empiezo a tener hambre. La siesta es un momento de pausa y reflexivo, que nos lleva lentamente a la tarde, y que a su vez nos lleva a la noche, en dónde esa energía mental termina de descender y ya cuesta mucho pensar en responsabilidades y tareas arduas, y queda solo el silencio, la oración y el descanso.
@@ -43,7 +45,10 @@ Esto me pasa a pequeña escala también. <u>En un mismo día hay diferentes etap
 Este último punto nos lleva a lo siguiente:
 ## Los cambios de etapa no son directos.
 Pero el paso de los días si. En un calendario normal, el contacto entre días numéricos es<font color="#fac08f"> neto.</font> Eso es muy confuso para nuestro sistema de tiempo humano. 
-![[difusion.webp]]
+<img src="https://gram.social/storage/m/_v2/1023047758427013684/4796c06ff-5eacf7/oUPDKLJHoMGp/r7iJzMnWnmp1m3D7UhYHam53XoaQziXpqXOcnU7O.webp"
+alt="Gráfico de las etapas/estaciones/períodos de la vida"
+style="height=70px; weight=60px"
+loading="lazy">
 Así, nos sucede que sentimos como que la vida "nos lleva por delante" o que las responsabilidades nos consumen. Esta frustración o estrés se deben nada más y nada menos que a la transición. 
 
 Nuestro trabajo, estudio, y vida productiva en general funcionan en contactos netos y cambios directos y concisos. Entonces, sucede muy seguido que, mientras nuestra vida eficiente avanza de cuadrado en cuadrado, nosotros seguimos viviendo una etapa anterior. Y por eso estamos humanamente *desfazados* de nuestra propia vida. Eso es muy frustrante, porque se siente como que estamos corriendo sin alcanzar nunca a esos cuadrados que pasan de uno a otro muy rápidamente. Se siente como estar siempre por detrás.

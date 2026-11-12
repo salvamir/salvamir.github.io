@@ -4,9 +4,11 @@ cssclasses:
 date: 2026-05-04
 ---
 Mi novia hizo este cuadro hace mucho. No se como explicarles lo mucho que me gusta. 
-
-![[[https://gram.social/storage/m/_v2/1023047758427013684/4796c06ff-5eacf7/kSkn9qgSn5f9/iJHHh1irmMwTndFNRraTUYZeV4G0IIHXD11dmu5K.webp](https://gram.social/storage/m/_v2/1023047758427013684/4796c06ff-5eacf7/kSkn9qgSn5f9/iJHHh1irmMwTndFNRraTUYZeV4G0IIHXD11dmu5K.webp)
-
+<img src="https://gram.social/storage/m/_v2/1023047758427013684/4796c06ff-5eacf7/kSkn9qgSn5f9/iJHHh1irmMwTndFNRraTUYZeV4G0IIHXD11dmu5K.webp"
+alt="Es el cuadro de una mirada de mujer"
+style="width: 360px; height: auto;"
+loading="lazy">
+<p style="text-align: center; margin: 0.5rem 0 0.8rem; color: var(--darkgray); opacity: 0.75; font-family: Georgia, 'Times New Roman', serif; font-size: 0.9rem; font-style: italic; letter-spacing: 0.025em;">Cuadro de una mirada femenina...</p>
 Me pone nervioso mirarlo. Me parece muy femenino y delicado, siento que esta chica mira con un cariño inmenso a alguien. Como seduciéndolo. Como llamándolo al reposo y a la calma. Así me hace sentir a mi.
 
 Es tremendo como se siente la luz del sol en la cara de esta mujer. Deja mucho para pensar, al menos a mi, porque yo creo que muchas veces he visto a los ojos a la gente con la profundidad que este cuadro refleja.

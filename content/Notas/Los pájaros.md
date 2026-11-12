@@ -3,7 +3,7 @@ cssclasses:
   - blog-post
 date: 2026-11-11
 ---
-Hace será un mes me instalé [dobudex]([dobudex: a real-life Pokédex for real animals](https://dobudex.com/)). Es un jueguito basicamente hecho con I.A en el que cada animal es considerado como un pokemón. La dinámica es así: encontrás un animal --> le sacás foto --> la I.A lo escanea, identifica (usando la base de datos de iNaturalist) y crea una carta avatar coleccionable. La idea es coleccionar animales y armar una especie de pokedex con los animales
+Hace será un mes me instalé [dobudex](https://dobudex.com/). Es un jueguito basicamente hecho con I.A en el que cada animal es considerado como un pokemón. La dinámica es así: encontrás un animal --> le sacás foto --> la I.A lo escanea, identifica (usando la base de datos de iNaturalist) y crea una carta avatar coleccionable. La idea es coleccionar animales y armar una especie de pokedex con los animales
 
 <img src="https://gram.social/storage/m/_v2/1023047758427013684/4796c06ff-5eacf7/dRQjhB95Zk3Z/2HJU7ZpZCWLIDM1wuaYVqFoKJkQnNCpOzNgBzgX5.png"
 alt="Unos cuantos pájaros capturados en dobudex"
