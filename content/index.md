@@ -56,7 +56,7 @@ Este es mi propio [libro de arena](https://es.wikipedia.org/wiki/El_libro_de_are
 <p style="text-align: center; margin: 0.5rem 0 0.9rem; color: var(--darkgray); opacity: 0.75; font-family: Georgia, 'Times New Roman', serif; font-size: 0.8rem; font-style: italic; letter-spacing: 0.025em;">Este es un mapa de conexiones. Exploralo.</p>
 <div class="graph"><div class="graph-outer"><div class="graph-container" data-cfg='{"drag":true,"zoom":true,"depth":5,"scale":1.1,"repelForce":0.5,"centerForce":0.3,"linkDistance":10,"fontSize":0.6,"opacityScale":1,"removeTags":[],"showTags":true,"focusOnHover":false,"enableRadial":false}'></div></div></div>
 
-![[grow.gif|267x94]]
+![[grow.gif]]
 
 <p style="text-align: center; margin: 0.5rem 0 0.9rem; color: var(--darkgray); opacity: 0.75; font-family: Georgia, 'Times New Roman', serif; font-size: 0.8rem; font-style: italic; letter-spacing: 0.025em;">Dios siempre siembra y trabaja su sembrado. Nunca lo deja a la deriva.</p>
 
