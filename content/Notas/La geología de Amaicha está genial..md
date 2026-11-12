@@ -11,7 +11,7 @@ El objetivo era ir a hacer análisis de sales, pero nos distrajimos y aprovecham
 
 <img src="https://gram.social/storage/m/_v2/1023047758427013684/4796c06ff-5eacf7/RkpmHlUsj9Uv/kTaUSOnUWADZ2wFWP1SDUxS1AfwKOtybfxPr1NCg.webp"
 alt="Foto de campo"
-style="weight=auto;height=auto"
+style="weight: auto; height: auto;"
 loading="lazy">
 
 <p style="text-align: center; margin: 0.5rem 0 0.8rem; color: var(--darkgray); opacity: 0.75; font-family: Georgia, 'Times New Roman', serif; font-size: 0.9rem; font-style: italic; letter-spacing: 0.025em;">Foto de un afloramiento de la ruta</p>
@@ -21,7 +21,7 @@ Más tarde, entramos a la cascada de Amaicha. En la entrada del sendero nos enco
 
 <img src="https://gram.social/storage/m/_v2/1023047758427013684/4796c06ff-5eacf7/TtQu9gkW4AEv/QnEecZvAFo6L1S0QckmJlrNndZggNQEZKrQNluIc.webp"
 alt="Foto de campo"
-style="weight=auto;height=auto"
+style="weight: auto; height: auto;"
 loading="lazy">
 
 <p style="text-align: center; margin: 0.5rem 0 0.8rem; color: var(--darkgray); opacity: 0.75; font-family: Georgia, 'Times New Roman', serif; font-size: 0.9rem; font-style: italic; letter-spacing: 0.025em;">Otro afloramiento...</p>
@@ -30,7 +30,7 @@ Sin embargo, pensándolo mejor ahora, eso no tiene mucho sentido. Probablemente 
 Seguimos avanzando, y el mismo afloramiento se veía más completo a la izquierda. En esta imagen queda corroborado que el material que vimos en la anterior, sin duda era basamento. Que en algunos sectores se observaba plegado y con intrusiones ígneas. Vimos muchos clastos de pegmatita en el camino, probablemente se desprendieron por erosión.
 
 <img src="https://gram.social/storage/m/_v2/1023047758427013684/4796c06ff-5eacf7/ChmZea7zJ799/x8gDuWSW2bTsmB48ic4uOjG7V5HDJnBtBpYjQPzt.webp"
-style="weight=auto;height=auto"
+style="weight: auto; height: auto;"
 loading="lazy">
 <p style="text-align: center; margin: 0.5rem 0 0.8rem; color: var(--darkgray); opacity: 0.75; font-family: Georgia, 'Times New Roman', serif; font-size: 0.9rem; font-style: italic; letter-spacing: 0.025em;">Este estaba un poco más interesante. Tiene un montón de estructuras para ver.</p>
 En esta foto estas viendo un montón de basamento plegado y fallado (pliegues en violeta, falla en celeste). A lo largo de la falla se extiende un dique ígneo, quién sabrá de qué composición. Por lo pronto, la intrusión de más arriba, tenía toda la pinta de una pegmatita.
@@ -39,22 +39,22 @@ Ese día tomamos todas las muestras super rápido, comimos allá en el campo y a
 
 <img src="https://gram.social/storage/m/_v2/1023047758427013684/4796c06ff-5eacf7/e8ctldVtzN8N/DhsK9pFgxBCE0H4jGFaedYDE4epprApsNVnKPiWj.webp"
 alt="Entorno y nosotros"
-style="weight=40px; height=30px"
+style="weight: 400px; height: auto;"
 loading="lazy">
 
 <img src="https://gram.social/storage/m/_v2/1023047758427013684/4796c06ff-5eacf7/YGSmBvNJ1hTX/F5EO3cEIJq0c6ONnePpM2vCwUbGEqewCuYd7dXTa.webp"
 alt="Un cardon"
-style="weight=40px; height=30px"
+style="weight: 400px; height: auto;"
 loading="lazy">
 
 <img src="https://gram.social/storage/m/_v2/1023047758427013684/4796c06ff-5eacf7/al1Wfgzfryeq/szQjir8HORp2SU3p1Pwu9AVKltUAZBtOuBJ3xwTS.webp"
 alt="heladito"
-style="weight=40px; height=30px"
+style="weight: 300px; height: auto;"
 loading="lazy">
 
 <img src="https://gram.social/storage/m/_v2/1023047758427013684/4796c06ff-5eacf7/o4bXaeks648J/xaCvDlnSNgNV8b9GChZyLoKKseTI5sqz2i63w6oI.webp"
 alt="Escritura local"
-style="weight=40px; height=30px"
+style="weight: 400px; height: auto;"
 loading="lazy">
 <p style="text-align: center; margin: 0.5rem 0 0.8rem; color: var(--darkgray); opacity: 0.75; font-family: Georgia, 'Times New Roman', serif; font-size: 0.9rem; font-style: italic; letter-spacing: 0.025em;">Fotos de otros detalles de irse de campaña.</p>
 ## Segundo día.
@@ -62,14 +62,14 @@ Este día fue más largo, porque caminamos desde la mañana a la tarde, basicame
 
 <img src="https://gram.social/storage/m/_v2/1023047758427013684/4796c06ff-5eacf7/1vLMCJ0hR1XQ/wrVU3YRtjFTocUbg3bsTkyErXI5BzL9FUvOrpBsP.webp"
 alt="Foto de campo"
-style="weight=auto;height=auto"
+style="weight: auto; height:auto"
 loading="lazy">
 <p style="text-align: center; margin: 0.5rem 0 0.8rem; color: var(--darkgray); opacity: 0.75; font-family: Georgia, 'Times New Roman', serif; font-size: 0.9rem; font-style: italic; letter-spacing: 0.025em;">Sinclinal que estuvimos tratando de reconstruir así mal y pronto.</p>
 Esta reconstrucción la hicieron Justo y Franco para su tesis. Justo fue muy paciente explicándomela para que pueda verla. No conseguía ver el pliegue.
 
 <img src="https://gram.social/storage/m/_v2/1023047758427013684/4796c06ff-5eacf7/ijyBvzSbntT3/YJWAPXfJWleQLOCqpfSFloJzNRK1b0tdjVN3iqKm.webp"
 alt="Foto de campo"
-style="weight=auto;height=auto"
+style="weight:auto; height:auto"
 loading="lazy">
 <p style="text-align: center; margin: 0.5rem 0 0.8rem; color: var(--darkgray); opacity: 0.75; font-family: Georgia, 'Times New Roman', serif; font-size: 0.9rem; font-style: italic; letter-spacing: 0.025em;">Estratos de salinas grandes.</p>
 Este es otro pliegue que me mostró Cesar. La verdad me encantó.

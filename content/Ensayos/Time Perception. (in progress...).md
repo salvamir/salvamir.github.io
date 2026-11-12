@@ -1,6 +1,6 @@
 <img src="https://gram.social/storage/m/_v2/1023047758427013684/4796c06ff-5eacf7/vPGTZoofJ54T/w1KPnfmI9WgkYjcVYceWLhSLchDHO4KSPhlItQYM.webp"
 alt="Review on RYM"
-style="height=70px; weight=60px"
+style="height: 350px; weight: 350px"
 loading="lazy">
 <p style="text-align: center; margin: 0.5rem 0 0.8rem; color: var(--darkgray); opacity: 0.75; font-family: Georgia, 'Times New Roman', serif; font-size: 0.9rem; font-style: italic; letter-spacing: 0.025em;">A review on RYM.</p>
 

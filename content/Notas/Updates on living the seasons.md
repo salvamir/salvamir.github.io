@@ -10,11 +10,11 @@ The first days of every season feels great and nostalgic. Maybe I feel more enth
 I've noticed that waking up earlier is getting much easier, and that's another sign of spring. My friends and I are getting back to hike. I lost inspiration this winter, but now I'm willing to explore more my "music making" because I "feel like I'm having a great idea". Many times that happens to me. Inspiration just flows through my fingers and then suddenly it begins to grow again from the ashes. Kind of a life cycle. Maybe entering this new season will mean a fresh start for my creative process. I hope it is, because I'm actually missing that awesome inspiration I used to have.
 <img src="https://gram.social/storage/m/_v2/1023047758427013684/4796c06ff-5eacf7/CTKuF9CDNVI8/hjwXVJBbbDuf7O9W4XrSk7tazvr7vUHUr1WVjHHP.webp"
 alt="Fotos de una caminata"
-style="height=200px; weight=100px"
+style="height: auto; weight: auto;"
 loading="lazy">
 <img src="https://gram.social/storage/m/_v2/1023047758427013684/4796c06ff-5eacf7/EUUYVf73rclV/Fu7ikwptMSlCKzgKJExQKDp3pZESqM36DCEnSotQ.webp"
 alt="Fotos de una caminata"
-style="height=200px; weight=100px"
+style="height: auto; weight: auto;"
 loading="lazy">
 <p style="text-align: center; margin: 0.5rem 0 0.8rem; color: var(--darkgray); opacity: 0.75; font-family: Georgia, 'Times New Roman', serif; font-size: 0.9rem; font-style: italic; letter-spacing: 0.025em;">Fotos de una caminata</p>
 

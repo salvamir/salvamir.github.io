@@ -11,7 +11,7 @@ style="width: 360px; height: auto;"
 loading="lazy">
 La escritura me cuesta bastante todavía. Este estilo tan infantil de dibujo es como lo hago en mis cuadernos realmente. Así es como rezo y escribo las cosas que pienso.
 
-<img src="https://gram.social/storage/m/_v2/1023047758427013684/4796c06ff-5eacf7/7nbjLk1zp2LK/0ucHNM33dcUWVcJIJD3bxjgWtBbkUv17HhjuK6IO.webp|267x267" 
+<img src="https://gram.social/storage/m/_v2/1023047758427013684/4796c06ff-5eacf7/7nbjLk1zp2LK/0ucHNM33dcUWVcJIJD3bxjgWtBbkUv17HhjuK6IO.webp" 
 alt="Un ejemplo de mi cuaderno"
 style="width: 360px; height: auto;"
 loading="lazy">

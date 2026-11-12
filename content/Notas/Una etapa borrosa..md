@@ -11,12 +11,12 @@ Estoy usando este tiempo para absorver del entorno lo que toque. Estos días tra
 
 <img src="https://gram.social/storage/m/_v2/1023047758427013684/4796c06ff-5eacf7/zMcmAYFEkG0h/ugjsxRAlOiIES0P4WEFhPkpNXylPG8RIPL47YSCE.webp"
 alt="Una suculenta que planté"
-style="height=70px; weight=60px"
+style="height: auto; weight: auto;"
 loading="lazy">
 
 <img src="https://gram.social/storage/m/_v2/1023047758427013684/4796c06ff-5eacf7/RK1HBP4kgZYU/kXpqa4LT9Aoux6rQGVIfENCrUUyGp9d0tx74NOF0.webp"
 alt="Una suculenta que planté"
-style="height=70px; weight=60px"
+style="height: auto; weight: auto;"
 loading="lazy">
 <p style="text-align: center; margin: 0.5rem 0 0.8rem; color: var(--darkgray); opacity: 0.75; font-family: Georgia, 'Times New Roman', serif; font-size: 0.9rem; font-style: italic; letter-spacing: 0.025em;">Suelo plantar plantitas y suelen morirse. Soy bastante malo para la jardinería</p>
 Iremos viendo como crecen. Entiendo que no hay que hacer estas cosas en invierno, porque las plantas se secan. 

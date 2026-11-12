@@ -7,14 +7,16 @@ The infinite as a thing many would say that doesn't exist, or at least it ain't 
 As time goes by, we tend to think more vividly that the Internet is growing wider. At this moment in time, the Internet feels overwhelmingly huge. That enormous number, for us, is just too aproximated to infinite that we reduce the internet as the infinite itself.
 #### What does people say about this?
 There are a lot of opinions out there. These are some I've found on reddit and I think **are worth to look at**, as they actually sume to the subject we are discussing about now.
-<img src="https://gram.social/storage/m/_v2/1023047758427013684/4796c06ff-5eacf7/PIiZKnoWlPfc/DiYSQYCZiPXn9vsVIUZdw7f59abkUiySc8QFXkGi.webp"
-alt="Comments on Reddit"
-style="height=70px; weight=60px"
-loading="lazy">
-<img src="https://gram.social/storage/m/_v2/1023047758427013684/4796c06ff-5eacf7/oi51gihTt2Vq/VJBPBlotfiavQQotxqR4KVPevTdlZJ3lkTzJE0ce.webp"
-alt="Comments on Reddit"
-style="height=70px; weight=60px"
-loading="lazy">
+<img
+  src="https://gram.social/storage/m/_v2/1023047758427013684/4796c06ff-5eacf7/PIiZKnoWlPfc/DiYSQYCZiPXn9vsVIUZdw7f59abkUiySc8QFXkGi.webp"
+  alt="Comments on Reddit"
+  style="height: 350px; width: 350px; object-fit: contain;"
+  loading="lazy">
+<img
+  src="https://gram.social/storage/m/_v2/1023047758427013684/4796c06ff-5eacf7/oi51gihTt2Vq/VJBPBlotfiavQQotxqR4KVPevTdlZJ3lkTzJE0ce.webp"
+  alt="Comments on Reddit"
+  style="height: 350px; width: 350px; object-fit: contain;"
+  loading="lazy">
 <p style="text-align: center; margin: 0.5rem 0 0.8rem; color: var(--darkgray); opacity: 0.75; font-family: Georgia, 'Times New Roman', serif; font-size: 0.9rem; font-style: italic; letter-spacing: 0.025em;">Some comments on Reddit</p>
 ## The Internet,<font color="#A93226"> the infinitely useless human's library.</font>
 That's why we tend to think that the internet is useless. You've probably already heard of the Death Internet Theory. We refer to "alive" content not only to "human and personal" content, but for informationaly useful content. Forums, Wiki's and blogs fell apart because of money, AI, and us. Yep, it is our fault too... 

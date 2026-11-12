@@ -47,7 +47,7 @@ Este último punto nos lleva a lo siguiente:
 Pero el paso de los días si. En un calendario normal, el contacto entre días numéricos es<font color="#fac08f"> neto.</font> Eso es muy confuso para nuestro sistema de tiempo humano. 
 <img src="https://gram.social/storage/m/_v2/1023047758427013684/4796c06ff-5eacf7/oUPDKLJHoMGp/r7iJzMnWnmp1m3D7UhYHam53XoaQziXpqXOcnU7O.webp"
 alt="Gráfico de las etapas/estaciones/períodos de la vida"
-style="height=70px; weight=60px"
+style="height: auto; weight: auto"
 loading="lazy">
 Así, nos sucede que sentimos como que la vida "nos lleva por delante" o que las responsabilidades nos consumen. Esta frustración o estrés se deben nada más y nada menos que a la transición. 
 
