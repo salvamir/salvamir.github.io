@@ -1,53 +1,82 @@
 Esta página está inspirada en [/now](https://nownownow.com/). Quiero seguir con el trend. Van a notar que generalmente, antes de hablar directamente de la etapa, me gusta poner palabras/frases con las que la relaciono, así no la olvido. Es como querer retratarla.
 
+
 <div class="now-container">
-<section class="now-card">
-<div class="now-date">"Verano" (Octubre 2026)</div>
-<p>Octubre ya está en la mitad y yo casi que no me di cuenta. Anduve de un lado a otro, cambiando a cada rato de entorno, gente y responsabilidades. Ahora me toca estudiar, y no consigo centrar la cabeza. Estoy disperso y cansado. Con muchas cosas en la mente... El año está siendo intenso. Estamos viviendo El Super Niño y llueve todo el tiempo. Es octubre, pero hace frío. Ahora tengo un buzo abrigado. Es raro, porque no creo que vaya a acordarme de esto nunca. Es raro porque no creo estar reaccionando de manera normal, no debería haberme acostumbrado tan rápido a un verano sin calor. Esto no pasa en Tucumán. Dentro de poco viajo al exterior, es un viaje importante. Y me voy a un lugar donde va a nevar mucho. Quién sabe... quizás este año de verdad no voy a experimentar el verano tal como solía conocerlo.</p>
+
+  <!-- ETAPA ACTUAL: NOVIEMBRE -->
+  <section class="now-card">
+    <div class="now-date">Verano de verdad (Noviembre 2026)</div>
+    <p>No sé en qué momento estoy en mitad de noviembre pero esta parte del año está siendo muy intensa. No quiero que todo se pase tan rápido, cuando menos me dé cuenta voy a estar lejos de mi casa extrañando esto. Hizo frío los primeros días de noviembre, pero de un día para el otro el calor de verano (35°) nos azotó violentamente. Eso me quitó toda la energía. No tengo mucho más para decir: mucho calor y mood veraniego (todos quieren que se termine el año y estar de vacaciones), muchas rendidas y poco tiempo de estudio, muchas ganas de disfrutar con mis amigos pero en un mes me voy.</p>
+  </section>
+
+  <!-- ETAPAS ANTERIORES -->
+  <details>
+    <summary><span>Previamente…</span></summary>
+
+    <ul class="now-events">
+
+      <!-- OCTUBRE -->
+      <li class="now-event">
+        <div class="now-dot" aria-hidden="true"></div>
+        <span class="now-heading">"Verano" (Octubre 2026)</span>
+        <div class="now-line" aria-hidden="true"></div>
+        <div class="now-content now-event-content">
+          <p>Octubre ya está en la mitad y yo casi que no me di cuenta. Anduve de un lado a otro, cambiando a cada rato de entorno, gente y responsabilidades. Ahora me toca estudiar, y no consigo centrar la cabeza. Estoy disperso y cansado. Con muchas cosas en la mente... El año está siendo intenso. Estamos viviendo El Super Niño y llueve todo el tiempo. Es octubre, pero hace frío. Ahora tengo un buzo abrigado. Es raro, porque no creo que vaya a acordarme de esto nunca. Es raro porque no creo estar reaccionando de manera normal, no debería haberme acostumbrado tan rápido a un verano sin calor. Esto no pasa en Tucumán. Dentro de poco viajo al exterior, es un viaje importante. Y me voy a un lugar donde va a nevar mucho. Quién sabe... quizás este año de verdad no voy a experimentar el verano tal como solía conocerlo.</p>
+        </div>
+      </li>
+
+      
+      <li class="now-event">
+        <div class="now-dot" aria-hidden="true"></div>
+        <span class="now-heading">Primavera y "Verano" (Agosto y Septiembre 2026)</span>
+        <div class="now-line" aria-hidden="true"></div>
+        <div class="now-content now-event-content">
+          <p>Los árboles ya casi todos tienen flores. Los lapachos ya casi todos son rosas en la Avenida. Hace calor desde las 10.00hs. Estoy empezando a dejar de llevar campera a la facultad. Voy con más ropa de la que uso, nos vamos preparando para el verano. El clima no se decide y cada tanto se nubla y llueve. El mes arrancó patas para arriba en muchos aspectos de mi vida. Pero lentamente, me doy cuenta que estoy aprendiendo a <span style="font-size: 24px">equilibrar mi rutina</span>. El poder vivir la rutina equilibradamente me entusiasma y me da esperanza. Suelo caer en el pensamiento de que solo existe el equilibrio cuando hay una pausa fuera de la rutina. Muchos mini proyectitos están refloreciendo y recobrando el aire. Los círculos que comprenden mi vida empiezan a dilatarse de a poco, y no estoy abrumadoramente inmerso en el estudio. Durante las vacaciones inicié muchas actividades (como folklore, trabajar, hacer música con la pachi, practicar inglés todos los días, hacer ejercicio, ir a apostoles de lourdes, etc) y me propuse seguirlas bajo "cualquier costo". Estoy descubriendo que ese costo no es más que el orden. Y que vivir en orden y vivir equilibradamente <span style="font-size: 20px">no son lo mismo</span>, y está genial ese descubrimiento. Hoy un profe me dijo de chiste en una clase: "Salvador, en esta materia estás caminando cerca del abismo, <span class="tc-color tc-color--cyan" style="color: var(--color-cyan)">pendiendo de un hilo</span>" Yo épicamente le dije que siempre estoy pendiendo de un hilo.</p>
+        </div>
+      </li>
+
+      
+      <li class="now-event">
+        <div class="now-dot" aria-hidden="true"></div>
+        <span class="now-heading">Otoño/Primavera (Julio y Agosto 2026)</span>
+        <div class="now-line" aria-hidden="true"></div>
+        <div class="now-content now-event-content">
+          <p>Empieza a salir el sol más temprano. El frío de las 6.30 es matador, pero a las 8.00 el cerro se ve limpio, sin nubes. Se está terminando el otoño y está viniendo la primavera. Se empezaron a ver las primeras flores ya. <strong>Evento fuera de la rutina.</strong> Acabo de terminar las vacaciones y estoy todavía esforzandome en preparar la cabeza. Mañana arrancan las clases y estoy motivado, pero no termino de aceptarlo. Me estoy esforzando en no priorizar tanto la facultad y en enfocarme más en <span style="font-size: 20px">descansar humanamente</span> también. Doy gracias por el hermoso descanso que tuve. Doy gracias por todos los propositos nuevos para este cuatrimestre, confío en el futuro que Dios me prepara. Se que el está obrando mucho en mi vida, lo he visto y se que sigue hacerlo. Brindis por este nuevo arranque!</p>
+        </div>
+      </li>
+
+      
+      <li class="now-event">
+        <div class="now-dot" aria-hidden="true"></div>
+        <span class="now-heading">Invierno/Otoño (Mayo/Junio 2026)</span>
+        <div class="now-line" aria-hidden="true"></div>
+        <div class="now-content now-event-content">
+          <p>Empiezan a haber días de sol, más motivadores. Días de buzito sin camperas. Se notan un montón las hojas que se caen, los árboles empiezan a tener hojas, pero son grises o marrones y se caen. <strong>Rutina introspectiva.</strong> Estoy en un mar de tareas y movimiento máximo universitario. Me agotó todo, pero estoy contento porque ya se termina y de repente, como si nada, ya se pasó medio año. Doy gracias porque el Señor me resolvió este cuatrimestre redondito. Le tengo miedo a los finales, pero también se pasan.</p>
+        </div>
+      </li>
+
+      
+      <li class="now-event">
+        <div class="now-dot" aria-hidden="true"></div>
+        <span class="now-heading">Invierno (Abril 2026)</span>
+        <div class="now-line" aria-hidden="true"></div>
+        <div class="now-content now-event-content">
+          <p>Etapa borrosa, gris y pensativa, <font color="#92cddc">invierno</font>, retrospección, inicio de clases, miedo/entusiasmo, cansancio por el choque. <strong>Totalmente rutinario.</strong> La rutina me mató y no tengo vida. Literalmente me dedico a estudiar, rendir, desaprobar, estar al borde, volver a rendir, aprobar, atrasarme y seguir estudiando. No hago más nada. Por ahora, lo único que hago es pensar en la facultad. Había empezado un proyecto musical, o al menos la idea de desarrollar un duo con pachi estaba vigente, pero estamos dejando morir todo, porque ella recién vuelve y tiene que recibirse todavía.</p>
+        </div>
+      </li>
+
+    
+      <li class="now-event">
+        <div class="now-dot" aria-hidden="true"></div>
+        <span class="now-heading">Fin del verano (Marzo 2026)</span>
+        <div class="now-line" aria-hidden="true"></div>
+        <div class="now-content now-event-content">
+          <p>Hace poco fue el último día de verano. El último de día de vacaciones. Nos dimos cuenta todos, porque llovió de repente torrencialmente, y desde ahí el sol no volvió a salir a las 10.00hs. Ahora, el día permanece casi 100% nublado. Hace mucho frío y otra vez, mi papa insiste que este es el invierno más frio del año (como lo hace todos los años). Estamos todos más pensativos, expectantes, atentos. Arranca la facultad. Después de unas vacaciones largas y relativamente descansadoras, volvemos todos a la rutina.</p>
+        </div>
+      </li>
+
+    </ul>
+  </details>
+
 </div>
-</section>
-<details>
-<summary><span>Previamente…</span></summary>
-<ul class="now-events">
-</li>
-<li class="now-event">
-<div class="now-dot" aria-hidden="true"></div>
-<span class="now-heading">Primavera y "Verano" (Agosto y Septiembre 2026)</span>
-<div class="now-line" aria-hidden="true"></div>
-<div class="now-content now-event-content">
-<p>Los árboles ya casi todos tienen flores. Los lapachos ya casi todos son rosas en la Avenida. Hace calor desde las 10.00hs. Estoy empezando a dejar de llevar campera a la facultad. Voy con más ropa de la que uso, nos vamos preparando para el verano. El clima no se decide y cada tanto se nubla y llueve. El mes arrancó patas para arriba en muchos aspectos de mi vida. Pero lentamente, me doy cuenta que estoy aprendiendo a <span style="font-size: 24px">equilibrar mi rutina</span>. El poder vivir la rutina equilibradamente me entusiasma y me da esperanza. Suelo caer en el pensamiento de que solo existe el equilibrio cuando hay una pausa fuera de la rutina. Muchos mini proyectitos están refloreciendo y recobrando el aire. Los círculos que comprenden mi vida empiezan a dilatarse de a poco, y no estoy abrumadoramente inmerso en el estudio. Durante las vacaciones inicié muchas actividades (como folklore, trabajar, hacer música con la pachi, practicar inglés todos los días, hacer ejercicio, ir a apostoles de lourdes, etc) y me propuse seguirlas bajo "cualquier costo". Estoy descubriendo que ese costo no es más que el orden. Y que vivir en orden y vivir equilibradamente <span style="font-size: 20px">no son lo mismo</span>, y está genial ese descubrimiento. Hoy un profe me dijo de chiste en una clase: "Salvador, en esta materia estás caminando cerca del abismo, <span class="tc-color tc-color--cyan" style="color: var(--color-cyan)">pendiendo de un hilo</span>" Yo épicamente le dije que siempre estoy pendiendo de un hilo.</p>
-</div>
-</li>
-<li class="now-event">
-<div class="now-dot" aria-hidden="true"></div>
-<span class="now-heading">Otoño/Primavera (Julio y Agosto 2026)</span>
-<div class="now-line" aria-hidden="true"></div>
-<div class="now-content now-event-content">
-<p>Empieza a salir el sol más temprano. El frío de las 6.30 es matador, pero a las 8.00 el cerro se ve limpio, sin nubes. Se está terminando el otoño y está viniendo la primavera. Se empezaron a ver las primeras flores ya. **Evento fuera de la rutina**. Acabo de terminar las vacaciones y estoy todavía esforzandome en preparar la cabeza. Mañana arrancan las clases y estoy motivado, pero no termino de aceptarlo. Me estoy esforzando en no priorizar tanto la facultad y en enfocarme más en <span style="font-size: 20px">descansar humanamente</span> también. Doy gracias por el hermoso descanso que tuve. Doy gracias por todos los propositos nuevos para este cuatrimestre, confío en el futuro que Dios me prepara. Se que el está obrando mucho en mi vida, lo he visto y se que sigue hacerlo. Brindis por este nuevo arranque!</p>
-</div>
-</li>
-<li class="now-event">
-<div class="now-dot" aria-hidden="true"></div>
-<span class="now-heading">Invierno/Otoño (Mayo/Junio 2026)</span>
-<div class="now-line" aria-hidden="true"></div>
-<div class="now-content now-event-content">
-<p>Empiezan a haber días de sol, más motivadores. Días de buzito sin camperas. Se notan un montón las hojas que se caen, los árboles empiezan a tener hojas, pero son grises o marrones y se caen. **Rutina introspectiva**. Estoy en un mar de tareas y movimiento máximo universitario. Me agotó todo, pero estoy contento porque ya se termina y de repente, como si nada, ya se pasó medio año. Doy gracias porque el Señor me resolvió este cuatrimestre redondito. Le tengo miedo a los finales, pero también se pasan.</p>
-</div>
-</li>
-<li class="now-event">
-<div class="now-dot" aria-hidden="true"></div>
-<span class="now-heading">Invierno (Abril 2026)</span>
-<div class="now-line" aria-hidden="true"></div>
-<div class="now-content now-event-content">
-<p>Etapa borrosa, gris y pensativa, <font color="#92cddc">invierno</font>, retrospección, inicio de clases, miedo/entusiasmo, cansancio por el choque. **Totalmente rutinario**. La rutina me mató y no tengo vida. Literalmente me dedico a estudiar, rendir, desaprobar, estar al borde, volver a rendir, aprobar, atrasarme y seguir estudiando. No hago más nada. Por ahora, lo único que hago es pensar en la facultad. Había empezado un proyecto musical, o al menos la idea de desarrollar un duo con pachi estaba vigente, pero estamos dejando morir todo, porque ella recién vuelve y tiene que recibirse todavía.</p>
-</div>
-</li>
-<li class="now-event">
-<div class="now-dot" aria-hidden="true"></div>
-<span class="now-heading">Fin del verano (Marzo 2026)</span>
-<div class="now-line" aria-hidden="true"></div>
-<div class="now-content now-event-content">
-<p>Hace poco fue el último día de verano. El último de día de vacaciones. Nos dimos cuenta todos, porque llovió de repente torrencialmente, y desde ahí el sol no volvió a salir a las 10.00hs. Ahora, el día permanece casi 100% nublado. Hace mucho frío y otra vez, mi papa insiste que este es el invierno más frio del año (como lo hace todos los años). Estamos todos más pensativos, expectantes, atentos. Arranca la facultad. Después de unas vacaciones largas y relativamente descansadoras, volvemos todos a la rutina.</p>
-</div>
-</li>
-</ul>
+

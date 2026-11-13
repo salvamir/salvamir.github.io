@@ -41,8 +41,8 @@ description: Acá me gusta coleccionar detalles de mi vida. Es mi cuaderno infin
 Este es mi propio [libro de arena](https://es.wikipedia.org/wiki/El_libro_de_arena). Es mi intento de "inmortalizar" mis ideas. Si tenés unos minutos, empezá [[El cuadro|leyendo esto]].
 ![[salvaylaplanta.gif|700]]
 
-> [!cite]"Verano" (Octubre 2026)
-> Octubre ya está en la mitad y yo casi que no me di cuenta. Anduve de un lado a otro, cambiando a cada rato de entorno, gente y responsabilidades. Ahora me toca estudiar, y no consigo centrar la cabeza. Estoy disperso y cansado. Con muchas cosas en la mente... El año está siendo intenso. Estamos viviendo El Super Niño y llueve todo el tiempo. Es octubre, pero hace frío. Ahora tengo un buzo abrigado. Es raro... [Continuar Leyendo...](https://salvamir.github.io/Etapas)
+> [!cite] Verano de verdad. (Noviembre 2026)
+> Todo se pasó demasiado rápido esta segunda mitad del año. Estoy a mediados de Noviembre y no llegué ni a respirar para asimilarlo. Estoy pasandola bien, a pesar de todo. A pesar del calor repentino de verano, a pesar de la inmensa cantidad de cosas que tengo para hacer antes de que se termine el mes y el.poco tiempo que queda para eso. A pesar de las rendidas también. Estoy disfrutando este calor, a pesar de que se sintió como una cachetada porque vino sin transición. Me alegra ver que las energías de la gente están aumentando. Todo el mundo tiene en la cabeza las vacaciones. Estamos todos cansados, fue un año largo y duro y lo hicimos bien. Me pasa que yo todavía no me termino de sentir en fin de año, porque Julio ya se sintió como fin de año... [Continuar Leyendo...](https://salvamir.github.io/Etapas)
 
 ![[caidaaa.gif]]
 
@@ -56,7 +56,7 @@ Este es mi propio [libro de arena](https://es.wikipedia.org/wiki/El_libro_de_are
 <p style="text-align: center; margin: 0.5rem 0 0.9rem; color: var(--darkgray); opacity: 0.75; font-family: Georgia, 'Times New Roman', serif; font-size: 0.8rem; font-style: italic; letter-spacing: 0.025em;">Este es un mapa de conexiones. Exploralo.</p>
 <div class="graph"><div class="graph-outer"><div class="graph-container" data-cfg='{"drag":true,"zoom":true,"depth":5,"scale":1.1,"repelForce":0.5,"centerForce":0.3,"linkDistance":10,"fontSize":0.6,"opacityScale":1,"removeTags":[],"showTags":true,"focusOnHover":false,"enableRadial":false}'></div></div></div>
 
-![[grow.gif]]
+![[grow.gif|267x94]]
 
 <p style="text-align: center; margin: 0.5rem 0 0.9rem; color: var(--darkgray); opacity: 0.75; font-family: Georgia, 'Times New Roman', serif; font-size: 0.8rem; font-style: italic; letter-spacing: 0.025em;">Dios siempre siembra y trabaja su sembrado. Nunca lo deja a la deriva.</p>
 
