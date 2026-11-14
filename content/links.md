@@ -2,7 +2,7 @@
 Te dejo otros lugares interesantes para ver. Podés encontrar nuevas páginas por [acá](https://wiby.org). Esta es mi <font color="#fbd5b5">gran lista</font> de páginas web que me gustan. Las anoto así no me las olvido.
 
 ---
-El internet está lleno de cosas curiosas para ver. Tomate un tiempo de ocio y [buscá más de estas páginas](https://www.are.na/elan-kiderman-ullendorff/search-engines-for-wandering). Es todo un [nicho](https://www.are.na/talyssa/other-web-abuazcz5tsi).
+El internet está lleno de cosas curiosas para ver. Tomate un tiempo de ocio y [buscá más de estas páginas](https://www.are.na/elan-kiderman-ullendorff/search-engines-for-wandering). Es todo un [nicho](https://www.are.na/talyssa/other-web-abuazcz5tsi). Quiero explorar [esta]([Jorge Herrmann | Página do músico e artista plástico Jorge Herrmann. Porto Alegre, Rio Grande do Sul.](https://www.jorgeherrmann.com/)) página algún día.
 
 ---
 
