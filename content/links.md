@@ -17,6 +17,10 @@ El internet está lleno de cosas curiosas para ver. Tomate un tiempo de ocio y [
 > - [IndieWeb](https://🕸💍.ws/directory).
 > - [LainChain](https://foreverliketh.is/#2-lainchan-webring)
 
+>[!note]- Web Tools
+> - [TLUHL.COM](https://www.tluhl.com/)
+> - [Galaxy of Tools](https://galaxyoftools.com/)
+
 > [!abstract]- Personal Webpages
 > - [Eric Murphy](https://ericmurphy.xyz/): He’s a web developer who also has a personal website where he post about tech things.
 > - [Luke Smith:](https://lukesmith.xyz/) I’m not sure if he’s a philosopher but he post a lot of “trascendental thoughts“ if you like to call them like that.
