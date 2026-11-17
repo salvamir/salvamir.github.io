@@ -6,7 +6,7 @@ El internet está lleno de cosas curiosas para ver. Tomate un tiempo de ocio y [
 
 ---
 
-> [!abstract]- Directories
+> [!abstract]- Directories for more small websites
 > - [¡BlogBlog!](https://blogblog.es) Blogs en español
 > - [BigList](http://biglist.terraaeon.com/index.html) Various blog-style webpages.
 > - [BlogRoll](https://blogroll.org/) Vast blog's directory.
@@ -16,6 +16,12 @@ El internet está lleno de cosas curiosas para ver. Tomate un tiempo de ocio y [
 > - [Hotline](https://hotlinewebring.club/)
 > - [IndieWeb](https://🕸💍.ws/directory).
 > - [LainChain](https://foreverliketh.is/#2-lainchan-webring)
+
+>[!abstract]- Web Communities
+>[The Creative Independent](https://thecreativeindependent.com/guides/how-to-feel-like-you-have-enough/) For creative people.
+>[Web Writers Collective](https://forum.webwriterscollective.com/) For writers
+>[Rate Your Music:](https://rateyourmusic.com/) For musicians
+>[Earth Science Stack Exchange](https://earthscience.stackexchange.com/) For Earth lovers
 
 >[!note]- Web Tools
 > - [TLUHL.COM](https://www.tluhl.com/)
@@ -71,11 +77,8 @@ El internet está lleno de cosas curiosas para ver. Tomate un tiempo de ocio y [
 > - [Tucumán Turismo:](https://www.tucutur.com.ar/index.html) Hay muchas cosas interesantes de mi provincia paisano acá adentro vayan a leerlo.
 > - [Free Music:](https://lamusicagratis.com/) It doesn’t need to be explained.
 > - [ElevenTy](https://www.11ty.dev/)
-> - [Jayfa](https://www.flickr.com/photos/jayfa_mocs/page2). Lego creator & artist.
 > - [TextKit](https://www.textkit.com/): Here you will find some Ancient Greek and Latin text.
-> - [Paintbook Link.](https://codepen.io/alperentalaslioglu/pen/yPGgvP)
 > - [Landchads:](https://landchad.net) Tutorials For Privacy-focused internet's presence.
-> - [Nitter](https://nitter.net): A small alternative to twitter.
 > - [Not Related!](https://notrelated.xyz): Maybe some interesting podcasts.
 > - [Based Cooking:](https://based.cooking) Recipes, that's it.
 > - [Flash Museum - Flash Games Online for Free 🕹️](https://flashmuseum.net/)
@@ -103,7 +106,11 @@ El internet está lleno de cosas curiosas para ver. Tomate un tiempo de ocio y [
 > - [Portal - Eurobricks Forums](https://www.eurobricks.com/forum/)
 > - [LEGO Instructions, Free LEGO instructions Database, LEGO assembly instructions](https://lego.brickinstructions.com/)
 > - [BrickHub.org - Let's Build Great LEGO Models!](https://brickhub.org/)
+> - [Jayfa](https://www.flickr.com/photos/jayfa_mocs/page2). Lego creator & artist.
 ## ¡Gracias por venir!
+<a href="https://webwriterscollective.com/webring/previous/zacharykai.net/">Previous</a>
+<a href="https://webwriterscollective.com/webring/">WWC Webring</a>
+<a href="https://webwriterscollective.com/webring/next/zacharykai.net/">Next</a>
 
 <div class="badge-wall">
   <a href="https://ko-fi.com/s/4662b19f61"><img src="/Anexos/WrittenByAHuman.svg"></a>
