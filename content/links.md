@@ -70,6 +70,7 @@ El internet está lleno de cosas curiosas para ver. Tomate un tiempo de ocio y [
 > - [LaPhilo](https://laphilo.fr/index-en.html). More philosophy!
 > - [Medieval](https://going-medieval.com) 
 > - [La guía.](https://arte.laguia2000.com) It is about a lot of sciences.
+> - [EDI-Salta](https://www.edisalta.ar/)
 
 > [!abstract]- Interesting Websites
 > - [About Fiat Cars:](https://www.fiat.com.mx/blog.html) Q&A about cars so please enter this link.
